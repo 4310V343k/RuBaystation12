@@ -44,11 +44,9 @@
 		/decl/emote/audible/lizard_squeal
 		)
 
-/datum/species/nabber
+/datum/species/monkey
 	default_emotes = list(
-		/decl/emote/audible/bug_hiss,
-		/decl/emote/audible/bug_buzz,
-		/decl/emote/audible/bug_chitter
+		/decl/emote/audible/scream/monkey
 		)
 
 /datum/species/adherent
