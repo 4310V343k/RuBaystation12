@@ -18,7 +18,7 @@
 		else
 			if(copytext_char(ending, length(ending))=="!")
 				verb = pick("восклицает","выкрикивает") //INF, WAS verb=pick("exclaims","shouts","yells")
-			if(copytext(ending, length(ending))=="?")
+			if(copytext_char(ending, length(ending))=="?")
 				verb = "спрашивает"  //INF, WAS verb="asks
 
 		if(prob(emp_damage*4))
