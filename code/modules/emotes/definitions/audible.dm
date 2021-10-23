@@ -129,6 +129,11 @@
 	key = "giggle"
 	emote_message_3p = "USER хихикает."
 
+/decl/emote/audible/finger_snap
+	key = "snap"
+	emote_message_3p = "USER щёлкает пальцами."
+	emote_sound = 'sound/voice/emotes/fingersnap.ogg'
+
 /decl/emote/audible/scream
 	key = "scream"
 	emote_message_3p = "USER кричит!"
@@ -220,7 +225,7 @@
 	emote_sound = 'sound/voice/emotes/whistle.ogg'
 	sounded_species = list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_TRITONIAN, SPECIES_GRAVWORLDER,
 	SPECIES_MULE,
-	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_VOX, SPECIES_IPC,
+	SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_VOX, SPECIES_IPC, SPECIES_SHELL,
 	SPECIES_SKRELL)
 
 /decl/emote/audible/sneeze
@@ -298,8 +303,3 @@
 		'sound/voice/emotes/pain_monkey_3.ogg'
 		)
 	sounded_species = null
-
-/decl/emote/audible/finger_snap
-	key = "snap"
-	emote_message_3p = "USER щёлкает пальцами."
-	emote_sound = 'sound/voice/emotes/fingersnap.ogg'

@@ -219,3 +219,8 @@
 	set name = "Приподнять бровь"
 	set category = "Emote"
 	emote("eyebrow")
+
+/mob/living/verb/snap()
+	set name = "Щёлкнуть пальцами"
+	set category = "Emote"
+	emote("snap")

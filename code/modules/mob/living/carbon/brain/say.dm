@@ -16,10 +16,10 @@
 		if (speaking)
 			verb = speaking.get_spoken_verb(ending)
 		else
-			if(copytext_char(ending, length(ending))=="!")
-				verb = pick("восклицает","выкрикивает") //INF, WAS verb=pick("exclaims","shouts","yells")
-			if(copytext_char(ending, length(ending))=="?")
-				verb = "спрашивает"  //INF, WAS verb="asks
+			if(ending=="!")
+				verb = pick("восклицает","выкрикивает") //INF, WAS verb=pick("exclaims","shouts","yell")
+			if(ending=="?")
+				verb = "спрашивает"  //INF, WAS verb="asks"
 
 		if(prob(emp_damage*4))
 			if(prob(10))//10% chane to drop the message entirely
