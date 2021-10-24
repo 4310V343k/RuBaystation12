@@ -292,6 +292,6 @@
 #define INIT_MACHINERY_PROCESS_ALL 0x3
 //--
 
-#define ANNOUNSER_NAME "[station_name()] Automated Announce System"
+#define ANNOUNCE_NAME "[station_name()] Automated Announcement System"
 
 #define GET_ANNOUNCEMENT_FREQ(X) GLOB.using_map.use_job_frequency_announcement ? get_announcement_frequency(X) : "Common"
