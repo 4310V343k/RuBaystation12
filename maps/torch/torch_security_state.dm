@@ -25,7 +25,7 @@
 	icon = 'maps/torch/icons/security_state.dmi'
 
 /decl/security_level/default/torchdept/code_green
-	name = "код зелёный"
+	name = "Зелёный код"
 	icon = 'icons/misc/security_state.dmi'
 
 	light_max_bright = 0.25
@@ -42,12 +42,11 @@
 
 /decl/security_level/default/torchdept/code_green/switching_down_to()
 	security_announcement_green.Announce("Все угрозы для судна и его экипажа были устранены. \
-	Персоналу следует вернуться к выполнению рабочих обязанностей в штатном режиме.",
-	"Внимание! Код угрозы понижен до Зелёного")
+	Персоналу следует вернуться к выполнению рабочих обязанностей в штатном режиме.")
 	notify_station()
 
 /decl/security_level/default/torchdept/code_violet
-	name = "код фиолетовый"
+	name = "Фиолетовый код"
 
 	light_max_bright = 0.5
 	light_inner_range = 1
@@ -61,22 +60,18 @@
 	overlay_status_display = "status_display_violet"
 	alert_border = "alert_border_violet"
 
-/decl/security_level/default/torchdept/code_violet/switching_up_to()
-	security_announcement_up.Announce("На судне обнаружена серьёзная медицинская угроза. \
+	up_description = "На судне обнаружена серьёзная медицинская угроза. \
 	Всему медицинскому персоналу требуется обратиться к вышестоящим сотрудникам для получения инструкций. \
-	Не-медицинскому персоналу следует выполнять инструкции от медицинского персонала.", "Внимание! Код угрозы повышен до Фиолетового")
+	Не-медицинскому персоналу следует выполнять инструкции от медицинского персонала."
 	notify_station()
-	GLOB.using_map.toggle_crew_sensors(2)
 
-/decl/security_level/default/torchdept/code_violet/switching_down_to()
-	security_announcement_down.Announce("На судне обнаружена серьёзная медицинская угроза. \
+	down_description = "На судне обнаружена серьёзная медицинская угроза. \
 	Всему медицинскому персоналу требуется обратиться к вышестоящим сотрудникам для получения инструкций. \
-	Не-медицинскому персоналу следует выполнять инструкции от медицинского персонала.", "Внимание! Код угрозы понижен до Фиолетового")
+	Не-медицинскому персоналу следует выполнять инструкции от медицинского персонала."
 	notify_station()
-	GLOB.using_map.toggle_crew_sensors(2)
 
 /decl/security_level/default/torchdept/code_orange
-	name = "код оранжевый"
+	name = "Оранжевый код"
 
 	light_max_bright = 0.5
 	light_inner_range = 1
@@ -89,24 +84,20 @@
 
 	psionic_control_level = PSI_IMPLANT_LOG
 
-/decl/security_level/default/torchdept/code_orange/switching_up_to()
-	security_announcement_up.Announce("Судно имеет серьёзные структурные повреждения, а также испытывает отказы множества систем. \
+	up_description = "Судно имеет серьёзные структурные повреждения, а также испытывает отказы множества систем. \
 	Всему инженерному персоналу требуется обратиться к вышестоящим сотрудникам для получения инструкций. \
 	Весь не-инженерный персонал должен покинуть затронутые повреждениями отсеки. Рекомендуется ношение скафандров и \
-	следование указаниям инженерного персонала.", "Внимание! Код угрозы повышен до Оранжевого")
+	следование указаниям инженерного персонала."
 	notify_station()
-	GLOB.using_map.toggle_crew_sensors(1)
 
-/decl/security_level/default/torchdept/code_orange/switching_down_to()
-	security_announcement_down.Announce("Судно имеет серьёзные структурные повреждения, а также испытывает отказы множества систем. \
+	down_description = "Судно имеет серьёзные структурные повреждения, а также испытывает отказы множества систем. \
 	Всему инженерному персоналу требуется обратиться к вышестоящим сотрудникам для получения инструкций. \
 	Весь не-инженерный персонал должен покинуть затронутые повреждениями отсеки. Рекомендуется ношение скафандров и \
-	следование указаниям инженерного персонала.", "Внимание! Код угрозы понижен до Оражевого")
-	GLOB.using_map.toggle_crew_sensors(1)
-
+	следование указаниям инженерного персонала."
+	notify_station()
 
 /decl/security_level/default/torchdept/code_blue
-	name = "код синий"
+	name = "Cиний код"
 	icon = 'icons/misc/security_state.dmi'
 
 	light_max_bright = 0.5
@@ -120,20 +111,18 @@
 
 	psionic_control_level = PSI_IMPLANT_LOG
 
-/decl/security_level/default/torchdept/code_blue/switching_up_to()
-	security_announcement_up.Announce("На борту судна предположительно присутствует угроза безопасности для экипажа и самого судна. \
+	up_description = "На борту судна предположительно присутствует угроза безопасности для экипажа и самого судна. \
 	Всей охране требуется обратиться к вышестоящим сотрудникам для получения указаний; \
-	разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду.", "Внимание! Код угрозы повышен до Синего")
+	разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду."
 	notify_station()
 
-/decl/security_level/default/torchdept/code_blue/switching_down_to()
-	security_announcement_down.Announce("Прямая угроза экипажу и судну отстуствует. На судне всё ещё может оставаться угроза безопасности для экипажа и самого судна. \
+	down_description = "Прямая угроза экипажу и судну отстуствует. На судне всё ещё может оставаться угроза безопасности для экипажа и самого судна. \
 	Всей охране требуется обратиться к вышестоящим сотрудникам для получения указаний; \
-	разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду.", "Внимание! Код угрозы понижен до Синего")
+	разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду."
 	notify_station()
 
 /decl/security_level/default/torchdept/code_red
-	name = "код красный"
+	name = "Красный код"
 	icon = 'icons/misc/security_state.dmi'
 
 	light_max_bright = 0.75
@@ -146,12 +135,14 @@
 	alert_border = "alert_border_red"
 	psionic_control_level = PSI_IMPLANT_DISABLED
 
+	up_description = "Присутствует прямая угроза безопасности для экипажа и самого судна. \
+	Весь экипаж должен обратиться к командующему составу для получения инструкций. \
+	Охране разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду. Все убежища были разблокированы."
+
 	var/static/datum/announcement/priority/security/security_announcement_red = new(do_log = 0, do_newscast = 1, new_sound = sound('sound/misc/redalert1.ogg'))
 
 /decl/security_level/default/torchdept/code_red/switching_up_to()
-	security_announcement_red.Announce("Присутствует прямая угроза безопасности для экипажа и самого судна. \
-	Весь экипаж должен обратиться к командующему составу для получения инструкций. \
-	Охране разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду. Все убежища были разблокированы.", "Внимание! Код угрозы повышен до Красного")
+	security_announcement_red.Announce(up_description, "Внимание! Красный код!")
 	notify_station()
 	GLOB.using_map.toggle_crew_sensors(3)
 	GLOB.using_map.unbolt_saferooms()
@@ -159,8 +150,7 @@
 /decl/security_level/default/torchdept/code_red/switching_down_to()
 	security_announcement_red.Announce("Код Дельта был отключён. \
 	Весь экипаж должен обратиться к командующему составу для получения инструкций. \
-	Охране разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду.",
-	"Внимание! Код угрозы понижен до Красного")
+	Охране разрешено обыскивать сотрудников и отсеки, а так же держать оружие на виду.")
 	notify_station()
 	GLOB.using_map.toggle_crew_sensors(3)
 
