@@ -21,7 +21,6 @@
 			hashands = (temp?.is_usable())
 		var/mouthfree = !((H.head && (H.check_mouth_coverage())) || (H.wear_mask && (H.check_mouth_coverage())))
 		var/mouthfree_p = !((P.head && (P.check_mouth_coverage())) || (P.wear_mask && (P.check_mouth_coverage())))
-		var/ya = "я"
 
 		if(world.time <= H.last_attack + 1 SECONDS)
 			return
@@ -29,9 +28,9 @@
 			H.last_attack = world.time
 
 		if (href_list["interaction"] == "bow")
-			H.visible_message("<B>[H]</B> клан[ya]етс[ya] <B>[P]</B>.")
+			H.visible_message("<B>[H]</B> кланяется <B>[P]</B>.")
 			if (istype(P.loc, /obj/structure/closet) && P.loc == H.loc)
-				P.visible_message("<B>[H]</B> клан[ya]етс[ya] <B>[P]</B>.")
+				P.visible_message("<B>[H]</B> кланяется <B>[P]</B>.")
 
 		else if (href_list["interaction"] == "pet")
 			if(((!istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && hashands && H.Adjacent(P))
@@ -89,9 +88,9 @@
 
 		else if (href_list["interaction"] == "five")
 			if(((H.Adjacent(P) && !istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && hashands)
-				H.visible_message("<B>[H]</B> даёт <B>[P]</B> п[ya]ть.")
+				H.visible_message("<B>[H]</B> даёт <B>[P]</B> пять.")
 				if (istype(P.loc, /obj/structure/closet))
-					P.visible_message("<B>[H]</B> даёт <B>[P]</B> п[ya]ть.")
+					P.visible_message("<B>[H]</B> даёт <B>[P]</B> пять.")
 				playsound(loc, 'sound/interactions/slap.ogg', 50, 1, -1)
 
 		else if (href_list["interaction"] == "handshake")
@@ -174,9 +173,9 @@
 
 		else if (href_list["interaction"] == "tongue")
 			if(mouthfree)
-				H.visible_message("<span class='danger'>[H] показывает [P] [ya]зык!</span>")
+				H.visible_message("<span class='danger'>[H] показывает [P] язык!</span>")
 				if (istype(P.loc, /obj/structure/closet) && H.loc == P.loc)
-					P.visible_message("<span class='danger'>[H] показывает [P] [ya]зык!</span>")
+					P.visible_message("<span class='danger'>[H] показывает [P] язык!</span>")
 
 		else if (href_list["interaction"] == "pull")
 			if(((H.Adjacent(P) && !istype(P.loc, /obj/structure/closet)) || (H.loc == P.loc)) && hashands && !H.restrained())
@@ -188,7 +187,7 @@
 					if (istype(P.loc, /obj/structure/closet))
 						P.visible_message("<span class='danger'>[H] дёргает [P] за хвост!</span>")
 				else
-					H.visible_message("<B>[H]</B> пытаетс[ya] поймать <B>[P]</B> за хвост!")
+					H.visible_message("<B>[H]</B> пытается поймать <B>[P]</B> за хвост!")
 					if (istype(P.loc, /obj/structure/closet))
-						P.visible_message("<B>[H]</B> пытаетс[ya] поймать <B>[P]</B> за хвост!")
+						P.visible_message("<B>[H]</B> пытается поймать <B>[P]</B> за хвост!")
 	..()
