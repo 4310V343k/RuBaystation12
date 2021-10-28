@@ -58,7 +58,11 @@
 	var/species_text
 	if(ishuman(me) && !skip_species_mention)
 		var/mob/living/carbon/human/H = me
-		var/use_name = "\improper [H.species.name]"
+		var/use_name
+		if(H.species.name == SPECIES_SHELL)
+			use_name = "\improper human"
+		else
+			use_name = "\improper [H.species.name]"
 		species_text = " for \a [use_name]"
 	. = "[get_third_person_message_start(my_gender)] [get_standalone_value_descriptor(my_value)][species_text]"
 
