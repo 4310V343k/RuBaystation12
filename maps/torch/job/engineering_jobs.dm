@@ -22,7 +22,8 @@
 		/datum/mil_rank/fleet/e7,
 		/datum/mil_rank/fleet/e8,
 		/datum/mil_rank/army/e6,
-		/datum/mil_rank/army/e7
+		/datum/mil_rank/army/e7,
+		/datum/mil_rank/army/e8
 	)
 	min_skill = list(   SKILL_COMPUTER     = SKILL_BASIC,
 	                    SKILL_EVA          = SKILL_ADEPT,
@@ -138,6 +139,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/fleet/e2,
+		/datum/mil_rank/army/e2,
 		/datum/mil_rank/army/e3
 	)
 
