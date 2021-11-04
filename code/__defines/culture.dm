@@ -137,6 +137,7 @@
 
 // IPC cultures.
 #define CULTURE_POSITRONICS    "Union Member"
+#define CULTURE_ROGUE_SHELL    "Rogue Shell"
 
 #define HOME_SYSTEM_ROOT       "Root"
 
