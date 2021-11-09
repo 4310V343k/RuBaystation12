@@ -21,7 +21,7 @@
 	icon = 'terrania/icons/obj/weapons/melee.dmi'
 	icon_state = "hfmachete0"
 	active_icon = "hfmachete1"
-		item_icons = list(
+	item_icons = list(
 		slot_l_hand_str = 'terrania/icons/mob/weapons/swords_lefthand.dmi',
 		slot_r_hand_str = 'terrania/icons/mob/weapons/swords_righthand.dmi'
 		)
