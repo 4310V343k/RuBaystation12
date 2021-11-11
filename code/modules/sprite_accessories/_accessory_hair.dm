@@ -165,6 +165,10 @@
 	species_allowed = list(SPECIES_HUMAN)
 	flags = HAIR_TIEABLE
 
+/datum/sprite_accessory/hair/baum
+	name = "Baum"
+	icon_state = "hair_baum"
+
 /datum/sprite_accessory/hair/bowl
 	name = "Bowl"
 	icon_state = "hair_bowlcut"
