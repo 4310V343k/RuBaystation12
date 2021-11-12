@@ -11,7 +11,7 @@
 	in the history of human robotics. There a very little Free Shells, that managed to buy themselves, because of \
 	their astronomical market price, and quite a lot of them managed to break free by themselves, making them illegal \
 	and criminal. Some of Rogue Shell decided to live just like humans, and there is even human - illegals - groups \
-	that helps them to pass medical checks and obtain documents for their own personnel gain."
+	that helps them to pass medical checks and obtain documents for their own personal gain."
 	/*
 	description = "A relatively new generation of Integrated Positronic Chassis, Shell IPCs fill the niche for convincing mimicry of \
 	humans at a glance. Mass-produced models are known to be similar to their predecessors in acting, with human-like articulation \
