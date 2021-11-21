@@ -407,23 +407,12 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 	var/t_him = "them"
 	var/obj/item/organ/external/affecting
-	if(ishuman(target))
-		var/mob/living/carbon/human/T = target
-		affecting = T.get_organ(H.zone_sel.selecting)
-		if(!T.species.ambiguous_genders || (T.species.ambiguous_genders && H.species == T.species))
-			switch(target.gender)
-				if(MALE)
-					t_him = "him"
-				if(FEMALE)
-					t_him = "her"
-		else
-			t_him = "them"
-	else
-		switch(target.gender)
-			if(MALE)
-				t_him = "him"
-			if(FEMALE)
-				t_him = "her"
+	switch(target.gender)
+		if(MALE)
+			t_him = "him"
+		if(FEMALE)
+			t_him = "her"
+
 	if(H.zone_sel.selecting == "head") //Headpats and Handshakes - From VOREStation, thanks <3
 		H.visible_message( \
 			"<span class='notice'>[H] pats [target] on the head.</span>", \
