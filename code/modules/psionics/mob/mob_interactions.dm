@@ -16,13 +16,17 @@
 	}
 
 /mob/living/UnarmedAttack(var/atom/A, var/proximity)
-	. = ..()
 	if(. && psi)
 		INVOKE_PSI_POWERS(src, psi.get_melee_powers(SSpsi.faculties_by_intent[a_intent]), A, FALSE)
+		if(src.supress_parent_proc)
+			return .
+	. = ..()
 
 /mob/living/RangedAttack(var/atom/A, var/params)
 	if(psi)
 		INVOKE_PSI_POWERS(src, psi.get_ranged_powers(SSpsi.faculties_by_intent[a_intent]), A, TRUE)
+		if(src.supress_parent_proc)
+			return .
 	. = ..()
 
 /mob/living/proc/check_psi_grab(var/obj/item/grab/grab)
@@ -32,6 +36,8 @@
 /mob/living/attack_empty_hand(var/bp_hand)
 	if(psi)
 		INVOKE_PSI_POWERS(src, psi.get_manifestations(), src, FALSE)
+		if(src.supress_parent_proc)
+			return .
 	. = ..()
 
 #undef INVOKE_PSI_POWERS
