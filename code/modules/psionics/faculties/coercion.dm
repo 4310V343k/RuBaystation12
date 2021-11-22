@@ -174,6 +174,7 @@
 	cooldown =        100
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_OPERANT
+	suppress_parent_proc = TRUE
 	use_description = "Grab a patient, target the head, then use the grab on them while on disarm intent, in order to perform a deep coercive-redactive probe of their psionic potential."
 
 /decl/psionic_power/coercion/assay/invoke(var/mob/living/user, var/mob/living/target)
@@ -198,6 +199,7 @@
 	cooldown =      80
 	use_grab =     TRUE
 	min_rank =      PSI_RANK_OPERANT
+	suppress_parent_proc = TRUE
 	use_description = "Grab a patient, target the mouth, then use the grab on them while on disarm intent, in order to cure ailments of the mind."
 
 /decl/psionic_power/coercion/focus/invoke(var/mob/living/user, var/mob/living/target)

@@ -12,6 +12,9 @@
 	var/use_description  // A short description of how to use this power, shown via assay.
 	// A sound effect to play when the power is used.
 	var/use_sound = 'sound/effects/psi/power_used.ogg'
+	// by RuBay Hacso
+	var/suppress_parent_proc = FALSE
+
 
 /decl/psionic_power/proc/invoke(var/mob/living/user, var/atom/target)
 

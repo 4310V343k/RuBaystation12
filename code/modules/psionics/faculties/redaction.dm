@@ -26,7 +26,7 @@
 	cooldown =        30
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_OPERANT
-	supress_parent_proc = TRUE
+	suppress_parent_proc = TRUE
 	use_description = "Grab a patient, target the chest, then switch to help intent and use the grab on them to perform a check for wounds and damage."
 
 /decl/psionic_power/redaction/skinsight/invoke(var/mob/living/user, var/mob/living/target)
@@ -44,7 +44,7 @@
 	cooldown =        50
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
-	supress_parent_proc = TRUE
+	suppress_parent_proc = TRUE
 	use_description = "Target a patient while on help intent at melee range to mend a variety of maladies, such as bleeding or broken bones. Higher ranks in this faculty allow you to mend a wider range of problems."
 
 /decl/psionic_power/redaction/mend/invoke(var/mob/living/user, var/mob/living/carbon/human/target)
@@ -128,6 +128,7 @@
 	cooldown =        60
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_GRANDMASTER
+	suppress_parent_proc = TRUE
 	use_description = "Target a patient while on help intent at melee range to cleanse radiation and genetic damage from a patient."
 
 /decl/psionic_power/redaction/cleanse/invoke(var/mob/living/user, var/mob/living/carbon/human/target)

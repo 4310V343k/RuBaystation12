@@ -4,8 +4,6 @@
 	var/associated_intent
 	var/list/armour_types = list()
 	var/list/powers = list()
-	// by RuBay Hacso
-	var/supress_parent_proc = FALSE
 
 /decl/psionic_faculty/New()
 	..()
