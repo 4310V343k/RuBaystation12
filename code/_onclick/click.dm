@@ -10,7 +10,8 @@
 					LAZYADD(holder.psi.manifested_items, result); \
 					holder.put_in_hands(result); \
 				} \
-				. = list(return_on_invocation, power.suppress_parent_proc); \
+				if(power.suppress_parent_proc){return 0}; \
+				return return_on_invocation; \
 			} \
 		} \
 	}
@@ -207,9 +208,6 @@
 
 	if(psi)
 		INVOKE_PSI_POWERS(src, psi.get_melee_powers(SSpsi.faculties_by_intent[a_intent]), A, FALSE)
-		if(.?[2])
-			return 0
-
 	return 1
 
 /*
@@ -231,8 +229,6 @@
 /mob/living/RangedAttack(var/atom/A, var/params)
 	if(psi)
 		INVOKE_PSI_POWERS(src, psi.get_ranged_powers(SSpsi.faculties_by_intent[a_intent]), A, TRUE)
-		if(.?[2])
-			return 0
 
 /mob/living/proc/check_psi_grab(var/obj/item/grab/grab)
 	if(psi && ismob(grab.affecting))
