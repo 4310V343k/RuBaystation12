@@ -15,7 +15,7 @@ GLOBAL_LIST_EMPTY(floating_chat_colors)
 /atom/movable
 	var/list/stored_chat_text
 
-/atom/movable/proc/animate_chat(message, datum/language/language, small, list/show_to, duration = CHAT_MESSAGE_LIFESPAN)
+/atom/movable/proc/animate_chat(message, datum/language/language, small, list/show_to, duration = CHAT_MESSAGE_LIFESPAN, huge)
 	set waitfor = FALSE
 
 	/// Get rid of any URL schemes that might cause BYOND to automatically wrap something in an anchor tag
@@ -33,8 +33,18 @@ GLOBAL_LIST_EMPTY(floating_chat_colors)
 	if(small)
 		fontsize = 6
 
+	if(huge)
+		fontsize = 9
+		limit = 60
+		style += "font-weight: bold;"
+
+	if(huge && small)
+		fontsize = 7
+		limit = 100
+		style += "font-weight: bold;"
+
 	if(copytext_char(message, length_char(message) - 1) == "!!")
-		fontsize = 8
+		fontsize += 1
 		limit = 60
 		style += "font-weight: bold;"
 

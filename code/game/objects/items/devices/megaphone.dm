@@ -26,17 +26,27 @@
 	if(!message)
 		return
 	message = capitalize(message)
+	var/list/rec = list()
 	if ((src.loc == user && usr.stat == 0))
 		if(emagged)
 			if(insults)
+				var/picked = pick(insultmsg)
 				for(var/mob/O in (viewers(user)))
-					O.show_message("<B>[user]</B> broadcasts, <FONT size=3>\"[pick(insultmsg)]\"</FONT>",2) // 2 stands for hearable message
+					O.show_message("<B>[user]</B> broadcasts, <FONT size=3>\"[picked]\"</FONT>",2) // 2 stands for hearable message
+					if(O.client)
+						rec |= O.client
+
+				INVOKE_ASYNC(user, /atom/movable/proc/animate_chat, picked, null, 0, rec, 5 SECONDS, 1)
 				insults--
 			else
 				to_chat(user, "<span class='warning'>*BZZZZzzzzzt*</span>")
 		else
 			for(var/mob/O in (viewers(user)))
-				O.show_message("<B>[user]</B> broadcasts, <FONT size=3>\"[message]\"</FONT>",2) // 2 stands for hearable message
+				O.show_message("<B>[user]</B> broadcasts, <FONT size=5>\"[message]\"</FONT>",2) // 2 stands for hearable message
+				if(O.client)
+					rec |= O.client
+
+			INVOKE_ASYNC(user, /atom/movable/proc/animate_chat, message, null, 0, rec, 5 SECONDS, 1)
 
 		spamcheck = 1
 		spawn(20)
