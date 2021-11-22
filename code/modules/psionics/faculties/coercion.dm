@@ -56,6 +56,7 @@
 	cooldown =        80
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
+	suppress_parent_proc = TRUE
 	use_description = "Target the head on disarm intent at melee range to attempt to read a victim's surface thoughts."
 
 /decl/psionic_power/coercion/mindread/invoke(var/mob/living/user, var/mob/living/target)
@@ -141,6 +142,7 @@
 	cooldown =      200
 	use_grab =      TRUE
 	min_rank =      PSI_RANK_PARAMOUNT
+	suppress_parent_proc = TRUE
 	use_description = "Grab a victim, target the eyes, then use the grab on them while on disarm intent, in order to convert them into a loyal mind-slave. The process takes some time, and failure is punished harshly."
 
 /decl/psionic_power/coercion/mindslave/invoke(var/mob/living/user, var/mob/living/target)
