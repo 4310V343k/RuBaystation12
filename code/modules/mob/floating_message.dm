@@ -43,8 +43,10 @@ GLOBAL_LIST_EMPTY(floating_chat_colors)
 		limit = 60
 		style += "font-weight: bold;"
 
+	if(language == all_languages["Noise"])
+		message = "*" + message + "*"
 
-	if(copytext_char(message, length_char(message) - 1) == "!!")
+	else if(copytext_char(message, length_char(message) - 1) == "!!")
 		fontsize += 1
 		limit = 60
 		style += "font-weight: bold;"
