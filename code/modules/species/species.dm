@@ -407,6 +407,11 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 
 	var/t_him = "them"
 	var/obj/item/organ/external/affecting
+	if(ishuman(target))
+		var/mob/living/carbon/human/T = target
+		affecting = T.get_organ(H.zone_sel.selecting)
+
+
 	switch(target.gender)
 		if(MALE)
 			t_him = "him"
