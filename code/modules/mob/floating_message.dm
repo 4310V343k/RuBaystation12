@@ -30,18 +30,19 @@ GLOBAL_LIST_EMPTY(floating_chat_colors)
 	var/fontsize = 7
 	var/limit = 120
 
-	if(small)
-		fontsize = 6
-
-	if(huge)
-		fontsize = 9
-		limit = 60
-		style += "font-weight: bold;"
-
 	if(huge && small)
 		fontsize = 7
 		limit = 100
 		style += "font-weight: bold;"
+
+	else if(small)
+		fontsize = 6
+
+	else if(huge)
+		fontsize = 9
+		limit = 60
+		style += "font-weight: bold;"
+
 
 	if(copytext_char(message, length_char(message) - 1) == "!!")
 		fontsize += 1
