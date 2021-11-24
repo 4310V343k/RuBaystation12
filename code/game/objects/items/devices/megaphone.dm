@@ -39,16 +39,13 @@
 		return
 
 	message = trim_left(message)
-	// var/message_form = "<span class='[lang.colour]'>\"[capitalize(message)]\"</span>"
 	message = capitalize(message)
 	var/list/rec = list()
 	if ((src.loc == user && usr.stat == 0))
 		if(emagged)
 			if(insults)
 				var/picked = pick(insultmsg)
-				// var/picked_form = "<span class='[lang.colour]'>\"[picked]\"</span>"
 				for(var/mob/O in (viewers(user)))
-					// O.show_message("<B>[user]</B> broadcasts, <FONT size=5>[picked_form]</FONT>",2) // 2 stands for hearable message
 					O.hear_say(picked, "broadcasts", lang, null, 0, user, null, null, 6)
 					if(O.client)
 						rec |= O.client
@@ -60,7 +57,6 @@
 		else
 			for(var/mob/O in (viewers(user)))
 				O.hear_say(message, "broadcasts", lang, null, 0, user, null, null, 6)
-				// O.show_message("<B>[user]</B> broadcasts, <FONT size=5>[message_form]</FONT>",2) // 2 stands for hearable message
 				if(O.client)
 					rec |= O.client
 

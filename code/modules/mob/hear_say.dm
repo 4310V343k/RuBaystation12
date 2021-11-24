@@ -85,8 +85,8 @@
 							nverb = verb
 			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [language.format_message(message, nverb, fontsize)]</span>")
 		else
-			var/F1 = fontsize ? "<FONT size=[fontsize]>" : ""
-			var/F2 = fontsize ? "</FONT>" : ""
+			var/F1 = fontsize ? "<font size=[fontsize]>" : ""
+			var/F2 = fontsize ? "</font>" : ""
 			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [verb], <span class='message'><span class='body'>[F1]\"[message]\"[F2]</span></span></span>")
 		if (speech_sound && (get_dist(speaker, src) <= world.view && src.z == speaker.z))
 			var/turf/source = speaker? get_turf(speaker) : get_turf(src)

@@ -122,8 +122,8 @@
 	return scrambled_text
 
 /datum/language/proc/format_message(message, verb, var/fontsize = null)
-	var/F1 = fontsize ? "<FONT size=[fontsize]>" : ""
-	var/F2 = fontsize ? "</FONT>" : ""
+	var/F1 = fontsize ? "<font size=[fontsize]>" : ""
+	var/F2 = fontsize ? "</font>" : ""
 	return "[verb], <span class='message'><span class='[colour]'>[F1]\"[capitalize(message)]\"[F2]</span></span>"
 
 /datum/language/proc/format_message_plain(message, verb)
