@@ -1,7 +1,6 @@
-#define INVOKE_PSI_POWERS(holder, powers, target, return_on_invocation) \
+#define INVOKE_PSI_POWERS(holder, powers, target) \
 	if(holder && holder.psi && holder.psi.can_use()) { \
-		for(var/thing in powers) { \
-			var/decl/psionic_power/power = thing; \
+		for(var/decl/psionic_power/power as anything in powers) { \
 			var/obj/item/result = power.invoke(holder, target); \
 			if(result) { \
 				holder.psi.spend_power(power.cost); \
@@ -12,7 +11,6 @@
 					holder.put_in_hands(result); \
 				} \
 				if(power.suppress_parent_proc){return 0}; \
-				return return_on_invocation; \
 			} \
 		} \
 	}
@@ -208,7 +206,7 @@
 
 
 	if(psi)
-		INVOKE_PSI_POWERS(src, psi.get_melee_powers(SSpsi.faculties_by_intent[a_intent]), A, FALSE)
+		INVOKE_PSI_POWERS(src, psi.get_melee_powers(SSpsi.faculties_by_intent[a_intent]), A)
 	return 1
 
 /*
@@ -229,12 +227,12 @@
 
 /mob/living/RangedAttack(var/atom/A, var/params)
 	if(psi)
-		INVOKE_PSI_POWERS(src, psi.get_ranged_powers(SSpsi.faculties_by_intent[a_intent]), A, TRUE)
+		INVOKE_PSI_POWERS(src, psi.get_ranged_powers(SSpsi.faculties_by_intent[a_intent]), A)
+	..()
 
 /mob/living/proc/check_psi_grab(var/obj/item/grab/grab)
 	if(psi && ismob(grab.affecting))
-		INVOKE_PSI_POWERS(src, psi.get_grab_powers(SSpsi.faculties_by_intent[a_intent]), grab.affecting, FALSE)
-
+		INVOKE_PSI_POWERS(src, psi.get_grab_powers(SSpsi.faculties_by_intent[a_intent]), grab.affecting)
 
 /*
 	Restrained ClickOn
