@@ -10,7 +10,7 @@
 					LAZYADD(holder.psi.manifested_items, result); \
 					holder.put_in_hands(result); \
 				} \
-				if(power.suppress_parent_proc){return 0}; \
+				if(power.suppress_parent_proc){ return 0 }; \
 			} \
 		} \
 	}
