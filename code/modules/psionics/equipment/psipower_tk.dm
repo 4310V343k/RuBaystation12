@@ -17,7 +17,7 @@
 /obj/item/psychic_power/telekinesis/proc/set_focus(var/atom/movable/_focus)
 
 	if(!_focus.simulated || !istype(_focus.loc, /turf))
-		return FALSE
+		return list(FALSE, FALSE)
 
 	var/check_paramount
 	if(ismob(_focus))
@@ -27,7 +27,7 @@
 		var/obj/thing = _focus
 		check_paramount = (thing.w_class >= 5)
 	else
-		return FALSE
+		return list(FALSE, FALSE)
 
 	if(_focus.anchored || (check_paramount && owner.psi.get_rank(PSI_PSYCHOKINESIS) < PSI_RANK_PARAMOUNT))
 		focus = _focus
@@ -35,7 +35,7 @@
 		if(!.)
 			to_chat(owner, SPAN_WARNING("\The [_focus] is too hefty for you to get a mind-grip on."))
 		qdel(src)
-		return FALSE
+		return list(FALSE, .)
 
 	focus = _focus
 	overlays.Cut()
@@ -43,7 +43,7 @@
 	I.color = focus.color
 	I.overlays = focus.overlays
 	overlays += I
-	return TRUE
+	return list(TRUE, null)
 
 /obj/item/psychic_power/telekinesis/attack_self(var/mob/user)
 	user.visible_message(SPAN_NOTICE("\The [user] makes a strange gesture."))

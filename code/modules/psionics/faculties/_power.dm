@@ -26,7 +26,7 @@
 		if(user_rank < min_rank)
 			return FALSE
 
-	if(cost && !user.psi.spend_power(cost))
+	if(!cost)
 		return FALSE
 
 	var/user_psi_leech = user.do_psionics_check(cost, user)

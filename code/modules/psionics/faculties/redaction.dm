@@ -153,7 +153,7 @@
 				target.adjustCloneLoss(-(target.getCloneLoss()))
 			return TRUE
 		to_chat(user, SPAN_NOTICE("You can find no genetic damage or radiation to heal within \the [target]."))
-		return TRUE
+		return FALSE
 
 /decl/psionic_power/revive
 	name =            "Revive"

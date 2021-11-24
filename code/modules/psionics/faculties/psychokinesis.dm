@@ -57,9 +57,6 @@
 	use_description = "Click on a distant target while on grab intent to manifest a psychokinetic grip. Use it manipulate objects at a distance."
 	admin_log = FALSE
 	use_sound = 'sound/effects/psi/power_used.ogg'
-	var/global/list/valid_machine_types = list(
-		/obj/machinery/door
-	)
 
 /decl/psionic_power/psychokinesis/telekinesis/invoke(var/mob/living/user, var/mob/living/target)
 	if(user.a_intent != I_GRAB)
@@ -72,21 +69,24 @@
 			to_chat(user, "<span class='warning'>Your telekinetic power won't reach that far.</span>")
 			return FALSE
 
-		if(istype(target, /mob) || istype(target, /obj))
-			var/obj/item/psychic_power/telekinesis/tk = new(user)
-			if(tk.set_focus(target))
-				tk.sparkle()
-				user.visible_message("<span class='notice'>\The [user] reaches out.</span>")
-				return tk
-		else if(istype(target, /obj/structure))
+		if(istype(target, /obj/structure))
 			user.visible_message("<span class='notice'>\The [user] makes a strange gesture.</span>")
 			var/obj/O = target
 			O.attack_hand(user)
 			return TRUE
-		else if(istype(target, /obj/machinery))
-			for(var/mtype in valid_machine_types)
-				if(istype(target, mtype))
-					var/obj/machinery/machine = target
-					machine.attack_hand(user)
-					return TRUE
+
+		else if(istype(target, /mob) || istype(target, /obj))
+			var/obj/item/psychic_power/telekinesis/tk = new(user)
+			var/result = tk.set_focus(target)
+			if(!result)
+				return FALSE
+
+			if(result[1])
+				tk.sparkle()
+				user.visible_message("<span class='notice'>\The [user] reaches out.</span>")
+				return tk
+			else if (!result[1] && result[2])
+				user.visible_message("<span class='notice'>\The [user] makes a strange gesture.</span>")
+				return TRUE
+
 	return FALSE

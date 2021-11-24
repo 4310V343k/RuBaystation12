@@ -4,6 +4,7 @@
 			var/decl/psionic_power/power = thing; \
 			var/obj/item/result = power.invoke(holder, target); \
 			if(result) { \
+				holder.psi.spend_power(power.cost); \
 				power.handle_post_power(holder, target); \
 				if(istype(result)) { \
 					sound_to(holder, sound('sound/effects/psi/power_evoke.ogg')); \
