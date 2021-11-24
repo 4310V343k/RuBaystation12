@@ -418,7 +418,7 @@ The slots that you can use are found in items_clothing.dm and are the inventory 
 		if(FEMALE)
 			t_him = "her"
 
-	if(H.zone_sel.selecting == "head") //Headpats and Handshakes - From VOREStation, thanks <3
+	if(H.zone_sel.selecting == "head" && (affecting && !affecting.is_stump())) //Headpats and Handshakes - From VOREStation, thanks <3
 		H.visible_message( \
 			"<span class='notice'>[H] pats [target] on the head.</span>", \
 			"<span class='notice'>You pat [target] on the head.</span>", )
