@@ -68,12 +68,12 @@
 
 	if(target.stat == DEAD || (target.status_flags & FAKEDEATH) || !target.client)
 		to_chat(user, SPAN_WARNING("\The [target] is in no state for a mind-ream."))
-		return TRUE
+		return FALSE
 
 	user.visible_message(SPAN_WARNING("\The [user] touches \the [target]'s temple..."))
 	var/question =  input(user, "Say something?", "Read Mind", "Penny for your thoughts?") as null|text
 	if(!question || user.incapacitated() || !do_after(user, 20))
-		return TRUE
+		return FALSE
 
 	var/started_mindread = world.time
 	to_chat(user, SPAN_NOTICE("<b>You dip your mentality into the surface layer of \the [target]'s mind, seeking an answer: <i>[question]</i></b>"))
@@ -152,13 +152,13 @@
 	if(.)
 		if(target.stat == DEAD || (target.status_flags & FAKEDEATH))
 			to_chat(user, "<span class='warning'>\The [target] is dead!</span>")
-			return TRUE
+			return FALSE
 		if(!target.mind || !target.key)
 			to_chat(user, "<span class='warning'>\The [target] is mindless!</span>")
-			return TRUE
+			return FALSE
 		if(GLOB.thralls.is_antagonist(target.mind))
 			to_chat(user, "<span class='warning'>\The [target] is already in thrall to someone!</span>")
-			return TRUE
+			return FALSE
 		user.visible_message("<span class='danger'><i>\The [user] seizes the head of \the [target] in both hands...</i></span>")
 		to_chat(user, "<span class='warning'>You plunge your mentality into that of \the [target]...</span>")
 		to_chat(target, "<span class='danger'>Your mind is invaded by the presence of \the [user]! They are trying to make you a slave!</span>")
