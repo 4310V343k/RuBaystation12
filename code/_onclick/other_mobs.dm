@@ -30,7 +30,8 @@
 
 /mob/living/attack_empty_hand(var/bp_hand)
 	if(psi)
-		INVOKE_PSI_POWERS(src, psi.get_manifestations(), src, FALSE)
+		INVOKE_PSI_POWERS(src, psi.get_manifestations(), src)
+	..()
 
 /mob/living/carbon/human/RestrainedClickOn(var/atom/A)
 	return
