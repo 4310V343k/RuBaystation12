@@ -59,4 +59,4 @@
 			host.embedded -= src
 			host.drop_from_inventory(src)
 		else
-			return STOP_PROCESSING
+			STOP_PROCESSING(SSprocessing, src)
