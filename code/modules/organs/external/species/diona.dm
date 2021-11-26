@@ -4,7 +4,7 @@
 	joint = "structural ligament"
 	dislocated = -1
 	limb_flags = ORGAN_FLAG_CAN_AMPUTATE
-	burn_ratio = 2
+	burn_ratio = 1.2
 
 /obj/item/organ/external/diona/chest
 	name = "core trunk"
