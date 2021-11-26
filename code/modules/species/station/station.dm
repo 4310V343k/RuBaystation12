@@ -273,7 +273,7 @@
 	hud_type = /datum/hud_data/diona
 	siemens_coefficient = 0.3
 	show_ssd = "completely quiescent"
-	strength = STR_VHIGH
+	strength = STR_LOW
 	assisted_langs = list(LANGUAGE_NABBER)
 	spawns_with_stack = 0
 	health_hud_intensity = 2
@@ -451,3 +451,8 @@
 					break
 		if(is_in_water)
 			H.adjust_hydration(100)
+
+/datum/species/diona/handle_environment_special(mob/living/carbon/human/H)
+	if(!H.on_fire && H.fire_stacks < 2)
+		H.fire_stacks += 0.2
+	return
