@@ -451,8 +451,3 @@
 					break
 		if(is_in_water)
 			H.adjust_hydration(100)
-
-/datum/species/diona/handle_environment_special(mob/living/carbon/human/H)
-	if(!H.on_fire && H.fire_stacks < 2)
-		H.fire_stacks += 0.2
-	return
