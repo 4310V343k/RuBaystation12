@@ -161,7 +161,7 @@
 /datum/gear/accessory/pride_pins/New()
 	..()
 	var/list/options = list()
-	options["transgender pride pin"] = /obj/item/clothing/accessory/pridepins/intersexpin
+	options["transgender pride pin"] = /obj/item/clothing/accessory/pridepins
 	options["lesbian pride pin"] = /obj/item/clothing/accessory/pridepins/lesbianpin
 	options["bisexual pride pin"] = /obj/item/clothing/accessory/pridepins/bisexualpin
 	options["gay pride pin"] = /obj/item/clothing/accessory/pridepins/gaypin
