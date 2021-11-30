@@ -21,9 +21,7 @@
 /area/map_template/rescue_base/base)
 "ah" = (
 /obj/structure/bed/chair/comfy/captain{
-	color = "#666666";
-	dir = 1;
-	icon_state = "capchair_preview"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	color = "#543c30";
@@ -79,7 +77,6 @@
 "ax" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 4;
-	icon_state = "wrecharger0";
 	pixel_x = -23;
 	pixel_y = -3
 	},
@@ -126,7 +123,6 @@
 /obj/structure/reagent_dispensers/watertank,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -151,7 +147,6 @@
 /obj/machinery/chemical_dispenser/bar_soft/full,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -193,11 +188,9 @@
 /area/map_template/rescue_base/base)
 "bg" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Head";
-	opacity = 1
+	name = "Head"
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -266,8 +259,7 @@
 /area/map_template/rescue_base/base)
 "bF" = (
 /obj/structure/bed/chair/comfy/blue{
-	dir = 1;
-	icon_state = "comfychair_preview"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -309,8 +301,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/blue{
-	dir = 8;
-	icon_state = "corner_white"
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -319,34 +310,28 @@
 /area/map_template/rescue_base/base)
 "bM" = (
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
 "bN" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Showers";
-	opacity = 1
+	name = "Showers"
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
 "bQ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Cell";
-	opacity = 1
+	name = "Cell"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
 "bS" = (
 /obj/structure/hygiene/shower{
-	dir = 4;
-	icon_state = "shower"
+	dir = 4
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -380,7 +365,6 @@
 	dir = 5
 	},
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -432,8 +416,7 @@
 /area/map_template/rescue_base/base)
 "cr" = (
 /obj/structure/bed/chair/comfy/blue{
-	dir = 8;
-	icon_state = "comfychair_preview"
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -522,8 +505,7 @@
 /area/map_template/rescue_base/base)
 "cN" = (
 /obj/structure/bed/chair/comfy/blue{
-	dir = 4;
-	icon_state = "comfychair_preview"
+	dir = 4
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -571,8 +553,7 @@
 /area/map_template/rescue_base/base)
 "cY" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Security";
-	opacity = 1
+	name = "Security"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -599,8 +580,7 @@
 /area/map_template/rescue_base/base)
 "dc" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Medical";
-	opacity = 1
+	name = "Medical"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -638,9 +618,7 @@
 /area/map_template/rescue_base/base)
 "dx" = (
 /obj/structure/bed/chair/comfy/captain{
-	color = "#666666";
-	dir = 1;
-	icon_state = "capchair_preview"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -686,7 +664,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
-	icon_state = "wrecharger0";
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
@@ -813,7 +790,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
-	icon_state = "wrecharger0";
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
@@ -1045,8 +1021,7 @@
 /area/map_template/rescue_base/start)
 "eS" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Brig";
-	opacity = 1
+	name = "Brig"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
@@ -1081,15 +1056,13 @@
 /area/map_template/rescue_base/base)
 "fd" = (
 /obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
 "fl" = (
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 8;
-	icon_state = "spline_fancy"
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1111,8 +1084,7 @@
 /area/map_template/rescue_base/start)
 "fv" = (
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 4;
-	icon_state = "spline_fancy"
+	dir = 4
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1130,14 +1102,10 @@
 /area/map_template/rescue_base/base)
 "fz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/structure/table/glass,
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = 0;
-	pixel_y = 0
-	},
+/obj/item/reagent_containers/glass/beaker/cryoxadone,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -1218,7 +1186,6 @@
 "fQ" = (
 /obj/machinery/papershredder,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -1233,7 +1200,6 @@
 	pixel_y = 3
 	},
 /obj/structure/sign/double/solgovflag/left{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1253,7 +1219,6 @@
 /obj/structure/table/woodentable_reinforced/walnut/maple,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/black,
 /obj/structure/sign/double/solgovflag/right{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1285,8 +1250,7 @@
 "gc" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 9;
-	icon_state = "spline_fancy"
+	dir = 9
 	},
 /obj/structure/sign/solgov{
 	pixel_y = 32
@@ -1323,8 +1287,7 @@
 	pixel_y = 30
 	},
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 1;
-	icon_state = "spline_fancy"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1333,19 +1296,16 @@
 /area/map_template/rescue_base/base)
 "gk" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
 "gl" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 5;
-	icon_state = "spline_fancy"
+	dir = 5
 	},
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -1394,7 +1354,6 @@
 /obj/structure/table/reinforced,
 /obj/prefab/hand_teleporter,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -1464,7 +1423,6 @@
 /area/map_template/rescue_base/base)
 "gR" = (
 /obj/structure/sign/double/solgovflag/left{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1474,7 +1432,6 @@
 /area/map_template/rescue_base/base)
 "gS" = (
 /obj/structure/sign/double/solgovflag/right{
-	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1497,8 +1454,7 @@
 /area/map_template/rescue_base/start)
 "gZ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Squad Leader's Office";
-	opacity = 1
+	name = "Squad Leader's Office"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1554,7 +1510,6 @@
 "ib" = (
 /obj/structure/table/reinforced,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -1658,8 +1613,7 @@
 /obj/machinery/button/flasher{
 	id_tag = "rescueflash";
 	name = "Flasher";
-	pixel_x = 27;
-	pixel_y = 0
+	pixel_x = 27
 	},
 /obj/machinery/light{
 	dir = 4
@@ -1677,7 +1631,6 @@
 	},
 /obj/item/taperoll/bog,
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -1767,8 +1720,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
@@ -1898,8 +1850,7 @@
 /area/map_template/rescue_base/start)
 "lT" = (
 /obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
+	dir = 4
 	},
 /obj/item/device/radio/intercom/hailing{
 	dir = 4;
@@ -2031,8 +1982,7 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 10;
-	icon_state = "spline_fancy"
+	dir = 10
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2186,8 +2136,7 @@
 /area/map_template/rescue_base/base)
 "oY" = (
 /obj/structure/bed/chair/comfy/blue{
-	dir = 1;
-	icon_state = "comfychair_preview"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	color = "#543c30";
@@ -2197,8 +2146,7 @@
 /area/map_template/rescue_base/base)
 "oZ" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Storage";
-	opacity = 1
+	name = "Storage"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2305,11 +2253,9 @@
 /area/map_template/rescue_base/start)
 "qN" = (
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/corner/red/border{
@@ -2345,8 +2291,7 @@
 /area/map_template/rescue_base/base)
 "rt" = (
 /obj/effect/floor_decal/industrial/loading{
-	dir = 1;
-	icon_state = "loadingarea"
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2355,8 +2300,7 @@
 /area/map_template/rescue_base/base)
 "ru" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Cell 1";
-	opacity = 1
+	name = "Cell 1"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2364,12 +2308,10 @@
 /area/map_template/rescue_base/base)
 "rv" = (
 /obj/structure/hygiene/shower{
-	dir = 4;
-	icon_state = "shower"
+	dir = 4
 	},
 /obj/item/soap,
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -2445,7 +2387,6 @@
 "sI" = (
 /obj/structure/bed/padded,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /obj/item/bedsheet/red,
@@ -2462,7 +2403,6 @@
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -2490,12 +2430,10 @@
 "th" = (
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /obj/structure/handrail{
-	dir = 8;
-	icon_state = "handrail"
+	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 8;
@@ -2523,8 +2461,7 @@
 /area/map_template/rescue_base/base)
 "tS" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Detention";
-	opacity = 1
+	name = "Detention"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2555,7 +2492,6 @@
 "uv" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
-	icon_state = "wrecharger0";
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
@@ -2607,8 +2543,7 @@
 /area/map_template/rescue_base/base)
 "uN" = (
 /obj/effect/floor_decal/industrial/loading{
-	dir = 8;
-	icon_state = "loadingarea"
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2634,8 +2569,7 @@
 	},
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2645,7 +2579,6 @@
 "vk" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
-	icon_state = "wrecharger0";
 	pixel_x = 23;
 	pixel_y = -3
 	},
@@ -2678,7 +2611,6 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/red,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -2709,8 +2641,7 @@
 /area/map_template/rescue_base/start)
 "vM" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Cell 2";
-	opacity = 1
+	name = "Cell 2"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2795,8 +2726,7 @@
 /area/map_template/rescue_base/start)
 "xa" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Processing";
-	opacity = 1
+	name = "Processing"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2849,8 +2779,7 @@
 /area/map_template/rescue_base/start)
 "xz" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Flight Deck";
-	opacity = 1
+	name = "Flight Deck"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
@@ -2890,14 +2819,11 @@
 /area/map_template/rescue_base/base)
 "yb" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Heavy Equipment";
-	opacity = 1
+	name = "Heavy Equipment"
 	},
 /obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
 	id_tag = "standardrescue";
-	name = "Heavy Equipment";
-	p_open = 0
+	name = "Heavy Equipment"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2928,14 +2854,11 @@
 /area/map_template/rescue_base/base)
 "yl" = (
 /obj/machinery/door/airlock/centcom{
-	name = "EVA";
-	opacity = 1
+	name = "EVA"
 	},
 /obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
 	id_tag = "standardrescue";
-	name = "EVA";
-	p_open = 0
+	name = "EVA"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2979,8 +2902,7 @@
 	pixel_y = -4
 	},
 /obj/structure/handrail{
-	dir = 8;
-	icon_state = "handrail"
+	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 8;
@@ -2994,8 +2916,7 @@
 	frequency = 1331;
 	id_tag = "rescue_shuttle";
 	pixel_x = -8;
-	pixel_y = 25;
-	req_access = list()
+	pixel_y = 25
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
@@ -3048,8 +2969,7 @@
 "zC" = (
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /obj/structure/bed/chair{
 	dir = 8
@@ -3091,8 +3011,7 @@
 /area/map_template/rescue_base/base)
 "Al" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/map_template/rescue_base/start)
@@ -3124,8 +3043,7 @@
 /area/map_template/rescue_base/base)
 "AB" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Command";
-	opacity = 1
+	name = "Command"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -3144,8 +3062,7 @@
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
-	pixel_x = -3;
-	pixel_y = 0
+	pixel_x = -3
 	},
 /obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
@@ -3197,8 +3114,7 @@
 /obj/structure/table/rack,
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -3427,17 +3343,14 @@
 "CU" = (
 /obj/item/soap,
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
 "CX" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Stall";
-	opacity = 1
+	name = "Stall"
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -3466,8 +3379,7 @@
 /area/map_template/rescue_base/start)
 "DF" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Infirmary";
-	opacity = 1
+	name = "Infirmary"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
@@ -3533,12 +3445,9 @@
 "Em" = (
 /obj/structure/hygiene/sink{
 	dir = 4;
-	icon_state = "sink";
-	pixel_x = 11;
-	pixel_y = 0
+	pixel_x = 11
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -3703,8 +3612,7 @@
 /area/map_template/rescue_base/base)
 "Gj" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Storage";
-	opacity = 1
+	name = "Storage"
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
@@ -3763,8 +3671,7 @@
 /area/map_template/rescue_base/start)
 "GI" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Galley";
-	opacity = 1
+	name = "Galley"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -3780,7 +3687,6 @@
 "GU" = (
 /obj/machinery/pipedispenser,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -3818,18 +3724,15 @@
 /area/map_template/rescue_base/start)
 "HC" = (
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
 "HE" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Passageway";
-	opacity = 1
+	name = "Passageway"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
@@ -3862,12 +3765,10 @@
 "Ix" = (
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /obj/structure/handrail{
-	dir = 8;
-	icon_state = "handrail"
+	dir = 8
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
@@ -4208,7 +4109,6 @@
 /obj/machinery/vending/wallmed1{
 	name = "Emergency NanoMed";
 	pixel_x = 28;
-	pixel_y = 0;
 	req_access = newlist()
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -4359,7 +4259,6 @@
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -4387,8 +4286,7 @@
 /obj/machinery/shieldwallgen,
 /obj/item/device/radio/intercom/specops{
 	dir = 8;
-	pixel_x = 22;
-	pixel_y = 0
+	pixel_x = 22
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
@@ -4404,7 +4302,6 @@
 "Nq" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 4;
-	icon_state = "wrecharger0";
 	pixel_x = -23;
 	pixel_y = -3
 	},
@@ -4434,7 +4331,6 @@
 /area/map_template/rescue_base/base)
 "ND" = (
 /obj/structure/bed/chair/comfy/captain{
-	color = "#666666";
 	dir = 8
 	},
 /turf/unsimulated/floor{
@@ -4504,8 +4400,7 @@
 /area/map_template/rescue_base/start)
 "Os" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Storage";
-	opacity = 1
+	name = "Storage"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
@@ -4531,9 +4426,7 @@
 /area/map_template/rescue_base/base)
 "OQ" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/device/radio/intercom/specops{
-	dir = 2
-	},
+/obj/item/device/radio/intercom/specops,
 /turf/unsimulated/floor{
 	color = "#543c30";
 	icon = 'icons/turf/flooring/wood.dmi';
@@ -4548,8 +4441,7 @@
 /area/map_template/rescue_base/start)
 "Pw" = (
 /obj/machinery/computer/teleporter{
-	dir = 8;
-	icon_state = "computer"
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -4599,8 +4491,7 @@
 /area/map_template/rescue_base/start)
 "QN" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Engineering";
-	opacity = 1
+	name = "Engineering"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -4624,7 +4515,6 @@
 "QR" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
-	icon_state = "wrecharger0";
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
@@ -4675,7 +4565,6 @@
 "Rk" = (
 /obj/structure/hygiene/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -4700,14 +4589,11 @@
 /area/map_template/rescue_base/base)
 "Rp" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Restricted Equipment";
-	opacity = 1
+	name = "Restricted Equipment"
 	},
 /obj/machinery/door/blast/regular{
-	icon_state = "pdoor1";
 	id_tag = "heavyrescue";
-	name = "Restricted Equipment";
-	p_open = 0
+	name = "Restricted Equipment"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -4844,8 +4730,7 @@
 /obj/structure/table/reinforced,
 /obj/item/tableflag,
 /obj/effect/floor_decal/spline/fancy/black{
-	dir = 6;
-	icon_state = "spline_fancy"
+	dir = 6
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -4908,7 +4793,6 @@
 	dir = 1
 	},
 /turf/unsimulated/floor{
-	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
@@ -4956,7 +4840,6 @@
 	},
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
-	icon_state = "wrecharger0";
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
@@ -4991,7 +4874,6 @@
 /area/map_template/rescue_base/base)
 "Uy" = (
 /obj/machinery/door/airlock/external{
-	density = 1;
 	frequency = 1331;
 	id_tag = "rescue_shuttle_outer";
 	name = "Ship External Access"
@@ -5038,8 +4920,7 @@
 /area/map_template/rescue_base/base)
 "Vs" = (
 /obj/structure/handrail{
-	dir = 1;
-	icon_state = "handrail"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
@@ -5081,8 +4962,7 @@
 /area/map_template/rescue_base/start)
 "We" = (
 /obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
+	dir = 4
 	},
 /obj/effect/floor_decal/corner/black/border{
 	dir = 8
@@ -5184,8 +5064,7 @@
 /area/map_template/rescue_base/start)
 "WF" = (
 /obj/machinery/door/airlock/centcom{
-	name = "Emergency Insertion";
-	opacity = 1
+	name = "Emergency Insertion"
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -5194,8 +5073,7 @@
 /area/map_template/rescue_base/base)
 "WN" = (
 /obj/structure/handrail{
-	dir = 4;
-	icon_state = "handrail"
+	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
 	dir = 4;
@@ -5205,7 +5083,6 @@
 /area/map_template/rescue_base/start)
 "WO" = (
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -5237,7 +5114,6 @@
 	pixel_y = 4
 	},
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -5330,7 +5206,6 @@
 /area/map_template/rescue_base/base)
 "YI" = (
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /obj/effect/floor_decal/corner/red/border{
@@ -5358,7 +5233,6 @@
 /obj/item/cell/high,
 /obj/item/cell/high,
 /obj/item/device/radio/intercom/specops{
-	dir = 2;
 	pixel_y = 22
 	},
 /turf/unsimulated/floor{
@@ -5398,8 +5272,7 @@
 /area/map_template/rescue_base/base)
 "ZC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /obj/machinery/sleeper{
 	dir = 8
