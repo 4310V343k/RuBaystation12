@@ -1478,7 +1478,7 @@
 	base_type = /obj/machinery/vending/mredispenser
 
 /obj/machinery/vending/clothboutique
-	name = "\improper Cloth Boutique"
+	name = "Cloth Boutique"
 	desc = "A compact shop, that offers fashion clothes."
 	icon_state = "cloth_shop"
 	icon_deny = "cloth_shop-deny"
@@ -1669,8 +1669,7 @@
 		/obj/item/clothing/head/det/grey = 30,
 		/obj/item/clothing/head/panama = 30
 	)
-/*
+
 /obj/machinery/vending/clothboutique/on_update_icon()
 	if( !(stat & NOPOWER) )
 		overlays += image(src.icon, "[initial(icon_state)]-overlay")
-*/
