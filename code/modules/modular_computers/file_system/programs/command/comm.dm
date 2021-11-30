@@ -185,7 +185,7 @@
 					spawn(300) //30 second cooldown
 						centcomm_message_cooldown = 0
 		if("evac")
-			. = TRUE
+			. = TOPIC_HANDLED
 			if(is_autenthicated(user))
 				var/datum/evacuation_option/selected_evac_option = evacuation_controller.evacuation_options[href_list["target"]]
 				if (isnull(selected_evac_option) || !istype(selected_evac_option))
