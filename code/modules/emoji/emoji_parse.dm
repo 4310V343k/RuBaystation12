@@ -1,9 +1,8 @@
 GLOBAL_VAR_INIT(emojis, 'icons/emoji.dmi')
 
 /proc/emoji_parse(text, var/client/C)
-	. = text
 	if(!config.emojis)
-		return
+		return text
 	var/parsed = ""
 	var/pos = 1
 	var/search = 0
