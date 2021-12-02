@@ -1526,6 +1526,11 @@ area/assembly/robotics/office
 	name = "\improper Miscellaneous Research"
 	icon_state = "misclab"
 
+/area/rnd/rnd_sec
+	name = "\improper Research Checkpoint"
+	icon_state = "rnd_sec"
+	req_access = list(list(access_liaison, access_research_security))
+
 /area/rnd/research
 	name = "\improper Research Hallway"
 	icon_state = "research"
