@@ -20424,9 +20424,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
-"jKp" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/hallway/primary/firstdeck/center)
 "jMb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/research{
@@ -23869,9 +23866,6 @@
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/dark,
 /area/command/armoury)
-"oog" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/rnd/locker)
 "oox" = (
 /obj/effect/floor_decal/corner/research,
 /obj/machinery/firealarm{
@@ -29869,9 +29863,6 @@
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury)
-"wHE" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/maintenance/firstdeck/centralport)
 "wMh" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/orange,
@@ -50335,12 +50326,12 @@ aha
 ycz
 ayg
 ure
-jKp
-wHE
-wHE
-wHE
-wHE
-oog
+hrb
+hrb
+hrb
+hrb
+hrb
+hrb
 jIb
 oRb
 psb

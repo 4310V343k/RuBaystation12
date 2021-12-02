@@ -1057,9 +1057,9 @@
 	name = "\improper Bridge Deck Security Checkpoint"
 	icon_state = "checkpoint"
 
-/area/security/opscheck
-	name = "\improper First Deck Security Checkpoint"
-	icon_state = "checkpoint"
+//area/security/opscheck
+	//name = "\improper First Deck Security Checkpoint"
+	//icon_state = "checkpoint"  unused
 
 /area/security/habcheck
 	name = "\improper Third Deck Security Checkpoint"
