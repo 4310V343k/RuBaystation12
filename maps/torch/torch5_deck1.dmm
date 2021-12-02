@@ -21365,9 +21365,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
-"laM" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/space)
 "lbb" = (
 /obj/structure/curtain/open/privacy,
 /obj/machinery/firealarm{
@@ -24960,6 +24957,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/research,
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "Security";
+	departmentType = 5;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "pIb" = (
@@ -51314,7 +51317,7 @@ ahc
 vHB
 ayB
 nWl
-laM
+hrb
 hCb
 lob
 nQb
