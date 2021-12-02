@@ -15145,7 +15145,7 @@
 	name = "Petrov Interior Door Control";
 	pixel_x = -5;
 	pixel_y = 6;
-	req_access = list("ACCESS_RESEARCH_SECURITY")
+	req_access = list("ACCESS_TORCH_PETROV_SEC")
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "PetrovBiohazard";
@@ -15165,7 +15165,6 @@
 	name = "Office Shutter Control";
 	pixel_x = 5;
 	pixel_y = 6;
-	req_access = list("ACCESS_RESEARCH_SECURITY")
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/petrov/security)

@@ -206,8 +206,6 @@
 	extra_details = list("onegoldstripe")
 
 /obj/item/card/id/torch/passenger/corporate/corporate_guard
-	color = COLOR_BOTTLE_GREEN
-	detail_color = COLOR_OFF_WHITE
 	job_access_type = /datum/job/corporate_guard
 
 //Merchant

@@ -40,7 +40,7 @@
 	department_flag = SCI
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Chief Science Officer"
+	supervisors = "the Chief Science Officer and Corporate Liason"
 	selection_color = "#473d63"
 	economic_power = 18
 	minimal_player_age = 0

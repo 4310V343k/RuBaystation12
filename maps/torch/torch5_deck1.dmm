@@ -14528,7 +14528,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -17041,7 +17041,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -18937,7 +18937,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -19073,7 +19073,7 @@
 /area/thruster/d1port)
 "ijb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -21366,29 +21366,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
 "laM" = (
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	health = 1e+007
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/tank/emergency/oxygen/double,
-/obj/machinery/door/window/brigdoor/westright{
-	autoset_access = 0;
-	dir = 4;
-	name = "CSO's suit storage";
-	req_access = list("ACCESS_RESEARCH_DIRECTOR")
-	},
-/obj/item/rig/command/science/equipped,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/wall/r_wall/prepainted,
 /area/space)
 "lbb" = (
 /obj/structure/curtain/open/privacy,
@@ -23432,7 +23410,7 @@
 /area/security/detectives_office)
 "nPb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -26441,7 +26419,7 @@
 /area/rnd/research)
 "rsu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -29969,7 +29947,7 @@
 /area/command/armoury/access)
 "xie" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = "rndpost"
+	tag = null
 	},
 /turf/simulated/floor/plating,
 /area/rnd/rnd_sec)
@@ -49137,7 +49115,7 @@ jjh
 jjh
 aaa
 aaa
-laM
+aaa
 aaa
 aaa
 aaa
@@ -51336,7 +51314,7 @@ ahc
 vHB
 ayB
 nWl
-hrb
+laM
 hCb
 lob
 nQb
