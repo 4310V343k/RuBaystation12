@@ -818,7 +818,7 @@
 			if ("log_timers_on_bucket_reset")
 				log_timers_on_bucket_reset = TRUE
 			if ("toggle_emojis_off")
-				emojis = FALSE
+				emojis = TRUE
 			else
 				log_misc("Unknown setting in config/config.txt: '[name]'")
 
