@@ -817,8 +817,8 @@
 				game_version = value
 			if ("log_timers_on_bucket_reset")
 				log_timers_on_bucket_reset = TRUE
-			if ("toggle_emojis")
-				emojis = TRUE
+			if ("toggle_emojis_off")
+				emojis = FALSE
 			else
 				log_misc("Unknown setting in config/config.txt: '[name]'")
 
