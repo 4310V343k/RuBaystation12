@@ -24280,7 +24280,6 @@
 	id = "rndpost";
 	pixel_x = 2;
 	pixel_y = -21;
-	tag = null
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable/green{
