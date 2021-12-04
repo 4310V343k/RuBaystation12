@@ -14528,7 +14528,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
@@ -17041,7 +17041,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -18937,7 +18937,7 @@
 	opacity = 0
 	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/structure/cable/green{
 	d2 = 2;
@@ -19073,7 +19073,7 @@
 /area/thruster/d1port)
 "ijb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -23407,7 +23407,7 @@
 /area/security/detectives_office)
 "nPb" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -24277,6 +24277,7 @@
 	},
 /obj/machinery/button/windowtint{
 	dir = 1;
+	id = "rndpost";
 	id_tag = null;
 	pixel_x = 2;
 	pixel_y = -21;
@@ -26422,7 +26423,7 @@
 /area/rnd/research)
 "rsu" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -29950,7 +29951,7 @@
 /area/command/armoury/access)
 "xie" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
-	tag = null
+	id = "rndpost"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/rnd_sec)
