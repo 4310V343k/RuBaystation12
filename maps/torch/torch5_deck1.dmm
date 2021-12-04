@@ -24278,10 +24278,9 @@
 /obj/machinery/button/windowtint{
 	dir = 1;
 	id = "rndpost";
-	id_tag = null;
 	pixel_x = 2;
 	pixel_y = -21;
-	tag = "rndpost"
+	tag = null
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable/green{
