@@ -10318,9 +10318,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/rnd_sec{
-	req_access = list(list("ACCESS_TORCH_CORPORATE_LIAISON","ACCESS_RESEARCH_SECURITY", "ACCESS_CAPTIAN","ACCESS_HOP"))
-	})
+/area/rnd/rnd_sec)
 "aJw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -21585,9 +21583,6 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/rnd_sec)
 "lom" = (
@@ -24279,7 +24274,7 @@
 	dir = 1;
 	id = "rndpost";
 	pixel_x = 2;
-	pixel_y = -21;
+	pixel_y = -21
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable/green{
