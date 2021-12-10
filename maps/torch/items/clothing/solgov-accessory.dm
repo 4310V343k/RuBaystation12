@@ -667,6 +667,7 @@ ranks - fleet
 /obj/item/clothing/accessory/solgov/rank/fleet/officer/wo1_monkey
 	name = "makeshift ranks (WO-1 warrant officer 1)"
 	desc = "Insignia denoting the mythical rank of Warrant Officer. Too bad it's obviously fake."
+	icon_state = "fleetrank_monkey"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/officer/o2
 	name = "ranks (O-2 sub-lieutenant)"
