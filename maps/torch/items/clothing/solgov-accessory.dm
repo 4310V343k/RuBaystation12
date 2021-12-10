@@ -702,13 +702,13 @@ ranks - marines
 	on_rolled = list("down" = "none")
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted
-	name = "ranks (E-1 private)"
-	desc = "Insignia denoting the rank of Private."
+	name = "ranks (E-1 private recruit)"
+	desc = "Insignia denoting the rank of Private Recruit."
 	icon_state = "armyrank_enlisted"
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e2
-	name = "ranks (E-2 private second class)"
-	desc = "Insignia denoting the rank of Private Second Class."
+	name = "ranks (E-2 private)"
+	desc = "Insignia denoting the rank of Private."
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e3
 	name = "ranks (E-3 private first class)"
@@ -716,7 +716,11 @@ ranks - marines
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e4
 	name = "ranks (E-4 corporal)"
-	desc = "Insignia denoting the rank of Corporal."
+	desc = "Insignia denoting the rank of Сorporal."
+
+/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt
+	name = "ranks (E-4 specialist)"
+	desc = "Insignia denoting the rank of Specialist."
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e5
 	name = "ranks (E-5 sergeant)"
@@ -760,8 +764,8 @@ ranks - marines
 	desc = "Insignia denoting the rank of First Lieutenant."
 
 /obj/item/clothing/accessory/solgov/rank/army/officer/o3
-	name = "ranks (O-3 captain)"
-	desc = "Insignia denoting the rank of Captain."
+	name = "ranks (O-3 army captain)"
+	desc = "Insignia denoting the rank of Army Captain."
 
 /obj/item/clothing/accessory/solgov/rank/army/officer/o4
 	name = "ranks (O-4 major)"
@@ -793,5 +797,5 @@ ranks - marines
 	desc = "Insignia denoting the rank of General."
 
 /obj/item/clothing/accessory/solgov/rank/army/flag/o10_alt
-	name = "ranks (O-10 field marshal)"
-	desc = "Insignia denoting the rank of Field Marshal."
+	name = "ranks (O-10 general of the army)"
+	desc = "Insignia denoting the rank of General of the Army."

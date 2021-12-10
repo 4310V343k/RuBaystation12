@@ -20,6 +20,7 @@
 	spawn_branch_types = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet,
+		/datum/mil_branch/army,
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/alien,
@@ -74,6 +75,16 @@
 				/datum/mil_rank/fleet/e6,
 				/datum/mil_rank/fleet/e7,
 				/datum/mil_rank/fleet/o1
+			),
+			/datum/mil_branch/army = list(
+				/datum/mil_rank/army/e1,
+				/datum/mil_rank/army/e2,
+				/datum/mil_rank/army/e3,
+				/datum/mil_rank/army/e4,
+				/datum/mil_rank/army/e5,
+				/datum/mil_rank/army/e6,
+				/datum/mil_rank/army/e7,
+				/datum/mil_rank/army/o1
 			)
 		),
 		/datum/species/machine/shell = list(
@@ -92,6 +103,16 @@
 				/datum/mil_rank/fleet/e6,
 				/datum/mil_rank/fleet/e7,
 				/datum/mil_rank/fleet/o1
+			),
+			/datum/mil_branch/army = list(
+				/datum/mil_rank/army/e1,
+				/datum/mil_rank/army/e2,
+				/datum/mil_rank/army/e3,
+				/datum/mil_rank/army/e4,
+				/datum/mil_rank/army/e5,
+				/datum/mil_rank/army/e6,
+				/datum/mil_rank/army/e7,
+				/datum/mil_rank/army/o1
 			)
 		),
 		/datum/species/skrell = list(
@@ -221,6 +242,7 @@
 		/datum/mil_rank/army/e2,
 		/datum/mil_rank/army/e3,
 		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/e6,
 		/datum/mil_rank/army/e7,
@@ -240,6 +262,27 @@
 		/datum/mil_rank/army/o9,
 		/datum/mil_rank/army/o10,
 		/datum/mil_rank/army/o10_alt
+	)
+
+	spawn_rank_types = list(
+		/datum/mil_rank/army/e1,
+		/datum/mil_rank/army/e2,
+		/datum/mil_rank/army/e3,
+		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e5,
+		/datum/mil_rank/army/e6,
+		/datum/mil_rank/army/e7,
+		/datum/mil_rank/army/e8,
+		/datum/mil_rank/army/e8_alt,
+		/datum/mil_rank/army/e9,
+		/datum/mil_rank/army/e9_alt1,
+		/datum/mil_rank/army/e9_alt2,
+		/datum/mil_rank/army/o1,
+		/datum/mil_rank/army/o2,
+		/datum/mil_rank/army/o3,
+		/datum/mil_rank/army/o4,
+		/datum/mil_rank/army/o5
 	)
 
 	assistant_job = /datum/job/crew
@@ -502,20 +545,20 @@
  *  ====
  */
 /datum/mil_rank/army/e1
-	name = "Private"
-	name_short = "PVT"
+	name = "Private Recruit"
+	name_short = "PVTR"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted)
 	sort_order = 1
 
 /datum/mil_rank/army/e2
-	name = "Private Second Class"
-	name_short = "PV2"
+	name = "Private"
+	name_short = "PVT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e2)
 	sort_order = 2
 
 /datum/mil_rank/army/e3
 	name = "Private First Class"
-	name_short = "PV1"
+	name_short = "PFC"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e3)
 	sort_order = 3
 
@@ -523,6 +566,12 @@
 	name = "Corporal"
 	name_short = "CPL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4)
+	sort_order = 4
+
+/datum/mil_rank/army/e4_alt
+	name = "Specialist"
+	name_short = "SPC"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt)
 	sort_order = 4
 
 /datum/mil_rank/army/e5
@@ -586,8 +635,8 @@
 	sort_order = 12
 
 /datum/mil_rank/army/o3
-	name = "Captain"
-	name_short = "CPT"
+	name = "Army Captain"
+	name_short = "ACPT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o3)
 	sort_order = 13
 
