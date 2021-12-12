@@ -7,7 +7,7 @@
 	slot = ACCESSORY_SLOT_INSIGNIA
 	high_visibility = 1
 
-/obj/item/device/radio/headset/heads/torchexec /synth
+/obj/item/device/radio/headset/heads/torchexec/synth
 	name = "Synth's headset"
 	desc = "A headset issued to abroad's EXO Synth Unit."
 
@@ -32,14 +32,13 @@
 /datum/job/synthetic
 	title = "Synthetic"
 	supervisors = "The SEV Torch's acting command offcer."
-	department = "Support"
+	department = SPT
 	minimal_player_age = 14
 	economic_power = 2
 	ideal_character_age = 1
 	minimum_character_age = list(SPECIES_SHELL = 1)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/synth
 	selection_color = "#2f2f7f"
-	head_position = 1
 	req_admin_notify = TRUE
 	create_record = 1
 	total_positions = 1
