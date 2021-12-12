@@ -48,6 +48,9 @@
 
 	blood_color = "#424fc9"
 	flesh_color = "#575757"
+	show_ssd = "fast asleep"
+	show_coma = "completely comatose"
+
 
 	has_organ = list(
 		BP_POSIBRAIN = /obj/item/organ/internal/posibrain,

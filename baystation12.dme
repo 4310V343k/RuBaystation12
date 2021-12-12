@@ -2903,6 +2903,7 @@
 #include "code\modules\species\outsider\zombie.dm"
 #include "code\modules\species\shell\body_markings.dm"
 #include "code\modules\species\shell\shell.dm"
+#include "code\modules\species\shell\synthetic.dm"
 #include "code\modules\species\station\adherent.dm"
 #include "code\modules\species\station\golem.dm"
 #include "code\modules\species\station\human_subspecies.dm"
