@@ -59,7 +59,6 @@
 	name = "identification card"
 	desc = "A green card given to experimantal EXO's synthetic assistants."
 	item_state = "silver_id"
-	color = "#336633"
 	assignment = "Synthetic"
 	job_access_type = /datum/job/captain
 
