@@ -3007,7 +3007,7 @@
 #include "code\modules\sprite_accessories\accessory_vox.dm"
 #include "code\modules\species\shell\body_markings.dm"
 #include "code\modules\species\shell\shell.dm"
-#include "code\modules\species\shell\synthetic.dm"
+#include "maps\torch\job\shell\synthetic.dm"
 #include "code\modules\submaps\_submap.dm"
 #include "code\modules\submaps\submap_archetype.dm"
 #include "code\modules\submaps\submap_job.dm"
