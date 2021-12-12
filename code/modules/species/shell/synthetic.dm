@@ -7,7 +7,7 @@
 	slot = ACCESSORY_SLOT_INSIGNIA
 	high_visibility = 1
 
-/obj/item/device/radio/headset/heads/captain/synth
+/obj/item/device/radio/headset/heads/torchexec /synth
 	name = "Synth's headset"
 	desc = "A headset issued to abroad's EXO Synth Unit."
 
@@ -21,7 +21,7 @@
 /decl/hierarchy/outfit/job/torch/crew/command/synth
 	name = OUTFIT_JOB_NAME("Synthetic")
 	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
-	l_ear = /obj/item/device/radio/headset/heads/captain/synth
+	l_ear = /obj/item/device/radio/headset/heads/torchexec synth
 	shoes = /obj/item/clothing/shoes/dutyboots
 	head = /obj/item/clothing/head/beret/solgov/expedition/branch
 	id_types = list(/obj/item/card/id/torch/crew/synth)
