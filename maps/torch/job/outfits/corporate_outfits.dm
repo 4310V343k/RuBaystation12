@@ -39,3 +39,36 @@
 	id_types = list(/obj/item/card/id/torch/passenger/corporate/corporate_guard)
 	pda_type = /obj/item/modular_computer/pda/science
 	backpack_contents = list(/obj/item/clothing/accessory/badge/holo/NT = 1)
+
+/obj/item/clothing/accessory/badge/solgov/synthetic
+	name = "Synthetic's badge"
+	desc = "A red leather-backed gold badge with silver 'SYNTH' letters written on it, displaying advanced EXO Corporative Shell IPC."
+	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
+	icon_state = "solbadge"
+	slot_flags = SLOT_BELT | SLOT_TIE
+	slot = ACCESSORY_SLOT_INSIGNIA
+	high_visibility = 1
+
+/obj/item/device/radio/headset/heads/torchexec/synth
+	name = "Synth's headset"
+	desc = "A headset issued to abroad's EXO Synth Unit."
+	icon_state = "nt_headset"
+	item_state = "headset"
+
+/obj/item/card/id/torch/gold/synth
+	name = "identification card"
+	desc = "A green card given to experimantal EXO's synthetic assistants."
+	item_state = "silver_id"
+	color = "#336633"
+	assignment = "Synthetic"
+	job_access_type = /datum/job/captain
+
+/decl/hierarchy/outfit/job/torch/crew/command/synth
+	name = OUTFIT_JOB_NAME("Synthetic")
+	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
+	l_ear = /obj/item/device/radio/headset/heads/torchexec/synth
+	shoes = /obj/item/clothing/shoes/dutyboots
+	head = /obj/item/clothing/head/beret/solgov/expedition/branch
+	id_types = list(/obj/item/card/id/torch/gold/synth)
+	pda_type = /obj/item/modular_computer/pda/heads
+	r_pocket = /obj/item/clothing/accessory/badge/solgov/synthetic
