@@ -70,4 +70,5 @@
 	head = /obj/item/clothing/head/beret/solgov/expedition/branch
 	id_types = list(/obj/item/card/id/torch/gold/synth)
 	pda_type = /obj/item/modular_computer/pda/heads
-	r_pocket = /obj/item/clothing/accessory/badge/solgov/synthetic
+	r_pocket = /obj/item/modular_computer/tablet/lease/preset/command
+	backpack_contents = list(/obj/item/clothing/accessory/badge/solgov/synthetic)
