@@ -75,7 +75,7 @@
 	supervisors = "The SEV Torch's acting command offcer, it's regulations and laws of SCG."
 	department = SPT
 	minimal_player_age = 14
-	economic_power = 2
+	economic_power = 3
 	ideal_character_age = 1
 	minimum_character_age = list(SPECIES_SHELL = 1)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/synth
