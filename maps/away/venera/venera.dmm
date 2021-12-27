@@ -1457,9 +1457,7 @@
 /area/venera/bridge)
 "dF" = (
 /obj/machinery/computer/ship/helm{
-	dir = 4;
-	icon_state = "computer";
-	req_access = list(list("ACCESS_TORCH_HELM"))
+	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -10676,7 +10674,7 @@
 /area/venera/medbay)
 "TK" = (
 /obj/machinery/porta_turret{
-	auto_repair = 1;
+	auto_repair = 0;
 	id_tag = "venera_turret_58";
 	lethal = 1;
 	name = "SGV Venera Defence Turret";
