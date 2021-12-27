@@ -57,6 +57,7 @@
 
 /obj/item/card/id/torch/gold/synth
 	name = "identification card"
+	color = "#007474"
 	desc = "A green card given to experimantal EXO's synthetic assistants."
 	item_state = "silver_id"
 	assignment = "Synthetic"
@@ -71,4 +72,4 @@
 	id_types = list(/obj/item/card/id/torch/gold/synth)
 	pda_type = /obj/item/modular_computer/pda/heads
 	r_pocket = /obj/item/modular_computer/tablet/lease/preset/command
-	backpack_contents = list(/obj/item/clothing/accessory/badge/solgov/synthetic)
+	backpack_contents = list(/obj/item/clothing/accessory/badge/solgov/synthetic = 1)
