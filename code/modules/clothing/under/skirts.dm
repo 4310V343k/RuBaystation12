@@ -27,6 +27,13 @@
 	item_state = "kilt"
 	worn_state = "plaid_purple"
 
+/obj/item/clothing/under/skirt/maid
+	name = "maid suit"
+	desc = "Comfortable lace clothing with a skirt for all your cleaning duties or sick fantasy."
+	icon_state = "maid"
+	item_state = "maid"
+	worn_state = "maid"
+
 // discreet skirts, dont cover upper/arms etc
 /obj/item/clothing/under/skirt/khaki
 	name = "khaki skirt"

@@ -753,3 +753,19 @@
 	icon_state = "kimono"
 	worn_state = "kimono"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+
+/obj/item/clothing/under/wetsuit
+	name = "tactical wetsuit"
+	desc = "For when you want to scuba dive your way into an enemy base but still want to show off a little skin."
+	icon_state = "wetsuit"
+	item_state = "wetsuit"
+	worn_state = "wetsuit"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/under/maid
+	name = "Maid uniform"
+	desc = "Comfortable lace clothing with a skirt for all your cleaning duties or sick fantasy."
+	icon_state = "maid"
+	item_state = "maid"
+	worn_state = "maid"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
