@@ -349,7 +349,7 @@ $(function() { \
 
 	dat += "</div><script type=\"text/javascript\">[js]</script></body></html>"
 
-	var/len_y = 94 + (round(len/8) + min(1, len%8))*45
+	var/len_y = min(94 + (round(len/8) + min(1, len%8))*45, 769)
 
 	show_browser(owner, dat, "window=emojis;size=420x[len_y]")
 
