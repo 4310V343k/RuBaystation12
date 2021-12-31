@@ -106,6 +106,15 @@ proc/get_fusion_reaction(var/p_react, var/s_react, var/m_energy)
 	instability = 2
 	minimum_reaction_temperature = 10000
 
+/decl/fusion_reaction/carbon_phoron
+	p_react = "carbon"
+	s_react = GAS_PHORON
+	products = list("nanocarbon fiber" = 1) // Quite OP
+	energy_consumption = 7.5
+	energy_production = 0
+	instability = 2.5
+	minimum_reaction_temperature = 15000
+
 /decl/fusion_reaction/phoron_hydrogen
 	p_react = GAS_HYDROGEN
 	s_react = GAS_PHORON
