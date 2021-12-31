@@ -432,7 +432,7 @@
 	value = 650
 
 /material/carbon_fiber/nano
-	name = MATERIAL_NANOCARBON_FIBER
+	name = MATERIAL_CARBON_FIBER_NANO
 	lore_text = "An advanced polymeric material. Extremely light, durable, and probably the most useful substance ever created by human science; mostly used to make advanced flexible building materials and sports equipment."
 	stack_type = /obj/item/stack/material/carbon_fiber/nano
 	stack_origin_tech = list(TECH_MATERIAL = 6)
