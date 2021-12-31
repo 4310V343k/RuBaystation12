@@ -151,6 +151,15 @@
 				new /obj/effect/decal/cleanable/greenglow(T)
 			return
 
+/datum/reagent/carbon_fiber
+	name = "Nanocarbon Fiber"
+	description = "A chemical compound of multiple layers of carbon merged together."
+	taste_description = "coal and a hint of German science."
+	taste_mult = 1.5
+	reagent_state = SOLID
+	color = "#333333"
+	value = DISPENSER_REAGENT_VALUE
+
 /datum/reagent/water/holywater
 	name = "Holy Water"
 	description = "An ashen-obsidian-water mix, this solution will alter certain sections of the brain's rationality."
