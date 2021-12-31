@@ -425,7 +425,7 @@
 	alloy_materials = list(MATERIAL_GRAPHITE = 6000)
 	alloy_product = TRUE
 	chem_products = list(
-				/datum/reagent/carbon = 20
+				/datum/reagent/carbon_fiber = 20
 				)
 	sale_price = 2.5
 	dooropen_noise = 'sound/effects/doorcreaky.ogg'
@@ -449,8 +449,8 @@
 	melting_point = 30000
 	alloy_product = FALSE
 	chem_products = list(
-				/datum/reagent/carbon = 50
-				/datum/reagent/toxin/phoron = 50
+				/datum/reagent/carbon_fiber = 50
+				/datum/reagent/toxin/phoron = 10
 				)
 	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_PHORON = 4)
 	conductive = 1
