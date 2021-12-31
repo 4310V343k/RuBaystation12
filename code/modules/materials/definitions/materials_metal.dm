@@ -422,7 +422,7 @@
 	is_fusion_fuel = 1
 	conductive = 1
 	construction_difficulty = MATERIAL_HARD_DIY
-	alloy_materials = list(MATERIAL_COAL = 6000)
+	alloy_materials = list(MATERIAL_GRAPHITE = 6000)
 	alloy_product = TRUE
 	chem_products = list(
 				/datum/reagent/carbon = 20
