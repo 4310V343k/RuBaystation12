@@ -240,6 +240,28 @@
 /obj/item/stack/material/carbon_fiber/fifty
 	amount = 50
 
+/obj/item/stack/material/carbon_fiber
+	name = "nanocarbon fiber"
+	icon_state = "sheet-plastic"
+	plural_icon_state = "sheet-plastic-mult"
+	max_icon_state = "sheet-plastic"
+	icon_color = "#333333"
+	default_type = MATERIAL_CARBON_FIBER
+
+/obj/item/stack/material/carbon_fiber/nano
+	name = "restructurized nanocarbon fiber"
+	icon_state = "sheet-plastic"
+	plural_icon_state = "sheet-plastic-mult"
+	max_icon_state = "sheet-plastic"
+	icon_color = "#333333"
+	default_type = MATERIAL_CARBON_FIBER_NANO
+
+/obj/item/stack/material/carbon_fiber/nano/ten
+	amount = 10
+
+/obj/item/stack/material/carbon_fiber/nano/fifty
+	amount = 50
+
 /obj/item/stack/material/gold
 	name = "gold"
 	icon_state = "ingot"
