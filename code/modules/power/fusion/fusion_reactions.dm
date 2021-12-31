@@ -109,7 +109,7 @@ proc/get_fusion_reaction(var/p_react, var/s_react, var/m_energy)
 /decl/fusion_reaction/nanocarbon_phoron
 	p_react = "carbon_fiber"
 	s_react = GAS_PHORON
-	products = list("restructurized nanocarbon fiber" = 1) // Quite OP
+	products = list("rncf" = 1) // Quite OP
 	energy_consumption = 7.5
 	energy_production = 0
 	instability = 2.5
