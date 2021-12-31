@@ -431,7 +431,7 @@
 	dooropen_noise = 'sound/effects/doorcreaky.ogg'
 	value = 650
 
-/material/carbon_fiber/nano
+/material/carbon_fiber/rncf
 	name = MATERIAL_CARBON_FIBER_NANO
 	lore_text = "An advanced polymeric material. Extremely light, durable, and probably the most useful substance ever created by human science; mostly used to make advanced flexible building materials and sports equipment."
 	stack_type = /obj/item/stack/material/carbon_fiber/nano
