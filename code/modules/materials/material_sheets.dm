@@ -227,6 +227,19 @@
 /obj/item/stack/material/plastic/fifty
 	amount = 50
 
+/obj/item/stack/material/carbon_fiber
+	name = "carbon fiber"
+	icon_state = "sheet-carbon-fiber"
+	plural_icon_state = "sheet-carbon-fiber-mult"
+	max_icon_state = "sheet-carbon-fiber-max"
+	default_type = MATERIAL_CARBON_FIBER
+
+/obj/item/stack/material/carbon_fiber/ten
+	amount = 10
+
+/obj/item/stack/material/carbon_fiber/fifty
+	amount = 50
+
 /obj/item/stack/material/gold
 	name = "gold"
 	icon_state = "ingot"
