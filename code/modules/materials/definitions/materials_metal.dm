@@ -403,3 +403,53 @@
 	ore_name = "rutile"
 	ore_icon_overlay = "lump"
 	sale_price = 2
+
+/material/carbon_fiber
+	name = MATERIAL_CARBON_FIBER
+	lore_text = "An advanced polymeric material. Extremely light, durable, and probably the most useful substance ever created by human science; mostly used to make advanced flexible building materials and sports equipment."
+	stack_type = /obj/item/stack/material/carbon_fiber
+	icon_base = "solid"
+	door_icon_base = "plastic"
+	icon_reinf = "reinf_over"
+	icon_colour = "#333333"
+	wall_name = "bulkhead"
+	integrity = 325
+	hardness = MATERIAL_FLEXIBLE
+	weight = 2.5
+	ignition_point = 4500
+	melting_point = 3000 //rocket industry, bitch!
+	stack_origin_tech = list(TECH_MATERIAL = 4)
+	is_fusion_fuel = 1
+	conductive = 1
+	construction_difficulty = MATERIAL_HARD_DIY
+	alloy_materials = list(MATERIAL_COAL = 6000)
+	alloy_product = TRUE
+	chem_products = list(
+				/datum/reagent/carbon = 20
+				)
+	sale_price = 2.5
+	dooropen_noise = 'sound/effects/doorcreaky.ogg'
+	value = 650
+
+/material/carbon_fiber/nano
+	name = MATERIAL_NANOCARBON_FIBER
+	lore_text = "An advanced polymeric material. Extremely light, durable, and probably the most useful substance ever created by human science; mostly used to make advanced flexible building materials and sports equipment."
+	stack_type = /obj/item/stack/material/carbon_fiber/nano
+	stack_origin_tech = list(TECH_MATERIAL = 6)
+	hardness = MATERIAL_RIGID
+	icon_base = "solid"
+	door_icon_base = "metal"
+	icon_reinf = "reinf_over"
+	wall_name = "bulkhead"
+	brute_armor = 20
+	burn_armor = 20
+	value = 1000
+	ignition_point = 45000
+	melting_point = 30000
+	alloy_product = FALSE
+	chem_products = list(
+				/datum/reagent/carbon = 50
+				/datum/reagent/toxin/phoron = 50
+				)
+	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_PHORON = 4)
+	conductive = 1
