@@ -76,5 +76,5 @@
 /obj/item/fuel_assembly/hydrogen/New(var/newloc)
 	..(newloc, MATERIAL_HYDROGEN)
 
-/obj/item/fuel_assembly/carbon/New(var/newloc)
-	..(newloc, MATERIAL_CARBON)
+/obj/item/fuel_assembly/carbon_fiber/New(var/newloc)
+	..(newloc, MATERIAL_CARBON_FIBER)
