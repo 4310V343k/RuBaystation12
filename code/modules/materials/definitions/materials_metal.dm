@@ -443,6 +443,7 @@
 	wall_name = "bulkhead"
 	brute_armor = 20
 	burn_armor = 20
+	explosion_resistance = 45
 	value = 1000
 	ignition_point = 45000
 	melting_point = 30000
