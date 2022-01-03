@@ -1,3 +1,26 @@
+/obj/item/cell/guncell
+	name = "Small battery"
+
+/obj/item/cell/guncell/small
+	charge = 200 // base 10 shots
+	maxcharge = 200
+
+/obj/item/cell/guncell/medium
+	charge = 300 // base 15 shots
+	maxcharge = 300
+
+/obj/item/cell/guncell/large
+	charge = 400 // base 20 shots
+	maxcharge = 400
+
+/obj/item/cell/guncell/megalarge
+	charge = 500 // base 25 shots
+	maxcharge = 500
+
+/obj/item/cell/guncell/huge
+	charge = 600 // base 30 shots
+	maxcharge = 600
+
 /obj/item/gun/energy
 	name = "energy gun"
 	desc = "A basic energy-based gun."
@@ -6,13 +29,16 @@
 	fire_sound = 'sound/weapons/Taser.ogg'
 	fire_sound_text = "laser blast"
 	accuracy = 1
+	accuracy_power = 6
 
-	var/obj/item/cell/power_supply //What type of power cell this uses
+	var/obj/item/cell/guncell/power_supply //What type of power cell this uses
 	var/charge_cost = 20 //How much energy is needed to fire.
 	var/max_shots = 10 //Determines the capacity of the weapon's power cell. Specifying a cell_type overrides this value.
 	var/cell_type = null
 	var/projectile_type = /obj/item/projectile/beam/practice
 	var/modifystate
+	var/battery_changable = FALSE
+	var/battery_type = /obj/item/cell/guncell
 	var/charge_meter = 1	//if set, the icon state will be chosen based on the current charge
 
 	//self-recharging
@@ -30,12 +56,32 @@
 	..()
 	update_icon()
 
+/obj/item/gun/energy/attackby(obj/item/W, mob/living/user)
+	if(istype(W, battery_type))
+		if(power_supply)
+			to_chat(usr, SPAN_WARNING("[src] is already loaded."))
+			return
+
+		if(insert_item(W, user))
+			power_supply = W
+			update_icon()
+	. = ..()
+
+/obj/item/gun/energy/MouseDrop(atom/over_object)
+	if(!battery_changable)
+		to_chat(usr, SPAN_WARNING("[src] is a disposable, its batteries cannot be removed!."))
+	else if(self_recharge)
+		to_chat(usr, SPAN_WARNING("[src] is a self-charging gun, its batteries cannot be removed!."))
+	else if((src.loc == usr) && istype(over_object, /obj/screen) && (over_object.name in list(BP_R_HAND, BP_L_HAND)) && eject_item(power_supply, usr))
+		power_supply = null
+		update_icon()
+
 /obj/item/gun/energy/Initialize()
 	. = ..()
 	if(cell_type)
 		power_supply = new cell_type(src)
 	else
-		power_supply = new /obj/item/cell/device/variable(src, max_shots*charge_cost)
+		power_supply = new /obj/item/cell/guncell/medium(src)
 	if(self_recharge)
 		START_PROCESSING(SSobj, src)
 	update_icon()
@@ -89,15 +135,18 @@
 
 /obj/item/gun/energy/on_update_icon()
 	..()
-	if(charge_meter && power_supply)
-		var/ratio = power_supply.percent()
-
+	if(charge_meter)
+		var/ratio = 0
+		if(power_supply)
+			ratio = power_supply.percent()
+			if(power_supply.charge < charge_cost)
+				ratio = 0
+			else
+				ratio = Clamp(round(ratio, 25), 25, 100)
+		else
+			ratio = 0
 		//make sure that rounding down will not give us the empty state even if we have charge for a shot left.
 		// Also make sure cells adminbussed with higher-than-max charge don't break sprites
-		if(power_supply.charge < charge_cost)
-			ratio = 0
-		else
-			ratio = Clamp(round(ratio, 25), 25, 100)
 
 		if(modifystate)
 			icon_state = "[modifystate][ratio]"

@@ -123,3 +123,6 @@ Weapons
 
 /obj/effect/paint/expeditionary
 	color = "#68099e"
+
+/obj/item/proc/refresh_upgrades()
+	return

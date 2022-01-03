@@ -6,7 +6,7 @@
 	starts_loaded = 0
 	req_access = list(access_hop)
 	authorized_modes = list(UNAUTHORIZED)
-	firemodes = list(
+	init_firemodes = list(
 		list(mode_name="fire"),
 		)
 	var/explosion_chance = 50
