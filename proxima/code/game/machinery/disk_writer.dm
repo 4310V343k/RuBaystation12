@@ -74,7 +74,7 @@
 		dat = "Memory scan completed. <br>Writing the tune from scan of [customer.name] mind... Please, stand still."
 
 	if(disk && !writing)
-	dat = "<A href='?src=\ref[src];write=1'>Write</A>"
+		dat = "<A href='?src=\ref[src];write=1'>Write</A>"
 
 	if(disk && !writing)
 		dat += "<br><a href='?src=\ref[src];eject=1'>Eject Disk</a>"
