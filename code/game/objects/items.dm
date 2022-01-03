@@ -927,3 +927,6 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/attack_message_name()
 	return "\a [src]"
+
+/obj/item/proc/refresh_upgrades()
+	return
