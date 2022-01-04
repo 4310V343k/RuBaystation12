@@ -519,13 +519,6 @@
 	desc = "A box full of medical armbands. For use in emergencies when provisional medical personnel are needed."
 	startswith = list(/obj/item/clothing/accessory/armband/med = 5)
 
-//proxima code start
-/obj/item/storage/box/armband/sec
-	name = "box of spare security armbands"
-	desc = "A box full of security armbands. For use in emergencies when provisional security personnel are needed."
-	startswith = list(/obj/item/clothing/accessory/armband/solgov/ma = 5)
-//proxima code end
-
 /obj/item/storage/box/imprinting
 	name = "box of education implants"
 	desc = "A box full of neural implants for on-job training."
