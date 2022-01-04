@@ -236,7 +236,7 @@
 /decl/hierarchy/supply_pack/nonessent/holoplants
 	name = "Deco - Holoplants"
 	contains = list(/obj/structure/holoplant = 5)
-	cost = 25
+	cost = 40
 	containername = "holoplants crate"
 	containertype = /obj/structure/largecrate
 
