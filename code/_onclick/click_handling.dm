@@ -100,7 +100,8 @@
 	reciever.afterattack(target, owner.mob, FALSE)
 
 /datum/click_handler/fullauto/MouseDown(object, location, control, params)
-	if(owner.mob.in_throw_mode)
+	var/L = params2list(params)
+	if(owner.mob.in_throw_mode || L["shift"])
 		return TRUE
 	if(!isturf(owner.mob.loc)) // This stops from firing full auto weapons inside closets or in /obj/effect/dummy/chameleon chameleon projector
 		return FALSE
