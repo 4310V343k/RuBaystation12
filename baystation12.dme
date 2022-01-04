@@ -3246,5 +3246,8 @@
 #include "maps\~mapsystem\maps_jobs.dm"
 #include "maps\~mapsystem\maps_unit_testing.dm"
 #include "maps\~unit_tests\unit_testing.dm"
+#include "proxima\code\_helpers\colors.dm"
+#include "proxima\code\game\items\devices\remote_device.dm"
+#include "proxima\code\game\objects\structures\holoplants.dm"
 #include "~code\global_init.dm"
 // END_INCLUDE

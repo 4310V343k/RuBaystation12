@@ -12278,6 +12278,7 @@
 	dir = 4;
 	icon_state = "tube1"
 	},
+/obj/structure/holoplant,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/co)
 "Ik" = (
@@ -14607,6 +14608,7 @@
 	pixel_x = 23;
 	pixel_y = -23
 	},
+/obj/structure/holoplant,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/storage)
 "Sf" = (
