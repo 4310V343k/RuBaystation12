@@ -238,6 +238,7 @@
 	contains = list(/obj/structure/holoplant = 5)
 	cost = 25
 	containername = "holoplants crate"
+	containertype = /obj/structure/closet/crate/large
 
 /decl/hierarchy/supply_pack/nonessent/chaplaingear
 	name = "Costume - Chaplain"
