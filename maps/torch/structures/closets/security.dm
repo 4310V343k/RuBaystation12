@@ -94,7 +94,6 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/device/hailer,
 		//proxima code start,
-		/obj/item/storage/box/armband/sec,
 		/obj/item/device/remote_device/head_of_security,
 		//proxima code end,
 		/obj/item/material/clipboard,
