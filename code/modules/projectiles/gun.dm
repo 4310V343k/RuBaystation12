@@ -651,7 +651,6 @@
 
 /obj/item/gun/pickup(mob/user)
 	.=..()
-	update_icon()
 	update_firemode()
 
 /obj/item/gun/dropped(mob/user)
@@ -662,12 +661,10 @@
 
 /obj/item/gun/swapped_from()
 	.=..()
-	update_icon()
 	update_firemode(FALSE)
 
 /obj/item/gun/swapped_to()
 	.=..()
-	update_icon()
 	update_firemode()
 
 
