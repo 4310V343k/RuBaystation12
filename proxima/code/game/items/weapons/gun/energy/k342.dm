@@ -46,6 +46,7 @@
 	slot_flags = SLOT_BACK|SLOT_BELT
 	icon_state = "lasergun_off"
 	item_state = "lasergun"
+	origin_tech = list(TECH_COMBAT=4, TECH_MATERIAL=3, TECH_POWER=5)
 	wielded_item_state = "lasergun-wielded"
 	battery_changable = TRUE
 	req_access = list(list(access_brig, access_bridge))
