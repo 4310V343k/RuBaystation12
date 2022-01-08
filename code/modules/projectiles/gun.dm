@@ -84,6 +84,7 @@
 	var/last_handled		//time when hand gun's in became active, for purposes of aiming bonuses
 	var/scoped_accuracy = null  //accuracy used when zoomed in a scope
 	var/scope_zoom = 0
+	var/projectile_color
 	var/list/burst_accuracy = list(0) //allows for different accuracies for each shot in a burst. Applied on top of accuracy
 	// var/list/dispersion = list(0)
 	var/one_hand_penalty
@@ -277,7 +278,11 @@
 
 		if(pointblank)
 			process_point_blank(projectile, user, target)
-
+		if(projectile_color)
+			projectile.icon = get_proj_icon_by_color(projectile, projectile_color)
+			if(istype(projectile, /obj/item/projectile))
+				var/obj/item/projectile/P = projectile
+				P.proj_color = projectile_color
 		if(process_projectile(projectile, user, target, user.zone_sel?.selecting, clickparams))
 			handle_post_fire(user, target, pointblank, reflex)
 			update_icon()
@@ -646,6 +651,7 @@
 
 /obj/item/gun/pickup(mob/user)
 	.=..()
+	update_icon()
 	update_firemode()
 
 /obj/item/gun/dropped(mob/user)
@@ -656,10 +662,12 @@
 
 /obj/item/gun/swapped_from()
 	.=..()
+	update_icon()
 	update_firemode(FALSE)
 
 /obj/item/gun/swapped_to()
 	.=..()
+	update_icon()
 	update_firemode()
 
 
