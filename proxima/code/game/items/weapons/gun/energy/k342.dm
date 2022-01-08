@@ -14,7 +14,7 @@
 	name = "heavy plasma bolt"
 	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
 	armor_penetration = 50
-	damage = 50
+	damage = 60
 
 /obj/item/projectile/plasma/stun
 	name = "stun plasma bolt"
@@ -36,7 +36,7 @@
 
 /obj/item/gun/energy/k342
 	name = "K342 - Barrakuda"
-	desc = "Factory-new weapon"
+	desc = "K342 - Barrakuda is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
 	item_icons = list(
 		slot_l_hand_str = 'proxima/icons/mob/onmob/items/lefthand-guns.dmi',
@@ -53,7 +53,7 @@
 	init_firemodes = list(
 		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
 		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
-		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=40, fire_delay=8, projectile_color=COLOR_BLUE)
+		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=50, fire_delay=8, projectile_color=COLOR_BLUE)
 	)
 
 /obj/item/gun/energy/k342/on_update_icon()
@@ -72,3 +72,45 @@
 			overlays += image(icon, i)
 	else
 		icon_state = "lasergun_off"
+
+/datum/design/item/weapon/k342
+	id = "k342"
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 5)
+	materials = list(MATERIAL_SILVER = 7000, MATERIAL_GLASS = 2000, MATERIAL_STEEL = 10000, MATERIAL_URANIUM = 2000)
+	build_path = /obj/item/gun/energy/k342
+	sort_string = "TAEAA"
+
+/datum/design/item/weapon/ammunition/smallgunbattery
+	id = "smallgun_battery"
+	desc = "A small battery for energy guns. Rated for 200Wh"
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_GLASS = 1500)
+	req_tech = list(TECH_POWER = 2, TECH_MATERIAL = 2, TECH_COMBAT = 1)
+	build_path = /obj/item/cell/guncell/small
+
+/datum/design/item/weapon/ammunition/mediumgunbattery
+	id = "mediumgun_battery"
+	desc = "A medium battery for energy guns. Rated for 300Wh"
+	materials = list(MATERIAL_STEEL = 2500, MATERIAL_GLASS = 2500)
+	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2, TECH_COMBAT = 2)
+	build_path = /obj/item/cell/guncell/medium
+
+/datum/design/item/weapon/ammunition/largegunbattery
+	id = "largegun_battery"
+	desc = "A large battery for energy guns. Rated for 400Wh"
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_GLASS = 4000, MATERIAL_SILVER = 1500)
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4, TECH_COMBAT = 3)
+	build_path = /obj/item/cell/guncell/large
+
+/datum/design/item/weapon/ammunition/megalargegunbattery
+	id = "megalarge_battery"
+	desc = "A very large battery for energy guns. Rated for 500Wh"
+	materials = list(MATERIAL_STEEL = 6000, MATERIAL_GLASS = 5000, MATERIAL_SILVER = 2500 , MATERIAL_URANIUM = 1500)
+	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 5, TECH_COMBAT = 4)
+	build_path = /obj/item/cell/guncell/megalarge
+
+/datum/design/item/weapon/ammunition/hugebattery
+	id = "huge_battery"
+	desc = "A huge battery for energy guns. Rated for 600Wh"
+	materials = list(MATERIAL_STEEL = 10000, MATERIAL_GLASS = 15000, MATERIAL_SILVER = 3000 , MATERIAL_URANIUM = 2500, MATERIAL_GOLD = 2500)
+	req_tech = list(TECH_POWER = 6, TECH_MATERIAL = 6, TECH_COMBAT = 5)
+	build_path = /obj/item/cell/guncell/huge
