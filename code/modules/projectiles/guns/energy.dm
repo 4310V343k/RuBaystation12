@@ -1,25 +1,48 @@
 /obj/item/cell/guncell
 	name = "Small battery"
+	icon = 'proxima/icons/obj/guns/guncells.dmi'
+
+/obj/item/cell/guncell/on_update_icon()
+
+	var/new_overlay_state = null
+	switch(percent())
+		if(70 to 100)
+			new_overlay_state = "b_70+"
+		if(35 to 69)
+			new_overlay_state = "b_35+"
+		if(0.05 to 34)
+			new_overlay_state = "b_0+"
+
+	if(new_overlay_state != overlay_state)
+		overlay_state = new_overlay_state
+		overlays.Cut()
+		if(overlay_state)
+			overlays += image(icon, overlay_state)
 
 /obj/item/cell/guncell/small
 	charge = 200 // base 10 shots
 	maxcharge = 200
+	icon_state = "b_1"
 
 /obj/item/cell/guncell/medium
 	charge = 300 // base 15 shots
 	maxcharge = 300
+	icon_state = "b_2"
 
 /obj/item/cell/guncell/large
 	charge = 400 // base 20 shots
 	maxcharge = 400
+	icon_state = "b_3"
 
 /obj/item/cell/guncell/megalarge
 	charge = 500 // base 25 shots
 	maxcharge = 500
+	icon_state = "b_4"
 
 /obj/item/cell/guncell/huge
 	charge = 600 // base 30 shots
 	maxcharge = 600
+	icon_state = "b_5"
 
 /obj/item/gun/energy
 	name = "energy gun"
