@@ -1,4 +1,5 @@
 /obj/item/cell/guncell
+	w_class = ITEM_SIZE_SMALL
 	name = "Small battery"
 	icon = 'proxima/icons/obj/guns/guncells.dmi'
 
