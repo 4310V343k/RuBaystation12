@@ -5,6 +5,7 @@
 	armor_penetration = 25
 	damage = 33
 	damage_type = BURN
+	step_delay = 0.5
 
 	muzzle_type = /obj/effect/projectile/plasma/muzzle
 	impact_type = /obj/effect/projectile/plasma/impact
@@ -12,8 +13,8 @@
 /obj/item/projectile/plasma/heavy
 	name = "heavy plasma bolt"
 	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
-	damage = 50
 	armor_penetration = 50
+	damage = 50
 
 /obj/item/projectile/plasma/stun
 	name = "stun plasma bolt"
@@ -48,11 +49,11 @@
 	wielded_item_state = "lasergun-wielded"
 	battery_changable = TRUE
 	req_access = list(list(access_brig, access_bridge))
-	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED)
+	authorized_modes = list(ALWAYS_AUTHORIZED)
 	init_firemodes = list(
-		list(mode_name="stun bean", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
-		list(mode_name="plasma bean", projectile_rype=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
-		list(mode_name="heavy plasma bean", projectile_rype=/obj/item/projectile/plasma/heavy, charge_cost=40, fire_delay=8, projectile_color=COLOR_BLUE)
+		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
+		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
+		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=40, fire_delay=8, projectile_color=COLOR_BLUE)
 	)
 
 /obj/item/gun/energy/k342/on_update_icon()

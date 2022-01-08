@@ -584,11 +584,11 @@
 	if(firemodes.len <= 1)
 		return null
 	update_firemode(FALSE)
-	sel_mode++
-	if(sel_mode > firemodes.len)
-		sel_mode = 1
-	playsound(loc, selector_sound, 50, 1)
-	return set_firemode(sel_mode)
+	var/sel = get_next_firemode()
+	if(sel)
+		playsound(loc, selector_sound, 50, 1)
+		sel_mode = sel
+		return set_firemode(sel_mode)
 
 /obj/item/gun/proc/get_next_firemode()
 	if(firemodes.len <= 1)
