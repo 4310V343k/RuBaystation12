@@ -10,32 +10,17 @@
 	muzzle_type = /obj/effect/projectile/plasma/muzzle
 	impact_type = /obj/effect/projectile/plasma/impact
 
-/obj/item/projectile/plasma/heavy
-	name = "heavy plasma bolt"
-	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
-	armor_penetration = 50
-	damage = 60
-
-/obj/item/projectile/plasma/stun
-	name = "stun plasma bolt"
-	fire_sound='proxima/sound/weapons/guns/burn.ogg'
-	damage = 2
-	agony = 40
-	eyeblur = 1
-
-
-/obj/item/projectile/plasma/stun/net
-	name = "plasma net"
-	agony = 20
-
-/obj/item/projectile/plasma/stun/net/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
-	var/obj/item/energy_net/net = new(loc)
-	net.try_capture_mob(target)
-	return TRUE
-
-
 /obj/effect/projectile/plasma
 	light_color = COLOR_BLUE
+
+/obj/effect/projectile/plasma/heavy
+	light_color = COLOR_RED
+
+/obj/effect/projectile/plasma/stun
+	light_color = COLOR_YELLOW
+
+/obj/effect/projectile/plasma/net
+	light_color = COLOR_GREEN
 
 /obj/effect/projectile/plasma/muzzle
 	icon_state = "muzzle_plasma"
@@ -43,9 +28,56 @@
 /obj/effect/projectile/plasma/impact
 	icon_state = "impact_plasma"
 
+/obj/effect/projectile/plasma/heavy/muzzle
+	icon_state = "muzzle_plasma"
+
+/obj/effect/projectile/plasma/heavy/impact
+	icon_state = "impact_plasma"
+
+/obj/effect/projectile/plasma/stun/muzzle
+	icon_state = "muzzle_plasma"
+
+/obj/effect/projectile/plasma/stun/impact
+	icon_state = "impact_plasma"
+
+/obj/effect/projectile/plasma/net/muzzle
+	icon_state = "muzzle_plasma"
+
+/obj/effect/projectile/plasma/net/impact
+	icon_state = "impact_plasma"
+
+/obj/item/projectile/plasma/heavy
+	name = "heavy plasma bolt"
+	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
+	armor_penetration = 50
+	damage = 60
+
+	muzzle_type = /obj/effect/projectile/plasma/heavy/muzzle
+	impact_type = /obj/effect/projectile/plasma/heavy/impact
+
+/obj/item/projectile/plasma/stun
+	name = "stun plasma bolt"
+	fire_sound='proxima/sound/weapons/guns/burn.ogg'
+	damage = 2
+	agony = 40
+	eyeblur = 1
+	muzzle_type = /obj/effect/projectile/plasma/stun/muzzle
+	impact_type = /obj/effect/projectile/plasma/stun/impact
+
+/obj/item/projectile/plasma/stun/net
+	name = "plasma net"
+	agony = 20
+	muzzle_type = /obj/effect/projectile/plasma/net/muzzle
+	impact_type = /obj/effect/projectile/plasma/net/impact
+
+/obj/item/projectile/plasma/stun/net/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
+	var/obj/item/energy_net/net = new(loc)
+	net.try_capture_mob(target)
+	return TRUE
+
 /obj/item/gun/energy/k342
-	name = "K342 - Barrakuda"
-	desc = "K342 - Barrakuda is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal."
+	name = "Plasma gun"
+	desc = "K342 - Barrakuda is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, incendiary and lethal."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
 	w_class = ITEM_SIZE_LARGE
 	item_icons = list(
@@ -73,18 +105,23 @@
 	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED, AUTHORIZED)
 
 /obj/item/gun/energy/k342/explo
-	name = "K342 - Kasatka"
 	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal. This one designed specialy for expeditionary team"
 	icon_state = "kasatka_off"
 	item_state = "kasatka"
 	req_access = list(list(access_expedition_shuttle))
 	wielded_item_state = "kasatka-wielded"
-	authorized_modes = list(AUTHORIZED, UNAUTHORIZED, ALWAYS_AUTHORIZED)
+	authorized_modes = list(UNAUTHORIZED, UNAUTHORIZED, UNAUTHORIZED)
 	init_firemodes = list(
 		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
 		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
 		list(mode_name="net charge", projectile_type=/obj/item/projectile/plasma/stun/net, charge_cost=150, fire_delay=20, projectile_color=COLOR_GREEN)
 	)
+
+/obj/item/gun/energy/k342/explo/free_fire()
+	var/my_z = get_z(src)
+	if(!list_find(GLOB.using_map.station_levels, my_z))
+		return TRUE
+	return ..()
 
 /obj/item/gun/energy/k342/explo/prereg
 	authorized_modes = list(AUTHORIZED, AUTHORIZED, ALWAYS_AUTHORIZED)
