@@ -23,6 +23,7 @@
 	agony = 40
 	eyeblur = 1
 
+
 /obj/item/projectile/plasma/stun/net
 	name = "plasma net"
 	agony = 20
