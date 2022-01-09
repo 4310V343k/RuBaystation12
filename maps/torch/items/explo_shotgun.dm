@@ -127,6 +127,24 @@
 		/obj/item/gun/projectile/shotgun/pump/exploration
 	)
 
+/obj/structure/closet/secure_closet/explo_gun/kasatka
+	desc = "A newly bolted box with the latest development from Nanotrasen"
+	closet_appearance = /decl/closet_appearance/wall/explo_gun_kasatka
+
+/obj/structure/closet/secure_closet/explo_gun/kasatka/WillContain()
+	return list(
+		/obj/item/cell/guncell/medium = 6,
+		/obj/item/gun/energy/k342/explo = 2
+	)
+
+/decl/closet_appearance/wall/explo_gun_kasatka
+	color = COLOR_WHITE
+	decals = null
+	can_lock = 1
+	extra_decals = list(
+		"stripe_outer" = COLOR_PURPLE
+	)
+
 /decl/closet_appearance/wall/explo_gun
 	color = COLOR_GRAY20
 	decals = null
