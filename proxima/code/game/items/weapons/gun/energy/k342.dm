@@ -22,8 +22,16 @@
 	damage = 2
 	agony = 40
 	eyeblur = 1
-	damage_type = BURN
-	impact_type = /obj/effect/projectile/stun/impact
+
+/obj/item/projectile/plasma/stun/net
+	name = "plasma net"
+	agony = 20
+
+/obj/item/projectile/plasma/stun/net/on_hit(var/atom/target, var/blocked = 0, var/def_zone = null)
+	var/obj/item/energy_net/net = new(loc)
+	net.try_capture_mob(target)
+	return TRUE
+
 
 /obj/effect/projectile/plasma
 	light_color = COLOR_BLUE
@@ -38,16 +46,17 @@
 	name = "K342 - Barrakuda"
 	desc = "K342 - Barrakuda is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
+	w_class = ITEM_SIZE_LARGE
 	item_icons = list(
 		slot_l_hand_str = 'proxima/icons/mob/onmob/items/lefthand-guns.dmi',
 		slot_r_hand_str = 'proxima/icons/mob/onmob/items/righthand-guns.dmi',
 		slot_back_str = 'proxima/icons/mob/onmob/items/back-guns.dmi'
 		)
 	slot_flags = SLOT_BACK|SLOT_BELT
-	icon_state = "lasergun_off"
-	item_state = "lasergun"
+	icon_state = "barrakuda_off"
+	item_state = "barrakuda"
 	origin_tech = list(TECH_COMBAT=4, TECH_MATERIAL=3, TECH_POWER=5)
-	wielded_item_state = "lasergun-wielded"
+	wielded_item_state = "barrakuda-wielded"
 	battery_changable = TRUE
 	req_access = list(list(access_brig, access_bridge))
 	authorized_modes = list(ALWAYS_AUTHORIZED)
@@ -56,13 +65,33 @@
 	init_firemodes = list(
 		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
 		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
-		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=50, fire_delay=8, projectile_color=COLOR_BLUE)
+		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=50, fire_delay=8, projectile_color=COLOR_RED)
 	)
+
+/obj/item/gun/energy/k342/prereg
+	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED, AUTHORIZED)
+
+/obj/item/gun/energy/k342/explo
+	name = "K342 - Kasatka"
+	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal. This one designed specialy for expeditionary team"
+	icon_state = "kasatka_off"
+	item_state = "kasatka"
+	req_access = list(list(access_expedition_shuttle))
+	wielded_item_state = "kasatka-wielded"
+	authorized_modes = list(AUTHORIZED, UNAUTHORIZED, ALWAYS_AUTHORIZED)
+	init_firemodes = list(
+		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
+		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
+		list(mode_name="net charge", projectile_type=/obj/item/projectile/plasma/stun/net, charge_cost=150, fire_delay=20, projectile_color=COLOR_GREEN)
+	)
+
+/obj/item/gun/energy/k342/explo/prereg
+	authorized_modes = list(AUTHORIZED, AUTHORIZED, ALWAYS_AUTHORIZED)
 
 /obj/item/gun/energy/k342/on_update_icon()
 	. = ..()
 	if(power_supply)
-		icon_state = "lasergun_on"
+		icon_state = "[initial(item_state)]_on"
 		var/i = ""
 		switch(power_supply.percent())
 			if(70 to 100)
@@ -73,8 +102,9 @@
 				i = "g_0+"
 		if(i)
 			overlays += image(icon, i)
+			overlays += image(icon, splittext(init_firemodes[sel_mode]["mode_name"], " ")[1])
 	else
-		icon_state = "lasergun_off"
+		icon_state = "[initial(item_state)]_off"
 
 /datum/design/item/weapon/k342
 	id = "k342"
