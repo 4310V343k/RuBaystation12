@@ -118,6 +118,15 @@
 	containername = "ablative suit crate"
 	access = access_armory
 
+/decl/hierarchy/supply_pack/security/k342
+    name = "Weapons - K342 - Barrakuda"
+    contains = list(/obj/item/gun/energy/k342 = 2, /obj/item/cell/guncell/medium = 4)
+    cost = 110
+    containertype = /obj/structure/closet/crate/secure/weapon
+    containername = "k342 - barrakuda crate"
+    access = access_emergency_armory
+    security_level = SUPPLY_SECURITY_ELEVATED
+
 /decl/hierarchy/supply_pack/security/weapons
 	name = "Weapons - Security basic"
 	contains = list(/obj/item/device/flash = 4,
