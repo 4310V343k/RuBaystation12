@@ -67,6 +67,8 @@
 /obj/item/projectile/plasma/stun/net
 	name = "plasma net"
 	agony = 20
+	damage = 0
+	damage_type = null
 	muzzle_type = /obj/effect/projectile/plasma/net/muzzle
 	impact_type = /obj/effect/projectile/plasma/net/impact
 
