@@ -49,7 +49,6 @@
 		/obj/item/taperoll/police,
 		//rubay code,
 		/obj/item/storage/firstaid/individual/military,
-		/obj/item/gun/energy/k342,
 		/obj/item/cell/guncell/medium,
 		/obj/item/cell/guncell/medium,
 		//rubay code end,
