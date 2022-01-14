@@ -67,6 +67,8 @@
 /obj/item/projectile/plasma/stun/net
 	name = "plasma net"
 	agony = 20
+	damage = 0
+	damage_type = null
 	muzzle_type = /obj/effect/projectile/plasma/net/muzzle
 	impact_type = /obj/effect/projectile/plasma/net/impact
 
@@ -105,7 +107,7 @@
 	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED, AUTHORIZED)
 
 /obj/item/gun/energy/k342/explo
-	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTraisen. It can fire several types of charges: stunning, incendiary and lethal. This one designed specialy for expeditionary team"
+	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, lethal and net-mode. This one designed specialy for expeditionary team"
 	icon_state = "kasatka_off"
 	item_state = "kasatka"
 	req_access = list(list(access_expedition_shuttle))
