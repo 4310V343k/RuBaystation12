@@ -1675,6 +1675,15 @@
 	pixel_x = 0;
 	pixel_y = -24
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/thruster/d1starboard)
 "ads" = (
@@ -8313,16 +8322,6 @@
 "aAm" = (
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/head/aux)
-"aAn" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
-/obj/item/taperoll/bog,
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/head/aux)
 "aAr" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/crew_quarters/sleep/cryo/aux)
@@ -11122,22 +11121,6 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo/aux)
-"aNe" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralport)
 "aNy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11643,26 +11626,6 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/centralport)
-"aPK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
@@ -13081,17 +13044,6 @@
 /area/maintenance/firstdeck/aftport)
 "aTI" = (
 /obj/random/trash,
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/firstdeck/aftport)
-"aTJ" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
 /obj/structure/railing/mapped{
 	dir = 1;
 	icon_state = "railing0-1"
@@ -15168,16 +15120,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
-"cje" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
 "ckb" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -25762,16 +25704,6 @@
 /obj/item/shield/riot/metal,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
-"qKU" = (
-/obj/structure/hygiene/toilet{
-	dir = 4
-	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/head/aux)
 "qLb" = (
 /obj/machinery/portable_atmospherics/hydroponics{
 	closed_system = 1;
@@ -27687,7 +27619,7 @@
 	pixel_x = -22
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/brig)
@@ -29864,16 +29796,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/brig)
-"xoV" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/fore)
 "xqk" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/suit_cycler,
