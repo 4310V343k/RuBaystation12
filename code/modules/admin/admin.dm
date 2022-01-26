@@ -351,9 +351,15 @@ var/global/floorIsLava = 0
 		if (client.ckey == target)
 			subject = client
 			break
-	dat += "<b>Player age: [p_age]</b><br><ul id='notes'>"
-
-	var/savefile/info = new("data/player_saves/[copytext_char(key, 1, 2)]/[key]/info.sav")
+	var/list/body = list()
+	body += {"\
+		<div style="text-align: center;">\
+			<b>Player Age</b>: [subject ? subject.player_age : "Not Connected"]\
+			<hr>\
+			<a href="?src=\ref[handler];add_player_info=[target]">Add Comment</a>\
+		</div>\
+		<hr>\
+	"}
 	var/list/infos
 	var/savefile = new /savefile ("data/player_saves/[copytext_char(target, 1, 2)]/[target]/info.sav")
 	from_save(savefile, infos)

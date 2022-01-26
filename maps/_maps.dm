@@ -37,7 +37,6 @@
 #include "random_ruins\exoplanet_ruins\tar_anomaly\tar_anomaly.dm"
 #include "random_ruins\exoplanet_ruins\trash_heap\trash_heap.dm"
 #include "random_ruins\space_ruins\space_ruins.dm"
-
 #include "~mapsystem\map_preferences.dm"
 #include "~mapsystem\map_ranks.dm"
 #include "~mapsystem\maps.dm"

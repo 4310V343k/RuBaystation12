@@ -126,9 +126,6 @@
 	if (ismob(loc))
 		return equip_slot in list(slot_l_hand, slot_r_hand)
 
-/obj/item/device
-	icon = 'icons/obj/device.dmi'
-
 //Checks if the item is being held by a mob, and if so, updates the held icons
 /obj/item/proc/update_twohanding()
 	update_held_icon()

@@ -484,7 +484,6 @@ var/list/admin_verbs_mod = list(
 		to_chat(C, SPAN_NOTICE("[src] changed your OOC color to [C.prefs.ooccolor == initial(C.prefs.ooccolor) ? "default" : C.prefs.ooccolor]."))
 	log_and_message_admins("changed [C == src ? "his own" : "[C]"] OOC color to [C.prefs.ooccolor == initial(C.prefs.ooccolor) ? "default" : C.prefs.ooccolor].")
 	SScharacter_setup.queue_preferences_save(C.prefs)
-	SSstatistics.add_field_details("admin_verb","OC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 
@@ -570,10 +569,6 @@ var/list/admin_verbs_mod = list(
 	else
 		CH = new /datum/click_handler/build_mode(src)
 		CH.Enter()
-
-	SSstatistics.add_field_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	if(!usr.RemoveClickHandler(/datum/click_handler/build_mode))
-		usr.PushClickHandler(/datum/click_handler/build_mode)
 
 /client/proc/object_talk(var/msg as text) // -- TLE
 	set category = "Special Verbs"

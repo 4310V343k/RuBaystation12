@@ -32,7 +32,6 @@
 	self_recharge = TRUE
 	burst = 3
 	burst_delay = 3
-	dispersion = list(-1.5,1,1.5)
 
 /obj/item/gun/energy/ionrifle/mounted/mech
 	use_external_power = TRUE
