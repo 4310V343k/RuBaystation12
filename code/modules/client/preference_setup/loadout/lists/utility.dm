@@ -106,7 +106,6 @@ modular computers
 /datum/gear/utility/wrist_computer/New()
 	..()
 	var/wcomp = list()
-	slot = slot_wear_id
 	wcomp["black"]                   = /obj/item/modular_computer/pda/wrist/
 	wcomp["lightgrey"]               = /obj/item/modular_computer/pda/wrist/grey
 	wcomp["black-red (sec)"]         = /obj/item/modular_computer/pda/wrist/security
@@ -127,10 +126,6 @@ modular computers
 	wcomp["short (lightgrey)"]       = /obj/item/modular_computer/pda/wrist/lila
 	wcomp["short (black)"]           = /obj/item/modular_computer/pda/wrist/lila/black
 	gear_tweaks += new/datum/gear_tweak/path(wcomp)
-
-/datum/gear/utility/wrist_computer/spawn_on_mob(var/mob/living/carbon/human/H, var/metadata)
-	var/obj/item/modular_computer/pda/wrist/item = spawn_item(H, H, metadata)
-	var/obj/item/card/id = H.GetIdCard()
 
 /****************
 Pouches and kits

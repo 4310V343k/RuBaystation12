@@ -58,7 +58,7 @@
 	output += "<hr>"
 	output += "<i>[GLOB.using_map.get_map_info()||"No information available for the current map."]</i>"
 	output += "</div>"
-	panel = new (src, "Welcome","Welcome to [GLOB.using_map.full_name]", 560, 340, src)
+	panel = new (src, "Welcome","Welcome to [GLOB.using_map.full_name]", 520, 340, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output.Join())
 	panel.open()
