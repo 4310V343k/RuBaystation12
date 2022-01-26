@@ -26072,6 +26072,10 @@
 	name = "Security Blast Door";
 	opacity = 0
 	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/security/bo)
 "riD" = (
