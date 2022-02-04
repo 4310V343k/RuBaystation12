@@ -268,7 +268,6 @@ function run_configured_tests {
     esac
 }
 
-
 find_code
 run_configured_tests
 check_fail
