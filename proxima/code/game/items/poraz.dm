@@ -18,6 +18,6 @@
 	name = "Cheerfulness"
 	desc = "Cheerfulness is an important human quality."
 
-/obj/structure/sign/poster/poraz
+/obj/structure/sign/poster/custompost/poraz
 	icon_state = "poraz_poster"
 	poster_type = /decl/poster/custompost/poraz
