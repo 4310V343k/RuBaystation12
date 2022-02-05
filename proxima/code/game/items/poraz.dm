@@ -18,6 +18,11 @@
 	name = "Cheerfulness"
 	desc = "Cheerfulness is an important human quality."
 
+/decl/poster/custompost
+	icon_state = "customposter"
+	name = "Moon City"
+	desc = "A photo of the oldest city at the Moon, Sol System - Selena. Looks like it was taken from one of observation towers."
+
 /obj/structure/sign/poster/custompost/poraz
 	icon_state = "poraz_poster"
 	poster_type = /decl/poster/custompost/poraz
