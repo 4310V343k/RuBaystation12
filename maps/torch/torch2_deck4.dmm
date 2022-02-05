@@ -7109,7 +7109,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/primary/fourthdeck/aft)
 "xH" = (
-/obj/structure/sign/poster/custompost,
+/obj/structure/sign/poster/poraz,
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/galley)
 "xL" = (
