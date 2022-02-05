@@ -1485,7 +1485,8 @@
 	icon_vend = "cloth_shop-vend"
 	vend_delay = 15
 	product_slogans = "Choose glamour death!;Don't tell me, that you're wearing grey jumpsuit!"
-	products = list(//Uniforms
+	products = list(
+		//Uniforms,
 		/obj/item/clothing/under/color = 3,
 		/obj/item/clothing/under/shortjumpskirt = 3,
 		/obj/item/clothing/under/color/blackjumpshorts = 3,
@@ -1516,7 +1517,8 @@
 		/obj/item/clothing/under/dress/dress_pink = 3,
 		/obj/item/clothing/under/dress/dress_purple = 3,
 		/obj/item/clothing/under/sundress = 3,
-		/obj/item/clothing/under/skirt/maid = 3,//Suits
+		/obj/item/clothing/under/skirt/maid = 3,
+		//Suits,
 		/obj/item/clothing/suit/storage/toggle/hoodie/cti = 3,
 		/obj/item/clothing/suit/storage/toggle/hoodie/mu = 3,
 		/obj/item/clothing/suit/storage/toggle/hoodie/nt = 3,
@@ -1526,14 +1528,16 @@
 		/obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen = 3,
 		/obj/item/clothing/suit/storage/leather_jacket = 3,
 		/obj/item/clothing/suit/storage/toggle/brown_jacket = 3,
-		/obj/item/clothing/suit/storage/mbill = 3,//Eyes
+		/obj/item/clothing/suit/storage/mbill = 3,
+		//Eyes,
 		/obj/item/clothing/glasses/green = 3,
 		/obj/item/clothing/glasses/hipster = 3,
 		/obj/item/clothing/glasses/sunglasses = 3,
 		/obj/item/clothing/glasses/aviators_black = 3,
 		/obj/item/clothing/glasses/aviators_silver = 3,
 		/obj/item/clothing/glasses/aviators_gold = 3,
-		/obj/item/clothing/glasses/aviators_rose = 3,//Shoes
+		/obj/item/clothing/glasses/aviators_rose = 3,
+		//Shoes,
 		/obj/item/clothing/shoes/jackboots = 3,
 		/obj/item/clothing/shoes/workboots = 3,
 		/obj/item/clothing/shoes/dutyboots = 3,
@@ -1549,10 +1553,14 @@
 		/obj/item/clothing/shoes/rainbow = 3,
 		/obj/item/clothing/shoes/red = 3,
 		/obj/item/clothing/shoes/white = 3,
-		/obj/item/clothing/shoes/yellow = 3,//Gloves
-		/obj/item/clothing/gloves/color/evening = 3,//Ears
-		/obj/item/clothing/ears/earring/dangle/diamond = 3,//Accessory
-		/obj/item/clothing/accessory/wristwatches = 3,//Hats
+		/obj/item/clothing/shoes/yellow = 3,
+		//Gloves,
+		/obj/item/clothing/gloves/color/evening = 3,
+		//Ears,
+		/obj/item/clothing/ears/earring/dangle/diamond = 3,
+		//Accessory,
+		/obj/item/clothing/accessory/wristwatches = 3,
+		//Hats,
 		/obj/item/clothing/head/soft/black = 3,
 		/obj/item/clothing/head/soft/blue = 3,
 		/obj/item/clothing/head/soft/green = 3,
@@ -1576,7 +1584,8 @@
 		/obj/item/clothing/head/that = 3,
 		/obj/item/clothing/head/det = 3,
 		/obj/item/clothing/head/det/grey = 3,
-		/obj/item/clothing/head/panama = 3,//Additional
+		/obj/item/clothing/head/panama = 3,
+		//Additional,
 		/obj/item/lipstick = 3,
 		/obj/item/lipstick/black = 3,
 		/obj/item/lipstick/purple = 3,
@@ -1624,14 +1633,16 @@
 		/obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen = 100,
 		/obj/item/clothing/suit/storage/leather_jacket = 100,
 		/obj/item/clothing/suit/storage/toggle/brown_jacket = 100,
-		/obj/item/clothing/suit/storage/mbill = 100,//Eyes
+		/obj/item/clothing/suit/storage/mbill = 100,
+		//Eyes,
 		/obj/item/clothing/glasses/green = 100,
 		/obj/item/clothing/glasses/hipster = 100,
 		/obj/item/clothing/glasses/sunglasses = 100,
 		/obj/item/clothing/glasses/aviators_black = 100,
 		/obj/item/clothing/glasses/aviators_silver = 100,
 		/obj/item/clothing/glasses/aviators_gold = 100,
-		/obj/item/clothing/glasses/aviators_rose = 100,//Shoes
+		/obj/item/clothing/glasses/aviators_rose = 100,
+		//Shoes,
 		/obj/item/clothing/shoes/jackboots = 100,
 		/obj/item/clothing/shoes/workboots = 100,
 		/obj/item/clothing/shoes/dutyboots = 100,
@@ -1647,10 +1658,14 @@
 		/obj/item/clothing/shoes/rainbow = 100,
 		/obj/item/clothing/shoes/red = 100,
 		/obj/item/clothing/shoes/white = 100,
-		/obj/item/clothing/shoes/yellow = 100,//Gloves
-		/obj/item/clothing/gloves/color/evening = 100,//Ears
-		/obj/item/clothing/ears/earring/dangle/diamond = 700,//Accessory
-		/obj/item/clothing/accessory/wristwatches = 500,//Hats
+		/obj/item/clothing/shoes/yellow = 100,
+		//Gloves,
+		/obj/item/clothing/gloves/color/evening = 100,
+		//Ears,
+		/obj/item/clothing/ears/earring/dangle/diamond = 700,
+		//Accessory,
+		/obj/item/clothing/accessory/wristwatches = 500,
+		//Hats,
 		/obj/item/clothing/head/soft/black = 100,
 		/obj/item/clothing/head/soft/blue = 100,
 		/obj/item/clothing/head/soft/green = 100,
@@ -1674,7 +1689,8 @@
 		/obj/item/clothing/head/that = 100,
 		/obj/item/clothing/head/det = 100,
 		/obj/item/clothing/head/det/grey = 100,
-		/obj/item/clothing/head/panama = 100,//Additional
+		/obj/item/clothing/head/panama = 100,
+		//Additional,
 		/obj/item/lipstick = 100,
 		/obj/item/lipstick/black = 100,
 		/obj/item/lipstick/purple = 100,
