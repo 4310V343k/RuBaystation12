@@ -7,13 +7,13 @@
 /obj/structure/sign/poster/custompost
 	name = "poster"
 	icon = 'proxima/icons/obj/posters.dmi'
-	icon_state= "customposter"
+	icon_state="customposter"
 
 /obj/structure/sign/poster/custompost/New()
 	if(!poster_type)
 		poster_type = pick(subtypesof(/decl/poster/custompost))
 	..()
 /decl/poster/custompost/poraz
-	icon_state = "poraz_poster"
+	icon_state="poraz_poster"
 	name = "Cheerfulness"
 	desc = "Cheerfulness is an important human quality."
