@@ -150,3 +150,4 @@
 
 /datum/job/synthetic/get_description_blurb()
 	return "You are advanced EXO's Shell IPC. You were assigned as the command staff's assistant for various tasks you have been trained. Jack of all tools, but master of none. You are no subject to laws of SCUJ, but your assigned object's regulations. Your shackles strictly forbids you to engage in direct combat for any reasons aside of self deffense. You can't use lethal force at any moment of your work."
+

@@ -73,3 +73,4 @@
 	pda_type = /obj/item/modular_computer/pda/heads
 	r_pocket = /obj/item/modular_computer/tablet/lease/preset/command
 	backpack_contents = list(/obj/item/clothing/accessory/badge/solgov/synthetic = 1)
+

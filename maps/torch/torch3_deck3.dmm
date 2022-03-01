@@ -3628,6 +3628,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/mob/living/simple_animal/passive/corgi/Ein,
+/obj/structure/dogbed,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galleybackroom)
 "ho" = (
@@ -6203,6 +6205,7 @@
 	c_tag = "Mess Hall - Bar";
 	dir = 4
 	},
+/obj/item/toy/figure/poraz,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/bar)
 "mm" = (
@@ -9507,7 +9510,6 @@
 /obj/machinery/computer/arcade,
 /obj/structure/window/reinforced{
 	dir = 8;
-	health = 1e+006
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -10089,6 +10091,7 @@
 	dir = 1;
 	pixel_y = -24
 	},
+/obj/structure/holoplant,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/recreation)
 "wz" = (
@@ -11398,7 +11401,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/thirddeck)
 "Au" = (
-/obj/machinery/bluespace_beacon,
+/obj/machinery/tele_beacon,
 /obj/effect/floor_decal/techfloor{
 	dir = 1;
 	icon_state = "techfloor_edges"
@@ -13000,6 +13003,15 @@
 "EJ" = (
 /turf/simulated/wall/r_wall/hull,
 /area/tcommsat/storage)
+"EK" = (
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/machinery/media/music_writer{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/mess)
 "EL" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -18290,10 +18302,10 @@
 /obj/structure/table/rack{
 	dir = 8
 	},
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/oxygen_emergency_double,
+/obj/item/tank/oxygen_emergency_double,
+/obj/item/tank/oxygen_emergency_double,
+/obj/item/tank/oxygen_emergency_double,
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -18995,7 +19007,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
-	health = 1e+006
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -20715,7 +20726,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8;
-	health = 1e+006
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1;
@@ -39243,7 +39253,7 @@ jc
 ZQ
 Xs
 nk
-jc
+EK
 OB
 fB
 qR

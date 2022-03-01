@@ -7,7 +7,6 @@
 	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/randpixel = 6
 	var/r_speed = 1.0
-	var/health = null
 	var/burn_point = null
 	var/burning = null
 	var/hitsound = "swing_hit"
@@ -40,6 +39,7 @@
 	var/body_parts_covered = 0 //see setup.dm for appropriate bit flags
 
 	var/item_flags = 0 //Miscellaneous flags pertaining to equippable objects.
+	var/equip_slot = 0
 
 	//var/heat_transfer_coefficient = 1 //0 prevents all transfers, 1 is invisible
 	var/gas_transfer_coefficient = 1 // for leaking gas from turf to mask and vice-versa (for masks right now, but at some point, i'd like to include space helmets)
@@ -88,6 +88,7 @@
 
 	var/attack_ignore_harm_check = FALSE
 
+
 /obj/item/New()
 	..()
 	if(randpixel && (!pixel_x && !pixel_y) && isturf(loc)) //hopefully this will prevent us from messing with mapper-set pixel_x/y
@@ -116,8 +117,14 @@
 	else
 		return ..()
 
-/obj/item/device
-	icon = 'icons/obj/device.dmi'
+
+/obj/item/proc/is_held()
+	//If equip_slot is zero then it has never been equipped
+	if (equip_slot == slot_none)
+		return FALSE
+
+	if (ismob(loc))
+		return equip_slot in list(slot_l_hand, slot_r_hand)
 
 //Checks if the item is being held by a mob, and if so, updates the held icons
 /obj/item/proc/update_twohanding()
@@ -154,6 +161,7 @@
 	return FALSE
 
 /obj/item/ex_act(severity)
+	..()
 	switch(severity)
 		if(1)
 			qdel(src)
@@ -221,9 +229,6 @@
 			to_chat(user, "<span class='notice'>You try to use your hand, but realize it is no longer attached!</span>")
 			return
 
-	var/old_loc = loc
-
-	pickup(user)
 	if (istype(loc, /obj/item/storage))
 		var/obj/item/storage/S = loc
 		S.remove_from_storage(src)
@@ -241,17 +246,20 @@
 	if(QDELETED(src))
 		return // Unequipping changes our state, so must check here.
 
-	if(user.put_in_active_hand(src))
-		if (isturf(old_loc))
-			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
-			ghost.animate_towards(user)
-		if(randpixel)
-			pixel_x = rand(-randpixel, randpixel)
-			pixel_y = rand(-randpixel/2, randpixel/2)
-			pixel_z = 0
-		else if(randpixel == 0)
-			pixel_x = 0
-			pixel_y = 0
+	pickup(user)
+
+
+	// if(user.put_in_active_hand(src))
+	// 	if (isturf(old_loc))
+	// 		var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
+	// 		ghost.animate_towards(user)
+	// 	if(randpixel)
+	// 		pixel_x = rand(-randpixel, randpixel)
+	// 		pixel_y = rand(-randpixel/2, randpixel/2)
+	// 		pixel_z = 0
+	// 	else if(randpixel == 0)
+	// 		pixel_x = 0
+	// 		pixel_y = 0
 
 /obj/item/attack_ai(mob/user as mob)
 	if (istype(src.loc, /obj/item/robot_module))
@@ -286,12 +294,19 @@
 /obj/item/proc/moved(mob/user as mob, old_loc as turf)
 	return
 
+/obj/item/proc/swapped_from(mob/user)
+	return
+
+/obj/item/proc/swapped_to(mob/user)
+	return
+
 // apparently called whenever an item is removed from a slot, container, or anything else.
 /obj/item/proc/dropped(mob/user as mob)
 	if(randpixel)
 		pixel_z = randpixel //an idea borrowed from some of the older pixel_y randomizations. Intended to make items appear to drop at a character
 
 	update_twohanding()
+	equip_slot = slot_none
 	if(user)
 		if(user.l_hand)
 			user.l_hand.update_twohanding()
@@ -300,6 +315,19 @@
 
 // called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
+	var/atom/old_loc = loc
+	if(user.put_in_active_hand(src))
+		if (isturf(old_loc))
+			var/obj/effect/temporary/item_pickup_ghost/ghost = new(old_loc, src)
+			ghost.animate_towards(user)
+		if(randpixel)
+			pixel_x = rand(-randpixel, randpixel)
+			pixel_y = rand(-randpixel/2, randpixel/2)
+			pixel_z = 0
+		else if(randpixel == 0)
+			pixel_x = 0
+			pixel_y = 0
+
 	return
 
 // called when this item is removed from a storage item, which is passed on as S. The loc variable is already set to the new destination before this is called.
@@ -324,6 +352,7 @@
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
 
+	equip_slot = slot
 	//Update two-handing status
 	var/mob/M = loc
 	if(!istype(M))
@@ -536,7 +565,7 @@ var/list/global/slot_flags_enumeration = list(
 	if (user.a_intent == I_HELP)
 		. = 0
 	if (.)
-		. += Clamp((user.get_skill_value(SKILL_COMBAT) * 10) - 20, 0, 75)
+		. += clamp((user.get_skill_value(SKILL_COMBAT) * 10) - 20, 0, 75)
 
 /obj/item/proc/on_disarm_attempt(mob/target, mob/living/attacker)
 	if(force < 1)
@@ -896,3 +925,22 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 
 /obj/item/proc/attack_message_name()
 	return "\a [src]"
+
+/obj/item/proc/refresh_upgrades()
+
+/// Optional delay for /mob/living/carbon/human/equip_to_slot_if_possible to do_after before succeeding
+/obj/item/var/equip_delay
+
+
+/// Flags to use for do_after when equip_delay is set
+/obj/item/var/equip_delay_flags
+
+
+/// Virtual for behavior to do before do_after if equip_delay is set
+/obj/item/proc/equip_delay_before(mob/user, slot, equip_flags)
+	return
+
+
+/// Virtual for behavior to do after successful do_after if equip_delay is set
+/obj/item/proc/equip_delay_after(mob/user, slot, equip_flags)
+	return

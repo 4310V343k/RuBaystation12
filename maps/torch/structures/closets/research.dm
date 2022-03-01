@@ -34,7 +34,7 @@
 		/obj/item/clothing/glasses/science,
 		/obj/item/device/radio/headset/heads/torchntdirector,
 		/obj/item/device/radio/headset/heads/torchntdirector/alt,
-		/obj/item/tank/emergency/oxygen/engi,
+		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/clothing/mask/gas,
 		/obj/item/device/flash,
 		/obj/item/gun/energy/confuseray,
@@ -42,6 +42,9 @@
 		/obj/item/device/taperecorder,
 		/obj/item/device/tape/random = 3,
 		/obj/item/device/camera,
+		//proxima code start,
+		/obj/item/device/remote_device/research_director,
+		//proxima code end,
 		/obj/item/material/clipboard/steel,
 		/obj/item/taperoll/research,
 		/obj/item/clothing/glasses/welding/superior,
@@ -97,7 +100,7 @@
 		/obj/item/clothing/shoes/white,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas/half,
-		/obj/item/tank/emergency/oxygen/engi,
+		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/material/clipboard,
 		/obj/item/folder,
 		/obj/item/device/taperecorder,
@@ -112,20 +115,21 @@
 		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger/tox, 50)
 	)
 
-/obj/structure/closet/secure_closet/guard
-	name = "security guard's locker"
-	req_access = list(access_sec_guard)
+/obj/structure/closet/secure_closet/research_guard
+	name = "Research Guard's locker"
+	req_access = list(access_research_security)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/science
 
-/obj/structure/closet/secure_closet/guard/WillContain()
+/obj/structure/closet/secure_closet/research_guard/WillContain()
 	return list(
-		/obj/item/clothing/under/rank/guard,
+		/obj/item/clothing/under/rank/guard/research_guard,
 		/obj/item/clothing/suit/armor/pcarrier/medium/nt,
 		/obj/item/clothing/head/helmet/nt/guard,
 		/obj/item/clothing/head/soft/sec/corp/guard,
 		/obj/item/clothing/head/beret/guard,
 		/obj/item/clothing/accessory/armband/whitered,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/research_guard,
+		/obj/item/device/radio/headset/research_guard/alt,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/material/clipboard,
 		/obj/item/folder,
@@ -145,7 +149,7 @@
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/clothing/accessory/badge/holo/NT,
 		/obj/item/device/megaphone,
-		/obj/item/gun/energy/stunrevolver/secure/nanotrasen,
+		/obj/item/gun/energy/stunrevolver/secure,
 		/obj/item/clothing/shoes/jackboots,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security/exo, /obj/item/storage/backpack/satchel/sec/exo)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec/exo))
@@ -161,7 +165,7 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas/half,
-		/obj/item/tank/emergency/oxygen/engi,
+		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/material/clipboard,
 		/obj/item/folder,
 		/obj/item/device/taperecorder,

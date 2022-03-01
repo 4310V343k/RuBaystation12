@@ -7,7 +7,6 @@
 		return
 	if( !ismob(M) || !M.client )	return
 	cmd_admin_pm(M.client,null)
-	SSstatistics.add_field_details("admin_verb","APMM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 //shows a list of clients we could send PMs to, then forwards our choice to cmd_admin_pm
 /client/proc/cmd_admin_pm_panel()
@@ -30,7 +29,6 @@
 	var/list/sorted = sortList(targets)
 	var/target = input(src,"To whom shall we send a message?","Admin PM",null) in sorted|null
 	cmd_admin_pm(targets[target],null)
-	SSstatistics.add_field_details("admin_verb","APM") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
 //takes input from cmd_admin_pm_context, cmd_admin_pm_panel or /client/Topic and sends them a PM.
@@ -110,27 +108,29 @@
 			C.adminhelped = 0
 
 	var/sender_message = "<span class='pm'><span class='out'>" + create_text_tag("pm_out_alt", "PM", src) + " to <span class='name'>[get_options_bar(C, holder ? 1 : 0, holder ? 1 : 0, 1)]</span>"
+	var/msg_s = emoji_parse(msg, src)
 	if(holder)
 		sender_message += " (<a href='?_src_=holder;take_ticket=\ref[ticket]'>[(ticket.status == TICKET_OPEN) ? "TAKE" : "JOIN"]</a>) (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>)"
-		sender_message += ": <span class='message linkify'>[generate_ahelp_key_words(mob, msg)]</span>"
+		sender_message += ": <span class='message linkify'>[generate_ahelp_key_words(mob, msg_s)]</span>"
 	else
-		sender_message += ": <span class='message linkify'>[msg]</span>"
+		sender_message += ": <span class='message linkify'>[msg_s]</span>"
 	sender_message += "</span></span>"
 	to_chat(src, sender_message)
 
+	var/msg_r = emoji_parse(msg, C)
 	var/receiver_message = "<span class='pm'><span class='in'>" + create_text_tag("pm_in", "", C) + " <b>\[[recieve_pm_type] PM\]</b> <span class='name'>[get_options_bar(src, C.holder ? 1 : 0, C.holder ? 1 : 0, 1)]</span>"
 	if(C.holder)
 		receiver_message += " (<a href='?_src_=holder;take_ticket=\ref[ticket]'>[(ticket.status == TICKET_OPEN) ? "TAKE" : "JOIN"]</a>) (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>)"
-		receiver_message += ": <span class='message linkify'>[generate_ahelp_key_words(C.mob, msg)]</span>"
+		receiver_message += ": <span class='message linkify'>[generate_ahelp_key_words(C.mob, msg_r)]</span>"
 	else
-		receiver_message += ": <span class='message linkify'>[msg]</span>"
+		receiver_message += ": <span class='message linkify'>[msg_r]</span>"
 	receiver_message += "</span></span>"
 	to_chat(C, receiver_message)
 
 	//play the receiving admin the adminhelp sound (if they have them enabled)
 	//non-admins shouldn't be able to disable this
 	if(C.get_preference_value(/datum/client_preference/staff/play_adminhelp_ping) == GLOB.PREF_HEAR)
-		sound_to(C, 'sound/effects/adminhelp.ogg')
+		sound_to(C, 'sound/misc/staff_message.ogg')
 
 	log_admin("PM: [key_name(src)]->[key_name(C)]: [msg]")
 	adminmsg2adminirc(src, C, html_decode(msg))

@@ -72,7 +72,8 @@
 	drop_r_hand()
 	drop_l_hand()
 
-	SSstatistics.report_death(src)
+	if (mind?.assigned_job && mind.assigned_job.department_flag && !player_is_antag(mind))
+		GLOB.crew_death_count += 1
 
 	//TODO:  Change death state to health_dead for all these icon files.  This is a stop gap.
 	if(healths)
@@ -82,6 +83,8 @@
 		else
 			healths.icon_state = "health6"
 			log_debug("[src] ([src.type]) died but does not have a valid health7 icon_state (using health6 instead). report this error to Ccomp5950 or your nearest Developer")
+	if(client)
+		kill_CH() //We dead... clear any prepared abilities...
 
 	timeofdeath = world.time
 	if(mind)

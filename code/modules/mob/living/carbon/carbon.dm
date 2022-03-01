@@ -157,6 +157,7 @@
 
 /mob/living/carbon/swap_hand()
 	. = ..()
+	var/obj/item/prev_held = get_active_hand()
 	hand = !hand
 	if(hud_used.l_hand_hud_object && hud_used.r_hand_hud_object)
 		if(hand)	//This being 1 means the left hand is in use
@@ -165,9 +166,14 @@
 		else
 			hud_used.l_hand_hud_object.icon_state = "l_hand_inactive"
 			hud_used.r_hand_hud_object.icon_state = "r_hand_active"
-	var/obj/item/I = get_active_hand()
-	if(istype(I))
-		I.on_active_hand(src)
+	var/obj/item/new_held = get_active_hand()
+	if (prev_held != new_held)
+		if (istype(prev_held))
+			prev_held.swapped_from(src)
+		if (istype(new_held))
+			new_held.swapped_to(src)
+	if(istype(new_held))
+		new_held.on_active_hand(src)
 
 /mob/living/carbon/proc/activate_hand(var/selhand) //0 or "r" or "right" for right hand; 1 or "l" or "left" for left hand.
 
@@ -486,13 +492,13 @@
 	return reagents
 
 /mob/living/carbon/proc/set_nutrition(var/amt)
-	nutrition = Clamp(amt, 0, initial(nutrition))
+	nutrition = clamp(amt, 0, initial(nutrition))
 
 /mob/living/carbon/proc/adjust_nutrition(var/amt)
 	set_nutrition(nutrition + amt)
 
 /mob/living/carbon/proc/set_hydration(var/amt)
-	hydration = Clamp(amt, 0, initial(hydration))
+	hydration = clamp(amt, 0, initial(hydration))
 
 /mob/living/carbon/proc/adjust_hydration(var/amt)
 	set_hydration(hydration + amt)

@@ -1,3 +1,56 @@
+//Pile of garbage for when a clam is uninstalled or destroyed with +1 dense items inside
+/obj/structure/cargopile
+	name = "\improper spilled cargo"
+	desc = "The jetsam of some unfortunate power loader."
+	icon = 'icons/obj/rubble.dmi'
+	icon_state = "base"
+	appearance_flags = DEFAULT_APPEARANCE_FLAGS | PIXEL_SCALE
+	atom_flags = ATOM_FLAG_CLIMBABLE
+	opacity = 1
+	density = TRUE
+	anchored = TRUE
+
+
+/obj/structure/cargopile/on_update_icon()
+	overlays.Cut()
+	for(var/obj/thing in contents)
+		var/image/I = new
+		I.appearance = thing.appearance
+		I.appearance_flags = DEFAULT_APPEARANCE_FLAGS | PIXEL_SCALE
+		I.pixel_x = rand(-16,16)
+		I.pixel_y = rand(-16,16)
+		var/matrix/M = matrix()
+		M.Turn(rand(0,360))
+		I.transform = M
+		overlays += I
+
+/obj/structure/cargopile/attack_hand(mob/user)
+	. = ..()
+	if(Adjacent(user))
+		var/obj/chosen_obj = input(user, "Choose an object to grab.", "Cargo pile") as null|anything in contents
+		if(!chosen_obj)
+			return
+		if(chosen_obj.density)
+			for(var/atom/A in get_turf(src))
+				if(A != src && A.density && !(A.atom_flags & ATOM_FLAG_CHECKS_BORDER))
+					to_chat(user, SPAN_WARNING("\The [A] blocks you from pulling out \the [chosen_obj]."))
+					return
+		if(!do_after(user, 5, src)) return
+		if(!chosen_obj) return
+		if(chosen_obj.density)
+			for(var/atom/A in get_turf(src))
+				if(A != src && A.density && !(A.atom_flags & ATOM_FLAG_CHECKS_BORDER))
+					to_chat(user, SPAN_WARNING("\The [A] blocks you from pulling out \the [chosen_obj]."))
+					return
+		if(user.put_in_active_hand(chosen_obj))
+			src.visible_message(SPAN_NOTICE("\The [user] carefully grabs \the [chosen_obj] from \the [src]."))
+		else if(chosen_obj.dropInto(get_turf(src)))
+			src.visible_message(SPAN_NOTICE("\The [user] pulls \the [chosen_obj] from \the [src]."))
+
+		if(!contents.len)
+			qdel_self()
+		else update_icon()
+
 /obj/item/mech_equipment/clamp
 	name = "mounted clamp"
 	desc = "A large, heavy industrial cargo loading clamp."
@@ -31,9 +84,6 @@
 	. = ..()
 
 	if(.)
-		if(length(carrying) >= carrying_capacity)
-			to_chat(user, SPAN_WARNING("\The [src] is fully loaded!"))
-			return
 		if(istype(target, /obj))
 			var/obj/O = target
 			if(O.buckled_mob)
@@ -99,6 +149,10 @@
 					return
 
 				to_chat(user, SPAN_WARNING("\The [target] is firmly secured."))
+				return
+
+			if(length(carrying) >= carrying_capacity)
+				to_chat(user, SPAN_WARNING("\The [src] is fully loaded!"))
 				return
 
 			owner.visible_message(SPAN_NOTICE("\The [owner] begins loading \the [O]."))
@@ -174,23 +228,43 @@
 		return "Multiple"
 	. = ..()
 
-/obj/item/mech_equipment/clamp/uninstalled()
+/obj/item/mech_equipment/clamp/proc/create_spill()
 	if(length(carrying))
+		var/denseCount = 0
 		for(var/obj/load in carrying)
-			var/turf/location = get_turf(src)
-			var/list/turfs = location.AdjacentTurfsSpace()
 			if(load.density)
-				if(turfs.len > 0)
-					location = pick(turfs)
-					turfs -= location
-				else
+				denseCount += 1
+			if(denseCount > 1)
+				break
+
+		if(denseCount > 1)
+			var/obj/structure/cargopile/pile = new(get_turf(src))
+			for(var/obj/load in carrying)
+				load.forceMove(pile)
+				carrying -= load
+			pile.update_icon()
+		else
+			for(var/obj/load in carrying)
+				var/turf/location = get_turf(src)
+				var/list/turfs = location.AdjacentTurfsSpace()
+				if(load.density)
+					if(turfs.len > 0)
+						location = pick(turfs)
+						turfs -= location
+					else
+						load.dropInto(location)
+						load.throw_at_random(FALSE, rand(2,4), 4)
+						location = null
+				if(location)
 					load.dropInto(location)
-					load.throw_at_random(FALSE, rand(2,4), 4)
-					location = null
-			if(location)
-				load.dropInto(location)
-			carrying -= load
+				carrying -= load
+
+/obj/item/mech_equipment/clamp/uninstalled()
+	create_spill()
 	. = ..()
+
+/obj/item/mech_equipment/clamp/wreck()
+	create_spill()
 
 // A lot of this is copied from floodlights.
 /obj/item/mech_equipment/light
@@ -240,7 +314,7 @@
 	//Check our layers
 	if(owner && (owner.hardpoints[HARDPOINT_HEAD] == src))
 		mech_layer = MECH_INTERMEDIATE_LAYER
-	else mech_layer = initial(mech_layer)	
+	else mech_layer = initial(mech_layer)
 
 #define CATAPULT_SINGLE 1
 #define CATAPULT_AREA   2
@@ -248,7 +322,7 @@
 /obj/item/mech_equipment/catapult
 	name = "gravitational catapult"
 	desc = "An exosuit-mounted gravitational catapult."
-	icon_state = "mech_clamp"
+	icon_state = "mech_wormhole"
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
 	var/mode = CATAPULT_SINGLE
@@ -555,7 +629,7 @@
 /obj/item/mech_equipment/mounted_system/taser/plasma
 	name = "mounted plasma cutter"
 	desc = "An industrial plasma cutter mounted onto the chassis of the mech. "
-	icon_state = "railauto" //TODO: Make a new sprite that doesn't get sec called on you.
+	icon_state = "mech_plasma"
 	holding_type = /obj/item/gun/energy/plasmacutter/mounted/mech
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND, HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
@@ -573,9 +647,9 @@
 	name = "rotatory plasma cutter"
 	desc = "A state of the art rotating, variable intensity, sequential-cascade plasma cutter. Resist the urge to aim this at your coworkers."
 	max_shots = 15
-	firemodes = list(
-		list(mode_name="single shot",	can_autofire=0, burst=1, fire_delay=6,  dispersion = list(0.0)),
-		list(mode_name="full auto",		can_autofire=1, burst=1, fire_delay=1, burst_accuracy = list(0,-1,-1,-1,-1,-2,-2,-2), dispersion = list(1.0, 1.0, 1.0, 1.0, 1.1)),
+	init_firemodes = list(
+		list(mode_name="single shot",	can_autofire=0, burst=1, fire_delay=6),
+		list(mode_name="full auto",		can_autofire=1, burst=1, fire_delay=1),
 		)
 
 /obj/item/mech_equipment/ionjets
@@ -607,11 +681,11 @@
 	if (istype(C))
 		if (C.checked_use(movement_power * CELLRATE))
 			return TRUE
-		else 
+		else
 			deactivate()
 
 	return FALSE
-				
+
 /obj/item/mech_equipment/ionjets/attack_self(mob/user)
 	. = ..()
 	if (!.)
@@ -619,7 +693,7 @@
 
 	if (active)
 		deactivate()
-	else 
+	else
 		activate()
 
 /obj/item/mech_equipment/ionjets/CtrlClick(mob/user)
@@ -635,7 +709,7 @@
 	ion_trail.start()
 	active = TRUE
 	update_icon()
-	
+
 /obj/item/mech_equipment/ionjets/deactivate()
 	. = ..()
 	passive_power_use = 0 KILOWATTS
@@ -718,7 +792,7 @@
 	if(owner)
 		camera.c_tag = "[owner.name] camera feed"
 		invalidateCameraCache()
-	
+
 /obj/item/mech_equipment/camera/uninstalled()
 	. = ..()
 	camera.c_tag = "null"
@@ -740,7 +814,7 @@
 
 /obj/item/mech_equipment/camera/attackby(obj/item/W, mob/user)
 	. = ..()
-	
+
 	if(isScrewdriver(W))
 		var/list/all_networks = list()
 		for(var/network in GLOB.using_map.station_networks)

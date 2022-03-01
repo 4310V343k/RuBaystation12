@@ -40,8 +40,6 @@
 		access_radio_sec
 	)
 
-	minimal_access = list()
-
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
@@ -72,7 +70,8 @@
 		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/civ/contractor,
-		/datum/mil_rank/sol/agent
+		/datum/mil_rank/sol/agent,
+		/datum/mil_rank/sol/curator_agent
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
@@ -93,8 +92,6 @@
 		access_torch_fax, access_network, access_radio_sec
 	)
 
-	minimal_access = list()
-
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
@@ -112,14 +109,17 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/maa/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/security/maa/army
+		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/security/maa/army,
+		/datum/mil_branch/solgov = /decl/hierarchy/outfit/job/torch/crew/security/maa/agent
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/army/e3,
 		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/sol/agent
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -137,8 +137,6 @@
 		access_eva, access_sec_doors, access_solgov_crew,
 		access_radio_sec
 	)
-
-	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)

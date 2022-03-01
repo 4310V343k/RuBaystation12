@@ -99,6 +99,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/tmp/iconCache.sav"))
 			swaptodarkmode()
 		if ("swaptolightmode")
 			swaptolightmode()
+		if ("showEmojiList")
+			showemojilist(arglist(params))
 	if(data)
 		ehjax_send(data = data)
 
@@ -239,6 +241,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/tmp/iconCache.sav"))
 			//Send it to the old style output window.
 			legacy_chat(C, original_message)
 
+			if (C.get_preference_value(/datum/client_preference/goonchat) != GLOB.PREF_YES)
+				continue
 			if(!C.chatOutput || C.chatOutput.broken) // A player who hasn't updated his skin file.
 				continue
 
@@ -253,6 +257,8 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/tmp/iconCache.sav"))
 		if (!C)
 			return
 		legacy_chat(C, original_message) //Send it to the old style output window.
+		if (C.get_preference_value(/datum/client_preference/goonchat) != GLOB.PREF_YES)
+			return
 		if(!C.chatOutput || C.chatOutput.broken) // A player who hasn't updated his skin file.
 			return
 		if(!C.chatOutput.loaded)
@@ -277,6 +283,79 @@ GLOBAL_DATUM_INIT(iconCache, /savefile, new("data/tmp/iconCache.sav"))
 /chatOutput/proc/swaptodarkmode()
 	owner.force_dark_theme()
 
+/chatOutput/proc/showemojilist(var/theme="dark")
+	var/color1
+	var/color2
+	if(theme == "dark")
+		color1 = "#a4bad6"
+		color2 = "#171717"
+	else
+		color1 = "#000000"
+		color2 = "#fff"
+
+	var/css = "body { \
+	background: [color2]; \
+	color: [color1]; \
+} \
+a img { \
+	border: none; \
+} \
+table { \
+	border: 4px double [color1]; \
+	border-collapse: separate;\
+	width: 100%;\
+	border-spacing: 7px;\
+}\
+td {\
+	padding: 5px;\
+	border: 1px solid [color1];\
+}\
+input { \
+	border:0; \
+	background:transparent; \
+	font-size:16px; \
+	color:[color2]; \
+}"
+	var/js = "function copyToClipboard(text) { \
+	var $temp = $('<input>'); \
+	$('body').append($temp); \
+	$temp.val(text).select(); \
+	document.execCommand('copy'); \
+	$temp.remove(); \
+}; \
+$(function() { \
+	$('body').on('click', 'a', function(e) { \
+		e.preventDefault(); \
+		}); \
+	$('.emojiPicker a').click(function () { \
+		copyToClipboard(':' + $(this).data('emoji') + ':'); \
+	}); \
+});"
+	var/dat = "<!DOCTYPE html> \
+<html> \
+<head> \
+<meta charset=\"utf-8\"> \
+<style>[css]</style> \
+<script src=\"jquery.min.js\"></script> \
+<title>Emoji list</title> \
+</head> \
+<body> \
+<h2>Эмодзи пишется через :emoji:</h2> \
+<div class=\"emojiPicker\"><table>"
+	var/static/list/states = icon_states(GLOB.emojis)
+
+	// for(var/emoji in states)
+	var/len = LAZYLEN(states)
+	for(var/i = 1, i <= len, i++)
+		if(i%8 == 1) dat += "<tr>"
+		dat +="<td><a href=\"#\" data-emoji=\"[states[i]]\" title=\"[states[i]]\">" + icon2html(icon(GLOB.emojis, states[i]), owner, realsize= TRUE) + "</a></td>"
+		if(!(i%8)) dat += "</tr>"
+
+	dat += "</div><script type=\"text/javascript\">[js]</script></body></html>"
+
+	var/len_y = min(94 + (round(len/8) + min(1, len%8))*45, 769)
+
+	show_browser(owner, dat, "window=emojis;size=420x[len_y]")
 
 #undef MAX_COOKIE_LENGTH
 #undef SPAM_TRIGGER_AUTOMUTE

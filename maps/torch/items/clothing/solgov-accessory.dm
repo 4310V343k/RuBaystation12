@@ -196,7 +196,7 @@ specialty pins
 /obj/item/clothing/accessory/solgov/specialty
 	name = "speciality blaze"
 	desc = "A color blaze denoting fleet personnel in some special role. This one is silver."
-	icon_state = "marinerank_command"
+	icon_state = "armyrank_command"
 	slot = ACCESSORY_SLOT_INSIGNIA
 	icon_state = "fleetspec"
 
@@ -318,10 +318,17 @@ armbands
 	desc = "A box full of security armbands. For use in emergencies when provisional security personnel are needed."
 	startswith = list(/obj/item/clothing/accessory/armband/solgov/mp = 5)
 
+//proxima code start
+/obj/item/storage/box/armband/sec
+	name = "box of spare security armbands"
+	desc = "A box full of security armbands. For use in emergencies when provisional security personnel are needed."
+	startswith = list(/obj/item/clothing/accessory/armband/solgov/ma = 5)
+//proxima code end
+
 /*****************
 armour attachments
 *****************/
-/obj/item/clothing/accessory/armor/tag/solgov
+/obj/item/clothing/accessory/armor_tag/solgov
 	name = "\improper SCG Flag"
 	desc = "An emblem depicting the Sol Central Government's flag."
 	icon_override = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
@@ -330,36 +337,36 @@ armour attachments
 	icon_state = "solflag"
 	slot = ACCESSORY_SLOT_ARMOR_M
 
-/obj/item/clothing/accessory/armor/tag/solgov/ec
+/obj/item/clothing/accessory/armor_tag/solgov/ec
 	name = "\improper Expeditionary Corps crest"
 	desc = "An emblem depicting the crest of the SCG Expeditionary Corps."
 	icon_state = "ecflag"
 
-/obj/item/clothing/accessory/armor/tag/solgov/sec
+/obj/item/clothing/accessory/armor_tag/solgov/sec
 	name = "\improper POLICE tag"
 	desc = "An armor tag with the word POLICE printed in silver lettering on it."
 	icon_state = "sectag"
 
-/obj/item/clothing/accessory/armor/tag/solgov/medic
+/obj/item/clothing/accessory/armor_tag/solgov/medic
 	name = "\improper MEDIC tag"
 	desc = "An armor tag with the word MEDIC printed in red lettering on it."
 	icon_state = "medictag"
 
-/obj/item/clothing/accessory/armor/tag/solgov/agent
+/obj/item/clothing/accessory/armor_tag/solgov/agent
 	name = "\improper SFP AGENT tag"
 	desc = "An armor tag with the words SFP AGENT printed in gold lettering on it."
 	icon_state = "agenttag"
 
-/obj/item/clothing/accessory/armor/tag/solgov/com
+/obj/item/clothing/accessory/armor_tag/solgov/com
 	name = "\improper SCG tag"
 	desc = "An armor tag with the words SOL CENTRAL GOVERNMENT printed in gold lettering on it."
 	icon_state = "comtag"
 
-/obj/item/clothing/accessory/armor/tag/solgov/com/sec
+/obj/item/clothing/accessory/armor_tag/solgov/com/sec
 	name = "\improper POLICE tag"
 	desc = "An armor tag with the words POLICE printed in gold lettering on it."
 
-/obj/item/clothing/accessory/armor/helmcover/blue/sol
+/obj/item/clothing/accessory/helmet_cover/blue/sol
 	name = "peacekeeper helmet cover"
 	desc = "A fabric cover for armored helmets. This one is in SCG peacekeeper colors."
 
@@ -372,7 +379,7 @@ department tags
 	icon_state = "dept_exped"
 	on_rolled = list("down" = "none", "rolled" = "dept_exped_sleeves")
 	slot = ACCESSORY_SLOT_DEPT
-	removable = FALSE
+	accessory_flags = EMPTY_BITFIELD
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)
@@ -523,7 +530,7 @@ ranks - ec
 	on_rolled = list("down" = "none")
 	slot = ACCESSORY_SLOT_RANK
 	gender = PLURAL
-	high_visibility = 1
+	accessory_flags = ACCESSORY_REMOVABLE | ACCESSORY_HIGH_VISIBILITY
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'icons/mob/species/unathi/onmob_accessories_sol_unathi.dmi'
 		)
@@ -725,7 +732,7 @@ ranks - marines
 **************/
 /obj/item/clothing/accessory/solgov/rank/army
 	name = "army ranks"
-	desc = "Insignia denoting marine rank of some kind. These appear blank."
+	desc = "Insignia denoting army rank of some kind. These appear blank."
 	icon_state = "armyrank_enlisted"
 	on_rolled = list("down" = "none")
 
@@ -743,12 +750,12 @@ ranks - marines
 	desc = "Insignia denoting the rank of Private First Class."
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e4
-	name = "ranks (E-4 corporal)"
-	desc = "Insignia denoting the rank of Сorporal."
-
-/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt
 	name = "ranks (E-4 specialist)"
 	desc = "Insignia denoting the rank of Specialist."
+
+/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt
+	name = "ranks (E-4 corporal)"
+	desc = "Insignia denoting the rank of Сorporal."
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e5
 	name = "ranks (E-5 sergeant)"
@@ -818,7 +825,7 @@ ranks - marines
 
 /obj/item/clothing/accessory/solgov/rank/army/flag/o9
 	name = "ranks (O-9 lieutenant general)"
-	desc = "Insignia denoting the rank of lieutenant general."
+	desc = "Insignia denoting the rank of Lieutenant general."
 
 /obj/item/clothing/accessory/solgov/rank/army/flag/o10
 	name = "ranks (O-10 general)"

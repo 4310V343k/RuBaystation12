@@ -7,9 +7,6 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	var/list/forenames = list()
 	var/list/ckeys = list()
 
-	if (mob.client)
-		msg = emoji_parse(msg, mob.client)
-
 	//explode the input msg into a list
 	var/list/msglist = splittext(msg, " ")
 
@@ -120,23 +117,24 @@ var/list/adminhelp_ignored_words = list("unknown","the","a","an","of","monkey","
 	msg = "<span class='notice'><b><font color=red>HELP: </font>[get_options_bar(mob, 2, 1, 1, 1, ticket)] (<a href='?_src_=holder;take_ticket=\ref[ticket]'>[(ticket.status == TICKET_OPEN) ? "TAKE" : "JOIN"]</a>) (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>):</b> [msg]</span>"
 
 	var/admin_number_afk = 0
-
+	var/T
 	for(var/client/X in GLOB.admins)
 		if((R_ADMIN|R_MOD) & X.holder.rights)
 			if(X.is_afk())
 				admin_number_afk++
 			if(X.get_preference_value(/datum/client_preference/staff/play_adminhelp_ping) == GLOB.PREF_HEAR)
 				sound_to(X, 'sound/effects/adminhelp.ogg')
-			to_chat(X, msg)
+
+			T = emoji_parse(msg, X)
+
+			to_chat(X, T)
 	original_msg = emoji_parse(original_msg, src)
 	//show it to the person adminhelping too
-	to_chat(src, "<font color='blue'>PM to-<b>Staff</b> (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>): [original_msg]</font>")
+	to_chat(src, "<span class=\"staff_pm\">PM to-<b>Staff</b> (<a href='?src=\ref[usr];close_ticket=\ref[ticket]'>CLOSE</a>): [original_msg]</span>")
 	var/admin_number_present = GLOB.admins.len - admin_number_afk
 	log_admin("HELP: [key_name(src)]: [original_msg] - heard by [admin_number_present] non-AFK admins.")
 	if(admin_number_present <= 0)
 		adminmsg2adminirc(src, null, "[html_decode(original_msg)] - !![admin_number_afk ? "All admins AFK ([admin_number_afk])" : "No admins online"]!!")
 	else
 		adminmsg2adminirc(src, null, "[html_decode(original_msg)]")
-
-	SSstatistics.add_field_details("admin_verb","AH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return

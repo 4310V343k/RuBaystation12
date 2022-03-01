@@ -1,5 +1,5 @@
 /mob/Destroy()//This makes sure that mobs with clients/keys are not just deleted from the game.
-	STOP_PROCESSING(SSmobs, src)
+	STOP_PROCESSING_MOB(src)
 	GLOB.dead_mob_list_ -= src
 	GLOB.living_mob_list_ -= src
 	GLOB.player_list -= src
@@ -52,7 +52,9 @@
 		move_intent = move_intents[1]
 	if(ispath(move_intent))
 		move_intent = decls_repository.get_decl(move_intent)
-	START_PROCESSING(SSmobs, src)
+	if (!isliving(src))
+		status_flags |= NOTARGET
+	START_PROCESSING_MOB(src)
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)
 	if(!client)	return
@@ -208,7 +210,7 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
-			. += between(0, O.w_class, ITEM_SIZE_GARGANTUAN) / 5
+			. += clamp(O.w_class, 0, ITEM_SIZE_GARGANTUAN) / 5
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling
 			. += max(0, M.mob_size) / MOB_MEDIUM
@@ -434,8 +436,8 @@
 		'html/changelog.html'
 		)
 	show_browser(src, 'html/changelog.html', "window=changes;size=675x650")
-	if (SSmisc.changelog_hash && prefs.lastchangelog != SSmisc.changelog_hash)
-		prefs.lastchangelog = SSmisc.changelog_hash
+	if (GLOB.changelog_hash && prefs.lastchangelog != GLOB.changelog_hash)
+		prefs.lastchangelog = GLOB.changelog_hash
 		SScharacter_setup.queue_preferences_save(prefs)
 		winset(src, "rpane.changelog", "background-color=none;font-style=;")
 
@@ -869,6 +871,15 @@
 	if(istype(implant,/obj/item/implant))
 		var/obj/item/implant/imp = implant
 		imp.removed()
+	if (istype(implant, /obj/item/holder/voxslug))
+		var/obj/item/holder/voxslug/holder = implant
+		var/mob/living/simple_animal/hostile/voxslug/V = holder.contents[1]
+
+		V.visible_message(SPAN_WARNING("\The [src] is momentarily stunned as it is ripped from its victim!"))
+		if (V.ai_holder)
+			var/datum/ai_holder/AI = V.ai_holder
+			AI.set_busy_delay(8 SECONDS)
+
 	. = TRUE
 
 /mob/living/silicon/robot/remove_implant(var/obj/item/implant, var/surgical_removal = FALSE)
@@ -1043,6 +1054,19 @@
 	src.in_throw_mode = 1
 	if(src.throw_icon)
 		src.throw_icon.icon_state = "act_throw_on"
+
+/mob/proc/check_CH(CH_name as text, var/CH_type, var/second_arg = null)
+	if(!src.client.CH || !istype(src.client.CH, CH_type))//(src.client.CH.handler_name != CH_name))
+		src.client.CH = new CH_type(client, second_arg)
+		to_chat(src, SPAN_WARNING("You prepare [CH_name]."))
+	else
+		kill_CH()
+	return
+
+/mob/proc/kill_CH()
+	if (src.client.CH)
+		to_chat(src, SPAN_NOTICE ("You unprepare [src.client.CH.handler_name]."))
+		QDEL_NULL(src.client.CH)
 
 /mob/proc/toggle_antag_pool()
 	set name = "Toggle Add-Antag Candidacy"

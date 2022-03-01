@@ -120,7 +120,9 @@
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/army/e3,
 		/datum/mil_rank/army/e4,
+		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/army/e5,
+		/datum/mil_rank/army/e6,
 		/datum/mil_rank/civ/contractor
 	)
 	min_skill = list(   SKILL_EVA     = SKILL_BASIC,
@@ -136,8 +138,6 @@
 		access_eva, access_surgery, access_medical_equip,
 		access_solgov_crew, access_hangar, access_radio_med
 	)
-
-	minimal_access = list()
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
@@ -209,8 +209,15 @@
 		"Chemist"
 	)
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/chemist
-	allowed_branches = list(/datum/mil_branch/civilian)
-	allowed_ranks = list(/datum/mil_rank/civ/contractor)
+	allowed_branches = list(
+		/datum/mil_branch/civilian,
+		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/chemist/ec)
+
+	allowed_ranks = list(
+		/datum/mil_rank/civ/contractor,
+		/datum/mil_rank/ec/e3,
+		/datum/mil_rank/ec/e5)
+
 	min_skill = list(   SKILL_MEDICAL   = SKILL_BASIC,
 	                    SKILL_CHEMISTRY = SKILL_ADEPT)
 
@@ -224,8 +231,6 @@
 		access_medical_equip, access_solgov_crew, access_chemistry,
 	 	access_virology, access_morgue, access_crematorium, access_radio_med
 	)
-
-	minimal_access = list()
 
 /datum/job/chemist/get_description_blurb()
 	return "You are the Pharmacist. You make medicine and other useful substances. You are not a doctor or medic; you should not be treating patients, but rather providing the medicine to do so. You are subordinate to Physicians and Medical Technicians."
@@ -267,8 +272,6 @@
 		access_medical, access_psychiatrist,
 		access_solgov_crew, access_medical_equip, access_radio_med
 	)
-
-	minimal_access = list()
 
 	software_on_spawn = list(
 		/datum/computer_file/program/suit_sensors,

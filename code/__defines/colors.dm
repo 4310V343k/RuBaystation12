@@ -81,6 +81,7 @@
 #define COLOR_ASTEROID_ROCK    "#735555"
 #define COLOR_NULLGLASS        "#ff6088"
 #define COLOR_DIAMOND          "#d8d4ea"
+#define COLOR_VOX			   "#244238"
 
 
 #define	PIPE_COLOR_GREY        "#808080"
@@ -181,3 +182,11 @@
 #define COLOR_DARKMODE_BACKGROUND "#202020"
 #define COLOR_DARKMODE_DARKBACKGROUND "#171717"
 #define COLOR_DARKMODE_TEXT "#a4bad6"
+
+//colors for holoplants //from infinity
+#define COLOR_LIGHTING_RED_BRIGHT		"#aa2733"
+#define COLOR_LIGHTING_GREEN_BRIGHT		"#8aa88a"
+#define COLOR_LIGHTING_BLUE_BRIGHT		"#8a95a8"
+#define COLOR_LIGHTING_ORANGE_BRIGHT	"#d7be93"
+#define COLOR_LIGHTING_PURPLE_BRIGHT	"#aa2799"
+#define COLOR_LIGHTING_CYAN_BRIGHT		"#67c1b6"

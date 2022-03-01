@@ -34,6 +34,7 @@
 		/datum/species/vox     = list(
 			/datum/mil_branch/expeditionary_corps,
 			/datum/mil_branch/fleet,
+			/datum/mil_branch/army,
 			/datum/mil_branch/civilian,
 			/datum/mil_branch/solgov,
 			/datum/mil_branch/skrell_fleet
@@ -81,6 +82,7 @@
 				/datum/mil_rank/army/e2,
 				/datum/mil_rank/army/e3,
 				/datum/mil_rank/army/e4,
+				/datum/mil_rank/army/e4_alt,
 				/datum/mil_rank/army/e5,
 				/datum/mil_rank/army/e6,
 				/datum/mil_rank/army/e7,
@@ -109,6 +111,7 @@
 				/datum/mil_rank/army/e2,
 				/datum/mil_rank/army/e3,
 				/datum/mil_rank/army/e4,
+				/datum/mil_rank/army/e4_alt,
 				/datum/mil_rank/army/e5,
 				/datum/mil_rank/army/e6,
 				/datum/mil_rank/army/e7,
@@ -316,12 +319,14 @@
 	rank_types = list(
 		/datum/mil_rank/sol/gov,
 		/datum/mil_rank/sol/agent,
+		/datum/mil_rank/sol/curator_agent,
 		/datum/mil_rank/sol/scientist
 	)
 
 	spawn_rank_types = list(
 		/datum/mil_rank/sol/gov,
 		/datum/mil_rank/sol/agent,
+		/datum/mil_rank/sol/curator_agent,
 		/datum/mil_rank/sol/scientist
 	)
 
@@ -569,14 +574,14 @@
 	sort_order = 3
 
 /datum/mil_rank/army/e4
-	name = "Corporal"
-	name_short = "CPL"
+	name = "Specialist"
+	name_short = "SPC"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4)
 	sort_order = 4
 
 /datum/mil_rank/army/e4_alt
-	name = "Specialist"
-	name_short = "SPC"
+	name = "Corporal"
+	name_short = "CPL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt)
 	sort_order = 4
 
@@ -722,6 +727,11 @@
 	name = "SFP Agent"
 	name_short = "AGT"
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
+
+/datum/mil_rank/sol/curator_agent
+	name = "SFP Supervisory Agent"
+	name_short = "SAGT"
+	accessory = list(/obj/item/clothing/accessory/badge/curator_agent)
 
 /datum/mil_rank/sol/scientist
 	name = "Government Scientist"

@@ -101,8 +101,9 @@
 	// For some reason there isn't an argument for accuracy, so access the projectile directly instead.
 	// Also, placing dispersion here instead of in forced_spread will randomize the chosen angle between dispersion and -dispersion in fire() instead of having to do that here.
 	// P.accuracy += calculate_accuracy()
-	P.dispersion += calculate_dispersion()
+	// P.dispersion += calculate_dispersion()
 
+	P.firer = src
 	P.launch(target = A)
 	if(needs_reload)
 		reload_count++
@@ -161,6 +162,7 @@
 // Special attacks, like grenades or blinding spit or whatever.
 // Don't override this, override do_special_attack() for your blinding spit/etc.
 /mob/living/simple_animal/proc/special_attack_target(atom/A)
+	set waitfor = FALSE
 	face_atom(A)
 
 	if(special_attack_delay)

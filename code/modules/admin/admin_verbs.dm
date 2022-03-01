@@ -55,6 +55,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/dsay,					//talk in deadchat using our ckey
 //	/client/proc/toggle_hear_deadcast,	//toggles whether we hear deadchat,
 	/client/proc/investigate_show,		//various admintools for investigation. Such as a singulo grief-log,
+	/datum/admins/proc/toggle_allowlists,
 	/datum/admins/proc/toggleooc,		//toggles ooc on/off for everyone,
 	/datum/admins/proc/toggleaooc,		//toggles aooc on/off for everyone,
 	/datum/admins/proc/togglelooc,		//toggles looc on/off for everyone,
@@ -94,7 +95,9 @@ var/list/admin_verbs_admin = list(
 	/client/proc/remove_trader,
 	/datum/admins/proc/sendFax,
 	/client/proc/check_fax_history,
-	/client/proc/cmd_admin_notarget
+	/client/proc/cmd_admin_notarget,
+	/datum/admins/proc/setroundlength,
+	/datum/admins/proc/toggleroundendvote
 )
 var/list/admin_verbs_ban = list(
 	/client/proc/unban_panel,
@@ -120,7 +123,8 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/create_dungeon,
-	/datum/admins/proc/ai_hologram_set
+	/datum/admins/proc/ai_hologram_set,
+	/client/proc/toggle_film_grain
 	)
 
 var/list/admin_verbs_spawn = list(
@@ -343,7 +347,6 @@ var/list/admin_verbs_mod = list(
 	verbs += /client/proc/show_verbs
 
 	to_chat(src, "<span class='interface'>Most of your adminverbs have been hidden.</span>")
-	SSstatistics.add_field_details("admin_verb","HMV") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/hide_verbs()
@@ -354,7 +357,6 @@ var/list/admin_verbs_mod = list(
 	verbs += /client/proc/show_verbs
 
 	to_chat(src, "<span class='interface'>Almost all of your adminverbs have been hidden.</span>")
-	SSstatistics.add_field_details("admin_verb","TAVVH") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/show_verbs()
@@ -365,7 +367,6 @@ var/list/admin_verbs_mod = list(
 	add_admin_verbs()
 
 	to_chat(src, "<span class='interface'>All of your adminverbs are now visible.</span>")
-	SSstatistics.add_field_details("admin_verb","TAVVS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
 
@@ -378,7 +379,6 @@ var/list/admin_verbs_mod = list(
 	if(isghost(mob))
 		var/mob/observer/ghost/ghost = mob
 		ghost.reenter_corpse()
-		SSstatistics.add_field_details("admin_verb","P") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 	else if(istype(mob,/mob/new_player))
 		to_chat(src, "<font color='red'>Error: Aghost: Can't admin-ghost whilst in the lobby. Join or Observe first.</font>")
@@ -394,7 +394,6 @@ var/list/admin_verbs_mod = list(
 			body.teleop = ghost
 			if(!body.key)
 				body.key = "@[key]"	//Haaaaaaaack. But the people have spoken. If it breaks; blame adminbus
-		SSstatistics.add_field_details("admin_verb","O") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 
 /client/proc/invisimin()
@@ -417,7 +416,6 @@ var/list/admin_verbs_mod = list(
 	set category = "Admin"
 	if(holder)
 		holder.player_panel()
-	SSstatistics.add_field_details("admin_verb","PPN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/check_antagonists()
@@ -426,7 +424,6 @@ var/list/admin_verbs_mod = list(
 	if(holder)
 		holder.check_antagonists()
 		log_admin("[key_name(usr)] checked antagonists.")	//for tsar~
-	SSstatistics.add_field_details("admin_verb","CHA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/jobbans()
@@ -437,7 +434,6 @@ var/list/admin_verbs_mod = list(
 			holder.Jobbans()
 		else
 			holder.DB_ban_panel()
-	SSstatistics.add_field_details("admin_verb","VJB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/unban_panel()
@@ -448,7 +444,6 @@ var/list/admin_verbs_mod = list(
 			holder.unbanpanel()
 		else
 			holder.DB_ban_panel()
-	SSstatistics.add_field_details("admin_verb","UBP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/game_panel()
@@ -456,7 +451,6 @@ var/list/admin_verbs_mod = list(
 	set category = "Admin"
 	if(holder)
 		holder.Game()
-	SSstatistics.add_field_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/secrets()
@@ -464,45 +458,56 @@ var/list/admin_verbs_mod = list(
 	set category = "Admin"
 	if (holder)
 		holder.Secrets()
-	SSstatistics.add_field_details("admin_verb","S") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	return
 
 /client/proc/colorooc()
 	set category = "Fun"
 	set name = "OOC Text Color"
-	if(!holder)	return
-	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change own OOC color", "Pick new color", "Reset to default", "Cancel")
-	if(response == "Pick new color")
-		prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
-	else if(response == "Reset to default")
-		prefs.ooccolor = initial(prefs.ooccolor)
-	SScharacter_setup.queue_preferences_save(prefs)
+	if(!can_select_ooc_color(src)) // INF, was	if(!check_rights(R_FUN))
+		return
 
-	SSstatistics.add_field_details("admin_verb","OC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	var/client/C
+	if(alert(src, "Change for yourself or someone else?", "User pick", "For myself", "For another player") == "For another player")
+		C = input(src, "Please select a player.", "Player select") as null|anything in (GLOB.clients - src)
+	else
+		C = src
+	if(!C)
+		return
+
+	var/response = alert(src, "Please choose a distinct color that is easy to read and doesn't mix with all the other chat and radio frequency colors.", "Change [C] OOC color", "Pick new color", "Reset to default", "Cancel")
+	if(response == "Pick new color")
+		C.prefs.ooccolor = input(src, "Please select your OOC colour.", "OOC colour") as color
+	else if(response == "Reset to default")
+		C.prefs.ooccolor = initial(C.prefs.ooccolor)
+	else
+		return
+	if(C && C != src)
+		to_chat(C, SPAN_NOTICE("[src] changed your OOC color to [C.prefs.ooccolor == initial(C.prefs.ooccolor) ? "default" : C.prefs.ooccolor]."))
+	log_and_message_admins("changed [C == src ? "his own" : "[C]"] OOC color to [C.prefs.ooccolor == initial(C.prefs.ooccolor) ? "default" : C.prefs.ooccolor].")
+	SScharacter_setup.queue_preferences_save(C.prefs)
 	return
 
-#define MAX_WARNS 3
-#define AUTOBANTIME 10
 
 /client/proc/warn(warned_ckey)
-	if(!check_rights(R_ADMIN))	return
-
-	if(!warned_ckey || !istext(warned_ckey))	return
+	if(!check_rights(R_ADMIN))
+		return
+	if(!warned_ckey || !istext(warned_ckey))
+		return
 	if(warned_ckey in admin_datums)
 		to_chat(usr, "<font color='red'>Error: warn(): You can't warn admins.</font>")
 		return
-
 	var/datum/preferences/D
 	var/client/C = GLOB.ckey_directory[warned_ckey]
-	if(C)	D = C.prefs
-	else	D = SScharacter_setup.preferences_datums[warned_ckey]
-
+	if(C)
+		D = C.prefs
+	else
+		D = SScharacter_setup.preferences_datums[warned_ckey]
 	if(!D)
 		to_chat(src, "<font color='red'>Error: warn(): No such ckey found.</font>")
 		return
-
-	if(++D.warns >= MAX_WARNS)					//uh ohhhh...you'reee iiiiin trouuuubble O:)
-		var/mins_readable = minutes_to_readable(AUTOBANTIME)
+	++D.warns
+	if (config.warn_autoban_threshold && D.warns >= config.warn_autoban_threshold)
+		var/mins_readable = minutes_to_readable(config.warn_autoban_duration)
 		ban_unban_log_save("[ckey] warned [warned_ckey], resulting in a [mins_readable] autoban.")
 		if(C)
 			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)] resulting in a [mins_readable] ban.")
@@ -510,19 +515,14 @@ var/list/admin_verbs_mod = list(
 			qdel(C)
 		else
 			message_admins("[key_name_admin(src)] has warned [warned_ckey] resulting in a [mins_readable] ban.")
-		AddBan(warned_ckey, D.last_id, "Autobanning due to too many formal warnings", ckey, 1, AUTOBANTIME)
-		SSstatistics.add_field("ban_warn",1)
+		AddBan(warned_ckey, D.last_id, "Autobanning due to too many formal warnings", ckey, 1, config.warn_autoban_duration)
 	else
 		if(C)
 			to_chat(C, "<font color='red'><BIG><B>You have been formally warned by an administrator.</B></BIG><br>Further warnings will result in an autoban.</font>")
-			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)]. They have [MAX_WARNS-D.warns] strikes remaining.")
+			message_admins("[key_name_admin(src)] has warned [key_name_admin(C)]. They have [config.warn_autoban_threshold - D.warns] strikes remaining.")
 		else
-			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [MAX_WARNS-D.warns] strikes remaining.")
+			message_admins("[key_name_admin(src)] has warned [warned_ckey] (DC). They have [config.warn_autoban_threshold - D.warns] strikes remaining.")
 
-	SSstatistics.add_field_details("admin_verb","WARN") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-
-#undef MAX_WARNS
-#undef AUTOBANTIME
 
 /client/proc/drop_bomb() // Some admin dickery that can probably be done better -- TLE
 	set category = "Special Verbs"
@@ -556,7 +556,6 @@ var/list/admin_verbs_mod = list(
 				return
 			explosion(epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range)
 	log_and_message_admins("created an admin explosion at [epicenter.loc].")
-	SSstatistics.add_field_details("admin_verb","DB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/togglebuildmodeself()
 	set name = "Toggle Build Mode Self"
@@ -565,9 +564,12 @@ var/list/admin_verbs_mod = list(
 	if(!check_rights(R_ADMIN))
 		return
 
-	if(!usr.RemoveClickHandler(/datum/click_handler/build_mode))
-		usr.PushClickHandler(/datum/click_handler/build_mode)
-	SSstatistics.add_field_details("admin_verb","TBMS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	if(istype(CH, /datum/click_handler/build_mode))
+		CH.Exit()
+		QDEL_NULL(CH)
+	else
+		CH = new /datum/click_handler/build_mode(src)
+		CH.Enter()
 
 /client/proc/object_talk(var/msg as text) // -- TLE
 	set category = "Special Verbs"
@@ -578,7 +580,6 @@ var/list/admin_verbs_mod = list(
 			return
 		for (var/mob/V in hearers(mob.control_object))
 			V.show_message("<b>[mob.control_object.name]</b> says: \"" + msg + "\"", 2)
-	SSstatistics.add_field_details("admin_verb","OT") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/readmin_self()
 	set name = "Re-Admin self"
@@ -602,7 +603,6 @@ var/list/admin_verbs_mod = list(
 			deadmin()
 			to_chat(src, "<span class='interface'>You are now a normal player.</span>")
 			verbs |= /client/proc/readmin_self
-	SSstatistics.add_field_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
@@ -635,7 +635,6 @@ var/list/admin_verbs_mod = list(
 	if(new_name && new_name != S.real_name)
 		log_and_message_admins("has renamed the silicon '[S.real_name]' to '[new_name]'")
 		S.fully_replace_character_name(new_name)
-	SSstatistics.add_field_details("admin_verb","RAI") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/manage_silicon_laws()
 	set name = "Manage Silicon Laws"
@@ -649,7 +648,6 @@ var/list/admin_verbs_mod = list(
 	var/datum/nano_module/law_manager/L = new(S)
 	L.ui_interact(usr, state = GLOB.admin_state)
 	log_and_message_admins("has opened [S]'s law manager.")
-	SSstatistics.add_field_details("admin_verb","MSL") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/change_human_appearance_admin()
 	set name = "Change Mob Appearance - Admin"
@@ -663,7 +661,6 @@ var/list/admin_verbs_mod = list(
 
 	log_and_message_admins("is altering the appearance of [H].")
 	H.change_appearance(APPEARANCE_ALL, FALSE, usr, state = GLOB.admin_state)
-	SSstatistics.add_field_details("admin_verb","CHAA") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/change_human_appearance_self()
 	set name = "Change Mob Appearance - Self"
@@ -686,7 +683,6 @@ var/list/admin_verbs_mod = list(
 		if("No")
 			log_and_message_admins("has allowed [H] to change \his appearance, excluding races that requires whitelisting.")
 			H.change_appearance(APPEARANCE_COMMON, TRUE)
-	SSstatistics.add_field_details("admin_verb","CMAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/proc/change_security_level()
 	set name = "Set security level"
@@ -707,13 +703,6 @@ var/list/admin_verbs_mod = list(
 
 //---- bs12 verbs ----
 
-/client/proc/mod_panel()
-	set name = "Moderator Panel"
-	set category = "Admin"
-/*	if(holder)
-		holder.mod_panel()*/
-//	SSstatistics.add_field_details("admin_verb","MP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
-	return
 
 /client/proc/editappear()
 	set name = "Edit Appearance"
@@ -889,5 +878,4 @@ var/list/admin_verbs_mod = list(
 	var/spell/S = input("Choose the spell to give to that guy", "ABRAKADABRA") as null|anything in spells
 	if(!S) return
 	T.add_spell(new S)
-	SSstatistics.add_field_details("admin_verb","GS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 	log_and_message_admins("gave [key_name(T)] the spell [S].")
