@@ -6635,14 +6635,6 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/space)
-"oI" = (
-/obj/structure/catwalk,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
-	},
-/turf/simulated/floor/plating,
-/area/engineering/shieldbay)
 "oK" = (
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -9770,6 +9762,14 @@
 "wU" = (
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/seconddeck/aftport)
+"wV" = (
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/floor/plating,
+/area/engineering/shieldbay)
 "wW" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 8;
@@ -14311,6 +14311,20 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engineering_bay)
+"Jx" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/engineering/shieldbay)
 "JD" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -14873,20 +14887,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
-"LU" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/engineering/shieldbay)
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -36604,7 +36604,7 @@ jV
 tq
 jV
 jV
-oI
+wV
 wC
 qy
 pF
@@ -37009,7 +37009,7 @@ SR
 PX
 NX
 Jc
-LU
+Jx
 nN
 lm
 QD
