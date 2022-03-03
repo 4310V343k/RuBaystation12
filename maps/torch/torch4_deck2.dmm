@@ -7309,6 +7309,7 @@
 "qy" = (
 /obj/machinery/power/shield_generator{
 	current_energy = 9000000000;
+	max_energy = 9000000000;
 	pixel_x = -1;
 	pixel_y = 3
 	},
