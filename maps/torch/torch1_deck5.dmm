@@ -2933,18 +2933,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/aft)
-"fW" = (
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 4;
-	icon_state = "bordercolorhalf"
-	},
-/obj/machinery/computer/modular/preset/civilian{
-	dir = 8;
-	icon_state = "console"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/exploration)
 "fX" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/hangar)
@@ -3522,11 +3510,10 @@
 "hO" = (
 /obj/effect/floor_decal/corner/mauve/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/explorer,
-/obj/item/material/hatchet/machete,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/exploration/medic,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "hP" = (
@@ -4571,9 +4558,8 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/obj/structure/closet/secure_closet/explorer,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/material/hatchet/machete,
+/obj/structure/closet/secure_closet/exploration/engineer,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "ki" = (
@@ -4616,6 +4602,7 @@
 	dir = 5;
 	icon_state = "corner_white"
 	},
+/obj/item/device/camera,
 /turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
 "ko" = (
@@ -4624,10 +4611,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kp" = (
-/obj/machinery/computer/ship/navigation{
-	dir = 8;
-	icon_state = "computer"
-	},
 /obj/effect/floor_decal/corner/mauve/half{
 	dir = 4;
 	icon_state = "bordercolorhalf"
@@ -4753,6 +4736,10 @@
 	icon_state = "alarm0";
 	pixel_x = 21
 	},
+/obj/effect/floor_decal/corner/mauve/half{
+	dir = 4;
+	icon_state = "bordercolorhalf"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kA" = (
@@ -4760,8 +4747,11 @@
 	dir = 4;
 	icon_state = "bordercolorhalf"
 	},
-/obj/structure/table/steel,
-/obj/item/device/camera,
+/obj/machinery/computer/modular/preset/civilian{
+	dir = 8;
+	icon_state = "console"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kB" = (
@@ -32993,7 +32983,7 @@ oX
 eu
 iO
 kp
-fW
+kp
 kA
 kz
 OX

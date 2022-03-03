@@ -23,6 +23,39 @@
 		"exped" = COLOR_CLOSET_GOLD
 	)
 
+//proxima code
+/decl/closet_appearance/secure_closet/torch/exploration/medic
+	extra_decals = list(
+		"stripe_vertical_mid_full" = COLOR_WHITE,
+		"exped" = COLOR_PURPLE
+	)
+
+/decl/closet_appearance/secure_closet/torch/exploration/engineer
+	extra_decals = list(
+		"stripe_vertical_mid_full" = COLOR_ORANGE,
+		"exped" = COLOR_PURPLE
+	)
+
+/obj/structure/closet/secure_closet/exploration/medic
+	name = "expedition medic's locker"
+	rec_access = list(access_explorer)
+	closet_appearence = /decl/closet_appearance/secure_closet/torch/exploration/medic
+
+/obj/structure/closet/secure_closet/exploration/medic/WillContain()
+	return list(
+
+	)
+/obj/structure/closet/secure_closet/exploration/engineer
+	name = "expedition engineer's locker"
+	rec_access = list(access_explorer)
+	closet_appearence = /decl/closet_appearance/secure_closet/torch/exploration/engineer
+
+/obj/structure/closet/secure_closet/exploration/medic/WillContain()
+	return list(
+
+	)
+//proxima code end
+
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder's locker"
 	req_access = list(access_pathfinder)
