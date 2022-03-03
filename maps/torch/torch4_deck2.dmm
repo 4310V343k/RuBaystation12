@@ -5337,19 +5337,12 @@
 	dir = 1;
 	pixel_y = -28
 	},
-/obj/structure/catwalk,
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Shield Subgrid";
-	name_tag = "Shield Subgrid"
-	},
 /obj/structure/cable/cyan{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/structure/cable/cyan{
+	d1 = 4;
 	d2 = 8;
-	icon_state = "0-8"
+	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/shieldbay)
 "ln" = (
@@ -6360,11 +6353,11 @@
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/engine_room)
 "nN" = (
-/obj/structure/catwalk,
+/obj/structure/cable,
 /obj/machinery/power/terminal{
 	dir = 4
 	},
-/obj/structure/cable,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/engineering/shieldbay)
 "nP" = (
@@ -6642,6 +6635,14 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/space)
+"oI" = (
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/floor/plating,
+/area/engineering/shieldbay)
 "oK" = (
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -6920,7 +6921,7 @@
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "pG" = (
 /obj/structure/table/rack{
@@ -7315,13 +7316,19 @@
 /area/vacant/prototype/engine)
 "qy" = (
 /obj/machinery/power/shield_generator{
-	current_energy = 5000
+	current_energy = 9000000000;
+	pixel_x = -1;
+	pixel_y = 3
 	},
 /obj/structure/cable/cyan{
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "qA" = (
 /obj/machinery/door/firedoor,
@@ -9631,7 +9638,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "wG" = (
 /obj/structure/catwalk,
@@ -9907,16 +9914,18 @@
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/disposal)
 "xu" = (
-/obj/structure/closet/crate,
-/obj/item/stock_parts/circuitboard/smes,
-/obj/item/stock_parts/circuitboard/smes,
-/obj/item/stock_parts/smes_coil/super_io,
-/obj/item/stock_parts/smes_coil/super_io,
-/obj/item/stock_parts/smes_coil/super_capacity,
-/obj/item/stock_parts/smes_coil/super_capacity,
-/obj/item/stock_parts/smes_coil,
-/obj/item/stock_parts/smes_coil,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Shield Substation Bypass"
+	},
+/obj/structure/cable/cyan{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/shieldbay)
 "xv" = (
@@ -10168,7 +10177,7 @@
 	dir = 4;
 	icon_state = "warning"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "yt" = (
 /obj/structure/catwalk,
@@ -10202,17 +10211,16 @@
 /area/hallway/primary/seconddeck/fore)
 "yy" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/alarm{
-	dir = 8;
-	icon_state = "alarm0";
-	pixel_x = 24
-	},
 /obj/machinery/power/smes/buildable/preset/torch/substation_full{
 	RCon_tag = "Substation - Shield"
 	},
+/obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/shieldbay)
@@ -13052,13 +13060,20 @@
 	c_tag = "Engineering - Shield Bay";
 	dir = 1
 	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Shield Subgrid";
+	name_tag = "Shield Subgrid"
+	},
+/obj/structure/cable/cyan{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "FH" = (
 /obj/effect/decal/cleanable/vomit,
@@ -14858,6 +14873,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
+"LU" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/engineering/shieldbay)
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -16023,10 +16052,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/central)
 "Pt" = (
+/obj/structure/closet/crate,
+/obj/item/stock_parts/circuitboard/smes,
+/obj/item/stock_parts/circuitboard/smes,
+/obj/item/stock_parts/smes_coil/super_io,
+/obj/item/stock_parts/smes_coil/super_io,
+/obj/item/stock_parts/smes_coil/super_capacity,
+/obj/item/stock_parts/smes_coil/super_capacity,
+/obj/item/stock_parts/smes_coil,
+/obj/item/stock_parts/smes_coil,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/breakerbox/activated{
-	RCon_tag = "Shield Substation Bypass"
-	},
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 8;
@@ -16670,7 +16705,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/shieldbay)
 "Ro" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -36569,7 +36604,7 @@ jV
 tq
 jV
 jV
-uA
+oI
 wC
 qy
 pF
@@ -36974,7 +37009,7 @@ SR
 PX
 NX
 Jc
-Jc
+LU
 nN
 lm
 QD
