@@ -113,10 +113,14 @@
 /obj/structure/closet/secure_closet/explorer/marine/WillContain()
 	return list(
 		/obj/item/cell/guncell/medium = 3,
+		/obj/item/cell/guncell/small = 4,
 		/obj/item/gun/energy/k342/explo = 1,
 		/obj/item/clothing/mask/gas/half,
+		/obj/item/clothing/gloves/thick,
 		/obj/item/clothing/accessory/storage/holster/knife/polymer,
 		/obj/item/material/knife/combat,
+		/obj/item/gun/energy/stunrevolver/secure,
+		/obj/item/storage/belt/holster,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec)),

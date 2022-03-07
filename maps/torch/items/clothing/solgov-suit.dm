@@ -680,10 +680,10 @@
 		)
 	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/scanner/health,/obj/item/device/gps,/obj/item/pinpointer/radio,/obj/item/material/hatchet/machete,/obj/item/shovel)
 
-/obj/item/clothing/suit/space/void/command/expo
+/obj/item/clothing/suit/space/void/security/alt/expo
 	name = "marine voidsuit"
 	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG Army seal on its chest plate."
 
-/obj/item/clothing/head/helmet/space/void/command/expo
+/obj/item/clothing/head/helmet/space/void/security/alt/expo
 	name = "marine voidsuit helmet"
 	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG Army seal on its chest plate."

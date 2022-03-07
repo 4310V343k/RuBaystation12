@@ -68,7 +68,7 @@
 
 /decl/hierarchy/outfit/job/torch/crew/exploration/expmar/army
 	name = OUTFIT_JOB_NAME("Expedition Guard - Army")
-	uniform = /obj/item/clothing/under/solgov/utility/army/security
+	uniform = /obj/item/clothing/under/solgov/utility/army/urban/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/torch/crew/expmar)
 	pda_type = /obj/item/modular_computer/pda/explorer

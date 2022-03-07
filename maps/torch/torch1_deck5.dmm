@@ -2822,7 +2822,7 @@
 /area/shuttle/petrov/isolation)
 "fH" = (
 /obj/item/stool,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
 "fI" = (
 /obj/structure/handrail{
@@ -3876,7 +3876,7 @@
 	icon_state = "camera"
 	},
 /obj/effect/floor_decal/corner/mauve/mono,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "iP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -4603,7 +4603,7 @@
 	icon_state = "corner_white"
 	},
 /obj/item/device/camera,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "ko" = (
 /obj/machinery/suit_storage_unit/explorer,
@@ -4619,7 +4619,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kq" = (
 /obj/machinery/door/firedoor,
@@ -4685,7 +4685,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
 "kx" = (
 /obj/effect/catwalk_plated,
@@ -4717,7 +4717,7 @@
 	dir = 10;
 	icon_state = "corner_white"
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
 "kz" = (
 /obj/structure/table/rack,
@@ -4738,7 +4738,7 @@
 	pixel_x = 21
 	},
 /obj/effect/floor_decal/corner/mauve/mono,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kA" = (
 /obj/machinery/computer/modular/preset/civilian{
@@ -4746,7 +4746,7 @@
 	icon_state = "console"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark/monotile,
+/turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kB" = (
 /obj/machinery/door/airlock/glass/science{
@@ -11515,6 +11515,14 @@
 /obj/item/stack/material/phoron,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/petrov/analysis)
+"Cj" = (
+/obj/structure/closet/secure_closet/explorer/marine,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/exploration)
 "Cm" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/guppy{
 	dir = 4;
@@ -12062,6 +12070,11 @@
 /obj/effect/paint/red,
 /turf/simulated/wall/titanium,
 /area/shuttle/petrov/custodial)
+"DR" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/suit_storage_unit/explorer/marine,
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/exploration)
 "DT" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12669,14 +12682,6 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/cargo)
-"GA" = (
-/obj/structure/closet/secure_closet/explorer/marine,
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/exploration)
 "GB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -15202,11 +15207,6 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fifthdeck/aftstarboard)
-"Pz" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/suit_storage_unit/explorer/marine,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/exploration)
 "PA" = (
 /obj/machinery/pipedispenser{
 	anchored = 1
@@ -32602,7 +32602,7 @@ iP
 kg
 Vc
 ki
-Pz
+DR
 eu
 nf
 si
@@ -32998,7 +32998,7 @@ oX
 eu
 iO
 kp
-GA
+Cj
 kA
 kz
 OX

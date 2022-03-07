@@ -39,7 +39,7 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/pathfinder/get_description_blurb()
-	return "You are the Pathfinder. Your duty is to organize and lead the expeditions to away sites, carrying out the EC's Primary Mission. You command Explorers. You make sure that expedition has the supplies and personnel it needs. You can pilot Charon if nobody else provides a pilot. Once on the away mission, your duty is to ensure that anything of scientific interest is brought back to the ship and passed to the relevant research lab."
+	return "You are the Pathfinder. Your duty is to organize and lead the expeditions to away sites, carrying out the EC's Primary Mission. You command Explorers and Marines. Watch that your men and women don't spend all shuttle's energy on recharging their cells. You make sure that expedition has the supplies and personnel it needs. You can pilot Charon if nobody else provides a pilot. Once on the away mission, your duty is to ensure that anything of scientific interest is brought back to the ship and passed to the relevant research lab."
 
 /datum/job/nt_pilot
 	title = "Shuttle Pilot"
@@ -142,7 +142,8 @@
 	min_skill = list(   SKILL_EVA = SKILL_BASIC,
 						SKILL_MEDICAL = SKILL_ADEPT
 					)
-	max_skill = list(   SKILL_ANATOMY	  = SKILL_ADEPT,
+	max_skill = list(   SKILL_MEDICAL	  = SKILL_EXPERT,
+						SKILL_ANATOMY	  = SKILL_ADEPT,
 						SKILL_PILOT       = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX,
 	                    SKILL_COMBAT      = SKILL_EXPERT,
@@ -219,9 +220,9 @@ datum/job/expmar
 		)
 
 	allowed_ranks = list(
+		/datum/mil_rank/army/e2,
 		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e5
+		/datum/mil_rank/army/e4_alt,
 	)
 	min_skill = list(   SKILL_EVA = SKILL_BASIC,
 					)
@@ -234,10 +235,11 @@ datum/job/expmar
 	access = list(
 		access_explorer, access_maint_tunnels, access_eva, access_emergency_storage,
 		access_guppy_helm, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar,
-		access_petrov, access_petrov_maint, access_research, access_radio_exp
+		access_petrov, access_petrov_maint, access_research, access_radio_exp,
+		access_exploration_guard
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management)
 
 /datum/job/expmar/get_description_blurb()
-	return "You are an Exploration Guard. Your duty is to go on expeditions to away sites and keep members of the team safe. The Pathfinder is your team leader. Listen him and obey at all costs."
+	return "You are an Exploration Guard. Your duty is to go on expeditions to away sites and keep members of the team safe. The Pathfinder is your team leader. Listen him and obey at all costs. Try not to recharge all your cells on a trip."

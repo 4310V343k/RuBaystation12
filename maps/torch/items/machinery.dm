@@ -81,8 +81,8 @@
 //EC Specs suits
 /obj/machinery/suit_storage_unit/explorer/marine
 	name = "Marine Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/command/expo
-	helmet = /obj/item/clothing/head/helmet/space/void/command/expo
+	suit = /obj/item/clothing/suit/space/void/security/alt/expo
+	helmet = /obj/item/clothing/head/helmet/space/void/security/alt/expo
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
