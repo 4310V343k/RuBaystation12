@@ -214,7 +214,7 @@ datum/job/expmar
 	selection_color = "#68099e"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 21
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/expmar/army
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/expmar
 	allowed_branches = list(
 		/datum/mil_branch/army
 		)
