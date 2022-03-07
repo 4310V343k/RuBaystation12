@@ -223,6 +223,7 @@ datum/job/expmar
 		/datum/mil_rank/army/e2,
 		/datum/mil_rank/army/e3,
 		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e5
 	)
 	min_skill = list(   SKILL_EVA = SKILL_BASIC,
 					)
