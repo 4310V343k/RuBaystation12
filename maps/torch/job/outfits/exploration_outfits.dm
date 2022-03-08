@@ -66,7 +66,7 @@
 	uniform = /obj/item/clothing/under/solgov/utility/army/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
 
-/decl/hierarchy/outfit/job/torch/crew/exploration/expmar/army
+/decl/hierarchy/outfit/job/torch/crew/exploration/expmar
 	name = OUTFIT_JOB_NAME("Expedition Guard - Army")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/security
 	shoes = /obj/item/clothing/shoes/dutyboots
