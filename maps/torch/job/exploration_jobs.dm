@@ -234,7 +234,7 @@ datum/job/expmar
 		/datum/mil_rank/army/e5
 	)
 	min_skill = list(   SKILL_EVA = SKILL_BASIC,
-						SKILL_MEDICAL = SKILL_BASIC
+						SKILL_MEDICAL = SKILL_BASIC,
 						SKILL_WEAPONS = SKILL_ADEPT
 					)
 	max_skill = list(   SKILL_ANATOMY	  = SKILL_ADEPT,
