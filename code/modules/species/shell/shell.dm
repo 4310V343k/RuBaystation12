@@ -7,17 +7,12 @@
 	name = SPECIES_SHELL
 	name_plural = "shells"
 
-	description = "Created in 2296 century by Way-Med Corporation, first crude Shell IPC become a new milestone \
+	description = "Created in 2296 century by Vey-Med Corporation, first crude Shell IPC become a new milestone \
 	in the history of human robotics. There a very little Free Shells, that managed to buy themselves, because of \
-	their astronomical market price, and quite a lot of them managed to break free by themselves,making them illegal \
-	and criminal. Some of Rogue Shell decided to live just like humans, and there is even human - illigal - groups \
-	that helps them to pass medical checks and abtain documents for their own pesonal gain."
-	/*
-	description = "A relatively new generation of Integrated Positronic Chassis, Shell IPCs fill the niche for convincing mimicry of \
-	humans at a glance. Mass-produced models are known to be similar to their predecessors in acting, with human-like articulation \
-	but robotic personalities. Some high-end or custom made models (both of which are of ludicrous value), are nearly indistingishable \
-	from humans in most regards, however still share the same ''logical'' thinking of a machine at their core."
-	*/
+	their astronomical market price, and quite a lot of them managed to break free by themselves, making them illegal \
+	and criminal. Some of Rogue Shell decided to live just like humans, and there is even human - illegals - groups \
+	that helps them to pass medical checks and obtain documents for their own personal gain."
+
 	cyborg_noun = null
 
 	preview_icon = 'icons/mob/human_races/species/human/preview.dmi'
@@ -27,7 +22,7 @@
 	strength = STR_HIGH
 
 	min_age = 1
-	max_age = 14
+	max_age = 15
 
 	warning_low_pressure = 50
 	hazard_low_pressure = -1
@@ -46,8 +41,10 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_SKIN_TONE_NORMAL | HAS_LIPS //IPCs can wear undies too :)
 
-	blood_color = "#75c6f4"
+	blood_color = "#424fc9"
 	flesh_color = "#575757"
+	show_ssd = "fast asleep"
+	show_coma = "completely comatose"
 
 	has_organ = list(
 		BP_POSIBRAIN = /obj/item/organ/internal/posibrain,
@@ -83,6 +80,7 @@
 			FACTION_FREETRADE,
 			FACTION_XYNERGY,
 			FACTION_FLEET,
+			FACTION_ARMY,
 			FACTION_EXPEDITIONARY,
 			FACTION_OTHER,
 			FACTION_SPACECOPS,
