@@ -178,7 +178,7 @@
 
 
 /datum/job/roboticist
-	title = "Biomechanical Engineer"
+	title = "Roboticist"
 	department = "Engineering"
 	department_flag = ENG|ROB|SCI
 
@@ -191,7 +191,7 @@
 	economic_power = 6
 	alt_titles = list(
 		"Mechsuit Technician",
-		"Roboticist")
+		"Biomechanical Engineer")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticist
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticistec,
