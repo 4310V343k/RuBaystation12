@@ -166,7 +166,7 @@
 /datum/job/expmed/get_description_blurb()
 	return "You are an Exploration Medic. Your duty is to go on expeditions to away sites. The Pathfinder is your team leader. You are to keep your team members alive. Keep a note that you are not a doctor, don't try to preform surgeries on your shuttle as you're not qualified for that."
 
-datum/job/expeng
+/datum/job/expeng
 	title = "Exploration Engineer"
 	department = "Exploration"
 	department_flag = EXP
@@ -212,7 +212,7 @@ datum/job/expeng
 /datum/job/expeng/get_description_blurb()
 	return "You are an Exploration Engineer. Your duty is to go on expeditions to away sites. The Pathfinder is your team leader. You are to keep shuttle operational and make holes wherever your boss says."
 
-datum/job/expmar
+/datum/job/expmar
 	title = "Expedition Marine Guard"
 	department = "Exploration"
 	department_flag = EXP
