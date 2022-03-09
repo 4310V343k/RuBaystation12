@@ -90,7 +90,7 @@
 	job_access_type = /datum/job/engineer
 	detail_color = COLOR_SUN
 
-/obj/item/card/id/torch/contractor/engineering/roboticist
+/obj/item/card/id/torch/contractor/research/roboticist
 	job_access_type = /datum/job/roboticist
 
 

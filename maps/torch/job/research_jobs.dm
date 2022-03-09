@@ -175,3 +175,56 @@
 
 /datum/job/research_guard/get_description_blurb()
 	return "You are a security guard from the Organization of the Expeditionary Corps, which must protect the scientific department and its employees from various threats. Eat donuts, call scientists \"eggheads\"."
+
+
+/datum/job/roboticist
+	title = "Biomechanical Engineer"
+	department = "Engineering"
+	department_flag = ENG|ROB|SCI
+
+	total_positions = 2
+	spawn_positions = 2
+	minimal_player_age = 0
+	minimum_character_age = list(SPECIES_HUMAN = 25)
+	supervisors = "the Chief Science Officer."
+	selection_color = "#633d63"
+	economic_power = 6
+	alt_titles = list(
+		"Mechsuit Technician",
+		"Roboticist")
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticist
+	allowed_branches = list(
+		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticistec,
+		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticistfleet,
+		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/engineering/roboticist
+	)
+	allowed_ranks = list(
+		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5,
+		/datum/mil_rank/fleet/e6,
+		/datum/mil_rank/ec/e5,
+		/datum/mil_rank/civ/contractor
+	)
+	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
+	                    SKILL_DEVICES		= SKILL_ADEPT,
+	                    SKILL_EVA           = SKILL_ADEPT,
+	                    SKILL_ANATOMY       = SKILL_ADEPT,
+						SKILL_CONSTRUCTION  = SKILL_BASIC,
+						SKILL_ELECTRICAL    = SKILL_BASIC,
+	                    SKILL_MECH          = HAS_PERK)
+
+	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
+	                    SKILL_ELECTRICAL   = SKILL_MAX,
+	                    SKILL_ATMOS        = SKILL_EXPERT,
+	                    SKILL_ENGINES      = SKILL_EXPERT,
+	                    SKILL_DEVICES      = SKILL_MAX,
+	                    SKILL_MEDICAL      = SKILL_EXPERT,
+	                    SKILL_ANATOMY      = SKILL_EXPERT)
+	skill_points = 20
+
+	access = list(
+		access_robotics, access_engine, access_solgov_crew, access_network, access_radio_eng
+	)
+
+/datum/job/roboticist/get_description_blurb()
+	return "You are the Roboticist. You are responsible for repairing, upgrading and handling ship synthetics (like robots). You are also responsible for the production of exosuits(mechs) and bots for various departments. You answer to the Chief Engineer."
