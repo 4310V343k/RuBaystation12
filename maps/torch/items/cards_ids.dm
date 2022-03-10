@@ -226,3 +226,11 @@
 	job_access_type = /datum/job/merchant
 	color = COLOR_OFF_WHITE
 	detail_color = COLOR_BEIGE
+
+/obj/item/card/id/torch/gold/synth
+	name = "identification card"
+	color = "#007474"
+	desc = "A green card given to experimantal EXO's synthetic assistants."
+	item_state = "silver_id"
+	assignment = "Synthetic"
+	job_access_type = /datum/job/captain

@@ -45,6 +45,7 @@
 	shoes = /obj/item/clothing/shoes/black
 	id_types = list(/obj/item/card/id/torch/contractor/research/roboticist)
 	pda_type = /obj/item/modular_computer/pda/roboticist
+	l_ear = /obj/item/device/radio/headset/headset_medsci
 
 /decl/hierarchy/outfit/job/torch/crew/engineering/roboticistec
 	name = OUTFIT_JOB_NAME("Roboticist - Torch")
@@ -52,6 +53,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 	id_types = list(/obj/item/card/id/torch/contractor/research/roboticist)
 	pda_type = /obj/item/modular_computer/pda/roboticist
+	l_ear = /obj/item/device/radio/headset/headset_medsci
 
 /decl/hierarchy/outfit/job/torch/crew/engineering/roboticistfleet
 	name = OUTFIT_JOB_NAME("Roboticist - Fleet")
@@ -59,3 +61,4 @@
 	id_types = list(/obj/item/card/id/torch/contractor/research/roboticist)
 	shoes = /obj/item/clothing/shoes/dutyboots
 	pda_type = /obj/item/modular_computer/pda/roboticist
+	l_ear = /obj/item/device/radio/headset/headset_medsci

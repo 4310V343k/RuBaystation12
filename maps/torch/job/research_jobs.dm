@@ -185,7 +185,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	minimal_player_age = 0
-	minimum_character_age = list(SPECIES_HUMAN = 25)
+	minimum_character_age = list(SPECIES_HUMAN = 22)
 	supervisors = "the Chief Science Officer."
 	selection_color = "#633d63"
 	economic_power = 6
@@ -220,10 +220,10 @@
 	                    SKILL_DEVICES      = SKILL_MAX,
 	                    SKILL_MEDICAL      = SKILL_EXPERT,
 	                    SKILL_ANATOMY      = SKILL_EXPERT)
-	skill_points = 20
+	skill_points = 22
 
 	access = list(
-		access_robotics, access_engine, access_solgov_crew, access_network, access_radio_eng
+		access_robotics, access_engine, access_solgov_crew, access_network, access_research, access_radio_med, access_radio_sci
 	)
 
 /datum/job/roboticist/get_description_blurb()
