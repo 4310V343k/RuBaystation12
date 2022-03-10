@@ -16299,12 +16299,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/bed/chair/padded/purple{
+	dir = 4
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
-	},
-/obj/structure/bed/chair/padded/purple{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/office)

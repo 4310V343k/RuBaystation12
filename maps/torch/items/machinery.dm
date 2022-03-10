@@ -121,3 +121,17 @@
 		/obj/item/reagent_containers/food/snacks/donut/normal = 12,
 		/obj/item/storage/box/evidence = 8,
 		/obj/item/clothing/accessory/badge/solgov/security = 6)
+
+/obj/machinery/vending/medical/torch/synthetic
+	name = "EXO Synthetic's Medical vendor"
+	products = list(
+		/obj/item/clothing/under/sterile = 2,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science = 1,
+		/obj/item/clothing/suit/storage/toggle/labcoat = 1,
+		/obj/item/storage/belt/medical/emt = 1,
+		/obj/item/device/scanner/health = 4,
+		/obj/item/clothing/glasses/hud/health = 2,
+		/obj/item/storage/box/gloves = 1,
+		/obj/item/storage/box/masks = 1,
+	)
+	req_access = list(access_nanotrasen)

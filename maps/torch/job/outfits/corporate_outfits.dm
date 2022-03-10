@@ -32,7 +32,7 @@
 	uniform = /obj/item/clothing/under/rank/ntwork
 
 /obj/item/clothing/accessory/badge/solgov/synthetic
-	name = "Synthetic's badge"
+	name = "\improper synthetic's badge"
 	desc = "A red leather-backed gold badge with silver 'SYNTH' letters written on it, displaying advanced EXO Corporative Shell IPC."
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	icon_state = "solbadge"
