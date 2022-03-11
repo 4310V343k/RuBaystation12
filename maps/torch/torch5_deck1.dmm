@@ -5866,13 +5866,6 @@
 /area/medical/equipstorage)
 "amZ" = (
 /obj/structure/table/rack,
-/obj/item/device/camera,
-/obj/item/device/taperecorder,
-/obj/item/device/taperecorder,
-/obj/item/device/camera,
-/obj/item/storage/briefcase/crimekit{
-	pixel_y = 5
-	},
 /obj/item/storage/briefcase/crimekit,
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)
@@ -15973,6 +15966,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/flora/pottedplant/minitree,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "dob" = (
@@ -19538,9 +19532,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
 "iVM" = (
-/obj/machinery/computer/modular/preset/security{
-	dir = 8;
-	icon_state = "console"
+/obj/structure/bed/chair/padded/red{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -19683,8 +19676,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "jfn" = (
-/obj/structure/bed/chair/office/comfy/red{
-	dir = 4
+/obj/machinery/computer/modular/preset/security{
+	dir = 4;
+	icon_state = "console"
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -19902,16 +19896,6 @@
 "jqF" = (
 /obj/structure/noticeboard{
 	pixel_y = 32
-	},
-/obj/structure/filingcabinet/chestdrawer,
-/obj/item/book/manual/solgov_law{
-	pixel_y = 13
-	},
-/obj/item/folder/red{
-	pixel_y = 12
-	},
-/obj/item/folder/red{
-	pixel_y = 14
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)
@@ -20567,9 +20551,6 @@
 	dir = 4;
 	pixel_x = -22
 	},
-/obj/structure/bed/chair/office/comfy/red{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "khb" = (
@@ -20796,9 +20777,17 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "kxs" = (
-/obj/structure/bed/chair/padded/red{
-	dir = 8
+/obj/structure/table/steel,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
 	},
+/obj/item/pen/red,
+/obj/item/pen/blue{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/folder/red,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "kyb" = (
@@ -21744,23 +21733,14 @@
 /area/medical/sleeper)
 "lJb" = (
 /obj/structure/table/glass,
+/obj/item/reagent_containers/spray/luminol,
+/obj/item/reagent_containers/spray/sterilizine,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 25;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/item/storage/box/swabs{
-	pixel_y = 5
-	},
-/obj/item/storage/box/fingerprints,
-/obj/item/reagent_containers/spray/luminol{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/reagent_containers/spray/sterilizine{
-	pixel_x = -1
-	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "lJj" = (
@@ -21945,12 +21925,7 @@
 /area/security/storage)
 "mgb" = (
 /obj/structure/table/steel,
-/obj/item/paper_bin,
-/obj/item/pen/blue{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/pen/red,
+/obj/item/book/manual/solgov_law,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "mhb" = (
@@ -22174,14 +22149,12 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "mtF" = (
+/obj/structure/table/steel,
 /obj/item/storage/secure/safe{
 	pixel_x = -24
 	},
-/obj/structure/table/steel,
-/obj/item/toy/figure/detective{
-	pixel_x = 11;
-	pixel_y = 5
-	},
+/obj/item/device/camera,
+/obj/item/device/taperecorder,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "mvl" = (
@@ -22357,7 +22330,8 @@
 /area/security/questioning)
 "mCe" = (
 /obj/structure/table/glass,
-/obj/item/modular_computer/laptop/preset/records,
+/obj/item/storage/box/fingerprints,
+/obj/item/storage/box/swabs,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "mCi" = (
@@ -23030,8 +23004,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/firstdeck)
 "nvs" = (
+/obj/structure/table/steel,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/photocopier/faxmachine{
+	department = "Torch - Investigations Office"
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -25826,6 +25804,7 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/misc_lab)
 "qSx" = (
+/obj/structure/closet,
 /obj/item/clothing/suit/storage/toggle/labcoat,
 /obj/item/storage/box/evidence,
 /obj/item/storage/box/syringes,
@@ -25834,8 +25813,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/forensics,
-/obj/item/clothing/suit/storage/toggle/labcoat,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "qSD" = (
@@ -26240,10 +26217,6 @@
 "rpB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
-	},
-/obj/structure/table/steel,
-/obj/machinery/photocopier/faxmachine{
-	department = "Torch - Investigations Office"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/detectives_office)
@@ -27183,11 +27156,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenobiology/xenoflora)
-"smd" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/flora/pottedplant/minitree,
-/turf/simulated/floor/tiled,
-/area/security/detectives_office)
 "smp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -29350,6 +29318,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medicalhallway)
 "vIP" = (
+/obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/camera/network/security{
 	c_tag = "Security Wing - Investigations";
 	dir = 4
@@ -30198,11 +30167,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "yeI" = (
+/obj/structure/bed/chair/office/comfy/red,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "yfH" = (
@@ -38621,7 +38590,7 @@ adK
 qWE
 pVv
 nOO
-smd
+nOO
 yeI
 mgb
 iVM
