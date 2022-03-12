@@ -1,10 +1,10 @@
 /obj/item/gun/projectile/revolver/rassvetsolnca
-	name = "Revolver 'Saitako'"
-	desc = "This is a very reliable revolver, custom made for a specific person. The caliber of the gun is .357, be careful when interacting with it. It was made by a private manufacturer - Saitako. You may notice the Yangui characters on the grip."
+	name = "Revolver 'Kisen-Isu'"
+	desc = "This is a rather old revolver that has seen many shootings. It was custom-made to fit a fairly large man's hand. The caliber of the gun is old .38 Special. Its surface is covered with numerous scratches, and the inscription on the handle is carved with something sharp: "Kangya," in Yangui letters."
 	icon = 'proxima/icons/obj/guns/ballistic.dmi'
 	icon_state = "detective_panther"
 	handle_casings = CYCLE_CASINGS
-	caliber = CALIBER_PISTOL
+	caliber = CALIBER_PISTOL_CUSTOM
 	max_shells = 6
 	ammo_type = list(/obj/item/ammo_casing/pistol/small, /obj/item/ammo_casing/pistol/small/rubber)
 
