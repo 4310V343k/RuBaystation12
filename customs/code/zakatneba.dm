@@ -1,9 +1,20 @@
 /obj/item/gun/projectile/revolver/zakatneba
 	name = "Revolver 'Saitako'"
-	desc = "It is immediately obvious that this weapon was privately made by a good craftsman. The hilt is engraved with Yanggui characters. Along the barrel is engraved 'OOTSUKI'."
+	desc = "This is a very reliable revolver, custom made for a specific person. The caliber of the gun is .357, be careful when interacting with it. It was made by a private manufacturer - Saitako. You may notice the Yangui characters on the grip."
 	icon = 'proxima/icons/obj/guns/ballistic.dmi'
 	icon_state = "mateba"
 	handle_casings = CYCLE_CASINGS
-	caliber = CALIBER_PISTOL
-	max_shells = 8
-	ammo_type = /obj/item/ammo_casing/pistol/rubber
+	caliber = CALIBER_PISTOL_MAGNUM
+	max_shells = 6
+	ammo_type = /obj/item/ammo_casing/pistol/magnum/rubber
+
+/obj/item/storage/secure/briefcase/zakatneba
+	l_code = "12345"
+	l_set = 1
+	startswith = list(
+		/obj/item/gun/projectile/revolver/zakatneba,
+		/obj/item/ammo_magazine/speedloader/magnum/rubber,
+		/obj/item/ammo_magazine/speedloader/magnum/rubber,
+		/obj/item/ammo_magazine/speedloader/magnum/rubber,
+		/obj/item/ammo_magazine/speedloader/magnum/rubber
+	)
