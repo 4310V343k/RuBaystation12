@@ -3199,7 +3199,7 @@
 #include "code\unit_tests\virtual_mob_tests.dm"
 #include "code\unit_tests\zas_tests.dm"
 #include "code\unit_tests\~helpers.dm"
-#include "customs\code\include_customs.dm"
+#include "customs\code\include_custom.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\_maps.dm"
