@@ -13,8 +13,8 @@
 	l_set = 1
 	startswith = list(
 		/obj/item/gun/projectile/revolver/rassvetsolnca,
-		/obj/item/speedloader/small/rubber,
-		/obj/item/speedloader/small/rubber,
-		/obj/item/speedloader/small/rubber,
-		/obj/item/speedloader/small/rubber,
+		/obj/item/ammo_magazine/speedloader/small/rubber,
+		/obj/item/ammo_magazine/speedloader/small/rubber,
+		/obj/item/ammo_magazine/speedloader/small/rubber,
+		/obj/item/ammo_magazine/speedloader/small/rubber,
 	)
