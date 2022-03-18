@@ -238,6 +238,7 @@
 #include "code\controllers\subsystems\processing\turf.dm"
 #include "code\controllers\subsystems\processing\vines.dm"
 #include "tgs.dm"
+#include "tgs/includes.dm"
 #include "code\datums\ai_law_sets.dm"
 #include "code\datums\ai_laws.dm"
 #include "code\datums\browser.dm"
