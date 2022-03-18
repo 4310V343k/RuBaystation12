@@ -7,7 +7,7 @@
 // CONFIGURATION
 
 /// Create this define if you want to do TGS configuration outside of this file.
-//#ifndef TGS_EXTERNAL_CONFIGURATION
+#ifndef TGS_EXTERNAL_CONFIGURATION
 
 // Comment this out once you've filled in the below.
 // #error TGS API unconfigured
@@ -18,6 +18,7 @@
 
 // Required interfaces (fill in with your codebase equivalent):
 
+/*
 #define TGS_EXTERNAL_CONFIGURATION
 #define TGS_DEFINE_AND_SET_GLOBAL(Name, Value) var/global/##Name = ##Value
 #define TGS_READ_GLOBAL(Name) global.##Name
@@ -29,38 +30,39 @@
 #define TGS_NOTIFY_ADMINS(event) world.log << "TGS Admin Message: [##event]"
 #define TGS_CLIENT_COUNT global.client_cout
 #define TGS_PROTECT_DATUM(Path)
+*/
 
 /// Create a global variable named `Name` and set it to `Value`.
-//#define TGS_DEFINE_AND_SET_GLOBAL(Name, Value)
+#define TGS_DEFINE_AND_SET_GLOBAL(Name, Value)
 
 /// Read the value in the global variable `Name`.
-//#define TGS_READ_GLOBAL(Name)
+#define TGS_READ_GLOBAL(Name)
 
 /// Set the value in the global variable `Name` to `Value`.
-//#define TGS_WRITE_GLOBAL(Name, Value)
+#define TGS_WRITE_GLOBAL(Name, Value)
 
 /// Disallow ANYONE from reflecting a given `path`, security measure to prevent in-game use of DD -> TGS capabilities.
-//#define TGS_PROTECT_DATUM(Path)
+#define TGS_PROTECT_DATUM(Path)
 
 /// Display an announcement `message` from the server to all players.
-//#define TGS_WORLD_ANNOUNCE(message)
+#define TGS_WORLD_ANNOUNCE(message)
 
 /// Notify current in-game administrators of a string `event`.
-//#define TGS_NOTIFY_ADMINS(event)
+#define TGS_NOTIFY_ADMINS(event)
 
 /// Write an info `message` to a server log.
-//#define TGS_INFO_LOG(message)
+#define TGS_INFO_LOG(message)
 
 /// Write an warning `message` to a server log.
-//#define TGS_WARNING_LOG(message)
+#define TGS_WARNING_LOG(message)
 
 /// Write an error `message` to a server log.
-//#define TGS_ERROR_LOG(message)
+#define TGS_ERROR_LOG(message)
 
 /// Get the number of connected /clients.
-//#define TGS_CLIENT_COUNT
+#define TGS_CLIENT_COUNT
 
-//#endif
+#endif
 
 // EVENT CODES
 
