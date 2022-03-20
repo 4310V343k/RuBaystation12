@@ -45,7 +45,7 @@
 		slot_back_str = 'sprites/onmob_back.dmi',
 		)
 
-	slot_flags = SLOT_BACK
+	//slot_flags = SLOT_BACK // Ладно, злыдни, но вы мне печеньку должны и десять пат патов. Искренних.
 	w_class = ITEM_SIZE_LARGE
 
 	throwforce = 10
