@@ -1204,7 +1204,7 @@
 #include "code\js\byjax.dm"
 #include "code\js\menus.dm"
 #include "code\modules\TGS\tgs.dm"
-#include "tgs\includes.dm"
+#include "code\modules\TGS\includes.dm"
 #include "code\modules\acting\acting_items.dm"
 #include "code\modules\admin\admin.dm"
 #include "code\modules\admin\admin_attack_log.dm"
