@@ -11492,6 +11492,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "aPb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /obj/structure/closet/wardrobe/robotics_black,
 /obj/item/clothing/under/rank/roboticist/skirt,
 /obj/item/clothing/under/rank/roboticist/skirt,
@@ -11507,10 +11511,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/research/mono,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/light{
 	dir = 4;
 	icon_state = "tube1"
@@ -12070,6 +12070,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "aRb" = (
+/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -12083,7 +12084,6 @@
 /obj/effect/floor_decal/corner/research{
 	dir = 9
 	},
-/obj/structure/disposalpipe/segment,
 /obj/machinery/light_switch{
 	pixel_x = 24
 	},
@@ -12548,6 +12548,7 @@
 /area/rnd/xenobiology/xenoflora)
 "aSb" = (
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -12558,7 +12559,6 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Robotics"
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/office)
 "aSd" = (
@@ -12818,6 +12818,7 @@
 /turf/simulated/floor/tiled/white,
 /area/maintenance/firstdeck/centralport)
 "aTb" = (
+/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -12828,7 +12829,6 @@
 /obj/effect/floor_decal/corner/research{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/office)
 "aTd" = (
@@ -16301,15 +16301,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "dRs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/structure/bed/chair/padded/purple{
 	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/office)
@@ -19249,6 +19249,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/safe_room/firstdeck)
 "iyb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /obj/structure/table/steel,
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -19258,9 +19261,6 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -20652,13 +20652,13 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/rnd/misc_lab)
 "kib" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/bed/chair/padded/purple{
@@ -22653,11 +22653,11 @@
 	pixel_y = 24
 	},
 /obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk,
 /obj/effect/floor_decal/corner/research{
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/office)
 "mNb" = (
@@ -25339,9 +25339,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "qif" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Robotics Surgical Theater"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -25354,7 +25351,12 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/machinery/door/airlock/medical{
+	autoset_access = 0;
+	name = "Robotics Surgical Theater";
+	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
+	},
+/turf/simulated/floor/tiled,
 /area/assembly/robotics/surgery)
 "qig" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -26180,11 +26182,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/xenobiology/xenoflora)
 "riC" = (
-/obj/structure/table/steel_reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/window/brigdoor/westright{
-	name = "Brig Chief Desk"
-	},
 /obj/effect/wallframe_spawn/reinforced/polarized{
 	id = "bo_windows"
 	},
@@ -26199,6 +26197,11 @@
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/machinery/door/blast/shutters/open{
+	dir = 2;
+	id_tag = "bo_pshutters";
+	name = "Privacy Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/security/bo)
@@ -27524,7 +27527,7 @@
 	dir = 8;
 	id_tag = "BrigFoyer";
 	name = "Security Wing";
-	req_access = list(list("ACCESS_SEC_DOORS","ACCESS_TORCH_CREW"))
+	req_access = list("ACCESS_SEC_DOORS")
 	},
 /turf/simulated/floor/tiled,
 /area/security/wing)

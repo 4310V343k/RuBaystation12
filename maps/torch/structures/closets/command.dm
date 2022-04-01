@@ -27,6 +27,22 @@
 		"command" = COLOR_OFF_WHITE
 	)
 
+/decl/closet_appearance/secure_closet/torch/command/synth_med
+	extra_decals = list(
+		"stripe_vertical_left_full" = COLOR_BABY_BLUE,
+		"stripe_vertical_mid_full" = COLOR_CLOSET_GOLD,
+		"stripe_vertical_right_full" = COLOR_BABY_BLUE,
+		"medical" = COLOR_CLOSET_GOLD
+	)
+
+/decl/closet_appearance/secure_closet/torch/command/synth_eng
+	extra_decals = list(
+		"stripe_vertical_left_full" = COLOR_WARM_YELLOW,
+		"stripe_vertical_mid_full" = COLOR_CLOSET_GOLD,
+		"stripe_vertical_right_full" = COLOR_WARM_YELLOW,
+		"exped" = COLOR_CLOSET_GOLD
+	)
+
 /obj/structure/closet/secure_closet/CO
 	name = "commanding officer's locker"
 	req_access = list(access_captain)
@@ -136,4 +152,24 @@
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
+	)
+
+/obj/structure/closet/secure_closet/synth_med
+	name = "EXO Synthethics's medical locker"
+	req_access = list(access_bridge, access_keycard_auth)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/synth_med
+
+/obj/structure/closet/secure_closet/synth_med/WillContain()
+	return list(
+
+	)
+
+/obj/structure/closet/secure_closet/synth_eng
+	name = "EXO Synthethics's engineering locker"
+	req_access = list(access_bridge, access_keycard_auth)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/synth_eng
+
+/obj/structure/closet/secure_closet/synth_eng/WillContain()
+	return list(
+
 	)

@@ -16642,6 +16642,10 @@
 "Rm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/steel,
+/obj/item/book{
+	desc = A book, written by an IPC unknown. While it's mostly humorous, cerctain radically oriented individuals may see this offensive. ...Or use it as an offense.;
+	name = "Why did I started to hate humans. One hundreds methods to self controll"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "Rn" = (
