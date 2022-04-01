@@ -120,14 +120,14 @@
 	category = "Exosuits"
 
 /datum/design/item/mechfab/exosuit/basic_armour
-	name = "basic exosuit armour"
+	name = "Basic exosuit armour"
 	id = "mech_armour_basic"
 	build_path = /obj/item/robot_parts/robot_component/armour/exosuit
 	time = 30
 	materials = list(MATERIAL_STEEL = 7500)
 
 /datum/design/item/mechfab/exosuit/radproof_armour
-	name = "radiation-proof exosuit armour"
+	name = "Radiation-proof exosuit armour"
 	id = "mech_armour_radproof"
 	build_path = /obj/item/robot_parts/robot_component/armour/exosuit/radproof
 	time = 50
@@ -151,14 +151,14 @@
 	materials = list(MATERIAL_STEEL = 20000, MATERIAL_DIAMOND = 5000)
 
 /datum/design/item/mechfab/exosuit/control_module
-	name = "exosuit control module"
+	name = "Exosuit control module"
 	id = "mech_control_module"
 	build_path = /obj/item/mech_component/control_module
 	time = 15
 	materials = list(MATERIAL_STEEL = 5000)
 
 /datum/design/item/mechfab/exosuit/combat_torso
-	name = "combat exosuit chassis"
+	name = "Combat exosuit chassis"
 	id = "combat_body"
 	time = 60
 	materials = list(MATERIAL_STEEL = 45000)
@@ -166,7 +166,7 @@
 	req_tech = list(TECH_COMBAT = 2)
 
 /datum/design/item/mechfab/exosuit/combat_arms
-	name = "combat exosuit manipulators"
+	name = "Combat exosuit manipulators"
 	id = "combat_arms"
 	time = 30
 	materials = list(MATERIAL_STEEL = 15000)
@@ -174,7 +174,7 @@
 	req_tech = list(TECH_COMBAT = 2)
 
 /datum/design/item/mechfab/exosuit/combat_legs
-	name = "combat exosuit motivators"
+	name = "Combat exosuit motivators"
 	id = "combat_legs"
 	time = 30
 	materials = list(MATERIAL_STEEL = 15000)
@@ -182,35 +182,35 @@
 	req_tech = list(TECH_COMBAT = 2)
 
 /datum/design/item/mechfab/exosuit/powerloader_head
-	name = "power loader sensors"
+	name = "Utility sensors"
 	id = "powerloader_head"
 	build_path = /obj/item/mech_component/sensors/powerloader
 	time = 15
 	materials = list(MATERIAL_STEEL = 5000)
 
 /datum/design/item/mechfab/exosuit/powerloader_torso
-	name = "power loader chassis"
+	name = "Utility chassis"
 	id = "powerloader_body"
 	build_path = /obj/item/mech_component/chassis/powerloader
 	time = 50
 	materials = list(MATERIAL_STEEL = 20000)
 
 /datum/design/item/mechfab/exosuit/powerloader_arms
-	name = "power loader manipulators"
+	name = "Utility manipulators"
 	id = "powerloader_arms"
 	build_path = /obj/item/mech_component/manipulators/powerloader
 	time = 30
 	materials = list(MATERIAL_STEEL = 6000)
 
 /datum/design/item/mechfab/exosuit/powerloader_legs
-	name = "power loader motivators"
+	name = "Utility motivators"
 	id = "powerloader_legs"
 	build_path = /obj/item/mech_component/propulsion/powerloader
 	time = 30
 	materials = list(MATERIAL_STEEL = 6000)
 
 /datum/design/item/mechfab/exosuit/light_head
-	name = "light exosuit sensors"
+	name = "Light exosuit sensors"
 	id = "light_head"
 	time = 20
 	materials = list(MATERIAL_STEEL = 8000)
@@ -218,7 +218,7 @@
 	req_tech = list(TECH_MATERIAL = 1)
 
 /datum/design/item/mechfab/exosuit/light_torso
-	name = "light exosuit chassis"
+	name = "Light exosuit chassis"
 	id = "light_body"
 	time = 40
 	materials = list(MATERIAL_STEEL = 30000)
@@ -226,7 +226,7 @@
 	req_tech = list(TECH_MATERIAL = 1)
 
 /datum/design/item/mechfab/exosuit/light_arms
-	name = "light exosuit manipulators"
+	name = "Light exosuit manipulators"
 	id = "light_arms"
 	time = 20
 	materials = list(MATERIAL_STEEL = 10000)
@@ -234,7 +234,7 @@
 	req_tech = list(TECH_MATERIAL = 1)
 
 /datum/design/item/mechfab/exosuit/light_legs
-	name = "light exosuit motivators"
+	name = "Light exosuit motivators"
 	id = "light_legs"
 	time = 25
 	materials = list(MATERIAL_STEEL = 10000)
@@ -242,7 +242,7 @@
 	req_tech = list(TECH_MATERIAL = 1)
 
 /datum/design/item/mechfab/exosuit/heavy_head
-	name = "heavy exosuit sensors"
+	name = "Heavy exosuit sensors"
 	id = "heavy_head"
 	time = 35
 	materials = list(MATERIAL_STEEL = 16000)
@@ -250,28 +250,28 @@
 	req_tech = list(TECH_COMBAT = 2)
 
 /datum/design/item/mechfab/exosuit/heavy_torso
-	name = "heavy exosuit chassis"
+	name = "Heavy exosuit chassis"
 	id = "heavy_body"
 	time = 75
 	materials = list(MATERIAL_STEEL = 70000, MATERIAL_URANIUM = 10000)
 	build_path = /obj/item/mech_component/chassis/heavy
 
 /datum/design/item/mechfab/exosuit/heavy_arms
-	name = "heavy exosuit manipulators"
+	name = "Heavy exosuit manipulators"
 	id = "heavy_arms"
 	time = 35
 	materials = list(MATERIAL_STEEL = 20000)
 	build_path = /obj/item/mech_component/manipulators/heavy
 
 /datum/design/item/mechfab/exosuit/heavy_legs
-	name = "heavy exosuit motivators"
+	name = "Heavy exosuit motivators"
 	id = "heavy_legs"
 	time = 35
 	materials = list(MATERIAL_STEEL = 20000)
 	build_path = /obj/item/mech_component/propulsion/heavy
 
 /datum/design/item/mechfab/exosuit/spider
-	name = "quadruped motivators"
+	name = "Quadruped motivators"
 	id = "quad_legs"
 	time = 20
 	materials = list(MATERIAL_STEEL = 12000)
@@ -279,7 +279,7 @@
 	req_tech = list(TECH_ENGINEERING = 2)
 
 /datum/design/item/mechfab/exosuit/track
-	name = "armored treads"
+	name = "Armored treads"
 	id = "treads"
 	time = 35
 	materials = list(MATERIAL_STEEL = 25000)
@@ -287,11 +287,18 @@
 	req_tech = list(TECH_MATERIAL = 4)
 
 /datum/design/item/mechfab/exosuit/sphere_torso
-	name = "spherical chassis"
+	name = "Spherical chassis"
 	id = "sphere_body"
 	build_path = /obj/item/mech_component/chassis/pod
 	time = 50
 	materials = list(MATERIAL_STEEL = 18000)
+
+/datum/design/item/mechfab/exosuit/sphere_torso
+	name = "Ellipsoid chassis"
+	id = "egg_body"
+	build_path = /obj/item/mech_component/chassis/eggpod
+	time = 60
+	materials = list(MATERIAL_STEEL = 20000)
 
 /datum/design/item/robot_upgrade
 	build_type = MECHFAB
@@ -378,59 +385,59 @@
 		desc = "Allows for the construction of \a [item_name] for installation in an exosuit hardpoint."
 
 /datum/design/item/exosuit/hydraulic_clamp
-	name = "hydraulic clamp"
+	name = "HC-15 \"Hercules\" Hydraulic Clamp"
 	id = "hydraulic_clamp"
 	build_path = /obj/item/mech_equipment/clamp
 
 /datum/design/item/exosuit/gravity_catapult
-	name = "gravity catapult"
+	name = "XGC-02 \"Slingshot\" Gravity Catapult"
 	id = "gravity_catapult"
 	build_path = /obj/item/mech_equipment/catapult
 
 /datum/design/item/exosuit/drill
-	name = "drill"
+	name = "MD-20 \"Dwarf\" Heavy Drill"
 	id = "mech_drill"
 	build_path = /obj/item/mech_equipment/drill
 
 /datum/design/item/exosuit/taser
-	name = "mounted electrolaser"
+	name = "HDT-1 \"Odin\" Taser"
 	id = "mech_taser"
 	req_tech = list(TECH_COMBAT = 1)
 	build_path = /obj/item/mech_equipment/mounted_system/taser
 
 /datum/design/item/exosuit/weapon/plasma
-	name = "mounted plasma cutter"
+	name = "HPC-243 \"Lancelot\" Plasma Cutter"
 	id = "mech_plasma"
 	materials = list(MATERIAL_STEEL = 20000)
 	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 4, TECH_ENGINEERING = 3)
 	build_path = /obj/item/mech_equipment/mounted_system/taser/plasma
 
 /datum/design/item/exosuit/weapon/plasma/auto
-	name = "mounted rotatory plasma cutter"
+	name = "RPC-353 \"Clarke\" Rotatory Plasma Cutter"
 	id = "mech_plasma_auto"
 	materials = list(MATERIAL_STEEL = 20000, MATERIAL_SILVER = 2000, MATERIAL_GOLD = 2000)
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_ENGINEERING = 3)
 	build_path = /obj/item/mech_equipment/mounted_system/taser/autoplasma
 
 /datum/design/item/exosuit/weapon/ion
-	name = "mounted ion rifle"
+	name = "IC-44 \"Aurora\" Ion Cannon"
 	id = "mech_ion"
 	req_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 4)
 	build_path = /obj/item/mech_equipment/mounted_system/taser/ion
 
 /datum/design/item/exosuit/weapon/laser
-	name = "mounted laser gun"
+	name = "LC-44 \"Helios\" Laser Cannon"
 	id = "mech_laser"
 	req_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 4)
 	build_path = /obj/item/mech_equipment/mounted_system/taser/laser
 
 /datum/design/item/exosuit/weapon/machete
-	name = "Mechete"
+	name = "HEM-64 \"Marbo\" Machete"
 	id = "mech_machete"
 	req_tech = list(TECH_COMBAT = 2)
-	build_path = /obj/item/mech_equipment/mounted_system/melee/mechete
+	build_path = /obj/item/mech_equipment/mounted_system/melee/machete
 /datum/design/item/exosuit/rcd
-	name = "RCD"
+	name = "HDC-28 \"Pigmalion\" RCD"
 	id = "mech_rcd"
 	time = 90
 	materials = list(MATERIAL_STEEL = 30000, MATERIAL_PHORON = 25000, MATERIAL_SILVER = 15000, MATERIAL_GOLD = 15000)
@@ -438,51 +445,51 @@
 	build_path = /obj/item/mech_equipment/mounted_system/rcd
 
 /datum/design/item/exosuit/floodlight
-	name = "floodlight"
+	name = "HDL-22 \"Ra\" Floodlight"
 	id = "mech_floodlight"
 	req_tech = list(TECH_ENGINEERING = 1)
 	build_path = /obj/item/mech_equipment/light
 
 /datum/design/item/exosuit/camera
-	name = "exosuit camera"
+	name = "OFD-1 \"Huginn\" Shoulder Camera"
 	id = "mech_camera"
 	req_tech = list(TECH_ENGINEERING = 1)
 	build_path = /obj/item/mech_equipment/camera
 
 /datum/design/item/exosuit/flash
-	name = "exosuit flash"
+	name = "SDF-1 \"Helios\" Flasher Device"
 	id = "mech_flash"
 	req_tech = list(TECH_COMBAT = 1)
 	build_path = /obj/item/mech_equipment/flash
 
 /datum/design/item/exosuit/sleeper
-	name = "mounted sleeper"
+	name = "PS-280 \"Asclepius\" Sleeper"
 	id   = "mech_sleeper"
 	build_path = /obj/item/mech_equipment/sleeper
 
 /datum/design/item/exosuit/extinguisher
-	name = "mounted extinguisher"
+	name = "HFE-90 \"Poseidon\" Fire Extinguisher"
 	id   = "mech_extinguisher"
 	build_path = /obj/item/mech_equipment/mounted_system/extinguisher
 
 /datum/design/item/exosuit/mechshields
-	name = "energy shield drone"
+	name = "ESD-442 \"Aegis\" Drone"
 	id = "mech_shield"
 	time = 90
 	materials = list(MATERIAL_STEEL = 20000, MATERIAL_SILVER = 12000, MATERIAL_GOLD = 12000)
 	req_tech = list(TECH_MATERIAL = 4, TECH_MAGNET = 4, TECH_POWER = 4, TECH_COMBAT = 2)
 	build_path = /obj/item/mech_equipment/shields
 
-/datum/design/item/exosuit/mechshields/ballistic
-	name = "plasteel mech shield"
-	id = "mech_shield_ballistic"
+/datum/design/item/exosuit/mechshields/tower
+	name = "CCS-913 \"Legionnaire\" Shield"
+	id = "mech_shield_tower"
 	time = 45
 	materials = list(MATERIAL_STEEL = 40000, MATERIAL_ALUMINIUM = 5000)
 	req_tech = list(TECH_MATERIAL = 3)
-	build_path = /obj/item/mech_equipment/ballistic_shield
+	build_path = /obj/item/mech_equipment/tower_shield
 
 /datum/design/item/exosuit/ionjets
-	name = "exosuit manouvering unit"
+	name = "ODE-32 \"Hermes\" Omni-Directional RCS"
 	id = "mech_ionjets"
 	time = 30
 	materials = list(MATERIAL_STEEL = 20000, MATERIAL_ALUMINIUM = 10000, MATERIAL_PHORON = 2500)
@@ -490,7 +497,7 @@
 	build_path = /obj/item/mech_equipment/ionjets
 
 /datum/design/item/exosuit/mechshields/air
-	name = "exosuit atmospheric shields"
+	name = "ACF-13 \"Zephyros\" Atmospheric Forcefield"
 	id = "mech_atmoshields"
 	time = 30
 	materials = list(MATERIAL_STEEL = 20000, MATERIAL_ALUMINIUM = 5000, MATERIAL_GLASS = 5000, MATERIAL_PHORON = 2500)

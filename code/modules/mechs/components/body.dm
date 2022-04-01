@@ -268,7 +268,7 @@ obj/item/mech_component/chassis/MouseDrop(atom/over)
 	max_damage = 70
 	power_use = 5
 	has_hardpoints = list(HARDPOINT_BACK)
-	desc = "The NanoTrasen Katamari series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+	desc = "The NanoTrasen Atlas series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
 
 /obj/item/mech_component/chassis/pod/Initialize()
 	pilot_positions = list(
@@ -292,6 +292,50 @@ obj/item/mech_component/chassis/MouseDrop(atom/over)
 	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/radproof(src)
 
 /obj/item/mech_component/chassis/pod/Initialize()
+	pilot_positions = list(
+		list(
+			"[NORTH]" = list("x" = 8,  "y" = 3),
+			"[SOUTH]" = list("x" = 8,  "y" = 2),
+			"[EAST]"  = list("x" = 4,  "y" = 3),
+			"[WEST]"  = list("x" = 12, "y" = 3)
+		)
+	)
+	. = ..()
+
+/obj/item/mech_component/chassis/pod
+	name = "ellipsoid exosuit chassis"
+	hatch_descriptor = "hatch"
+	pilot_coverage = 100
+	transparent_cabin = TRUE
+	exosuit_desc_string = "an ellipsoid chassis"
+	icon_state = "eggpod_body"
+	max_damage = 70
+	power_use = 5
+	has_hardpoints = list(HARDPOINT_BACK)
+	desc = "The NanoTrasen P-body series cockpits have won a massive tender by SCG few years back. No one is sure why, but these terrible things keep popping up on every government facility."
+
+/obj/item/mech_component/chassis/eggpod/Initialize()
+	pilot_positions = list(
+		list(
+			"[NORTH]" = list("x" = 8,  "y" = 4),
+			"[SOUTH]" = list("x" = 8,  "y" = 4),
+			"[EAST]"  = list("x" = 12,  "y" = 4),
+			"[WEST]"  = list("x" = 4,  "y" = 4)
+		),
+		list(
+			"[NORTH]" = list("x" = 8,  "y" = 8),
+			"[SOUTH]" = list("x" = 8,  "y" = 8),
+			"[EAST]"  = list("x" = 10,  "y" = 8),
+			"[WEST]"  = list("x" = 6, "y" = 8)
+		)
+	)
+	. = ..()
+
+/obj/item/mech_component/chassis/eggpod/prebuild()
+	. = ..()
+	m_armour = new /obj/item/robot_parts/robot_component/armour/exosuit/radproof(src)
+
+/obj/item/mech_component/chassis/eggpod/Initialize()
 	pilot_positions = list(
 		list(
 			"[NORTH]" = list("x" = 8,  "y" = 3),

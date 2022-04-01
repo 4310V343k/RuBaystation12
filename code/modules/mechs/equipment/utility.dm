@@ -52,7 +52,7 @@
 		else update_icon()
 
 /obj/item/mech_equipment/clamp
-	name = "mounted clamp"
+	name = "HC-15 \"Hercules\" Hydraulic Clamp"
 	desc = "A large, heavy industrial cargo loading clamp."
 	icon_state = "mech_clamp"
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
@@ -268,7 +268,7 @@
 
 // A lot of this is copied from floodlights.
 /obj/item/mech_equipment/light
-	name = "floodlight"
+	name = "HDL-22 \"Ra\" Floodlight"
 	desc = "An exosuit-mounted light."
 	icon_state = "mech_floodlight"
 	item_state = "mech_floodlight"
@@ -320,7 +320,7 @@
 #define CATAPULT_AREA   2
 
 /obj/item/mech_equipment/catapult
-	name = "gravitational catapult"
+	name = "XGC-02 \"Slingshot\" Gravity Catapult"
 	desc = "An exosuit-mounted gravitational catapult."
 	icon_state = "mech_wormhole"
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
@@ -440,8 +440,8 @@
 	durability = 2 * material.integrity
 
 /obj/item/mech_equipment/drill
-	name = "drill"
-	desc = "This is the drill that'll pierce the heavens!"
+	name = "MD-20 \"Dwarf\" Heavy Drill"
+	desc = "I have a \"Dwarf\" and I'm digging a hole!"
 	icon_state = "mech_drill"
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
@@ -530,7 +530,11 @@
 			to_chat(user, SPAN_WARNING("\The [target] can't be drilled away."))
 			return
 		else
-			to_chat(tmob, FONT_HUGE(SPAN_DANGER("You're about to get drilled - dodge!")))
+			owner.visible_message(
+				SPAN_WARNING("\The [owner] revs the drill menacingly!"),
+				blind_message = SPAN_WARNING("You hear a large motor whirring.")
+			)
+			playsound(src, 'sound/mecha/mechdrill.ogg', 50, 1)
 
 	else if (isobj(target))
 		var/obj/tobj = target
@@ -627,7 +631,7 @@
 
 
 /obj/item/mech_equipment/mounted_system/taser/plasma
-	name = "mounted plasma cutter"
+	name = "HPC-243 \"Lancelot\" Plasma Cutter"
 	desc = "An industrial plasma cutter mounted onto the chassis of the mech. "
 	icon_state = "mech_plasma"
 	holding_type = /obj/item/gun/energy/plasmacutter/mounted/mech
@@ -644,8 +648,8 @@
 
 /obj/item/gun/energy/plasmacutter/mounted/mech/auto
 	charge_cost = 13
-	name = "rotatory plasma cutter"
-	desc = "A state of the art rotating, variable intensity, sequential-cascade plasma cutter. Resist the urge to aim this at your coworkers."
+	name = "RPC-353 \"Clarke\" Rotatory Plasma Cutter"
+	desc = "A state of the art rotating, variable intensity, sequential-cascade plasma cutter. Resist the urge to aim this at your coworkers, until they start turning into terrifying undead creatures."
 	max_shots = 15
 	init_firemodes = list(
 		list(mode_name="single shot",	can_autofire=0, burst=1, fire_delay=6),
@@ -653,7 +657,7 @@
 		)
 
 /obj/item/mech_equipment/ionjets
-	name = "\improper exosuit manouvering unit"
+	name = "ODE-32 \"Hermes\" Omni-Directional RCS"
 	desc = "A testament to the fact that sometimes more is actually more. These oversized electric resonance boosters allow exosuits to move in microgravity and can even provide brief speed boosts. The stabilizers can be toggled with ctrl-click."
 	icon_state = "mech_jet_off"
 	restricted_hardpoints = list(HARDPOINT_BACK)
@@ -765,7 +769,7 @@
 			to_chat(user, SPAN_WARNING("You cannot slide there!"))
 
 /obj/item/mech_equipment/camera
-	name = "exosuit camera"
+	name = "OFD-1 \"Huginn\" Shoulder Camera"
 	desc = "A dedicated visible light spectrum camera for remote feeds. It comes with its own transmitter!"
 	icon_state = "mech_camera"
 	restricted_hardpoints = list(HARDPOINT_LEFT_SHOULDER, HARDPOINT_RIGHT_SHOULDER)
