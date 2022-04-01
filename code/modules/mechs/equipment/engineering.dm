@@ -1,5 +1,6 @@
 /obj/item/mech_equipment/mounted_system/rcd
 	icon_state = "mech_rcd"
+	name = "HDC-28 \"Pigmalion\" RCD"
 	holding_type = /obj/item/rcd/mounted
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
 	restricted_software = list(MECH_SOFTWARE_ENGINEERING)
@@ -21,6 +22,7 @@
 	return null
 
 /obj/item/extinguisher/mech
+	name = "HFE-90 \"Poseidon\" Fire Extinguisher"
 	max_water = 4000 //Good is gooder
 	starting_water = 4000
 	icon_state = "mech_exting"
@@ -39,7 +41,7 @@
 
 /obj/item/mech_equipment/atmos_shields
 	icon_state = "mech_atmoshield_off"
-	name = "exosuit airshield"
+	name = "ACF-13 \"Zephyros\" Atmospheric Forcefield"
 	desc = "An Aether Atmospherics brand 'Zephyros' portable Atmospheric Isolation and Retention Screen. It keeps air where it should be... Most of the time. Press ctrl-click to switch modes"
 	restricted_hardpoints = list(HARDPOINT_BACK)
 	restricted_software = list(MECH_SOFTWARE_ENGINEERING)

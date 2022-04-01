@@ -264,7 +264,7 @@
 	if(sync_access)
 		for(var/mob/pilot in pilots)
 			access_card.access |= pilot.GetAccess()
-			to_chat(pilot, SPAN_NOTICE("Security access permissions synchronized."))
+			to_chat(pilot, SPAN_NOTICE("Access permissions successfully synchronized."))
 
 /mob/living/exosuit/proc/eject(var/mob/user, var/silent)
 	if(!user || !(user in src.contents))
@@ -301,7 +301,7 @@
 
 	if(user.a_intent != I_HURT && istype(thing, /obj/item/mech_equipment))
 		if(hardpoints_locked)
-			to_chat(user, SPAN_WARNING("Hardpoint system access is disabled."))
+			to_chat(user, SPAN_WARNING("Hardpoint mounts are locked. Unlock the hardpoints to perform equipment maintenance."))
 			return
 
 		var/obj/item/mech_equipment/realThing = thing
@@ -312,7 +312,7 @@
 		for(var/hardpoint in hardpoints)
 			if(hardpoints[hardpoint] == null)
 				free_hardpoints += hardpoint
-		var/to_place = input("Where would you like to install it?") as null|anything in (realThing.restricted_hardpoints & free_hardpoints)
+		var/to_place = input("Select the hardpoint for equipment installation.") as null|anything in (realThing.restricted_hardpoints & free_hardpoints)
 		if(!to_place)
 			to_chat(user, SPAN_WARNING("There is no room to install \the [thing]."))
 		if(install_system(thing, to_place, user))
@@ -337,7 +337,7 @@
 		if(user.a_intent != I_HURT)
 			if(isMultitool(thing))
 				if(hardpoints_locked)
-					to_chat(user, SPAN_WARNING("Hardpoint system access is disabled."))
+					to_chat(user, SPAN_WARNING("Hardpoint locks engaged."))
 					return
 
 				var/list/parts = list()
@@ -411,10 +411,10 @@
 				if(!body) //Error
 					return
 				var/delay = min(50 * user.skill_delay_mult(SKILL_DEVICES), 50 * user.skill_delay_mult(SKILL_EVA))
-				visible_message(SPAN_NOTICE("\The [user] starts forcing the \the [src]'s emergency [body.hatch_descriptor] release using \the [thing]."))
+				visible_message(SPAN_NOTICE("\The [user] starts forcing the \the [src]'s [body.hatch_descriptor] emergency release mechanism open using \the [thing]."))
 				if(!do_after(user, delay, src, DO_DEFAULT | DO_PUBLIC_PROGRESS))
 					return
-				visible_message(SPAN_NOTICE("\The [user] forces \the [src]'s [body.hatch_descriptor] open using the \the [thing]."))
+				visible_message(SPAN_NOTICE("\The [user] forces \the [src]'s [body.hatch_descriptor] emergency release mechanism open using the \the [thing]."))
 				playsound(user.loc, 'sound/machines/bolts_up.ogg', 25, 1)
 				hatch_locked = FALSE
 				hatch_closed = FALSE
@@ -425,7 +425,7 @@
 				return
 			else if(istype(thing, /obj/item/cell))
 				if(!maintenance_protocols)
-					to_chat(user, SPAN_WARNING("The cell compartment remains locked while maintenance protocols are disabled."))
+					to_chat(user, SPAN_WARNING("The cell compartment is locked. Permit maintenance protocols to perform power cell manipulations."))
 					return
 				if(!body || body.cell)
 					to_chat(user, SPAN_WARNING("There is already a cell in there!"))
@@ -468,7 +468,7 @@
 		hud_open.toggled()
 	return
 
-/mob/living/exosuit/attack_generic(var/mob/user, var/damage, var/attack_message = "smashes into")
+/mob/living/exosuit/attack_generic(var/mob/user, var/damage, var/attack_message = pick("smashes into","punches"))
 	if(..())
 		playsound(loc, 'sound/effects/metal_close.ogg', 40, 1)
 		playsound(loc, 'sound/weapons/tablehit1.ogg', 40, 1)

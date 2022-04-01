@@ -1,5 +1,5 @@
 /obj/item/mech_equipment/mounted_system/taser
-	name = "mounted burst electrolaser carbine"
+	name = "HDT-1 \"Odin\" Taser"
 	desc = "A dual fire mode burst electrolaser system connected to the exosuit's targetting system."
 	icon_state = "mech_taser"
 	holding_type = /obj/item/gun/energy/taser/carbine/mounted/mech
@@ -15,13 +15,13 @@
 			gun.Fire(get_turf(over_object), owner, params, (get_dist(over_object, owner) <= 1), FALSE)
 
 /obj/item/mech_equipment/mounted_system/taser/ion
-	name = "mounted ion rifle"
+	name = "IC-44 \"Aurora\" Ion Cannon"
 	desc = "An exosuit-mounted ion rifle. Handle with care."
 	icon_state = "mech_ionrifle"
 	holding_type = /obj/item/gun/energy/ionrifle/mounted/mech
 
 /obj/item/mech_equipment/mounted_system/taser/laser
-	name = "\improper CH-PS \"Immolator\" laser"
+	name = "LC-44 \"Helios\" Laser Cannon"
 	desc = "An exosuit-mounted laser rifle. Handle with care."
 	icon_state = "mech_lasercarbine"
 	holding_type = /obj/item/gun/energy/lasercannon/mounted/mech
@@ -39,7 +39,7 @@
 	self_recharge = TRUE
 
 /obj/item/gun/energy/lasercannon/mounted/mech
-	name = "\improper CH-PS \"Immolator\" laser"
+	name = "\improper CH-PS \"LC-44 Helios\" Laser Cannon"
 	use_external_power = TRUE
 	has_safety = FALSE
 	self_recharge = TRUE
@@ -56,7 +56,7 @@
 	return null
 
 /obj/item/mech_equipment/shields
-	name = "exosuit shield droid"
+	name = "ESD-442 \"Aegis\" Drone"
 	desc = "The Hephaestus Armature system is a well liked energy deflector system designed to stop any projectile before it has a chance to become a threat."
 	icon_state = "shield_droid"
 	var/obj/aura/mechshield/aura = null
@@ -233,8 +233,8 @@
 	restricted_software = list(MECH_SOFTWARE_UTILITY)
 
 /obj/item/material/hatchet/machete/mech
-	name = "Mechete"
-	desc = "That thing was too big to be called a machete. Too big, too thick, too heavy, and too rough, it was more like a large hunk of iron."
+	name = "HEM-64 \"Marbo\" Machete"
+	desc = "That thing is too big to be called a machete. Too big, too thick, too heavy, and too rough, it is more like a large hunk of iron."
 	w_class = ITEM_SIZE_GARGANTUAN
 	slot_flags = 0
 	default_material = MATERIAL_STEEL
@@ -265,7 +265,7 @@
 	. = ..()
 	if (user.a_intent != I_HURT)
 		return
-	var/obj/item/mech_equipment/mounted_system/melee/mechete/MC = loc
+	var/obj/item/mech_equipment/mounted_system/melee/machete/MC = loc
 	if (istype(MC))
 		//SPIN BLADE ATTACK GO!
 		var/mob/living/exosuit/E = MC.owner
@@ -279,34 +279,34 @@
 				E.spin(0.65 SECONDS, 0.125 SECONDS)
 				playsound(E, 'sound/mecha/mechturn.ogg', 40, 1)
 
-/obj/item/mech_equipment/mounted_system/melee/mechete
+/obj/item/mech_equipment/mounted_system/melee/machete
 	icon_state = "mech_blade"
 	holding_type = /obj/item/material/hatchet/machete/mech
 
 
 //Ballistic shield
-/obj/item/mech_equipment/ballistic_shield
-	name = "exosuit ballistic shield"
-	desc = "The Hephaestus Bulwark is a formidable line of defense that sees widespread use in planetary peacekeeping operations and military formations alike."
+/obj/item/mech_equipment/tower_shield
+	name = "CCS-913 \"Legionnaire\" shield"
+	desc = "The Hephaestus Legionnaire is a formidable line of defense that sees widespread use in planetary peacekeeping operations and military formations alike."
 	icon_state = "mech_shield" //Rendering is handled by aura due to layering issues: TODO, figure out a better way to do this
-	var/obj/aura/mech_ballistic/aura = null
+	var/obj/aura/mech_tower/aura = null
 	var/last_push = 0
 	var/chance = 60 //For attacks from the front, diminishing returns
 	var/last_max_block = 0 //Blocking during a perfect block window resets this, else there is an anti spam
 	var/max_block = 60 // Should block most things
 	var/blocking = FALSE
 	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
-	restricted_software = list(MECH_SOFTWARE_UTILITY)
+	restricted_software = list(MECH_SOFTWARE_UTILITY, MECH_SOFTWARE_WEAPONS)
 
-/obj/item/mech_equipment/ballistic_shield/installed(mob/living/exosuit/_owner)
+/obj/item/mech_equipment/tower_shield/installed(mob/living/exosuit/_owner)
 	. = ..()
 	aura = new(owner, src)
 
-/obj/item/mech_equipment/ballistic_shield/uninstalled()
+/obj/item/mech_equipment/tower_shield/uninstalled()
 	QDEL_NULL(aura)
 	. = ..()
 
-/obj/item/mech_equipment/ballistic_shield/afterattack(atom/target, mob/living/user, inrange, params)
+/obj/item/mech_equipment/tower_shield/afterattack(atom/target, mob/living/user, inrange, params)
 	. = ..()
 	if (.)
 		if (user.a_intent == I_HURT )
@@ -330,11 +330,11 @@
 							M.throw_at(get_edge_target_turf(owner ,owner.dir),5, 2)
 						do_attack_effect(T, "smash")
 
-/obj/item/mech_equipment/ballistic_shield/attack_self(mob/user)
+/obj/item/mech_equipment/tower_shield/attack_self(mob/user)
 	. = ..()
 	if (.) //FORM A SHIELD WALL!
 		if (last_max_block + 2 SECONDS < world.time)
-			owner.visible_message(SPAN_WARNING("\The [owner] raises \the [src], locking it in place!"), blind_message = SPAN_WARNING("You hear the whir of motors and scratching metal!"))
+			owner.visible_message(SPAN_WARNING("\The [owner] raises \the [src], locking it in place!"), blind_message = SPAN_WARNING("You hear the whir of motors and metallic clang!"))
 			playsound(src ,'sound/effects/bamf.ogg',35,1)
 			owner.setClickCooldown(0.8 SECONDS)
 			blocking = TRUE
@@ -344,7 +344,7 @@
 		else
 			to_chat(user, SPAN_WARNING("You are not ready to block again!"))
 
-/obj/item/mech_equipment/ballistic_shield/proc/block_chance(damage, pen, atom/source, mob/attacker)
+/obj/item/mech_equipment/tower_shield/proc/block_chance(damage, pen, atom/source, mob/attacker)
 	if (damage > max_block || pen > max_block)
 		return 0
 	else
@@ -376,20 +376,20 @@
 
 		return effective_block
 
-/obj/item/mech_equipment/ballistic_shield/proc/on_block_attack()
+/obj/item/mech_equipment/tower_shield/proc/on_block_attack()
 	if (blocking)
 		//Reset timer for maximum chainblocks
 		last_max_block = 0
 
-/obj/aura/mech_ballistic
-	icon = 'icons/mecha/ballistic_shield.dmi'
-	name = "mech_ballistic_shield"
-	var/obj/item/mech_equipment/ballistic_shield/shield = null
+/obj/aura/mech_tower
+	icon = 'icons/mecha/tower_shield.dmi'
+	name = "mech_tower_shield"
+	var/obj/item/mech_equipment/tower_shield/shield = null
 	layer = MECH_UNDER_LAYER
 	plane = DEFAULT_PLANE
 	mouse_opacity = 0
 
-/obj/aura/mech_ballistic/Initialize(maploading, obj/item/mech_equipment/ballistic_shield/holder)
+/obj/aura/mech_tower/Initialize(maploading, obj/item/mech_equipment/tower_shield/holder)
 	. = ..()
 	shield = holder
 
@@ -404,23 +404,23 @@
 				I.layer = ABOVE_HUMAN_LAYER
 				overlays.Add(I)
 
-/obj/aura/mech_ballistic/added_to(mob/living/target)
+/obj/aura/mech_tower/added_to(mob/living/target)
 	. = ..()
 	target.vis_contents += src
 	set_dir()
-	GLOB.dir_set_event.register(user, src, /obj/aura/mech_ballistic/proc/update_dir)
+	GLOB.dir_set_event.register(user, src, /obj/aura/mech_tower/proc/update_dir)
 
-/obj/aura/mech_ballistic/proc/update_dir(user, old_dir, dir)
+/obj/aura/mech_tower/proc/update_dir(user, old_dir, dir)
 	set_dir(dir)
 
-/obj/aura/mech_ballistic/Destroy()
+/obj/aura/mech_tower/Destroy()
 	if (user)
-		GLOB.dir_set_event.unregister(user, src, /obj/aura/mech_ballistic/proc/update_dir)
+		GLOB.dir_set_event.unregister(user, src, /obj/aura/mech_tower/proc/update_dir)
 		user.vis_contents -= src
 	shield = null
 	. = ..()
 
-/obj/aura/mech_ballistic/bullet_act(obj/item/projectile/P, def_zone)
+/obj/aura/mech_tower/bullet_act(obj/item/projectile/P, def_zone)
 	. = ..()
 	if (shield)
 		if (prob(shield.block_chance(P.damage, P.armor_penetration, source = P)))
@@ -428,7 +428,7 @@
 			user.bullet_impact_visuals(P, def_zone, 0)
 			return AURA_FALSE|AURA_CANCEL
 
-/obj/aura/mech_ballistic/hitby(atom/movable/M, datum/thrownthing/TT)
+/obj/aura/mech_tower/hitby(atom/movable/M, datum/thrownthing/TT)
 	. = ..()
 	if (shield)
 		var/throw_damage = 0
@@ -441,7 +441,7 @@
 			playsound(user.loc, 'sound/weapons/Genhit.ogg', 50, 1)
 			return AURA_FALSE|AURA_CANCEL
 
-/obj/aura/mech_ballistic/attackby(obj/item/I, mob/user)
+/obj/aura/mech_tower/attackby(obj/item/I, mob/user)
 	. = ..()
 	if (shield)
 		if (prob(shield.block_chance(I.force, I.armor_penetration, source = I, attacker = user)))
@@ -450,7 +450,7 @@
 			return AURA_FALSE|AURA_CANCEL
 
 /obj/item/mech_equipment/flash
-	name = "exosuit flash"
+	name = "SDF-1 Helios Flasher Device"
 	icon_state = "mech_flash"
 	var/flash_min = 7
 	var/flash_max = 9
