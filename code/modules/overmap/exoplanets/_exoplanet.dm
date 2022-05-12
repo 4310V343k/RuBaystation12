@@ -153,6 +153,18 @@ GLOBAL_VAR(planet_repopulation_disabled)
 		if (!atmosphere)
 			continue
 
+		var/zone/Z
+		for (var/i = 1 to maxx)
+			var/turf/simulated/T = locate(i, 2, zlevel)
+			if (istype(T) && T.zone && T.zone.contents.len > (maxx*maxy*0.25)) //if it's a zone quarter of zlevel, good enough odds it's planetary main one
+				Z = T.zone
+				break
+		if (Z && !Z.fire_tiles.len && !atmosphere.compare(Z.air)) //let fire die out first if there is one
+			var/datum/gas_mixture/daddy = new() //make a fake 'planet' zone gas
+			daddy.copy_from(atmosphere)
+			daddy.group_multiplier = Z.air.group_multiplier
+			Z.air.equalize(daddy)
+
 	if (daycycle)
 		if (tick % round(daycycle / wait) == 0)
 			night = !night

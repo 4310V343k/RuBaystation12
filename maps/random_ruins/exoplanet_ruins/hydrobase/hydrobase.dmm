@@ -1992,7 +1992,7 @@
 /obj/structure/cable{
 	dir = 4
 	},
-/turf/unsimulated/floor/exoplanet/concrete,
+/turf/simulated/floor/exoplanet/concrete,
 /area/template_noop)
 "eM" = (
 /obj/effect/floor_decal/industrial/warning{

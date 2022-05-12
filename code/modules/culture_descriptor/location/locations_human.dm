@@ -145,7 +145,7 @@
 	economic_power = 1.2
 
 /decl/cultural_info/location/human/tadmor
-	name = \
+	name = HOME_SYSTEM_TADMOR
 	distance = "45 light years"
 	description = "Tadmor is a desert planet about twice the size of Earth, located in the Gamma Cephei system. Tadmor has been a member state of the Sol Central Government since the \
 	latter's formation. First settled in 2176 by a group of Martian colonists, Tadmor's economy is based on both industrial-scale agriculture and the fabrication of various electronic goods. \

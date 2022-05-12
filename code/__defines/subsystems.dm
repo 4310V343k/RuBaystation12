@@ -49,14 +49,3 @@
 #define SS_INIT_AIFAST          -22
 #define SS_INIT_CHAT            -90 // Should be lower to ensure chat remains smooth during init.
 #define SS_INIT_UNIT_TESTS      -100
-
-// SS runlevels
-
-#define RUNLEVEL_INIT EMPTY_BITFIELD
-#define RUNLEVEL_LOBBY FLAG(0)
-#define RUNLEVEL_SETUP FLAG(1)
-#define RUNLEVEL_GAME FLAG(2)
-#define RUNLEVEL_POSTGAME FLAG(3)
-
-#define RUNLEVELS_ALL (~EMPTY_BITFIELD)
-#define RUNLEVELS_DEFAULT (RUNLEVEL_SETUP | RUNLEVEL_GAME | RUNLEVEL_POSTGAME)
