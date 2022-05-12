@@ -858,7 +858,7 @@
 			else if(isCrowbar(W))
 				to_chat(user, "You start prying out the circuit.")
 				playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
-				if(do_after(user,20) && buildstage == 1)
+				if(do_after(user, 2 SECONDS, src, DO_PUBLIC_UNIQUE) && buildstage == 1)
 					to_chat(user, "You pry out the circuit!")
 					var/obj/item/airalarm_electronics/circuit = new /obj/item/airalarm_electronics()
 					circuit.dropInto(user.loc)
@@ -920,7 +920,7 @@ FIRE ALARM
 	var/wiresexposed = FALSE
 	var/buildstage = 2 // 2 = complete, 1 = no wires,  0 = circuit gone
 	var/seclevel
-	var/global/list/overlays_cache
+	var/static/list/overlays_cache
 
 /obj/machinery/firealarm/examine(mob/user)
 	. = ..()
@@ -1035,7 +1035,7 @@ FIRE ALARM
 				else if(isCrowbar(W))
 					to_chat(user, "You start prying out the circuit.")
 					playsound(src.loc, 'sound/items/Crowbar.ogg', 50, 1)
-					if (do_after(user,20))
+					if (do_after(user, 2 SECONDS, src, DO_PUBLIC_UNIQUE))
 						to_chat(user, "You pry out the circuit!")
 						var/obj/item/firealarm_electronics/circuit = new /obj/item/firealarm_electronics()
 						circuit.dropInto(user.loc)

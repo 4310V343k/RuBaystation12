@@ -46,7 +46,7 @@
 //  on or off.
 var/global/list/dna_activity_bounds[DNA_SE_LENGTH]
 
-// Used to determine what each block means (admin hax and species stuff on /vg/, mostly)
+// Used to determine what each block means
 var/global/list/assigned_blocks[DNA_SE_LENGTH]
 
 var/global/list/datum/dna/gene/dna_genes[0]
@@ -329,7 +329,8 @@ var/global/list/datum/dna/gene/dna_genes[0]
 
 
 /proc/EncodeDNABlock(var/value)
-	return add_zero2(num2hex(value & 0xF), 3)
+	return pad_left(num2hex(value & 0xF), 3, "0")
+
 
 /datum/dna/proc/UpdateUI()
 	src.uni_identity=""

@@ -11,13 +11,17 @@ SUBSYSTEM_DEF(inactivity)
 	..()
 
 
-/datum/controller/subsystem/inactivity/Initialize(start_timeofday)
+/datum/controller/subsystem/inactivity/Initialize(start_uptime)
 	if (!config.kick_inactive)
 		suspend()
 
 
 /datum/controller/subsystem/inactivity/Recover()
 	current.Cut()
+
+
+/datum/controller/subsystem/inactivity/UpdateStat(time)
+	return
 
 
 /datum/controller/subsystem/inactivity/fire(resumed, no_mc_tick)

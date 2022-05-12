@@ -19,7 +19,7 @@
 
 /datum/uplink_item/item/tools/ductape
 	name = "Duct Tape"
-	desc = "A roll of duct tape. changes \"HELP\" into sexy \"mmm\"."
+	desc = "A roll of duct tape."
 	item_cost = 2
 	path = /obj/item/tape_roll
 
@@ -101,6 +101,12 @@
 	Conceal your identity, while also not dying in space."
 	item_cost = 28
 	path = /obj/item/storage/backpack/satchel/syndie_kit/space
+
+/datum/uplink_item/item/tools/divinghelmet
+	name = "Diving Helmet"
+	desc = "An antique diver's helmet that was designed to withstand immense pressures. Works as a space helmet. Only fits humans."
+	item_cost = 12
+	path = /obj/item/clothing/head/helmet/divinghelmet
 
 /datum/uplink_item/item/tools/thermal
 	name = "Thermal Imaging Glasses"

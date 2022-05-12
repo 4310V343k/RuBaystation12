@@ -47,7 +47,7 @@
 
 	//Calculate damage
 	var/aforce = W.force
-	if(W.damtype == BRUTE || W.damtype == BURN)
+	if (W.damtype == DAMAGE_BRUTE || W.damtype == DAMAGE_BURN)
 		src.health -= aforce
 
 	//Play a fitting sound
@@ -82,11 +82,12 @@
 
 /obj/machinery/shield/emp_act(severity)
 	switch(severity)
-		if(1)
+		if(EMP_ACT_HEAVY)
 			qdel(src)
-		if(2)
+		if(EMP_ACT_LIGHT)
 			if(prob(50))
 				qdel(src)
+	..()
 
 
 /obj/machinery/shield/hitby(AM as mob|obj, var/datum/thrownthing/TT)
@@ -240,15 +241,16 @@
 
 /obj/machinery/shieldgen/emp_act(severity)
 	switch(severity)
-		if(1)
+		if(EMP_ACT_HEAVY)
 			src.health /= 2 //cut health in half
 			malfunction = 1
 			locked = pick(0,1)
-		if(2)
+		if(EMP_ACT_LIGHT)
 			if(prob(50))
 				src.health *= 0.3 //chop off a third of the health
 				malfunction = 1
 	checkhp()
+	..()
 
 /obj/machinery/shieldgen/interface_interact(mob/user as mob)
 	if(!CanInteract(user, DefaultTopicState()))
@@ -295,7 +297,7 @@
 		var/obj/item/stack/cable_coil/coil = W
 		to_chat(user, "<span class='notice'>You begin to replace the wires.</span>")
 		//if(do_after(user, min(60, round( ((maxhealth/health)*10)+(malfunction*10) ))) //Take longer to repair heavier damage
-		if(do_after(user, 30,src))
+		if(do_after(user, 3 SECONDS, src, DO_PUBLIC_UNIQUE))
 			if (coil.use(1))
 				health = max_health
 				malfunction = 0

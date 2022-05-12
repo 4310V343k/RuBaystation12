@@ -27,8 +27,6 @@
 
 /obj/structure/closet/secure_closet/RD_torch/WillContain()
 	return list(
-		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
 		/obj/item/clothing/suit/storage/toggle/labcoat/rd/ec,
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
@@ -53,8 +51,7 @@
 		/obj/item/storage/box/secret_project_disks/science,
 		/obj/item/storage/belt/general,
 		/obj/item/device/holowarrant,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/toxins, /obj/item/storage/backpack/satchel/tox)),
-		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger/tox, 50)
+		/obj/item/storage/backpack/dufflebag
 	)
 
 /obj/structure/closet/secure_closet/secure_closet/xenoarchaeologist_torch
@@ -66,9 +63,6 @@
 	return list(
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
-		/obj/item/clothing/suit/storage/toggle/labcoat/science,
-		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/shoes/white,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas,
 		/obj/item/material/clipboard,
@@ -83,8 +77,7 @@
 		/obj/item/clothing/glasses/meson,
 		/obj/item/device/radio,
 		/obj/item/device/flashlight/lantern,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/toxins, /obj/item/storage/backpack/satchel/tox)),
-		new /datum/atom_creator/simple(/obj/item/storage/backpack/dufflebag, 50)
+		/obj/item/storage/backpack/dufflebag
 	)
 
 /obj/structure/closet/secure_closet/scientist_torch
@@ -96,8 +89,7 @@
 	return list(
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
-		/obj/item/clothing/suit/storage/toggle/labcoat,
-		/obj/item/clothing/shoes/white,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/oxygen_emergency_extended,
@@ -111,8 +103,7 @@
 		/obj/item/clothing/gloves/latex,
 		/obj/item/clothing/glasses/science,
 		/obj/item/storage/belt/general,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/toxins, /obj/item/storage/backpack/satchel/tox)),
-		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger/tox, 50)
+		/obj/item/storage/backpack/dufflebag
 	)
 
 /obj/structure/closet/secure_closet/research_guard
@@ -162,7 +153,7 @@
 
 /obj/structure/closet/secure_closet/ec_scientist/WillContain()
 	return list(
-		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
 		/obj/item/device/radio/headset/torchnanotrasen,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/oxygen_emergency_extended,
@@ -178,6 +169,5 @@
 		/obj/item/storage/belt/general,
 		/obj/item/device/scanner/xenobio,
 		/obj/item/device/scanner/plant,
-		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/, /obj/item/storage/backpack/satchel/grey)),
-		new /datum/atom_creator/simple(/obj/item/storage/backpack/messenger/, 50)
+		/obj/item/storage/backpack/dufflebag
 	)

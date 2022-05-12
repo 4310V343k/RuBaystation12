@@ -380,17 +380,17 @@
 	getFilesSlow(src, asset_cache.cache, register_asset = FALSE)
 
 
-mob/proc/MayRespawn()
+/mob/proc/MayRespawn()
 	return 0
 
-client/proc/MayRespawn()
+/client/proc/MayRespawn()
 	if(mob)
 		return mob.MayRespawn()
 
 	// Something went wrong, client is usually kicked or transfered to a new mob at this point
 	return 0
 
-client/verb/character_setup()
+/client/verb/character_setup()
 	set name = "Character Setup"
 	set category = "OOC"
 	if(prefs)
@@ -405,6 +405,11 @@ client/verb/character_setup()
 	var/mob/living/M = mob
 	if(istype(M))
 		M.OnMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params)
+
+	var/datum/click_handler/build_mode/B = M.GetClickHandler()
+	if (istype(B))
+		if(B.current_build_mode && src_control == "mapwindow.map" && src_control == over_control)
+			build_drag(src,B.current_build_mode,src_object,over_object,src_location,over_location,src_control,over_control,params)
 
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"

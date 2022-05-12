@@ -1,5 +1,5 @@
-var/list/mining_walls = list()
-var/list/mining_floors = list()
+var/global/list/mining_walls = list()
+var/global/list/mining_floors = list()
 
 /**********************Mineral deposits**************************/
 /turf/unsimulated/mineral
@@ -171,7 +171,7 @@ var/list/mining_floors = list()
 	if (istype(W, /obj/item/device/measuring_tape))
 		var/obj/item/device/measuring_tape/P = W
 		user.visible_message("<span class='notice'>\The [user] extends [P] towards [src].</span>","<span class='notice'>You extend [P] towards [src].</span>")
-		if(do_after(user,10, src))
+		if(do_after(user, 1 SECOND, src, DO_PUBLIC_UNIQUE))
 			to_chat(user, "<span class='notice'>\The [src] has been excavated to a depth of [excavation_level]cm.</span>")
 		return
 
@@ -204,7 +204,7 @@ var/list/mining_floors = list()
 				if(prob(50))
 					artifact_debris()
 
-		if(do_after(user,P.digspeed, src))
+		if(do_after(user, P.digspeed, src,  DO_DEFAULT | DO_PUBLIC_PROGRESS))
 			if(finds && finds.len)
 				var/datum/find/F = finds[1]
 				if(newDepth == F.excavation_required) // When the pick hits that edge just right, you extract your find perfectly, it's never confined in a rock
@@ -320,6 +320,10 @@ var/list/mining_floors = list()
 				if(prob(50))
 					M.Stun(5)
 		SSradiation.flat_radiate(src, 25, 200)
+
+	//Let's add some effects
+	new/obj/particle_emitter/burst/rocks(src, 1 SECOND, color)
+
 	//Add some rubble,  you did just clear out a big chunk of rock.
 
 	var/turf/simulated/floor/asteroid/N = ChangeTurf(mined_turf)
@@ -481,7 +485,7 @@ var/list/mining_floors = list()
 		to_chat(user, "<span class='warning'>You start digging.</span>")
 		playsound(user.loc, 'sound/effects/rustle1.ogg', 50, 1)
 
-		if(!do_after(user,40, src)) return
+		if(!do_after(user, 4 SECONDS, src,  DO_DEFAULT | DO_PUBLIC_PROGRESS)) return
 
 		to_chat(user, "<span class='notice'>You dug a hole.</span>")
 		gets_dug()

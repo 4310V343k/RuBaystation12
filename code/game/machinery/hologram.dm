@@ -29,7 +29,7 @@ Possible to do for anyone motivated enough:
 #define RANGE_BASED 4
 #define AREA_BASED 6
 
-var/const/HOLOPAD_MODE = RANGE_BASED
+var/global/const/HOLOPAD_MODE = RANGE_BASED
 
 /obj/machinery/hologram/holopad
 	name = "\improper holopad"
@@ -252,7 +252,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	var/message
 	if(isanimal(M) && !M.universal_speak)
 		var/datum/say_list/SA = M.say_list
-		if (SA)
+		if (SA?.speak)
 			message = get_hear_message(name_used, pick(SA.speak), verb, speaking)
 	else
 		message = get_hear_message(name_used, text, verb, speaking)

@@ -4,7 +4,6 @@ GLOBAL_VAR(planet_repopulation_disabled)
 	name = "exoplanet"
 	icon_state = "globe"
 	in_space = FALSE
-	known = TRUE
 	var/area/planetary_area
 	var/list/seeds = list()
 	var/list/fauna_types = list()		// possible types of mobs to spawn
@@ -73,7 +72,7 @@ GLOBAL_VAR(planet_repopulation_disabled)
 	if (isnum(habitability_distribution))
 		habitability_class = habitability_distribution
 	else
-		habitability_class = pickweightindex(habitability_distribution)
+		habitability_class = pickweight_index(habitability_distribution)
 
 /obj/effect/overmap/visitable/sector/exoplanet/New(nloc, max_x, max_y)
 	if (!GLOB.using_map.use_overmap)

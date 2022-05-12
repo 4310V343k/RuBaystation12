@@ -91,6 +91,20 @@
 	else
 		return ..()
 
+
+/obj/item/storage/wallet/AltClick(mob/user)
+	if (user != loc || user.incapacitated() || !ishuman(user))
+		return ..()
+
+	var/obj/item/card/id/id = GetIdCard()
+	if (istype(id))
+		remove_from_storage(id)
+		user.put_in_hands(id)
+		return
+
+	return ..()
+
+
 /obj/item/storage/wallet/random/New()
 	..()
 	var/item1_type = pick( /obj/item/spacecash/bundle/c10,/obj/item/spacecash/bundle/c100,/obj/item/spacecash/bundle/c1000,/obj/item/spacecash/bundle/c20,/obj/item/spacecash/bundle/c200,/obj/item/spacecash/bundle/c50, /obj/item/spacecash/bundle/c500)
@@ -131,11 +145,12 @@
 		return
 	color = new_color
 
-/obj/item/storage/wallet/poly/emp_act()
+/obj/item/storage/wallet/poly/emp_act(severity)
 	icon_state = "wallet-emp"
 	update_icon()
+	addtimer(CALLBACK(src, .proc/resolve_emp_timer), 20 SECONDS)
+	..()
 
-	spawn(200)
-		if(src)
-			icon_state = initial(icon_state)
-			update_icon()
+/obj/item/storage/wallet/poly/proc/resolve_emp_timer()
+	icon_state = initial(icon_state)
+	update_icon()

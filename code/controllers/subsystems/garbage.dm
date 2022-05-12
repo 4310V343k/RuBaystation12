@@ -52,27 +52,27 @@ SUBSYSTEM_DEF(garbage)
 		fail_counts[i] = 0
 
 
-/datum/controller/subsystem/garbage/stat_entry(text, force)
-	IF_UPDATE_STAT
-		force = TRUE
-		var/list/counts = list()
-		for (var/list/L in queues)
-			counts += length(L)
-		text += "Q:[counts.Join(",")]|D:[delslasttick]|G:[gcedlasttick]|"
-		text += "GR:"
-		if (!(delslasttick+gcedlasttick))
-			text += "n/a|"
-		else
-			text += "[round((gcedlasttick/(delslasttick+gcedlasttick))*100, 0.01)]%|"
-
-		text += "TD:[totaldels]|TG:[totalgcs]|"
-		if (!(totaldels+totalgcs))
-			text += "n/a|"
-		else
-			text += "TGR:[round((totalgcs/(totaldels+totalgcs))*100, 0.01)]%"
-		text += " P:[pass_counts.Join(",")]"
-		text += "|F:[fail_counts.Join(",")]"
-	..(text, force)
+/datum/controller/subsystem/garbage/UpdateStat(time)
+	if (PreventUpdateStat(time))
+		return ..()
+	var/list/build = list()
+	var/list/counts = list()
+	for (var/list/L in queues)
+		counts += length(L)
+	build += "Q:[counts.Join(",")]|D:[delslasttick]|G:[gcedlasttick]|"
+	build += "GR:"
+	if (!(delslasttick+gcedlasttick))
+		build += "n/a|"
+	else
+		build += "[round((gcedlasttick/(delslasttick+gcedlasttick))*100, 0.01)]%|"
+	build += "TD:[totaldels]|TG:[totalgcs]|"
+	if (!(totaldels + totalgcs))
+		build += "n/a|"
+	else
+		build += "TGR:[round((totalgcs/(totaldels+totalgcs))*100, 0.01)]%"
+	build += " P:[pass_counts.Join(",")]"
+	build += "|F:[fail_counts.Join(",")]"
+	..(build.Join(null))
 
 
 /datum/controller/subsystem/garbage/Shutdown()
@@ -240,7 +240,7 @@ SUBSYSTEM_DEF(garbage)
 //this is mainly to separate things profile wise.
 /datum/controller/subsystem/garbage/proc/HardDelete(datum/D)
 	var/time = world.timeofday
-	var/tick = TICK_USAGE
+	var/tick = world.tick_usage
 	var/ticktime = world.time
 	++delslasttick
 	++totaldels
@@ -250,19 +250,19 @@ SUBSYSTEM_DEF(garbage)
 	if(isclient(D))
 		del(D)
 
-	tick = (TICK_USAGE-tick+((world.time-ticktime)/world.tick_lag*100))
+	tick = world.tick_usage - tick + ((world.time - ticktime) / world.tick_lag * 100)
 
 	var/datum/qdel_item/I = items[type]
 
 	I.hard_deletes++
-	I.hard_delete_time += TICK_DELTA_TO_MS(tick)
+	I.hard_delete_time += tick * world.tick_lag
 
 
 	if (tick > highest_del_tickusage)
 		highest_del_tickusage = tick
 	time = world.timeofday - time
-	if (!time && TICK_DELTA_TO_MS(tick) > 1)
-		time = TICK_DELTA_TO_MS(tick)/100
+	if (!time && tick * world.tick_lag > 1)
+		time = tick * world.tick_lag * 0.01
 	if (time > highest_del_time)
 		highest_del_time = time
 	if (time > 10)
@@ -324,7 +324,7 @@ SUBSYSTEM_DEF(garbage)
 		if(world.time != start_time)
 			I.slept_destroy++
 		else
-			I.destroy_time += TICK_USAGE_TO_MS(start_tick)
+			I.destroy_time += (world.tick_usage - start_tick) * world.tick_lag
 		if(!D)
 			return
 		switch(hint)

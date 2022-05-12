@@ -10,7 +10,6 @@
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.6
 	equip_delay = 2 SECONDS
-	equip_delay_flags = DO_DEFAULT | DO_USER_UNIQUE_ACT
 
 /obj/item/clothing/suit/armor/equip_delay_before(mob/user, slot, equip_flags)
 	user.setClickCooldown(1 SECOND)
@@ -354,6 +353,8 @@
 		energy = ARMOR_ENERGY_MINOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
+	flags_inv = CLOTHING_BULKY
+	slowdown_general = 1
 	siemens_coefficient = 0.5
 	accessories = list(/obj/item/clothing/accessory/arm_guards/riot, /obj/item/clothing/accessory/leg_guards/riot)
 
@@ -373,6 +374,8 @@
 		energy = ARMOR_ENERGY_MINOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
+	flags_inv = CLOTHING_BULKY
+	slowdown_general = 1
 	siemens_coefficient = 0.7
 	accessories = list(/obj/item/clothing/accessory/arm_guards/ballistic, /obj/item/clothing/accessory/leg_guards/ballistic)
 
@@ -394,6 +397,8 @@
 		laser = ARMOR_LASER_RIFLES,
 		energy = ARMOR_ENERGY_RESISTANT
 		)
+	flags_inv = CLOTHING_BULKY
+	slowdown_general = 1
 	siemens_coefficient = 0
 	accessories = list(/obj/item/clothing/accessory/arm_guards/ablative, /obj/item/clothing/accessory/leg_guards/ablative)
 

@@ -16,11 +16,10 @@ SUBSYSTEM_DEF(atoms)
 	var/static/tmp/list/BadInitializeCalls = list()
 
 
-/datum/controller/subsystem/atoms/stat_entry(text, force)
-	IF_UPDATE_STAT
-		force = TRUE
-		text = "[text] | Bad Inits: [BadInitializeCalls.len]"
-	..(text, force)
+/datum/controller/subsystem/atoms/UpdateStat(time)
+	if (PreventUpdateStat(time))
+		return ..()
+	..("Bad Inits: [BadInitializeCalls.len]")
 
 
 /datum/controller/subsystem/atoms/Shutdown()
@@ -29,7 +28,7 @@ SUBSYSTEM_DEF(atoms)
 		text2file(initlog, "[GLOB.log_directory]/initialize.log")
 
 
-/datum/controller/subsystem/atoms/Initialize(timeofday)
+/datum/controller/subsystem/atoms/Initialize(start_uptime)
 	atom_init_stage = INITIALIZATION_INNEW_MAPLOAD
 	InitializeAtoms()
 

@@ -57,6 +57,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	var/sound_env = STANDARD_STATION
 	var/turf/base_turf //The base turf type of the area, which can be used to override the z-level's base turf
 	var/planetary_surface = FALSE // true if the area belongs to a planet.
+	///Some base_turfs might cause issues with changing turfs, this flags it as a special case.
+	var/base_turf_special_handling = FALSE
 
 /*-----------------------------------------------------------------------------*/
 
@@ -78,7 +80,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	ambience = list('sound/ambience/ambispace1.ogg','sound/ambience/ambispace2.ogg','sound/ambience/ambispace3.ogg','sound/ambience/ambispace4.ogg','sound/ambience/ambispace5.ogg')
 	secure = FALSE
 
-area/space/atmosalert()
+/area/space/atmosalert()
 	return
 
 /area/space/fire_alert()
@@ -151,6 +153,26 @@ area/space/atmosalert()
 	icon_state = "xeno_lab"
 	req_access = list(access_xenobiology, access_research)
 
+/area/rnd/xenobiology/cell_1
+	name = "\improper Xenobiology Containment Cell 1"
+	icon_state = "xeno_lab_cell_1"
+	req_access = list(access_xenobiology, access_research)
+
+/area/rnd/xenobiology/cell_2
+	name = "\improper Xenobiology Containment Cell 2"
+	icon_state = "xeno_lab_cell_2"
+	req_access = list(access_xenobiology, access_research)
+
+/area/rnd/xenobiology/cell_3
+	name = "\improper Xenobiology Containment Cell 3"
+	icon_state = "xeno_lab_cell_3"
+	req_access = list(access_xenobiology, access_research)
+
+/area/rnd/xenobiology/cell_4
+	name = "\improper Xenobiology Containment Cell 4"
+	icon_state = "xeno_lab_cell_4"
+	req_access = list(access_xenobiology, access_research)
+
 /area/rnd/xenobiology/xenoflora
 	name = "\improper Xenoflora Lab"
 	icon_state = "xeno_f_lab"
@@ -181,6 +203,7 @@ area/space/atmosalert()
 	name = "Supply Shuttle"
 	icon_state = "shuttle3"
 	req_access = list(access_cargo)
+	area_flags = AREA_FLAG_HIDE_FROM_HOLOMAP
 
 /area/syndicate_elite_squad
 	name = "\improper Elite Mercenary Squad"
@@ -197,13 +220,15 @@ area/space/atmosalert()
 	requires_power = 0
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
+	area_flags = AREA_FLAG_HIDE_FROM_HOLOMAP
+	base_turf_special_handling = TRUE
 
 /*
 * Special Areas
 */
 /area/beach
 	name = "Keelin's private beach"
-	icon_state = "null"
+	icon_state = "beach"
 	luminosity = 1
 	dynamic_lighting = 0
 	requires_power = 0

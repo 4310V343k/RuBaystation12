@@ -149,18 +149,15 @@
 		air_supply = new air_type(src)
 	if(glove_type)
 		gloves = new glove_type(src)
-		verbs |= /obj/item/rig/proc/toggle_gauntlets
 	if(helm_type)
 		helmet = new helm_type(src)
 		verbs |= /obj/item/rig/proc/toggle_helmet
 	if(boot_type)
 		boots = new boot_type(src)
-		verbs |= /obj/item/rig/proc/toggle_boots
 	if(chest_type)
 		chest = new chest_type(src)
 		if(allowed)
 			chest.allowed = allowed
-		verbs |= /obj/item/rig/proc/toggle_chest
 
 	for(var/obj/item/piece in list(gloves,helmet,boots,chest))
 		if(!istype(piece))
@@ -678,7 +675,7 @@
 		"<span class='info'>[M] starts putting on \the [src]...</span>", \
 		"<span class='info'>You start putting on \the [src]...</span>")
 
-		if(!do_after(M,seal_delay,src))
+		if(!do_after(M, seal_delay, src, DO_PUBLIC_UNIQUE))
 			if(M && M.back == src)
 				if(!M.unEquip(src))
 					return
@@ -825,6 +822,7 @@
 
 	//possibly damage some modules
 	take_hit((100/severity_class), "electrical pulse", 1)
+	..()
 
 /obj/item/rig/proc/shock(mob/user)
 	if (electrocute_mob(user, cell, src)) //electrocute_mob() handles removing charge from the cell, no need to do that here.

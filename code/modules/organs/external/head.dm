@@ -64,7 +64,7 @@
 
 		penman.visible_message("<span class='warning'>[penman] begins writing something on [head_name]!</span>", "You begin writing something on [head_name].")
 
-		if(do_after(penman, 3 SECONDS, target))
+		if(do_after(penman, 3 SECONDS, target, DO_PUBLIC_UNIQUE))
 			if(owner && owner.check_head_coverage())
 				to_chat(penman, "<span class='notice'>[head_name] is covered up.</span>")
 				return
@@ -90,9 +90,9 @@
 	if (!(status & ORGAN_DISFIGURED))
 		if (brute_dam > 40)
 			if (prob(50))
-				disfigure("brute")
+				disfigure(INJURY_TYPE_BRUISE)
 		if (burn_dam > 40)
-			disfigure("burn")
+			disfigure(INJURY_TYPE_BURN)
 
 /obj/item/organ/external/head/on_update_icon()
 

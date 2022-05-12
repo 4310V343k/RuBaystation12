@@ -27,6 +27,7 @@
 /decl/security_level/default/torchdept/code_green
 	name = "Зелёный код"
 	icon = 'icons/misc/security_state.dmi'
+	alarm_level = "off"
 
 	light_max_bright = 0.25
 	light_inner_range = 0.1
@@ -95,6 +96,7 @@
 /decl/security_level/default/torchdept/code_blue
 	name = "Cиний код"
 	icon = 'icons/misc/security_state.dmi'
+	alarm_level = "on"
 
 	light_max_bright = 0.5
 	light_inner_range = 1
@@ -118,6 +120,7 @@
 /decl/security_level/default/torchdept/code_red
 	name = "Красный код"
 	icon = 'icons/misc/security_state.dmi'
+	alarm_level = "on"
 
 	light_max_bright = 0.75
 	light_inner_range = 1

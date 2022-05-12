@@ -205,6 +205,13 @@
 		//Temporary put wrapped into user so target's attackby() checks pass.
 		wrapped.forceMove(user)
 
+		if (istype(target, /obj/structure/table))
+			var/obj/structure/table/table = target
+			wrapped.dropInto(get_turf(target))
+			table.auto_align(wrapped, params)
+			wrapped = null
+			return
+
 		//The force of the wrapped obj gets set to zero during the attack() and afterattack().
 		var/force_holder = wrapped.force
 		wrapped.force = 0.0
@@ -333,7 +340,7 @@
 
 			to_chat(D, "<span class='danger'>You begin decompiling [M].</span>")
 
-			if(!do_after(D,50,M))
+			if(!do_after(D, 5 SECONDS, M, DO_PUBLIC_UNIQUE))
 				return
 
 			if(!M || !D) return

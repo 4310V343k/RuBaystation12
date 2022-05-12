@@ -139,7 +139,7 @@ datum/sound_token/proc/SetVolume(var/new_volume)
 	_sound.volume = new_volume
 	PrivUpdateListeners()
 
-datum/sound_token/proc/Mute()
+/datum/sound_token/proc/Mute()
 	PrivUpdateStatus(status|SOUND_MUTE)
 
 /datum/sound_token/proc/Unmute()

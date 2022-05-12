@@ -138,7 +138,7 @@
 	if(Adjacent(user))
 		attack_hand(user)
 
-turf/attackby(obj/item/W as obj, mob/user as mob)
+/turf/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/storage))
 		var/obj/item/storage/S = W
 		if(S.use_to_pickup && S.collection_mode)
@@ -186,7 +186,7 @@ turf/attackby(obj/item/W as obj, mob/user as mob)
 				return 0
 	return 1 //Nothing found to block so return success!
 
-var/const/enterloopsanity = 100
+var/global/const/enterloopsanity = 100
 /turf/Entered(var/atom/atom, var/atom/old_loc)
 
 	..()
@@ -232,7 +232,7 @@ var/const/enterloopsanity = 100
 
 /turf/proc/inertial_drift(atom/movable/A)
 	if(!(A.last_move))	return
-	if((istype(A, /mob/) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
+	if((ismob(A) && src.x > 2 && src.x < (world.maxx - 1) && src.y > 2 && src.y < (world.maxy-1)))
 		var/mob/M = A
 		if(M.Allow_Spacemove(1)) //if this mob can control their own movement in space then they shouldn't be drifting
 			M.inertia_dir  = 0
@@ -292,7 +292,7 @@ var/const/enterloopsanity = 100
 //expects an atom containing the reagents used to clean the turf
 /turf/proc/clean(atom/source, mob/user = null, var/time = null, var/message = null)
 	if(source.reagents.has_reagent(/datum/reagent/water, 1) || source.reagents.has_reagent(/datum/reagent/space_cleaner, 1))
-		if(user && time && !do_after(user, time, src))
+		if(user && time && !do_after(user, time, src, DO_DEFAULT | DO_USER_UNIQUE_ACT | DO_PUBLIC_PROGRESS))
 			return
 		clean_blood()
 		remove_cleanables()
@@ -356,7 +356,7 @@ var/const/enterloopsanity = 100
 
 	vandal.visible_message("<span class='warning'>\The [vandal] begins carving something into \the [src].</span>")
 
-	if(!do_after(vandal, max(20, length(message)), src))
+	if(!do_after(vandal, max(20, length(message)), src, DO_PUBLIC_UNIQUE))
 		return FALSE
 
 	vandal.visible_message("<span class='danger'>\The [vandal] carves some graffiti into \the [src].</span>")

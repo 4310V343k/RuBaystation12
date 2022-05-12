@@ -12,14 +12,13 @@ SUBSYSTEM_DEF(chemistry)
 	var/static/tmp/list/current = list()
 
 
-/datum/controller/subsystem/chemistry/stat_entry(text, force)
-	IF_UPDATE_STAT
-		force = TRUE
-		text = "[text] | Reaction Queue: [processing.len]"
-	..(text, force)
+/datum/controller/subsystem/chemistry/UpdateStat(time)
+	if (PreventUpdateStat(time))
+		return ..()
+	..("Reaction Queue: [processing.len]")
 
 
-/datum/controller/subsystem/chemistry/Initialize()
+/datum/controller/subsystem/chemistry/Initialize(start_uptime)
 	for (var/datum/chemical_reaction/reaction as anything in subtypesof(/datum/chemical_reaction))
 		reaction = new reaction
 		var/result = reaction.result

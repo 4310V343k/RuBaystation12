@@ -137,6 +137,15 @@
 	minimum_temperature = 50 CELSIUS
 	maximum_temperature = (50 CELSIUS) + 100
 
+/datum/chemical_reaction/tilt
+	name = "Tilt"
+	result = /datum/reagent/tilt
+	required_reagents = list(
+		/datum/reagent/antidexafen = 1,
+		/datum/reagent/drink/space_up = 2
+	)
+	result_amount = 3
+
 /datum/chemical_reaction/pacid
 	name = "Polytrinic acid"
 	result = /datum/reagent/acid/polyacid
@@ -2545,9 +2554,9 @@
 	required_reagents = list(/datum/reagent/drink/tea = 2, /datum/reagent/ethanol/rum = 1)
 	result_amount = 3
 
-/datum/chemical_reaction/lordaniawine
-	name = "Lordanian Wine"
-	result = /datum/reagent/ethanol/lordaniawine
+/datum/chemical_reaction/tadmorwine
+	name = "Tadmoran Wine"
+	result = /datum/reagent/ethanol/tadmorwine
 	required_reagents = list(/datum/reagent/ethanol/wine = 2, /datum/reagent/drink/grenadine = 1)
 	catalysts = list(/datum/reagent/nutriment/mint)
 	result_amount = 3

@@ -1,7 +1,6 @@
 /datum/map/torch
 	lobby_screens = list('maps/torch/lobby/proxima.gif', 'maps/torch/lobby/bobot.gif', 'maps/torch/lobby/unknown.gif', 'maps/torch/lobby/pioneers.gif')
 	lobby_tracks = list(
-		/decl/audio/track/cloudsofneptune,
 		/decl/audio/track/chasing_time,
 		/decl/audio/track/torch,
 		/decl/audio/track/human,

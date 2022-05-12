@@ -103,7 +103,7 @@
 
 		if(src.wet)
 
-			if(M.buckled || (MOVING_DELIBERATELY(M) && prob(min(100, 100/(wet/10))) ) )
+			if(M.buckled || (!MOVING_QUICKLY(M) && prob(min(100, 100/(wet/10))) ) )
 				return
 
 			// skillcheck for slipping
@@ -168,4 +168,9 @@
 /turf/simulated/Initialize()
 	if(GAME_STATE >= RUNLEVEL_GAME)
 		fluid_update()
+	. = ..()
+
+/turf/simulated/damage_health(damage, damage_type, damage_flags, severity)
+	if (HAS_FLAGS(damage_flags, DAMAGE_FLAG_TURF_BREAKER))
+		damage *= 4
 	. = ..()

@@ -9,8 +9,8 @@
 
 #define CLAMP01(x) clamp(x, 0, 1)
 
-var/const/POSITIVE_INFINITY = 1#INF // win: 1.#INF, lin: inf
-var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
+var/global/const/POSITIVE_INFINITY = 1#INF // win: 1.#INF, lin: inf
+var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 //var/const/POSITIVE_NAN = -(1#INF/1#INF) // win: 1.#QNAN, lin: nan -- demonstration of creation, but not useful
 //var/const/NEGATIVE_NAN = (1#INF/1#INF) //win: -1.#IND, lin: -nan -- demonstration of creation, but not useful
 #define isfinite(N) (isnum(N) && ((N) == (N)) && ((N) != POSITIVE_INFINITY) && ((N) != NEGATIVE_INFINITY))
@@ -33,7 +33,7 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define isairlock(A) istype(A, /obj/machinery/door/airlock)
 
-#define isatom(A) isloc(A)
+#define isatom(A) (isloc(A) && !isarea(A))
 
 #define isbrain(A) istype(A, /mob/living/carbon/brain)
 
@@ -75,6 +75,8 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define isspaceturf(A) istype(A, /turf/space)
 
+#define isopenturf(A) istype(A, /turf/simulated/open)
+
 #define ispAI(A) istype(A, /mob/living/silicon/pai)
 
 #define isrobot(A) istype(A, /mob/living/silicon/robot)
@@ -84,8 +86,6 @@ var/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 #define ismachinerestricted(A) (issilicon(A) && A.machine_restriction)
 
 #define isslime(A) istype(A, /mob/living/carbon/slime)
-
-#define ischorus(A) istype(A, /mob/living/carbon/alien/chorus)
 
 #define isunderwear(A) istype(A, /obj/item/underwear)
 

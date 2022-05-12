@@ -1,5 +1,5 @@
 /configuration
-	var/static/list/gamemode_cache
+	var/static/atom/movable/clickable_stat/statLine
 
 	/// server name (for world name / status)
 	var/static/server_name
@@ -9,7 +9,6 @@
 
 	/// for topic status requests
 	var/static/game_version = "Baystation12"
-
 
 	/// log OOC channel
 	var/static/log_ooc = FALSE
@@ -114,9 +113,6 @@
 
 	var/static/fps = 30
 
-	/// SSinitialization throttling
-	var/static/tick_limit_mc_init = TICK_LIMIT_MC_INIT_DEFAULT
-
 	var/static/list/resource_urls
 
 	/// Ghosts can turn on Antagovision to see a HUD of who is the bad guys this round.
@@ -125,13 +121,8 @@
 	/// Ghosts that turn on Antagovision cannot rejoin the round.
 	var/static/antag_hud_restricted = FALSE
 
-	var/static/list/mode_names = list()
-
-	/// allowed modes
-	var/static/list/modes = list()
-
-	/// votable modes
-	var/static/list/votable_modes = list()
+	/// modes disallowed from the vote list
+	var/static/list/disallowed_modes = list()
 
 	/// relative probability of each mode
 	var/static/list/probabilities = list()
@@ -441,9 +432,10 @@
 
 	var/static/hub_entry = "<b>$SERVER</b> by <b>$HOST</b> &#8212; $ACTIVES of $PLAYERS alive"
 
+	var/static/run_empty_levels = FALSE
+
 
 /configuration/New()
-	build_mode_cache()
 	load_config()
 	load_options()
 	load_map()
@@ -451,9 +443,6 @@
 	load_hub_entry()
 	motd = file2text("config/motd.txt") || ""
 	event = file2text("config/event.txt") || ""
-	fps = round(fps)
-	if (fps <= 0)
-		fps = initial(fps)
 
 
 /// Read a text file, stripping lines starting with # and empties
@@ -665,30 +654,24 @@
 					var/mode = lowertext(parts[1])
 					var/chance = text2num(parts[2])
 					var/reason
-					if (!mode)
+					if (!mode_tag)
 						reason = "Missing a tag/chance pair."
 					else if (isnull(chance) || chance < 0)
 						reason = "Not a valid probability."
-					else if (!(mode in modes))
-						reason = "Not a valid mode tag."
 					if (reason)
 						log_misc("Invalid probability config: '[value]' - [reason]")
 					else
-						probabilities[mode] = chance
+						probabilities[mode_tag] = chance
 			if ("allow_random_events")
 				allow_random_events = TRUE
 			if ("kick_inactive")
 				kick_inactive = text2num(value)
 			if ("use_irc_bot")
 				use_irc_bot = TRUE
-			if ("ticklag")
-				var/ticklag = text2num(value)
-				if (ticklag > 0)
-					fps = 10 / ticklag
 			if ("fps")
-				fps = text2num(value)
-			if ("tick_limit_mc_init")
-				tick_limit_mc_init = text2num(value)
+				fps = round(text2num(value))
+				if (fps <= 0)
+					fps = initial(fps)
 			if ("allow_antag_hud")
 				antag_hud_allowed = TRUE
 			if ("antag_hud_restricted")
@@ -845,7 +828,7 @@
 			if ("forbidden_message_hide_details")
 				forbidden_message_hide_details = TRUE
 			if ("disallow_votable_mode")
-				votable_modes -= value
+				disallowed_modes += value
 			if ("minimum_player_age")
 				minimum_player_age = text2num(value)
 			if ("max_explosion_range")
@@ -864,6 +847,8 @@
 				warn_autoban_threshold = max(0, text2num(value))
 			if ("warn_autoban_duration")
 				warn_autoban_duration = max(1, text2num(value))
+			if ("run_empty_levels")
+				run_empty_levels = TRUE
 			else
 				log_misc("Unknown setting in config/config.txt: '[name]'")
 
@@ -1000,36 +985,8 @@
 	return entry
 
 
-/configuration/proc/build_mode_cache()
-	gamemode_cache = list()
-	for (var/datum/game_mode/M as anything in subtypesof(/datum/game_mode))
-		var/tag = initial(M.config_tag)
-		if (!tag)
-			continue
-		gamemode_cache[tag] = (M = new M)
-		if (tag in modes)
-			continue
-		modes += tag
-		mode_names[tag] = M.name
-		probabilities[tag] = M.probability
-		if (M.votable)
-			votable_modes += tag
-
-
-/configuration/proc/pick_mode(mode_name)
-	if (!mode_name)
-		return
-	for (var/tag in gamemode_cache)
-		var/datum/game_mode/M = gamemode_cache[tag]
-		if (M.config_tag == mode_name)
-			return M
-
-
-/configuration/proc/get_runnable_modes()
-	var/list/lobby_players = SSticker.lobby_players()
-	var/list/result = list()
-	for (var/tag in gamemode_cache)
-		var/datum/game_mode/mode = gamemode_cache[tag]
-		if (probabilities[tag] > 0 && !mode.check_startable(lobby_players))
-			result[tag] = probabilities[tag]
-	return result
+/configuration/proc/UpdateStat()
+	if (!statLine)
+		statLine = new (null, src)
+		statLine.name = "Edit"
+	stat("Config", statLine)

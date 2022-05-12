@@ -131,7 +131,7 @@
 		layer = (seed && seed.force_layer) ? seed.force_layer : ABOVE_OBJ_LAYER
 		if(growth_type in list(GROWTH_VINES,GROWTH_BIOMASS))
 			set_opacity(1)
-		if(islist(seed.chems) && !isnull(seed.chems[/datum/reagent/woodpulp]))
+		if(LAZYACCESS(seed.chems, /datum/reagent/woodpulp))
 			set_density(1)
 			set_opacity(1)
 
@@ -221,7 +221,7 @@
 			damage *= 2
 		adjust_health(-damage)
 		playsound(get_turf(src), W.hitsound, 100, 1)
-		
+
 /obj/effect/vine/AltClick(var/mob/user)
 	if(!CanPhysicallyInteract(user) || user.incapacitated())
 		return ..()
@@ -232,7 +232,7 @@
 		var/chop_time = (health/W.force) * 0.5 SECONDS
 		if(user.skill_check(SKILL_BOTANY, SKILL_ADEPT))
 			chop_time *= 0.5
-		if(do_after(user, chop_time, src))
+		if (do_after(user, chop_time, src, DO_PUBLIC_UNIQUE))
 			visible_message(SPAN_NOTICE("[user] chops down \the [src]."))
 			playsound(get_turf(src), W.hitsound, 100, 1)
 			die_off()

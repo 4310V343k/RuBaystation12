@@ -8,7 +8,7 @@
 
 #define MAX_LOAD_TRIES 5
 
-datum/preferences
+/datum/preferences
 	//doohickeys for savefiles
 	var/is_guest = FALSE
 	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
@@ -435,7 +435,7 @@ datum/preferences
 		var/name = branches[job.title]
 		if (!name)
 			continue
-		. |= mil_branches.get_branch(name)
+		. |= GLOB.mil_branches.get_branch(name)
 
 /datum/preferences/proc/selected_branches_assoc(priority = JOB_PRIORITY_PICKED)
 	. = list()
@@ -443,7 +443,7 @@ datum/preferences
 		var/name = branches[job.title]
 		if (!name || .[name])
 			continue
-		.[name] = mil_branches.get_branch(name)
+		.[name] = GLOB.mil_branches.get_branch(name)
 
 /datum/preferences/proc/for_each_selected_job(datum/callback/callback, priority = JOB_PRIORITY_LIKELY)
 	. = list()
