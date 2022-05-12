@@ -14842,9 +14842,6 @@
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/corner/research/mono,
-/obj/machinery/photocopier/faxmachine/torch{
-	department = "Torch - Research Paperwork Office"
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/office)
 "bTb" = (
@@ -21135,7 +21132,6 @@
 /area/security/evidence)
 "kVb" = (
 /obj/structure/table/standard,
-/obj/item/weldpack,
 /obj/item/reagent_containers/spray/sterilizine,
 /obj/item/storage/toolbox/mechanical,
 /obj/effect/floor_decal/corner/yellow/mono,
@@ -23162,9 +23158,6 @@
 /area/teleporter/firstdeck)
 "nFh" = (
 /obj/structure/table/steel,
-/obj/machinery/photocopier/faxmachine/torch{
-	department = "Torch - Brig Chief"
-	},
 /obj/machinery/camera/network/security{
 	c_tag = "Security Wing - Brig Chief";
 	dir = 4
@@ -23172,6 +23165,7 @@
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -32
 	},
+/obj/machinery/photocopier/faxmachine,
 /turf/simulated/floor/tiled/dark,
 /area/security/bo)
 "nHf" = (
@@ -28519,12 +28513,7 @@
 /area/maintenance/firstdeck/centralport)
 "tTA" = (
 /obj/structure/table/standard,
-/obj/item/storage/box/donkpockets,
 /obj/item/storage/box/cups,
-/obj/item/storage/box/donkpockets{
-	pixel_x = -3;
-	pixel_y = -3
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/brig)
 "tTY" = (
