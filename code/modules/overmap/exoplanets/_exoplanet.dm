@@ -164,7 +164,7 @@ GLOBAL_VAR(planet_repopulation_disabled)
 	var/light = 0.1
 	if (!night)
 		light = lightlevel
-	for (var/turf/unsimulated/floor/exoplanet/T in block(locate(daycolumn,1,min(map_z)),locate(daycolumn,maxy,max(map_z))))
+	for (var/turf/simulated/floor/exoplanet/T in block(locate(daycolumn,1,min(map_z)),locate(daycolumn,maxy,max(map_z))))
 		T.set_light(light, 0.1, 2)
 	daycolumn++
 	if (daycolumn > maxx)
@@ -185,7 +185,7 @@ GLOBAL_VAR(planet_repopulation_disabled)
 		edges |= block(locate(1, 1, zlevel), locate(maxx, TRANSITIONEDGE, zlevel))
 		edges |= block(locate(1, maxy-TRANSITIONEDGE, zlevel),locate(maxx, maxy, zlevel))
 		for (var/turf/T in edges)
-			T.ChangeTurf(/turf/unsimulated/planet_edge)
+			T.ChangeTurf(/turf/simulated/planet_edge)
 		var/padding = TRANSITIONEDGE
 		for (var/map_type in map_generators)
 			if (ispath(map_type, /datum/random_map/noise/exoplanet))

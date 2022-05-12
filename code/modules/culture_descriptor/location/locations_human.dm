@@ -133,8 +133,8 @@
 	ruling_body = "Gilgamesh Colonial Confederation"
 	language = LANGUAGE_HUMAN_RUSSIAN
 
-/decl/cultural_info/location/human/lorriman
-	name = HOME_SYSTEM_LORRIMAN
+/decl/cultural_info/location/human/saffar
+	name = HOME_SYSTEM_SAFFAR
 	distance = "44 light years"
 	description = "Saffar is a gas giant in the Upsilon Andromedae system.  Comparable in size to Jupiter, the surface is uninhabitable to most higher life. \
 	However, because of the system's proximity to several other colonies and Saffar's atmospheric composition, a gas mining and refueling station was constructed in high orbit c. 2198. \
@@ -145,7 +145,7 @@
 	economic_power = 1.2
 
 /decl/cultural_info/location/human/tadmor
-	name = HOME_SYSTEM_TADMOR
+	name = \
 	distance = "45 light years"
 	description = "Tadmor is a desert planet about twice the size of Earth, located in the Gamma Cephei system. Tadmor has been a member state of the Sol Central Government since the \
 	latter's formation. First settled in 2176 by a group of Martian colonists, Tadmor's economy is based on both industrial-scale agriculture and the fabrication of various electronic goods. \

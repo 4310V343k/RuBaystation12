@@ -651,7 +651,7 @@
 				var/regex/flatten = new (@"\s+", "g")
 				for (var/entry in value)
 					var/list/parts = splittext(replacetext_char(entry, flatten, " "), " ")
-					var/mode = lowertext(parts[1])
+					var/mode_tag = lowertext(parts[1])
 					var/chance = text2num(parts[2])
 					var/reason
 					if (!mode_tag)
