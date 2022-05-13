@@ -103,7 +103,7 @@
 	light_max_bright = 0.5
 	light_inner_range = 1
 	light_outer_range = 2
-	light_color_alarm = COLOR_BLUE
+	light_color_alarm = COLOR_NAVY_BLUE
 	light_color_status_display = COLOR_BLUE
 	overlay_alarm = "alarm_blue"
 	overlay_status_display = "status_display_blue"
