@@ -49,10 +49,10 @@
 /obj/item/projectile/plasma/sniper
 	name = "sniper plasma bolt"
 	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
-	armor_penetration = 40
+	armor_penetration = 35
 	damage = 45
 	agony = 5
-	step_delay = 0.35
+	step_delay = 0.4
 
 /obj/item/projectile/plasma/heavy
 	name = "heavy plasma bolt"
@@ -68,20 +68,25 @@
 	fire_sound='proxima/sound/weapons/guns/vaporize.ogg'
 	armor_penetration = 75
 	agony = 15
-	damage = 80
-	step_delay = 0.35
+	damage = 90
+	step_delay = 0.4
 
 	muzzle_type = /obj/effect/projectile/plasma/heavy/muzzle
 	impact_type = /obj/effect/projectile/plasma/heavy/impact
 
 /obj/item/projectile/plasma/stun
-	name = "stun plasma bolt"
+	name = "sniper stun plasma bolt"
 	fire_sound='proxima/sound/weapons/guns/burn.ogg'
 	damage = 2
 	agony = 40
 	eyeblur = 1
 	muzzle_type = /obj/effect/projectile/plasma/stun/muzzle
 	impact_type = /obj/effect/projectile/plasma/stun/impact
+
+/obj/item/projectile/plasma/stun/sniper
+	damage = 2
+	agony = 60
+	step_delay = 0.4
 
 /obj/item/projectile/plasma/stun/net
 	name = "plasma net"
@@ -133,16 +138,10 @@
 	scoped_accuracy = 6
 	scope_zoom = 1.5
 	init_firemodes = list(
-		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=40, fire_delay=6, projectile_color=COLOR_YELLOW),
-		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=40, fire_delay=6, projectile_color=COLOR_BLUE_LIGHT),
-		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=120, fire_delay=16, projectile_color=COLOR_RED)
+		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun/sniper, charge_cost=60, fire_delay=6, projectile_color=COLOR_YELLOW),
+		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma/sniper, charge_cost=60, fire_delay=6, projectile_color=COLOR_BLUE_LIGHT),
+		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy/sniper, charge_cost=100, fire_delay=10, projectile_color=COLOR_RED)
 	)
-
-/obj/item/gun/energy/k342/sniper/duke
-	name = "K480 'Duke Hawkins' plasma sniper rifle"
-	desc = "K480 Mantis is the latest heavy plasma weapon created by NanoTrasen for SolGov Central Government snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower. This is a custom model, featuring a hawk image engraved on it's stock."
-	scoped_accuracy = 7.5
-	scope_zoom = 2
 
 /obj/item/gun/energy/k342/prereg
 	authorized_modes = list(ALWAYS_AUTHORIZED, AUTHORIZED, AUTHORIZED)
