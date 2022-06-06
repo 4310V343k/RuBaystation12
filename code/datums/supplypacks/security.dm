@@ -100,42 +100,6 @@
 	containername = "riot armor crate"
 	access = access_armory
 
-/decl/hierarchy/supply_pack/security/weakgplate
-	name = "Armor - weak green platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/green = 3
-					)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "weak green platecarrier"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/weakbplate
-	name = "Armor - weak black platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/black = 3
-					)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "weak black platecarrier"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/weaktplate
-	name = "Armor - weak tan platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/tan = 3
-					)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "weak tan platecarrier"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/weakwbplate
-	name = "Armor - old tactical platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/webvest = 3
-					)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "old tactical webvest"
-	access = access_armory
-
 /decl/hierarchy/supply_pack/security/ballisticarmor
 	name = "Armor - Ballistic"
 	contains = list(/obj/item/clothing/head/helmet/ballistic = 4,
