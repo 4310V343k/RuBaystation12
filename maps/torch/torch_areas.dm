@@ -1646,10 +1646,10 @@ area/assembly/robotics/office
 /area/ai_monitored
 	name = "AI Monitored Area"
 
-/area/ai_monitored/storage/eva
-	name = "\improper EVA Storage"
-	icon_state = "eva"
-	req_access = list(access_eva)
+//area/ai_monitored/storage/eva
+	//name = "\improper EVA Storage"
+//	icon_state = "eva"
+//	req_access = list(access_eva) unused
 
 /area/turret_protected/ai
 	name = "\improper AI Chamber"
