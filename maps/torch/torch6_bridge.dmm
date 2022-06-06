@@ -165,6 +165,11 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/airless,
 /area/solar/bridge)
 "ax" = (
@@ -754,13 +759,8 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/airless,
-/area/solar/bridge)
+/area/space)
 "bF" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1601,21 +1601,26 @@
 "cP" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/airless,
-/area/solar/bridge)
-"cQ" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
-/area/solar/bridge)
+/area/space)
+"cQ" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/airless,
+/area/space)
 "cR" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3389,18 +3394,14 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "fZ" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
 	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	d1 = 4;
 	d2 = 8;
-	icon_state = "4-8"
+	icon_state = "1-8"
 	},
-/turf/simulated/floor/reinforced/airless,
-/area/solar/bridge)
+/turf/simulated/floor/airless,
+/area/space)
 "ga" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9665,11 +9666,6 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
 	d1 = 2;
 	d2 = 8;
 	icon_state = "2-8"
@@ -9679,12 +9675,12 @@
 "wu" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/yellow{
-	d1 = 1;
+	d1 = 4;
 	d2 = 8;
-	icon_state = "1-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/solar/bridge)
+/area/space)
 "ww" = (
 /obj/structure/closet/secure_closet/sea,
 /obj/effect/floor_decal/corner/blue/mono,
@@ -11218,14 +11214,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/bridge/fore)
-"BA" = (
-/obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/solar/bridge)
 "BE" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/corner/blue/mono,
@@ -34450,9 +34438,9 @@ au
 aH
 aH
 aH
-bE
-aH
 cO
+ad
+ad
 ad
 ad
 ad
@@ -34654,7 +34642,7 @@ ad
 ah
 av
 aI
-cP
+ad
 ad
 ad
 ad
@@ -34680,7 +34668,7 @@ DN
 DN
 dV
 vK
-cP
+ad
 ah
 av
 aI
@@ -34856,7 +34844,7 @@ ad
 ah
 av
 aI
-cP
+ad
 ad
 ad
 ad
@@ -34882,7 +34870,7 @@ Ws
 Ws
 Ws
 vL
-cP
+ad
 ah
 av
 aI
@@ -35058,7 +35046,7 @@ ad
 ah
 av
 aI
-cP
+ad
 ad
 ad
 ad
@@ -35084,7 +35072,7 @@ tI
 lp
 Vs
 vL
-cP
+ad
 ah
 av
 aI
@@ -35260,7 +35248,7 @@ ad
 ah
 av
 aI
-cP
+ad
 vB
 TL
 Al
@@ -35286,7 +35274,7 @@ tJ
 rr
 Ws
 vL
-cP
+ad
 ah
 av
 aI
@@ -35462,7 +35450,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -35488,7 +35476,7 @@ tK
 IL
 Vs
 vL
-cP
+ad
 ah
 av
 aI
@@ -35664,7 +35652,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -35690,7 +35678,7 @@ Ez
 IJ
 Ws
 vL
-cP
+ad
 ah
 av
 aI
@@ -35866,7 +35854,7 @@ ad
 ah
 av
 aI
-cP
+ad
 Kr
 eb
 eb
@@ -35892,7 +35880,7 @@ ZB
 uv
 uZ
 nE
-cP
+ad
 ah
 av
 aI
@@ -36068,7 +36056,7 @@ ad
 ah
 av
 aI
-cP
+ad
 BF
 ec
 SA
@@ -36094,7 +36082,7 @@ ZB
 yk
 vL
 ad
-cP
+ad
 ah
 av
 aI
@@ -36270,7 +36258,7 @@ ad
 ah
 av
 aI
-cP
+ad
 BF
 Ib
 eH
@@ -36296,7 +36284,7 @@ tL
 uw
 vL
 ad
-cP
+ad
 ah
 av
 aI
@@ -36472,7 +36460,7 @@ ad
 ah
 av
 aI
-cP
+ad
 BF
 Ib
 eI
@@ -36498,7 +36486,7 @@ Oq
 yk
 vL
 ad
-cP
+ad
 ah
 av
 aI
@@ -36674,7 +36662,7 @@ ad
 ah
 av
 aI
-cP
+ad
 BF
 Ib
 eJ
@@ -36700,7 +36688,7 @@ LQ
 uw
 vL
 ad
-cP
+ad
 ah
 av
 aI
@@ -36876,7 +36864,7 @@ ad
 ah
 av
 aI
-cP
+ad
 BF
 ec
 SA
@@ -36902,7 +36890,7 @@ ZB
 yk
 vL
 ad
-cP
+ad
 ah
 av
 aI
@@ -37078,7 +37066,7 @@ ad
 ah
 av
 aI
-cP
+ad
 pw
 eg
 eg
@@ -37104,7 +37092,7 @@ ZB
 uv
 vb
 vK
-cP
+ad
 ah
 av
 aI
@@ -37280,7 +37268,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -37306,7 +37294,7 @@ AU
 mx
 RH
 vL
-cP
+ad
 ah
 av
 aI
@@ -37482,7 +37470,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -37508,7 +37496,7 @@ tM
 fX
 SQ
 vL
-cP
+ad
 ah
 av
 aI
@@ -37684,7 +37672,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -37710,7 +37698,7 @@ tN
 PA
 RH
 vL
-cP
+ad
 ah
 av
 aI
@@ -37886,7 +37874,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -37912,7 +37900,7 @@ tO
 UW
 SQ
 vL
-cP
+ad
 ah
 av
 aI
@@ -38088,7 +38076,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -38114,7 +38102,7 @@ RH
 RH
 RH
 vL
-cP
+ad
 ah
 av
 aI
@@ -38290,7 +38278,7 @@ ad
 ah
 av
 aI
-cP
+ad
 hR
 ad
 ad
@@ -38316,7 +38304,7 @@ eg
 eg
 eg
 nE
-cP
+ad
 ah
 av
 aI
@@ -38492,33 +38480,33 @@ ad
 ah
 av
 aI
-cQ
-fZ
-BA
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-aH
-wu
+ad
+hR
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
 ah
 av
 aI
@@ -41920,11 +41908,11 @@ ad
 ad
 ad
 ad
-ad
-ad
-ad
-ad
-ad
+cP
+bE
+cQ
+bE
+fZ
 ad
 ad
 ad
@@ -41954,11 +41942,11 @@ Rr
 ad
 ad
 ad
-ad
-ad
-ad
-ad
-ad
+cP
+bE
+cQ
+bE
+fZ
 ad
 ad
 ad
@@ -42124,7 +42112,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42158,7 +42146,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42326,7 +42314,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42360,7 +42348,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42528,7 +42516,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42562,7 +42550,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42730,7 +42718,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42764,7 +42752,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42932,7 +42920,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -42966,7 +42954,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43134,7 +43122,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43168,7 +43156,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43336,7 +43324,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43370,7 +43358,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43538,7 +43526,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43572,7 +43560,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43740,7 +43728,7 @@ ad
 ae
 ad
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43774,7 +43762,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ad
 ae
@@ -43942,7 +43930,7 @@ ad
 ae
 ae
 ad
-ad
+wu
 ad
 ad
 ad
@@ -43976,7 +43964,7 @@ ad
 ad
 ad
 ad
-ad
+wu
 ad
 ae
 ae
@@ -44144,41 +44132,41 @@ ad
 ad
 ae
 ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+cP
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+bE
+fZ
 ad
 ae
 ad
