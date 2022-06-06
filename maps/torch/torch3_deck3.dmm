@@ -13734,10 +13734,6 @@
 "Gt" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/firecloset,
-/obj/machinery/camera/network/security{
-	c_tag = "Checkpoint - Deck Three";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/thirddeck/foreport)
 "Gu" = (
