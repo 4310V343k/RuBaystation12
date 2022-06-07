@@ -155,7 +155,7 @@
 
 //proxima code start
 /obj/item/gun/energy/k342/explo
-	name = "K342E Orca plasma gun"
+	name = "plasma rifle"
 	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification has been designed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode."
 	icon_state = "kasatka_off"
 	item_state = "kasatka"
@@ -178,15 +178,15 @@
 	authorized_modes = list(AUTHORIZED, AUTHORIZED, ALWAYS_AUTHORIZED)
 
 /obj/item/gun/energy/k342/explo/lily
-	name = "K342E 'Shy Lily' plasma gun"
+	name = "'Shy Lily' plasma rifle"
 	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode. This modification is distinguished by the pin-up image of an amused skrell girl and the inscription 'Shy LilQo' on its stock."
 
 /obj/item/gun/energy/k342/explo/juniper
-	name = "K342E 'Jackboot Juniper' plasma gun"
+	name = "'Jackboot Juniper' plasma rifle"
 	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode. This modification is distinguished by the pin-up image of humanlike moth chewing a pair of jackboots and the inscription 'Jackboot Juniper' on its stock."
 
 /obj/item/gun/energy/k342/explo/nina
-	name = "K342E 'Nine-tailed Nina' plasma gun"
+	name = "'Nine-tailed Nina' plasma gun"
 	desc = "The K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for the Central Government Expeditionary Force and can fire several types of charges: stun, lethal and net. This modification is distinguished by the image of the mythical kitsune and the inscription 'Nine-Tailed Nina' on its stock."
 
 //proxima code end
