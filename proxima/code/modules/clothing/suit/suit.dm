@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/armor/vest/gpcarrier
+/obj/item/clothing/suit/armor/vest/ert/gpcarrier
 	name = "old green platecarrier"
 	desc = "A set of armor worn by many corporate and private asset protection forces."
 	item_icons = list(slot_wear_suit_str = 'proxima/icons/mob/onmob/mob-suit.dmi')
