@@ -347,7 +347,7 @@
 	alpha = 120
 
 	glass_name = "vodka"
-	glass_desc = "The glass contain wodka. Xynta."
+	glass_desc = "The glass of vodka. Some pure bearshit."
 
 /datum/reagent/ethanol/vodka/premium
 	name = "Premium Vodka"
@@ -1203,6 +1203,16 @@
 
 	glass_name = "red whiskey"
 	glass_desc = "A dark red looking substance that smells like strong whiskey."
+
+/datum/reagent/ethanol/ersh
+	name = "Ruff"
+	description = "Traditional Terran cocktail, made of beer and vodka."
+	taste_description = "spiky fish and labourers sweat"
+	color = "#ffd300"
+	strength = 10
+
+	glass_name = "Ruff"
+	glass_desc = "Traditional Terran cocktail, made of beer and vodka."
 
 /datum/reagent/ethanol/sangria
 	name = "Sangria"

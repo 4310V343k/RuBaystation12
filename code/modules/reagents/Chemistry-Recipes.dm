@@ -2194,6 +2194,12 @@
 	required_reagents = list(/datum/reagent/drink/milk/cream = 1, /datum/reagent/drink/ice = 2, /datum/reagent/drink/milk = 2)
 	result_amount = 5
 
+/datum/chemical_reaction/dangomilk
+	name = "Dango Milk"
+	result = /datum/reagent/drink/dangomilk
+	required_reagents = list(/datum/reagent/drink/milk/cream = 1, /datum/reagent/nutriment/flour = 1, /datum/reagent/nutriment/rice = 1, /datum/reagent/drink/milk = 2)
+	result_amount = 5
+
 /datum/chemical_reaction/rewriter
 	name = "Rewriter"
 	result = /datum/reagent/drink/rewriter
@@ -2213,6 +2219,13 @@
 	catalysts = list(/datum/reagent/enzyme = 5)
 	result_amount = 2
 	mix_message = "The solution roils as it rapidly ferments into a red-brown liquid."
+
+/datum/chemical_reaction/ersh
+	name = "Ruff"
+	result = /datum/reagent/ethanol/ersh
+	required_reagents = list(/datum/reagent/ethanol/vodka = 1, /datum/reagent/ethanol/beer = 3)
+	result_amount = 2
+	mix_message = "The solution bubbles as vodka quickly mixes with beer."
 
 /datum/chemical_reaction/ships_surgeon
 	name = "Ship's Surgeon"
