@@ -253,7 +253,7 @@
 	name = "Weapons - Plasma assault rifles (Expeditionary Corps)"
 	contains = list(/obj/item/gun/energy/k342/explo = 2,
 					/obj/item/cell/guncell/medium = 6)
-	cost = 150
+	cost = 130
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "plasma longarms crate"
 	access = access_armory
