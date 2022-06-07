@@ -134,7 +134,7 @@
 /obj/structure/closet/secure_closet/explo_gun/kasatka/WillContain()
 	return list(
 		/obj/item/cell/guncell/medium = 6,
-		/obj/item/gun/energy/k342/explo = 2
+		/obj/random/orca = 2
 	)
 
 /decl/closet_appearance/wall/explo_gun_kasatka
@@ -155,7 +155,8 @@
 
 //proxima code start
 /obj/item/gun/energy/k342/explo
-	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, lethal and net-mode. This one designed specialy for expeditionary team"
+	name = "K342E Orca plasma assault rifle"
+	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification has been designed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode."
 	icon_state = "kasatka_off"
 	item_state = "kasatka"
 	req_access = list(list("ACCESS_TORCH_EXPLORER"))
@@ -175,4 +176,17 @@
 
 /obj/item/gun/energy/k342/explo/prereg
 	authorized_modes = list(AUTHORIZED, AUTHORIZED, ALWAYS_AUTHORIZED)
+
+/obj/item/gun/energy/k342/explo/lily
+	name = "K342E 'Shy Lily' plasma assault rifle"
+	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode. This modification is distinguished by the pin-up image of an amused skrell girl and the inscription 'Shy LilQo' on its stock."
+
+/obj/item/gun/energy/k342/explo/juniper
+	name = "K342E 'Jackboot Juniper' plasma assault rifle"
+	desc = "K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode. This modification is distinguished by the pin-up image of humanlike moth chewing a pair of jackboots and the inscription 'Jackboot Juniper' on its stock."
+
+/obj/item/gun/energy/k342/explo/nina
+	name = "K342E 'Nine-tailed Nina' plasma assault rifle"
+	desc = "The K342E Orca is the latest plasma weapon created by NanoTrasen. This modification was developed for the Central Government Expeditionary Force and can fire several types of charges: stun, lethal and net. This modification is distinguished by the image of the mythical kitsune and the inscription 'Nine-Tailed Nina' on its stock."
+
 //proxima code end
