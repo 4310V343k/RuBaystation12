@@ -240,6 +240,30 @@
 	containername = "military rifle practice ammunition crate"
 	access = access_security
 
+/decl/hierarchy/supply_pack/security/barracuda
+	name = "Weapons - Plasma assault rifles"
+	contains = list(/obj/item/gun/energy/k342 = 4)
+	cost = 120
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "plasma longarms crate"
+	access = access_armory
+
+/decl/hierarchy/supply_pack/security/orca
+	name = "Weapons - Plasma assault rifles (Expeditionary Corps)"
+	contains = list(/obj/item/gun/energy/k342/explo = 4)
+	cost = 150
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "plasma longarms crate"
+	access = access_armory
+
+/decl/hierarchy/supply_pack/security/mantis
+	name = "Weapons - Plasma sniper rifles"
+	contains = list(/obj/item/gun/energy/k342/sniper = 2)
+	cost = 180
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "plasma longarms crate"
+	access = access_armory
+
 /decl/hierarchy/supply_pack/security/forensics //Not access-restricted so PIs can use it.
 	name = "Forensics - Auxiliary tools"
 	contains = list(/obj/item/forensics/sample_kit,
