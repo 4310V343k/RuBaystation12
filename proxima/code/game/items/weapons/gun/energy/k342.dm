@@ -75,7 +75,7 @@
 	impact_type = /obj/effect/projectile/plasma/heavy/impact
 
 /obj/item/projectile/plasma/stun
-	name = "sniper stun plasma bolt"
+	name = "stun plasma bolt"
 	fire_sound='proxima/sound/weapons/guns/burn.ogg'
 	damage = 2
 	agony = 40
@@ -84,6 +84,7 @@
 	impact_type = /obj/effect/projectile/plasma/stun/impact
 
 /obj/item/projectile/plasma/stun/sniper
+	name = "sniper stun plasma bolt"
 	damage = 2
 	agony = 60
 	step_delay = 0.4
@@ -102,7 +103,7 @@
 	return TRUE
 
 /obj/item/gun/energy/k342
-	name = "K342 Barracuda plasma assault rifle"
+	name = "K342 Barracuda plasma gun"
 	desc = "K342 Barracuda is the latest plasma weapon created by NanoTrasen, capable to fire several types of charges: stunning, incendiary, and lethal bolts."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
 	w_class = ITEM_SIZE_LARGE
@@ -128,7 +129,7 @@
 	)
 
 /obj/item/gun/energy/k342/sniper
-	name = "K480 Mantis plasma sniper rifle"
+	name = "K480 Mantis plasma gun"
 	desc = "K480 Mantis is the latest heavy plasma weapon created by NanoTrasen for SolGov snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower."
 	icon = 'proxima/icons/obj/guns/k480.dmi'
 	icon_state = "mantis_off"
