@@ -103,7 +103,7 @@
 	return TRUE
 
 /obj/item/gun/energy/k342
-	name = "K342 Barracuda plasma gun"
+	name = "plasma rifle"
 	desc = "K342 Barracuda is the latest plasma weapon created by NanoTrasen, capable to fire several types of charges: stunning, incendiary, and lethal bolts."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
 	w_class = ITEM_SIZE_LARGE
@@ -129,7 +129,7 @@
 	)
 
 /obj/item/gun/energy/k342/sniper
-	name = "K480 Mantis plasma gun"
+	name = "plasma sniper rifle"
 	desc = "K480 Mantis is the latest heavy plasma weapon created by NanoTrasen for SolGov snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower."
 	icon = 'proxima/icons/obj/guns/k480.dmi'
 	icon_state = "mantis_off"
