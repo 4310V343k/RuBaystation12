@@ -50,8 +50,8 @@
 	)
 
 /obj/random/orca
-	name = "Random K342E Orca Rifle"
-	desc = "This is a random K342E Orca rifle."
+	name = "Random plasma rifle"
+	desc = "This is a random plasma rifle."
 	icon = 'icons/obj/guns/assault_rifle.dmi'
 	icon_state = "arifle"
 
