@@ -54,7 +54,7 @@
 
 /decl/hierarchy/supply_pack/security/ogplatecarrier
 	name = "Armor - old green platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/gpcarrier = 3)
+	contains = list(/obj/item/clothing/suit/armor/vest/ert/gpcarrierr = 3)
 	cost = 30
 	containertype = /obj/structure/closet/crate/secure
 	containername = "tactical armor crate"
