@@ -70,10 +70,10 @@ var/list/ai_verbs_default = list(
 
 	//[inf]
 	speech_sounds = list(
-		'proxima/sound/voice/robot_talk_heavy_1.ogg',
-		'proxima/sound/voice/robot_talk_heavy_2.ogg',
-		'proxima/sound/voice/robot_talk_heavy_3.ogg',
-		'proxima/sound/voice/robot_talk_heavy_4.ogg'
+		'sound/voice/emotes/robot_talk_heavy_1.ogg',
+		'sound/voice/emotes/robot_talk_heavy_2.ogg',
+		'sound/voice/emotes/robot_talk_heavy_3.ogg',
+		'sound/voice/emotes/robot_talk_heavy_4.ogg'
 	)
 	//[/inf]
 
