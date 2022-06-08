@@ -1,6 +1,6 @@
 /decl/emote/audible/synth
 	key = "beep"
-	emote_message_3p = "USER beeps."
+	emote_message_3p = "USER издаёт звуковые сигналы."
 	emote_sound = 'sound/machines/twobeep.ogg'
 
 /decl/emote/audible/synth/check_user(var/mob/living/user)
@@ -10,22 +10,22 @@
 
 /decl/emote/audible/synth/ping
 	key = "ping"
-	emote_message_3p = "USER pings."
+	emote_message_3p = "USER издаёт громкий звон."
 	emote_sound = 'sound/machines/ping.ogg'
 
 /decl/emote/audible/synth/buzz
 	key = "buzz"
-	emote_message_3p = "USER buzzes."
+	emote_message_3p = "USER издаёт жужжащий звук."
 	emote_sound = 'sound/machines/buzz-sigh.ogg'
 
 /decl/emote/audible/synth/confirm
 	key = "confirm"
-	emote_message_3p = "USER emits an affirmative blip."
+	emote_message_3p = "USER выдает утвердительный сигнал."
 	emote_sound = 'sound/machines/synth_yes.ogg'
 
 /decl/emote/audible/synth/deny
 	key = "deny"
-	emote_message_3p = "USER emits a negative blip."
+	emote_message_3p = "USER выдает отрицательный сигнал."
 	emote_sound = 'sound/machines/synth_no.ogg'
 
 /decl/emote/audible/synth/security
