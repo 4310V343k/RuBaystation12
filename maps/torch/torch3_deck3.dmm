@@ -8374,6 +8374,10 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/machinery/camera/network/third_deck{
+	c_tag = "Third Deck Hallway -  Observatory";
+	dir = 8
+	},
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/observation)
 "rQ" = (
@@ -18284,6 +18288,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/machinery/camera/network/third_deck{
+	c_tag = "Third Deck Hallway -  Observatory Aux";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/observation)

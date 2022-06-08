@@ -13362,6 +13362,24 @@
 "GM" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/aftstarboard)
+"GP" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck Hallway - Fore Corridor"
+	},
+/turf/simulated/floor/plating,
+/area/hallway/primary/seconddeck/fore)
 "GQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15665,7 +15683,7 @@
 "Om" = (
 /obj/item/stool,
 /obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck Hallway - Elevator Landing";
+	c_tag = "ss";
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -32322,7 +32340,7 @@ SD
 lq
 mZ
 kD
-qm
+GP
 XA
 Lp
 RL
