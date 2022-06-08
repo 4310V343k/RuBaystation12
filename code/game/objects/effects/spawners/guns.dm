@@ -57,7 +57,6 @@
 
 /obj/random/orca/spawn_choices()
 	return list(/obj/item/gun/energy/k342/explo,
-				/obj/item/gun/energy/k342/explo/lily,
-				/obj/item/gun/energy/k342/explo/juniper,
-				/obj/item/gun/energy/k342/explo/nina
+				/obj/item/gun/energy/k342,
+				/obj/item/gun/energy/k342/sniper
 	)
