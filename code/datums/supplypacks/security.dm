@@ -52,38 +52,6 @@
 	containername = "arm and leg guards crate"
 	access = access_armory
 
-/decl/hierarchy/supply_pack/security/ogplatecarrier
-	name = "Armor - old green platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/ert/gpcarrierr = 3)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "tactical armor crate"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/obplatecarrier
-	name = "Armor - old black platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/ert/bpcarrier = 3)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "tactical armor crate"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/otplatecarrier
-	name = "Armor - old tan platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/ert/tpcarrier = 3)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "tactical armor crate"
-	access = access_armory
-
-/decl/hierarchy/supply_pack/security/otcplatecarrier
-	name = "Armor - old tactical platecarrier"
-	contains = list(/obj/item/clothing/suit/armor/vest/ert/vebvest = 3)
-	cost = 30
-	containertype = /obj/structure/closet/crate/secure
-	containername = "tactical armor crate"
-	access = access_armory
-
 /decl/hierarchy/supply_pack/security/blueguards
 	name = "Armor - Arm and leg guards, blue"
 	contains = list(/obj/item/clothing/accessory/arm_guards/blue = 2,
