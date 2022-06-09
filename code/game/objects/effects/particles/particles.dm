@@ -1,7 +1,7 @@
 /* A series of particle systems. Some are based on F0lak's particle systems
 */
 
-/particles/fire
+particles/fire
 	width = 500
 	height = 500
 	count = 3000
@@ -15,7 +15,7 @@
 
 	color = "white"
 
-/particles/smoke
+particles/smoke
 	width = 500
 	height = 1000
 	count = 3000
@@ -29,7 +29,7 @@
 	drift = generator("vector", list(-0.2, -0.3), list(0.2, 0.3))
 	color = "white"
 
-/particles/fire_sparks
+particles/fire_sparks
 	width = 500
 	height = 500
 	count = 3000
@@ -44,7 +44,7 @@
 	gradient = list(0, "yellow", 1, "red")
 	color = "yellow"
 
-/particles/drill_sparks
+particles/drill_sparks
 	width = 124
 	height = 124
 	count = 1600
@@ -60,7 +60,7 @@
 	color = 0
 	transform = list(1,0,0,0, 0,1,0,0, 0,0,1,1/5, 0,0,0,1)
 
-/particles/flare_sparks
+particles/flare_sparks
 	width = 500
 	height = 500
 	count = 2000
@@ -73,7 +73,7 @@
 	gradient = list(0, COLOR_WHITE, 0.4, COLOR_RED)
 	color_change = 0.125
 
-/particles/dust
+particles/dust
 	width = 124
 	height = 124
 	count = 256
@@ -85,7 +85,7 @@
 	friction = 0.125
 	color = COLOR_OFF_WHITE
 
-/particles/debris
+particles/debris
 	width = 124
 	height = 124
 	count = 16
@@ -100,7 +100,7 @@
 	icon_state = list("rock1", "rock2", "rock3", "rock4", "rock5")
 	rotation = generator("num", 0, 360, NORMAL_RAND)
 
-/particles/drill_sparks/debris
+particles/drill_sparks/debris
 	friction = 0.25
 	gradient = null
 	color = COLOR_WHITE
@@ -108,7 +108,7 @@
 	icon = 'icons/effects/particles.dmi'
 	icon_state = list("rock1", "rock2", "rock3", "rock4", "rock5")
 
-/particles/fusion
+particles/fusion
 	width = 500
 	height = 500
 	count = 4000
