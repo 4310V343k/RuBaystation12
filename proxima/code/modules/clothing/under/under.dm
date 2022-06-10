@@ -8,7 +8,7 @@
 
 /obj/item/clothing/under/gorka/old
 	name = "old gorka uniform"
-	desc = "Old battered and stinky gorka. You fell yourself like toilet paper in toilet."
+	desc = "Old battered and stinky gorka. You feel yourself like toilet paper in toilet."
 	icon_state = "gorka_crew"
 	worn_state = "gorka_crew"
 
