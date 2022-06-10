@@ -3220,6 +3220,7 @@
 #include "proxima\code\modules\species.dm"
 #include "proxima\code\modules\admin\xeno_whitelist.dm"
 #include "proxima\code\modules\webhooks\webhook_xeno_whitelist.dm"
+#include "proxima\code\modules\clothing\under\under.dm"
 #include "proxima\code\music_player\_music_player.dm"
 #include "proxima\code\music_player\_music_tape.dm"
 #include "proxima\code\music_player\subtypes_player.dm"
