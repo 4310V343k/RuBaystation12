@@ -30,6 +30,8 @@ CL_SPLIT = re.compile(r"(^\w+):\s+(\w.+)", re.MULTILINE)
 repo = os.getenv("GITHUB_REPOSITORY")
 sha = os.getenv("GITHUB_SHA")
 
+print(f"::set-output name=pr_number::{-1}") # Don't commit if we don't need to
+
 git = Github()
 repo = git.get_repo(repo)
 commit = repo.get_commit(sha)
