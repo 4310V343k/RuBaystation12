@@ -2315,9 +2315,9 @@
 /obj/machinery/power/smes/buildable{
 	charge = 5e+006;
 	input_attempt = 1;
-	input_level = 200000;
+	input_level = 250000;
 	output_attempt = 1;
-	output_level = 200000
+	output_level = 250000
 	},
 /obj/structure/cable/cyan,
 /obj/machinery/camera/all/command{
