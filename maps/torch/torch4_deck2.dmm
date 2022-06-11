@@ -4333,9 +4333,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
 "iS" = (
-/obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/random/maintenance/solgov,
 /obj/structure/cable/cyan{
 	d2 = 2;
 	icon_state = "0-2"
@@ -4346,22 +4344,18 @@
 	pixel_x = 0;
 	pixel_y = 24
 	},
+/obj/structure/bed/chair/armchair/green,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "iT" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/table/steel,
+/obj/item/book{
+	desc = "A book, written by an IPC unknown. While it's mostly humorous, cerctain radically oriented individuals may see this offensive. ...Or use it as an offense.";
+	name = "Why did I started to hate humans. One hundreds methods to self control"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "iW" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
-	},
 /turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "iX" = (
@@ -4518,21 +4512,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/chargebay)
-"ju" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/random/junk,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/synth/borg_upload)
 "jv" = (
 /obj/structure/lattice,
 /obj/structure/disposaloutlet{
@@ -4580,34 +4559,20 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "jC" = (
-/obj/structure/table/standard,
-/obj/random/maintenance/solgov,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
-"jD" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/structure/table/rack{
-	dir = 8
-	},
-/obj/random/gloves,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/synth/borg_upload)
 "jE" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/window/brigdoor/northleft,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "jH" = (
@@ -5127,12 +5092,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/aftport)
 "kP" = (
-/obj/machinery/light/small{
-	dir = 4;
-	icon_state = "bulb1"
+/obj/machinery/door/airlock/engineering{
+	name = "Synth's Storage";
+	secured_wires = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/seconddeck/foreport)
+/area/synth/borg_upload)
 "kQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/device/geiger,
@@ -7947,7 +7912,6 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/structure/bed/chair/armchair/green,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "rF" = (
@@ -8487,6 +8451,7 @@
 /area/engineering/drone_fabrication)
 "tm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "to" = (
@@ -8618,7 +8583,9 @@
 /area/engineering/engine_monitoring)
 "tD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/constructable_frame/computerframe,
+/obj/machinery/cryopod{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "tE" = (
@@ -8654,12 +8621,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
-"tK" = (
-/obj/machinery/door/airlock/highsecurity{
-	name = "Cyborg Upload"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/synth/borg_upload)
 "tL" = (
 /obj/structure/closet/secure_closet/atmos_torch,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -10887,7 +10848,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/random/junk,
 /turf/simulated/floor/bluegrid,
 /area/synth/borg_upload)
 "Aw" = (
@@ -13391,6 +13351,13 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"GT" = (
+/obj/machinery/light/small{
+	dir = 4;
+	icon_state = "bulb1"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/seconddeck/foreport)
 "GW" = (
 /turf/simulated/wall/r_wall/hull,
 /area/medical/morgue)
@@ -13924,7 +13891,11 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/turf/simulated/wall/r_wall/prepainted,
+/obj/machinery/door/airlock/engineering{
+	name = "Synth's Storage";
+	secured_wires = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/synth/borg_upload)
 "Ip" = (
 /obj/machinery/alarm{
@@ -14769,7 +14740,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
 "Lp" = (
-/turf/simulated/wall/r_wall/prepainted,
+/turf/simulated/wall/prepainted,
 /area/synth/borg_upload)
 "Lr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -16639,15 +16610,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
-"Rm" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/table/steel,
-/obj/item/book{
-	desc = "A book, written by an IPC unknown. While it's mostly humorous, cerctain radically oriented individuals may see this offensive. ...Or use it as an offense.";
-	name = "Why did I started to hate humans. One hundreds methods to self controll"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/engineering/drone_fabrication)
 "Rn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4;
@@ -16774,19 +16736,21 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/seconddeck/fore)
 "RL" = (
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/structure/table/steel,
+/obj/item/device/robotanalyzer{
+	pixel_y = 4
 	},
-/obj/machinery/door/window/brigdoor/northleft{
-	dir = 2
+/obj/item/reagent_containers/food/drinks/bottle/patron{
+	pixel_x = -2;
+	pixel_y = 18
 	},
-/obj/structure/table/rack{
-	dir = 8
+/obj/item/reagent_containers/food/drinks/bottle/oiljug{
+	pixel_x = 9;
+	pixel_y = 15
 	},
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/item/stack/nanopaste{
+	pixel_x = -8
 	},
-/obj/random/maintenance/solgov,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "RO" = (
@@ -17143,20 +17107,6 @@
 "Tc" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/steel,
-/obj/item/reagent_containers/food/drinks/bottle/oiljug{
-	pixel_x = 9;
-	pixel_y = 15
-	},
-/obj/item/reagent_containers/food/drinks/bottle/patron{
-	pixel_x = -2;
-	pixel_y = 18
-	},
-/obj/item/device/robotanalyzer{
-	pixel_y = 4
-	},
-/obj/item/stack/nanopaste{
-	pixel_x = -8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "Td" = (
@@ -31502,8 +31452,8 @@ Lh
 Zt
 gZ
 ZV
-kP
 ZV
+GT
 ZV
 dX
 aK
@@ -31704,8 +31654,8 @@ VR
 nk
 Lp
 Lp
+kP
 Lp
-tK
 Lp
 dX
 aK
@@ -32311,7 +32261,7 @@ XA
 Lp
 RL
 Au
-jD
+jE
 Lp
 dX
 aK
@@ -32512,7 +32462,7 @@ AI
 XA
 Lp
 iT
-ju
+Au
 jE
 Lp
 dX
@@ -34127,7 +34077,7 @@ dn
 Gm
 qv
 Tc
-Rm
+Tc
 tm
 tm
 rF
