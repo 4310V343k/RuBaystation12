@@ -12549,6 +12549,7 @@
 /obj/machinery/door/airlock/engineering{
 	name = "Robotics"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/office)
 "aSd" = (
