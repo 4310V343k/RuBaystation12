@@ -1,16 +1,24 @@
-<!-- 
-Do not forget to add a changelog when you have made admin/player facing changes that can alter gameplay.
-Examples which require a changelog entry include:
-* Adding/removing objects that players may interact with, or the way they function.
-* Adding/removing/altering admin tools.
-* Changing the map.
-
-Examples were changelog entries are optional/not typically required:
-* Cosmetic changes such as descriptions, sound effects, etc.
-* Optimizations and other changes to underlying systems which do not affect gameplay.
-* Minor bug fixes.
-
-You'll find a README and example file in .\html\changelogs\ for further instructions.
-
-You can also find a template for adding your changelog directly to the PR description here: https://github.com/Baystation12/Baystation12/wiki/Automatic-changelog-generation
--->
+<h1>Описание</h1>
+Здесь вы пишите, какой прекрасный йогурт вы сделаи.
+<h1>Почему это хорошо</h1>
+Здесь вы пишите, почему ваш йогурт лучше чем тот, что был
+<h1>Чейнджлог</h1>
+## Чейнджлог
+:cl:
+add: Еве дали Кофе
+add: Ева взяла еще один йогурт
+del: Фолер распилил бюджет карго
+tweak: В холодильнике появилось на один йогурт больше
+balance: Вместо йогурта в холодильнике есть сырок (неплохо)
+fix: Вы больше не можете есть холодильник в йогурте
+soundadd: Добавили мерзкий звук поедания сырка
+sounddel: Убрали весь хороший звук поедания йогурта
+imageadd: Добавили классную картинку с йогуртом
+imagedel: Убрали плохую картинку с резоми
+spellcheck: Убрали очепятки в слове ёгурт
+code: Оптимизация кода работы йогурта
+refactor: Йогурт был основательно переработанно
+config: Изменили конфигурацию Йогурта
+admin: Потрогали админов за их... кнопки... йогурт.
+server: Ева выпила йогурт и ушла спать
+/:cl:
