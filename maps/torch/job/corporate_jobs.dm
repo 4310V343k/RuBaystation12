@@ -35,7 +35,7 @@
 	return "You are the Workplace Liaison. You are a civilian employee of EXO, the Expeditionary Corps Organisation, the government-owned corporate conglomerate that partially funds the Torch. You are on board the vessel to promote corporate interests and protect the rights of the contractors on board as their union leader. You are not internal affairs. You advise command on corporate and union matters and contractors on their rights and obligations. Maximise profit. Be the shady corporate shill you always wanted to be."
 
 /datum/job/synthetic
-	title = "Synthetic"
+	title = "Synth"
 	supervisors = "The SEV Torch's acting command offcer, it's regulations and laws of SCG."
 	department = SPT
 	minimal_player_age = 14
@@ -80,7 +80,7 @@
 						SKILL_SCIENCE      = SKILL_EXPERT,
 						SKILL_MEDICAL      = SKILL_EXPERT,
 						SKILL_ANATOMY      = SKILL_EXPERT,
-						SKILL_CHEMISTRY    = SKILL_EXPERT,)
+						SKILL_CHEMISTRY    = SKILL_EXPERT)
 	skill_points = 48
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
