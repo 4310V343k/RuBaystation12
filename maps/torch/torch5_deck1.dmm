@@ -11508,9 +11508,8 @@
 	icon_state = "tube1"
 	},
 /obj/effect/floor_decal/corner/yellow/mono,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/segment/bent{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/assembly/robotics/office)
@@ -16297,9 +16296,8 @@
 /obj/structure/bed/chair/padded/purple{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/segment/bent{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/office)
