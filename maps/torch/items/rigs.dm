@@ -396,3 +396,20 @@
 
 /obj/item/clothing/head/helmet/space/rig/industrial
 	camera = /obj/machinery/camera/network/supply
+
+/obj/item/rig/zero/synth
+	name = "Synthetic's hardsuit control module"
+	req_access = list(access_ai_upload)
+
+/obj/item/rig/zero/synth/equipped
+	initial_modules = list(
+		/obj/item/rig_module/ai_container,
+		/obj/item/rig_module/device/defib,
+		/obj/item/rig_module/device/healthscanner,
+		/obj/item/rig_module/device/rcd,
+		/obj/item/rig_module/chem_dispenser/injector,
+		/obj/item/rig_module/mounted/plasmacutter,
+		/obj/item/rig_module/vision/medhud,
+		/obj/item/rig_module/vision/meson,
+		/obj/item/rig_module/maneuvering_jets,
+		/obj/item/rig_module/cooling_unit)

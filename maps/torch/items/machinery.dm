@@ -133,5 +133,13 @@
 		/obj/item/clothing/glasses/hud/health = 2,
 		/obj/item/storage/box/gloves = 1,
 		/obj/item/storage/box/masks = 1,
+		/obj/item/storage/firstaid/adv = 1,
+		/obj/item/storage/firstaid/o2 = 1,
+		/obj/item/storage/firstaid/fire = 1,
+		/obj/item/storage/firstaid/regular = 1,
+		/obj/item/storage/firstaid/toxin = 1,
+		/obj/item/storage/firstaid/trauma = 1,
+		/obj/item/storage/firstaid/stab = 1,
+		/obj/item/storage/firstaid/surgery = 1,
 	)
 	req_access = list(access_nanotrasen)

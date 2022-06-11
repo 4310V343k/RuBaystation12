@@ -161,7 +161,22 @@
 
 /obj/structure/closet/secure_closet/synth_med/WillContain()
 	return list(
-
+		/obj/item/storage/box/autoinjectors,
+		/obj/item/storage/box/gloves,
+		/obj/item/storage/box/masks,
+		/obj/item/storage/box/syringes,
+		/obj/item/defibrillator/compact/loaded,
+		/obj/item/auto_cpr,
+		/obj/item/clothing/glasses/hud/health/prescription,
+		/obj/item/clothing/glasses/hud/health,
+		/obj/item/device/scanner/health,
+		/obj/item/clothing/head/beret/solgov/health,
+		/obj/item/clothing/under/sterile,
+		/obj/item/clothing/under/solgov/utility/expeditionary/officer/medical,
+		/obj/item/clothing/under/gorka/med,
+		/obj/item/clothing/suit/storage/toggle/labcoat/science,
+		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/storage/belt/medical/emt,
 	)
 
 /obj/structure/closet/secure_closet/synth_eng

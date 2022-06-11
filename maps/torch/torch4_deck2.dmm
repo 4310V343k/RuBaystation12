@@ -4339,7 +4339,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "iT" = (
 /obj/structure/table/steel,
 /obj/item/book{
@@ -4347,10 +4347,10 @@
 	name = "Why did I started to hate humans. One hundreds methods to self control"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "iW" = (
 /turf/simulated/floor/bluegrid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "iX" = (
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall/prepainted,
@@ -4557,22 +4557,25 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "jC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/machinery/vending/medical/torch/synthetic{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "jD" = (
 /obj/structure/closet/secure_closet/synth_med,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "jE" = (
 /obj/structure/closet/secure_closet/synth_eng,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "jH" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "closed";
@@ -5090,12 +5093,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/aftport)
 "kP" = (
-/obj/machinery/light/small{
-	dir = 4;
-	icon_state = "bulb1"
+/obj/machinery/door/airlock/engineering{
+	name = "Synth's Storage";
+	secured_wires = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/seconddeck/foreport)
+/area/synth/borg_upload)
 "kQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/device/geiger,
@@ -5385,7 +5388,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/bluegrid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "lx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8444,7 +8447,23 @@
 /area/engineering/drone_fabrication)
 "tm" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/recharge_station,
+/obj/structure/table/rack{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/brigdoor/westright{
+	autoset_access = 0;
+	name = "Synth's suit storage";
+	req_access = list("ACCESS_CAPTAIN")
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "to" = (
@@ -8580,7 +8599,7 @@
 	dir = 2
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "tE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/techfloor,
@@ -9048,6 +9067,11 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/reinforced/airless,
 /area/space)
+"vb" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/drone_fabrication)
 "vc" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10837,7 +10861,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bluegrid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "Aw" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -13275,6 +13299,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/seconddeck/aftport)
+"GH" = (
+/obj/machinery/light/small{
+	dir = 4;
+	icon_state = "bulb1"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/seconddeck/foreport)
 "GI" = (
 /obj/machinery/conveyor_switch/oneway{
 	convdir = -1;
@@ -13867,7 +13898,7 @@
 	secured_wires = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "Ip" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -14711,12 +14742,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
 "Lp" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Synth's Storage";
-	secured_wires = 1
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/engineering/drone_fabrication)
+/turf/simulated/wall/prepainted,
+/area/synth/borg_upload)
 "Lr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4;
@@ -16727,7 +16754,7 @@
 	pixel_x = -8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/engineering/drone_fabrication)
+/area/synth/borg_upload)
 "RO" = (
 /obj/structure/table/rack,
 /obj/random/maintenance/solgov,
@@ -31418,7 +31445,7 @@ Zt
 gZ
 ZV
 ZV
-kP
+GH
 ZV
 dX
 aK
@@ -31617,11 +31644,11 @@ Nk
 kD
 VR
 nk
-qv
-qv
 Lp
-qv
-qv
+Lp
+kP
+Lp
+Lp
 dX
 aK
 bH
@@ -31819,11 +31846,11 @@ mX
 nP
 qm
 XA
-qv
+Lp
 tD
 iW
 jB
-qv
+Lp
 dX
 aK
 Zp
@@ -32021,11 +32048,11 @@ mY
 kD
 id
 XA
-qv
+Lp
 iS
 lu
 jC
-qv
+Lp
 dX
 aK
 cb
@@ -32223,11 +32250,11 @@ mZ
 kD
 GP
 XA
-qv
+Lp
 RL
 Au
 jD
-qv
+Lp
 dX
 aK
 cl
@@ -32425,11 +32452,11 @@ kD
 kD
 AI
 XA
-qv
+Lp
 iT
 Au
 jE
-qv
+Lp
 dX
 aK
 aK
@@ -32627,11 +32654,11 @@ JL
 pJ
 QM
 XA
-qv
-qv
+Lp
+Lp
 Io
-qv
-qv
+Lp
+Lp
 uQ
 sv
 uN
@@ -34044,7 +34071,7 @@ qv
 Tc
 Tc
 tm
-tm
+vb
 rF
 rF
 qv
