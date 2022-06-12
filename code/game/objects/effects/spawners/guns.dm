@@ -48,3 +48,15 @@
 				/obj/item/gun/energy/ionrifle,
 				/obj/item/gun/projectile/shotgun/pump
 	)
+
+/obj/random/orca
+	name = "Random plasma rifle"
+	desc = "This is a random plasma rifle."
+	icon = 'icons/obj/guns/assault_rifle.dmi'
+	icon_state = "arifle"
+
+/obj/random/orca/spawn_choices()
+	return list(/obj/item/gun/energy/k342/explo,
+				/obj/item/gun/energy/k342,
+				/obj/item/gun/energy/k342/sniper
+	)

@@ -92,14 +92,32 @@
 	security_level = SUPPLY_SECURITY_HIGH
 
 //proxima code start
-/decl/hierarchy/supply_pack/security/k342
-	name = "Weapons - K342 - Barrakuda"
-	contains = list(/obj/item/gun/energy/k342 = 2, /obj/item/cell/guncell/medium = 4)
+/decl/hierarchy/supply_pack/security/barracuda
+	name = "Weapons - Plasma assault rifles"
+	contains = list(/obj/item/gun/energy/k342 = 2,
+					/obj/item/cell/guncell/medium = 6)
 	cost = 110
 	containertype = /obj/structure/closet/crate/secure/weapon
-	containername = "k342 - barrakuda crate"
-	access = access_emergency_armory
-	security_level = SUPPLY_SECURITY_ELEVATED
+	containername = "plasma longarms crate"
+	access = access_armory
+
+/decl/hierarchy/supply_pack/security/orca
+	name = "Weapons - Plasma assault rifles (Expeditionary Corps)"
+	contains = list(/obj/item/gun/energy/k342/explo = 2,
+					/obj/item/cell/guncell/medium = 6)
+	cost = 130
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "plasma longarms crate"
+	access = access_armory
+
+/decl/hierarchy/supply_pack/security/mantis
+	name = "Weapons - Plasma sniper rifles"
+	contains = list(/obj/item/gun/energy/k342/sniper = 2,
+					/obj/item/cell/guncell/medium = 6)
+	cost = 180
+	containertype = /obj/structure/closet/crate/secure/weapon
+	containername = "plasma longarms crate"
+	access = access_armory
 //proxima code end
 
 /decl/hierarchy/supply_pack/security/sniperlaser
