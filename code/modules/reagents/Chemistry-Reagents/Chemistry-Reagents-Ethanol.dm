@@ -1236,6 +1236,66 @@
 	glass_name = "Screwdriver"
 	glass_desc = "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
 
+/datum/reagent/ethanol/senator
+	name = "Senator"
+	description = "A dark, dense beverage, smelling like some oil and steel. Nanomachines, son!"
+	taste_description = "anarchy and nanomachines"
+	reagent_state = LIQUID
+	color = "#101010"
+	strength = 20
+	protein_amount = 0.5
+
+	glass_name = "Senator"
+	glass_desc = "All right, the truth then. You're right about one thing... I do need capital. And votes. Wanna know why? I have a dream."
+
+/datum/reagent/ethanol/senator/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	if(alien == IS_DIONA)
+		return
+	if(M.dizziness)
+		M.dizziness = max(0, M.dizziness - 20)
+	if(M.confused)
+		M.confused = max(0, M.confused - 10)
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			for(var/obj/item/organ/internal/I in H.internal_organs)
+				if(BP_IS_ROBOTIC(I))
+					I.heal_damage(5*removed)
+
+/datum/reagent/ethanol/senator_armstrong
+	name = "Senator Armstrong"
+	description = "A dark, dense beverage, smelling like some oil, steel and blood. Nanomachines, son!"
+	taste_description = "viscous masculine anarchy"
+	reagent_state = LIQUID
+	color = "#101010"
+	strength = 7.5
+	protein_amount = 1
+
+	glass_name = "Senator Armstrong"
+	glass_desc = "Nanomachines, son. They harden in response to physical trauma. You can't hurt me, Jack."
+
+/datum/reagent/ethanol/senator_armstrong/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	if(alien == IS_DIONA)
+		return
+	M.adjustOxyLoss(-5 * removed)
+	M.heal_organ_damage(3 * removed, 2 * removed)
+	M.adjustToxLoss(-3 * removed)
+	if(prob(2.5))
+		M.emote(pick("twitch", "blink_r", "shiver"))
+	M.add_chemical_effect(CE_SPEEDBOOST, 0.5)
+	M.add_chemical_effect(CE_PULSE, 1.5)
+	M.add_chemical_effect(CE_STIMULANT, 2)
+	if(M.dizziness)
+		M.dizziness = max(0, M.dizziness - 20)
+	if(M.confused)
+		M.confused = max(0, M.confused - 10)
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			for(var/obj/item/organ/internal/I in H.internal_organs)
+				if(BP_IS_ROBOTIC(I))
+					I.heal_damage(10*removed)
+
 /datum/reagent/ethanol/ships_surgeon
 	name = "Ship's Surgeon"
 	description = "Rum and Dr. Gibb. Served ice cold, like the scalpel."

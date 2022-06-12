@@ -1757,6 +1757,18 @@
 	required_reagents = list(/datum/reagent/ethanol/vodka = 2, /datum/reagent/drink/juice/orange = 1)
 	result_amount = 3
 
+/datum/chemical_reaction/senator
+	name = "Senator"
+	result = /datum/reagent/ethanol/senator
+	required_reagents = list(/datum/reagent/ethanol/armstrong = 1, /datum/reagent/ethanol/tequila = 1, /datum/reagent/ethanol/snowwhite = 1, /datum/reagent/oil = 1, /datum/reagent/nanitefluid = 1)
+	result_amount = 5
+
+/datum/chemical_reaction/senator_armstrong
+	name = "Senator Armstrong"
+	result = /datum/reagent/ethanol/senator_armstrong
+	required_reagents = list(/datum/reagent/ethanol/senator = 1, /datum/reagent/iron = 1, /datum/reagent/ethanol = 1, /datum/reagent/tricordrazine = 1, /datum/reagent/hyperzine = 1)
+	result_amount = 1
+
 /datum/chemical_reaction/battuta
 	name = "Ibn Battuta"
 	result = /datum/reagent/ethanol/battuta
@@ -2192,6 +2204,12 @@
 	name = "Milkshake"
 	result = /datum/reagent/drink/milkshake
 	required_reagents = list(/datum/reagent/drink/milk/cream = 1, /datum/reagent/drink/ice = 2, /datum/reagent/drink/milk = 2)
+	result_amount = 5
+
+/datum/chemical_reaction/dangomilk
+	name = "Dango Milk"
+	result = /datum/reagent/drink/dangomilk
+	required_reagents = list(/datum/reagent/drink/milk/cream = 1, /datum/reagent/nutriment/flour = 1, /datum/reagent/nutriment/rice = 1, /datum/reagent/drink/milk = 2)
 	result_amount = 5
 
 /datum/chemical_reaction/rewriter
