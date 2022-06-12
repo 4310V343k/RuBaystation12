@@ -341,5 +341,6 @@
 
 /decl/emote/visible/adjust
 	key = "adjust"
+	check_restraints = TRUE
 	emote_message_3p = "USER поправляет одежду."
 	emote_message_3p_target = "USER поправляет одежду TARGET."
