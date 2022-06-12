@@ -4394,6 +4394,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "iI" = (
@@ -5042,6 +5043,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/port)
+"ky" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/prepainted,
+/area/crew_quarters/heads/office/sgr)
 "kA" = (
 /obj/structure/cable/green{
 	d2 = 4;
@@ -6343,6 +6348,7 @@
 	icon_state = "map"
 	},
 /obj/machinery/ai_slipper,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_foyer)
 "nU" = (
@@ -6499,6 +6505,7 @@
 	pixel_y = -24
 	},
 /obj/machinery/ai_slipper,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "ox" = (
@@ -6824,8 +6831,8 @@
 /obj/item/device/radio/intercom/locked/ai_private{
 	pixel_y = 22
 	},
-/obj/machinery/tele_projector{
-	dir = 6
+/obj/machinery/computer/teleporter{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_foyer)
@@ -7356,6 +7363,7 @@
 	icon_state = "warning";
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/turret_protected/ai_foyer)
 "qz" = (
@@ -11126,6 +11134,10 @@
 "AN" = (
 /turf/simulated/floor/tiled/dark,
 /area/aquila/mess)
+"AP" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/prepainted,
+/area/hallway/primary/bridge/fore)
 "AR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -11794,6 +11806,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/heads/office/co)
+"DA" = (
+/obj/machinery/button/blast_door{
+	pixel_x = 5;
+	pixel_y = -8;
+	id_tag = "AICoreLastResort"
+	},
+/turf/simulated/wall/r_wall/prepainted,
+/area/turret_protected/ai)
 "DE" = (
 /obj/structure/cable/green,
 /obj/machinery/door/firedoor,
@@ -11820,6 +11840,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/blue,
 /turf/simulated/wall/r_wall/prepainted,
 /area/turret_protected/ai_foyer)
+"DP" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/prepainted,
+/area/bridge/meeting_room)
 "DQ" = (
 /obj/structure/bed/chair/comfy/captain{
 	color = "#666666";
@@ -13355,6 +13379,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/ai_slipper,
+/obj/machinery/door/blast/regular{
+	dir = 4;
+	id_tag = "AICoreLastResort";
+	name = "AI Core Security Shutters"
+	},
 /turf/simulated/floor/bluegrid/airless,
 /area/turret_protected/ai)
 "IY" = (
@@ -13433,6 +13462,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/ai_slipper,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_outer_chamber)
 "Jo" = (
@@ -14174,6 +14204,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/aquila/mess)
 "Mz" = (
+/obj/machinery/status_display,
 /turf/simulated/wall/r_wall/hull,
 /area/crew_quarters/heads/office/co)
 "MA" = (
@@ -14863,6 +14894,10 @@
 "Pt" = (
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/co)
+"Pw" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/prepainted,
+/area/crew_quarters/heads/office/cl/backroom)
 "Py" = (
 /obj/structure/bed/chair/comfy/blue{
 	dir = 4;
@@ -15716,7 +15751,9 @@
 	pixel_x = -32;
 	pixel_y = 0
 	},
-/obj/machinery/tele_pad,
+/obj/machinery/tele_projector{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_foyer)
 "SA" = (
@@ -16167,6 +16204,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/aquila/maintenance)
+"Ue" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall/hull,
+/area/maintenance/bridge/forestarboard)
 "Uf" = (
 /obj/structure/bed/chair/padded/beige,
 /obj/effect/floor_decal/corner/blue/mono,
@@ -16302,9 +16343,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/computer/teleporter{
-	dir = 4
-	},
+/obj/machinery/tele_pad,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/turret_protected/ai_foyer)
 "UL" = (
@@ -17601,6 +17640,7 @@
 	pixel_y = 24
 	},
 /obj/machinery/ai_slipper,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "ZX" = (
@@ -24968,7 +25008,7 @@ af
 af
 af
 af
-af
+Ue
 af
 af
 fu
@@ -28815,7 +28855,7 @@ cs
 hq
 hq
 hq
-hq
+DP
 hq
 hq
 hq
@@ -29030,7 +29070,7 @@ sf
 sP
 ts
 ug
-sL
+ky
 sL
 sL
 sL
@@ -30223,7 +30263,7 @@ NC
 Ox
 PW
 nv
-dk
+Pw
 xW
 Rp
 fD
@@ -31640,7 +31680,7 @@ Rj
 sT
 fB
 fB
-fB
+AP
 fB
 uV
 in
@@ -41542,7 +41582,7 @@ os
 RP
 ic
 sA
-RP
+DA
 Cj
 RP
 sA
