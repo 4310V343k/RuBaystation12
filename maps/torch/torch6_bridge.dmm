@@ -3666,6 +3666,7 @@
 /obj/item/device/radio/intercom/locked/ai_private{
 	pixel_y = 22
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "gJ" = (
@@ -4100,6 +4101,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "ic" = (
@@ -6203,7 +6205,7 @@
 	c_tag = "AI Core - Fore";
 	dir = 4
 	},
-/obj/machinery/ai_slipper,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "nu" = (
@@ -6348,7 +6350,6 @@
 	icon_state = "map"
 	},
 /obj/machinery/ai_slipper,
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_foyer)
 "nU" = (
@@ -6505,7 +6506,6 @@
 	pixel_y = -24
 	},
 /obj/machinery/ai_slipper,
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "ox" = (
@@ -6554,6 +6554,7 @@
 	dir = 8;
 	pixel_x = -24
 	},
+/obj/machinery/ai_slipper,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
 "oE" = (
@@ -11610,6 +11611,15 @@
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/hallway/primary/bridge/fore)
+"CL" = (
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/bluegrid,
+/area/turret_protected/ai_foyer)
 "CM" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -11810,7 +11820,8 @@
 /obj/machinery/button/blast_door{
 	pixel_x = 5;
 	pixel_y = -8;
-	id_tag = "AICoreLastResort"
+	id_tag = "AICoreLastResort";
+	name = "AI Core Last Resort"
 	},
 /turf/simulated/wall/r_wall/prepainted,
 /area/turret_protected/ai)
@@ -12230,6 +12241,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_foyer)
 "Fy" = (
@@ -12306,6 +12318,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_outer_chamber)
 "FS" = (
@@ -13379,10 +13392,13 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/ai_slipper,
-/obj/machinery/door/blast/regular{
+/obj/machinery/door/blast/regular/open{
+	density = 0;
 	dir = 4;
+	icon_state = "pdoor0";
 	id_tag = "AICoreLastResort";
-	name = "AI Core Security Shutters"
+	name = "Last Resort";
+	opacity = 0
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/turret_protected/ai)
@@ -13462,7 +13478,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/ai_slipper,
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_outer_chamber)
 "Jo" = (
@@ -17640,7 +17655,6 @@
 	pixel_y = 24
 	},
 /obj/machinery/ai_slipper,
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "ZX" = (
@@ -42795,7 +42809,7 @@ VO
 CY
 XA
 VO
-Yx
+CL
 VO
 XA
 CY
