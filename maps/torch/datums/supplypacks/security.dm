@@ -100,6 +100,7 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "plasma longarms crate"
 	access = access_armory
+	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/orca
 	name = "Weapons - Plasma assault rifles (Expeditionary Corps)"
@@ -109,8 +110,9 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "plasma longarms crate"
 	access = access_armory
+	security_level = SUPPLY_SECURITY_ELEVATED
 
-/decl/hierarchy/supply_pack/security/mantis
+/decl/hierarchy/supply_pack/security/stingray
 	name = "Weapons - Plasma sniper rifles"
 	contains = list(/obj/item/gun/energy/k342/sniper = 2,
 					/obj/item/cell/guncell/medium = 6)
@@ -118,6 +120,7 @@
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "plasma longarms crate"
 	access = access_armory
+	security_level = SUPPLY_SECURITY_HIGH
 //proxima code end
 
 /decl/hierarchy/supply_pack/security/sniperlaser
