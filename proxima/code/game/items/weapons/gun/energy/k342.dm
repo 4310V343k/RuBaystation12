@@ -151,7 +151,7 @@
 
 /obj/item/gun/energy/k342/sniper
 	name = "plasma sniper rifle"
-	desc = "K480 Mantis is the latest heavy plasma weapon created by NanoTrasen for SolGov snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower."
+	desc = "K480 Stingray is the latest heavy plasma weapon created by NanoTrasen for SolGov snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower."
 	icon = 'proxima/icons/obj/guns/k480.dmi'
 	icon_state = "mantis_off"
 	item_state = "mantis"
