@@ -99,6 +99,7 @@
 		/obj/item/tank
 		)
 
+
 /obj/item/gripper/cultivator
 	name = "cultivator gripper"
 	icon_state = "gripper"
