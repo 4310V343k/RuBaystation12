@@ -155,7 +155,7 @@
 
 //proxima code start
 /obj/item/gun/energy/k342/explo
-	desc = "K342 - Kasatka is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, lethal and net-mode. This one designed specialy for expeditionary team"
+	desc = "K342 - Orca is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, lethal and net-mode. This one designed specialy for expeditionary team"
 	icon_state = "kasatka_off"
 	item_state = "kasatka"
 	req_access = list(list("ACCESS_TORCH_EXPLORER"))
