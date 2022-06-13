@@ -600,15 +600,32 @@
 		var/datum/species/unathi/S = M.species
 		S.handle_sugar(M,src,0.5)
 
+/datum/reagent/drink/dangomilk
+	name = "Dango Milk"
+	description = "Tasty snack, made of milk and grain, very popular at Yangyu-speaking colonies and favored by scientists for nutritional value."
+	taste_description = "creamy and milky rice"
+	color = "#aee5e4"
+	adj_temp = -9
+	protein_amount = 0.5
+
+	glass_name = "dango milk"
+	glass_desc = "Tasty snack, made of milk and grain, very popular at Yangyu-speaking colonies and favored by scientists for nutritional value."
+
+/datum/reagent/dangomilk/affect_ingest(var/mob/living/carbon/human/M, var/alien, var/removed)
+	..()
+	if(alien == IS_UNATHI)
+		var/datum/species/unathi/S = M.species
+		S.handle_sugar(M,src,0.5)
+
 /datum/reagent/drink/rewriter
 	name = "Rewriter"
-	description = "The secret of the sanctuary of the Libarian..."
+	description = "The secret of the sanctuary of the Librarian..."
 	taste_description = "a bad night out"
 	color = "#485000"
 	adj_temp = -5
 
 	glass_name = "Rewriter"
-	glass_desc = "The secret of the sanctuary of the Libarian..."
+	glass_desc = "The secret of the sanctuary of the Librarian..."
 
 /datum/reagent/drink/rewriter/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
