@@ -153,6 +153,7 @@ GLOBAL_LIST_INIT(jukebox_tracks, list(
 	/decl/audio/track/absconditus,
 	/decl/audio/track/ambispace,
 	/decl/audio/track/as_far_as_it_gets,
+	/decl/audio/track/cast_iron,
 	/decl/audio/track/clouds_of_fire,
 	/decl/audio/track/comet_haley,
 	/decl/audio/track/df_theme,
