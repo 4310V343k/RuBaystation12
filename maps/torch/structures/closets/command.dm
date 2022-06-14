@@ -162,9 +162,11 @@
 /obj/structure/closet/secure_closet/synth_med/WillContain()
 	return list(
 		/obj/item/storage/box/autoinjectors,
+		/obj/item/clothing/accessory/storage/white_vest,
 		/obj/item/storage/box/gloves,
 		/obj/item/storage/box/masks,
 		/obj/item/storage/box/syringes,
+		/obj/item/storage/box/armband/med,
 		/obj/item/defibrillator/compact/loaded,
 		/obj/item/auto_cpr,
 		/obj/item/clothing/glasses/hud/health/prescription,
@@ -177,6 +179,12 @@
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
 		/obj/item/storage/belt/medical/emt,
+		/obj/item/clothing/accessory/stethoscope,
+		/obj/item/device/flashlight/pen,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/medic, /obj/item/storage/backpack/satchel/med)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/med, /obj/item/storage/backpack/messenger/med)),
+		RANDOM_SCRUBS,
+		RANDOM_SCRUBS,
 	)
 
 /obj/structure/closet/secure_closet/synth_eng
@@ -186,5 +194,23 @@
 
 /obj/structure/closet/secure_closet/synth_eng/WillContain()
 	return list(
-
+		/obj/item/device/multitool,
+		/obj/item/clothing/suit/storage/hazardvest,
+		/obj/item/clothing/glasses/meson,
+		/obj/item/clothing/glasses/welding/superior,
+		/obj/item/clothing/accessory/storage/brown_vest,
+		/obj/item/storage/belt/utility/full,
+		/obj/item/taperoll/engineering,
+		/obj/item/taperoll/atmos,
+		/obj/item/crowbar/brace_jack,
+		/obj/item/storage/box/armband/engine,
+		/obj/item/clothing/under/gorka/engi,
+		/obj/item/clothing/under/hazard,
+		/obj/item/clothing/under/rank/atmospheric_technician,
+		/obj/item/clothing/under/rank/engineer,
+		/obj/item/clothing/under/solgov/utility/expeditionary/officer/engineering,
+		/obj/item/device/flashlight,
+		/obj/item/clothing/gloves/insulated,
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/industrial, /obj/item/storage/backpack/satchel/eng)),
+		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/eng, /obj/item/storage/backpack/messenger/engi))
 	)
