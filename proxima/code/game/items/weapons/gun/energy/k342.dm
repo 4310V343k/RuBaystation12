@@ -104,7 +104,7 @@
 
 /obj/item/gun/energy/k342
 	name = "plasma rifle"
-	desc = "K342 - Barracuda is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, incendiary and lethal."
+	desc = "K342 Barrakuda is the latest plasma weapon created by NanoTrasen. It can fire several types of charges: stunning, incendiary and lethal."
 	icon = 'proxima/icons/obj/guns/k342.dmi'
 	w_class = ITEM_SIZE_LARGE
 	item_icons = list(
