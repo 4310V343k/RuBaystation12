@@ -8479,6 +8479,7 @@
 	name = "Synth's suit storage";
 	req_access = list("ACCESS_CAPTAIN")
 	},
+/obj/item/rig/zero/synth/equipped,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "to" = (
@@ -9370,6 +9371,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
+"vL" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/assembly/robotics)
 "vN" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14870,11 +14876,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
-"LP" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark,
-/area/assembly/robotics)
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -35923,7 +35924,7 @@ eG
 bK
 XP
 bZ
-LP
+vL
 cz
 nW
 Sa
