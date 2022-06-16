@@ -7181,6 +7181,11 @@
 /obj/structure/hygiene/sink{
 	pixel_y = -12
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Infirmary - Robotics Laboratory";
+	dir = 4;
+	network = list("Medical, Engineering")
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/surgery)
 "auP" = (
@@ -16714,18 +16719,6 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/foyer/storeroom)
-"evA" = (
-/obj/machinery/door/airlock/medical{
-	autoset_access = 0;
-	name = "Robotics Surgery";
-	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
-	},
-/obj/machinery/holosign/surgery{
-	dir = 4;
-	id_tag = "roboticlab_or"
-	},
-/turf/simulated/floor/plating,
-/area/assembly/robotics/surgery)
 "ewb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -23208,6 +23201,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
+"nHl" = (
+/obj/machinery/door/airlock/medical{
+	autoset_access = 0;
+	name = "Robotics Surgery";
+	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
+	},
+/obj/machinery/holosign/surgery{
+	dir = 4;
+	id_tag = "roboticlab_or"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics/surgery)
 "nIb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -47330,7 +47335,7 @@ gQI
 oMq
 uSl
 mrX
-evA
+nHl
 uSl
 uSl
 lgb

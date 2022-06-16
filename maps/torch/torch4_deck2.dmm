@@ -6048,6 +6048,7 @@
 "nd" = (
 /obj/machinery/recharge_station,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/second_deck,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/chargebay)
 "ne" = (
@@ -6735,26 +6736,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/engineering/engine_monitoring)
 "pr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/catwalk_plated,
-/obj/machinery/camera/network/second_deck{
-	c_tag = "Second Deck Hallway - Central East"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/hallway/primary/seconddeck)
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/assembly/robotics)
 "pv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6923,6 +6908,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/camera/network/second_deck{
+	c_tag = "Second Deck Hallway - Central East"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/seconddeck)
@@ -9371,11 +9362,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
-"vL" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark,
-/area/assembly/robotics)
 "vN" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -35924,7 +35910,7 @@ eG
 bK
 XP
 bZ
-vL
+pr
 cz
 nW
 Sa
@@ -37347,7 +37333,7 @@ WH
 un
 PS
 XX
-pr
+fQ
 Ts
 TJ
 TJ
