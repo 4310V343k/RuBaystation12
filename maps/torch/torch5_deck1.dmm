@@ -5733,19 +5733,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/structure/hygiene/sink{
-	pixel_y = -12
-	},
-/obj/machinery/button/windowtint{
-	id = "roboticlab_or";
-	pixel_x = -6;
-	pixel_y = -24
-	},
-/obj/machinery/button/holosign{
-	id_tag = "roboticlab_or";
-	pixel_x = 6;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/surgery)
 "amq" = (
@@ -7180,6 +7167,19 @@
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
+	},
+/obj/machinery/button/windowtint{
+	id = "roboticlab_or";
+	pixel_x = -6;
+	pixel_y = -24
+	},
+/obj/machinery/button/holosign{
+	id_tag = "roboticlab_or";
+	pixel_x = 6;
+	pixel_y = -24
+	},
+/obj/structure/hygiene/sink{
+	pixel_y = -12
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/surgery)
@@ -16714,6 +16714,18 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/foyer/storeroom)
+"evA" = (
+/obj/machinery/door/airlock/medical{
+	autoset_access = 0;
+	name = "Robotics Surgery";
+	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
+	},
+/obj/machinery/holosign/surgery{
+	dir = 4;
+	id_tag = "roboticlab_or"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics/surgery)
 "ewb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -17133,12 +17145,6 @@
 /obj/item/bedsheet/hos,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftport)
-"foK" = (
-/obj/effect/wallframe_spawn/reinforced/polarized/full{
-	id = "roboticlab_or"
-	},
-/turf/simulated/floor/plating,
-/area/assembly/robotics/surgery)
 "foP" = (
 /obj/effect/floor_decal/corner/research{
 	dir = 5
@@ -18907,18 +18913,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/rnd/development)
-"idK" = (
-/obj/machinery/door/airlock/medical{
-	autoset_access = 0;
-	name = "Robotics Surgery";
-	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
-	},
-/obj/machinery/holosign/surgery{
-	dir = 4;
-	id_tag = "roboticlab_or"
-	},
-/turf/simulated/floor/plating,
-/area/assembly/robotics/surgery)
 "iej" = (
 /obj/effect/wallframe_spawn/reinforced_phoron,
 /obj/machinery/door/firedoor,
@@ -22168,6 +22162,12 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/locker)
+"mrX" = (
+/obj/effect/wallframe_spawn/reinforced/polarized/full{
+	id = "roboticlab_or"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics/surgery)
 "mtk" = (
 /obj/item/crowbar/prybar,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -46928,7 +46928,7 @@ oPD
 kgi
 bvY
 amp
-uSl
+mrX
 lfb
 ayi
 ggA
@@ -47126,7 +47126,7 @@ xcW
 aor
 apm
 knb
-foK
+mrX
 kDb
 ajv
 lcq
@@ -47329,8 +47329,8 @@ dRs
 gQI
 oMq
 uSl
-foK
-idK
+mrX
+evA
 uSl
 uSl
 lgb
