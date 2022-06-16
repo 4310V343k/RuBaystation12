@@ -1164,10 +1164,6 @@
 	icon_state = "warningcorner"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8;
-	icon_state = "warning"
-	},
 /obj/item/device/robotanalyzer,
 /obj/item/stack/nanopaste,
 /obj/item/stack/nanopaste,
@@ -5509,11 +5505,6 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
-"lH" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/dark,
-/area/assembly/robotics)
 "lJ" = (
 /obj/item/stool/padded,
 /obj/effect/floor_decal/industrial/warning,
@@ -14879,6 +14870,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
+"LP" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/assembly/robotics)
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -35927,7 +35923,7 @@ eG
 bK
 XP
 bZ
-lH
+LP
 cz
 nW
 Sa
