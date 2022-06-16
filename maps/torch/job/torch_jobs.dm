@@ -21,7 +21,8 @@
 		/datum/species/human/spacer = list(/datum/job/synthetic),
 		/datum/species/human/vatgrown = list(/datum/job/synthetic),
 		/datum/species/human/tritonian = list(/datum/job/synthetic),
-		/datum/species/human/mule = list(/datum/job/synthetic)
+		/datum/species/human/mule = list(/datum/job/synthetic),
+		/datum/species/human = list(/datum/job/synthetic)
 	)
 #undef HUMAN_ONLY_JOBS
 
