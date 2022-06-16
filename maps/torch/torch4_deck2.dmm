@@ -1108,6 +1108,24 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
 "bY" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8;
+	icon_state = "warningcorner"
+	},
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/assembly/robotics)
+"bZ" = (
 /obj/item/stock_parts/scanning_module,
 /obj/item/stock_parts/manipulator,
 /obj/item/stock_parts/manipulator,
@@ -1146,13 +1164,6 @@
 	icon_state = "warningcorner"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/alarm{
-	pixel_y = 24
-	},
-/obj/machinery/light_switch{
-	pixel_x = -22;
-	pixel_y = 24
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
 	icon_state = "warning"
@@ -1160,13 +1171,9 @@
 /obj/item/device/robotanalyzer,
 /obj/item/stack/nanopaste,
 /obj/item/stack/nanopaste,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/assembly/robotics)
-"bZ" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/light{
-	dir = 1
+	dir = 1;
+	icon_state = "tube1"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/robotics)
@@ -5502,6 +5509,11 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
+"lH" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/assembly/robotics)
 "lJ" = (
 /obj/item/stool/padded,
 /obj/effect/floor_decal/industrial/warning,
@@ -35915,7 +35927,7 @@ eG
 bK
 XP
 bZ
-cz
+lH
 cz
 nW
 Sa
