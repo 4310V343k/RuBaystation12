@@ -17895,6 +17895,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medpaperworkoffice)
+"gGo" = (
+/obj/machinery/door/airlock/medical{
+	autoset_access = 0;
+	name = "Robotics Surgery";
+	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
+	},
+/obj/machinery/holosign/surgery{
+	dir = 4;
+	id_tag = "or1"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics/surgery)
 "gGO" = (
 /obj/item/device/radio/intercom/department/security{
 	pixel_y = 23
@@ -22197,11 +22209,6 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 4;
 	name = "Robotics";
@@ -24238,18 +24245,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/brig)
-"oVp" = (
-/obj/machinery/door/airlock/medical{
-	autoset_access = 0;
-	name = "Robotics Surgery";
-	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
-	},
-/obj/machinery/holosign/surgery{
-	dir = 4;
-	id_tag = "or1"
-	},
-/turf/simulated/floor/plating,
-/area/assembly/robotics/surgery)
 "oWb" = (
 /obj/machinery/light_switch{
 	pixel_x = 6;
@@ -47335,7 +47330,7 @@ gQI
 oMq
 uSl
 foK
-oVp
+gGo
 uSl
 uSl
 lgb
