@@ -57,7 +57,19 @@
 	)
 	use_species_whitelist = SPECIES_SHELL
 
-	min_skill = list()
+	min_skill = list(   SKILL_COMBAT      = SKILL_ADEPT,
+						SKILL_WEAPONS	  = SKILL_NONE,
+
+						SKILL_EVA          = SKILL_BASIC,
+						SKILL_PILOT        = SKILL_BASIC,
+						SKILL_CONSTRUCTION = SKILL_ADEPT,
+						SKILL_ELECTRICAL   = SKILL_ADEPT,
+						SKILL_ATMOS        = SKILL_BASIC,
+						SKILL_ENGINES      = SKILL_ADEPT,
+						SKILL_DEVICES      = SKILL_BASIC,
+						SKILL_MEDICAL      = SKILL_ADEPT,
+						SKILL_ANATOMY      = SKILL_ADEPT,
+						SKILL_CHEMISTRY    = SKILL_BASIC)
 
 	max_skill = list(   SKILL_COMBAT      = SKILL_ADEPT,
 						SKILL_WEAPONS	  = SKILL_NONE,
