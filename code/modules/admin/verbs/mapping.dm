@@ -145,6 +145,7 @@ var/global/list/debug_verbs = list (
 		,/client/proc/spawn_tanktransferbomb
 		,/client/proc/find_leaky_pipes
 		,/client/proc/analyze_openturf
+		,/datum/admins/proc/xeno_whitelist_panel//inf
 	)
 
 
