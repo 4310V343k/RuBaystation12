@@ -399,20 +399,16 @@
 	xo = round(targloc.x - startloc.x + x_offset, 1)
 
 	// plot the initial trajectory
-	trajectory = new()
-	trajectory.setup(starting, original, pixel_x, pixel_y, angle_offset)
+	var/offset = 0
+	trajectory = new
+	trajectory.setup(starting, original, pixel_x, pixel_y, angle_offset=offset)
+	effect_transform = matrix().Update(
+		scale_x = round(trajectory.return_hypotenuse() + 0.005, 0.001),
+		rotation = round(-trajectory.angle, 0.1)
+	)
+	SetTransform(rotation = -(trajectory.angle + 90))
 
-	// generate this now since all visual effects the projectile makes can use it
-	effect_transform = new()
-	effect_transform.Scale(trajectory.return_hypotenuse(), 1)
-	effect_transform.Turn(-trajectory.return_angle())		//no idea why this has to be inverted, but it works
-
-	transform = turn(transform, -(trajectory.return_angle() + 90)) //no idea why 90 needs to be added, but it works
-
-/obj/item/projectile/proc/muzzle_effect(var/matrix/T)
-	if (!location)
-		return
-
+/obj/item/projectile/proc/muzzle_effect()
 	if(silenced)
 		return
 
@@ -420,53 +416,33 @@
 		var/obj/effect/projectile/M = new muzzle_type(get_turf(src))
 
 		if(istype(M))
-			if(proj_color)
-				var/icon/I = new(M.icon, M.icon_state)
-				I.Blend(proj_color)
-				M.icon = I
-			M.set_transform(T)
-			M.pixel_x = location.pixel_x
-			M.pixel_y = location.pixel_y
+			M.SetTransform(others = effect_transform)
+			M.pixel_x = round(location.pixel_x, 1)
+			M.pixel_y = round(location.pixel_y, 1)
 			if(!hitscan) //Bullets don't hit their target instantly, so we can't link the deletion of the muzzle flash to the bullet's Destroy()
 				QDEL_IN(M,1)
 			else
 				segments += M
 
-/obj/item/projectile/proc/tracer_effect(var/matrix/M)
-	if (!location)
-		return
-
+/obj/item/projectile/proc/tracer_effect()
 	if(ispath(tracer_type))
 		var/obj/effect/projectile/P = new tracer_type(location.loc)
 
 		if(istype(P))
-			if(proj_color)
-				var/icon/I = new(P.icon, P.icon_state)
-				I.Blend(proj_color)
-				P.icon = I
-			P.set_transform(M)
-			P.pixel_x = location.pixel_x
-			P.pixel_y = location.pixel_y
-			if(!hitscan)
-				QDEL_IN(M,1)
-			else
+			P.SetTransform(others = effect_transform)
+			P.pixel_x = round(location.pixel_x, 1)
+			P.pixel_y = round(location.pixel_y, 1)
+			if(hitscan)
 				segments += P
 
-/obj/item/projectile/proc/impact_effect(var/matrix/M)
-	if (!location)
-		return
-
+/obj/item/projectile/proc/impact_effect()
 	if(ispath(impact_type))
 		var/obj/effect/projectile/P = new impact_type(location ? location.loc : get_turf(src))
 
 		if(istype(P) && location)
-			if(proj_color)
-				var/icon/I = new(P.icon, P.icon_state)
-				I.Blend(proj_color)
-				P.icon = I
-			P.set_transform(M)
-			P.pixel_x = location.pixel_x
-			P.pixel_y = location.pixel_y
+			P.SetTransform(others = effect_transform)
+			P.pixel_x = round(location.pixel_x, 1)
+			P.pixel_y = round(location.pixel_y, 1)
 			segments += P
 
 //"Tracing" projectile

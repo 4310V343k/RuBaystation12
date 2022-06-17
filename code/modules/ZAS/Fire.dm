@@ -127,11 +127,6 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 			if(my_tile.open_directions & direction) //Grab all valid bordering tiles
 				if(!enemy_tile.zone || enemy_tile.hotspot)
 					continue
-
-				if(enemy_tile.fire_protection > world.time-30)
-					update_firelevel(firelevel - 1.5)
-					continue
-
 				//if(!enemy_tile.zone.fire_tiles.len) TODO - optimize
 				var/datum/gas_mixture/acs = enemy_tile.return_air()
 				if(!acs || !acs.check_combustability())
@@ -158,7 +153,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	var/datum/gas_mixture/air_contents = loc.return_air()
 	color = fire_color(air_contents.temperature)
 
-	update_firelevel(fl)
+	firelevel = fl
 	SSair.active_hotspots.Add(src)
 
 	//If this is a turf and it can burn maybe it should be ignited too - Lingering fire effect of sorts

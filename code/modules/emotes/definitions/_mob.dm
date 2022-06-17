@@ -34,7 +34,7 @@
 	/decl/emote/audible/deathgasp_alien,
 	/decl/emote/audible/whimper,
 	/decl/emote/audible/gasp,
-	/decl/emote/audible/scretch,
+	/decl/emote/visible/scratch,
 	/decl/emote/audible/choke,
 	/decl/emote/audible/moan,
 	/decl/emote/audible/gnarl
@@ -56,7 +56,6 @@
 	/decl/emote/visible/collapse,
 	/decl/emote/audible/hiss,
 	/decl/emote/audible,
-	/decl/emote/audible/scretch,
 	/decl/emote/audible/choke,
 	/decl/emote/audible/gnarl,
 	/decl/emote/audible/bug_hiss,

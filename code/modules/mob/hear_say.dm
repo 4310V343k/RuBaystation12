@@ -1,7 +1,5 @@
-// At minimum every mob has a hear_say proc.
-
-/mob/proc/hear_say(var/message, var/verb = "says", var/datum/language/language = null, var/alt_name = "",var/italics = 0, var/mob/speaker = null, var/sound/speech_sound, var/sound_vol, var/fontsize = null)
-	if(!client)
+/mob/proc/hear_say(message, verb = "says", datum/language/language, alt_name, italics, mob/speaker, sound/speech_sound, sound_vol)
+	if (!client)
 		return
 
 	var/is_ghost = isghost(src)
@@ -94,29 +92,24 @@
 	if (!language)
 		display_message = {"[display_verb], <span class="message"><span class="body">"[display_message]"</span></span>"}
 	else
-		if (language)
-			var/nverb = verb
-			if (say_understands(speaker, language))
-				var/skip = FALSE
-				if (isliving(src))
-					var/mob/living/L = src
-					skip = L.default_language == language
-				if (!skip)
-					switch(src.get_preference_value(/datum/client_preference/language_display))
-						if(GLOB.PREF_FULL) // Full language name
-							nverb = "[verb] in [language.name]"
-						if(GLOB.PREF_SHORTHAND) //Shorthand codes
-							nverb = "[verb] ([language.shorthand])"
-						if(GLOB.PREF_OFF)//Regular output
-							nverb = verb
-			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [language.format_message(message, nverb, fontsize)]</span>")
-		else
-			var/F1 = fontsize ? "<font size=[fontsize]>" : ""
-			var/F2 = fontsize ? "</font>" : ""
-			on_hear_say("<span class='game say'>[track]<span class='name'>[speaker_name]</span>[alt_name] [verb], <span class='message'><span class='body'>[F1]\"[message]\"[F2]</span></span></span>")
-		if (speech_sound && (get_dist(speaker, src) <= world.view && src.z == speaker.z))
-			var/turf/source = speaker? get_turf(speaker) : get_turf(src)
-			src.playsound_local(source, speech_sound, sound_vol, 1)
+		var/hint_preference = get_preference_value(/datum/client_preference/language_display)
+		if (is_ghost)
+			if (hint_preference != GLOB.PREF_OFF)
+				if (get_preference_value(/datum/client_preference/ghost_language_hide) == GLOB.PREF_YES)
+					hint_preference = GLOB.PREF_OFF
+		else if (say_understands(speaker, language) && isliving(src))
+			var/mob/living/living = src
+			if (living.default_language == language)
+				hint_preference = GLOB.PREF_OFF
+		switch (hint_preference)
+			if (GLOB.PREF_FULL)
+				display_verb = "[verb] in [language.name]"
+			if (GLOB.PREF_SHORTHAND)
+				display_verb = "[verb] ([language.shorthand])"
+		display_message = language.format_message(display_message, display_verb)
+
+	on_hear_say({"<span class="game say">[display_controls]<span class="name">[display_name]</span>[alt_name] [display_message]</span>"})
+
 
 /mob/proc/on_hear_say(var/message)
 	to_chat(src, message)

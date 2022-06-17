@@ -17703,6 +17703,7 @@
 "Vg" = (
 /area/vacant/prototype/engine)
 "Vh" = (
+/obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
@@ -32974,7 +32975,6 @@ qv
 oh
 vz
 kL
-uO
 yg
 yU
 zE
@@ -33176,7 +33176,6 @@ qv
 qv
 qv
 qv
-uO
 yg
 yV
 zF
@@ -33378,7 +33377,6 @@ ug
 uS
 uS
 qv
-uO
 yg
 yW
 zG
@@ -33580,7 +33578,6 @@ tk
 Wk
 vA
 qv
-uO
 yg
 yX
 zH
@@ -33782,7 +33779,6 @@ QC
 JE
 vB
 qv
-uO
 yg
 yY
 zI
@@ -33984,7 +33980,6 @@ LO
 sF
 vC
 qv
-uO
 yg
 yg
 zJ
