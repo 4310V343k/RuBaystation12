@@ -83,7 +83,7 @@
 			T.diggable = 0
 	else if(istype(get_turf(src), /turf/simulated/floor))
 		var/turf/simulated/floor/T = get_turf(src)
-		T.ex_act(2.0)
+		T.ex_act(EX_ACT_HEAVY)
 
 	//Dig out the tasty ores.
 	if(resource_field.len)

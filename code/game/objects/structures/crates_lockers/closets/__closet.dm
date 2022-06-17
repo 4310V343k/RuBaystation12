@@ -223,7 +223,7 @@
 
 /obj/structure/closet/ex_act(severity)
 	// Damage everything inside the closet.
-	if (severity < 3)
+	if (severity < EX_ACT_LIGHT)
 		for (var/atom/A as anything in src)
 			A.ex_act(severity + 1)
 	..()
@@ -401,10 +401,9 @@
 				icon_state = "closed_unlocked[welded ? "_welded" : ""]"
 			overlays.Cut()
 
-/obj/structure/closet/handle_death_change(new_death_state)
-	if (new_death_state)
-		dump_contents()
-		qdel(src)
+/obj/structure/closet/on_death()
+	dump_contents()
+	qdel(src)
 
 /obj/structure/closet/proc/req_breakout()
 	if(opened)
@@ -430,7 +429,7 @@
 
 	breakout = 1 //can't think of a better way to do this right now.
 	for(var/i in 1 to (6*breakout_time * 2)) //minutes * 6 * 5seconds * 2
-		if(!do_after(escapee, 5 SECONDS, DO_DEFAULT | DO_USER_UNIQUE_ACT, INCAPACITATION_DEFAULT & ~INCAPACITATION_RESTRAINED)) //5 seconds
+		if(!do_after(escapee, 5 SECONDS, do_flags = DO_DEFAULT | DO_USER_UNIQUE_ACT, incapacitation_flags = INCAPACITATION_DEFAULT & ~INCAPACITATION_RESTRAINED)) //5 seconds
 			breakout = 0
 			return FALSE
 		//Perform the same set of checks as above for weld and lock status to determine if there is even still a point in 'resisting'...

@@ -307,6 +307,8 @@
 #define BP_GROIN  "groin"
 #define BP_ALL_LIMBS list(BP_CHEST, BP_GROIN, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
 #define BP_BY_DEPTH list(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_ARM, BP_R_ARM, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG, BP_GROIN, BP_CHEST)
+#define BP_LEGS_FEET list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT)
+#define BP_ARMS_HANDS list(BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND)
 
 // Prosthetic helpers.
 #define BP_IS_ROBOTIC(org)  ((org) && ((org).status & ORGAN_ROBOTIC))
@@ -466,6 +468,7 @@
 #define DO_PUBLIC_PROGRESS   FLAG(9)
 #define DO_MOVE_CHECKS_TURFS FLAG(10)
 #define DO_FAIL_FEEDBACK     FLAG(11)
+#define DO_BAR_OVER_USER     FLAG(12) // Forces the progress bar to appear over the user instead of the target
 
 #define DO_BOTH_CAN_MOVE     (DO_USER_CAN_MOVE | DO_TARGET_CAN_MOVE)
 #define DO_BOTH_CAN_TURN     (DO_USER_CAN_TURN | DO_TARGET_CAN_TURN)

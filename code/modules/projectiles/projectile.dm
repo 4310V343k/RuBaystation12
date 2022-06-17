@@ -106,7 +106,7 @@
 
 //called when the projectile stops flying because it collided with something
 /obj/item/projectile/proc/on_impact(var/atom/A)
-	impact_effect(effect_transform)		// generate impact effect
+	impact_effect()		// generate impact effect
 	if (damage && damage_type == DAMAGE_BURN)
 		var/turf/T = get_turf(A)
 		if(T)
@@ -381,10 +381,10 @@
 						return
 
 		if(first_step)
-			muzzle_effect(effect_transform)
+			muzzle_effect()
 			first_step = 0
 		else if(!bumped && life_span > 0)
-			tracer_effect(effect_transform)
+			tracer_effect()
 		if(!hitscan)
 			sleep(step_delay)	//add delay between movement iterations if it's not a hitscan weapon
 

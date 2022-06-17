@@ -54,6 +54,10 @@
 		crash_with("Warning: [src]([type]) initialized multiple times!")
 	atom_flags |= ATOM_FLAG_INITIALIZED
 
+	if (IsAbstract())
+		log_debug("Abstract atom [type] created!")
+		return INITIALIZE_HINT_QDEL
+
 	if(light_max_bright && light_outer_range)
 		update_light()
 
@@ -65,6 +69,7 @@
 
 	if (health_max)
 		health_current = health_max
+		health_dead = FALSE
 
 	return INITIALIZE_HINT_NORMAL
 
@@ -228,7 +233,8 @@
 /atom/proc/on_update_icon()
 	return
 
-/atom/proc/ex_act()
+/// Handler for the atom to be affected by explosions. `severity` will be one of the `EX_ACT_*` defines.
+/atom/proc/ex_act(severity)
 	return
 
 /atom/proc/emag_act(var/remaining_charges, var/mob/user, var/emag_source)
@@ -474,7 +480,7 @@
 	user.visible_message("<span class='warning'>\The [user] starts climbing onto \the [src]!</span>")
 	LAZYDISTINCTADD(climbers,user)
 
-	if(!do_after(user,(issmall(user) ? MOB_CLIMB_TIME_SMALL : MOB_CLIMB_TIME_MEDIUM) * climb_speed_mult, src, DO_DEFAULT | DO_USER_UNIQUE_ACT))
+	if(!do_after(user,(issmall(user) ? MOB_CLIMB_TIME_SMALL : MOB_CLIMB_TIME_MEDIUM) * climb_speed_mult, src, DO_DEFAULT | DO_USER_UNIQUE_ACT | DO_BAR_OVER_USER))
 		LAZYREMOVE(climbers,user)
 		return 0
 

@@ -166,8 +166,6 @@
 			observer.set_appearance(mannequin)
 			qdel(mannequin)
 
-			if(client.prefs.be_random_name)
-				client.prefs.real_name = random_name(client.prefs.gender)
 			observer.real_name = client.prefs.real_name
 			observer.SetName(observer.real_name)
 			if(!client.holder && !config.antag_hud_allowed)           // For new ghosts we remove the verb from even showing up if it's not allowed.
@@ -302,7 +300,7 @@
 		GLOB.global_announcer.autosay("Новый [rank ? "[rank]" : "visitor" ] [join_message ? join_message : "активировался"].", "Arrivals Announcement Computer")
 
 /mob/new_player/proc/LateChoices()
-	var/name = client.prefs.be_random_name ? "friend" : client.prefs.real_name
+	var/name = client.prefs.real_name
 
 	var/list/header = list("<html><body><center>")
 	header += "<b>Welcome, [name].<br></b>"

@@ -361,15 +361,15 @@
 
 /obj/machinery/door/ex_act(severity)
 	switch(severity)
-		if(1)
+		if(EX_ACT_DEVASTATING)
 			qdel(src)
-		if(2)
+		if(EX_ACT_HEAVY)
 			if(prob(25))
 				qdel(src)
 			else
 				take_damage(100)
 			take_damage(200)
-		if(3)
+		if(EX_ACT_LIGHT)
 			if(prob(80))
 				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 				s.set_up(2, 1, src)
@@ -466,7 +466,7 @@
 	operating = 0
 
 	//I shall not add a check every x ticks if a door has closed over some fire.
-	var/obj/fire/fire = locate() in loc
+	var/obj/hotspot/fire = locate() in loc
 	if(fire)
 		qdel(fire)
 	return

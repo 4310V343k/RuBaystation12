@@ -122,14 +122,14 @@
 
 /obj/machinery/vending/ex_act(severity)
 	switch(severity)
-		if(1.0)
+		if(EX_ACT_DEVASTATING)
 			qdel(src)
 			return
-		if(2.0)
+		if(EX_ACT_HEAVY)
 			if (prob(50))
 				qdel(src)
 				return
-		if(3.0)
+		if(EX_ACT_LIGHT)
 			if (prob(25))
 				spawn(0)
 					src.malfunction()
@@ -848,6 +848,7 @@
 					/obj/item/storage/chewables/rollable/bad = 2,
 					/obj/item/storage/chewables/rollable/generic = 2,
 					/obj/item/storage/chewables/rollable/fine = 2,
+					/obj/item/storage/chewables/rollable/rollingkit = 2,
 					/obj/item/storage/fancy/cigarettes = 5,
 					/obj/item/storage/fancy/cigarettes/luckystars = 2,
 					/obj/item/storage/fancy/cigarettes/jerichos = 2,
@@ -888,6 +889,7 @@
 					/obj/item/storage/chewables/rollable/bad = 20,
 					/obj/item/storage/chewables/rollable/generic = 40,
 					/obj/item/storage/chewables/rollable/fine = 60,
+					/obj/item/storage/chewables/rollable/rollingkit = 45,
 					/obj/item/storage/fancy/cigarettes = 45,
 					/obj/item/storage/fancy/cigarettes/luckystars = 50,
 					/obj/item/storage/fancy/cigarettes/jerichos = 65,
@@ -1118,6 +1120,7 @@
 	/obj/item/tray = 8,
 	/obj/item/material/knife/kitchen = 3,
 	/obj/item/material/kitchen/rollingpin = 2,
+	/obj/item/serving_bowl = 20,
 	/obj/item/reagent_containers/food/drinks/pitcher = 2,
 	/obj/item/reagent_containers/food/drinks/flask/vacuumflask = 4,
 	/obj/item/reagent_containers/food/drinks/glass2/coffeecup = 8,

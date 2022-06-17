@@ -1021,6 +1021,17 @@
 	var/type = pick(possible_mobs)
 	new type(get_turf(holder.my_atom))
 
+/datum/chemical_reaction/slime/grevive
+	name = "Slime Revive"
+	result = null
+	required_reagents = list(/datum/reagent/blood = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/gold
+
+/datum/chemical_reaction/slime/grevive/on_reaction(datum/reagents/holder, created_volume, reaction_flags)
+	..()
+	new /obj/item/slimepotion3(get_turf(holder.my_atom))
+
 //Silver
 /datum/chemical_reaction/slime/bork
 	name = "Slime Bork"
@@ -1039,6 +1050,29 @@
 
 	for(var/i = 1, i <= 4 + rand(1,2), i++)
 		var/chosen = pick(borks)
+		var/obj/B = new chosen(get_turf(holder.my_atom))
+		if(B)
+			if(prob(50))
+				for(var/j = 1, j <= rand(1, 3), j++)
+					step(B, pick(NORTH, SOUTH, EAST, WEST))
+
+/datum/chemical_reaction/slime/mixer
+	name = "Slime Mixer"
+	result = null
+	required_reagents = list(/datum/reagent/water = 1)
+	result_amount = 1
+	required = /obj/item/slime_extract/silver
+
+/datum/chemical_reaction/slime/mixer/on_reaction(var/datum/reagents/holder)
+	..()
+	var/list/mixers = typesof(/obj/item/reagent_containers/food/drinks) - typesof(/obj/item/reagent_containers/food/drinks/glass2)
+	playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+	for(var/mob/living/carbon/human/M in viewers(get_turf(holder.my_atom), null))
+		if(M.eyecheck() < FLASH_PROTECTION_MODERATE)
+			M.flash_eyes()
+
+	for(var/i = 1, i <= 4 + rand(1,2), i++)
+		var/chosen = pick(mixers)
 		var/obj/B = new chosen(get_turf(holder.my_atom))
 		if(B)
 			if(prob(50))

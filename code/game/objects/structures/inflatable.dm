@@ -128,11 +128,11 @@
 
 /obj/structure/inflatable/bullet_act(obj/item/projectile/Proj)
 	. = ..()
-	if (!is_alive())
+	if (health_dead)
 		return PROJECTILE_CONTINUE
 
 /obj/structure/inflatable/ex_act(severity)
-	if (severity == 1)
+	if (severity == EX_ACT_DEVASTATING)
 		qdel(src)
 		return
 	..()
@@ -161,10 +161,8 @@
 
 	..()
 
-/obj/structure/inflatable/handle_death_change(new_death_state)
-	. = ..()
-	if (new_death_state)
-		deflate(TRUE)
+/obj/structure/inflatable/on_death()
+	deflate(TRUE)
 
 /obj/structure/inflatable/CtrlClick()
 	return hand_deflate()
@@ -328,7 +326,7 @@
 	name = "inflatable barrier box"
 	desc = "Contains inflatable walls and doors."
 	icon_state = "inf_box"
-	item_state = "syringe_kit"
+	item_state = "painted_secure"
 	w_class = ITEM_SIZE_LARGE
 	max_storage_space = DEFAULT_LARGEBOX_STORAGE
 	can_hold = list(/obj/item/inflatable)
