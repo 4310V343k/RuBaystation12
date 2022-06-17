@@ -1241,6 +1241,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/corner/pink{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
 "acz" = (
@@ -1313,12 +1316,12 @@
 	pixel_y = -6;
 	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
 	},
-/obj/effect/floor_decal/corner/yellow/mono,
 /obj/machinery/camera/network/medbay{
 	c_tag = "Infirmary - Robotics Laboratory";
 	dir = 4;
 	network = list("Medical, Engineering")
 	},
+/obj/effect/floor_decal/corner/paleblue/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "acG" = (
@@ -6181,8 +6184,8 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 6
+/obj/effect/floor_decal/corner/pink/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
@@ -6904,17 +6907,15 @@
 	pixel_y = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 21
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/corner/pink/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "aua" = (
 /obj/structure/bed/padded,
@@ -7202,19 +7203,14 @@
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/surgery)
 "auS" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /obj/machinery/light{
 	dir = 8;
 	icon_state = "tube1";
 	pixel_y = 0
 	},
 /obj/structure/bed/chair/padded/yellow,
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner/paleblue/mono,
+/turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "auY" = (
 /obj/machinery/light,
@@ -14292,9 +14288,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
 "bkG" = (
@@ -14467,6 +14460,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/wing)
+"brU" = (
+/obj/machinery/door/airlock/medical{
+	autoset_access = 0;
+	name = "Robotics Surgery";
+	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
+	},
+/obj/machinery/holosign/surgery{
+	dir = 4;
+	id_tag = "roboticlab_or"
+	},
+/turf/simulated/floor/plating,
+/area/assembly/robotics/surgery)
 "bta" = (
 /obj/effect/floor_decal/corner/research{
 	dir = 1
@@ -20534,12 +20539,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
-	},
 /obj/structure/bed/chair/padded/yellow{
 	dir = 8
 	},
@@ -20548,7 +20547,11 @@
 	pixel_x = 25;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/corner/pink/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "kdd" = (
 /obj/structure/closet/emcloset,
@@ -20557,10 +20560,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/center)
-"kep" = (
-/obj/effect/floor_decal/corner/yellow/mono,
-/turf/simulated/floor/tiled/white/monotile,
-/area/assembly/robotics/laboratory)
 "kfb" = (
 /obj/structure/table/steel,
 /obj/item/paper_bin,
@@ -20988,12 +20987,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralstarboard)
-"kNb" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/assembly/robotics/laboratory)
 "kOb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -21164,8 +21157,11 @@
 /obj/item/weldpack,
 /obj/item/reagent_containers/spray/sterilizine,
 /obj/item/storage/toolbox/mechanical,
-/obj/effect/floor_decal/corner/yellow/mono,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
 "kVi" = (
 /obj/effect/floor_decal/corner/red{
@@ -21179,17 +21175,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/questioning)
 "kWb" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
 "kXb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 10
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
@@ -23201,18 +23197,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
-"nHl" = (
-/obj/machinery/door/airlock/medical{
-	autoset_access = 0;
-	name = "Robotics Surgery";
-	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
-	},
-/obj/machinery/holosign/surgery{
-	dir = 4;
-	id_tag = "roboticlab_or"
-	},
-/turf/simulated/floor/plating,
-/area/assembly/robotics/surgery)
 "nIb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -23647,10 +23631,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "ohy" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
-	},
 /obj/structure/bed/chair/padded/yellow,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
 "oib" = (
@@ -27620,6 +27607,9 @@
 	dir = 1;
 	pixel_y = -28
 	},
+/obj/effect/floor_decal/corner/pink{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
 "sHb" = (
@@ -29626,8 +29616,11 @@
 	pixel_y = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 5
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
@@ -47335,7 +47328,7 @@ gQI
 oMq
 uSl
 mrX
-nHl
+brU
 uSl
 uSl
 lgb
@@ -47537,7 +47530,7 @@ kfb
 sVL
 kvb
 auS
-kep
+kWb
 acF
 acE
 ycz
@@ -47739,7 +47732,7 @@ gos
 knb
 kvb
 ohy
-kNb
+kWb
 kVb
 acE
 ycz

@@ -1,7 +1,7 @@
 //Original code in: https://github.com/Skyrat-SS13/Vesta.Bay/blob/dev/modular_boh/code/modules/species/shell/shell.dm
 
 /datum/robolimb/veymed
-	allowed_bodytypes = list(SPECIES_HUMAN, SPECIES_IPC, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_SHELL)
+	allowed_bodytypes = list(SPECIES_HUMAN, SPECIES_IPC, SPECIES_SHELL)
 
 /datum/species/machine/shell
 	name = SPECIES_SHELL
@@ -17,7 +17,7 @@
 
 	preview_icon = 'icons/mob/human_races/species/human/preview.dmi'
 
-	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/kick, /datum/unarmed_attack/stomp)
+	unarmed_types = list(/datum/unarmed_attack/punch, /datum/unarmed_attack/kick, /datum/unarmed_attack/stomp, /datum/unarmed_attack/bite)
 	rarity_value = 2
 	strength = STR_HIGH
 
@@ -41,8 +41,7 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_IS_WHITELISTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR | HAS_SKIN_TONE_NORMAL | HAS_LIPS //IPCs can wear undies too :)
 
-	blood_color = "#424fc9"
-	flesh_color = "#575757"
+	blood_color = "#61b6de"
 	show_ssd = "fast asleep"
 	show_coma = "completely comatose"
 
@@ -82,10 +81,10 @@
 			FACTION_FLEET,
 			FACTION_ARMY,
 			FACTION_EXPEDITIONARY,
-			FACTION_OTHER,
 			FACTION_SPACECOPS,
 			FACTION_CORPORATE,
-			FACTION_INDIE_CONFED
+			FACTION_INDIE_CONFED,
+			FACTION_OTHER,
 		)
 	)
 
@@ -97,13 +96,6 @@
 
 	brute_mod =      1.2
 	burn_mod =       1.6
-
-/datum/species/machine/shell/handle_death(var/mob/living/carbon/human/H)
-	..()
-	if(istype(H.wear_mask,/obj/item/clothing/mask/monitor))
-		var/obj/item/clothing/mask/monitor/M = H.wear_mask
-		M.monitor_state_index = "blank"
-		M.update_icon()
 
 /datum/species/machine/shell/post_organ_rejuvenate(var/obj/item/organ/org, var/mob/living/carbon/human/H)
 	var/obj/item/organ/external/E = org

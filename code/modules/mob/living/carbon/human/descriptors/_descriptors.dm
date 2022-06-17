@@ -62,7 +62,9 @@
 		if(H.species.name == SPECIES_SHELL)
 			use_name = "\improper [SPECIES_HUMAN]"
 		else
-			species_text = " for \a [use_name]"
+			use_name = "\improper [H.species.name]"
+		species_text = " for \a [use_name]"
+
 	. = "[get_third_person_message_start(my_gender)] [get_standalone_value_descriptor(my_value)][species_text]"
 
 /datum/mob_descriptor/proc/get_secondary_comparison_component(var/datum/gender/my_gender, var/datum/gender/other_gender, var/my_value, var/comparing_value)
