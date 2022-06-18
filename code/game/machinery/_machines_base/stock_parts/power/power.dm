@@ -33,5 +33,6 @@
 /obj/item/stock_parts/power/proc/use_power_oneoff(var/obj/machinery/machine, var/amount, var/channel)
 	return 0
 
+
 // This alerts the part that it does not need to provide power anymore.
 /obj/item/stock_parts/power/proc/not_needed(var/obj/machinery/machine)
