@@ -1,5 +1,5 @@
 //proxima //from infinity
-/datum/uplink_item/item/badassery/mech
+/datum/uplink_item/item/badassery/syndi_mech
 	name = "Syndicate Mech"
 	desc = "Special heavy mech with cool weaponery. It has: taser, laser and shield generator. Ideal for murderbone."
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 2
