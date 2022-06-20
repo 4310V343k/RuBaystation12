@@ -57,19 +57,7 @@
 	)
 	use_species_whitelist = SPECIES_SHELL
 
-	min_skill = list(   SKILL_COMBAT      = SKILL_ADEPT,
-						SKILL_WEAPONS	  = SKILL_NONE,
-
-						SKILL_EVA          = SKILL_BASIC,
-						SKILL_PILOT        = SKILL_BASIC,
-						SKILL_CONSTRUCTION = SKILL_ADEPT,
-						SKILL_ELECTRICAL   = SKILL_ADEPT,
-						SKILL_ATMOS        = SKILL_BASIC,
-						SKILL_ENGINES      = SKILL_ADEPT,
-						SKILL_DEVICES      = SKILL_BASIC,
-						SKILL_MEDICAL      = SKILL_ADEPT,
-						SKILL_ANATOMY      = SKILL_ADEPT,
-						SKILL_CHEMISTRY    = SKILL_BASIC)
+	min_skill = list()
 
 	max_skill = list(   SKILL_COMBAT      = SKILL_ADEPT,
 						SKILL_WEAPONS	  = SKILL_NONE,
@@ -93,7 +81,7 @@
 						SKILL_MEDICAL      = SKILL_EXPERT,
 						SKILL_ANATOMY      = SKILL_EXPERT,
 						SKILL_CHEMISTRY    = SKILL_EXPERT)
-	skill_points = 48
+	skill_points = 84
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
 							 /datum/computer_file/program/camera_monitor,
