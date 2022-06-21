@@ -18842,7 +18842,8 @@
 	dir = 8;
 	icon_state = "warning"
 	},
-/obj/item/stool/padded,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
 "hWb" = (
@@ -21357,12 +21358,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
 	icon_state = "warning"
 	},
+/obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
 "lkb" = (

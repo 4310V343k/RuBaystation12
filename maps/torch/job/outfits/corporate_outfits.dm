@@ -40,7 +40,7 @@
 	slot = ACCESSORY_SLOT_RANK
 
 /decl/hierarchy/outfit/job/torch/crew/command/synth
-	name = OUTFIT_JOB_NAME("Synthetic")
+	name = OUTFIT_JOB_NAME("EXO Synthetic")
 	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
 	l_ear = /obj/item/device/radio/headset/heads/torchexec/synth
 	shoes = /obj/item/clothing/shoes/dutyboots
