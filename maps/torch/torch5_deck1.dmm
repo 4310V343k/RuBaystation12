@@ -7183,7 +7183,7 @@
 	pixel_y = -12
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "Infirmary - Robotics Laboratory";
+	c_tag = "Infirmary - Robotics Operation Theater";
 	dir = 4;
 	network = list("Medical, Engineering")
 	},
