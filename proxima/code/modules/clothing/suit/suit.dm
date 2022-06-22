@@ -78,7 +78,7 @@
 /obj/item/clothing/suit/storage/toggle/gorka_jacket/service
 	name = "service gorka jacket"
 	desc = "Stylish jacket for service gorka uniform."
-	icon_state = "gorka_jacket_crew_g"
+	icon_state = "gorka_jacket_crew_o"
 
 /obj/item/clothing/suit/storage/toggle/gorka_jacket/sci
 	name = "science gorka jacket"
