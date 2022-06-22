@@ -37,7 +37,7 @@
 	..()
 	add_field(/datum/report_field/text_label/header, "ГЭК \"Факел\" - Охранный Отдел")
 	add_field(/datum/report_field/text_label/instruction, "Для ознакомления авторизованному персоналу.")
-	add_field(/datum/report_field/people/from_manifest, "Имя", required = 1)
+	add_field(/datum/report_field/people/from_manifest, "Полное Имя", required = 1)
 	add_field(/datum/report_field/date, "Дата", required = 1)
 	add_field(/datum/report_field/time, "Время", required = 1)
 	add_field(/datum/report_field/pencode_text, "Отчёт по делу", required = 1)
