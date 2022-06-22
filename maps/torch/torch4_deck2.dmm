@@ -4341,6 +4341,12 @@
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
 	},
+/obj/effect/landmark/start{
+	name = "EXO Synth"
+	},
+/obj/effect/landmark{
+	name = "EXO Synth"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "iT" = (

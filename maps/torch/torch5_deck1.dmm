@@ -7171,13 +7171,13 @@
 	},
 /obj/machinery/button/windowtint{
 	id = "roboticlab_or";
-	pixel_x = -6;
+	pixel_x = 4;
 	pixel_y = -24
 	},
 /obj/machinery/button/holosign{
 	id_tag = "roboticlab_or";
-	pixel_x = 6;
-	pixel_y = -24
+	pixel_x = 12;
+	pixel_y = -23
 	},
 /obj/structure/hygiene/sink{
 	pixel_y = -12
@@ -7186,6 +7186,10 @@
 	c_tag = "Infirmary - Robotics Operation Theater";
 	dir = 4;
 	network = list("Medical, Engineering")
+	},
+/obj/machinery/light_switch{
+	pixel_x = -11;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/surgery)
@@ -14470,7 +14474,8 @@
 	dir = 4;
 	id_tag = "roboticlab_or"
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/industrial/hatch/blue,
+/turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/surgery)
 "bta" = (
 /obj/effect/floor_decal/corner/research{

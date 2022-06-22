@@ -36,7 +36,7 @@
 	desc = "A red leather-backed gold badge with silver 'SYNTH' letters written on it, displaying advanced EXO Corporative Shell IPC."
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	icon_state = "solbadge"
-	slot_flags = SLOT_BELT | SLOT_TIE
+	slot_flags = SLOT_BELT | SLOT_TIE | ACCESSORY_REMOVABLE | ACCESSORY_HIGH_VISIBILITY
 	slot = ACCESSORY_SLOT_RANK
 
 /decl/hierarchy/outfit/job/torch/crew/command/synth
@@ -48,4 +48,3 @@
 	id_types = list(/obj/item/card/id/torch/gold/synth)
 	pda_type = /obj/item/modular_computer/pda/heads
 	r_pocket = /obj/item/modular_computer/tablet/lease/preset/command
-	backpack_contents = list(/obj/item/clothing/accessory/badge/solgov/synthetic = 1)
