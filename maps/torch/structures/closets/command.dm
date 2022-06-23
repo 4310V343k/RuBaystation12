@@ -184,7 +184,7 @@
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/medic, /obj/item/storage/backpack/satchel/med)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/med, /obj/item/storage/backpack/messenger/med)),
 		RANDOM_SCRUBS,
-		RANDOM_SCRUBS,
+		RANDOM_SCRUBS
 	)
 
 /obj/structure/closet/secure_closet/synth_eng
