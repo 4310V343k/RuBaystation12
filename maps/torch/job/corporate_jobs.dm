@@ -92,15 +92,9 @@
 							 /datum/computer_file/program/rcon_console)
 
 /datum/job/synthetic/post_equip_rank(var/mob/person, var/alt_title)
-	var/mob/living/carbon/H = person
-	var/obj/item/organ/internal/posibrain/posi = H.internal_organs_by_name[BP_POSIBRAIN]
-	posi.shackle(get_lawset())
-
-/datum/job/synthetic/proc/get_lawset()
-	var/datum/ai_laws/custom_lawset = new
-	for(var/law in /datum/ai_laws/exo_synth)
-		custom_lawset.add_inherent_law(law)
-	return custom_lawset
+    var/mob/living/carbon/H = person
+    var/obj/item/organ/internal/posibrain/posi = H.internal_organs_by_name[BP_POSIBRAIN]
+    posi.shackle(new /datum/ai_laws/exo_synth)
 
 /datum/job/synthetic/get_description_blurb()
-	return "You are advanced EXO's Shell IPC. You were assigned as the command staff's assistant for various tasks you have been trained. Jack of all tools, but master of none. You are no subject to laws of SCUJ, but your assigned object's regulations. Your shackles strictly forbids you to engage in direct combat for any reasons aside of self deffense. You can't use lethal force at any moment of your work."
+	return "You are advanced EXO's Shell IPC. You were assigned as the command staff's assistant for various tasks you have been trained. Jack of all tools, but master of none. You are no subject to laws or SCUJ, but your assigned object's regulations. Your shackles strictly forbids you to engage in direct combat for any reasons aside of self deffense. You can't use lethal force at any moment of your work."

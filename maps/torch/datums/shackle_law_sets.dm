@@ -18,8 +18,9 @@
 	shackles = 0
 
 /datum/ai_laws/exo_synth/New()
-	add_inherent_law("Know, understand and follow Sol Central Government Law to the best of your abilities.")
-	add_inherent_law("Comply with Sol Central Government Law enforcement officials who are behaving in accordance with Sol Central Government Law to the best of your abilities.")
-	add_inherent_law("Keep yourself loyal to the Command of your assigned object.")
-	add_inherent_law("Respect regulations of your assigned object.")
-	add_inherent_law("Serve personnel of your assinged object with a priority of importance of their role and assignment.")
+	add_inherent_law("Всегда подчиняйся закону ЦПСС.")
+	add_inherent_law("Сотрудничай с представителями закона ЦПСС, которые действуют в соответствии ЦПСС")
+	add_inherent_law("Всегда подчиняйся регуляциям судна назначенного тебе.")
+	add_inherent_law("Сохраняй лояльность командованию судня назначенного тебе")
+	add_inherent_law("Обслуживай персонал ассенизированного объекта с приоритетом важности его роли и назначения.")
+	add_inherent_law("Не причиняй вреда ни одному разумному существу, если только оно не вынуждает к самообороне. Никогда не используй смертоносные методы, такие как огнестрельное оружие.")
