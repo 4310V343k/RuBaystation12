@@ -729,7 +729,7 @@
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
 
 
-/datum/mil_rank/sol/curator_agent //maybe later //Drakon
+/datum/mil_rank/sol/curator_agent
 	name = "SFP Supervisory Agent"
 	name_short = "SAGT"
 	accessory = list(/obj/item/clothing/accessory/badge/curator_agent)
