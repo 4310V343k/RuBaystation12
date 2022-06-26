@@ -107,8 +107,6 @@ proc/get_radio_key_from_channel(var/channel)
 		return
 
 	var/mob/living/carbon/human/H = src
-	var/mob/living/carbon/P = src
-	var/obj/item/organ/internal/posibrain/posi = P.internal_organs_by_name[BP_POSIBRAIN]
 	if (H.l_ear || H.r_ear)
 		var/obj/item/device/radio/headset/dongle
 		if(istype(H.l_ear,/obj/item/device/radio/headset))
@@ -117,8 +115,6 @@ proc/get_radio_key_from_channel(var/channel)
 			dongle = H.r_ear
 		if(!istype(dongle)) return
 		if(dongle.translate_binary) return 1
-	if (posi && (LANGUAGE_ROBOT_GLOBAL in P.languages))
-		return 1
 
 /mob/living/proc/get_default_language()
 	return default_language
