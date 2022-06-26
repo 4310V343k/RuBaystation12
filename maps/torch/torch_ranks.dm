@@ -728,11 +728,11 @@
 	name_short = "AGT"
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
 
-/* //maybe later //Drakon
-/datum/mil_rank/sol/curator_agent
-	name = "SFP Supervisory Agent"
-	name_short = "SAGT"
-	accessory = list(/obj/item/clothing/accessory/badge/curator_agent) */
+//maybe later //Drakon
+///datum/mil_rank/sol/curator_agent
+//	name = "SFP Supervisory Agent"
+//	name_short = "SAGT"
+//	accessory = list(/obj/item/clothing/accessory/badge/curator_agent)
 /datum/mil_rank/sol/scientist
 	name = "Government Scientist"
 	name_short = "GOVT"
