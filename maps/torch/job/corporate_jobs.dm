@@ -92,7 +92,6 @@
 							 /datum/computer_file/program/rcon_console)
 
 /datum/job/synthetic/post_equip_rank(var/mob/person, var/alt_title)
-	person.add_language(LANGUAGE_ROBOT_GLOBAL, 1)
 	var/mob/living/carbon/H = person
 	var/obj/item/organ/internal/posibrain/posi = H.internal_organs_by_name[BP_POSIBRAIN]
 	posi.shackle(/datum/ai_laws/exo_synth)
