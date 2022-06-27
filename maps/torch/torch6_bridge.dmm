@@ -13377,7 +13377,6 @@
 	dir = 1;
 	icon_state = "bordercolorhalf"
 	},
-/obj/item/storage/box/encryptionkey/science,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/rd)
 "IW" = (
@@ -14439,7 +14438,6 @@
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
 /obj/item/storage/secure/briefcase/nukedisk,
-/obj/item/storage/box/encryptionkey/command,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "NE" = (
@@ -16602,7 +16600,6 @@
 	},
 /obj/structure/table/woodentable/walnut,
 /obj/item/sticky_pad/random,
-/obj/item/storage/box/encryptionkey/service,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "VI" = (
