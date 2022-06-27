@@ -181,12 +181,11 @@
 	icon_state = "intelbadge"
 	badge_string = "Office of Interstellar Intelligence"
 
-/* //maybe later //Drakon
 /obj/item/clothing/accessory/badge/curator_agent
 	name = "\improper SFP Supervisory Agent's badge"
 	desc = "A synthleather holographic badge bearing the crest of the Sol Federal Police."
 	icon_state = "intelbadge"
-	badge_string = FACTION_SPACECOPS */
+	badge_string = FACTION_SPACECOPS
 
 /obj/item/clothing/accessory/badge/nanotrasen
 	name = "corporate badge"
