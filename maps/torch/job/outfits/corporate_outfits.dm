@@ -31,6 +31,13 @@
 	name = OUTFIT_JOB_NAME("Testing Assistant")
 	uniform = /obj/item/clothing/under/rank/ntwork
 
+/obj/item/clothing/accessory/badge/solgov/synthetic
+	name = "\improper synthetic's badge"
+	desc = "A red leather-backed gold badge with silver 'SYNTH' letters written on it, displaying advanced EXO Corporative Shell IPC."
+	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
+	icon_state = "solbadge"
+	slot_flags = SLOT_BELT | SLOT_TIE | ACCESSORY_REMOVABLE | ACCESSORY_HIGH_VISIBILITY
+	slot = ACCESSORY_SLOT_RANK
 
 /decl/hierarchy/outfit/job/torch/crew/command/synth
 	name = OUTFIT_JOB_NAME("EXO Synthetic")
