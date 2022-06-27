@@ -12154,6 +12154,7 @@
 /obj/item/device/binoculars,
 /obj/item/storage/box/armband/sec,
 /obj/item/storage/box/encryptionkey/security,
+/obj/item/storage/box/armband/red_sec,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "Fg" = (

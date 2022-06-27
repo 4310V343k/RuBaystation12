@@ -61,7 +61,6 @@
 		/obj/item/material/clipboard,
 		//proxima code start,
 		/obj/item/device/remote_device/chief_engineer,
-		/obj/item/storage/box/encryptionkey/engineering,
 		//proxima code end,
 		/obj/item/device/holowarrant,
 		/obj/item/storage/box/armband/engine,

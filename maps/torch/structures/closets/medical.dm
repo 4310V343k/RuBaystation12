@@ -52,7 +52,6 @@
 		/obj/item/clothing/head/helmet/solgov/command,
 		//proxima code start,
 		/obj/item/device/remote_device/chief_medical_officer,
-		/obj/item/storage/box/encryptionkey/medical,
 		//proxima code end,
 		/obj/item/device/holowarrant,
 		/obj/item/storage/firstaid/adv,
