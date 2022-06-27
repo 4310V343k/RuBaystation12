@@ -320,14 +320,12 @@
 	rank_types = list(
 		/datum/mil_rank/sol/gov,
 		/datum/mil_rank/sol/agent,
-		/datum/mil_rank/sol/curator_agent,
 		/datum/mil_rank/sol/scientist
 	)
 
 	spawn_rank_types = list(
 		/datum/mil_rank/sol/gov,
 		/datum/mil_rank/sol/agent,
-		/datum/mil_rank/sol/curator_agent,
 		/datum/mil_rank/sol/scientist
 	)
 
@@ -715,6 +713,12 @@
 
 /datum/mil_rank/civ/synthetic
 	name = "Synthetic"
+	name_short = "Synth"
+
+/datum/mil_rank/civ/exo_synth
+	name = "EXO Synthetic"
+	name_short = "Synth"
+	accessory = list(/obj/item/clothing/accessory/badge/solgov/synthetic)
 
 /datum/mil_rank/civ/exo_synth
 	name = "EXO Synthetic"
@@ -735,10 +739,12 @@
 	name_short = "AGT"
 	accessory = list(/obj/item/clothing/accessory/badge/agent)
 
+/* //maybe later //Drakon
 /datum/mil_rank/sol/curator_agent
 	name = "SFP Supervisory Agent"
 	name_short = "SAGT"
-	accessory = list(/obj/item/clothing/accessory/badge/curator_agent)
+	accessory = list(/obj/item/clothing/accessory/badge/curator_agent) */
+
 
 /datum/mil_rank/sol/scientist
 	name = "Government Scientist"
