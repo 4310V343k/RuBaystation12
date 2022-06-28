@@ -29,7 +29,7 @@
 	//berets["marine beret"] = /obj/item/clothing/head/beret/solgov/army // depreciated because it's ugly as fuck and almost indentical to .../infantry beret
 	//berets["airborne army beret"] = /obj/item/clothing/head/beret/solgov/army/airborne //unused for now
 	berets["marine beret"] = /obj/item/clothing/head/beret/solgov/army/infantry // old infantry beret
-	berets["orbital assaul marine beret"] = /obj/item/clothing/head/beret/solgov/orbital/army
+	berets["orbital assaul marine beret"] = /obj/item/clothing/head/beret/solgov/army/orbital
 	berets["logistical supply marine beret"] = /obj/item/clothing/head/beret/solgov/army/logistical_supply
 	berets["engineering-sapper marine beret"] = /obj/item/clothing/head/beret/solgov/army/engisapper
 	berets["command marine beret"] = /obj/item/clothing/head/beret/solgov/army/command
