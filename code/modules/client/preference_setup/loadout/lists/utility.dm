@@ -129,6 +129,7 @@ modular computers
 
 /datum/gear/utility/musical_instrument
 	display_name = "Musical instrument selection"
+	path = /obj/item/device/synthesized_instrument
 	cost = 1
 
 /datum/gear/utility/musical_instrument/New()

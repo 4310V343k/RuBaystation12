@@ -226,7 +226,7 @@
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 
-/obj/item/clothing/head/beret/solgov/orbital/army
+/obj/item/clothing/head/beret/solgov/army/orbital
 	name = "orbital assault marine beret"
 	desc = "A blue beret denoting orbital assault marine training. For helljumpers that are more inclined towards style than safety."
 
