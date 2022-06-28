@@ -19,7 +19,7 @@
 
 /datum/gear/head/armyberet
 	display_name = "marine beret selection"
-	description = "A beret denoting service in one of the branches within the SCG Army."
+	description = "A beret denoting service in one of the branches within the SCG Marine Corps."
 	path = /obj/item/clothing/head/beret/solgov/army
 	allowed_branches = list(/datum/mil_branch/army)
 
