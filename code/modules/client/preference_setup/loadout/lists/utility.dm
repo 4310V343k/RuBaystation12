@@ -127,6 +127,20 @@ modular computers
 	wcomp["short (black)"]           = /obj/item/modular_computer/pda/wrist/lila/black
 	gear_tweaks += new/datum/gear_tweak/path(wcomp)
 
+/datum/gear/utility/musical_instrument
+	display_name = "Musical instrument selection"
+	cost = 1
+
+/datum/gear/utility/musical_instrument/New()
+	..()
+	var/inst = list()
+	inst["guitar"] = /obj/item/device/synthesized_instrument/guitar
+	inst["polyguitar"] = /obj/item/device/synthesized_instrument/guitar/multi
+	inst["syntesizer"] = /obj/item/device/synthesized_instrument/synthesizer
+	inst["trumpet"] = /obj/item/device/synthesized_instrument/trumpet
+	inst["violin"] = /obj/item/device/synthesized_instrument/violin
+	gear_tweaks += new/datum/gear_tweak/path(inst)
+
 /****************
 Pouches and kits
 ****************/
