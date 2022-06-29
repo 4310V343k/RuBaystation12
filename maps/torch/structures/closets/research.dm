@@ -63,7 +63,8 @@
 	return list(
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/science,
+		/obj/item/device/radio/headset/science/alt,
 		/obj/item/clothing/mask/gas,
 		/obj/item/material/clipboard,
 		/obj/item/folder,
@@ -82,7 +83,7 @@
 
 /obj/structure/closet/secure_closet/scientist_torch
 	name = "researcher's locker"
-	req_access = list(access_research)
+	req_access = list(access_research_storage)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/science
 
 /obj/structure/closet/secure_closet/scientist_torch/WillContain()
@@ -90,7 +91,8 @@
 		/obj/item/clothing/under/rank/scientist,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science,
 		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/science,
+		/obj/item/device/radio/headset/science/alt,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/material/clipboard,
@@ -148,13 +150,14 @@
 
 /obj/structure/closet/secure_closet/ec_scientist
 	name = "scientist locker"
-	req_access = list(access_research)
+	req_access = list(access_research_storage)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/science
 
 /obj/structure/closet/secure_closet/ec_scientist/WillContain()
 	return list(
 		/obj/item/clothing/suit/storage/toggle/labcoat/science/ec,
-		/obj/item/device/radio/headset/torchnanotrasen,
+		/obj/item/device/radio/headset/science,
+		/obj/item/device/radio/headset/science/alt,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/tank/oxygen_emergency_extended,
 		/obj/item/material/clipboard,

@@ -579,7 +579,7 @@
 // If char isn't part of the text the entire text is returned
 /proc/copytext_after_last(var/text, var/char)
 	var/regex/R = regex("(\[^[char]\]*)$")
-	regex_find(R, text)
+	R.Find_char(text)
 	return R.group[1]
 
 /proc/sql_sanitize_text(var/text)
@@ -633,3 +633,42 @@
 	var/static/regex/clean2 = regex(@"^([^:]+:)\/([^\/])") //Fix "blah://" if we killed it in clean1
 	parts = replacetext_char(parts.Join("/"), clean1, "/")
 	return replacetext_char(parts, clean2, "$1//$2")
+
+/// Returns direction-string, rounded to multiples of 22.5, from the first parameter to the second
+/// N, NNE, NE, ENE, E, ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW
+/proc/get_compass_direction_string(turf/A, turf/B)
+	var/degree = Get_Angle(A, B)
+/// % appears to round down floats, hence below values all being integers
+	switch(round(degree, 22.5) % 360)
+		if(0)
+			return "North"
+		if(22)
+			return "North-Northeast"
+		if(45)
+			return "Northeast"
+		if(67)
+			return "East-Northeast"
+		if(90)
+			return "East"
+		if(112)
+			return "East-Southeast"
+		if(135)
+			return "Southeast"
+		if(157)
+			return "South-Southeast"
+		if(180)
+			return "South"
+		if(202)
+			return "South-Southwest"
+		if(225)
+			return "Southwest"
+		if(247)
+			return "West-Southwest"
+		if(270)
+			return "West"
+		if(292)
+			return "West-Northwest"
+		if(315)
+			return "Northwest"
+		if(337)
+			return "North-Northwest"

@@ -3,8 +3,6 @@
 //Do (almost) nothing - indev placeholder for switch case implementations etc
 #define NOOP (.=.);
 
-#define list_find(L, needle, LIMITS...) L.Find(needle, LIMITS)
-
 #define PUBLIC_GAME_MODE SSticker.master_mode
 
 #define CLAMP01(x) clamp(x, 0, 1)
@@ -45,7 +43,9 @@ var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define iscorgi(A) istype(A, /mob/living/simple_animal/passive/corgi)
 
-#define is_drone(A) istype(A, /mob/living/silicon/robot/drone)
+#define isdatum(A) istype(A, /datum)
+
+#define isdrone(A) istype(A, /mob/living/silicon/robot/drone)
 
 #define isEye(A) istype(A, /mob/observer/eye)
 
@@ -97,7 +97,7 @@ var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define isopenspace(A) istype(A, /turf/simulated/open)
 
-#define isPlunger(A) istype(A, /obj/item/clothing/mask/plunger) || istype(A, /obj/item/device/plunger/robot)
+#define isplunger(A) istype(A, /obj/item/clothing/mask/plunger) || istype(A, /obj/item/device/plunger/robot)
 
 #define isadmin(X) (check_rights(R_ADMIN, 0, (X)) != 0)
 
@@ -182,6 +182,10 @@ var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 #define SPAN_INFO(X) "<span class='info'>[X]</span>"
 
+#define STYLE_SMALLFONTS(X, S, C1) "<span style=\"font-family: 'Small Fonts'; color: [C1]; font-size: [S]px\">[X]</span>"
+
+#define STYLE_SMALLFONTS_OUTLINE(X, S, C1, C2) "<span style=\"font-family: 'Small Fonts'; color: [C1]; -dm-text-outline: 1 [C2]; font-size: [S]px\">[X]</span>"
+
 #define SPAN_DEBUG(X) "<span class='debug'>[X]</span>"
 
 #define SPAN_STYLE(style, X) "<span style=\"[style]\">[X]</span>"
@@ -258,3 +262,9 @@ var/global/const/NEGATIVE_INFINITY = -1#INF // win: -1.#INF, lin: -inf
 
 /// Flip bits of MASK in FIELD
 #define FLIP_FLAGS(FIELD, MASK) ((FIELD) ^= (MASK))
+
+
+#define hex2num(hex) (text2num(hex, 16) || 0)
+
+
+#define num2hex(num) num2text(num, 1, 16)
