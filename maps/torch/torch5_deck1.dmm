@@ -10429,9 +10429,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
-/obj/item/device/flashlight/flare,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -10439,6 +10436,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "aKy" = (
@@ -10626,10 +10626,15 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/fabricator/hacked{
-	desc = "A typical autolathe. This one is hacked.";
-	name = "autolathe"
+/obj/structure/table/rack{
+	dir = 4
 	},
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
+/obj/item/device/flashlight/flare,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "aLx" = (
@@ -10637,13 +10642,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/stack/material/glass/fifty,
 /obj/structure/table/rack{
 	dir = 4
 	},
-/obj/item/stack/material/aluminium/fifty,
-/obj/item/stack/material/steel/fifty,
-/obj/item/stack/material/plastic/ten,
+/obj/item/storage/toolbox/emergency{
+	pixel_y = 3
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = -3
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "aLy" = (
@@ -11410,12 +11417,20 @@
 "aOG" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/cell_charger,
 /obj/item/screwdriver,
+/obj/machinery/cell_charger,
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
 	pixel_x = 23;
 	pixel_y = -3
+	},
+/obj/item/storage/box/chemimp{
+	pixel_x = -4;
+	pixel_y = 11
+	},
+/obj/item/storage/box/trackimp{
+	pixel_x = 8;
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
@@ -15812,9 +15827,6 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/item/airlock_brace,
-/obj/item/airlock_brace,
-/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "dcb" = (
@@ -15854,6 +15866,9 @@
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "dfb" = (
@@ -19750,15 +19765,16 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/hallway/primary/firstdeck/aft)
 "jhf" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/recharger/wallcharger{
 	dir = 8;
 	pixel_x = 23;
 	pixel_y = -3
 	},
-/obj/item/storage/box/trackimp,
-/obj/item/storage/box/chemimp,
+/obj/machinery/fabricator/hacked{
+	desc = "A typical autolathe. This one is hacked.";
+	name = "autolathe"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "jhq" = (
@@ -21242,6 +21258,13 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack{
+	dir = 4
+	},
+/obj/item/stack/material/plastic/ten,
+/obj/item/stack/material/steel/fifty,
+/obj/item/stack/material/aluminium/fifty,
+/obj/item/stack/material/glass/fifty,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "lcL" = (
