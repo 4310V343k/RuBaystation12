@@ -148,6 +148,7 @@
 	title = "Police Enforcer"
 	total_positions = 2
 	spawn_positions = 2
+	hud_icon = "hudmasteratarms"
 	alt_titles = list(
 		"Police Officer",
 		"Police Operative"
