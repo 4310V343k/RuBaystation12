@@ -10658,19 +10658,7 @@
 	dir = 8;
 	pixel_x = 21
 	},
-/obj/structure/table/rack{
-	dir = 4
-	},
-/obj/item/storage/box/teargas{
-	pixel_x = 3;
-	pixel_y = 2
-	},
-/obj/item/storage/box/flashbangs{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/storage/box/smokes,
-/obj/item/storage/box/smokes,
+/obj/structure/closet/l3closet/security,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "aLA" = (
@@ -15824,6 +15812,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "dcb" = (
@@ -15862,6 +15853,7 @@
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "dfb" = (
@@ -16712,6 +16704,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "evb" = (
@@ -17205,7 +17198,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/corner/red/mono,
+/turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "fuV" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -17702,6 +17696,7 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "gos" = (
@@ -18545,24 +18540,24 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/rnd_sec)
-"hBb" = (
-/obj/structure/table/standard,
-/obj/structure/disposalpipe/segment,
 /obj/item/paper_bin,
-/obj/item/pen/red{
-	pixel_x = -1;
-	pixel_y = 3
-	},
 /obj/item/pen,
 /obj/item/pen/blue{
 	pixel_x = -5;
 	pixel_y = -1
 	},
+/obj/item/pen/red{
+	pixel_x = -1;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/rnd_sec)
+"hBb" = (
+/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet/research_guard,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/rnd_sec)
 "hBr" = (
@@ -19745,8 +19740,8 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "jft" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/bombclosetsecurity,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "jhb" = (
@@ -19917,9 +19912,6 @@
 /turf/simulated/floor/tiled,
 /area/security/wing)
 "jqb" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -19933,6 +19925,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/locker)
@@ -20157,7 +20152,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/questioning)
 "jBW" = (
-/obj/effect/floor_decal/corner/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -20169,6 +20163,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/locker)
@@ -21848,11 +21848,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/security/evidence)
-"lVZ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/bombclosetsecurity,
-/turf/simulated/floor/tiled/monotile,
-/area/security/locker)
 "lWb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
@@ -22795,6 +22790,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/locker)
@@ -26930,7 +26928,8 @@
 /area/maintenance/firstdeck/centralstarboard)
 "saS" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/l3closet/security,
+/obj/structure/closet/secure_closet/security_torch,
+/obj/effect/floor_decal/corner/red/mono,
 /turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "sbb" = (
@@ -28629,9 +28628,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/airlock_brace,
-/obj/item/airlock_brace,
-/obj/item/airlock_brace,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -28647,6 +28643,16 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/flashbangs{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/storage/box/teargas{
+	pixel_x = 3;
+	pixel_y = 2
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
@@ -38857,7 +38863,7 @@ rUO
 mBb
 iDb
 oDg
-lVZ
+saS
 jqb
 cor
 cor
