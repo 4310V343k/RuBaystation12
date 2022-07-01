@@ -15,4 +15,3 @@
 	w_class = ITEM_SIZE_TINY
 	accessory_icons = list(slot_w_uniform_str = 'customs/icons/mob/custom_items_mob.dmi', slot_wear_suit_str = 'customs/icons/mob/custom_items_mob.dmi')
 	icon_state = "britishranks"
-	item_state = "onmob_british"
