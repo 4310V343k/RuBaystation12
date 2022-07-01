@@ -369,6 +369,8 @@
 	desc = "The service uniform of the SCG Expeditionary Corps in gold trim."
 	icon_state = "greydress_com"
 	worn_state = "greydress_com"
+/obj/item/clothing/under/solgov/service/expeditionary/command/command
+	accessories = list(/obj/item/clothing/accessory/solgov/department/command/jumper)
 
 /obj/item/clothing/under/solgov/service/expeditionary/command/engineering
 
@@ -389,6 +391,9 @@
 	desc = "A feminine version of the SCG Expeditionary Corps service uniform in gold trim."
 	icon_state = "greydressfem_com"
 	worn_state = "greydressfem_com"
+
+/obj/item/clothing/under/solgov/service/expeditionary/command/skirt/command
+	accessories = list(/obj/item/clothing/accessory/solgov/department/command/jumper)
 
 /obj/item/clothing/under/solgov/service/expeditionary/command/skirt/engineering
 
