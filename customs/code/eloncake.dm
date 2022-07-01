@@ -5,7 +5,6 @@
 	icon = 'customs/icons/obj/custom_items_obj.dmi'
 	icon_state = "vintagecoat"
 	item_icons = list(slot_wear_suit_str = 'customs/icons/mob/custom_items_mob.dmi')
-	item_state = "vintagecoat"
 	accessories = list(/obj/item/clothing/accessory/solgov/rank/eloncake)
 
 /obj/item/clothing/accessory/solgov/rank/eloncake
