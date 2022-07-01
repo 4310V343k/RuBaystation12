@@ -5,11 +5,6 @@
 	icon = 'proxima/icons/mob/human_races/species/human/hair_infinity.dmi'
 	icon_state = "hair_angel"
 
-/datum/sprite_accessory/hair/infinity/wong
-	name = "Wong"
-	icon_state = "hair_wong"
-	gender = FEMALE
-
 /datum/sprite_accessory/hair/infinity/shortcover
 	name = "Shortcover"
 	icon_state = "hair_shortcover"
@@ -51,10 +46,6 @@
 /datum/sprite_accessory/hair/infinity/long_braided_hair
 	name = "Long braided"
 	icon_state = "hair_long_braided"
-
-/datum/sprite_accessory/hair/infinity/hipstery
-	name = "Hipstery"
-	icon_state = "hair_hipstery"
 
 /datum/sprite_accessory/hair/infinity/long_hair_3
 	name = "Long hair 3"
@@ -182,17 +173,9 @@
 	name = "Geisha"
 	icon_state = "hair_geisha"
 
-/datum/sprite_accessory/hair/infinity/baum
-	name = "Baum"
-	icon_state = "hair_baum"
-
 /datum/sprite_accessory/hair/infinity/cohair_wisp_s
 	name = "Wisp"
 	icon_state = "hair_wisp"
-
-/datum/sprite_accessory/hair/infinity/oxton
-	name = "Oxton"
-	icon_state = "hair_oxton"
 
 /datum/sprite_accessory/hair/infinity/ziegler
 	name = "Ziegler"
