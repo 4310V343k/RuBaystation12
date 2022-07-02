@@ -229,6 +229,7 @@
 /obj/item/clothing/head/beret/solgov/army/orbital
 	name = "orbital assault marine beret"
 	desc = "A blue beret denoting orbital assault marine training. For helljumpers that are more inclined towards style than safety."
+	icon_state = "beret_army_infantry"
 
 /obj/item/clothing/head/beret/solgov/army/airborne
 	name = "airborne marine beret"
