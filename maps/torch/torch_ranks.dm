@@ -238,7 +238,7 @@
 /datum/mil_branch/army
 	name = "Marine Corps"
 	name_short = "SCGM"
-	email_domain = "marine.mil"
+	email_domain = "torch.marine.mil"
 
 	rank_types = list(
 		/datum/mil_rank/army/e1,
