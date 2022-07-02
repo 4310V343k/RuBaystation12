@@ -701,7 +701,7 @@ ranks - fleet
 /obj/item/clothing/accessory/solgov/rank/fleet/officer
 	name = "ranks (O-1 ensign)"
 	desc = "Shoulderboards denoting the rank of Ensign."
-	icon_state = "o1_device"
+	icon_state = "fleetrank_o1"
 	overlay_state = "fleetrank_officer"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/officer/wo1_monkey
