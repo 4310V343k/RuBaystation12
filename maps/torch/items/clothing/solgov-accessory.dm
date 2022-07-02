@@ -767,66 +767,66 @@ ranks - fleet
     overlay_state = "fleetrank_enlisted"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted
-    name = "patch (E-1 crewman recruit)
+    name = "patch (E-1 crewman recruit)"
     desc = "A blank patch denoting the rank of Crewman Recruit."
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e2
-    name = "device (E-2 crewman apprentice)
+    name = "device (E-2 crewman apprentice)"
     desc = "Collar pin denoting the rank of Crewman Apprentice."
     icon_state = "e2_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e3
-    name = "device (E-3 crewman apprentice)
+    name = "device (E-3 crewman apprentice)"
     desc = "Collar pin denoting the rank of Crewman."
     icon_state = "e3_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e4
-    name = "device (E-4 petty officer third class)
+    name = "device (E-4 petty officer third class)"
     desc = "Collar pin denoting the rank of Petty Officer Third Class."
     icon_state = "e4_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e5
-    name = "device (E-5 petty officer second class)
+    name = "device (E-5 petty officer second class)"
     desc = "Collar pin denoting the rank of Petty Officer Second Class."
     icon_state = "e5_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e6
-    name = "device (E-6 petty officer first class)
+    name = "device (E-6 petty officer first class)"
     desc = "Collar pin denoting the rank of Petty Officer First Class."
     icon_state = "e6_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e7
-    name = "device (E-7 chief petty officer)
+    name = "device (E-7 chief petty officer)"
     desc = "Collar pin denoting the rank of Chief Petty Officer."
     icon_state = "e7_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e8
-    name = "device (E-8 senior chief petty officer)
+    name = "device (E-8 senior chief petty officer)"
     desc = "Collar pin denoting the rank of Senior Chief Petty Officer."
     icon_state = "e8_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e9
-    name = "device (E-9 master chief petty officer)
+    name = "device (E-9 master chief petty officer)"
     desc = "Collar pin denoting the rank of Master Chief Petty Officer."
     icon_state = "e9_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e9_alt1
-    name = "device (E-9 command master chief petty officer)
+    name = "device (E-9 command master chief petty officer)"
     desc = "Collar pin denoting the rank of Command Master Chief Petty Officer."
     icon_state = "e9_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e9_alt2
-    name = "device (E-9 fleet master chief petty officer)
+    name = "device (E-9 fleet master chief petty officer)"
     desc = "Collar pin denoting the rank of Fleet Master Chief Petty Officer."
     icon_state = "e9_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e9_alt3
-    name = "device (E-9 force master chief petty officer)
+    name = "device (E-9 force master chief petty officer)"
     desc = "Collar pin denoting the rank of Force Master Chief Petty Officer."
     icon_state = "e9_device"
 
 /obj/item/clothing/accessory/solgov/rank/fleet/fancy/enlisted/e9_alt4
-    name = "device (E-9 master chief petty officer of the fleet)
+    name = "device (E-9 master chief petty officer of the fleet)"
     desc = "Collar pin denoting the rank of Master Chief Petty Officer of the Fleet."
     icon_state = "e9_device"
 
