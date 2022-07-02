@@ -4336,12 +4336,6 @@
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
 	},
-/obj/effect/landmark/start{
-	name = "EXO Synth"
-	},
-/obj/effect/landmark{
-	name = "EXO Synth"
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/synth/borg_upload)
 "iT" = (
@@ -14871,10 +14865,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
-"LS" = (
-/obj/effect/shuttle_landmark/lift/robotics_bottom,
-/turf/simulated/floor/plating,
-/area/assembly/robotics)
 "LX" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -15446,6 +15436,10 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/seconddeck/foreport)
+"NL" = (
+/obj/effect/shuttle_landmark/lift/robotics_bottom,
+/turf/simulated/floor/plating,
+/area/assembly/robotics)
 "NN" = (
 /obj/structure/closet/crate/med_crate/toxin,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -35351,7 +35345,7 @@ Zr
 XP
 vO
 vO
-LS
+NL
 XP
 SQ
 Wi
