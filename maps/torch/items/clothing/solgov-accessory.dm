@@ -425,6 +425,10 @@ department tags
 /obj/item/clothing/accessory/solgov/department/command/service
 	icon_state = "dept_exped_service"
 
+/obj/item/clothing/accessory/solgov/department/command/jumper
+	icon_state = "dept_exped_jumper"
+	color = "#d6bb64"
+
 /obj/item/clothing/accessory/solgov/department/command/fleet
 	icon_state = "dept_fleet"
 	desc = "Insignia denoting assignment to the command department. These fit Fleet uniforms."
@@ -907,6 +911,10 @@ ranks - marines
 	name = "ranks (E-7 gunnery sergeant)"
 	desc = "Insignia denoting the rank of Gunnery Sergeant."
 
+/obj/item/clothing/accessory/solgov/rank/army/enlisted/e7_meme
+	name = "ranks (E-7 gaming sergeant)"
+	desc = "Insignia denoting 'honorable' rank of the Gaming Sergeant."
+
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e8
 	name = "ranks (E-8 master sergeant)"
 	desc = "Insignia denoting the rank of Master Sergeant."
@@ -922,6 +930,10 @@ ranks - marines
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_alt1
 	name = "ranks (E-9 master gunnery sergeant)"
 	desc = "Insignia denoting the rank of Master Gunnery Sergeant."
+
+/obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_meme
+	name = "ranks (E-9 master gaming sergeant)"
+	desc = "Insignia denoting the most 'honorable' rank of the Master 'Gaming' Sergeant."
 
 /obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_alt2
 	name = "ranks (E-9 sergeant major of the corps)"
