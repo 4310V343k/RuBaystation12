@@ -332,7 +332,11 @@
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e8,
 		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e9
+		/datum/mil_rank/fleet/e9,
+		/datum/mil_rank/army/e8,
+		/datum/mil_rank/army/e8_alt,
+		/datum/mil_rank/army/e9,
+		/datum/mil_rank/army/e9_alt1
 	)
 	min_skill = list(   SKILL_EVA        = SKILL_BASIC,
 	                    SKILL_COMBAT     = SKILL_BASIC,
