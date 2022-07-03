@@ -13,12 +13,12 @@
 
 /datum/antagonist/loyalists
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap, /datum/job/merchant)
-	protected_jobs = list(/datum/job/officer, /datum/job/officer/sfp, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor)
+	protected_jobs = list(/datum/job/officer, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor)
 
 /datum/antagonist/revolutionary
 	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap, /datum/job/merchant, /datum/job/synthetic)
 	restricted_jobs = list(/datum/job/captain, /datum/job/hop)
-	protected_jobs = list(/datum/job/officer, /datum/job/officer/sfp, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
+	protected_jobs = list(/datum/job/officer, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
 
 /datum/antagonist/traitor
 	blacklisted_jobs = list(/datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/ai, /datum/job/submap, /datum/job/hos, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard, /datum/job/synthetic)
