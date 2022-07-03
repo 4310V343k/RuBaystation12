@@ -97,6 +97,7 @@
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3
+		/datum/mil_rank/ec/o5,
 	)
 
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
