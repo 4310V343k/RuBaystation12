@@ -144,6 +144,7 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
+/* До лучших времен
 /datum/job/officer/sfp
 	title = "Police Enforcer"
 	total_positions = 2
@@ -158,5 +159,6 @@
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/sol/junior_agent,
-		/datum/mil_rank/sol/agent,
+		/datum/mil_rank/sol/agent
 	)
+*/
