@@ -103,6 +103,7 @@
 		/obj/item/clothing/glasses/welding,
 		/obj/item/clothing/head/welding,
 		/obj/item/device/camera,
+		/obj/item/gun/energy/plasmacutter,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/explorer, /obj/item/storage/backpack/satchel/explorer)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger/explorer)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
@@ -123,7 +124,6 @@
 		/obj/item/clothing/accessory/storage/holster/knife/polymer,
 		/obj/item/material/knife/combat,
 		/obj/item/storage/firstaid/individual/military,
-		/obj/item/gun/energy/stunrevolver/secure,
 		/obj/item/storage/belt/holster/security,
 		/obj/item/clothing/accessory/storage/webbing_large,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),

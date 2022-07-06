@@ -250,6 +250,7 @@ GLOBAL_LIST_EMPTY(admin_departments)
 
 	var/mob/intercepted = check_for_interception()
 
+	fax2TGS(rcvdcopy, department, destination, key_name(sender.client), intercepted)	// Proxima
 	message_admins(sender, "[uppertext(destination)] FAX[intercepted ? "(Intercepted by [intercepted])" : null]", rcvdcopy, destination ? destination : "UNKNOWN")
 	send_fax_loop(copyitem, destination, department) // Forward to any listening fax machines
 	visible_message("[src] beeps, \"Message transmitted successfully.\"")

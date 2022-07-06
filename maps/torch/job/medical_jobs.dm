@@ -119,7 +119,7 @@
 		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4,
+		//datum/mil_rank/army/e4,
 		/datum/mil_rank/army/e4_alt,
 		/datum/mil_rank/army/e5,
 		/datum/mil_rank/army/e6,
@@ -165,9 +165,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/fleet/e2,
-		/datum/mil_rank/fleet/e3,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
+		/datum/mil_rank/army/e2
 	)
 
 	skill_points = 4

@@ -3173,6 +3173,7 @@
 /obj/structure/sign/ecplaque{
 	pixel_y = 30
 	},
+/obj/item/material/hatchet/machete,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/pilot)
 "hn" = (

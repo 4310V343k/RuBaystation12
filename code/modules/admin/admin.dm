@@ -1574,6 +1574,7 @@ GLOBAL_VAR_INIT(skip_allow_lists, FALSE)
 	var/obj/machinery/photocopier/faxmachine/destination = P.destinations[1]
 	rcvdcopy = destination.copy(P, FALSE)
 	rcvdcopy.forceMove(null) //hopefully this shouldn't cause trouble
+	fax2TGS(rcvdcopy, P.origin, destination.department, key_name(src.owner))	// Proxima
 	GLOB.adminfaxes += rcvdcopy
 	var/success = send_fax_loop(P, P.department, P.origin)
 
