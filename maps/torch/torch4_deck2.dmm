@@ -6574,6 +6574,9 @@
 	},
 /turf/simulated/wall/r_wall/hull,
 /area/engineering/engine_room)
+"oS" = (
+/turf/simulated/floor/plating,
+/area/maintenance/seconddeck/aftstarboard)
 "oU" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -15054,6 +15057,9 @@
 /obj/machinery/meter,
 /turf/simulated/wall/r_wall/prepainted,
 /area/engineering/atmos)
+"Mt" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/engineering/atmos/storage)
 "Mu" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -35570,7 +35576,7 @@ OL
 OF
 Sp
 jV
-jV
+Mt
 Yp
 Xz
 Xz
@@ -35772,7 +35778,7 @@ yo
 RF
 yo
 yo
-jV
+Mt
 Iz
 Jb
 Jb
@@ -39388,7 +39394,7 @@ PD
 PD
 PD
 PD
-bq
+oS
 bv
 bA
 Hy
