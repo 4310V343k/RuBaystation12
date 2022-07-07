@@ -9928,6 +9928,13 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/fore)
+"vI" = (
+/obj/machinery/light/small{
+	dir = 4;
+	icon_state = "bulb1"
+	},
+/turf/simulated/wall/prepainted,
+/area/turret_protected/ai_upload)
 "vM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -14542,7 +14549,7 @@
 "IF" = (
 /obj/structure/sign/poster/torch,
 /turf/simulated/wall/prepainted,
-/area/crew_quarters/recreation)
+/area/turret_protected/ai_upload)
 "IH" = (
 /obj/structure/table/steel,
 /obj/random_multi/single_item/punitelly,
@@ -16481,6 +16488,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/thirddeck/starboard)
+"ML" = (
+/turf/simulated/wall/prepainted,
+/area/turret_protected/ai_upload)
 "MM" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/thirddeck/aft)
@@ -34127,14 +34137,14 @@ dv
 dv
 dv
 cK
-CF
-CF
-CF
-CF
-CF
-CF
-QR
-CF
+cG
+cG
+ML
+ML
+ML
+ML
+vI
+ML
 IF
 wR
 xR

@@ -3574,11 +3574,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/seconddeck/forestarboard)
-"gV" = (
-/obj/structure/closet/emcloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled,
-/area/space)
 "gW" = (
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -32950,6 +32945,7 @@ qv
 oh
 vz
 kL
+dX
 yg
 yU
 zE
@@ -32961,7 +32957,6 @@ EU
 EU
 OM
 Ef
-aa
 aa
 aa
 aa
@@ -33152,6 +33147,7 @@ qv
 qv
 qv
 qv
+dX
 yg
 yV
 zF
@@ -33163,7 +33159,6 @@ CP
 Xk
 lk
 ky
-aa
 aa
 aa
 aa
@@ -33354,6 +33349,7 @@ ug
 uS
 uS
 qv
+dX
 yg
 yW
 zG
@@ -33365,7 +33361,6 @@ CQ
 EV
 lk
 ky
-aa
 aa
 aa
 aa
@@ -33556,6 +33551,7 @@ tk
 Wk
 vA
 qv
+dX
 yg
 yX
 zH
@@ -33567,7 +33563,6 @@ CR
 Xk
 lk
 ky
-aa
 aa
 aa
 aa
@@ -33758,6 +33753,7 @@ QC
 JE
 vB
 qv
+dX
 yg
 yY
 zI
@@ -33770,7 +33766,6 @@ EU
 OM
 OM
 Dp
-aa
 aa
 aa
 aa
@@ -33960,11 +33955,12 @@ LO
 sF
 vC
 qv
+dX
 yg
 yg
 zJ
 yg
-yg
+nc
 BM
 Cp
 CS
@@ -33972,7 +33968,6 @@ Dq
 Wp
 Wp
 Wp
-aa
 aa
 aa
 aa
@@ -35367,7 +35362,7 @@ fC
 bI
 fV
 xj
-gV
+rO
 jV
 jV
 jV
