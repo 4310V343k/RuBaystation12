@@ -4491,9 +4491,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engineering_bay)
 "jx" = (
-/obj/structure/sign/poster/torch,
-/turf/simulated/wall/prepainted,
-/area/assembly/robotics/surgery)
+)
 "jy" = (
 /turf/simulated/wall/prepainted,
 /area/engineering/storage)
@@ -6017,18 +6015,6 @@
 /obj/machinery/camera/network/second_deck,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/assembly/chargebay)
-"ne" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/seconddeck/central)
 "nf" = (
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor,
@@ -17663,12 +17649,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/vacant/prototype/engine)
 "Vf" = (
-/obj/machinery/computer/air_control{
-	dir = 8;
-	input_tag = "rust_injector";
-	name = "R-UST Gas Injection Controls";
-	sensor_name = "Fusion Chamber";
-	sensor_tag = "rust_sensor"
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -17684,6 +17664,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/vacant/prototype/control)
 "Vg" = (
+/obj/machinery/door/airlock/hatch/maintenance/bolted,
+/turf/simulated/floor/reinforced,
 /area/vacant/prototype/engine)
 "Vh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -28513,7 +28495,7 @@ qw
 ud
 Pe
 Se
-IV
+Ls
 Kf
 qh
 Rh
@@ -33061,6 +33043,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (70,1,1) = {"
 aa
@@ -33262,6 +33245,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (71,1,1) = {"
 aa
@@ -33463,6 +33447,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (72,1,1) = {"
 aa
@@ -33664,6 +33649,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (73,1,1) = {"
 aa
@@ -33865,6 +33851,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (74,1,1) = {"
 aa
@@ -34066,6 +34053,7 @@ aa
 aa
 aa
 aa
+jx
 "}
 (75,1,1) = {"
 aa

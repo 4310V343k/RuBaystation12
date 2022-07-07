@@ -18543,7 +18543,6 @@
 /area/medical/foyer/storeroom)
 "hAb" = (
 /obj/structure/table/standard,
-/obj/random/clipboard,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -18553,15 +18552,6 @@
 	icon_state = "1-2"
 	},
 /obj/item/paper_bin,
-/obj/item/pen,
-/obj/item/pen/blue{
-	pixel_x = -5;
-	pixel_y = -1
-	},
-/obj/item/pen/red{
-	pixel_x = -1;
-	pixel_y = 3
-	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/rnd_sec)
 "hBb" = (
@@ -18569,7 +18559,17 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/obj/structure/closet/secure_closet/research_guard,
+/obj/structure/table/standard,
+/obj/random/clipboard,
+/obj/item/pen,
+/obj/item/pen/red{
+	pixel_x = -1;
+	pixel_y = 3
+	},
+/obj/item/pen/blue{
+	pixel_x = -5;
+	pixel_y = -1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/rnd_sec)
 "hBr" = (
@@ -21853,13 +21853,13 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/storage)
 "lVb" = (
-/obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/security{
 	id_tag = "detdoor";
 	name = "Forensic Lab";
 	secured_wires = 1
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/machinery/door/firedoor,
+/turf/simulated/wall/prepainted,
 /area/security/evidence)
 "lVZ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -39876,7 +39876,7 @@ lJb
 uXW
 qWE
 uGu
-aNH
+aiu
 cXj
 wyb
 sxG
@@ -40073,9 +40073,12 @@ aiP
 ajP
 vMw
 aiu
+aiu
+aiu
 lVb
+aiu
 cfn
-aNH
+aiu
 vJO
 oIb
 avI
@@ -40277,7 +40280,7 @@ lKb
 lWb
 qya
 mfb
-aNH
+aiu
 vJO
 auv
 jpt
@@ -40479,7 +40482,7 @@ alW
 alW
 tUl
 hCE
-aNH
+aiu
 mCk
 hnL
 dPA
@@ -40681,7 +40684,7 @@ dkG
 ape
 amb
 kUt
-aNH
+aiu
 xzK
 auv
 jpt
@@ -40877,6 +40880,13 @@ adK
 adK
 ajT
 vMw
+aiu
+aiu
+aiu
+aiu
+aiu
+aiu
+aiu
 vJO
 oIb
 avI

@@ -524,6 +524,8 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/structure/dogbed,
+/mob/living/simple_animal/passive/corgi/Ein,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "bC" = (
@@ -3628,8 +3630,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/mob/living/simple_animal/passive/corgi/Ein,
-/obj/structure/dogbed,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/galleybackroom)
 "ho" = (
@@ -9004,9 +9004,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/plating,
 /area/hallway/primary/thirddeck/fore)
-"sO" = (
-/turf/simulated/wall/r_wall/prepainted,
-/area/maintenance/thirddeck/forestarboard)
 "sP" = (
 /obj/structure/table/rack{
 	dir = 8

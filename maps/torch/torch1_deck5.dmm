@@ -551,7 +551,8 @@
 	},
 /obj/structure/bed/chair/shuttle/blue,
 /obj/machinery/power/apc/shuttle/charon{
-	dir = 4
+	dir = 4;
+	pixel_x = 24
 	},
 /obj/structure/cable/cyan{
 	d2 = 2;
@@ -703,7 +704,8 @@
 /obj/machinery/button/blast_door{
 	id_tag = "charon_shutters";
 	name = "Protective Shutters Control";
-	pixel_y = -25
+	pixel_y = -36;
+	pixel_x = 1
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -961,11 +963,14 @@
 "bV" = (
 /obj/machinery/hologram/holopad/longrange,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/apc/shuttle/charon,
 /obj/structure/cable/cyan,
 /obj/machinery/camera/network/exploration_shuttle{
 	c_tag = "Charon - Cockpit";
 	dir = 1
+	},
+/obj/machinery/power/apc/shuttle/charon{
+	name = "south bump";
+	pixel_y = -28
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cockpit)
@@ -1228,12 +1233,13 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
-/obj/machinery/power/apc/shuttle/charon{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	d2 = 4;
 	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/shuttle/charon{
+	dir = 8;
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
@@ -2649,16 +2655,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/aft)
 "fW" = (
-/obj/effect/floor_decal/corner/mauve/half{
-	dir = 4
-	},
-/obj/machinery/computer/modular/preset/civilian{
-	dir = 8;
-	icon_state = "console"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/exploration)
+)
 "fX" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/hangar)
@@ -5474,13 +5471,11 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "mx" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/fifthdeck/fore)
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/exploration)
 "mA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -5774,18 +5769,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
 "nf" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/obj/structure/catwalk,
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
@@ -6051,7 +6036,7 @@
 	dir = 1;
 	icon_state = "railing0-1"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
 "nC" = (
 /obj/structure/disposalpipe/segment{
@@ -8413,14 +8398,18 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "si" = (
-/obj/structure/disposalpipe/sortjunction/flipped{
-	dir = 4;
-	name = "Expedition Prep";
-	sort_type = "Expedition Prep"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
@@ -8841,10 +8830,16 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/canister)
 "to" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/random/trash,
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 4;
+	name = "Expedition Prep";
+	sort_type = "Expedition Prep"
+	},
+/obj/structure/railing/mapped{
+	dir = 1;
+	icon_state = "railing0-1"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
 "tp" = (
@@ -12008,6 +12003,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/isolation)
+"DH" = (
+/obj/effect/paint/hull,
+/obj/machinery/dummy_airlock_controller{
+	id_tag = "charon_shuttle"
+	},
+/turf/simulated/wall/titanium,
+/area/exploration_shuttle/cockpit)
 "DK" = (
 /obj/effect/paint/silver,
 /obj/machinery/button/blast_door{
@@ -13756,6 +13758,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/artifact,
 /turf/simulated/floor/reinforced,
 /area/shuttle/petrov/cell1)
 "KQ" = (
@@ -32170,16 +32173,16 @@ kL
 hl
 iP
 kg
-ki
+hz
+mx
 DR
 eu
-nf
 si
 to
+nf
 nu
 an
 an
-an
 aa
 aa
 aa
@@ -32261,6 +32264,7 @@ aa
 aa
 aa
 aa
+fW
 "}
 (74,1,1) = {"
 aa
@@ -32375,7 +32379,7 @@ xZ
 kI
 kv
 eu
-mx
+rg
 nB
 nb
 nv
@@ -34172,7 +34176,7 @@ aA
 bf
 bx
 bW
-ag
+DH
 cv
 cR
 di

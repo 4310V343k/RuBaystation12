@@ -2057,7 +2057,8 @@
 "gU" = (
 /obj/structure/catwalk,
 /obj/machinery/rotating_alarm/security_alarm{
-	dir = 8
+	dir = 8;
+	pixel_x = 16
 	},
 /turf/simulated/open,
 /area/quartermaster/hangar/catwalks_port)
@@ -2555,7 +2556,13 @@
 /turf/simulated/wall/r_titanium,
 /area/shuttle/escape_pod6/station)
 "ic" = (
-/obj/machinery/alarm,
+/obj/machinery/alarm{
+	alarm_id = "xenobio4_alarm";
+	dir = 2;
+	icon_state = "alarm0";
+	pixel_x = 0;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/center)
 "id" = (
@@ -3453,7 +3460,8 @@
 /area/hallway/primary/fourthdeck/aft)
 "lR" = (
 /obj/machinery/rotating_alarm/security_alarm{
-	dir = 1
+	dir = 1;
+	pixel_y = -16
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -3726,7 +3734,8 @@
 	dir = 4
 	},
 /obj/machinery/rotating_alarm/security_alarm{
-	dir = 1
+	dir = 1;
+	pixel_y = -16
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/fore)
@@ -4774,7 +4783,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/eva)
 "qM" = (
-/obj/machinery/rotating_alarm/security_alarm,
+/obj/machinery/rotating_alarm/security_alarm{
+	pixel_y = 14
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/center)
 "qQ" = (
@@ -6001,7 +6012,8 @@
 	dir = 8
 	},
 /obj/machinery/rotating_alarm/security_alarm{
-	dir = 1
+	dir = 1;
+	pixel_y = -16
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/fourthdeck/fore)
@@ -12989,7 +13001,8 @@
 	},
 /obj/effect/catwalk_plated,
 /obj/machinery/rotating_alarm/security_alarm{
-	dir = 1
+	dir = 1;
+	pixel_y = -16
 	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/fourthdeck/fore)
@@ -15985,6 +15998,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/starboard)
+"Zi" = (
+/obj/structure/sign/poster/poraz,
+/turf/simulated/wall/prepainted,
+/area/crew_quarters/galley)
 "Zj" = (
 /obj/effect/floor_decal/corner/red,
 /obj/effect/floor_decal/corner/white{
@@ -33431,7 +33448,7 @@ ak
 Os
 ep
 XG
-af
+Zi
 ao
 ao
 at
