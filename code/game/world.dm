@@ -530,33 +530,6 @@ GLOBAL_VAR_INIT(world_topic_last, world.timeofday)
 	fdel(F)
 	to_file(F, the_mode)
 
-
-/hook/startup/proc/loadMods()
-	world.load_mods()
-	return 1
-
-/world/proc/load_mods()
-	if(config.admin_legacy_system)
-		var/text = file2text("config/moderators.txt")
-		if (!text)
-			error("Failed to load config/mods.txt")
-		else
-			var/list/lines = splittext(text, "\n")
-			for(var/line in lines)
-				if (!line)
-					continue
-
-				if (copytext_char(line, 1, 2) == ";")
-					continue
-
-				var/title = "Moderator"
-				var/rights = admin_ranks[title]
-
-				var/ckey = copytext_char(line, 1, length(line)+1)
-				var/datum/admins/D = new /datum/admins(title, rights, ckey)
-				D.associate(GLOB.ckey_directory[ckey])
-
-
 /world/proc/update_status()
 	if (!config?.hub_visible || !config.hub_entry)
 		return
