@@ -1,4 +1,4 @@
-#define RECOMMENDED_VERSION 514
+#define RECOMMENDED_VERSION 513
 #define FAILED_DB_CONNECTION_CUTOFF 5
 #define THROTTLE_MAX_BURST 15 SECONDS
 #define SET_THROTTLE(TIME, REASON) throttle[1] = base_throttle + (TIME); throttle[2] = (REASON);
