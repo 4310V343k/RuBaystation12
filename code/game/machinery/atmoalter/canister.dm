@@ -78,8 +78,8 @@
 
 /obj/machinery/portable_atmospherics/canister/boron
 	name = "\improper Canister \[Boron\]"
-	icon_state = "brown"
-	canister_color = "brown"
+	icon_state = "lightblue"
+	canister_color = "lightblue"
 	can_label = 0
 
 /obj/machinery/portable_atmospherics/canister/air/airlock
@@ -457,8 +457,8 @@
 
 /obj/machinery/portable_atmospherics/canister/chlorine
 	name = "\improper Canister \[Cl\]"
-	icon_state = "black"
-	canister_color = "black"
+	icon_state = "lightyellow"
+	canister_color = "lightyellow"
 	can_label = 0
 
 /obj/machinery/portable_atmospherics/canister/chlorine/New()
