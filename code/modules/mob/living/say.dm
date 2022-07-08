@@ -307,6 +307,22 @@ var/global/list/channel_to_radio_key = new
 
 		get_mobs_and_objs_in_view_fast(T, message_range, listening, listening_obj, /datum/client_preference/ghost_ears)
 
+
+	var/speech_bubble_test = say_test(message)
+	var/image/speech_bubble = image('icons/mob/talk.dmi',src,"h[speech_bubble_test]")
+	speech_bubble.layer = layer
+	speech_bubble.plane = plane
+	speech_bubble.alpha = 0
+	// VOREStation Port - Attempt Multi-Z Talking
+	// for (var/atom/movable/AM in get_above_oo())
+	// 	var/turf/ST = get_turf(AM)
+	// 	if(ST)
+	// 		get_mobs_and_objs_in_view_fast(ST, world.view, listening, listening_obj, /datum/client_preference/ghost_ears)
+	// 		var/image/z_speech_bubble = image('icons/mob/talk.dmi', AM, "h[speech_bubble_test]")
+	// 		QDEL_IN(z_speech_bubble, 30)
+
+	// VOREStation Port End
+
 	var/list/speech_bubble_recipients = list()
 	for(var/mob/M in listening)
 		if(M)
@@ -320,6 +336,7 @@ var/global/list/channel_to_radio_key = new
 			if(O) //It's possible that it could be deleted in the meantime.
 				O.hear_talk(src, message, verb, speaking)
 
+	var/list/eavesdroppers = list()
 	if(whispering)
 		var/eavesdroping_range = 5
 		var/list/eavesdroping = list()
@@ -332,28 +349,27 @@ var/global/list/channel_to_radio_key = new
 				M.hear_say(stars(message), verb, speaking, alt_name, italics, src, speech_sound, sound_vol)
 				if(M.client)
 					speech_bubble_recipients |= M.client
+					eavesdroppers |= M.client
 
 		for(var/obj/O in eavesdroping)
 			spawn(0)
 				if(O) //It's possible that it could be deleted in the meantime.
 					O.hear_talk(src, stars(message), verb, speaking)
 
+	INVOKE_ASYNC(GLOBAL_PROC, .proc/animate_speech_bubble, speech_bubble, speech_bubble_recipients | eavesdroppers, 30)
+	INVOKE_ASYNC(src, /atom/movable/proc/animate_chat, message, speaking, italics, speech_bubble_recipients)
+	if(length(eavesdroppers))
+		INVOKE_ASYNC(src, /atom/movable/proc/animate_chat, stars(message), speaking, italics, eavesdroppers)
+
 	if(whispering)
 		log_whisper("[name]/[key] : [message]")
 	else
 		log_say("[name]/[key] : [message]")
 
-	if (length(speech_bubble_recipients))
-		var/speech_intent = say_test(message)
-		var/image/speech_bubble = image('icons/mob/talk.dmi', src, "h[speech_intent]")
-		speech_bubble.blend_mode = BLEND_OVERLAY
-		speech_bubble.layer = SPEECH_INDICATOR_LAYER
-		speech_bubble.plane = EFFECTS_ABOVE_LIGHTING_PLANE
-		speech_bubble.alpha = 0
-		flick_overlay(speech_bubble, speech_bubble_recipients, 3 SECONDS)
-		animate(speech_bubble, alpha = 255, time = 1 SECOND, easing = QUAD_EASING)
-		animate(time = 1 SECOND)
-		animate(alpha = 0, pixel_y = 8, time = 1 SECOND, easing = QUAD_EASING)
+	flick_overlay(speech_bubble, speech_bubble_recipients, 50)
+	animate(speech_bubble, alpha = 255, time = 10, easing = CIRCULAR_EASING)
+	animate(time = 20)
+	animate(alpha = 0, pixel_y = 12, time = 20, easing = CIRCULAR_EASING)
 	return 1
 
 
