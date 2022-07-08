@@ -171,6 +171,8 @@ SUBSYSTEM_DEF(ticker)
 			if(job && job.create_record)
 				CreateModularRecord(H)
 
+	callHook("roundstart")
+
 	spawn(0)//Forking here so we dont have to wait for this to finish
 		mode.post_setup() // Drafts antags who don't override jobs.
 		to_world("<span class='info'><B>Enjoy the game!</B></span>")
