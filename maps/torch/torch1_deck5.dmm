@@ -980,6 +980,9 @@
 	pixel_y = -24
 	},
 /obj/structure/table/steel_reinforced,
+/obj/machinery/dummy_airlock_controller{
+	id_tag = "charon_shuttle"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cockpit)
 "bY" = (
@@ -12003,13 +12006,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/isolation)
-"DH" = (
-/obj/effect/paint/hull,
-/obj/machinery/dummy_airlock_controller{
-	id_tag = "charon_shuttle"
-	},
-/turf/simulated/wall/titanium,
-/area/exploration_shuttle/cockpit)
 "DK" = (
 /obj/effect/paint/silver,
 /obj/machinery/button/blast_door{
@@ -34176,7 +34172,7 @@ aA
 bf
 bx
 bW
-DH
+ag
 cv
 cR
 di
