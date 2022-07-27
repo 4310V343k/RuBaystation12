@@ -73,7 +73,7 @@
 		access_emergency_armory, access_gun, access_expedition_shuttle, access_guppy, access_seneng, access_senmed, access_senadv,
 		access_explorer, access_pathfinder, access_pilot, access_commissary, access_petrov, access_petrov_helm, access_petrov_analysis, access_petrov_phoron,
 		access_petrov_toxins, access_petrov_chemistry, access_petrov_control, access_petrov_maint, access_rd, access_petrov_rd, access_torch_fax, access_torch_helm,
-		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci
+		access_radio_comm, access_radio_eng, access_radio_med, access_radio_sec, access_radio_sup, access_radio_serv, access_radio_exp, access_radio_sci, access_research_storage
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
@@ -115,13 +115,13 @@
 
 	access = list(
 		access_tox, access_tox_storage, access_emergency_storage, access_teleporter, access_bridge, access_rd,
-		access_research, access_mining, access_mining_office, access_mining_station, access_xenobiology, access_aquila,
+		access_research, access_mining, access_mining_office, access_mining_station,access_ai_upload, access_xenobiology, access_aquila,
 		access_RC_announce, access_keycard_auth, access_xenoarch, access_nanotrasen, access_heads,
 		access_expedition_shuttle, access_guppy, access_hangar, access_petrov, access_petrov_helm, access_guppy_helm,
 		access_petrov_analysis, access_petrov_phoron, access_petrov_toxins, access_petrov_chemistry, access_petrov_rd,
 		access_petrov_control, access_petrov_maint, access_pathfinder, access_explorer, access_eva, access_solgov_crew,
 		access_expedition_shuttle, access_expedition_shuttle_helm, access_maint_tunnels, access_torch_fax, access_radio_comm,
-		access_radio_sci, access_radio_exp, access_research_security
+		access_radio_sci, access_radio_exp, access_research_security, access_research_storage
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/comm,
@@ -183,7 +183,7 @@
 	title = "Chief Engineer"
 	supervisors = "the Commanding Officer and the Executive Officer"
 	economic_power = 12
-	minimum_character_age = list(SPECIES_HUMAN = 27)
+	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 40
 	minimal_player_age = 14
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
@@ -252,7 +252,8 @@
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3
+		/datum/mil_rank/army/o3,
+		/datum/mil_rank/army/o4
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
@@ -325,12 +326,17 @@
 	ideal_character_age = 45
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/fleet
 	allowed_branches = list(
-		/datum/mil_branch/fleet
+		/datum/mil_branch/fleet,
+		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/sea/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e8,
 		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e9
+		/datum/mil_rank/fleet/e9,
+		/datum/mil_rank/army/e8,
+		/datum/mil_rank/army/e8_alt,
+		/datum/mil_rank/army/e9,
+		/datum/mil_rank/army/e9_alt1
 	)
 	min_skill = list(   SKILL_EVA        = SKILL_BASIC,
 	                    SKILL_COMBAT     = SKILL_BASIC,

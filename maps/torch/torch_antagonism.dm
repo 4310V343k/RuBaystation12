@@ -1,14 +1,14 @@
 //Makes sure we don't get any merchant antags as a balance concern. Can also be used for future Torch specific antag restrictions.
 /datum/antagonist/changeling
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/submap)
+	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/submap, /datum/job/synthetic)
 	protected_jobs = list(/datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
 
 /datum/antagonist/godcultist
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/submap)
+	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/submap, /datum/job/synthetic)
 	protected_jobs = list(/datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor)
 
 /datum/antagonist/cultist
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/psychiatrist, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/submap)
+	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/chaplain, /datum/job/psychiatrist, /datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/hos, /datum/job/submap, /datum/job/synthetic)
 	protected_jobs = list(/datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
 
 /datum/antagonist/loyalists
@@ -16,12 +16,12 @@
 	protected_jobs = list(/datum/job/officer, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor)
 
 /datum/antagonist/revolutionary
-	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap, /datum/job/merchant)
+	blacklisted_jobs = list(/datum/job/ai, /datum/job/cyborg, /datum/job/submap, /datum/job/merchant, /datum/job/synthetic)
 	restricted_jobs = list(/datum/job/captain, /datum/job/hop)
 	protected_jobs = list(/datum/job/officer, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
 
 /datum/antagonist/traitor
-	blacklisted_jobs = list(/datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/ai, /datum/job/submap, /datum/job/hos, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard)
+	blacklisted_jobs = list(/datum/job/merchant, /datum/job/captain, /datum/job/hop, /datum/job/ai, /datum/job/submap, /datum/job/hos, /datum/job/medical_trainee, /datum/job/engineer_trainee, /datum/job/junior_doctor, /datum/job/research_guard, /datum/job/synthetic)
 
 /datum/antagonist/ert
 	var/sic //Second-In-Command
@@ -32,16 +32,16 @@
 	if(!..())
 		return 0
 
-	player.char_branch = mil_branches.get_branch("Fleet")
+	player.char_branch = GLOB.mil_branches.get_branch("Fleet")
 	if(player.mind == leader)
-		player.char_rank = mil_branches.get_rank("Fleet", "Lieutenant")
+		player.char_rank = GLOB.mil_branches.get_rank("Fleet", "Lieutenant")
 	else if(!sic)
 		sic = player.mind
-		player.char_rank = mil_branches.get_rank("Fleet", "Chief Petty Officer")
+		player.char_rank = GLOB.mil_branches.get_rank("Fleet", "Chief Petty Officer")
 	else if(prob(50))
-		player.char_rank = mil_branches.get_rank("Fleet", "Petty Officer Second Class")
+		player.char_rank = GLOB.mil_branches.get_rank("Fleet", "Petty Officer Second Class")
 	else
-		player.char_rank = mil_branches.get_rank("Fleet", "Petty Officer First Class")
+		player.char_rank = GLOB.mil_branches.get_rank("Fleet", "Petty Officer First Class")
 
 	var/decl/hierarchy/outfit/ert_outfit = outfit_by_type((player.mind == leader) ? /decl/hierarchy/outfit/job/torch/ert/leader : /decl/hierarchy/outfit/job/torch/ert)
 	ert_outfit.equip(player)
