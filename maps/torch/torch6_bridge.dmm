@@ -226,8 +226,17 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/bridge/aft)
 "aA" = (
-/obj/structure/catwalk,
 /obj/machinery/door/firedoor,
+/obj/item/airlock_brace{
+	req_access = list("ACCESS_BRIDGE")
+	},
+/obj/machinery/door/airlock/vault/bolted{
+	autoset_access = 0;
+	id_tag = "bridgestorage_exit";
+	name = "Emergency Exit";
+	req_access = list("ACCESS_BRIDGE");
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "aB" = (
@@ -353,13 +362,16 @@
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/heads/cobed)
 "aL" = (
-/obj/structure/table/rack,
-/obj/random/tech_supply,
-/obj/random/maintenance/solgov,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
+/obj/structure/railing/mapped,
+/obj/structure/table/standard,
+/obj/machinery/button/alternate/door/bolts{
+	id_tag = "bridgestorage_exit";
+	name = "Emergency Exit door-control";
+	pixel_x = 25;
+	req_access = list("ACCESS_BRIDGE")
+	},
+/obj/item/storage/box/donkpocket_protein{
+	pixel_y = 6
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
@@ -622,6 +634,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/catwalk,
+/obj/item/storage/toolbox/mechanical,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "bq" = (
@@ -1594,7 +1609,6 @@
 /turf/simulated/floor/airless,
 /area/solar/bridge)
 "cR" = (
-/obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -2212,6 +2226,8 @@
 	c_tag = "Bridge";
 	dir = 1
 	},
+/obj/item/book/manual/sol_sop,
+/obj/item/book/manual/solgov_law,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "dY" = (
@@ -2371,7 +2387,7 @@
 	dir = 4
 	},
 /obj/structure/railing/mapped{
-	dir = 8;
+	dir = 4;
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/plating,
@@ -2439,8 +2455,6 @@
 	pixel_y = -24
 	},
 /obj/structure/table/glass,
-/obj/item/book/manual/solgov_law,
-/obj/item/book/manual/sol_sop,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "ew" = (
@@ -3775,11 +3789,19 @@
 /turf/simulated/floor/airless,
 /area/aquila/cockpit)
 "hg" = (
-/obj/machinery/rotating_alarm/security_alarm{
-	dir = 4
+/obj/structure/closet/crate,
+/obj/random/medical,
+/obj/random/medical/lite,
+/obj/random/solgov,
+/obj/random/solgov,
+/obj/random/solgov,
+/obj/random/solgov,
+/obj/random/tech_supply,
+/obj/machinery/light/small{
+	dir = 1
 	},
-/turf/space,
-/area/space)
+/turf/simulated/floor/plating,
+/area/maintenance/bridge/forestarboard)
 "hi" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack{
@@ -4581,6 +4603,23 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
 /area/aquila/air)
+"jm" = (
+/obj/structure/railing/mapped,
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG{
+	pixel_x = 8;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/drinks/pitcher{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/food/drinks/bottle/brandy{
+	pixel_x = 6;
+	pixel_y = 15
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/bridge/forestarboard)
 "ju" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/porta_turret{
@@ -7164,6 +7203,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "qt" = (
@@ -8701,6 +8741,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/wall/r_wall/prepainted,
 /area/turret_protected/ai_foyer)
+"uF" = (
+/obj/item/stool,
+/turf/simulated/floor/plating,
+/area/maintenance/bridge/forestarboard)
 "uG" = (
 /obj/structure/bed/chair/padded/blue,
 /turf/simulated/floor/tiled/dark,
@@ -10127,8 +10171,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
 "yc" = (
-/obj/structure/catwalk,
-/obj/random/junk,
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "yd" = (
@@ -10411,10 +10455,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/bridge/fore)
 "zq" = (
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
+/obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "zs" = (
@@ -10989,9 +11030,6 @@
 	},
 /obj/machinery/light/spot{
 	dir = 8
-	},
-/obj/machinery/rotating_alarm/security_alarm{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -11579,9 +11617,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/meeting_room)
 "DI" = (
-/obj/structure/table/rack,
-/obj/random/maintenance/solgov/clean,
-/obj/random/maintenance/solgov/clean,
+/obj/structure/closet,
+/obj/item/device/binoculars,
+/obj/random/clipboard,
+/obj/item/device/camera_film,
+/obj/item/device/camera_film,
+/obj/item/device/camera,
+/obj/item/device/flashlight,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/device/lightreplacer,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "DN" = (
@@ -12017,8 +12061,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
+"FO" = (
+/obj/item/storage/toolbox/mechanical,
+/turf/space,
+/area/space)
 "FR" = (
 /obj/machinery/camera/all/command{
 	c_tag = "AI Core - Auxiliary Access";
@@ -12243,6 +12292,12 @@
 	pixel_x = 25;
 	pixel_y = 7
 	},
+/obj/machinery/door/airlock/vault/bolted{
+	autoset_access = 0;
+	id_tag = "bridgestorage_exit";
+	name = "Emergency Exit";
+	req_access = list("ACCESS_BRIDGE")
+	},
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/cl)
 "GD" = (
@@ -12307,6 +12362,7 @@
 "GW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/machinery/meter,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "GX" = (
@@ -13393,7 +13449,11 @@
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/cl/backroom)
 "KB" = (
-/obj/structure/largecrate,
+/obj/structure/bed/chair/comfy/captain,
+/obj/random_multi/single_item/poppy,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 24
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "KC" = (
@@ -14420,14 +14480,7 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/turret_protected/ai_foyer)
 "OS" = (
-/obj/structure/railing/mapped{
-	dir = 1;
-	icon_state = "railing0-1"
-	},
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
-	},
+/obj/item/form_printer,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "OU" = (
@@ -14894,16 +14947,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
+"QO" = (
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/obj/machinery/vending/wallmed1{
+	pixel_y = 32;
+	products = list(/obj/item/stack/medical/bruise_pack=6,/obj/item/stack/medical/ointment=6,/obj/item/reagent_containers/pill/paracetamol=8,/obj/item/storage/med_pouch/trauma=4,/obj/item/storage/med_pouch/burn=2,/obj/item/storage/med_pouch/oxyloss=2,/obj/item/storage/med_pouch/toxin=2)
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/bridge/forestarboard)
 "QQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light/small{
 	dir = 8
-	},
-/obj/machinery/button/alternate/door/bolts{
-	id_tag = "bridgestorage_exit";
-	name = "Emergency Exit door-control";
-	pixel_x = 25;
-	req_access = list("ACCESS_BRIDGE")
 	},
 /obj/item/stool/padded,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -14963,7 +15019,7 @@
 /area/crew_quarters/heads/office/xo)
 "QY" = (
 /obj/structure/railing/mapped{
-	dir = 8;
+	dir = 4;
 	icon_state = "railing0-1"
 	},
 /turf/simulated/floor/plating,
@@ -15354,6 +15410,12 @@
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/plating,
 /area/aquila/air)
+"Sv" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/bridge/forestarboard)
 "Sy" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -15664,7 +15726,7 @@
 "TA" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "TB" = (
 /turf/simulated/floor/reinforced/airless,
@@ -16588,7 +16650,8 @@
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "XB" = (
-/obj/structure/bed/chair/comfy/captain,
+/obj/structure/closet/crate/paper_refill,
+/obj/item/form_printer,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "XC" = (
@@ -16839,7 +16902,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/turret_protected/ai)
 "Ys" = (
-/obj/random_multi/single_item/poppy,
+/obj/machinery/power/port_gen/pacman,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/forestarboard)
 "Yx" = (
@@ -16973,14 +17037,10 @@
 "YX" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/vault/bolted{
-	autoset_access = 0;
-	id_tag = "bridgestorage_exit";
-	name = "Emergency Exit";
-	req_access = list("ACCESS_BRIDGE")
-	},
-/obj/item/airlock_brace{
-	req_access = list("ACCESS_BRIDGE")
+/obj/machinery/door/airlock/sol{
+	id_tag = "starboardbridgedoor";
+	name = "Bridge";
+	secured_wires = 1
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/storage)
@@ -21550,7 +21610,7 @@ aa
 aa
 aa
 aa
-aa
+FO
 aa
 aa
 aa
@@ -23993,7 +24053,7 @@ aa
 pe
 aa
 aa
-hg
+aa
 aa
 aa
 aa
@@ -24788,9 +24848,9 @@ aa
 af
 af
 af
-VB
-yc
-VB
+Ys
+Sv
+aj
 cR
 YX
 QQ
@@ -24990,8 +25050,8 @@ aa
 af
 af
 KB
-VB
-OS
+aj
+aj
 QY
 er
 qO
@@ -25191,10 +25251,10 @@ aa
 aa
 af
 af
-XB
-VB
-zq
+DI
 aj
+zq
+VB
 qs
 UC
 qO
@@ -25393,12 +25453,12 @@ aa
 aa
 af
 af
-DI
-VB
+XB
+aj
 zq
 FL
 GW
-Ys
+yc
 qO
 zC
 dE
@@ -25595,9 +25655,9 @@ aa
 aa
 af
 af
+hg
 aj
-VB
-zq
+aj
 Nr
 Tx
 bI
@@ -25798,8 +25858,8 @@ aa
 af
 af
 TA
-VB
-zq
+aj
+jm
 Wr
 NM
 Bd
@@ -25999,8 +26059,8 @@ aa
 aa
 af
 af
-at
-VB
+QO
+uF
 aL
 bo
 bt
@@ -27817,7 +27877,7 @@ ad
 af
 af
 af
-aj
+OS
 VB
 aj
 aO
