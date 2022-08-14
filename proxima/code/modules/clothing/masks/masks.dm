@@ -10,7 +10,7 @@
 		slot_wear_mask_str = 'proxima/icons/mob/onmob/onmob_mask.dmi'
 	)
 	species_restricted = list(
-		SPECIES_HUMAN
+		HUMAN_SPECIES
 	)
 
 /obj/item/clothing/mask/balaclava/humanized/black
