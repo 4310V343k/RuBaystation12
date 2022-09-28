@@ -126,6 +126,9 @@
 		to_chat(usr, "<span class='notice'>Ban saved to database.</span>")
 		setter = key_name_admin(usr)
 	message_admins("[setter] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([minutes_to_readable(duration)])":""] with the reason: \"[reason]\" to the ban database.",1)
+	// PRX\BOS start
+	callHook("banned", list(bantype, setter, ckey, (job)?"([job])":"", (duration > 0)?"([minutes_to_readable(duration)])":"", reason))
+	// PRX\BOS end
 	return 1
 
 
@@ -193,6 +196,13 @@
 		return
 
 	DB_ban_unban_by_id(ban_id)
+	// PRX\BOS start
+	if(!src.owner || !istype(src.owner, /client))
+		return
+
+	var/unban_ckey = src.owner:ckey
+	callHook("unbanned", list(bantype, unban_ckey, ckey, (job)?"([job])":""))
+	// PRX\BOS end
 
 /datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 
