@@ -26,24 +26,65 @@
 	var/fall_sounds = list('sound/weapons/guns/casingfall1.ogg','sound/weapons/guns/casingfall2.ogg','sound/weapons/guns/casingfall3.ogg')
 
 /obj/item/ammo_casing/Initialize()
+	. = ..()
+	if(sprite_update_spawn)
+		var/matrix/rotation_matrix = matrix()
+		rotation_matrix.Turn(round(45 * rand(0, sprite_max_rotate) / 2))
+		if(sprite_use_small)
+			src.transform = rotation_matrix * sprite_scale
+		else
+			src.transform = rotation_matrix
 	if(ispath(projectile_type))
 		BB = new projectile_type(src)
-	if(randpixel)
-		pixel_x = rand(-randpixel, randpixel)
-		pixel_y = rand(-randpixel, randpixel)
-	. = ..()
+	pixel_x = rand(-10, 10)
+	pixel_y = rand(-10, 10)
+	if(amount > 1)
+		update_icon()
 
 //removes the projectile from the ammo casing
 /obj/item/ammo_casing/proc/expend()
 	. = BB
 	BB = null
-	set_dir(pick(GLOB.alldirs)) //spin spent casings
-
-	// Aurora forensics port, gunpowder residue.
-	if(leaves_residue)
-		leave_residue()
-
+	set_dir(pick(cardinal)) //spin spent casings
 	update_icon()
+
+/obj/item/ammo_casing/attack_hand(mob/user)
+	if((src.amount > 1) && (src == user.get_inactive_hand()))
+		src.amount -= 1
+		var/obj/item/ammo_casing/new_casing = new /obj/item/ammo_casing(get_turf(user))
+		new_casing.name = src.name
+		new_casing.desc = src.desc
+		new_casing.caliber = src.caliber
+		new_casing.projectile_type = src.projectile_type
+		new_casing.icon_state = src.icon_state
+		new_casing.spent_icon = src.spent_icon
+		new_casing.maxamount = src.maxamount
+		if(ispath(new_casing.projectile_type) && src.BB)
+			new_casing.BB = new new_casing.projectile_type(new_casing)
+		else
+			new_casing.BB = null
+
+		new_casing.sprite_max_rotate = src.sprite_max_rotate
+		new_casing.sprite_scale = src.sprite_scale
+		new_casing.sprite_use_small = src.sprite_use_small
+		new_casing.sprite_update_spawn = src.sprite_update_spawn
+
+		if(new_casing.sprite_update_spawn)
+			var/matrix/rotation_matrix = matrix()
+			rotation_matrix.Turn(round(45 * rand(0, new_casing.sprite_max_rotate) / 2))
+			if(new_casing.sprite_use_small)
+				new_casing.transform = rotation_matrix * new_casing.sprite_scale
+			else
+				new_casing.transform = rotation_matrix
+
+		new_casing.is_caseless = src.is_caseless
+		new_casing.shell_color = src.shell_color
+
+		new_casing.update_icon()
+		src.update_icon()
+		user.put_in_active_hand(new_casing)
+	else
+		return ..()
 
 /obj/item/ammo_casing/proc/leave_residue()
 	var/mob/living/carbon/human/H = get_holder_of_type(src, /mob/living/carbon/human)
