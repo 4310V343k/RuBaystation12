@@ -261,81 +261,218 @@
 /obj/item/ammo_magazine/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
-		if(C.caliber != caliber)
-			to_chat(user, "<span class='warning'>[C] does not fit into [src].</span>")
-			return
 		if(stored_ammo.len >= max_ammo)
-			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			to_chat(user, SPAN_WARNING("\The [src] is full!"))
 			return
-		if(!user.unEquip(C, src))
+		if(C.caliber != caliber)
+			to_chat(user, SPAN_WARNING("\The [C] does not fit into \the [src]."))
 			return
-		stored_ammo.Add(C)
-		update_icon()
-	else ..()
-
-/obj/item/ammo_magazine/attack_self(mob/user)
-	if(!stored_ammo.len)
-		to_chat(user, "<span class='notice'>[src] is already empty!</span>")
-		return
-	to_chat(user, "<span class='notice'>You empty [src].</span>")
-	for(var/obj/item/ammo_casing/C in stored_ammo)
-		C.forceMove(user.loc)
-		C.set_dir(pick(GLOB.alldirs))
-	stored_ammo.Cut()
-	update_icon()
-
+		insertCasing(C)
+	else if(istype(W, /obj/item/ammo_magazine))
+		var/obj/item/ammo_magazine/other = W
+		if(!src.stored_ammo.len)
+			to_chat(user, SPAN_WARNING("There is no ammo in \the [src]!"))
+			return
+		if(other.stored_ammo.len >= other.max_ammo)
+			to_chat(user, SPAN_NOTICE("\The [other] is already full."))
+			return
+		var/diff = FALSE
+		for(var/obj/item/ammo in src.stored_ammo)
+			if(other.stored_ammo.len < other.max_ammo && do_after(user, reload_delay/other.max_ammo, src) && other.insertCasing(removeCasing()))
+				diff = TRUE
+				continue
+			break
+		if(diff)
+			to_chat(user, SPAN_NOTICE("You finish loading \the [other]. It now contains [other.stored_ammo.len] rounds, and \the [src] now contains [stored_ammo.len] rounds."))
+		else
+			to_chat(user, SPAN_WARNING("You fail to load anything into \the [other]"))
+	if(istype(W, /obj/item/gun/projectile))
+		var/obj/item/gun/projectile/gun_to_load = W
+		if(istype(W, /obj/item/gun/projectile/revolver))
+			to_chat(user, SPAN_WARNING("You can\'t reload [W] that way!"))
+			return
+		if(gun_to_load.can_dual && !gun_to_load.ammo_magazine)
+			if(!do_after(user, 0.5 SECONDS, src))
+				return
+			if(loc && istype(loc, /obj/item/storage))
+				var/obj/item/storage/S = loc
+				gun_to_load.load_ammo(src, user)
+				S.refresh_all()
+			else
+				gun_to_load.load_ammo(src, user)
+			to_chat(user, SPAN_NOTICE("It takes a bit of time for you to reload your [W] with [src] using only one hand!"))
+			visible_message("[user] tactically reloads [W] using only one hand!")
 
 /obj/item/ammo_magazine/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src)
-		if(!stored_ammo.len)
-			to_chat(user, "<span class='notice'>[src] is already empty!</span>")
-		else
-			var/obj/item/ammo_casing/C = stored_ammo[stored_ammo.len]
-			stored_ammo-=C
-			user.put_in_hands(C)
-			user.visible_message("\The [user] removes \a [C] from [src].", "<span class='notice'>You remove \a [C] from [src].</span>")
-			update_icon()
+	if(user.get_inactive_hand() == src && stored_ammo.len)
+		var/obj/item/ammo_casing/stack = removeCasing()
+		if(stack)
+			if(stored_ammo.len)
+				// We end on -1 since we already removed one
+				for(var/i = 1, i <= stack.maxamount - 1, i++)
+					if(!stored_ammo.len)
+						break
+					var/obj/item/ammo_casing/AC = removeCasing()
+					if(!stack.mergeCasing(AC, null, user, noIconUpdate = TRUE))
+						insertCasing(AC)
+						break
+			stack.update_icon()
+			user.put_in_active_hand(stack)
+		return
+	..()
+
+/obj/item/ammo_magazine/AltClick(var/mob/living/user)
+	var/obj/item/W = user.get_active_hand()
+	if(istype(W, /obj/item/ammo_casing))
+		var/obj/item/ammo_casing/C = W
+		if(stored_ammo.len >= max_ammo)
+			to_chat(user, SPAN_WARNING("[src] is full!"))
+			return
+		if(C.caliber != caliber)
+			to_chat(user, SPAN_WARNING("[C] does not fit into [src]."))
+			return
+		if(stored_ammo.len)
+			var/obj/item/ammo_casing/T = removeCasing()
+			if(T)
+				if(!C.mergeCasing(T, null, user))
+					insertCasing(T)
+	else if(!W)
+		if(user.get_inactive_hand() == src && stored_ammo.len)
+			var/obj/item/ammo_casing/AC = removeCasing()
+			if(AC)
+				user.put_in_active_hand(AC)
+
+/obj/item/ammo_magazine/proc/insertCasing(var/obj/item/ammo_casing/C)
+	if(!istype(C))
+		return FALSE
+	if(C.caliber != caliber)
+		return FALSE
+	if(stored_ammo.len >= max_ammo)
+		return FALSE
+	if(C.amount > 1)
+		C.amount -= 1
+
+		var/obj/item/ammo_casing/inserted_casing = new /obj/item/ammo_casing(src)
+		inserted_casing.name = C.name
+		inserted_casing.desc = C.desc
+		inserted_casing.caliber = C.caliber
+		inserted_casing.projectile_type = C.projectile_type
+		inserted_casing.icon_state = C.icon_state
+		inserted_casing.spent_icon = C.spent_icon
+		inserted_casing.maxamount = C.maxamount
+		if(ispath(inserted_casing.projectile_type) && C.BB)
+			inserted_casing.BB = new inserted_casing.projectile_type(inserted_casing)
+
+		inserted_casing.sprite_max_rotate = C.sprite_max_rotate
+		inserted_casing.sprite_scale = C.sprite_scale
+		inserted_casing.sprite_use_small = C.sprite_use_small
+		inserted_casing.sprite_update_spawn = C.sprite_update_spawn
+
+		if(inserted_casing.sprite_update_spawn)
+			var/matrix/rotation_matrix = matrix()
+			rotation_matrix.Turn(round(45 * rand(0, inserted_casing.sprite_max_rotate) / 2))
+			if(inserted_casing.sprite_use_small)
+				inserted_casing.transform = rotation_matrix * inserted_casing.sprite_scale
+			else
+				inserted_casing.transform = rotation_matrix
+
+		inserted_casing.is_caseless = C.is_caseless
+		inserted_casing.shell_color = C.shell_color
+
+		C.update_icon()
+		inserted_casing.update_icon()
+		stored_ammo.Insert(1, inserted_casing)
 	else
-		..()
+		if(ismob(C.loc))
+			var/mob/M = C.loc
+			M.remove_from_mob(C)
+		C.forceMove(src)
+		stored_ammo.Insert(1, C) //add to the head of the list
+	update_icon()
+	return TRUE
+
+/obj/item/ammo_magazine/proc/removeCasing()
+	if(stored_ammo.len)
+		var/obj/item/ammo_casing/AC = stored_ammo[1]
+		stored_ammo -= AC
+		if(!stored_ammo.len)
+			stored_ammo.Cut()
+		update_icon()
+		return AC
+
+/obj/item/ammo_magazine/resolve_attackby(atom/A, mob/user)
+	//Clicking on tile with no collectible items will empty it, if it has the verb to do that.
+	if(isturf(A) && !A.density)
+		dump_it(A)
+		return TRUE
+	return ..()
+
+/obj/item/ammo_magazine/verb/quick_empty()
+	set name = "Empty Ammo Container"
+	set category = "Object"
+	set src in view(1)
+
+	if((!ishuman(usr) && (src.loc != usr)) || usr.stat || usr.restrained())
 		return
 
-/obj/item/ammo_magazine/on_update_icon()
-	if(multiple_sprites)
-		//find the lowest key greater than or equal to stored_ammo.len
-		var/new_state = null
-		for(var/idx in 1 to icon_keys.len)
-			var/ammo_count = icon_keys[idx]
-			if (ammo_count >= stored_ammo.len)
-				new_state = ammo_states[idx]
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	dump_it(T, usr)
+
+/obj/item/ammo_magazine/proc/dump_it(var/turf/target) //bogpilled
+	if(!istype(target))
+		return
+	if(!Adjacent(usr))
+		return
+	if(!stored_ammo.len)
+		to_chat(usr, SPAN_NOTICE("[src] is already empty!"))
+		return
+	to_chat(usr, SPAN_NOTICE("You take out ammo from [src]."))
+	for(var/i=1 to stored_ammo.len)
+		var/obj/item/ammo_casing/C = removeCasing()
+		C.forceMove(target)
+		C.set_dir(pick(cardinal))
+	update_icon()
+
+/obj/item/ammo_magazine/proc/get_label(value)
+	ammo_label = null
+	if(!modular_sprites)
+		return
+
+	if(value)
+		ammo_label = value
+	else
+		if(stored_ammo.len)
+			var/obj/item/ammo_casing/AC = stored_ammo[stored_ammo.len]
+			if(AC && AC.shell_color)
+				ammo_label = AC.shell_color
+
+	if(ammo_label)
+		var/magazine_name = replacetext(initial(name), ")", " ")
+		var/ammo_name = ammo_names[ammo_label]
+		name = "[magazine_name][ammo_name])"
+		ammo_label_string = "_[ammo_label]"
+	else
+		name = initial(name)
+		ammo_label_string = null
+	return
+
+/obj/item/ammo_magazine/update_icon()
+	// First inserted casing will define the look and the name of the magazine
+	// Ammo boxes keep their original color and name regardless of what ammo is inside
+	// No ammo inside - no colored stripe on the magazine
+	var/ammo_count = 0
+	if(stored_ammo.len && ammo_states)
+		// So ammo count is not zero. Let's find closest matching sprite
+		for(var/i = 1; i <= ammo_states.len; i++)
+			// E.g. if LMG mag have 5 ammo, then pick "pk_box-25" since it's closest non-empty state
+			if(stored_ammo.len <= ammo_states[i])
+				ammo_count = ammo_states[i]
 				break
-		icon_state = (new_state)? new_state : initial(icon_state)
+
+	icon_state = "[initial(icon_state)][ammo_label_string]-[ammo_count]"
 
 /obj/item/ammo_magazine/examine(mob/user)
-	. = ..()
+	..()
 	to_chat(user, "There [(stored_ammo.len == 1)? "is" : "are"] [stored_ammo.len] round\s left!")
-
-//magazine icon state caching
-var/global/list/magazine_icondata_keys = list()
-var/global/list/magazine_icondata_states = list()
-
-/proc/initialize_magazine_icondata(var/obj/item/ammo_magazine/M)
-	var/typestr = "[M.type]"
-	if(!(typestr in magazine_icondata_keys) || !(typestr in magazine_icondata_states))
-		magazine_icondata_cache_add(M)
-
-	M.icon_keys = magazine_icondata_keys[typestr]
-	M.ammo_states = magazine_icondata_states[typestr]
-
-/proc/magazine_icondata_cache_add(var/obj/item/ammo_magazine/M)
-	var/list/icon_keys = list()
-	var/list/ammo_states = list()
-	var/list/states = icon_states(M.icon)
-	for(var/i = 0, i <= M.max_ammo, i++)
-		var/ammo_state = "[M.icon_state]-[i]"
-		if(ammo_state in states)
-			icon_keys += i
-			ammo_states += ammo_state
-
-	magazine_icondata_keys["[M.type]"] = icon_keys
-	magazine_icondata_states["[M.type]"] = ammo_states
-
