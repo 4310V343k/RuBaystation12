@@ -126,7 +126,7 @@
 			to_chat(user, SPAN_NOTICE("You inscribe \"[label_text]\" into \the [initial(BB.name)]."))
 			BB.name = "[initial(BB.name)] (\"[label_text]\")"
 		return TRUE
-	else if(istype(W /obj/item/ammo_casing))
+	else if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/merging_casing = W
 		if(isturf(src.loc))
 			if(merging_casing.amount == merging_casing.maxamount)
