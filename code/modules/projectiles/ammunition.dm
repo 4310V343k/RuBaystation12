@@ -126,8 +126,7 @@
 			to_chat(user, SPAN_NOTICE("You inscribe \"[label_text]\" into \the [initial(BB.name)]."))
 			BB.name = "[initial(BB.name)] (\"[label_text]\")"
 		return TRUE
-	else if(istype(/obj/item/ammo_casing))
-		if(isturf(src.loc))
+	else if(isturf(src.loc))
 			var/obj/item/ammo_casing/merging_casing = W
 			if(merging_casing.amount == merging_casing.maxamount)
 				to_chat(user, SPAN_WARNING("[merging_casing] is fully stacked!"))
