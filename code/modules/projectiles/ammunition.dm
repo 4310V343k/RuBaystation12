@@ -128,13 +128,13 @@
 		return TRUE
 	else if(istype(/obj/item/ammo_casing))
 		if(isturf(src.loc))
-			var/obj/item/ammo_casing/merging_casing = M
+			var/obj/item/ammo_casing/merging_casing = W
 			if(merging_casing.amount == merging_casing.maxamount)
 				to_chat(user, SPAN_WARNING("[merging_casing] is fully stacked!"))
 				return FALSE
 			if(merging_casing.mergeCasing(src, null, user))
 				return TRUE
-		else if (mergeCasing(M, 1, user))
+		else if (mergeCasing(W, 1, user))
 			return TRUE
 
 /obj/item/ammo_casing/proc/mergeCasing(var/obj/item/ammo_casing/AC, var/amountToMerge, var/mob/living/user, var/noMessage = FALSE, var/noIconUpdate = FALSE)
