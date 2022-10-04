@@ -47,6 +47,10 @@
 	BB = null
 	update_icon()
 
+	// Aurora forensics port, gunpowder residue.
+	if(leaves_residue)
+		leave_residue()
+		
 /obj/item/ammo_casing/attack_hand(mob/user)
 	if((src.amount > 1) && (src == user.get_inactive_hand()))
 		src.amount -= 1
