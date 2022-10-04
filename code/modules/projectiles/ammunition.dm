@@ -45,7 +45,6 @@
 /obj/item/ammo_casing/proc/expend()
 	. = BB
 	BB = null
-	set_dir(pick(cardinal)) //spin spent casings
 	update_icon()
 
 /obj/item/ammo_casing/attack_hand(mob/user)
@@ -78,8 +77,6 @@
 				new_casing.transform = rotation_matrix
 
 		new_casing.is_caseless = src.is_caseless
-		new_casing.shell_color = src.shell_color
-
 		new_casing.update_icon()
 		src.update_icon()
 		user.put_in_active_hand(new_casing)
