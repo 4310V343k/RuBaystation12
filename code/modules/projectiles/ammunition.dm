@@ -9,10 +9,19 @@
 	throwforce = 1
 	w_class = ITEM_SIZE_TINY
 
-	var/leaves_residue = TRUE
+	var/leaves_residue = 1
+	var/is_caseless = FALSE
 	var/caliber = ""					//Which kind of guns it can be loaded into
 	var/projectile_type					//The bullet type to create when New() is called
-	var/obj/item/projectile/BB = null	//The loaded bullet - make it so that the projectiles are created only when needed?
+	var/obj/item/projectile/BB			//The loaded bullet - make it so that the projectiles are created only when needed?
+	var/amount = 1
+	var/maxamount = 15
+	var/reload_delay = 0
+
+	var/sprite_update_spawn = FALSE		//defaults to normal sized sprites
+	var/sprite_max_rotate = 16
+	var/sprite_scale = 1
+	var/sprite_use_small = TRUE 		//A var for a later global option to use all big sprites or small sprites for bullets, must be used before startup
 	var/spent_icon = "pistolcasing-spent"
 	var/fall_sounds = list('sound/weapons/guns/casingfall1.ogg','sound/weapons/guns/casingfall2.ogg','sound/weapons/guns/casingfall3.ogg')
 
@@ -76,9 +85,70 @@
 			BB.SetName("[initial(BB.name)] (\"[label_text]\")")
 	else ..()
 
-/obj/item/ammo_casing/on_update_icon()
+/obj/item/ammo_casing/proc/mergeCasing(var/obj/item/ammo_casing/AC, var/amountToMerge, var/mob/living/user, var/noMessage = FALSE, var/noIconUpdate = FALSE)
+	if(!AC)
+		return FALSE
+	if(!user && noMessage == FALSE)
+		error("Passed no user to mergeCasing() when output messages is active.")
+	if(src.caliber != AC.caliber)
+		if(!noMessage)
+			to_chat(user, SPAN_WARNING("Ammo are different calibers."))
+		return FALSE
+	if(src.projectile_type != AC.projectile_type)
+		if(!noMessage)
+			to_chat(user, SPAN_WARNING("Ammo are different types."))
+		return FALSE
+	if(src.amount == src.maxamount)
+		if(!noMessage)
+			to_chat(user, SPAN_WARNING("[src] is fully stacked!"))
+		return FALSE
+	if((!src.BB && AC.BB) || (src.BB && !AC.BB))
+		if(!noMessage)
+			to_chat(user, SPAN_WARNING("Fired and non-fired ammo wont stack."))
+		return FALSE
+
+	var/mergedAmount
+	if(!amountToMerge)
+		mergedAmount = AC.amount
+	else
+		mergedAmount = amountToMerge
+	if(mergedAmount + src.amount > src.maxamount)
+		mergedAmount = src.maxamount - src.amount
+	AC.amount -= mergedAmount
+	src.amount += mergedAmount
+	if(!noIconUpdate)
+		src.update_icon()
+	if(AC.amount == 0)
+		QDEL_NULL(AC)
+	else
+		if(!noIconUpdate)
+			AC.update_icon()
+	return TRUE
+
+/obj/item/ammo_casing/update_icon()
 	if(spent_icon && !BB)
 		icon_state = spent_icon
+	src.overlays.Cut()
+	if(amount > 1)
+		src.pixel_x = 0
+		src.pixel_y = 0
+
+	for(var/icon_amount = 1; icon_amount < src.amount, icon_amount++)
+		var/image/temp_image = image(src.icon, src.icon_state)
+		var/coef = round(14 * icon_amount/src.maxamount)
+
+		temp_image.pixel_x = rand(coef, -coef)
+		temp_image.pixel_y = rand(coef, -coef)
+		var/matrix/temp_image_matrix = matrix()
+		temp_image_matrix.Turn(round(45 * rand(0, sprite_max_rotate) / 2))
+		temp_image.transform = temp_image_matrix
+		src.overlays += temp_image
+
+/obj/item/ammo_casing/examine(mob/user)
+	..()
+	to_chat(user, "There [(amount == 1)? "is" : "are"] [amount] round\s left!")
+	if (!BB)
+		to_chat(user, "[(amount == 1)? "This one is" : "These ones are"] spent.")
 
 /obj/item/ammo_casing/examine(mob/user)
 	. = ..()
