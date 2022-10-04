@@ -112,20 +112,30 @@
 /obj/item/ammo_casing/attackby(obj/item/W as obj, mob/user as mob)
 	if(isScrewdriver(W))
 		if(!BB)
-			to_chat(user, "<span class='notice'>There is no bullet in the casing to inscribe anything into.</span>")
+			to_chat(user, SPAN_NOTICE("There is no bullet in the casing to inscribe anything into."))
 			return
 
 		var/tmp_label = ""
 		var/label_text = sanitizeSafe(input(user, "Inscribe some text into \the [initial(BB.name)]","Inscription",tmp_label), MAX_NAME_LEN)
 		if(length(label_text) > 20)
-			to_chat(user, "<span class='warning'>The inscription can be at most 20 characters long.</span>")
+			to_chat(user, SPAN_WARNING("The inscription can be at most 20 characters long."))
 		else if(!label_text)
-			to_chat(user, "<span class='notice'>You scratch the inscription off of [initial(BB)].</span>")
-			BB.SetName(initial(BB.name))
+			to_chat(user, SPAN_NOTICE("You scratch the inscription off of [initial(BB)]."))
+			BB.name = initial(BB.name)
 		else
-			to_chat(user, "<span class='notice'>You inscribe \"[label_text]\" into \the [initial(BB.name)].</span>")
-			BB.SetName("[initial(BB.name)] (\"[label_text]\")")
-	else ..()
+			to_chat(user, SPAN_NOTICE("You inscribe \"[label_text]\" into \the [initial(BB.name)]."))
+			BB.name = "[initial(BB.name)] (\"[label_text]\")"
+		return TRUE
+	else if(istype(I, /obj/item/ammo_casing))
+		var/obj/item/ammo_casing/merging_casing = I
+		if(isturf(src.loc))
+			if(merging_casing.amount == merging_casing.maxamount)
+				to_chat(user, SPAN_WARNING("[merging_casing] is fully stacked!"))
+				return FALSE
+			if(merging_casing.mergeCasing(src, null, user))
+				return TRUE
+		else if (mergeCasing(I, 1, user))
+			return TRUE
 
 /obj/item/ammo_casing/proc/mergeCasing(var/obj/item/ammo_casing/AC, var/amountToMerge, var/mob/living/user, var/noMessage = FALSE, var/noIconUpdate = FALSE)
 	if(!AC)
