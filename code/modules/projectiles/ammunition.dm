@@ -259,7 +259,7 @@
 	update_icon()
 
 /obj/item/ammo_magazine/attackby(obj/item/W as obj, /obj/item/AC as obj, mob/user as mob)
-	if(istype(W, ac, /obj/item/ammo_casing, /obj/item/ammo_casing/AC))
+	if(istype(W, AC, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
 		var/obj/item/ammo_casing/AC = AC
 		if(C.caliber != caliber)
