@@ -291,9 +291,6 @@
 		if(istype(W, /obj/item/gun/projectile/revolver))
 			to_chat(user, SPAN_WARNING("You can\'t reload [W] that way!"))
 			return
-		if(gun_to_load.can_dual && !gun_to_load.ammo_magazine)
-			if(!do_after(user, 0.5 SECONDS, src))
-				return
 			if(loc && istype(loc, /obj/item/storage))
 				var/obj/item/storage/S = loc
 				gun_to_load.load_ammo(src, user)
