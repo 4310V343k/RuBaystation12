@@ -261,17 +261,48 @@
 /obj/item/ammo_magazine/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
-		if(C.caliber != caliber)
-			to_chat(user, "<span class='warning'>[C] does not fit into [src].</span>")
-			return
 		if(stored_ammo.len >= max_ammo)
-			to_chat(user, "<span class='warning'>[src] is full!</span>")
+			to_chat(user, SPAN_WARNING("\The [src] is full!"))
 			return
-		if(!user.unEquip(C, src))
+		if(C.caliber != caliber)
+			to_chat(user, SPAN_WARNING("\The [C] does not fit into \the [src]."))
 			return
-		stored_ammo.Add(C)
-		update_icon()
-	else ..()
+		insertCasing(C)
+	else if(istype(W, /obj/item/ammo_magazine))
+		var/obj/item/ammo_magazine/other = W
+		if(!src.stored_ammo.len)
+			to_chat(user, SPAN_WARNING("There is no ammo in \the [src]!"))
+			return
+		if(other.stored_ammo.len >= other.max_ammo)
+			to_chat(user, SPAN_NOTICE("\The [other] is already full."))
+			return
+		var/diff = FALSE
+		for(var/obj/item/ammo in src.stored_ammo)
+			if(other.stored_ammo.len < other.max_ammo && do_after(user, reload_delay/other.max_ammo, src) && other.insertCasing(removeCasing()))
+				diff = TRUE
+				continue
+			break
+		if(diff)
+			to_chat(user, SPAN_NOTICE("You finish loading \the [other]. It now contains [other.stored_ammo.len] rounds, and \the [src] now contains [stored_ammo.len] rounds."))
+		else
+			to_chat(user, SPAN_WARNING("You fail to load anything into \the [other]"))
+	if(istype(W, /obj/item/gun/projectile))
+		var/obj/item/gun/projectile/gun_to_load = W
+		if(istype(W, /obj/item/gun/projectile/revolver))
+			to_chat(user, SPAN_WARNING("You can\'t reload [W] that way!"))
+			return
+		if(gun_to_load.can_dual && !gun_to_load.ammo_magazine)
+			if(!do_after(user, 0.5 SECONDS, src))
+				return
+			if(loc && istype(loc, /obj/item/storage))
+				var/obj/item/storage/S = loc
+				gun_to_load.load_ammo(src, user)
+				S.refresh_all()
+			else
+				gun_to_load.load_ammo(src, user)
+			to_chat(user, SPAN_NOTICE("It takes a bit of time for you to reload your [W] with [src] using only one hand!"))
+			visible_message("[user] tactically reloads [W] using only one hand!")
+
 
 /obj/item/ammo_magazine/attack_self(mob/user)
 	if(!stored_ammo.len)
