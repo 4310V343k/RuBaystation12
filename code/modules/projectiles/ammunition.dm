@@ -258,7 +258,7 @@
 		SetName("[name] ([english_list(labels, and_text = ", ")])")
 	update_icon()
 
-/obj/item/ammo_magazine/attackby(obj/item/W as obj, /obj/item/AC as obj, mob/user as mob)
+/obj/item/ammo_magazine/attackby(obj/item/W as obj, /obj/item/AC as obj, mob/user as mob) //БЛЯЯЯЯ, пусть это сделает кто-то вместо меня
 	if(istype(W, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = W
 		if(C.caliber != caliber)
