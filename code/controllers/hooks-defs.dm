@@ -102,3 +102,4 @@
 /hook/banned
 /hook/unbanned
 /hook/playerNotes
+/hook/oocMessage

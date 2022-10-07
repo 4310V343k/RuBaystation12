@@ -25,38 +25,42 @@
 		send2chat("*Раунд закончился, ребятки. Всем по слапу!*\n[GLOB.round_end_notifiees.Join(", ")]", "bot-spam")
 	return TRUE
 
-/hook/banned/proc/SendTGSBan(list/args)
+/hook/banned/proc/SendTGSBan(bantype, admin, target, jobs, duration, reason)
 	var/bantypeString = ""
-	switch(args[1])
+	switch(bantype)
 		if (BANTYPE_JOB_PERMA)
-			bantypeString = "*__**ПЕРМА ДЖОБКА НА ПРОФЫ:**__ \n[args[4]]*"
+			bantypeString = "*__**ПЕРМА ДЖОБКА НА ПРОФЫ:**__ \n[jobs]*"
 		if (BANTYPE_JOB_TEMP)
-			bantypeString = "*__временно на профы:__ \b[args[4]]*\n**5.1. Бан спадет через:** __*[args[5]]*__"
+			bantypeString = "*__временно на профы:__ \n[jobs]*\n**5.1. Бан спадет через:** __*[duration]*__"
 		if (BANTYPE_PERMA)
 			bantypeString = "__***ПЕРМА***__"
 		if (BANTYPE_TEMP)
-			bantypeString = "__*на время*__.\n**5.1. Бан спадет через:** __*[args[5]]*__"
+			bantypeString = "__*на время*__.\n**5.1. Бан спадет через:** __*[duration]*__"
 		else
 			bantypeString = "__***капец как забанил...***__"
-	send2chat(":KKomrade: ***Новый жбан***\n**1. Ckey осужденного:** __*[args[3]]*__\n**2. Ckey администратора:**__*[args[2]]*__\n**3. Сервер:**__*PRX*__\n**4. Причина:**\n ```[args[6]]```\n**5. Наказание и длительность:** [bantypeString]", "notes-hub")
+	send2chat("***Новый жбан***\n**1. Ckey осужденного:** __*[target]*__\n**2. Ckey администратора:**__*[admin]*__\n**3. Сервер:**__*PRX*__\n**4. Причина:**\n ```[reason]```\n**5. Наказание и длительность:** [bantypeString]", "notes-hub")
 	return TRUE
 
-/hook/unbanned/proc/SendTGSUnBan(list/args)
+/hook/unbanned/proc/SendTGSUnBan(bantype, admin, target, jobs)
 	var/bantypeString = ""
-	switch(args[1])
+	switch(bantype)
 		if (BANTYPE_JOB_PERMA)
-			bantypeString = "__***пермабан на профессию**: [args[4]]*__"
+			bantypeString = "__***пермабан на профессию**: [jobs]*__"
 		if (BANTYPE_JOB_TEMP)
-			bantypeString = "__*временный бан на профессию: [args[4]]*__"
+			bantypeString = "__*временный бан на профессию: [jobs]*__"
 		if (BANTYPE_PERMA)
 			bantypeString = "__***ПЕРМАБАН***__"
 		if (BANTYPE_TEMP)
 			bantypeString = "__*временный бан*__"
 		else
 			bantypeString = "__***капец как разбанил...***__"
-	send2chat(":hoy: ***Амнистия***\n__**1. Ckey помилованного:** __*[args[3]]*__\n**2. Ckey покровителя:** __*[args[2]]***__**3. Сервер:** __*PRX*__\n**4. Что прощено:** [bantypeString]", "notes-hub")
+	send2chat("***Амнистия***\n__**1. Ckey помилованного:** __*[target]*__\n**2. Ckey покровителя:** __*[admin]***__**3. Сервер:** __*PRX*__\n**4. Что прощено:** [bantypeString]", "notes-hub")
 	return TRUE
 
-/hook/playerNotes/proc/SendTGSNotes(list/args)
-	send2chat(":really: ***Доносики***\n**1. Ckey обвиняемого:** __*[args[2]]*__\n**2. Ckey доносчика:** __*[args[1]]*__\n**3. Сервер:** __*PRX*__\n**4. Доносик:** __*[args[3]]*__\n**5. Тип:** __*Нотес (стаффварны не поддерживаются)*__\n**6. Срок действия доноса:** __*INFINITY (а как иначе то?)*__", "notes-hub")
+/hook/playerNotes/proc/SendTGSNotes(admin, target, note)
+	send2chat("***Доносики***\n**1. Ckey обвиняемого:** __*[target]*__\n**2. Ckey доносчика:** __*[admin]*__\n**3. Сервер:** __*PRX*__\n**4. Доносик:** __*[note]*__\n**5. Тип:** __*Нотес (стаффварны не поддерживаются)*__\n**6. Срок действия доноса:** __*INFINITY (а как иначе то?)*__", "notes-hub")
+	return TRUE
+
+/hook/oocMessage/proc/SendOOCMsg(ckey, message)
+	send2chat("**[ckey]:** *[message]*", "ooc-chat")
 	return TRUE
