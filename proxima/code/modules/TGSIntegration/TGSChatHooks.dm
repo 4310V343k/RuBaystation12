@@ -29,16 +29,16 @@
 	var/bantypeString = ""
 	switch(args[1])
 		if (BANTYPE_JOB_PERMA)
-			bantypeString = "__***навсегда следующую профессию**: [args[4]]*__"
+			bantypeString = "*__**ПЕРМА ДЖОБКА НА ПРОФЫ:**__ \n[args[4]]*"
 		if (BANTYPE_JOB_TEMP)
-			bantypeString = "__*временно следующую профессию: [args[4]]*__. Бан спадет через: __*[args[5]]*__"
+			bantypeString = "*__временно на профы:__ \b[args[4]]*\n**5.1. Бан спадет через:** __*[args[5]]*__"
 		if (BANTYPE_PERMA)
-			bantypeString = "__***ПОЖИЗНЕННО***__"
+			bantypeString = "__***ПЕРМА***__"
 		if (BANTYPE_TEMP)
-			bantypeString = "__*на время*__. Бан спадет через: __*[args[5]]*__"
+			bantypeString = "__*на время*__.\n**5.1. Бан спадет через:** __*[args[5]]*__"
 		else
 			bantypeString = "__***капец как забанил...***__"
-	send2chat(":KKomrade: __***[args[2]]***__ забанил __***[args[3]]***__ [bantypeString]", "Ева-дай-мне-айди")
+	send2chat(":KKomrade: ***Новый жбан***\n**1. Ckey осужденного:** __*[args[3]]*__\n**2. Ckey администратора:**__*[args[2]]*__\n**3. Сервер:**__*PRX*__\n**4. Причина:**\n ```[args[6]]```\n**5. Наказание и длительность:** [bantypeString]", "notes-hub")
 
 /hook/unbanned/proc/SendTGSUnBan(list/args)
 	var/bantypeString = ""
@@ -53,7 +53,7 @@
 			bantypeString = "__*временный бан*__"
 		else
 			bantypeString = "__***капец как разбанил...***__"
-	send2chat(":hoy: __***[args[2]]***__ снял игроку __***[args[3]]***__ [bantypeString]", "Ева-дай-мне-айди")
+	send2chat(":hoy: ***Амнистия***\n__**1. Ckey помилованного:** __*[args[3]]*__\n**2. Ckey покровителя:** __*[args[2]]***__**3. Сервер:** __*PRX*__\n**4. Что прощено:** [bantypeString]", "notes-hub")
 
 /hook/playerNotes/proc/SendTGSNotes(list/args)
-	send2chat(":really: __***[args[1]]***__ считает что __***[args[2]]***__ довольно: __*[args[3]]*__", "Ева-дай-мне-айди")
+	send2chat(":really: ***Доносики***\n**1. Ckey обвиняемого:** __*[args[2]]*__\n**2. Ckey доносчика:** __*[args[1]]*__\n**3. Сервер:** __*PRX*__\n**4. Доносик:** __*[args[3]]*__\n**5. Тип:** __*Нотес (стаффварны не поддерживаются)*__\n**6. Срок действия доноса:** __*INFINITY (а как иначе то?)*__", "notes-hub")
