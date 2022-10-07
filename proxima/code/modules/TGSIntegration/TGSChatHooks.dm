@@ -39,6 +39,7 @@
 		else
 			bantypeString = "__***капец как забанил...***__"
 	send2chat(":KKomrade: ***Новый жбан***\n**1. Ckey осужденного:** __*[args[3]]*__\n**2. Ckey администратора:**__*[args[2]]*__\n**3. Сервер:**__*PRX*__\n**4. Причина:**\n ```[args[6]]```\n**5. Наказание и длительность:** [bantypeString]", "notes-hub")
+	return TRUE
 
 /hook/unbanned/proc/SendTGSUnBan(list/args)
 	var/bantypeString = ""
@@ -54,6 +55,8 @@
 		else
 			bantypeString = "__***капец как разбанил...***__"
 	send2chat(":hoy: ***Амнистия***\n__**1. Ckey помилованного:** __*[args[3]]*__\n**2. Ckey покровителя:** __*[args[2]]***__**3. Сервер:** __*PRX*__\n**4. Что прощено:** [bantypeString]", "notes-hub")
+	return TRUE
 
 /hook/playerNotes/proc/SendTGSNotes(list/args)
 	send2chat(":really: ***Доносики***\n**1. Ckey обвиняемого:** __*[args[2]]*__\n**2. Ckey доносчика:** __*[args[1]]*__\n**3. Сервер:** __*PRX*__\n**4. Доносик:** __*[args[3]]*__\n**5. Тип:** __*Нотес (стаффварны не поддерживаются)*__\n**6. Срок действия доноса:** __*INFINITY (а как иначе то?)*__", "notes-hub")
+	return TRUE
