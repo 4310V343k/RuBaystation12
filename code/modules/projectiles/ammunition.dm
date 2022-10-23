@@ -9,10 +9,10 @@
 	throwforce = 1
 	w_class = ITEM_SIZE_TINY
 
-	var/leaves_residue = 1
+	var/leaves_residue = TRUE
 	var/caliber = ""					//Which kind of guns it can be loaded into
 	var/projectile_type					//The bullet type to create when New() is called
-	var/obj/item/projectile/BB			//The loaded bullet - make it so that the projectiles are created only when needed?
+	var/obj/item/projectile/BB = null	//The loaded bullet - make it so that the projectiles are created only when needed?
 	var/spent_icon = "pistolcasing-spent"
 	var/fall_sounds = list('sound/weapons/guns/casingfall1.ogg','sound/weapons/guns/casingfall2.ogg','sound/weapons/guns/casingfall3.ogg')
 
@@ -76,15 +76,9 @@
 			BB.SetName("[initial(BB.name)] (\"[label_text]\")")
 	else ..()
 
-/obj/item/ammo_casing/update_icon()
+/obj/item/ammo_casing/on_update_icon()
 	if(spent_icon && !BB)
 		icon_state = spent_icon
-
-/obj/item/ammo_casing/examine(mob/user)
-	..()
-	to_chat(user, "There [(amount == 1)? "is" : "are"] [amount] round\s left!")
-	if (!BB)
-		to_chat(user, "[(amount == 1)? "This one is" : "These ones are"] spent.")
 
 /obj/item/ammo_casing/examine(mob/user)
 	. = ..()
@@ -222,4 +216,3 @@ var/global/list/magazine_icondata_states = list()
 
 	magazine_icondata_keys["[M.type]"] = icon_keys
 	magazine_icondata_states["[M.type]"] = ammo_states
-
