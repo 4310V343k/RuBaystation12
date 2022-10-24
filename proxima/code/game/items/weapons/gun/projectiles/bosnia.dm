@@ -19,14 +19,14 @@
 	burst_delay = 3
 	fire_delay = 8
 
-	firemodes = list(
+	init_firemodes = list(
 		list(mode_name="20-shoot bursts", mode_desc = "Short, controlled bursts", burst=20, fire_delay=null, move_delay=6, one_hand_penalty=6),
 		list(mode_name="40-shoot bursts", mode_desc = "Medium, controlled bursts", burst=40, fire_delay=null, move_delay=10, one_hand_penalty=13),
 		list(mode_name = "fuller auto",  mode_desc = "800 rounds per minute",   mode_type = /datum/firemode/automatic, fire_delay = 1, one_hand_penalty=20)
 		)
 
 
-/obj/item/gun/projectile/pistol/godman
+/obj/item/gun/projectile/pistol/goodman
 	name = "military pistol"
 	desc = "The Hephaestus Industries P20 - a mass produced kinetic sidearm in widespread service with the SCGDF."
 	magazine_type = /obj/item/ammo_magazine/pistol/double
@@ -55,7 +55,6 @@
 	caliber = CALIBER_PISTOL_MAGNUM
 	fire_delay = 5
 	magazine_type = /obj/item/ammo_magazine/magnum
-	allowed_magazines = /obj/item/ammo_magazine/magnum
 	accuracy = 2
 	one_hand_penalty = 2
 	bulk = 3
@@ -96,7 +95,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/corpo
 	screen_shake = 0.5 //SMG
 
-	firemodes = list(
+	init_firemodes = list(
 		list(mode_name = "semiauto",  mode_desc = "Fire as fast as you can pull the trigger", burst=1, fire_delay=0, move_delay=null),
 		list(mode_name="2-round bursts", mode_desc = "Short, controlled bursts", burst=2, fire_delay=null, move_delay=2, one_hand_penalty=2),
 		list(mode_name="3-round bursts", mode_desc = "Short, controlled bursts", burst=3, fire_delay=null, move_delay=4, one_hand_penalty=3),
