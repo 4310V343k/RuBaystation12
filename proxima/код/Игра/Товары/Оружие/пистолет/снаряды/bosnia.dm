@@ -160,5 +160,5 @@
 	recoil_buildup = 5
 	scope_zoom = 5
 	scoped_accuracy = -2
-	wielded_item_state = "semistrip-wielded"
+	wielded_item_state = "heavysniper-wielded"
 
