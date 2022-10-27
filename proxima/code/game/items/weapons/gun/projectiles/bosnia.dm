@@ -43,7 +43,7 @@
 
 /obj/item/gun/projectile/pistol/magnum_pistol/sol
 	name = "magnum pistol"
-	desc = "The Herne-tek, a just cqc handgun that uses high-caliber ammo."
+	desc = "The Herne-tek, just a cqc handgun that uses high-caliber ammo."
 	icon = 'proxima/icons/obj/guns/aurora_port/adhomian_heavy_pistol.dmi'
 	icon_state = "adhomian_heavy_pistol"
 	item_state = "adhomian_heavy_pistol"
@@ -77,7 +77,7 @@
 
 /obj/item/gun/projectile/automatic/bandit
 	name = "old submachine gun"
-	desc = "Old and rusty submachines, who used all bandits in SCG.Uses 6mmR rounds."
+	desc = "Old and rusty submachine gun, what is used by all sorts of bandits in SCG. Uses 6mmR rounds"
 	icon_state = "coltauto"
 	item_state = "coltauto"
 	icon = 'proxima/icons/obj/guns/aurora_port/coltauto.dmi'
@@ -108,7 +108,7 @@
 
 /obj/item/gun/projectile/heavysniper/mag
 	name = "dragunov sniper rifle"
-	desc = "Dragunov is semi-auto heavy sniper rifle was originally designed to be used against heavy infinatary."
+	desc = "Dragunov is a semi-auto heavy sniper rifle was originally designed to be used against heavy infantry."
 	icon = 'proxima/icons/obj/guns/aurora_port/dragunov.dmi'
 	icon_state = "dragunov"
 	item_state = "dragunov"
@@ -139,7 +139,7 @@
 
 /obj/item/gun/projectile/sniper/semistrip/stealth
 	name = "stealth sniper rifle"
-	desc = "it's special design weapon was designed for stealt assistination."
+	desc = "it's special design weapon that was designed for stealt assassination."
 	icon = 'proxima/icons/obj/guns/aurora_port/heavysniper.dmi'
 	icon_state = "heavysniper"
 	item_state = "heavysniper"
