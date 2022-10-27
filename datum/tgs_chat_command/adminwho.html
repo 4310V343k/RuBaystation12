@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;tgs_chat_command&#x2F;adminwho - Space Station 13 - Baystation 12</title>
+</head>
+<body>
+<header>
+    <a href="index.html">Space Station 13 - Baystation 12</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+</header>
+<main>
+<h1>adminwho <aside>/<a href="datum.html">datum</a>/<a href="datum/tgs_chat_command.html">tgs_chat_command</a>/<a href="datum/tgs_chat_command/adminwho.html">adminwho</a></aside>
+        
+    
+            <a href="https://github.com/Proxima-Project/Proxi-Bay12/blob/95c9e6c8c322dd307b0a1d6b5d69c04fa2113c24/proxima/code/modules/TGSIntegration/TGSChatCommands.dm#L99">
+        <img src="git.png" width="16" height="16" title="proxima&#x2F;code&#x2F;modules&#x2F;TGSIntegration&#x2F;TGSChatCommands.dm 99"/></a></h1>
+
+<ul>
+<li>-- ÐÑÐ²ÐµÑÐ°ÑÑ Ð½Ð° ÑÐ¸ÐºÐµÑÑ Ð¸Ð· Ð´Ð¸ÑÐºÐ¾ÑÐ´Ð°? Ð¯ Ð¿Ð¾Ð´ÑÐ¼Ð°Ñ Ð½Ð°Ð´ ÑÑÐ¸Ð¼
+/datum/tgs_chat_command/ahelp
+name = &quot;ahelp&quot;
+help_text = &quot;&quot;
+admin_only = TRUE</li>
+</ul>
+<p>/datum/tgs_chat_command/ahelp/Run(datum/tgs_chat_user/sender, params)
+var/list/all_params = splittext(params, &quot; &quot;)
+if(all_params.len &lt; 2)
+return &quot;Insufficient parameters&quot;
+var/target = all_params[1]
+all_params.Cut(1, 2)
+var/id = text2num(target)
+if(id != null)
+var/datum/admin_help/AH = GLOB.ahelp_tickets.TicketByID(id)
+if(AH)
+target = AH.initiator_ckey
+else
+return &quot;Ticket #[id] not found!&quot;
+var/res = IrcPm(target, all_params.Join(&quot; &quot;), sender.friendly_name)
+if(res != &quot;Message Successful&quot;)
+return res</p></main>
+<footer>
+    baystation12.dme
+    <a href="https://github.com/Proxima-Project/Proxi-Bay12/tree/95c9e6c8c322dd307b0a1d6b5d69c04fa2113c24">95c9e6c</a>
+        (dev) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.4.1</a></footer>
+</body>
+</html>
