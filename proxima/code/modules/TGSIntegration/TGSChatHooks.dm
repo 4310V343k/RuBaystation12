@@ -31,30 +31,18 @@
 		if (BANTYPE_JOB_PERMA)
 			bantypeString = "*__**ПЕРМА ДЖОБКА НА ПРОФЫ:**__ \n[jobs]*"
 		if (BANTYPE_JOB_TEMP)
-			bantypeString = "*__временно на профы:__ \n[jobs]*\n**5.1. Бан спадет через:** __*[duration]*__"
+			bantypeString = "*__Временно на профы:__ \n[jobs]*\n**5.1. Бан спадет через:** __*[duration]*__"
 		if (BANTYPE_PERMA)
 			bantypeString = "__***ПЕРМА***__"
 		if (BANTYPE_TEMP)
-			bantypeString = "__*на время*__.\n**5.1. Бан спадет через:** __*[duration]*__"
+			bantypeString = "__*На время*__.\n**5.1. Бан спадет через:** __*[duration]*__"
 		else
 			bantypeString = "__***капец как забанил...***__"
-	send2chat("***Новый жбан***\n**1. Ckey осужденного:** __*[target]*__\n**2. Ckey администратора:**__*[admin]*__\n**3. Сервер:**__*PRX*__\n**4. Причина:**\n ```[reason]```\n**5. Наказание и длительность:** [bantypeString]", "notes-hub")
+	send2chat("***Новый жбан***\n**1. Ckey осужденного:** __*[target]*__\n**2. Ckey администратора:** __*[admin]*__\n**3. Сервер:** __*PRX*__\n**4. Причина:**```[reason]```**5. Наказание и длительность:** [bantypeString]", "notes-hub")
 	return TRUE
 
-/hook/unbanned/proc/SendTGSUnBan(bantype, admin, target, jobs)
-	var/bantypeString = ""
-	switch(bantype)
-		if (BANTYPE_JOB_PERMA)
-			bantypeString = "__***пермабан на профессию**: [jobs]*__"
-		if (BANTYPE_JOB_TEMP)
-			bantypeString = "__*временный бан на профессию: [jobs]*__"
-		if (BANTYPE_PERMA)
-			bantypeString = "__***ПЕРМАБАН***__"
-		if (BANTYPE_TEMP)
-			bantypeString = "__*временный бан*__"
-		else
-			bantypeString = "__***капец как разбанил...***__"
-	send2chat("***Амнистия***\n__**1. Ckey помилованного:** __*[target]*__\n**2. Ckey покровителя:** __*[admin]***__**3. Сервер:** __*PRX*__\n**4. Что прощено:** [bantypeString]", "notes-hub")
+/hook/unbanned/proc/SendTGSUnBan(admin, target)
+	send2chat("***Амнистия***\n__**1. Ckey помилованного:** __*[target]*__\n**2. Ckey покровителя:** __*[admin]***__**3. Сервер:** __*PRX*__\n**", "notes-hub")
 	return TRUE
 
 /hook/playerNotes/proc/SendTGSNotes(admin, target, note)
@@ -62,5 +50,14 @@
 	return TRUE
 
 /hook/oocMessage/proc/SendOOCMsg(ckey, message)
-	send2chat("**[ckey]:** *[message]*", "ooc-chat")
+	if (findtext_char(message, "@"))
+		var/mob/M = get_mob_by_key(ckey)
+		if(!M || !M.client)
+			message_admins("Говно - [ckey] пытался сделать слап. Но я не могу его замутить")
+			return TRUE
+		if(!(M.client.prefs.muted & MUTE_OOC))
+			M.client.prefs.muted |= MUTE_OOC
+			message_admins("Кусок абузера на [ckey] пытался сделать слап. Теперь у него нет ООС")
+		return TRUE
+	send2chat("**[admin_rank == null ? null : admin_rank][ckey]:** *[message]*", "ooc-chat")
 	return TRUE

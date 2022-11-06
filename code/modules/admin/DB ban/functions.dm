@@ -126,9 +126,7 @@
 		to_chat(usr, "<span class='notice'>Ban saved to database.</span>")
 		setter = key_name_admin(usr)
 	message_admins("[setter] has added a [bantype_str] for [ckey] [(job)?"([job])":""] [(duration > 0)?"([minutes_to_readable(duration)])":""] with the reason: \"[reason]\" to the ban database.",1)
-	// PRX\BOS start
-	callHook("banned", list(bantype, setter, ckey, (job)?"([job])":"", (duration > 0)?"([minutes_to_readable(duration)])":"", reason))
-	// PRX\BOS end
+	callHook("banned", list(bantype, key_name(usr, null, 0), ckey, (job)?"([job])":"", (duration > 0)?"([minutes_to_readable(duration)])":"", reason))	// PRX\BOS send to discord via TGS
 	return 1
 
 
@@ -196,13 +194,6 @@
 		return
 
 	DB_ban_unban_by_id(ban_id)
-	// PRX\BOS start
-	if(!src.owner || !istype(src.owner, /client))
-		return
-
-	var/unban_ckey = src.owner:ckey
-	callHook("unbanned", list(bantype, unban_ckey, ckey, (job)?"([job])":""))
-	// PRX\BOS end
 
 /datum/admins/proc/DB_ban_edit(var/banid = null, var/param = null)
 
@@ -300,6 +291,8 @@
 
 	var/sql_update = "UPDATE erro_ban SET unbanned = 1, unbanned_datetime = Now(), unbanned_ckey = '[unban_ckey]', unbanned_computerid = '[unban_computerid]', unbanned_ip = '[unban_ip]' WHERE id = [id]"
 	message_admins("[key_name_admin(usr)] has lifted [pckey]'s ban.",1)
+
+	callHook("unbanned", list(unban_ckey, pckey))	// PRX/BOS hook
 
 	var/DBQuery/query_update = dbcon.NewQuery(sql_update)
 	query_update.Execute()
