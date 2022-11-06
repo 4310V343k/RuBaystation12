@@ -49,10 +49,10 @@
 	send2chat("***Доносики***\n**1. Ckey обвиняемого:** __*[target]*__\n**2. Ckey доносчика:** __*[admin]*__\n**3. Сервер:** __*PRX*__\n**4. Доносик:** __*[note]*__\n**5. Тип:** __*Нотес (стаффварны не поддерживаются)*__\n**6. Срок действия доноса:** __*INFINITY (а как иначе то?)*__", "notes-hub")
 	return TRUE
 
-/hook/oocMessage/proc/SendOOCMsg(ckey, message)
+/hook/oocMessage/proc/SendOOCMsg(ckey, message, admin_rank)
 	if (findtext_char(message, "@"))
 		var/mob/M = get_mob_by_key(ckey)
-		if(!M || !M.client)
+		if(!M || !M.client || M.client.holder)
 			message_admins("Говно - [ckey] пытался сделать слап. Но я не могу его замутить")
 			return TRUE
 		if(!(M.client.prefs.muted & MUTE_OOC))
