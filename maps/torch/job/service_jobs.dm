@@ -10,6 +10,11 @@
 	minimal_player_age = 0
 	supervisors = "Исполнительному офицеру"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/chaplain
+	alt_titles = list(
+		"Celebrant",
+		"Priest",
+		"Psionic Confessor"
+	)  //PRX
 	allowed_branches = list(
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/chaplain/ec,
@@ -33,6 +38,7 @@
 		access_crematorium, access_solgov_crew,
 		access_radio_serv
 	)
+
 
 /datum/job/chaplain/get_description_blurb()
 	return "Вы - свещенник. Ваша работа - проповедовать религию на судне и организовывать похороны. Вы подчиняетесь Исполнительному офицеру. \
