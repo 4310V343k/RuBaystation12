@@ -1,6 +1,6 @@
 /datum/job/chaplain
 	title = "Chaplain"
-	department = "Service"
+	department = "Обслуживания"
 	department_flag = SRV
 	total_positions = 1
 	spawn_positions = 1
@@ -8,7 +8,7 @@
 	ideal_character_age = 40
 	economic_power = 6
 	minimal_player_age = 0
-	supervisors = "the Executive Officer"
+	supervisors = "Исполнительному офицеру"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/chaplain
 	allowed_branches = list(
 		/datum/mil_branch/civilian,
@@ -34,13 +34,17 @@
 		access_radio_serv
 	)
 
+/datum/job/chaplain/get_description_blurb()
+	return "Вы - свещенник. Ваша работа - проповедовать религию на судне и организовывать похороны. Вы подчиняетесь Исполнительному офицеру. \
+	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Господа на судно."
+
 /datum/job/janitor
 	title = "Sanitation Technician"
-	department = "Service"
+	department = "Обслуживания"
 	department_flag = SRV
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Executive Officer"
+	supervisors = "Исполнительному офицеру"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	alt_titles = list(
@@ -72,15 +76,18 @@
 		access_radio_serv
 	)
 
+/datum/job/janitor/get_description_blurb()
+	return "Вы - Уборщик. Ваша задача - поддерживать судно в частоте. Вы подчиняетесь Исполнительному офицеру. \
+	Мойте полы, убирайте мусор и чистите туалеты. Превратите судно в Рай для санитарного инспектора."
 
 /datum/job/chef
 	title = "Steward"
-	department = "Service"
+	department = "Обслуживания"
 	department_flag = SRV
 	total_positions = 2
 	spawn_positions = 2
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	supervisors = "the Executive Officer"
+	supervisors = "Исполнительному офицеру"
 	alt_titles = list(
 		"Bartender",
 		"Cook",
@@ -124,14 +131,17 @@
 		access_solgov_crew
 	)
 
+/datum/job/chef/get_description_blurb()
+	return "Вы - Стюард. Ваша работа - готовить различные напитки и блюда для членов экипажа и пассажиров. Вы подчиняетесь Исполнительному офицеру. \
+	Готовьте блюда и смешивайте напитки."
 
 /datum/job/crew
 	title = "Crewman"
-	department = "Service"
+	department = "Обслуживания"
 	department_flag = SRV
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "the Executive Officer and SolGov Personnel"
+	supervisors = "Исполнительному офицеру и персоналу ЦПСС"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/crewman
@@ -150,3 +160,6 @@
 		access_maint_tunnels, access_emergency_storage,
 		access_solgov_crew, access_radio_serv
 	)
+
+/datum/job/crew/get_description_blurb()
+	return "Вы - Матрос. Ваша работа - помогать остальному экипажу в их работе. Вы подчиняетесь Исполнительному офицеру."
