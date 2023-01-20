@@ -36,7 +36,12 @@
 
 /datum/job/chaplain/get_description_blurb()
 	return "Вы - свещенник. Ваша работа - проповедовать религию на судне и организовывать похороны. Вы подчиняетесь Исполнительному офицеру. \
-	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Господа на судно."
+	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Божье на судно."
+
+/datum/job/chaplain/equip(var/mob/living/carbon/human/H)
+	if(H.mind?.role_alt_title == "Psionic Confessor")
+		psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
+	return ..()
 
 /datum/job/janitor
 	title = "Sanitation Technician"
@@ -78,7 +83,7 @@
 
 /datum/job/janitor/get_description_blurb()
 	return "Вы - Уборщик. Ваша задача - поддерживать судно в частоте. Вы подчиняетесь Исполнительному офицеру. \
-	Мойте полы, убирайте мусор и чистите туалеты. Превратите судно в Рай для санитарного инспектора."
+	Мойте полы, убирайте мусор и чистите туалеты. Превратите судно в рай для санитарного инспектора."
 
 /datum/job/chef
 	title = "Steward"
