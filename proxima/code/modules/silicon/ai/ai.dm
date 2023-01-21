@@ -15,7 +15,7 @@
 		if(list_find(announcements_variants, result))
 			var/result_sound = announcements_variants[result]
 			if(isfile(result_sound))
-				announcement.Announce("Установлено новое соединение. Данные получены. Ядро ИИ активировано и готово исполнять установленный кодекс.", new_sound = result_sound)
+				announcement.Announce("Установлено новое соединение. Данные получены. Ядро ИИ активировано и готово выполнять установленные законы.", new_sound = result_sound)
 
 /mob/living/silicon/ai/proc/ChangeFloorColorInArea(Color, area/Area = get_area(src))
 	if(length(Color) && istype(Area))
