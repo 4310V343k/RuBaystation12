@@ -33,6 +33,7 @@
 			else
 				return new /obj/item/psychic_power/psiblade(user, user)
 
+/*
 /decl/psionic_power/psychokinesis/psishield
 	name =            "Shield"
 	cost =            15
@@ -53,7 +54,7 @@
 				return new /obj/item/psychic_power/psishield/master/grand(user, user)
 			else
 				return new /obj/item/psychic_power/psishield/master(user, user)
-
+*/
 /decl/psionic_power/psychokinesis/tinker
 	name =            "Tinker"
 	cost =            5
