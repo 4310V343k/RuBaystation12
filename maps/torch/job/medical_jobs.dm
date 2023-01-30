@@ -7,7 +7,7 @@
 	ideal_character_age = 45
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Главный медицинский офицер"
+	supervisors = "Главному Медицинскому Офицеру"
 	selection_color = "#013d3b"
 	economic_power = 10
 	alt_titles = list(
@@ -50,7 +50,7 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/senior_doctor/get_description_blurb()
-	return "Вы - Врач. Ваша обязанность - проводить операции и обучать врачей-ординаторов. Вы подчиняетесь Главному медицинскому офицеру. \
+	return "Вы - Хирург. Ваша обязанность - проводить операции и обучать врачей-ординаторов. Вы подчиняетесь Главному Медицинскому Офицеру. \
 	Обеспечивайте бесперебойную работу медицинского отсека и следите за количеством лекарств, крови и прочего. Жизнь людей - в ваших руках."
 
 /datum/job/junior_doctor
@@ -62,7 +62,7 @@
 	ideal_character_age = 45
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Врачам и Главному медицинскому офицеру"
+	supervisors = "Хирургу и Главному Медицинскому Офицеру"
 	selection_color = "#013d3b"
 	economic_power = 6
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
@@ -101,15 +101,15 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/junior_doctor/get_description_blurb()
-	return "Вы - Врач-ординатор. Ваша обязанность - проводить лечение пациентов и обучатся тонкостям медицины благодаря помощи старших врачей. Вы подчиняетесь Главному медицинскому офицеру. \
-	Лечите людей, проводите операции и постарайтесь никого не убить."
+	return "Вы - врач-ординатор. Ваша обязанность - проводить лечение пациентов и обучатся тонкостям медицины благодаря помощи старших врачей. Вы подчиняетесь Главному Медицинскому Офицеру. \
+	Лечите людей, помогайте хирургу с операциями и постарайтесь никого не убить."
 
 /datum/job/doctor
 	title = "Medical Technician"
 	department = "Медицинский"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Врачам и Главному медицинскому офицеру"
+	supervisors = "Врачам и Главному Медицинскому Офицеру"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 19)
 	ideal_character_age = 40
@@ -159,7 +159,7 @@
 	skill_points = 22
 
 /datum/job/doctor/get_description_blurb()
-	return "Вы - Парамедик. Ваша обязанность - оказывать первую помощь и доставлять пациентов в медицинский отсек. Вы подчиняетесь Главному медицинскому офицеру и Врачам. \
+	return "Вы - парамедик. Ваша обязанность - оказывать первую помощь и доставлять пациентов в медицинский отсек. Вы подчиняетесь Главному Медицинскому Офицеру и Хирургу. \
 	Жизнь людей зависит от Вашей скорости."
 
 /datum/job/medical_trainee
@@ -168,7 +168,7 @@
 	department_flag = MED
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "остальному медицинскому персоналу и Главному медицинскому офицеру"
+	supervisors = "Главному Медицинскому Офицеру и остальному медперсоналу"
 	selection_color = "#013d3b"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
@@ -211,7 +211,7 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/medical_trainee/get_description_blurb()
-	return "Вы - Парамедик-стажёр. Вы учитесь основам медицины благодаря помощи Ваших более опытных коллег. Вы подчиняетесь остальному медицинскому персоналу."
+	return "Вы - парамедик-стажёр. Вы учитесь основам медицины благодаря помощи ваших более опытных коллег. Вы подчиняетесь остальному медперсоналу."
 
 
 /datum/job/chemist
@@ -220,7 +220,7 @@
 	department_flag = MED
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "остальному медицинскому персоналу, корпоративному связному и Главному медицинскому офицеру"
+	supervisors = "Главному Медицинскому Офицеру, Корпоративному Связному и остальному медперсоналу"
 	selection_color = "#013d3b"
 	economic_power = 4
 	minimum_character_age = list(SPECIES_HUMAN = 25)
@@ -257,8 +257,8 @@
 	)
 
 /datum/job/chemist/get_description_blurb()
-	return "Вы - Фармацевт. Вы изготавливаете медицину и другие полезные субстанции. Вы не доктор или медик. Вам не следует лечить пациентов, вы должны предоставлять медицину для их лечения. \
-	Вы подчиняетесь Врачам и Парамедикам (в случае, если Вы контрактник, то ещё и Корпоративному связному)."
+	return "Вы - фармацевт. Вы изготавливаете медикаменты и другие полезные вещества. Вы не хирург или медик. Вам не следует лечить пациентов вместо них, вы должны предоставлять препараты для их лечения. \
+	Вы подчиняетесь Главному Медицинскому Офицеру, Хирургу и парамедикам (в случае, если вы частный подрядчик, то ещё и Корпоративному связному)."
 
 /datum/job/psychiatrist
 	title = "Counselor"
@@ -269,7 +269,7 @@
 	economic_power = 5
 	minimum_character_age = list(SPECIES_HUMAN = 24)
 	minimal_player_age = 0
-	supervisors = "Главному медицинскому офицеру"
+	supervisors = "Главному Медицинскому Офицеру и Фонду Кучулейн"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/counselor
 	alt_titles = list(
 		"Psychiatrist",
@@ -312,10 +312,10 @@
 
 /datum/job/psychiatrist/equip(var/mob/living/carbon/human/H)
 	if(H.mind?.role_alt_title == "Psionic Counselor")
-		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
+		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_MASTER)
 	if(H.mind?.role_alt_title == "Mentalist")
 		psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
 	return ..()
 
 /datum/job/psychiatrist/get_description_blurb()
-		return "Вы - Консультант. Ваша главная обязанность - поддерживать ментальное здоровье экипажа в тонусе. Вы подчиняетесь Главному медицинскому офицеру."
+		return "Вы - психиатр. Ваша главная обязанность - поддерживать ментальное здоровье экипажа в тонусе. Вы подчиняетесь Главному Медицинскому Офицеру (в случае, если вы псионический консультант или менталист, то ещё и Фонду Кучулейн, чьим сотрудником вы в таком случае являетесь - вы же взяли с собой удостоверение, правда?)."

@@ -8,7 +8,7 @@
 	ideal_character_age = 40
 	economic_power = 6
 	minimal_player_age = 0
-	supervisors = "Исполнительному офицеру"
+	supervisors = "Исполнительному Офицеру"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/chaplain
 	alt_titles = list(
 		"Celebrant",
@@ -41,7 +41,7 @@
 
 
 /datum/job/chaplain/get_description_blurb()
-	return "Вы - свещенник. Ваша работа - проповедовать религию на судне и организовывать похороны. Вы подчиняетесь Исполнительному офицеру. \
+	return "Вы - священник. Ваша работа - проповедовать религию на судне и организовывать похороны. Вы подчиняетесь Исполнительному офицеру. \
 	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Божье на судно."
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H)
@@ -55,7 +55,7 @@
 	department_flag = SRV
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Исполнительному офицеру"
+	supervisors = "Исполнительному Офицеру"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	alt_titles = list(
@@ -98,7 +98,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	minimum_character_age = list(SPECIES_HUMAN = 18)
-	supervisors = "Исполнительному офицеру"
+	supervisors = "Исполнительному Офицеру"
 	alt_titles = list(
 		"Bartender",
 		"Cook",
@@ -143,7 +143,7 @@
 	)
 
 /datum/job/chef/get_description_blurb()
-	return "Вы - Стюард. Ваша работа - готовить различные напитки и блюда для членов экипажа и пассажиров. Вы подчиняетесь Исполнительному офицеру. \
+	return "Вы - Стюард. Ваша работа - готовить различные напитки и блюда для членов экипажа и пассажиров. Вы подчиняетесь Исполнительному Офицеру. \
 	Готовьте блюда и смешивайте напитки."
 
 /datum/job/crew
@@ -152,7 +152,7 @@
 	department_flag = SRV
 	total_positions = 5
 	spawn_positions = 5
-	supervisors = "Исполнительному офицеру и персоналу ЦПСС"
+	supervisors = "Исполнительному Офицеру и персоналу ЦПСС"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/crewman
@@ -173,4 +173,4 @@
 	)
 
 /datum/job/crew/get_description_blurb()
-	return "Вы - Матрос. Ваша работа - помогать остальному экипажу в их работе. Вы подчиняетесь Исполнительному офицеру."
+	return "Вы - Матрос. Ваша работа - помогать остальному экипажу в их работе. Вы подчиняетесь Исполнительному Офицеру."
