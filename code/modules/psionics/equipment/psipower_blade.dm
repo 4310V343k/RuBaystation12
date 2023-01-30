@@ -1,5 +1,5 @@
 /obj/item/psychic_power/psiblade
-	name = "psychokinetic slash"
+	name = "psychokinetic blade"
 	force = 10
 	sharp = TRUE
 	edge = TRUE
@@ -9,6 +9,7 @@
 /obj/item/psychic_power/psiblade/master
 	force = 20
 	maintain_cost = 3
+	// icon_state = "psiblade_medium"
 
 /obj/item/psychic_power/psiblade/master/grand
 	force = 30
