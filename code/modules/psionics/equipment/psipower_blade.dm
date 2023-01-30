@@ -1,5 +1,5 @@
 /obj/item/psychic_power/psiblade
-	name = "psychokinetic slash"
+	name = "psychokinetic blade"
 	force = 10
 	sharp = TRUE
 	edge = TRUE
