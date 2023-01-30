@@ -32,7 +32,7 @@
 	if(M.do_psionics_check(max(force, maintain_cost), user))
 		if(user.psi.faculty == PSI_PSYCHOKINESIS || PSI_COERCION))
 			to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a round psionic shield!</span>")
-		else()
+		else
 			to_chat(user, "<span class='danger'>\The [src] flickers violently out of phase!</span>")
 		return 1
 	. = ..()
@@ -41,7 +41,7 @@
 	if(target.do_psionics_check(max(force, maintain_cost), user))
 		if(target.psi.faculty == PSI_PSYCHOKINESIS || PSI_COERCION))
 			to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a psionic shield!</span>")
-		else()
+		else
 			to_chat(user, "<span class='danger'>\The [src] flickers violently out of phase!</span>")
 		return
 	. = ..(target, user, proximity)
