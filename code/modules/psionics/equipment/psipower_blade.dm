@@ -9,7 +9,6 @@
 /obj/item/psychic_power/psiblade/master
 	force = 20
 	maintain_cost = 3
-	// icon_state = "psiblade_medium"
 
 /obj/item/psychic_power/psiblade/master/grand
 	force = 30

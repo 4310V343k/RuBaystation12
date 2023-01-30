@@ -33,6 +33,27 @@
 			else
 				return new /obj/item/psychic_power/psiblade(user, user)
 
+/decl/psionic_power/psychokinesis/psishield
+	name =            "Shield"
+	cost =            15
+	cooldown =        30
+	min_rank =        PSI_RANK_MASTER
+	use_description = "Click on or otherwise activate an empty hand while on grab intent to manifest a psychokinetic cutting blade. The power the blade will vary based on your mastery of the faculty."
+	admin_log = FALSE
+
+/decl/psionic_power/psychokinesis/psishield/invoke(var/mob/living/user, var/mob/living/target)
+	if((target && user != target) || user.a_intent != I_GRAB)
+		return FALSE
+	. = ..()
+	if(.)
+		switch(user.psi.get_rank(faculty))
+			if(PSI_RANK_PARAMOUNT)
+				return new /obj/item/psychic_power/psishield/master/grand/paramount(user, user)
+			if(PSI_RANK_GRANDMASTER)
+				return new /obj/item/psychic_power/psishield/master/grand(user, user)
+			else
+				return new /obj/item/psychic_power/psishield/master(user, user)
+
 /decl/psionic_power/psychokinesis/tinker
 	name =            "Tinker"
 	cost =            5
