@@ -3,7 +3,7 @@
 	department = "Охранный"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Главе службы безопасности"
+	supervisors = "Главе Службы Безопасности"
 	economic_power = 5
 	minimal_player_age = 7
 	ideal_character_age = 35
@@ -45,7 +45,7 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/warden/get_description_blurb()
-	return "Вы - Смотритель. Вы отвечаете за cохранность брига и арсенала, а также проводите надзор за заключёнными. Вы подчиняетесь Главе службы безопасности. \
+	return "Вы - Смотритель. Вы отвечаете за cохранность брига и арсенала, а также проводите надзор за заключёнными. Вы подчиняетесь Главе Службы Безопасности. \
 	Сообщайте охране информацию о преступлениях, смотрите камеры и пересчитывайте оружие в арсенале. От вас ожидается очень хорошее знание закона ЦПСС и основных регуляций судна."
 
 /datum/job/detective
@@ -53,7 +53,7 @@
 	department = "Охранный"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Главе службы безопасности и Смотрителю"
+	supervisors = "Главе Службы Безопасности и Смотрителю"
 	economic_power = 5
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 25)
@@ -109,14 +109,16 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/detective/equip(var/mob/living/carbon/human/H)
-	if(H.mind?.role_alt_title == "Psionic Sleuth")
-		psi_faculties = list("[PSI_PSYCHOKINESIS]" = PSI_RANK_MASTER)
+	if(H.mind?.role_alt_title == "Psionic Investigator")
+		psi_faculties = list("[PSI_PSYCHOKINESIS]" = PSI_RANK_MASTER,
+		                     "[PSI_COERCION]" = PSI_RANK_OPERANT)
 	if(H.mind?.role_alt_title == "Psi-Operative")
-		psi_faculties = list("[PSI_ENERGISTICS]" = PSI_RANK_MASTER)
+		psi_faculties = list("[PSI_ENERGISTICS]" = PSI_RANK_MASTER,
+		                     "[PSI_REDACTION]" = PSI_RANK_OPERANT)
 	return ..()
 
 /datum/job/detective/get_description_blurb()
-	return "Вы - Криминалист. Ваша задача - проводить осмотр мест преступлений и раскрывать дела. Вы подчиняетесь Главе службы безопасности и Смотрителю. \
+	return "Вы - Криминалист. Ваша задача - проводить осмотр мест преступлений и раскрывать дела. Вы подчиняетесь Главе Службы Безопасности и Смотрителю. \
 	Ищите и анализируйте улики, проводите допросы. От вас ожидается хорошее знание закона ЦПСС и основных регуляций судна."
 
 /datum/job/officer
@@ -124,7 +126,7 @@
 	department = "Охранный"
 	total_positions = 4
 	spawn_positions = 4
-	supervisors = "Главе службы безопасности и Смотрителю"
+	supervisors = "Главе Службы Безопасности и Смотрителю"
 	economic_power = 4
 	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
