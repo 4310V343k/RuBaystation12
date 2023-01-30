@@ -29,6 +29,30 @@
 	unboosted_rank = PSI_RANK_OPERANT
 	boosted_psipower = 50
 
+/obj/item/clothing/head/helmet/space/psi_amp/inhibitor
+	name = "psionic inhibitor"
+	desc = "A crown-of-thorns psionic inhibitor that interfaces directly with the brain, isolating and weakening psionic signals to dissipate them. It looks as bad as it feels to wear one."
+	icon_state = "amp"
+	flags_inv = 0
+	body_parts_covered = 0
+
+	max_boosted_faculties = 1
+	boosted_rank = PSI_RANK_OPERANT
+	unboosted_rank = PSI_RANK_PARAMOUNT
+	boosted_psipower = -120
+
+/obj/item/clothing/head/helmet/space/psi_amp/lesser/inhibitor
+	name = "psionic inhibitor"
+	desc = "A crown-of-thorns psionic inhibitor that interfaces directly with the brain, isolating and weakening psionic signals to dissipate them. It looks as bad as it feels to wear one."
+	icon_state = "amp"
+	flags_inv = 0
+	body_parts_covered = 0
+
+	max_boosted_faculties = 1
+	boosted_rank = PSI_RANK_OPERANT
+	unboosted_rank = PSI_RANK_MASTER
+	boosted_psipower = -50
+
 /obj/item/clothing/head/helmet/space/psi_amp/Initialize()
 	. = ..()
 	verbs += /obj/item/clothing/head/helmet/space/psi_amp/proc/integrate
