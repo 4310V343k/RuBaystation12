@@ -30,19 +30,13 @@
 
 /obj/item/psychic_power/attack(var/mob/living/M, var/mob/living/user, var/target_zone)
 	if(M.do_psionics_check(max(force, maintain_cost), user))
-		if(user.psi.faculty == PSI_PSYCHOKINESIS || PSI_COERCION))
-			to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a round psionic shield!</span>")
-		else
-			to_chat(user, "<span class='danger'>\The [src] flickers violently out of phase!</span>")
+		to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a psionic forcefield!</span>")
 		return 1
 	. = ..()
 
 /obj/item/psychic_power/afterattack(var/atom/target, var/mob/living/user, var/proximity)
 	if(target.do_psionics_check(max(force, maintain_cost), user))
-		if(target.psi.faculty == PSI_PSYCHOKINESIS || PSI_COERCION))
-			to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a psionic shield!</span>")
-		else
-			to_chat(user, "<span class='danger'>\The [src] flickers violently out of phase!</span>")
+		to_chat(user, "<span class='danger'>\The [src] suddenly lunges, converging energy flows into a psionic forcefield!</span>")
 		return
 	. = ..(target, user, proximity)
 
