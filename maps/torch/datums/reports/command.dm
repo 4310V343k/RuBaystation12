@@ -138,7 +138,7 @@
 	..()
 	add_field(/datum/report_field/text_label/header, "ГЭК \"Факел\" - Офис Исполнительного офицера")
 	add_field(/datum/report_field/text_label, "Благодарность")
-	add_field(/datum/report_field/pencode_text "Текст благодарности")
+	add_field(/datum/report_field/pencode_text, "Текст благодарности")
 	add_field(/datum/report_field/people/from_manifest, "Полное имя и звание лица, получившего благодарность", required = 1)
 	add_field(/datum/report_field/simple_text, "Текущая должность лица, получившего благодарность", required = 1)
 	add_field(/datum/report_field/people/from_manifest, "Полное имя и звание лица, выдавшего благодарность", required = 1)
