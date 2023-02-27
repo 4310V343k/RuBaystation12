@@ -127,3 +127,21 @@
 	xo_fields += add_field(/datum/report_field/options/yes_no, "Одобрено")
 	for(var/datum/report_field/field in xo_fields)
 		field.set_access(access_edit = access_hop)
+
+/datum/computer_file/report/recipient/command/gratitude
+	form_name = "CC-SGF-11"
+	title = "Благодарность"
+	logo = "\[solcrest\]"
+	available_on_ntnet = TRUE
+
+/datum/computer_file/report/recipient/command/gratitude/generate_fields()
+	..()
+	var/list/xo_fields = list()
+	add_field(/datum/report_field/text_label/header, "ГЭК \"Факел\" - Благодарность")
+	add_field(/datum/report_field/pencode_text "Текст благодарности")
+	add_field(/datum/report_field/people/from_manifest, "Полное имя и звание лица, получившего благодарность", required = 1)
+	add_field(/datum/report_field/simple_text, "Текущая должность лица, получившего благодарность", required = 1)
+	add_field(/datum/report_field/people/from_manifest, "Полное имя и звание лица, выдавшего благодарность", required = 1)
+	add_field(/datum/report_field/date, "Дата заполнения")
+	add_field(/datum/report_field/time, "Время заполнения")
+	add_field(/datum/report_field/signature, "Подпись лица, выдавшего благодарность", required = 1)
