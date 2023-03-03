@@ -623,6 +623,7 @@
 	name = "Officer's Mess"
 	icon_state = "bar"
 	sound_env = MEDIUM_SOFTFLOOR
+	req_access = list(access_o_mess, access_solgov_crew)
 	lighting_tone = AREA_LIGHTING_WARM
 
 /area/command/pathfinder
@@ -716,7 +717,7 @@
 
 /area/crew_quarters/heads/office/sgr
 	icon_state = "heads_sr"
-	name = "\improper Command - SCGR's Office"
+	name = "\improper Command - JUA's Office"
 	req_access = list(access_representative)
 	lighting_tone = AREA_LIGHTING_WARM
 

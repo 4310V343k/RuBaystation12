@@ -196,6 +196,7 @@
 /obj/item/storage/box/ammo/sniperammo/apds
 	name = "box of sniper APDS shells"
 	startswith = list(/obj/item/ammo_casing/shell/apds = 3)
+
 /obj/item/storage/box/flashbangs
 	name = "box of flashbangs"
 	desc = "A box containing 7 antipersonnel flashbang grenades.<br> WARNING: These devices are extremely dangerous and can cause blindness or deafness from repeated use."
@@ -243,6 +244,13 @@
 	desc = "A box containing 5 highly experimental supermatter grenades."
 	icon_state = "radbox"
 	startswith = list(/obj/item/grenade/supermatter = 5)
+
+/obj/item/storage/box/hypercharged_guncells
+	name = "box of hypercharged cells"
+	desc = "A box containing 6 higly unstable hypercharged guncells. Both ammunition and a improvised grenade."
+	icon_state = "flashbang"
+	startswith = list(	/obj/item/cell/guncell/overcharged/large = 3,
+						/obj/item/cell/guncell/pistol/overcharged/large = 3)
 
 /obj/item/storage/box/trackimp
 	name = "boxed tracking implant kit"

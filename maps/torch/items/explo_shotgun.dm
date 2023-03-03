@@ -17,9 +17,9 @@
 	. += "<br>This gun will be allowed to fire freely once off-ship, otherwise needs to be authorized by XO. \
 	<br>While you can load this gun with lethal ammo, there's a considerable risk of explosion when fired."
 
-/obj/item/gun/projectile/shotgun/pump/exploration/get_antag_info()
+/obj/item/gun/projectile/shotgun/pump/exploration/get_antag_interactions_info()
 	. = ..()
-	. += "<br>You can reinforce the barrel with a simple pipe, lowering chance of explosion to 1 in 10.<br>"
+	.["Pipe"] += "<p>Reinforces the barrel, lowering the chance of explosion to 1 in 10.</p>"
 
 /obj/item/gun/projectile/shotgun/pump/exploration/on_update_icon()
 	..()
@@ -111,6 +111,14 @@
 					  /obj/item/ammo_magazine/shotholder/net = 1,
 					  /obj/item/ammo_magazine/shotholder/flash = 1)
 
+/obj/item/storage/box/ammo/explo_shells/cells
+	name = "box of guncells"
+	startswith = list(
+			/obj/item/cell/guncell/medium = 3,
+			/obj/item/cell/guncell/small = 4,
+	)
+
+
 /obj/structure/closet/secure_closet/explo_gun
 	name = "gun locker"
 	desc = "Wall locker holding the boomstick."
@@ -124,7 +132,9 @@
 /obj/structure/closet/secure_closet/explo_gun/WillContain()
 	return list(
 		/obj/item/storage/box/ammo/explo_shells = 3,
-		/obj/item/gun/projectile/shotgun/pump/exploration
+		/obj/item/gun/projectile/shotgun/pump/exploration,
+		/obj/item/storage/box/ammo/explo_shells/cells = 2,
+		/obj/item/gun/energy/k342/explo = 2
 	)
 
 /obj/structure/closet/secure_closet/explo_gun/kasatka
@@ -152,27 +162,3 @@
 	extra_decals = list(
 		"stripe_outer" = COLOR_PURPLE
 	)
-
-//proxima code start
-/obj/item/gun/energy/k342/explo
-	desc = "K342E Kasatka is the latest plasma weapon created by NanoTrasen. This modification has been designed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode."
-	icon_state = "kasatka_off"
-	item_state = "kasatka"
-	req_access = list(list("ACCESS_TORCH_EXPLORER"))
-	wielded_item_state = "kasatka-wielded"
-	authorized_modes = list(UNAUTHORIZED, UNAUTHORIZED, UNAUTHORIZED)
-	init_firemodes = list(
-		list(mode_name="stun charge", projectile_type=/obj/item/projectile/plasma/stun, charge_cost=20, fire_delay=4, projectile_color=COLOR_YELLOW),
-		list(mode_name="plasma charge", projectile_type=/obj/item/projectile/plasma, charge_cost=20, fire_delay=4, projectile_color=COLOR_BLUE_LIGHT),
-		list(mode_name="net charge", projectile_type=/obj/item/projectile/plasma/stun/net, charge_cost=150, fire_delay=20, projectile_color=COLOR_GREEN)
-	)
-
-/obj/item/gun/energy/k342/explo/free_fire()
-	var/my_z = get_z(src)
-	if(!list_find(GLOB.using_map.station_levels, my_z))
-		return TRUE
-	return ..()
-
-/obj/item/gun/energy/k342/explo/prereg
-	authorized_modes = list(AUTHORIZED, AUTHORIZED, ALWAYS_AUTHORIZED)
-//proxima code end

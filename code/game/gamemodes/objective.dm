@@ -233,9 +233,10 @@ var/global/list/all_objectives = list()
 		"the senior enlisted advisor rubber stamp" = /obj/item/stamp/sea,
 		"the chief of security rubber stamp" = /obj/item/stamp/cos,
 		"the brig chief rubber stamp" = /obj/item/stamp/brig,
-		"the deck chief rubber stamp" = /obj/item/stamp/deckoff,
+		"the supply corps officer rubber stamp" = /obj/item/stamp/deckoff,
 		"the pathfinder rubber stamp" = /obj/item/stamp/path,
 		"an ablative armor vest" = /obj/item/clothing/suit/armor/laserproof,
+		"the medal briefcase" = /obj/item/storage/secure/briefcase/medals,
 		"an RCD" = /obj/item/rcd
 	)
 

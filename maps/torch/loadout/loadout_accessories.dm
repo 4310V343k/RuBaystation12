@@ -12,6 +12,7 @@
 	solmilitary["Bronze Heart"] = /obj/item/clothing/accessory/medal/solgov/mil/bronze_heart
 	solmilitary["Home Guard medal"] = /obj/item/clothing/accessory/medal/solgov/mil/home_guard
 	solmilitary["Iron Star"] = /obj/item/clothing/accessory/medal/solgov/mil/iron_star
+	solmilitary["Combat Medical Award"] = /obj/item/clothing/accessory/medal/solgov/mil/medical
 	solmilitary["Armed Forces medal"] = /obj/item/clothing/accessory/medal/solgov/mil/armed_forces
 	solmilitary["Silver Sword"] = /obj/item/clothing/accessory/medal/solgov/mil/silver_sword
 	solmilitary["Superior Service Cross"] = /obj/item/clothing/accessory/medal/solgov/mil/service_cross
@@ -66,7 +67,7 @@
 	gear_tweaks += new/datum/gear_tweak/path(solribbons)
 
 /datum/gear/accessory/tags
-	display_name = "dog tags"
+	display_name = "SCG dog tags"
 	path = /obj/item/clothing/accessory/badge/solgov/tags
 	custom_setup_proc = /obj/item/clothing/accessory/badge/solgov/tags/proc/loadout_setup
 

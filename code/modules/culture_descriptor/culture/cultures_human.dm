@@ -26,11 +26,6 @@
 	группам или слишком гордятся своим происхождением в целом, как в случае с гидеонцами, доходя до того, \
 	что постоянно про нее упоминают."
 	economic_power = 1
-	allowed_accents = list(
-		/decl/accent/sol_core,
-		/decl/accent/mars_surface,
-		/decl/accent/mars_tunnel
-	)
 
 /decl/cultural_info/culture/human/martian_tunneller
 	name = CULTURE_HUMAN_MARSTUN
@@ -227,7 +222,7 @@
 		if(1) return NAME
 		if(2) return "[LTR][LTR]-[FIRST]"
 		if(3) return "[FIRST]-[NUM][NUM][NUM]"
-		if(4) return "[LTR][LTR]-[NUM][NUM][NUM]"
+		if(4) return "[NUM][NUM][NUM]-[FIRST]"
 	. = 1 // Never executed, works around http://www.byond.com/forum/?post=2072419
 	#undef LTR
 	#undef NUM

@@ -4,9 +4,9 @@
 	icon = 'icons/obj/guns/energy_gun.dmi'
 	icon_state = "energystun100"
 	item_state = null	//so the human update icon uses the icon_state instead.
-	max_shots = 10
+	max_shots = 40
+	charge_cost = 25
 	fire_delay = 10 // To balance for the fact that it is a pistol and can be used one-handed without penalty
-
 	projectile_type = /obj/item/projectile/beam/stun
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
 	modifystate = "energystun"
@@ -43,11 +43,16 @@
 	name = "small energy gun"
 	desc = "A smaller model of the versatile LAEP90 Perun, the LAEP90-C packs considerable utility in a smaller package. Best used in situations where full-sized sidearms are inappropriate."
 	icon = 'icons/obj/guns/small_egun.dmi'
+	battery_changable = TRUE
 	icon_state = "smallgunstun"
+	charge_cost = 60
 	max_shots = 6
 	w_class = ITEM_SIZE_SMALL
 	force = 2 //it's the size of a car key, what did you expect?
 	modifystate = "smallgunstun"
+	battery_changable = TRUE
+	power_supply = /obj/item/cell/guncell/verysmall
+	battery_chamber_size = 1
 
 	init_firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun, modifystate="smallgunstun"),
@@ -66,11 +71,12 @@
 	desc = "An energy gun with an experimental miniaturized reactor."
 	icon = 'icons/obj/guns/adv_egun.dmi'
 	icon_state = "nucgun"
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_POWER = 3)
+	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 5, TECH_POWER = 8)
 	slot_flags = SLOT_BELT
 	w_class = ITEM_SIZE_LARGE
 	force = 8 //looks heavier than a pistol
 	self_recharge = 1
+	charge_cost = 20
 	modifystate = null
 	one_hand_penalty = 1 //bulkier than an e-gun, but not quite the size of a carbine
 
@@ -120,10 +126,13 @@
 		if("kill") return "nucgun-kill"
 
 /obj/item/gun/energy/gun/nuclear/on_update_icon()
-	var/list/new_overlays = list()
+	overlays.Cut()
+	overlays += get_charge_overlay()
+	overlays += get_reactor_overlay()
+	overlays += get_mode_overlay()
 
-	new_overlays += get_charge_overlay()
-	new_overlays += get_reactor_overlay()
-	new_overlays += get_mode_overlay()
-
-	overlays = new_overlays
+	// Safety
+	if (ismob(loc))
+		var/mob/M = loc
+		if (M.skill_check(SKILL_WEAPONS, SKILL_BASIC))
+			overlays += image('icons/obj/guns/gui.dmi', "safety[safety()]")

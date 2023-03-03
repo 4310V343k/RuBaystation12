@@ -2,6 +2,7 @@
 	title = "Chaplain"
 	department = "Обслуживания"
 	department_flag = SRV
+	selection_color = "#964B00"
 	total_positions = 1
 	spawn_positions = 1
 	minimum_character_age = list(SPECIES_HUMAN = 24)
@@ -58,6 +59,7 @@
 	supervisors = "Исполнительному офицеру"
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 20
+	selection_color = "#964B00"
 	alt_titles = list(
 		"Janitor")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/service/janitor
@@ -98,6 +100,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	minimum_character_age = list(SPECIES_HUMAN = 18)
+	selection_color = "#964B00"
 	supervisors = "Исполнительному офицеру"
 	alt_titles = list(
 		"Bartender",
@@ -120,14 +123,11 @@
 		/datum/mil_rank/fleet/e2,
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
+		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/army/e2,
 		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4_alt
-	)
-	min_skill = list(
-		SKILL_BOTANY = SKILL_BASIC,
-		SKILL_CHEMISTRY = SKILL_BASIC,
-		SKILL_COOKING = SKILL_ADEPT
+		/datum/mil_rank/army/e4_alt,
+		/datum/mil_rank/army/e5
 	)
 	min_skill = list(
 		SKILL_BOTANY = SKILL_BASIC,
@@ -139,7 +139,8 @@
 		access_hydroponics,
 		access_kitchen,
 		access_radio_serv,
-		access_solgov_crew
+		access_solgov_crew,
+		access_o_mess
 	)
 
 /datum/job/chef/get_description_blurb()

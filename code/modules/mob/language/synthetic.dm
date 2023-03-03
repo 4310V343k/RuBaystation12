@@ -2,14 +2,13 @@
 	name = LANGUAGE_ROBOT_GLOBAL
 	desc = "Most human facilities support free-use communications protocols and routing hubs for synthetic use."
 	colour = "say_quote"
-	speech_verb = "states"
-	ask_verb = "queries"
-	exclaim_verb = "declares"
+	speech_verb = "заявляет"
+	ask_verb = "запрашивает"
+	exclaim_verb = "объявляет"
 	key = "b"
 	flags = RESTRICTED | HIVEMIND
 	shorthand = "N/A"
 	var/drone_only
-	accent = /decl/accent/none
 
 /datum/language/binary/broadcast(var/mob/living/speaker,var/message,var/speaker_mask)
 
@@ -85,3 +84,4 @@
 	if(prob(70))
 		return "[pick(list("PBU","HIU","SINA","ARMA","OSI"))]-[rand(100, 999)]"
 	return pick(GLOB.ai_names)
+

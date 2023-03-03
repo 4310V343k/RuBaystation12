@@ -1,16 +1,15 @@
 /datum/language/diona
 	name = LANGUAGE_ROOTLOCAL
 	desc = "A complex language known instinctively by Dionaea, 'spoken' by emitting modulated radio waves. This version uses high frequency waves for quick communication at short ranges."
-	speech_verb = "creaks and rustles"
-	ask_verb = "creaks"
-	exclaim_verb = "rustles"
+	speech_verb = "скрипит и шуршит"
+	ask_verb = "скрипит"
+	exclaim_verb = "шуршит"
 	colour = "soghun"
 	key = "q"
 	flags = RESTRICTED
 	syllables = list("hs","zt","kr","st","sh")
 	shorthand = "RT"
 	machine_understands = FALSE
-	accent = /decl/accent/diona
 
 /datum/language/diona/get_random_name()
 	var/new_name = "[pick(list("To Sleep Beneath","Wind Over","Embrace of","Dreams of","Witnessing","To Walk Beneath","Approaching the"))]"
