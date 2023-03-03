@@ -167,7 +167,7 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
-/datum/job/senior_scientist/get_description_blurb()
+/datum/job/officer/get_description_blurb()
 	return "Вы - Каптенармус. Ваша задача - поддерживать порядок на судне и защищать его от различных угроз. Вы подчиняетесь Главе службы безопасности и Смотрителю. \
 	Проводите задержания, опрашивайте свидетелей. От вас ожидается хорошее знание закона ЦПСС и основных регуляций судна."
 
