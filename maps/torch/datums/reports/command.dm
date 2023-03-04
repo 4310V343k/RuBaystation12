@@ -8,7 +8,7 @@
 	logo = "\[solcrest\]"
 	available_on_ntnet = 1
 
-/datum/computer_file/report/recipient/command/request/generate_fields()
+/datum/computer_file/report/recipient/command/report/generate_fields()
 	..()
 	add_field(/datum/report_field/text_label/instruction, "Этот факс был отправлен командованием ГЭК Факел")
 	add_field(/datum/report_field/date, "Дата")
