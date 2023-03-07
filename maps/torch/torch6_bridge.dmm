@@ -784,6 +784,7 @@
 /obj/structure/hygiene/toilet{
 	dir = 4
 	},
+/obj/item/storage/secure/briefcase/medals/fake,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/heads/cobed)
 "bI" = (
@@ -6114,10 +6115,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "nJ" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
-	dir = 1;
-	icon_state = "console"
-	},
 /obj/effect/floor_decal/corner/blue/three_quarters{
 	dir = 4
 	},
@@ -6139,6 +6136,10 @@
 	id = "bridge_port";
 	pixel_x = 24;
 	pixel_y = -35
+	},
+/obj/machinery/computer/modular/preset/dock{
+	dir = 1;
+	icon_state = "console"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
@@ -6843,19 +6844,19 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "pE" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
+/obj/machinery/computer/modular/preset/cardslot/command_sec{
 	dir = 1;
 	icon_state = "console"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/bridgecheck)
 "pF" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
-	dir = 1;
-	icon_state = "console"
-	},
 /obj/effect/floor_decal/corner/red/half{
 	dir = 4
+	},
+/obj/machinery/computer/modular/preset/cardslot/command_sec{
+	dir = 1;
+	icon_state = "console"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/bridgecheck)
@@ -7066,7 +7067,9 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/obj/structure/bed/chair/comfy/blue,
+/obj/structure/bed/chair/comfy/blue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "qi" = (
@@ -10891,10 +10894,6 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/bridge/fore)
 "AZ" = (
-/obj/machinery/computer/modular/preset/cardslot/command{
-	dir = 8;
-	icon_state = "console"
-	},
 /obj/machinery/requests_console{
 	announcementConsole = 1;
 	department = "Chief Engineer's Desk";
@@ -10904,6 +10903,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow/mono,
 /obj/item/modular_computer/tablet/lease/preset/command,
+/obj/machinery/computer/modular/preset/cardslot/command_eng{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/ce)
 "Bc" = (
@@ -12559,7 +12561,6 @@
 /turf/simulated/wall/r_wall/hull,
 /area/bridge)
 "HF" = (
-/obj/machinery/computer/modular/preset/dock,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -12568,6 +12569,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/computer/modular/preset/medical,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge)
 "HG" = (
@@ -13856,10 +13858,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bridge/aftstarboard)
 "Mn" = (
-/obj/machinery/computer/modular/preset/cardslot/command_sec{
-	dir = 8;
-	icon_state = "console"
-	},
 /obj/effect/floor_decal/corner/red/mono,
 /obj/machinery/requests_console{
 	announcementConsole = 1;
@@ -13869,6 +13867,10 @@
 	pixel_x = 32
 	},
 /obj/item/modular_computer/tablet/lease/preset/command,
+/obj/machinery/computer/modular/preset/cardslot/command_sec{
+	dir = 8;
+	icon_state = "console"
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/cos)
 "Mq" = (
@@ -15736,7 +15738,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/bed/chair/comfy/blue,
+/obj/structure/bed/chair/comfy/blue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "TM" = (
