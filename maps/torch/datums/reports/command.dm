@@ -142,3 +142,21 @@
 	add_field(/datum/report_field/date, "Дата заполнения")
 	add_field(/datum/report_field/time, "Время заполнения")
 	add_field(/datum/report_field/signature, "Подпись лица, выдавшего благодарность", required = 1)
+
+/datum/computer_file/report/recipient/command/issuing_bonuses
+	form_name = "CC-SGF-12"
+	title = "Представление о премировании сотрудника"
+	available_on_ntnet = TRUE
+
+/datum/computer_file/report/recipient/command/issuing_bonuses/generate_fields()
+	..()
+	add_field(/datum/report_field/text_label/header, "ГЭК \"Факел\" - Офис Исполнительного офицера")
+	add_field(/datum/report_field/people/from_manifest, "Полное имя, звание и должность лица, получившего премию", required = 1)
+	add_field(/datum/report_field/simple_text, "Департамент", required = 1)
+	add_field(/datum/report_field/simple_text, "Размер премии", required = 1)
+	add_field(/datum/report_field/pencode_text, "Причина премирования", required = 1)
+	add_field(/datum/report_field/people/from_manifest, "Полное имя, звание и должность лица, назначившего премирование", required = 1)
+	add_field(/datum/report_field/signature, "Подпись лица, назначившего премирование", required = 1)
+	add_field(/datum/report_field/signature, "Подпись о получении премиальных", required = 1)
+	add_field(/datum/report_field/date, "Дата заполнения")
+	add_field(/datum/report_field/time, "Время заполнения")
