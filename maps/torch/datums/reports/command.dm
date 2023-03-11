@@ -1,6 +1,6 @@
 /datum/computer_file/report/recipient/command/generate_fields()
 	..()
-	set_access(access_heads)
+	set_access(list(list(access_heads, access_cent_creed)))
 
 /datum/computer_file/report/recipient/command/report
 	form_name = "REP-SCG"
@@ -18,7 +18,7 @@
 	add_field(/datum/report_field/simple_text, "Тема", required = 1)
 	add_field(/datum/report_field/pencode_text, "Сообщение", required = 1)
 	add_field(/datum/report_field/signature, "Подпись", required = 1)
-	set_access(list(list(access_qm, access_senadv, access_cent_creed, access_representative)), list(list(access_qm, access_senadv, access_cent_creed, access_representative)), override = 0)
+	set_access(list(list(access_qm, access_senadv, access_representative)), list(list(access_qm, access_senadv, access_representative)), override = 0)
 
 
 /datum/computer_file/report/recipient/command/request_command
@@ -37,7 +37,7 @@
 	add_field(/datum/report_field/time, "Время заполнения")
 	add_field(/datum/report_field/text_label/instruction, "Документ является недействительным в случае отсутствия подписи или печати.")
 	add_field(/datum/report_field/signature, "Подпись", required = 1)
-	set_access(list(list(access_qm, access_senadv, access_cent_creed, access_representative)), list(list(access_qm, access_senadv, access_cent_creed, access_representative)), override = 0)
+	set_access(list(list(access_qm, access_senadv, access_representative)), list(list(access_qm, access_senadv, access_representative)), override = 0)
 
 
 /datum/computer_file/report/recipient/command/decree
@@ -145,7 +145,7 @@
 
 /datum/computer_file/report/recipient/command/issuing_bonuses
 	form_name = "CC-SGF-12"
-	title = "Представление о премировании сотрудника"
+	title = "Представление о премировании"
 	available_on_ntnet = TRUE
 
 /datum/computer_file/report/recipient/command/issuing_bonuses/generate_fields()
