@@ -310,7 +310,7 @@
 	department_flag = SUP|COM
 	supervisors = "Командующему и Исполнительному офицеру"
 	economic_power = 12
-	minimum_character_age = list(SPECIES_HUMAN = 25)
+	minimum_character_age = list(SPECIES_HUMAN = 24)
 	ideal_character_age = 40
 	minimal_player_age = 14
 	hud_icon = "hudsupplyofficer"
@@ -366,7 +366,7 @@
 	supervisors = "Исполнительному и Командующему Офицеру судна и ВЮКПСС"
 	selection_color = "#2f2f7f"
 	economic_power = 10
-	minimum_character_age = list(SPECIES_HUMAN = 25)
+	minimum_character_age = list(SPECIES_HUMAN = 24)
 	ideal_character_age = 40
 	minimal_player_age = 14
 	hud_icon = "hudjudgeadvocate"
