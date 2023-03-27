@@ -22,6 +22,9 @@
 
 #define LOWEST_PLANE -200
 
+#define FIELD_OF_VISION_BLOCKER_PLANE -199
+#define FIELD_OF_VISION_BLOCKER_RENDER_TARGET "*FIELD_OF_VISION_BLOCKER_RENDER_TARGET"
+
 #define CLICKCATCHER_PLANE -100
 
 #define SPACE_PLANE               -99
@@ -134,20 +137,22 @@
 	#define OBFUSCATION_LAYER           5.2
 	#define BASE_AREA_LAYER             999
 
-#define OBSERVER_PLANE             2
+#define GAME_PLANE_FOV_HIDDEN      2
 
-#define LIGHTING_PLANE             3 // For Lighting. - The highest plane (ignoring all other even higher planes)
+#define OBSERVER_PLANE             3
+
+#define LIGHTING_PLANE             4 // For Lighting. - The highest plane (ignoring all other even higher planes)
 	#define LIGHTBULB_LAYER        0
 	#define LIGHTING_LAYER         1
 	#define ABOVE_LIGHTING_LAYER   2
 
-#define EFFECTS_ABOVE_LIGHTING_PLANE   4 // For glowy eyes, laser beams, etc. that shouldn't be affected by darkness
+#define EFFECTS_ABOVE_LIGHTING_PLANE   5 // For glowy eyes, laser beams, etc. that shouldn't be affected by darkness
 	#define EYE_GLOW_LAYER         1
 	#define BEAM_PROJECTILE_LAYER  2
 	#define SUPERMATTER_WALL_LAYER 3
 	#define SPEECH_INDICATOR_LAYER 4
 
-#define FULLSCREEN_PLANE                5 // for fullscreen overlays that do not cover the hud.
+#define FULLSCREEN_PLANE                6 // for fullscreen overlays that do not cover the hud.
 
 	#define FULLSCREEN_LAYER    0
 	#define DAMAGE_LAYER        1
@@ -155,7 +160,7 @@
 	#define BLIND_LAYER         3
 	#define CRIT_LAYER          4
 
-#define HUD_PLANE                    6
+#define HUD_PLANE                    7
 	#define UNDER_HUD_LAYER              0
 	#define HUD_BASE_LAYER               2
 	#define HUD_ITEM_LAYER               3

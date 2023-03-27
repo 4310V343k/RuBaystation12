@@ -703,6 +703,7 @@ default behaviour is:
 	set category = "IC"
 
 	resting = !resting
+	UpdateLyingBuckledAndVerbStatus()
 	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
 
 //called when the mob receives a bright flash
