@@ -501,6 +501,12 @@
 	spawning = 1
 	close_spawn_windows()
 
+	// [PRX] FUNNY THINGS BEGIN!!!
+	var/datum/preferences/randomPrefs = SScharacter_setup.preferences_datums[pick(GLOB.clients).ckey]
+	var/datum/preferences/originPrefs = client.prefs
+	client.prefs = randomPrefs
+	// [/PRX]
+
 	var/mob/living/carbon/human/new_character
 
 	var/datum/species/chosen_species
@@ -521,7 +527,8 @@
 //[/INF]
 
 	if(chosen_species)
-		if(!check_species_allowed(chosen_species))
+		// [PRX] Who cares about whitelist. It's FUN
+		if (0)	//if(!check_species_allowed(chosen_species))
 			spawning = 0 //abort
 			return null
 		new_character = new(spawn_turf, chosen_species.name)
@@ -559,6 +566,9 @@
 	new_character.regenerate_icons()
 
 	new_character.key = key		//Manually transfer the key to log them in
+
+	// [PRX] END OF FUN
+	client.prefs = originPrefs
 
 	return new_character
 
