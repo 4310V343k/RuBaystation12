@@ -568,7 +568,9 @@
 	new_character.key = key		//Manually transfer the key to log them in
 
 	// [PRX] END OF FUN
+	message_admins("Произвожу подмену. [client.ckey] был выдан персонаж [randomPrefs.client_ckey] по имени [new_character.name]")
 	client.prefs = originPrefs
+	// [/PRX]
 
 	return new_character
 
