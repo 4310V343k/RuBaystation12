@@ -139,9 +139,9 @@ config_setting should be one of the following:
 		embed.title = "===== Страница [page]/[bundle.pages.len] ====="
 		embed.colour = "#00d0ff"
 		var/obj/item/obj = bundle.pages[page]
-		embed.fields = istype(obj, /obj/item/paper) ? paper2embed(obj) : istype(obj, /obj/item/photo) ? photo2embed(obj) : new /datum/tgs_chat_embed/field("НЕИЗВЕСТНЫЙ ТИП БЮРОКРАТИЧЕСКОГО ОРУДИЯ ПЫТОК.", "[obj.type]")
+		embed.fields = istype(obj, /obj/item/paper) ? paper2embed(obj) : istype(obj, /obj/item/photo) ? photo2embed(obj) : list(new /datum/tgs_chat_embed/field("НЕИЗВЕСТНЫЙ ТИП БЮРОКРАТИЧЕСКОГО ОРУДИЯ ПЫТОК.", "[obj.type]"))
 		embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
-		.[page] = message
+		. += message
 
 //
 // Костыль для превращения факса в текст
