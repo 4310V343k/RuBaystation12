@@ -1,6 +1,6 @@
 // tgstation-server DMAPI
 
-#define TGS_DMAPI_VERSION "6.1.0"
+#define TGS_DMAPI_VERSION "6.3.0"
 
 // All functions and datums outside this document are subject to change with any version and should not be relied on.
 
@@ -46,7 +46,7 @@
 #define TGS_ERROR_LOG(message) log_error("TGS error: [##message]")
 
 /// Get the number of connected /clients.
-#define TGS_CLIENT_COUNT
+#define TGS_CLIENT_COUNT global.clients.len
 
 #endif
 
@@ -258,6 +258,8 @@
 	var/help_text = ""
 	/// If this command should be available to game administrators only
 	var/admin_only = FALSE
+	/// A subtype of [/datum/tgs_chat_command] that is ignored when enumerating available commands. Use this to create shared base /datums for commands.
+	var/ignore_type
 
 /**
  * Process command activation. Should return a [/datum/tgs_message_content] to respond to the issuer with.
