@@ -28,7 +28,7 @@
 	var/datum/tgs_chat_embed/field/modePublic	= new ("Публичный режим", "||[PUBLIC_GAME_MODE]||")
 	var/datum/tgs_chat_embed/field/modeReal		= new ("Реальный режим", "||[SSticker.mode ? SSticker.mode.name : "Не начался"]||")
 	adminCount.is_inline = TRUE
-	aft.is_inline = TRUE
+	afk.is_inline = TRUE
 	stealth.is_inline = TRUE
 	players.is_inline = TRUE
 	activePlayers.is_inline = TRUE
