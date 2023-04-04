@@ -28,7 +28,7 @@
 		var/datum/tgs_chat_embed/field/clients = new ("Всего игроков", "[data["clients"]]")
 		var/datum/tgs_chat_embed/field/survHuman = new ("Выжило экипажа", "[data["surviving_humans"]]")
 		var/datum/tgs_chat_embed/field/survTotal = new ("Выжило органиков", "[data["surviving_total"]]")	//required field for roundend webhook!
-		var/datum/tgs_chat_embed/field/ghosts = new ("Наблюдателей", "[data["ghosts"])	//required field for roundend webhook!
+		var/datum/tgs_chat_embed/field/ghosts = new ("Наблюдателей", "[data["ghosts"]]")	//required field for roundend webhook!
 		var/datum/tgs_chat_embed/field/evacHuman = new ("Эвакуировано экипажа", "[data["escaped_humans"]]")
 		var/datum/tgs_chat_embed/field/evacTotal = new ("Эвакуировано органиков", "[data["escaped_total"]]")
 		var/datum/tgs_chat_embed/field/left = new ("Брошены на произвол судьбы", "[data["left_behind_total"]]")	//players who didnt escape and aren't on the station.
