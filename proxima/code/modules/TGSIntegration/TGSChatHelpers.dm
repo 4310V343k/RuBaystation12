@@ -102,28 +102,29 @@ config_setting should be one of the following:
 /proc/paper2embed(var/obj/item/paper/paper)
 	. = list()
 
-	var/datum/tgs_chat_embed/field/paper_name = new ("Название бумаги", "[paper.name]")
-	var/datum/tgs_chat_embed/field/paper_language = new ("Язык написания", "[paper.language.name]")
+	var/datum/tgs_chat_embed/field/paper_name = new ("Название бумаги", "*[paper.name]*")
+	var/datum/tgs_chat_embed/field/paper_language = new ("Язык написания", "*[paper.language.name]*")
 	var/datum/tgs_chat_embed/field/paper_content = new ("Содержимое (чистый HTML)", "```html\n[paper.info]```")
-	var/datum/tgs_chat_embed/field/paper_stamps = new ("Стоят печати", "[paper.stamps]")
+	var/datum/tgs_chat_embed/field/paper_stamps = new ("Стоят печати", "[replacetext_char(replacetext_char(replacetext_char(paper.stamps, "<BR>", "\n"), "<i>", "*"), "</i>", "*")]")
 
 	. += paper_name
 	. += paper_language
 	. += paper_content
-	. += paper_stamps
+	if (paper.stamps)
+		. += paper_stamps
 
 // Костыль для превращения фото в эмбед
 /proc/photo2embed(var/obj/item/photo/photo)
 	. = list()
 
-	var/datum/tgs_chat_embed/field/photo_name = new ("Название фото", "[photo.name]")
+	var/datum/tgs_chat_embed/field/photo_name = new ("Название фото", "*[photo.name]*")
 	var/datum/tgs_chat_embed/field/photo_scribble
 	if (photo.scribble)
-		photo_scribble = new ("Подпись с обратной стороны", "[photo.scribble]")
-	var/datum/tgs_chat_embed/field/photo_size = new ("Размер фото в (тайлах)", "[photo.photo_size]X[photo.photo_size]")
+		photo_scribble = new ("Подпись с обратной стороны", "*[photo.scribble]*")
+	var/datum/tgs_chat_embed/field/photo_size = new ("Размер фото в (тайлах)", "*[photo.photo_size]X[photo.photo_size]*")
 	var/datum/tgs_chat_embed/field/photo_desc
 	if (photo.desc)
-		photo_desc = new ("Описание", "[photo.desc]")
+		photo_desc = new ("Описание", "*[photo.desc]*")
 	. += photo_name
 	if (photo_scribble)
 		. += photo_scribble

@@ -28,11 +28,13 @@
 	var/datum/tgs_chat_embed/field/modePublic	= new ("Публичный режим", "||[PUBLIC_GAME_MODE]||")
 	var/datum/tgs_chat_embed/field/modeReal		= new ("Реальный режим", "||[SSticker.mode ? SSticker.mode.name : "Не начался"]||")
 	adminCount.is_inline = TRUE
+	aft.is_inline = TRUE
+	stealth.is_inline = TRUE
 	players.is_inline = TRUE
 	activePlayers.is_inline = TRUE
 	//modePublic.is_inline = TRUE
 	modeReal.is_inline = TRUE
-	embed.fields = list(adminCount, afk, activeAdmins, stealth, useless, players, activePlayers, modePublic, modeReal)
+	embed.fields = list(adminCount, activeAdmins, afk, stealth, useless, players, activePlayers, modePublic, modeReal)
 	embed.colour = "#00ff8c"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
@@ -55,7 +57,7 @@
 	var/datum/tgs_message_content/message = new ("")
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
-	var/datum/tgs_chat_embed/field/round		= new ("Раунд №", "[game_id ? "НЕТ АЙДИ" : "[game_id]"]")
+	var/datum/tgs_chat_embed/field/round		= new ("Раунд №", "[game_id ? "[game_id]" : "НЕТ АЙДИ"]")
 	var/datum/tgs_chat_embed/field/players		= new ("Игроки", "[GLOB.clients.len]")
 	var/datum/tgs_chat_embed/field/map			= new ("Карта", "[GLOB.using_map.full_name]")
 	var/datum/tgs_chat_embed/field/modePublic	= new ("Режим", "||[PUBLIC_GAME_MODE]||")
