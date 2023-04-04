@@ -13,3 +13,5 @@
 /world/Topic()
 	TGS_TOPIC
 	..()
+
+#undef NON_BYOND_URL

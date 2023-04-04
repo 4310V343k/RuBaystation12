@@ -6,7 +6,7 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.url = get_world_url()
+	embed.url = NON_BYOND_URL
 	embed.description = "**Дорогие, <@&839057002046947329>, заходите к нам.**"
 	embed.colour = "#0015ff"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")

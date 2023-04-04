@@ -1,4 +1,5 @@
 #define IRC_STATUS_THROTTLE 5
+#define NON_BYOND_URL "https://bay.proxima.fun/"
 
 /datum/tgs_chat_command/ircstatus
 	name = "status"
@@ -36,7 +37,7 @@
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
-	embed.url = get_world_url()
+	embed.url = NON_BYOND_URL
 
 	return message
 
@@ -70,7 +71,7 @@
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
-	embed.url = get_world_url()
+	embed.url = NON_BYOND_URL
 
 	return message
 
@@ -96,7 +97,7 @@
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Манифест экипажа на сервере Proxima"
-	embed.url = get_world_url()
+	embed.url = NON_BYOND_URL
 	embed.fields = list()
 
 	var/list/msg = list()
@@ -202,7 +203,7 @@
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Список администрации на сервере Proxima"
-	embed.url = get_world_url()
+	embed.url = NON_BYOND_URL
 	var/datum/tgs_chat_embed/field/adminCount	= new ("Админы онлайн", "[can_investigate?"[active_staff]/[total_staff]":"[active_staff]"]")
 	var/datum/tgs_chat_embed/field/adminList	= new ("Список администрации", jointext(msg, "\n"))
 	embed.fields = list(adminCount, adminList)
