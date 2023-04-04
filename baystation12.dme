@@ -3334,6 +3334,7 @@
 #include "proxima\code\modules\TGSIntegration\TGSChatCommands.dm"
 #include "proxima\code\modules\TGSIntegration\TGSChatHelpers.dm"
 #include "proxima\code\modules\TGSIntegration\TGSChatHooks.dm"
+#include "proxima\code\modules\TGSIntegration\TGSIntegrationFiles.dm"
 #include "proxima\code\modules\webhooks\webhook_xeno_whitelist.dm"
 #include "proxima\code\music_player\_music_player.dm"
 #include "proxima\code\music_player\_music_tape.dm"
