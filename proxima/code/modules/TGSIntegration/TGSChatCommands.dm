@@ -1,6 +1,11 @@
 #define IRC_STATUS_THROTTLE 5
 #define NON_BYOND_URL "https://bay.proxima.fun/"
 
+/datum/tgs_chat_embed/provider/author/glob
+	name = "Сервер 'PRX'"
+	url = NON_BYOND_URL
+	icon_url = "https://media.discordapp.net/attachments/1019304147671076975/1062958307096154172/Logo-Proxima-Mini.png"
+
 /datum/tgs_chat_command/ircstatus
 	name = "status"
 	help_text = "Показывает админов, кол-во игроков, игровой режим и настоящий игровой режим на сервере"
@@ -36,10 +41,11 @@
 	modeReal.is_inline = TRUE
 	embed.fields = list(adminCount, activeAdmins, afk, stealth, useless, players, activePlayers, modePublic, modeReal)
 	embed.colour = "#00ff8c"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
-	embed.url = NON_BYOND_URL
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	return message
 
@@ -70,10 +76,12 @@
 	gameStatus.is_inline = TRUE
 	embed.fields = list(round, players, map, modePublic, gameStatus)
 	embed.colour = "#ffae00"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+
 
 	embed.title = "Статус сервера Proxima"
-	embed.url = NON_BYOND_URL
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	return message
 
@@ -96,11 +104,12 @@
 	message.embed = embed
 
 	embed.colour = "#ff003c"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.fields = list()
 
 	embed.title = "Манифест экипажа на сервере Proxima"
-	embed.url = NON_BYOND_URL
-	embed.fields = list()
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	var/list/msg = list()
 	var/list/positions = list()
@@ -202,10 +211,12 @@
 	message.embed = embed
 
 	embed.colour = "#ff0000"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Список администрации на сервере Proxima"
-	embed.url = NON_BYOND_URL
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
+
 	var/datum/tgs_chat_embed/field/adminCount	= new ("Админы онлайн", "[can_investigate?"[active_staff]/[total_staff]":"[active_staff]"]")
 	var/datum/tgs_chat_embed/field/adminList	= new ("Список администрации", jointext(msg, "\n"))
 	embed.fields = list(adminCount, adminList)

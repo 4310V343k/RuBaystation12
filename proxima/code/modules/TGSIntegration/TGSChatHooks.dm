@@ -6,10 +6,11 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.url = NON_BYOND_URL
 	embed.description = "Вы можете кликнуть по фразе выше, чтобы зайти на сервер"
 	embed.colour = "#6590fe"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 	send2chat(message, "launch-alert")
 
 // The round has been ended
@@ -21,7 +22,9 @@
 	message.embed = embed
 	embed.title = "Раунд на [name] завершен"
 	embed.colour = "#fffb00"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	if (data != null)
 		embed.description = "Статистика подготовлена"
@@ -62,7 +65,9 @@
 	Ftarget.is_inline = TRUE
 	embed.fields = list(Ftarget, Fadmin)
 	embed.colour = "#ff0000"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	switch(bantype)
 		if (BANTYPE_JOB_PERMA)
@@ -106,7 +111,9 @@
 	embed.fields = list(Ftarget, Fadmin)
 	embed.colour = "#00ff00"
 	embed.title = "Амнистия"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	send2chat(message, "notes-hub")
 	return TRUE
@@ -125,7 +132,9 @@
 	Ftarget.is_inline = TRUE
 	embed.fields = list(Ftarget, Fadmin, Freason)
 	embed.colour = "#e1ff00"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.url = NON_BYOND_URL
 
 	send2chat(message, "notes-hub")
 	return TRUE
