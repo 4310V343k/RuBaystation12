@@ -37,9 +37,9 @@
 		survHuman.is_inline = TRUE
 		survTotal.is_inline = TRUE
 		ghosts.is_inline = TRUE
-		evacHuman.is_inline = TRUE
+		//evacHuman.is_inline = TRUE
 		evacTotal.is_inline = TRUE
-		left.is_inline = TRUE
+		//left.is_inline = TRUE
 		survMisc.is_inline = TRUE
 		embed.fields = list(survHuman, survTotal, evacHuman, evacTotal, left, survMisc, clients, ghosts)
 	else
