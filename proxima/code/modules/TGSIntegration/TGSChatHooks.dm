@@ -2,12 +2,12 @@
 /world/TgsInitializationComplete()
 	. = ..()
 	var/name = GLOB.using_map.full_name
-	var/datum/tgs_message_content/message = new ("")
+	var/datum/tgs_message_content/message = new ("**Дорогие, <@&839057002046947329>, заходите к нам.**")
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
 	embed.url = NON_BYOND_URL
-	embed.description = "**Дорогие, <@&839057002046947329>, заходите к нам.**"
+	embed.description = "Вы можете кликнуть по фразе выше, чтобы зайти на сервер"
 	embed.colour = "#6590fe"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 	send2chat(message, "launch-alert")
