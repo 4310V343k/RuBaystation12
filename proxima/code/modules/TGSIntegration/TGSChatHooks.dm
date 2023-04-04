@@ -21,7 +21,7 @@
 	message.embed = embed
 	embed.title = "Раунд на [name] завершен"
 	embed.colour = "#fffb00"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	if (data != null)
 		embed.description = "Статистика подготовлена"
@@ -62,7 +62,7 @@
 	Ftarget.is_inline = TRUE
 	embed.fields = list(Ftarget, Fadmin)
 	embed.colour = "#ff0000"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	switch(bantype)
 		if (BANTYPE_JOB_PERMA)
@@ -106,7 +106,7 @@
 	embed.fields = list(Ftarget, Fadmin)
 	embed.colour = "#00ff00"
 	embed.title = "Амнистия"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	send2chat(message, "notes-hub")
 	return TRUE
@@ -125,7 +125,7 @@
 	Ftarget.is_inline = TRUE
 	embed.fields = list(Ftarget, Fadmin, Freason)
 	embed.colour = "#e1ff00"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	send2chat(message, "notes-hub")
 	return TRUE

@@ -33,7 +33,7 @@
 	modeReal.is_inline = TRUE
 	embed.fields = list(adminCount, afk, activeAdmins, stealth, useless, players, activePlayers, modePublic, modeReal)
 	embed.colour = "#ff00dd"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
 	embed.url = get_world_url()
@@ -67,7 +67,7 @@
 	gameStatus.is_inline = TRUE
 	embed.fields = list(round, players, map, modePublic, gameStatus)
 	embed.colour = "#ff00dd"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
 	embed.url = get_world_url()
@@ -93,7 +93,7 @@
 	message.embed = embed
 
 	embed.colour = "#007bff"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Манифест экипажа на сервере Proxima"
 	embed.url = get_world_url()
@@ -199,7 +199,7 @@
 	message.embed = embed
 
 	embed.colour = "#ff0000"
-	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Список администрации на сервере Proxima"
 	embed.url = get_world_url()
