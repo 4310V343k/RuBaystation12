@@ -68,7 +68,7 @@ config_setting should be one of the following:
 	message.embed = embed
 	embed.title = "Перехват факса"
 	embed.colour = "#00d0ff"
-	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 	if (intercepted3)
 		embed.description = "***ФАКС БЫЛ ПЕРЕХВАЧЕН, ПОЛУЧАТЕЛЬ ЕГО __НЕ ВИДИТ__***"
 	var/datum/tgs_chat_embed/field/from = new ("ОТ", "[from3]")
@@ -140,7 +140,7 @@ config_setting should be one of the following:
 		embed.colour = "#00d0ff"
 		var/obj/item/obj = bundle.pages[page]
 		embed.fields = istype(obj, /obj/item/paper) ? paper2embed(obj) : istype(obj, /obj/item/photo) ? photo2embed(obj) : new /datum/tgs_chat_embed/field("НЕИЗВЕСТНЫЙ ТИП БЮРОКРАТИЧЕСКОГО ОРУДИЯ ПЫТОК.", "[obj.type]")
-		embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
+		//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 		.[page] = message
 
 //
