@@ -8,7 +8,7 @@
 	embed.title = "Начинается смена на [name]"
 	embed.url = NON_BYOND_URL
 	embed.description = "**Дорогие, <@&839057002046947329>, заходите к нам.**"
-	embed.colour = "#0015ff"
+	embed.colour = "#0077ff"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 	send2chat(message, "launch-alert")
 

@@ -33,7 +33,7 @@
 	//modePublic.is_inline = TRUE
 	modeReal.is_inline = TRUE
 	embed.fields = list(adminCount, afk, activeAdmins, stealth, useless, players, activePlayers, modePublic, modeReal)
-	embed.colour = "#ff00dd"
+	embed.colour = "#00ff8c"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
@@ -67,7 +67,7 @@
 	modePublic.is_inline = TRUE
 	gameStatus.is_inline = TRUE
 	embed.fields = list(round, players, map, modePublic, gameStatus)
-	embed.colour = "#ff00dd"
+	embed.colour = "#ffae00"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Статус сервера Proxima"
@@ -93,7 +93,7 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 
-	embed.colour = "#007bff"
+	embed.colour = "#ff003c"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 
 	embed.title = "Манифест экипажа на сервере Proxima"
