@@ -8,7 +8,7 @@
 	embed.title = "Начинается смена на [name]"
 	embed.url = NON_BYOND_URL
 	embed.description = "**Дорогие, <@&839057002046947329>, заходите к нам.**"
-	embed.colour = "#0077ff"
+	embed.colour = "#6590fe"
 	embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
 	send2chat(message, "launch-alert")
 
@@ -25,14 +25,14 @@
 
 	if (data != null)
 		embed.description = "Статистика подготовлена"
-		var/datum/tgs_chat_embed/field/clients = new ("Всего игроков", data["clients"])
-		var/datum/tgs_chat_embed/field/survHuman = new ("Выжило экипажа", data["surviving_humans"])
-		var/datum/tgs_chat_embed/field/survTotal = new ("Выжило органиков", data["surviving_total"])	//required field for roundend webhook!
-		var/datum/tgs_chat_embed/field/ghosts = new ("Наблюдателей", data["ghosts"])	//required field for roundend webhook!
-		var/datum/tgs_chat_embed/field/evacHuman = new ("Эвакуировано экипажа", data["escaped_humans"])
-		var/datum/tgs_chat_embed/field/evacTotal = new ("Эвакуировано органиков", data["escaped_total"])
-		var/datum/tgs_chat_embed/field/left = new ("Брошены на произвол судьбы", data["left_behind_total"])	//players who didnt escape and aren't on the station.
-		var/datum/tgs_chat_embed/field/survMisc = new ("Выжило не членов экипажа", data["offship_players"])
+		var/datum/tgs_chat_embed/field/clients = new ("Всего игроков", "[data["clients"]]")
+		var/datum/tgs_chat_embed/field/survHuman = new ("Выжило экипажа", "[data["surviving_humans"]]")
+		var/datum/tgs_chat_embed/field/survTotal = new ("Выжило органиков", "[data["surviving_total"]]")	//required field for roundend webhook!
+		var/datum/tgs_chat_embed/field/ghosts = new ("Наблюдателей", "[data["ghosts"])	//required field for roundend webhook!
+		var/datum/tgs_chat_embed/field/evacHuman = new ("Эвакуировано экипажа", "[data["escaped_humans"]]")
+		var/datum/tgs_chat_embed/field/evacTotal = new ("Эвакуировано органиков", "[data["escaped_total"]]")
+		var/datum/tgs_chat_embed/field/left = new ("Брошены на произвол судьбы", "[data["left_behind_total"]]")	//players who didnt escape and aren't on the station.
+		var/datum/tgs_chat_embed/field/survMisc = new ("Выжило не членов экипажа", "[data["offship_players"]]")
 		clients.is_inline = TRUE
 		survHuman.is_inline = TRUE
 		survTotal.is_inline = TRUE

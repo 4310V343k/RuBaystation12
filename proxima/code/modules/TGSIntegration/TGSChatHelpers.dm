@@ -105,10 +105,12 @@ config_setting should be one of the following:
 	var/datum/tgs_chat_embed/field/paper_name = new ("Название бумаги", "[paper.name]")
 	var/datum/tgs_chat_embed/field/paper_language = new ("Язык написания", "[paper.language.name]")
 	var/datum/tgs_chat_embed/field/paper_content = new ("Содержимое (чистый HTML)", "```html\n[paper.info]```")
+	var/datum/tgs_chat_embed/field/paper_stamps = new ("Стоят печати", "[paper.stamps]")
 
 	. += paper_name
 	. += paper_language
 	. += paper_content
+	. += paper_stamps
 
 // Костыль для превращения фото в эмбед
 /proc/photo2embed(var/obj/item/photo/photo)
