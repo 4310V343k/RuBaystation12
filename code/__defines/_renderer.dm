@@ -164,6 +164,7 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 /atom/movable/renderer/shared/zmimic/Initialize(mapload, _owner, _plane)
 	plane = _plane
 	name = "Zrenderer [plane]"
+	filters += filter(type = "blur", size = 2)
 	. = ..()
 
 // Draws the game world; live mobs, items, turfs, etc.
@@ -314,6 +315,28 @@ GLOBAL_LIST_EMPTY(zmimic_renderers)
 	. = ..()
 	filters += filter(type = "displace", render_source = "*warp", size = 5)
 	filters += filter(type = "displace", render_source = HEAT_COMPOSITE_TARGET, size = 2.5)
+
+/atom/movable/renderer/fov_hidden
+	name = "game world fov hidden plane master"
+	plane = GAME_PLANE_FOV_HIDDEN
+	group = RENDER_GROUP_SCENE
+
+/atom/movable/renderer/fov_hidden/Initialize()
+	. = ..()
+	filters += filter(type="alpha", render_source = FIELD_OF_VISION_BLOCKER_RENDER_TARGET, flags = MASK_INVERSE)
+
+/atom/movable/renderer/field_of_vision_blocker
+	name = "field of vision blocker plane master"
+	plane = FIELD_OF_VISION_BLOCKER_PLANE
+	render_target_name = FIELD_OF_VISION_BLOCKER_RENDER_TARGET
+	mouse_opacity = MOUSE_OPACITY_UNCLICKABLE
+	appearance_flags = PLANE_MASTER
+
+
+/atom/movable/renderer/nearsight_blur
+	name = "nearsight blur"
+	plane = DEFAULT_PLANE
+	group = RENDER_GROUP_SCENE
 
 /// Example of a warp filter for /renderer use
 /obj/effect/effect/warp

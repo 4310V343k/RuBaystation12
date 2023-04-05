@@ -145,7 +145,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	animate(src, pixel_x = pixel_x + pixel_x_diff, pixel_y = pixel_y + pixel_y_diff, time = windup_time - 2)
 	animate(pixel_x = default_pixel_x, pixel_y = default_pixel_y, time = 2)
 
-/atom/movable/proc/do_attack_animation(atom/A)
+/atom/movable/proc/do_attack_animation(atom/A, fov_effect = TRUE)
 
 	var/pixel_x_diff = 0
 	var/pixel_y_diff = 0
@@ -171,6 +171,9 @@ note dizziness decrements automatically in the mob's Life() proc.
 		if(SOUTHWEST)
 			pixel_x_diff = -8
 			pixel_y_diff = -8
+
+	if(fov_effect)
+		play_fov_effect(A, 5, "attack")
 
 	var/default_pixel_x = initial(pixel_x)
 	var/default_pixel_y = initial(pixel_y)

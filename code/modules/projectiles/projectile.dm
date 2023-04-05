@@ -5,6 +5,7 @@
 	name = "projectile"
 	icon = 'icons/obj/projectiles.dmi'
 	icon_state = "bullet"
+	plane = GAME_PLANE_FOV_HIDDEN
 	density = TRUE
 	unacidable = TRUE
 	anchored = TRUE //There's a reason this is here, Mport. God fucking damn it -Agouri. Find&Fix by Pete. The reason this is here is to stop the curving of emitter shots.
@@ -161,6 +162,7 @@
 	original = target
 	def_zone = target_zone
 
+	play_fov_effect(starting, 6, "gunfire", dir = NORTH, angle = angle_offset)
 	addtimer(CALLBACK(src, .proc/finalize_launch, curloc, targloc, x_offset, y_offset, angle_offset),0)
 	return 0
 

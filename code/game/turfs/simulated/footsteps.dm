@@ -72,3 +72,4 @@
 				volume -= 60
 				range -= 0.333
 			playsound(T, footsound, volume, 1, range)
+			play_fov_effect(src.loc, world.view, "footstep", src.dir, ignore_self=TRUE)
