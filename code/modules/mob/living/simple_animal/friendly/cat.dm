@@ -214,28 +214,6 @@
 	holder_type = /obj/item/holder/cat/fluff/bones
 	var/friend_name = "Erstatz Vryroxes"
 
-/obj/item/holder/cat/fluff/newt
-	name = "Newt"
-	desc = "It's Newt! Wawawawawawawa."
-	gender = MALE
-	icon_state = "slugcat"
-
-/mob/living/simple_animal/passive/cat/fluff/newt
-	name = "Newt"
-	desc = "That's a cat-like slug creature, found on a rainy exoplanet of VD03CT and adopted by Expeditionary Corps just to be soon kidnapped by Fleet. Wawawawawawawa."
-	gender = FEMALE
-	icon_state = "slugcat"
-	item_state = "slugcat"
-	icon_living = "slugcat"
-	icon_dead = "slugcat_dead"
-	speak_emote = list("мурлычет", "мяукает", "булькает")
-	maxbodytemp = 395 // Above 121 Degree Celsius. Yes, hot bath for a slugcat.
-	holder_type = /obj/item/holder/cat/fluff/newt
-	say_list_type = /datum/say_list/cat/newt
-	var/friend_name = pick("Damien Hawkins",
-				"Walter Enderly",
-				"Eva Chernova")
-
 /mob/living/simple_animal/passive/cat/kitten/New()
 	gender = pick(MALE, FEMALE)
 	..()
@@ -247,9 +225,4 @@
 /datum/say_list/cat
 	speak = list("Мьяу!","Мяу!","Мрррррх!","Шшшш...")
 	emote_hear = list("мяучит","мурчит")
-	emote_see = list("трясет головой", "трется", "вздрагивает")
-
-/datum/say_list/cat/newt
-	speak = list("Мьяу!","Мяу!","Мрррррх!","Шшшш...","Вавававававава!")
-	emote_hear = list("мяучит","мурчит","булькает")
 	emote_see = list("трясет головой", "трется", "вздрагивает")
