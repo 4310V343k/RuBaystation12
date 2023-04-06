@@ -2,6 +2,7 @@
 	name = "slugcat"
 	desc = "It's a slugcat! Wawawawawawawa."
 	gender = MALE
+	icon = 'proxima/icons/mob/simple_animal/slugcat.dmi'
 	icon_state = "slugcat"
 
 /mob/living/simple_animal/passive/cat/fluff/slugcat
