@@ -36,5 +36,5 @@
 	holder_type = /obj/item/holder/cat/fluff/slugcat/newt
 	say_list_type = /datum/say_list/cat/slugcat
 	friend_name = pick("Damien Hawkins",
-				"Walter Enderly",
-				"Eva Chernova")
+			   "Walter Enderly",
+			   "Eva Chernova")
