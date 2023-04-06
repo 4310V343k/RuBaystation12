@@ -28,7 +28,6 @@
 	name = "Newt"
 	desc = "It's Newt! Wawawawawawawa."
 	gender = FEMALE
-	icon_state = "slugcat"
 
 /mob/living/simple_animal/passive/cat/fluff/slugcat/newt
 	name = "Newt"
