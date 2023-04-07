@@ -6,7 +6,7 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.description = "Вы можете кликнуть по фразе выше, чтобы зайти на сервер"
+	embed.description = "Вы можете кликнуть \[cюда\]([get_world_url()]) или на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер"
 	embed.colour = "#6590fe"
 	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
 	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
@@ -142,12 +142,12 @@
 /hook/oocMessage/proc/SendOOCMsg(ckey, message, admin_rank)
 	if (findtext_char(message, "@"))
 		var/mob/M = get_mob_by_key(ckey)
-		if(!M || !M.client || M.client.holder)
+		if(!M || !M.client || M.client.holder || M.client.deadmin_holder)
 			message_admins("Говно - [ckey] пытался сделать слап. Но я не могу его замутить")
 			return TRUE
 		if(!(M.client.prefs.muted & MUTE_OOC))
 			M.client.prefs.muted |= MUTE_OOC
 			message_admins("Кусок абузера на [ckey] пытался сделать слап. Теперь у него нет ООС")
 		return TRUE
-	send2chat(new /datum/tgs_message_content("**[admin_rank == null ? null : admin_rank][ckey]:** *[message]*"), "ooc-chat")
+	send2chat(new /datum/tgs_message_content("**[admin_rank == null ? null : admin_rank][ckey]:** *[replacetext_char(replacetext_char(message, "&#39;", "'"), " &#34;", "\"")]*"), "ooc-chat")
 	return TRUE

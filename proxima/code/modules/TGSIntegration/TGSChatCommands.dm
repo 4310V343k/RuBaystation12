@@ -136,7 +136,7 @@
 			for(var/list/person in dept_list)
 				var/datum/mil_branch/branch_obj = GLOB.mil_branches.get_branch(person["branch"])
 				var/datum/mil_rank/rank_obj = GLOB.mil_branches.get_rank(person["branch"], person["milrank"])
-				msg += "*[person["rank"]]* - `[branch_obj != null ? "[branch_obj.name_short] " : ""][((rank_obj != null) && (rank_obj.name_short != "")) ? "[rank_obj.name_short] " : ""][replacetext_char(person["name"], "&#39;", "'")]`"
+				msg += "*[person["rank"]]* - `[((branch_obj != null) && (branch_obj.name_short) && (branch_obj.name_short != "")) ? "[branch_obj.name_short] " : ""][((rank_obj != null) && (rank_obj.name_short) && (rank_obj.name_short != "")) ? "[rank_obj.name_short] " : ""][replacetext_char(person["name"], "&#39;", "'")]`"
 
 			var/datum/tgs_chat_embed/field/depEntry	= new ("[depString]", jointext(msg, "\n"))
 			embed.fields += depEntry
