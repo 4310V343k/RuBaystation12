@@ -34,3 +34,9 @@
 	gender = FEMALE
 	holder_type = /obj/item/holder/cat/fluff/slugcat/newt
 	say_list_type = /datum/say_list/cat/slugcat
+
+/mob/living/simple_animal/passive/cat/fluff/slugcat/death()
+	if(hiding)
+		hiding = FALSE
+	playsound(user.loc, pick('proxima/sound/effects/slugpipe.ogg','proxima/sound/effects/slugmeow.ogg','proxima/sound/effects/slughitmark.ogg'), 50, 0)
+	. = ..()
