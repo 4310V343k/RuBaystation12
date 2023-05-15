@@ -3,7 +3,7 @@
 	. = ..()
 	var/announce_runwaiters = GLOB.last_played_date != time2text(world.realtime, "DD-MM-YYYY")
 	var/name = GLOB.using_map.full_name
-	var/datum/tgs_message_content/message = new ("**Дорогие, <@&[ROUNDWAITERROLEID]>[announce_runwaiters ? ", а так же <@&[RUNWAITERROLEID]>" : ""], заходите к нам - <[get_world_url()]>**")
+	var/datum/tgs_message_content/message = new ("**Дорогие <@&[ROUNDWAITERROLEID]>[announce_runwaiters ? " и <@&[RUNWAITERROLEID]>" : ""], заходите к нам - <[get_world_url()]>**")
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
