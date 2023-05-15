@@ -1,5 +1,8 @@
-#define IRC_STATUS_THROTTLE 5
-#define NON_BYOND_URL "https://bay.proxima.fun/"
+#define IRC_STATUS_THROTTLE		5
+#define NON_BYOND_URL			"https://bay.proxima.fun/"
+#define RESTART_COUNTER_PATH	"data/round_counter.txt"
+#define ROUNDWAITERROLEID		"839057002046947329"
+#define RUNWAITERROLEID			"896359984634425344"
 
 /datum/tgs_chat_embed/provider/author/glob
 	name = "Сервер 'PRX'"

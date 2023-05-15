@@ -1,12 +1,13 @@
 // Server startup. Please proceed to the Lobby.
 /world/TgsInitializationComplete()
 	. = ..()
+	var/announce_runwaiters = GLOB.last_played_date != time2text(world.realtime, "DD-MM-YYYY")
 	var/name = GLOB.using_map.full_name
-	var/datum/tgs_message_content/message = new ("**Дорогие, <@&839057002046947329>, заходите к нам.**")
+	var/datum/tgs_message_content/message = new ("**Дорогие, <@&[ROUNDWAITERROLEID]>[announce_runwaiters ? "а так же <@&[RUNWAITERROLEID]>" : ""], заходите к нам.**")
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.description = "Вы можете кликнуть \[cюда\]([get_world_url()]) или на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер"
+	embed.description = "Вы можете кликнуть \[cюда\]([NON_BYOND_URL]), на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер.\nИли вот прямая ссылка <[get_world_url()]>"
 	embed.colour = "#6590fe"
 	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
 	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
