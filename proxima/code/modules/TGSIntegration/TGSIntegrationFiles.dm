@@ -11,7 +11,7 @@ GLOBAL_VAR(last_played_date)
 	if(fexists(RESTART_COUNTER_PATH))
 		var/list/tmp = file2list(RESTART_COUNTER_PATH, " | ")
 		GLOB.last_played_date = tmp[1]
-		GLOB.round_counter = text2num_or_default(tmp[2], 0)
+		GLOB.round_counter = text2num_or_default(trim(tmp[2]), 0)
 		fdel(RESTART_COUNTER_PATH)
 	else
 		GLOB.round_counter = 0
