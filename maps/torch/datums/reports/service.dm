@@ -1,10 +1,5 @@
 /datum/computer_file/report/recipient/service
 	logo = "\[solcrest\]"
-
-/datum/computer_file/report/recipient/service/generate_fields()
-	..()
-	set_access(access_kitchen)
-
 /datum/computer_file/report/recipient/service/food_menu
 	form_name = "SCG-SER-02"
 	title = "Меню бара"
