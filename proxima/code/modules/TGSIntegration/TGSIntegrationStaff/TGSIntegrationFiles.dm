@@ -2,7 +2,8 @@ GLOBAL_VAR(round_counter)
 GLOBAL_VAR(last_played_date)
 
 /hook/startup/proc/InitTgs()
-	world.TgsNew()
+	world.TgsNew(new /datum/tgs_event_handler/impl, TGS_SECURITY_TRUSTED)
+	revdata.load_tgs_info()
 	return TRUE
 
 /world/New()
