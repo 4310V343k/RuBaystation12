@@ -7,7 +7,7 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.description = "Вы можете кликнуть \[cюда\]([NON_BYOND_URL]), на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер."
+	embed.description = "Вы можете кликнуть \[cюда\]([NON_BYOND_URL]), на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер.\n\nНа сервере уже [GLOB.clients.len]"
 	embed.colour = "#6590fe"
 	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
 	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
@@ -151,4 +151,24 @@
 			message_admins("Кусок абузера на [ckey] пытался сделать слап. Теперь у него нет ООС")
 		return TRUE
 	send2chat(new /datum/tgs_message_content("**[admin_rank == null ? null : admin_rank][ckey]:** *[replacetext_char(replacetext_char(message, "&#39;", "'"), " &#34;", "\"")]*"), "ooc-chat")
+	return TRUE
+
+
+
+// Max online notifier
+var/max_client = 0
+var/timer = null
+
+/mob/Login()
+	..()
+	max_client = max(max_client, GLOB.clients.len)
+
+/hook/roundstart/verb/round_status_notifier()
+	send2chat(new /datum/tgs_message_content("**Раунд начался!**\nКоличество экипажа: [GLOB.clients.len].[max_client != GLOB.clients.len ? " А ведь их было [max_client]!":""]"), "launch-alert")
+	timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/send2chat, new /datum/tgs_message_content("**Отчет по раунду**\n__Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ [GLOB.clients.len]\n__Пиковый онлайн:__ [max_client]"), "launch-alert"), 15 MINUTES, TIMER_STOPPABLE | TIMER_UNIQUE | TIMER_LOOP)
+	return TRUE
+
+/hook/roundend/verb/round_status_notifier()
+	deltimer(timer)
+	timer = null
 	return TRUE
