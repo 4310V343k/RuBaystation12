@@ -156,24 +156,23 @@
 
 
 // Max online notifier
-GLOBAL_VAR_INIT(max_client, 0)
-GLOBAL_VAR_INIT(timer, null)
+var/max_client = 0
+var/timer = null
 
 /client/New()
 	. = ..()
-	if (.)
-		GLOB.max_client = max(GLOB.max_client, GLOB.clients.len)
+	max_client = max(max_client, GLOB.clients.len)
 
 /hook/roundstart/proc/round_status_notifier()
-	send2chat(new /datum/tgs_message_content("**Раунд начался!**\nКоличество экипажа: [GLOB.clients.len].[GLOB.max_client != GLOB.clients.len ? " А ведь их было [GLOB.max_client]!":""]"), "launch-alert")
-	GLOB.timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/send2chat, gen_report(), "launch-alert"), 15 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
+	send2chat(new /datum/tgs_message_content("**Раунд начался!**\nКоличество экипажа: [GLOB.clients.len].[max_client != GLOB.clients.len ? " А ведь их было [max_client]!":""]"), "launch-alert")
+	GLOB.timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/gen_report), 15 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
 	return TRUE
 
 /proc/gen_report()
-	GLOB.max_client = max(GLOB.max_client, GLOB.clients.len)
-	return new /datum/tgs_message_content("**Отчет по раунду.**\n__Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ *[GLOB.clients.len]*\n__Пиковый онлайн:__ *[GLOB.max_client]*")
+	max_client = max(max_client, GLOB.clients.len)
+	send2chat(new /datum/tgs_message_content("**Отчет по раунду.**\n__Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ *[GLOB.clients.len]*\n__Пиковый онлайн:__ *[max_client]*"), "launch-alert")
 
 /hook/roundend/proc/round_status_notifier()
-	deltimer(GLOB.timer)
-	GLOB.timer = null
+	deltimer(timer)
+	timer = null
 	return TRUE
