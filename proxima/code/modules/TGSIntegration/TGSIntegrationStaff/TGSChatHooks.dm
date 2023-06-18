@@ -165,7 +165,7 @@ var/timer = null
 
 /hook/roundstart/proc/round_status_notifier()
 	send2chat(new /datum/tgs_message_content("**Раунд начался!**\nКоличество экипажа: [GLOB.clients.len].[max_client != GLOB.clients.len ? " А ведь их было [max_client]!":""]"), "launch-alert")
-	timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/gen_report), 15 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
+	timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/gen_report), 25 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
 	return TRUE
 
 /proc/gen_report()
