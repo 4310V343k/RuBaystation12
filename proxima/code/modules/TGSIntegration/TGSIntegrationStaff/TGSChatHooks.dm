@@ -7,7 +7,7 @@
 	var/datum/tgs_chat_embed/structure/embed = new()
 	message.embed = embed
 	embed.title = "Начинается смена на [name]"
-	embed.description = "Вы можете кликнуть \[cюда\]([NON_BYOND_URL]), на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер.\n\nНа сервере уже [GLOB.clients.len]"
+	embed.description = "Вы можете кликнуть \[cюда\]([NON_BYOND_URL]), на фразу \"Сервер 'PRX'\" любого сообщения от меня, чтобы зайти на сервер."
 	embed.colour = "#6590fe"
 	embed.author = new /datum/tgs_chat_embed/provider/author/glob("Сервер 'PRX'")
 	//embed.footer = new /datum/tgs_chat_embed/footer("Сервер 'PRX'")
