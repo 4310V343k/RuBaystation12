@@ -174,6 +174,6 @@ GLOBAL_VAR_INIT(timer, null)
 	return new /datum/tgs_message_content("**Отчет по раунду.**\n__Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ *[GLOB.clients.len]*\n__Пиковый онлайн:__ *[GLOB.max_client]*")
 
 /hook/roundend/proc/round_status_notifier()
-	deltimer(timer)
+	deltimer(GLOB.timer)
 	GLOB.timer = null
 	return TRUE
