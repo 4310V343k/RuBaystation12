@@ -165,8 +165,11 @@ var/timer = null
 
 /hook/roundstart/proc/round_status_notifier()
 	send2chat(new /datum/tgs_message_content("**Раунд начался!**\nКоличество экипажа: [GLOB.clients.len].[max_client != GLOB.clients.len ? " А ведь их было [max_client]!":""]"), "launch-alert")
-	timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/send2chat, new /datum/tgs_message_content("**Отчет по раунду.** __Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ [GLOB.clients.len]\n__Пиковый онлайн:__ [max_client]"), "launch-alert"), 15 MINUTES, TIMER_STOPPABLE | TIMER_UNIQUE | TIMER_LOOP)
+	timer = addtimer(CALLBACK(GLOBAL_PROC, .proc/send2chat, gen_report(), "launch-alert"), 15 MINUTES, TIMER_STOPPABLE | TIMER_UNIQUE | TIMER_LOOP)
 	return TRUE
+
+/proc/gen_report()
+	return new /datum/tgs_message_content("**Отчет по раунду.**\n__Продолжительность:__ *[roundduration2text()]*\n__Онлайн:__ *[GLOB.clients.len]*\n__Пиковый онлайн:__ *[max_client]*")
 
 /hook/roundend/proc/round_status_notifier()
 	deltimer(timer)
