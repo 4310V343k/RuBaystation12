@@ -159,7 +159,7 @@
 var/max_client = 0
 var/timer = null
 
-/mob/Login()
+/client/New()
 	..()
 	max_client = max(max_client, GLOB.clients.len)
 
