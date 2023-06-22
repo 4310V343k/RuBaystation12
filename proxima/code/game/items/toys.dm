@@ -404,3 +404,13 @@
 	desc = "Silly winter fairy from the popular Yangui cartoon . You have to squeeze her cheeks."
 	icon_state = "fumoplushie_cirno"
 	gender = FEMALE
+
+/obj/random_multi/single_item/witch
+	name = "Multi Point - witch"
+	id = "witch"
+	item_path = /obj/item/toy/plush/fumo
+
+/obj/random_multi/single_item/cirno
+	name = "Multi Point - fairy"
+	id = "fairy"
+	item_path = /obj/item/toy/plush/fumo/cirno
