@@ -1056,7 +1056,7 @@ ranks - marines
 
 /obj/item/clothing/accessory/solgov/rank/army/officer/o3
 	name = "ranks (O-3 captain major)"
-	desc = "Collar pin denoting the rank of Marine Captain."
+	desc = "Collar pin denoting the rank of Captain Major."
 	icon_state = "o3_device"
 	overlay_state = "device_silver"
 
@@ -1079,10 +1079,9 @@ ranks - marines
 
 /obj/item/clothing/accessory/solgov/rank/army/flag
 	name = "ranks (O-7 colonel general)"
-	desc = "Collar pin denoting the rank of Major General."
+	desc = "Collar pin denoting the rank of Colonel General."
 	icon_state = "armyrank_command"
 
 /obj/item/clothing/accessory/solgov/rank/army/flag/o8
 	name = "ranks (O-8 general of the corps)"
-	desc = "Collar pin denoting the rank of Major General."
-	icon_state = "armyrank_command"
+	desc = "Collar pin denoting the rank of General of the Corps."
