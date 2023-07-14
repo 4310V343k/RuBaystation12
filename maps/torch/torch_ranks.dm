@@ -48,6 +48,7 @@
 		/datum/species/unathi       = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
 		/datum/species/unathi/yeosa = list(/datum/mil_branch/civilian, /datum/mil_branch/expeditionary_corps),
 		/datum/species/adherent     = list(/datum/mil_branch/civilian),
+		/datum/species/human/mule	= list(/datum/mil_branch/civilian),
 		/datum/species/vox          = list(/datum/mil_branch/alien)
 	)
 
