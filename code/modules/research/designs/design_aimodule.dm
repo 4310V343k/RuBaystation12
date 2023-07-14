@@ -76,10 +76,10 @@
 	req_tech = list(TECH_DATA = 4, TECH_MATERIAL = 6)
 
 /datum/design/aimodule/core/AssembleDesignName()
-	name = "AI core module design ([name])"
+	name = "AIR core module design ([name])"
 
 /datum/design/aimodule/core/AssembleDesignDesc()
-	desc = "Allows for the construction of \a '[name]' AI core module."
+	desc = "Allows for the construction of \a '[name]' AIR core module."
 
 /datum/design/aimodule/core/freeformcore
 	name = "Freeform"

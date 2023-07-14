@@ -305,7 +305,7 @@ var/list/ai_verbs_default = list(
 
 /mob/living/silicon/ai/proc/pick_icon()
 	set category = "Silicon Commands"
-	set name = "MOOD: AI Core Display"
+	set name = "MOOD: AIR Core Display"
 	if(stat || !has_power())
 		return
 

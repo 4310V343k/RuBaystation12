@@ -2026,7 +2026,7 @@
 	desc = "A computer core for an artificial intelligence. It seems to be broken.";
 	icon = 'icons/mob/AI.dmi';
 	icon_state = "4";
-	name = "Deactivated AI Core"
+	name = "Deactivated AIR Core"
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/constructionsite/ai)

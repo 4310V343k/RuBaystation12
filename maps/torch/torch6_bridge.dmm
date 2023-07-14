@@ -2277,7 +2277,7 @@
 "ej" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Aft";
+	c_tag = "AIR Core - Aft";
 	dir = 8
 	},
 /obj/machinery/power/terminal,
@@ -3452,7 +3452,7 @@
 /obj/machinery/door/airlock/highsecurity{
 	icon_state = "closed";
 	locked = 1;
-	name = "AI Core Access"
+	name = "AIR Core Access"
 	},
 /turf/simulated/floor/tiled/dark/airless,
 /area/turret_protected/ai)
@@ -3709,7 +3709,7 @@
 "gS" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Port";
+	c_tag = "AIR Core - Port";
 	dir = 1
 	},
 /obj/machinery/computer/modular/preset/engineering{
@@ -4069,7 +4069,7 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/computer/modular/preset/cardslot/command,
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Starboard"
+	c_tag = "AIR Core - Starboard"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/turret_protected/ai)
@@ -5762,9 +5762,9 @@
 	pixel_y = -32
 	},
 /obj/machinery/button/blast_door{
-	desc = "A remote control-switch for the AI core maintenance door.";
+	desc = "A remote control-switch for the AIR core maintenance door.";
 	id_tag = "AICore";
-	name = "AI Core Shutter Control";
+	name = "AIR Core Shutter Control";
 	pixel_x = 24;
 	pixel_y = 24
 	},
@@ -6064,7 +6064,7 @@
 /area/crew_quarters/heads/office/cl)
 "nt" = (
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Fore";
+	c_tag = "AIR Core - Fore";
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
@@ -10271,7 +10271,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Aft Port";
+	c_tag = "AIR Core - Aft Port";
 	dir = 8
 	},
 /obj/item/device/radio/intercom/locked/ai_private{
@@ -11526,7 +11526,7 @@
 "DA" = (
 /obj/machinery/button/blast_door{
 	id_tag = "AICoreLastResort";
-	name = "AI Core Last Resort";
+	name = "AIR Core Last Resort";
 	pixel_x = 5;
 	pixel_y = -8
 	},
@@ -11897,7 +11897,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Entry";
+	c_tag = "AIR Core - Entry";
 	dir = 1
 	},
 /obj/machinery/turretid/stun{
@@ -11983,7 +11983,7 @@
 /area/maintenance/bridge/forestarboard)
 "FR" = (
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Auxiliary Access";
+	c_tag = "AIR Core - Auxiliary Access";
 	dir = 1
 	},
 /obj/structure/cable/cyan{
@@ -12425,7 +12425,7 @@
 	icon_state = "closed";
 	id_tag = "ai_core_outer";
 	locked = 1;
-	name = "AI Core Internal Access"
+	name = "AIR Core Internal Access"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_foyer)
@@ -13462,7 +13462,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Aft Starboard";
+	c_tag = "AIR Core - Aft Starboard";
 	dir = 8
 	},
 /obj/item/device/radio/intercom/locked/ai_private{
@@ -14148,7 +14148,7 @@
 /area/maintenance/bridge/foreport)
 "Oa" = (
 /obj/machinery/door/airlock/vault/bolted{
-	name = "AI Core External Access"
+	name = "AIR Core External Access"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_outer_chamber)
@@ -14600,7 +14600,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Fore Starboard Access";
+	c_tag = "AIR Core - Fore Starboard Access";
 	dir = 4
 	},
 /obj/item/device/radio/intercom/locked/ai_private{
@@ -14615,7 +14615,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/camera/all/command{
-	c_tag = "AI Core - Fore Port Access";
+	c_tag = "AIR Core - Fore Port Access";
 	dir = 4
 	},
 /obj/item/device/radio/intercom/locked/ai_private{
@@ -16331,7 +16331,7 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1379;
 	id_tag = "ai_core_airlock";
-	name = "AI Core Airlock Console";
+	name = "AIR Core Airlock Console";
 	pixel_x = 24;
 	pixel_y = 0;
 	req_access = list("ACCESS_AI_UPLOAD");
@@ -16521,13 +16521,13 @@
 /area/turret_protected/ai_foyer)
 "Xw" = (
 /obj/machinery/door/airlock/vault/bolted{
-	name = "AI Core Backup Access"
+	name = "AIR Core Backup Access"
 	},
 /obj/machinery/door/blast/regular{
 	dir = 4;
 	id_tag = "AICore";
 	maxhealth = 5000;
-	name = "AI Core Security Shutters"
+	name = "AIR Core Security Shutters"
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -16794,7 +16794,7 @@
 	icon_state = "closed";
 	id_tag = "ai_core_outer";
 	locked = 1;
-	name = "AI Core Internal Access"
+	name = "AIR Core Internal Access"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/turret_protected/ai_foyer)

@@ -259,7 +259,7 @@
 
 /obj/structure/sign/kiddieplaque
 	name = "\improper AI developers plaque"
-	desc = "An extremely long list of names and job titles and a picture of the design team responsible for building this AI Core."
+	desc = "An extremely long list of names and job titles and a picture of the design team responsible for building this AIR Core."
 	icon_state = "kiddieplaque"
 
 /obj/structure/sign/atmosplaque
