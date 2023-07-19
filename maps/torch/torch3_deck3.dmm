@@ -6272,9 +6272,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "mv" = (
@@ -10010,9 +10007,6 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "vT" = (
@@ -10024,18 +10018,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/crew_quarters/sleep/cryo)
-"vV" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "vW" = (
 /obj/structure/cable/green{
@@ -10898,9 +10880,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "yf" = (
@@ -10910,7 +10889,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "yg" = (
@@ -10919,9 +10897,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -11178,9 +11153,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard{
-	dir = 9
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "yY" = (
@@ -11195,9 +11167,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -11215,9 +11184,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard{
-	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -12487,9 +12453,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "Df" = (
@@ -12499,7 +12462,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
 "Dg" = (
@@ -12508,9 +12470,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard{
-	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo)
@@ -39070,10 +39029,10 @@ mr
 mr
 yg
 yZ
-vV
-vV
-vV
-vV
+mr
+mr
+mr
+mr
 Dg
 za
 Ew
