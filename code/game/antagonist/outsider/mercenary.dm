@@ -64,6 +64,7 @@ GLOBAL_DATUM_INIT(mercs, /datum/antagonist/mercenary, new)
 
 	var/decl/hierarchy/outfit/mercenary = outfit_by_type(/decl/hierarchy/outfit/mercenary)
 	mercenary.equip(player)
+	sound_to(player, 'proxima/sound/antag/ops.ogg')
 
 /* [ORIG]
 	var/obj/item/device/radio/uplink/U = new(get_turf(player), player.mind, DEFAULT_TELECRYSTAL_AMOUNT)

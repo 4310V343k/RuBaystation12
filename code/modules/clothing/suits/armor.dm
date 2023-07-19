@@ -450,9 +450,20 @@
 
 			return PROJECTILE_CONTINUE // complete projectile permutation
 
+/obj/item/clothing/suit/armor/ert
+	name = "emergency response armor"
+	desc = "A lightweight special navy plate carrier vest. It can be equipped with armor plates, but provides no protection of its own."
+	icon = 'icons/obj/clothing/obj_suit_modular_armor.dmi'
+	item_icons = list(slot_wear_suit_str = 'icons/mob/onmob/onmob_modular_armor.dmi')
+	icon_state = "ert_armor"
+	valid_accessory_slots = list(ACCESSORY_SLOT_INSIGNIA, ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L, ACCESSORY_SLOT_ARMOR_M)
+	restricted_accessory_slots = list(ACCESSORY_SLOT_ARMOR_C, ACCESSORY_SLOT_ARMOR_A, ACCESSORY_SLOT_ARMOR_L)
+	blood_overlay_type = "armor"
+	flags_inv = 0
+	var/slots = 4 STORAGE_FREEFORM
+	accessories = list(/obj/item/clothing/accessory/armor_plate/advanced, /obj/item/clothing/accessory/armor_tag/solgov, /obj/item/clothing/accessory/leg_guards/navy, /obj/item/clothing/accessory/arm_guards/navy)
 
 //All of the armor below is mostly unused
-
 
 /obj/item/clothing/suit/armor/centcomm
 	name = "\improper Cent. Com. armor"

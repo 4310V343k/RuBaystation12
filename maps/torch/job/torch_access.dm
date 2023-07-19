@@ -59,7 +59,7 @@ var/global/const/access_liaison = "ACCESS_TORCH_CORPORATE_LIAISON" //84
 var/global/const/access_representative = "ACCESS_TORCH_REPRESENTATIVE" //85
 /datum/access/representative
 	id = access_representative
-	desc = "Judge Advocate"
+	desc = "Not Used"
 	region = ACCESS_REGION_COMMAND
 	//access_type = ACCESS_TYPE_NONE ((Ruler of their own domain, CO cannot enter (((Nah, sorry
 

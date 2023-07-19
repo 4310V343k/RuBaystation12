@@ -13,7 +13,8 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/pathfinder
 	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o1
+		/datum/mil_rank/ec/o1,
+		/datum/mil_rank/ec/o3
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_EVA         = SKILL_ADEPT,
@@ -228,8 +229,8 @@
 	title = "Expedition Marine Guard"
 	department = "Экспедиционный"
 	department_flag = EXP
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "Командующему и Исполнительному Офицеру, и Первопроходцу"
 	selection_color = "#68099e"
 	minimum_character_age = list(SPECIES_HUMAN = 18)

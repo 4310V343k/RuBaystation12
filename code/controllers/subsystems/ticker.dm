@@ -18,6 +18,8 @@ SUBSYSTEM_DEF(ticker)
 	var/list/bad_modes = list()     //Holds modes we tried to start and failed to.
 	var/revotes_allowed = 0         //How many times a game mode revote might be attempted before giving up.
 
+	var/list/round_start_events
+
 	var/end_game_state = END_GAME_NOT_OVER
 	var/delay_end = 0               //Can be set true to postpone restart.
 	var/delay_notified = 0          //Spam prevention.
@@ -171,6 +173,11 @@ SUBSYSTEM_DEF(ticker)
 			if(job && job.create_record)
 				CreateModularRecord(H)
 
+	for(var/I in round_start_events)
+		var/datum/callback/cb = I
+		cb.InvokeAsync()
+	LAZYCLEARLIST(round_start_events)
+
 	callHook("roundstart")
 
 	spawn(0)//Forking here so we dont have to wait for this to finish
@@ -182,7 +189,16 @@ SUBSYSTEM_DEF(ticker)
 			player.new_player_panel()
 
 	if(!GLOB.admins.len)
-		send2adminirc("Round has started with no admins online.")
+		send2adminirc("Смена началась без активных администраторов.")
+
+/datum/controller/subsystem/ticker/proc/OnRoundstart(datum/callback/cb)
+	if(!HasRoundStarted())
+		LAZYADD(round_start_events, cb)
+	else
+		cb.InvokeAsync()
+
+/datum/controller/subsystem/ticker/proc/HasRoundStarted()
+	return GAME_STATE >= RUNLEVEL_GAME
 
 /datum/controller/subsystem/ticker/proc/playing_tick()
 	mode.process()

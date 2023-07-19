@@ -169,21 +169,3 @@
 	name = OUTFIT_JOB_NAME("Bridge Officer - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
 	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/crew/command/jua
-	name = OUTFIT_JOB_NAME("Judge Advocate")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/officer/command
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_types = list(/obj/item/card/id/torch/crew/jua)
-	pda_type = /obj/item/modular_computer/pda/heads
-	l_ear = /obj/item/device/radio/headset/jua
-
-/decl/hierarchy/outfit/job/torch/crew/command/jua/fleet
-	name = OUTFIT_JOB_NAME("Judge Advocate - Fleet")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
-	shoes = /obj/item/clothing/shoes/dutyboots
-
-/decl/hierarchy/outfit/job/torch/crew/command/jua/army
-	name = OUTFIT_JOB_NAME("Judge Advocate - Marine")
-	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
-	shoes = /obj/item/clothing/shoes/dutyboots

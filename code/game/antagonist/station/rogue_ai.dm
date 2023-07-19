@@ -61,6 +61,7 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 
 
 		var/mob/living/silicon/ai/malf = player.current
+		sound_to(malf, 'proxima/sound/antag/malf.ogg')
 
 		to_chat(malf, "<span class='notice'><B>SYSTEM ERROR:</B> Memory index 0x00001ca89b corrupted.</span>")
 		sleep(10)
@@ -101,4 +102,3 @@ GLOBAL_DATUM_INIT(malf, /datum/antagonist/rogue_ai, new)
 	if (newname)
 		player.fully_replace_character_name(newname)
 	if(player.mind) player.mind.name = player.name
-

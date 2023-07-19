@@ -21,6 +21,16 @@ AI MODULES
 	origin_tech = list(TECH_DATA = 3)
 	var/datum/ai_laws/laws = null
 
+/obj/item/aiModule/attack_self(mob/user)
+	. = ..()
+	show_laws(user)
+
+/obj/item/aiModule/proc/show_laws(mob/user)
+	if(laws?.inherent_laws?.len)
+		to_chat(user, SPAN_BOLD("Programmed Law[(laws.inherent_laws.len > 1) ? "s" : ""]:"))
+		for(var/datum/ai_law/law_object in laws.inherent_laws)
+			to_chat(user, "\"[law_object.law]\"")
+
 /obj/item/aiModule/proc/install(obj/machinery/computer/upload/comp, mob/user)
 	if(!istype(comp))
 		return

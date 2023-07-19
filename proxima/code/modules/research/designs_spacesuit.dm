@@ -85,15 +85,6 @@ HARDSUITS
 	id = "military_suit"
 	time = 120
 
-/datum/design/mechfab/hcm/fleet
-	category = "Hardsuit Control Modules"
-	name = "Fleet rig control module"
-	build_path = /obj/item/rig/ert/fleet/unlocked
-	req_tech = list(TECH_MATERIAL = 6,  TECH_ENGINEERING = 5, TECH_COMBAT = 6)
-	materials = list(MATERIAL_STEEL = 40000, MATERIAL_GLASS = 6000, MATERIAL_SILVER = 2000, MATERIAL_TITANIUM = 5000, MATERIAL_DIAMOND = 2000)
-	id = "scg_fleet_suit"
-	time = 120
-
 /datum/design/mechfab/hcm/light
 	category = "Hardsuit Control Modules"
 	name = "Light rig control module"
@@ -102,25 +93,6 @@ HARDSUITS
 	materials = list(MATERIAL_STEEL = 10000, MATERIAL_PLASTIC = 6000, MATERIAL_ALUMINIUM = 6000, MATERIAL_SILVER = 1000)
 	id = "not_a_ninja_suit"
 	time = 120
-
-/datum/design/mechfab/hcm/merc
-	category = "Hardsuit Control Modules"
-	name = "Crimson rig control module"
-	build_path = /obj/item/rig/merc
-	req_tech = list(TECH_MATERIAL = 6, TECH_ENGINEERING = 5, TECH_COMBAT = 7, TECH_ESOTERIC = 3)
-	materials = list(MATERIAL_STEEL = 40000, MATERIAL_GLASS = 6000, MATERIAL_SILVER = 2000, MATERIAL_DIAMOND = 2000)
-	id = "crimson_suit"
-	time = 120
-
-/datum/design/mechfab/hcm/eod
-	category = "Hardsuit Control Modules"
-	name = "Heavy Crimson rig control module"
-	build_path = /obj/item/rig/merc/heavy
-	req_tech = list(TECH_MATERIAL = 6, TECH_ENGINEERING = 5, TECH_COMBAT = 8,  TECH_ESOTERIC = 3)
-	materials = list(MATERIAL_STEEL = 40000, MATERIAL_GLASS = 6000, MATERIAL_SILVER = 2000, MATERIAL_TITANIUM = 5000, MATERIAL_DIAMOND = 2000)
-	id = "heavy_crimsion_suit"
-	time = 120
-
 
 /*
 VOIDSUITS
@@ -157,14 +129,6 @@ VOIDSUITS
 	materials = list(MATERIAL_STEEL = 15000, MATERIAL_PLASTIC = 2000, MATERIAL_ALUMINIUM = 4000)
 	req_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2, TECH_COMBAT = 3)
 	id = "void_sec"
-
-/datum/design/item/mechfab/voidsuit/merc
-	category = "Voidsuits"
-	name = "Crimson voidsuit"
-	build_path = /obj/item/clothing/suit/space/void/merc/prepared
-	materials = list(MATERIAL_STEEL = 15000, MATERIAL_PLASTIC = 2000, MATERIAL_ALUMINIUM = 4000)
-	req_tech = list(TECH_MATERIAL = 2, TECH_ENGINEERING = 2, TECH_COMBAT = 3, TECH_ESOTERIC = 2)
-	id = "void_merc"
 
 /datum/design/item/mechfab/voidsuit/mining
 	category = "Voidsuits"

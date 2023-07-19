@@ -373,23 +373,7 @@
 				/obj/item/toy/figure/warden,
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
-				/obj/item/toy/figure/ert,
-				/obj/item/toy/desk/jaba,
-				/obj/item/toy/figure/dc,
-				/obj/item/toy/figure/boec,
-				/obj/item/toy/figure/xoec,
-				/obj/item/toy/figure/cmoec,
-				/obj/item/toy/figure/cwmf,
-				/obj/item/toy/figure/ceaf,
-				/obj/item/toy/desk/gas,
-				/obj/item/toy/desk/soft,
-				/obj/item/toy/figure/ma,
-				/obj/item/toy/desk/evilslime,
-				/obj/item/toy/figure/pilot,
-				/obj/item/toy/desk/blueskrell,
-				/obj/item/toy/desk/drakon,
-				/obj/item/toy/desk/redskrell,
-				/obj/item/toy/desk/gccjaba)
+				/obj/item/toy/figure/ert)
 
 /obj/random/plushie
 	name = "random plushie"
@@ -1426,3 +1410,30 @@ var/global/list/random_useful_
 	icon = 'icons/obj/drinks.dmi'
 	icon_state = "cola"
 	spawn_object = /obj/item/reagent_containers/food/drinks/cans/cola
+
+/obj/random/prx_toy
+	name = "random Proxima action figure"
+	desc = "This is a random action figure."
+	icon = 'icons/obj/toy.dmi'
+	icon_state = "torch_model_figure"
+
+/obj/random/action_figure/spawn_choices()
+	return list(/obj/item/toy/desk/delta,
+				/obj/item/toy/desk/urlik,
+				/obj/item/toy/desk/redskrell,
+				/obj/item/toy/desk/gcccake,
+				/obj/item/toy/desk/drakon,
+				/obj/item/toy/desk/taushai,
+				/obj/item/toy/figure/chaos,
+				/obj/item/toy/desk/lahesh,
+				/obj/item/toy/figure/ma,
+				/obj/item/toy/desk/soft,
+				/obj/item/toy/desk/gas,
+				/obj/item/toy/figure/vezha,
+				/obj/item/toy/figure/cwmf,
+				/obj/item/toy/figure/otto,
+				/obj/item/toy/figure/byxloy,
+				/obj/item/toy/figure/dude,
+				/obj/item/toy/figure/foler,
+				/obj/item/toy/desk/cake
+				)

@@ -23,25 +23,25 @@
 				TRADER_BRIBE_SUCCESS      = "You know what, I wasn't doing anything for TIME minutes anyways.",
 				)
 
-	possible_wanted_items = list(/obj/item/toy/figure       = TRADER_THIS_TYPE,
-								/obj/item/toy/figure/ert    = TRADER_THIS_TYPE,
-								/obj/item/toy/prize/honk    = TRADER_THIS_TYPE)
+	possible_wanted_items = list(/obj/item/toy/figure    = TRADER_THIS_TYPE,
+								/obj/item/toy/figure/ert = TRADER_THIS_TYPE,
+								/obj/item/toy/prize/honk = TRADER_THIS_TYPE)
 
-	possible_trading_items = list(/obj/item/toy/prize                 = TRADER_SUBTYPES_ONLY,
-								/obj/item/toy/prize/honk              = TRADER_BLACKLIST,
-								/obj/item/toy/figure                  = TRADER_SUBTYPES_ONLY,
-								/obj/item/toy/figure/ert              = TRADER_BLACKLIST,
-								/obj/item/toy/plushie                 = TRADER_SUBTYPES_ONLY,
-								/obj/item/toy/katana                  = TRADER_THIS_TYPE,
-								/obj/item/toy/sword                   = TRADER_THIS_TYPE,
-								/obj/item/toy/bosunwhistle            = TRADER_THIS_TYPE,
-								/obj/item/board                = TRADER_THIS_TYPE,
-								/obj/item/storage/box/checkers = TRADER_ALL,
-								/obj/item/deck                 = TRADER_SUBTYPES_ONLY,
-								/obj/item/pack                 = TRADER_SUBTYPES_ONLY,
-								/obj/item/dice                 = TRADER_ALL,
-								/obj/item/dice/d20/cursed      = TRADER_BLACKLIST,
-								/obj/item/gun/launcher/money   = TRADER_THIS_TYPE)
+	possible_trading_items = list(/obj/item/toy/prize              = TRADER_SUBTYPES_ONLY,
+								/obj/item/toy/prize/honk           = TRADER_BLACKLIST,
+								/obj/item/toy/figure               = TRADER_SUBTYPES_ONLY,
+								/obj/item/toy/figure/ert           = TRADER_BLACKLIST,
+								/obj/item/toy/plushie              = TRADER_SUBTYPES_ONLY,
+								/obj/item/toy/katana               = TRADER_THIS_TYPE,
+								/obj/item/toy/sword                = TRADER_THIS_TYPE,
+								/obj/item/toy/bosunwhistle         = TRADER_THIS_TYPE,
+								/obj/item/board                    = TRADER_THIS_TYPE,
+								/obj/item/storage/box/checkers     = TRADER_ALL,
+								/obj/item/deck                     = TRADER_SUBTYPES_ONLY,
+								/obj/item/pack                     = TRADER_SUBTYPES_ONLY,
+								/obj/item/dice                     = TRADER_ALL,
+								/obj/item/dice/d20/cursed          = TRADER_BLACKLIST,
+								/obj/item/gun/launcher/money       = TRADER_THIS_TYPE)
 
 /datum/trader/ship/electronics
 	name = "Electronic Shop Employee"
@@ -52,18 +52,18 @@
 	speech = list(TRADER_HAIL_GENERIC    = "Hello, sir! Welcome to ORIGIN, I hope you find what you are looking for.",
 				TRADER_HAIL_DENY         = "Your call has been disconnected.",
 
-				TRADER_TRADE_COMPLETE    = "Thank you for shopping at ORIGIN, would you like to get the extended warranty as well?",
-				TRADER_NO_BLACKLISTED   = "Sir, this is a /electronics/ store.",
-				TRADER_NO_GOODS    = "As much as I'd love to buy that from you, I can't.",
-				TRADER_NOT_ENOUGH  = "Your offer isn't adequate, sir.",
-				TRADER_HOW_MUCH          = "Your total comes out to VALUE CURRENCY.",
+				TRADER_TRADE_COMPLETE = "Thank you for shopping at ORIGIN, would you like to get the extended warranty as well?",
+				TRADER_NO_BLACKLISTED = "Sir, this is a /electronics/ store.",
+				TRADER_NO_GOODS       = "As much as I'd love to buy that from you, I can't.",
+				TRADER_NOT_ENOUGH     = "Your offer isn't adequate, sir.",
+				TRADER_HOW_MUCH       = "Your total comes out to VALUE CURRENCY.",
 
-				TRADER_COMPLEMENT_FAILURE   = "Hahaha! Yeah... funny...",
+				TRADER_COMPLEMENT_FAILURE = "Hahaha! Yeah... funny...",
 				TRADER_COMPLEMENT_SUCCESS = "That's very nice of you!",
-				TRADER_INSULT_GOOD       = "That was uncalled for, sir. Don't make me get my manager.",
-				TRADER_INSULT_BAD        = "Sir, I am allowed to hang up the phone if you continue, sir.",
+				TRADER_INSULT_GOOD        = "That was uncalled for, sir. Don't make me get my manager.",
+				TRADER_INSULT_BAD         = "Sir, I am allowed to hang up the phone if you continue, sir.",
 
-				TRADER_BRIBE_FAILURE     = "Sorry, sir, but I can't really do that.",
+				TRADER_BRIBE_FAILURE      = "Sorry, sir, but I can't really do that.",
 				TRADER_BRIBE_SUCCESS      = "Why not! Glad to be here for a few more minutes.",
 				)
 
@@ -155,13 +155,13 @@
 	possible_origins = list("Baldie's Hats and Accessories", "The Right Fit", "Like a Glove", "Space Fashion")
 	possible_trading_items = list(/obj/item/clothing/accessory            = TRADER_ALL,
 								/obj/item/clothing/accessory/badge        = TRADER_BLACKLIST_ALL,
-								/obj/item/clothing/accessory/storage/holster      = TRADER_BLACKLIST_ALL,
+								/obj/item/clothing/accessory/storage/holster = TRADER_BLACKLIST_ALL,
 								/obj/item/clothing/accessory/medal        = TRADER_BLACKLIST_ALL,
 								/obj/item/clothing/accessory/storage      = TRADER_BLACKLIST_ALL,
 								/obj/item/clothing/gloves                 = TRADER_SUBTYPES_ONLY,
 								/obj/item/clothing/gloves/lightrig        = TRADER_BLACKLIST_ALL,
 								/obj/item/clothing/gloves/rig             = TRADER_BLACKLIST_ALL,
-								/obj/item/clothing/gloves/thick/swat            = TRADER_BLACKLIST,
+								/obj/item/clothing/gloves/thick/swat         = TRADER_BLACKLIST,
 								/obj/item/clothing/gloves/chameleon       = TRADER_BLACKLIST,
 								/obj/item/clothing/head                   = TRADER_SUBTYPES_ONLY,
 								/obj/item/clothing/head/HoS               = TRADER_BLACKLIST_ALL,
@@ -191,7 +191,7 @@ Sells devices, odds and ends, and medical stuff
 	possible_origins = list("Buy 'n Save", "Drug Carnival", "C&B", "Fentles", "Dr. Goods", "Beevees", "McGillicuddy's")
 	possible_trading_items = list(/obj/item/device/flashlight              = TRADER_ALL,
 								/obj/item/device/kit/paint                 = TRADER_SUBTYPES_ONLY,
-								/obj/item/aicard                    = TRADER_THIS_TYPE,
+								/obj/item/aicard                           = TRADER_THIS_TYPE,
 								/obj/item/device/binoculars                = TRADER_THIS_TYPE,
 								/obj/item/device/cable_painter             = TRADER_THIS_TYPE,
 								/obj/item/device/flash                     = TRADER_THIS_TYPE,
@@ -209,7 +209,7 @@ Sells devices, odds and ends, and medical stuff
 								/obj/item/device/t_scanner                 = TRADER_THIS_TYPE,
 								/obj/item/device/taperecorder              = TRADER_THIS_TYPE,
 								/obj/item/device/batterer                  = TRADER_THIS_TYPE,
-								/obj/item/device/synthesized_instrument/violin                    = TRADER_THIS_TYPE,
+								/obj/item/device/synthesized_instrument/violin = TRADER_THIS_TYPE,
 								/obj/item/device/hailer                    = TRADER_THIS_TYPE,
 								/obj/item/device/uv_light                  = TRADER_THIS_TYPE,
 								/obj/item/device/mmi                       = TRADER_ALL,
@@ -223,7 +223,7 @@ Sells devices, odds and ends, and medical stuff
 								/obj/item/device/ano_scanner               = TRADER_THIS_TYPE,
 								/obj/item/device/core_sampler              = TRADER_THIS_TYPE,
 								/obj/item/device/depth_scanner             = TRADER_THIS_TYPE,
-								/obj/item/pinpointer/radio            = TRADER_THIS_TYPE,
+								/obj/item/pinpointer/radio                 = TRADER_THIS_TYPE,
 								/obj/item/stack/medical/advanced           = TRADER_BLACKLIST)
 	speech = list(TRADER_HAIL_GENERIC    = "Hello, hello! Bits and bobs and everything in between, I hope you find what you're looking for!",
 				TRADER_HAIL_DENY         = "Oh no. I don't want to deal with YOU.",

@@ -644,6 +644,14 @@
 	worn_state = "saare"
 	gender_icons = 1
 
+/obj/item/clothing/under/saare/combat
+	name = "\improper SAARE combat uniform"
+	desc = "Tight-fitting dark uniform with a bright-green SAARE patch on the shoulder. The perfect outfit in which to kick doors out and teeth in."
+	icon = 'proxima/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/onmob_under.dmi')
+	icon_state = "saarecombat"
+	item_state = "saarecombat"
+
 /obj/item/clothing/under/frontier
 	name = "frontier clothes"
 	desc = "A rugged flannel shirt and denim overalls. A popular style among frontier colonists."

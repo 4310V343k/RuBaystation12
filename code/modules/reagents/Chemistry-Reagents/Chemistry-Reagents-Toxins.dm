@@ -1005,6 +1005,53 @@
 	if(M.psi)
 		M.psi.check_latency_trigger(30, "a Three Eye overdose")
 
+/datum/reagent/jerraman
+	name = "Jerraman"
+	taste_description = "liquid starlight"
+	description = "A rare and expensive drug used legally by professionals to awaken psionic latencies in those who possess them, dangerous in higher doses."
+	reagent_state = LIQUID
+	color = "#d0ff00"
+	metabolism = 1
+	overdose = 5
+
+	var/global/list/dose_messages = list(
+		"Тебя позвали по имени... Пришло твоё время.",
+		"Всё смешивается воедино. Это всё смешивается.",
+		"Ты никогда не забудешь. Никогда не забудешь. Никогда.",
+		"Всему конец. Всё - это начало."
+	)
+
+	var/global/list/overdose_messages = list(
+		"СИГНАЛ, СИГНАЛ, СИГНАЛ, СИГНАЛ!",
+		"ОНО ЖДЁТ, ОНО ПЛАЧЕТ, ОНО ЖАЖДЕТ!",
+		"НЕ ТВОИ, НЕ ТВОИ СИЛЫ, ВОР!",
+		"ПАДЕНИЕ, ОНО ПАДЁТ, ОНО ПАДАЕТ, КОНЕЦ",
+		"КРОВЬ, КРОВЬ, КРОВЬ, ОНО ЖАЖДЕТ КРОВИ!",
+		"УБИРАЙСЯ, УБИРАЙСЯ, УБИРАЙСЯ ОТСЮДА!",
+		"СВЕТ ТЬМЫ, ЗВЁЗДЫ В ЦЕПЯХ ЕГО!"
+	)
+
+/datum/reagent/jerraman/affect_blood(mob/living/carbon/M, alien, removed)
+	M.add_chemical_effect(CE_THIRDEYE, 1)
+	M.add_chemical_effect(CE_MIND, -2)
+	M.make_dizzy(5)
+	if(prob(30))
+		to_chat(M, SPAN_WARNING("<font size = [rand(1,2)]>[pick(dose_messages)]</font>"))
+	if(M.psi)
+		M.psi.check_latency_trigger(70, "a Jerraman dose")
+
+/datum/reagent/jerraman/overdose(mob/living/carbon/M, alien)
+	..()
+	to_chat(M, SPAN_DANGER("Вам кажется, что голоса разрывают вас на части, вы теряете контроль над своим телом и разумом, впадая в неистовство."))
+	M.hallucination(50, 50)
+	M.make_jittery(5)
+	M.adjustBrainLoss(rand(5, 10))
+	if(ishuman(M) && prob(20))
+		var/mob/living/carbon/human/H = M
+		H.seizure()
+	if(prob(10))
+		to_chat(M, SPAN_DANGER("<font size = [rand(3,4)]>[pick(overdose_messages)]</font>"))
+
 /* Transformations */
 /datum/reagent/slimetoxin
 	name = "Mutation Toxin"

@@ -4,6 +4,12 @@
 /datum/uplink_item/item/visible_weapons
 	category = /datum/uplink_category/visible_weapons
 
+/datum/uplink_item/item/visible_weapons/combat_knife
+	name = "Combat knife"
+	desc = "A knife, for stabbing people."
+	item_cost = 5
+	path = /obj/item/material/knife/combat
+
 /datum/uplink_item/item/visible_weapons/smallenergy_gun
 	name = "Small Energy Gun"
 	desc = "A pocket-sized energy based sidearm with three different lethality settings."
@@ -32,13 +38,13 @@
 /datum/uplink_item/item/visible_weapons/pikecube
 	name = "Pike Cube"
 	desc = "While it looks like a normal monkey cube, the animal produced is, instead, a space pike. \ Note: The space pike does not like you."
-	item_cost = 40
+	item_cost = 35
 	path = /obj/item/reagent_containers/food/snacks/monkeycube/wrapped/pikecube
 
 /datum/uplink_item/item/visible_weapons/katana
 	name = "Katana"
 	desc = "A large sharpened steel blade capable of cutting through anything but the thickest armor."
-	item_cost = 24
+	item_cost = 26
 	path = /obj/item/material/sword/katana
 
 /datum/uplink_item/item/visible_weapons/energy_sword
@@ -121,6 +127,11 @@
 	path = /obj/item/gun/projectile/sniper/semistrip
 	antag_roles = list(MODE_REVOLUTIONARY, MODE_MERCENARY)
 
+/datum/uplink_item/item/visible_weapons/lasercarbine
+	name = "Laser Carbine"
+	desc = "A common laser carbine with only a lethal mode, and nothing else. Comes charged."
+	item_cost = 30
+	path = /obj/item/gun/energy/laser
 
 /datum/uplink_item/item/visible_weapons/advanced_energy_gun
 	name = "Advanced Energy Gun"
@@ -135,13 +146,11 @@
 	path = /obj/item/storage/secure/briefcase/heavysniper
 	antag_roles = list(MODE_MERCENARY)
 
-/*
 /datum/uplink_item/item/visible_weapons/psi_amp
 	name = "Cerebroenergetic Psionic Amplifier"
-	item_cost = 50
+	item_cost = 110
 	path = /obj/item/clothing/head/helmet/space/psi_amp/lesser
 	desc = "A powerful, illegal psi-amp. Boosts latent psi-faculties to extremely high levels."
-*/
 
 /datum/uplink_item/item/visible_weapons/machine_pistol
 	name = "Standard Machine Pistol"

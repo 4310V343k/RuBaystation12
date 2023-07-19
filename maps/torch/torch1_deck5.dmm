@@ -2944,6 +2944,11 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/storage)
 "gE" = (
@@ -3266,6 +3271,7 @@
 	name = "Warehouse Shutters"
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/storage)
 "hF" = (
@@ -3274,11 +3280,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fifthdeck/aft)
 "hG" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 8;
@@ -3743,8 +3744,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "iQ" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/outline/orange,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "iR" = (
@@ -3816,18 +3817,6 @@
 /obj/machinery/door/airlock/maintenance,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/fifthdeck/fore)
-"iZ" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage)
 "ja" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4011,6 +4000,7 @@
 	id_tag = "mine_warehouse";
 	name = "Storage Shutters"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/expedition/storage)
 "jt" = (
@@ -4506,14 +4496,13 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kp" = (
-/obj/structure/closet/secure_closet/explorer/marine,
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/stool,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kq" = (
@@ -4554,15 +4543,6 @@
 	dir = 4;
 	icon_state = "warningcorner"
 	},
-/obj/machinery/mech_recharger,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5;
-	icon_state = "warning"
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
-	},
-/mob/living/exosuit/premade/light/exploration,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kv" = (
@@ -5246,6 +5226,7 @@
 	id_tag = "hanger_atmos_storage";
 	name = "Storage Shutters"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/expedition/atmos)
 "mb" = (
@@ -5512,11 +5493,6 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "mD" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -6593,6 +6569,11 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/storage)
 "ox" = (
@@ -6606,6 +6587,15 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -7673,6 +7663,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/expedition/atmos)
 "qR" = (
@@ -8505,11 +8496,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/fifthdeck/aftstarboard)
 "ss" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/storage)
@@ -10491,7 +10477,9 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/eva)
 "xZ" = (
-/obj/machinery/suit_cycler/exploration,
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/mob/living/exosuit/premade/light/exploration,
 /turf/simulated/floor/tiled,
 /area/quartermaster/exploration)
 "ya" = (
@@ -11534,11 +11522,11 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/petrov/analysis)
 "Cj" = (
-/obj/structure/closet/secure_closet/explorer/marine,
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/secure_closet/explorer/marine,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "Cm" = (
@@ -11696,11 +11684,6 @@
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "CL" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/storage)
 "CR" = (
@@ -12057,8 +12040,8 @@
 /turf/simulated/wall/titanium,
 /area/shuttle/petrov/custodial)
 "DR" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/suit_storage_unit/explorer/marine,
+/obj/machinery/suit_cycler/exploration,
+/obj/effect/floor_decal/industrial/outline/orange,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "DT" = (
@@ -15932,6 +15915,10 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
+"TB" = (
+/obj/random/prx_toy,
+/turf/simulated/floor/plating,
+/area/maintenance/fifthdeck/aftport)
 "TC" = (
 /obj/structure/table/steel,
 /obj/item/storage/box/glasses,
@@ -16459,6 +16446,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/dogbed{
+	name = "slimebed"
+	},
+/mob/living/simple_animal/slime/evil,
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "VN" = (
@@ -16790,6 +16781,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/petrov/toxins)
+"Xr" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled,
+/area/quartermaster/exploration)
 "Xs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4;
@@ -32170,7 +32166,7 @@ kL
 hl
 iP
 kg
-hz
+Xr
 mx
 DR
 eu
@@ -32366,7 +32362,7 @@ oW
 hl
 kn
 fH
-fH
+hz
 kw
 ky
 hl
@@ -32777,7 +32773,7 @@ OX
 kq
 kt
 kq
-eu
+kq
 eu
 eu
 aJ
@@ -40050,7 +40046,7 @@ Em
 Em
 oB
 iJ
-iZ
+CL
 jj
 jp
 Em
@@ -43282,7 +43278,7 @@ CT
 ws
 ws
 ws
-vK
+TB
 vZ
 wa
 vK

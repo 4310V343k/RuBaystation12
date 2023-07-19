@@ -113,6 +113,10 @@
 /datum/fabricator_recipe/destTagger
 	path = /obj/item/device/destTagger
 
+/datum/fabricator_recipe/cratescanner
+	name = "crate contents scanner"
+	path = /obj/item/device/cratescanner
+
 /datum/fabricator_recipe/labeler
 	path = /obj/item/hand_labeler
 

@@ -5,6 +5,9 @@
 	action_button_name = "Install Boosters"
 	icon_state = "cerebro"
 
+	flags_inv = 0
+	body_parts_covered = 0
+
 	item_state_slots = list(
 		slot_l_hand_str = "helmet",
 		slot_r_hand_str = "helmet"
@@ -17,23 +20,11 @@
 	var/max_boosted_faculties = 3
 	var/boosted_psipower = 120
 
-/obj/item/clothing/head/helmet/space/psi_amp/lesser
-	name = "psionic amplifier"
-	desc = "A crown-of-thorns cerebro-energetic enhancer that interfaces directly with the brain, isolating and strengthening psionic signals. It kind of looks like a tiara having sex with an industrial robot."
-	icon_state = "amp"
-	flags_inv = 0
-	body_parts_covered = 0
-
-	max_boosted_faculties = 1
-	boosted_rank = PSI_RANK_MASTER
-	unboosted_rank = PSI_RANK_OPERANT
-	boosted_psipower = 50
-
 /obj/item/clothing/head/helmet/space/psi_amp/Initialize()
 	. = ..()
 	verbs += /obj/item/clothing/head/helmet/space/psi_amp/proc/integrate
 
-/obj/item/clothing/head/helmet/space/psi_amp/attack_self(var/mob/user)
+/obj/item/clothing/head/helmet/space/psi_amp/attack_self(mob/user)
 
 	if(operating)
 		return
@@ -91,7 +82,7 @@
 
 	sleep(80)
 
-	if(H.psi) 
+	if(H.psi)
 		H.psi.reset()
 
 	to_chat(H, SPAN_NOTICE("\The [src] chimes quietly as it finishes removing the slave-minds from your brain."))
@@ -119,7 +110,6 @@
 			canremove = TRUE
 
 /obj/item/clothing/head/helmet/space/psi_amp/proc/integrate()
-
 	set name = "Integrate Psionic Amplifier"
 	set desc = "Enhance your brainpower."
 	set category = "Abilities"
@@ -165,3 +155,13 @@
 	H.update_action_buttons()
 
 	set_light(0.5, 0.1, 3, 2, l_color = "#880000")
+
+/obj/item/clothing/head/helmet/space/psi_amp/lesser
+	name = "psionic amplifier"
+	desc = "A crown-of-thorns cerebro-energetic enhancer that interfaces directly with the brain, isolating and strengthening psionic signals. It kind of looks like a tiara having sex with an industrial robot."
+	icon_state = "amp"
+
+	max_boosted_faculties = 2
+	boosted_rank = PSI_RANK_MASTER
+	unboosted_rank = PSI_RANK_OPERANT
+	boosted_psipower = 50

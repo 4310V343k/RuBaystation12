@@ -79,3 +79,18 @@
 		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_PADDED
 	)
+
+/obj/item/clothing/accessory/armor_plate/advanced
+	name = "advanced armor plate"
+	desc = "A heavier advanced armor plate with additional ablative coating and minimal weight. Attaches to a plate carrier."
+	icon_state = "armor_special"
+	armor = list(
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_RESISTANT,
+		laser = ARMOR_LASER_MAJOR,
+		energy = ARMOR_ENERGY_RESISTANT,
+		bomb = ARMOR_BOMB_PADDED
+	)
+	origin_tech = list(TECH_MATERIAL = 3)
+	matter = list(MATERIAL_STEEL = 12000, MATERIAL_PLASTIC = 10000)
+	slowdown = 0.2

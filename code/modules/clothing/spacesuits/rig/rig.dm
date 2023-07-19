@@ -299,6 +299,17 @@
 	var/seal_target = !canremove
 	var/failed_to_seal
 
+	var/obj/screen/rig_booting/booting_L = new
+	var/obj/screen/rig_booting/booting_R = new
+
+	if(!seal_target)
+		booting_L.icon_state = "boot_left"
+		booting_R.icon_state = "boot_load"
+		animate(booting_L, alpha=230, time=30, easing=SINE_EASING)
+		animate(booting_R, alpha=200, time=20, easing=SINE_EASING)
+		wearer.client.screen += booting_L
+		wearer.client.screen += booting_R
+
 	canremove = 0 // No removing the suit while unsealing.
 	sealing = 1
 
@@ -374,6 +385,10 @@
 	sealing = null
 
 	if(failed_to_seal)
+		wearer.client.screen -= booting_L
+		wearer.client.screen -= booting_R
+		qdel(booting_L)
+		qdel(booting_R)
 		for(var/obj/item/piece in list(helmet,boots,gloves,chest))
 			if(!piece) continue
 			piece.icon_state = "[initial(icon_state)][!seal_target ? "" : "_sealed"]"
@@ -388,6 +403,12 @@
 	to_chat(wearer, "<span class='info'><b>Your entire suit [canremove ? "loosens as the components relax" : "tightens around you as the components lock into place"].</b></span>")
 	if(!canremove && update_visible_name)
 		visible_name = wearer.real_name
+	wearer.client.screen -= booting_L
+	qdel(booting_L)
+	booting_R.icon_state = "boot_done"
+	spawn(40)
+		wearer.client.screen -= booting_R
+		qdel(booting_R)
 
 	if(wearer != initiator)
 		to_chat(initiator, "<span class='info'>Suit adjustment complete. Suit is now [canremove ? "unsealed" : "sealed"].</span>")
@@ -1007,6 +1028,15 @@
 
 /mob/living/carbon/human/get_rig()
 	return wearing_rig
+
+//Boot animation screen objects
+/obj/screen/rig_booting
+	screen_loc = "1,1"
+	icon = 'icons/obj/rig_boot.dmi'
+	icon_state = ""
+	layer = HUD_ABOVE_ITEM_LAYER
+	mouse_opacity = 0
+	alpha = 20 //Animated up when loading
 
 #undef ONLY_DEPLOY
 #undef ONLY_RETRACT

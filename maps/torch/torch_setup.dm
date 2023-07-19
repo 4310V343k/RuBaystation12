@@ -51,6 +51,13 @@
 				location_desc = ", азимут [bearing]."
 			welcome_text += "<li>\A <b>[O.name]</b>[location_desc]</li>"
 
+		if(SSstation.station_traits.len)
+			welcome_text += "<hr><b>Выявленные расхождения в показаниях:</b><BR>"
+			for(var/i in SSstation.station_traits)
+				var/datum/station_trait/station_trait_iterator = i
+				if(!station_trait_iterator.show_in_report)
+					return
+				welcome_text += "[station_trait_iterator.get_report()]<BR>"
 		welcome_text += "<hr>"
 
 	post_comm_message("SEV Torch Sensor Readings", welcome_text)

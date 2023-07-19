@@ -46,7 +46,7 @@
 
 //Skrell Baseline Suit
 /obj/item/rig/skrell
-	name = "skrellian recon hardsuit"
+	name = "skrellian recon HCM"
 	desc = "A powerful recon hardsuit with integrated power supply and atmosphere. It's impressive design perfectly tailors to the user's body."
 	icon_state = "skrell_standard_rig"
 	item_state = null

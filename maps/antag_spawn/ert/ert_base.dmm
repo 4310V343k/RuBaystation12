@@ -7,6 +7,7 @@
 	autoset_access = 0;
 	name = "Head"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -24,9 +25,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "aj" = (
@@ -44,10 +43,13 @@
 /turf/unsimulated/floor/plating,
 /area/map_template/rescue_base/base)
 "al" = (
-/obj/structure/railing/mapped,
+/obj/effect/floor_decal/corner/black/border{
+	dir = 6
+	},
 /turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "dark"
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
 	},
 /area/map_template/rescue_base/base)
 "ao" = (
@@ -64,9 +66,8 @@
 	pixel_y = -22
 	},
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "ar" = (
@@ -99,12 +100,16 @@
 /turf/unsimulated/floor/plating,
 /area/map_template/rescue_base/base)
 "aC" = (
-/obj/machinery/disperser/front{
-	dir = 1
+/obj/effect/floor_decal/corner/black/border{
+	dir = 6
+	},
+/obj/item/device/radio/intercom/specops{
+	dir = 1;
+	pixel_y = -22
 	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
 	},
 /area/map_template/rescue_base/base)
 "aD" = (
@@ -154,10 +159,28 @@
 	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
+"aH" = (
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
+"aP" = (
+/obj/effect/floor_decal/corner/black/border,
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
 "aV" = (
-/obj/structure/railing/mapped{
-	dir = 4;
-	icon_state = "railing0-1"
+/obj/effect/floor_decal/corner/black/border,
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -172,15 +195,19 @@
 	},
 /area/map_template/rescue_base/base)
 "be" = (
-/obj/machinery/computer/modular/preset/cardslot/command,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 1
+	},
 /turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "dark"
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
 	},
 /area/map_template/rescue_base/base)
 "bf" = (
 /obj/machinery/vending/dinnerware,
 /obj/effect/floor_decal/corner/blue/diagonal,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -211,7 +238,9 @@
 	},
 /area/map_template/rescue_base/base)
 "bo" = (
-/obj/machinery/computer/ship/engines,
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -227,13 +256,13 @@
 	},
 /area/map_template/rescue_base/base)
 "br" = (
-/obj/structure/railing/mapped{
-	dir = 8;
-	icon_state = "railing0-1"
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_y = 4
 	},
 /turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "dark"
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/map_template/rescue_base/base)
 "bt" = (
@@ -249,17 +278,15 @@
 	},
 /area/map_template/rescue_base/base)
 "bE" = (
-/obj/machinery/disperser/middle{
-	dir = 1
-	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "bF" = (
-/obj/structure/bed/chair/comfy/blue{
-	dir = 1
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -267,17 +294,16 @@
 	},
 /area/map_template/rescue_base/base)
 "bG" = (
-/obj/machinery/disperser/back{
-	dir = 1
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
 	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
 	},
 /area/map_template/rescue_base/base)
 "bH" = (
-/obj/structure/table/glass,
-/obj/effect/floor_decal/corner/blue/three_quarters{
+/obj/effect/floor_decal/industrial/loading{
 	dir = 8
 	},
 /turf/unsimulated/floor{
@@ -377,24 +403,19 @@
 /obj/item/gun/energy/laser,
 /obj/item/gun/energy/laser,
 /obj/item/gun/energy/laser,
-/obj/item/gun/energy/laser,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
 "co" = (
-/obj/structure/table/glass,
-/obj/item/book/manual/solgov_law{
-	pixel_x = 3;
-	pixel_y = 3
-	},
-/obj/effect/floor_decal/corner/blue/three_quarters{
-	dir = 1
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "dark"
+	icon_state = "reinforced"
 	},
 /area/map_template/rescue_base/base)
 "cp" = (
@@ -569,6 +590,13 @@
 	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
+"da" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
 "db" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -637,8 +665,8 @@
 	},
 /area/map_template/rescue_base/base)
 "dB" = (
-/obj/structure/noticeboard{
-	pixel_x = 32
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -653,6 +681,16 @@
 /obj/item/device/megaphone,
 /obj/item/device/megaphone,
 /obj/item/device/megaphone,
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
+"dG" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 10
+	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -703,6 +741,7 @@
 /obj/item/device/paicard,
 /obj/item/device/paicard,
 /obj/item/device/paicard,
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -733,6 +772,7 @@
 /obj/item/modular_computer/tablet/lease/preset/command,
 /obj/item/modular_computer/tablet/lease/preset/command,
 /obj/item/modular_computer/tablet/lease/preset/command,
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -760,10 +800,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/storage/white_vest,
 /obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -815,10 +852,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/storage/brown_vest,
 /obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -832,10 +866,7 @@
 /obj/item/clothing/accessory/storage/holster/thigh,
 /obj/item/clothing/accessory/storage/holster/thigh,
 /obj/item/clothing/accessory/storage/holster/thigh,
-/obj/item/device/radio/intercom/specops{
-	dir = 1;
-	pixel_y = -22
-	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -1164,10 +1195,9 @@
 /obj/item/folder/white,
 /obj/item/folder/yellow,
 /obj/item/folder/blue,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "fN" = (
@@ -1188,10 +1218,10 @@
 /obj/item/device/radio/intercom/specops{
 	pixel_y = 22
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "fU" = (
@@ -1201,6 +1231,9 @@
 	},
 /obj/structure/sign/double/solgovflag/left{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
 	},
 /turf/unsimulated/floor{
 	color = "#543c30";
@@ -1220,6 +1253,9 @@
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/black,
 /obj/structure/sign/double/solgovflag/right{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 5
 	},
 /turf/unsimulated/floor{
 	color = "#543c30";
@@ -1315,10 +1351,9 @@
 /area/map_template/rescue_base/base)
 "gm" = (
 /obj/machinery/papershredder,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "go" = (
@@ -1375,6 +1410,7 @@
 	name = "Commanding Officer's Office";
 	req_access = list(109)
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -1384,6 +1420,9 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1425,6 +1464,9 @@
 /obj/structure/sign/double/solgovflag/left{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -1433,6 +1475,9 @@
 "gS" = (
 /obj/structure/sign/double/solgovflag/right{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1473,7 +1518,6 @@
 "hb" = (
 /obj/structure/table/woodentable_reinforced/walnut/maple,
 /obj/random/drinkbottle,
-/obj/random/drinkbottle,
 /obj/item/reagent_containers/food/drinks/glass2/rocks,
 /obj/item/reagent_containers/food/drinks/glass2/rocks,
 /turf/unsimulated/floor{
@@ -1507,6 +1551,19 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"hR" = (
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
 "ib" = (
 /obj/structure/table/reinforced,
 /obj/item/device/radio/intercom/specops{
@@ -1521,10 +1578,7 @@
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/storage/black_vest,
 /obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -1535,16 +1589,19 @@
 /obj/item/storage/fancy/cigar,
 /obj/item/flame/lighter/zippo/brass,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "in" = (
-/obj/machinery/pipedispenser/disposal,
+/obj/effect/floor_decal/corner/black/bordercorner,
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 4
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
 	},
 /area/map_template/rescue_base/base)
 "iv" = (
@@ -1552,11 +1609,13 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
 "iD" = (
-/obj/structure/closet/athletic_mixed,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/device/radio/intercom/specops{
+	pixel_y = 22
+	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "monotiledark"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "iJ" = (
@@ -1571,6 +1630,7 @@
 /obj/item/storage/backpack/ert/security,
 /obj/item/storage/belt/holster/security/tactical,
 /obj/item/storage/belt/holster/security/tactical,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -1662,6 +1722,7 @@
 /obj/item/storage/box/gloves,
 /obj/item/storage/box/gloves,
 /obj/item/storage/box/masks,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -1680,9 +1741,8 @@
 	},
 /area/map_template/rescue_base/base)
 "jY" = (
-/obj/effect/floor_decal/industrial/warning/corner,
-/obj/structure/sign/solgov{
-	pixel_y = 32
+/obj/effect/floor_decal/corner/black/border{
+	dir = 5
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -1706,6 +1766,14 @@
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
+	},
+/area/map_template/rescue_base/base)
+"kp" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/undies_wardrobe,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "kt" = (
@@ -1740,14 +1808,12 @@
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
 "kH" = (
-/obj/structure/table/rack,
-/obj/item/clothing/suit/armor/pcarrier/medium/command,
-/obj/item/clothing/head/helmet/solgov/command,
-/obj/item/gun/energy/gun,
-/obj/item/cell/guncell/pistol/large,
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 8
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "kI" = (
@@ -1769,6 +1835,14 @@
 /obj/machinery/shieldgen,
 /turf/unsimulated/floor{
 	dir = 1;
+	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
+"lf" = (
+/obj/structure/bed/chair,
+/obj/structure/bed/chair,
+/turf/unsimulated/floor{
+	dir = 8;
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
@@ -1796,9 +1870,9 @@
 /obj/item/shield/riot,
 /obj/item/shield/riot,
 /obj/item/shield/riot,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	dir = 8;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "ll" = (
@@ -1906,6 +1980,12 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"mx" = (
+/obj/structure/table/steel_reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "mS" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -1937,6 +2017,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -1970,6 +2051,15 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"nk" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "nH" = (
 /obj/structure/table/rack,
 /obj/item/gun/projectile/shotgun/pump/combat,
@@ -1996,9 +2086,8 @@
 /obj/structure/table/woodentable_reinforced/ebony/walnut,
 /obj/item/reagent_containers/food/drinks/glass2/coffeecup/SCG,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "nR" = (
@@ -2049,6 +2138,8 @@
 /obj/structure/table/rack,
 /obj/item/gun/energy/ionrifle,
 /obj/item/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle/small,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -2069,9 +2160,8 @@
 	},
 /obj/item/clothing/mask/smokable/cigarette/cigar,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "oE" = (
@@ -2164,9 +2254,19 @@
 /obj/item/storage/belt/medical,
 /obj/item/storage/belt/medical/emt,
 /obj/item/storage/belt/medical/emt,
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
+"pk" = (
+/obj/effect/floor_decal/spline/fancy/black/corner,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "pE" = (
@@ -2212,13 +2312,13 @@
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/tacgoggles,
 /obj/item/clothing/glasses/tacgoggles,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
 "qs" = (
-/obj/effect/floor_decal/industrial/warning,
 /obj/structure/sign/solgov{
 	pixel_y = 32
 	},
@@ -2281,12 +2381,16 @@
 /obj/item/clothing/head/beret/solgov/fleet/medical,
 /obj/item/clothing/head/beret/solgov/fleet/medical,
 /obj/item/clothing/head/beret/solgov/fleet/medical,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "rl" = (
 /obj/machinery/vending/assist,
+/obj/item/device/radio/intercom/specops{
+	pixel_y = 22
+	},
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -2318,12 +2422,20 @@
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
+"rx" = (
+/obj/machinery/pipedispenser,
+/turf/unsimulated/floor{
+	dir = 1;
+	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
 "rz" = (
 /obj/structure/table/rack,
 /obj/item/cell/guncell/pistol/overcharged/huge,
 /obj/item/cell/guncell/pistol/overcharged/huge,
 /obj/item/cell/guncell/pistol/overcharged/huge,
 /obj/item/cell/guncell/pistol/overcharged/huge,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -2385,9 +2497,15 @@
 /obj/structure/table/rack,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
+"sj" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "sm" = (
@@ -2461,6 +2579,7 @@
 /obj/item/cell/guncell/large,
 /obj/item/cell/guncell/large,
 /obj/item/cell/guncell/large,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2493,18 +2612,11 @@
 	},
 /area/map_template/rescue_base/base)
 "tT" = (
-/obj/structure/table/reinforced,
-/obj/item/stock_parts/circuitboard/smes,
-/obj/item/stock_parts/circuitboard/smes,
-/obj/item/stock_parts/smes_coil,
-/obj/item/stock_parts/smes_coil,
-/obj/item/stock_parts/smes_coil/super_capacity,
-/obj/item/stock_parts/smes_coil/super_capacity,
-/obj/item/stock_parts/smes_coil/super_io,
-/obj/item/stock_parts/smes_coil/super_io,
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "tX" = (
@@ -2513,10 +2625,28 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/map_template/rescue_base/start)
+"ur" = (
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "uv" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
@@ -2527,6 +2657,7 @@
 /obj/structure/bed/chair{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -2546,6 +2677,7 @@
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
 /obj/item/gun/energy/gun,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -2586,6 +2718,15 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
+"vd" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/item/storage/box/handcuffs,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
 "ve" = (
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
@@ -2649,9 +2790,8 @@
 	},
 /obj/item/pen/multi/cmd/co,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "vC" = (
@@ -2675,6 +2815,46 @@
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
+"we" = (
+/obj/structure/table/rack,
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/stack/material/steel{
+	amount = 50;
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/effect/floor_decal/industrial/outline/orange,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
 	},
 /area/map_template/rescue_base/base)
 "wh" = (
@@ -2717,6 +2897,7 @@
 /obj/structure/table/rack,
 /obj/item/gun/energy/gun/nuclear,
 /obj/item/gun/energy/gun/nuclear,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -2834,6 +3015,15 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"xT" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 5
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "ya" = (
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -2848,6 +3038,7 @@
 	id_tag = "standardrescue";
 	name = "Heavy Equipment"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -2883,6 +3074,7 @@
 	id_tag = "standardrescue";
 	name = "EVA"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -2902,8 +3094,12 @@
 	},
 /area/map_template/rescue_base/base)
 "yA" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/handcuffs,
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2973,11 +3169,22 @@
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
-"zf" = (
-/obj/structure/bed/chair,
-/obj/structure/bed/chair,
+"zc" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun,
+/obj/item/gun/energy/gun,
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
+"zf" = (
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
@@ -3023,9 +3230,11 @@
 /obj/item/clothing/gloves/insulated,
 /obj/item/clothing/gloves/insulated,
 /obj/item/clothing/gloves/insulated,
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "zP" = (
@@ -3050,6 +3259,15 @@
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
+"Ay" = (
+/obj/effect/floor_decal/corner/black/bordercee{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Az" = (
@@ -3093,6 +3311,7 @@
 /obj/item/cell/guncell/pistol/large,
 /obj/item/cell/guncell/pistol/large,
 /obj/item/cell/guncell/pistol/large,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3123,9 +3342,8 @@
 /obj/structure/table/woodentable_reinforced/ebony/walnut,
 /obj/item/stamp/solgov,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "Bt" = (
@@ -3173,6 +3391,16 @@
 /obj/random/solgov,
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
+"Cf" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
 "Cl" = (
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
@@ -3314,6 +3542,15 @@
 	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
+"CD" = (
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
 "CE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 4
@@ -3331,6 +3568,20 @@
 /turf/unsimulated/floor{
 	icon_state = "cult";
 	name = "plating"
+	},
+/area/map_template/rescue_base/base)
+"CP" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/item/folder,
+/obj/item/folder/nt,
+/obj/item/folder/red,
+/obj/item/folder/white,
+/obj/item/folder/yellow,
+/obj/item/folder/blue,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "CR" = (
@@ -3403,6 +3654,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
+"Dn" = (
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "Dq" = (
 /obj/structure/table/reinforced,
 /obj/machinery/cell_charger,
@@ -3424,12 +3684,23 @@
 /area/map_template/rescue_base/start)
 "DI" = (
 /obj/structure/table/rack,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/head/helmet,
-/obj/item/clothing/head/helmet,
+/obj/item/clothing/suit/armor/ert,
+/obj/item/clothing/suit/armor/ert,
+/obj/item/clothing/head/helmet/solgov,
+/obj/item/clothing/head/helmet/solgov,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	dir = 1;
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
+"DQ" = (
+/obj/item/clothing/shoes/orange,
+/obj/item/clothing/under/color/orange,
+/obj/structure/closet{
+	name = "Prisoner's Locker"
+	},
+/turf/unsimulated/floor{
+	dir = 8;
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
@@ -3458,6 +3729,15 @@
 "Ee" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stamp/solgov,
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
+"Eh" = (
+/obj/structure/bed/chair/comfy/blue,
+/obj/effect/floor_decal/corner/black/border,
 /turf/unsimulated/floor{
 	color = "#543c30";
 	icon = 'icons/turf/flooring/wood.dmi';
@@ -3514,6 +3794,15 @@
 	icon_state = "vault"
 	},
 /area/map_template/rescue_base/base)
+"EF" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
 "EG" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/spray/cleaner,
@@ -3538,6 +3827,19 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
+"EP" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun,
+/obj/item/cell/guncell/pistol/large,
+/obj/item/clothing/suit/armor/ert{
+	name = "command emergency response armor"
+	},
+/obj/item/clothing/head/helmet/solgov,
+/turf/unsimulated/floor{
+	dir = 1;
+	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
 "EU" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced/crescent{
@@ -3599,9 +3901,9 @@
 "FB" = (
 /obj/machinery/reagentgrinder,
 /obj/item/reagent_containers/glass/beaker/large,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "FE" = (
@@ -3622,12 +3924,11 @@
 	},
 /area/map_template/rescue_base/base)
 "FQ" = (
-/turf/unsimulated/wall{
-	desc = "A secure airlock. Doesn't look like you can get through easily.";
-	dir = 4;
-	icon = 'icons/obj/doors/centcomm/door.dmi';
-	icon_state = "closed";
-	name = "Maintenance Tunnels"
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Ga" = (
@@ -3689,6 +3990,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
+"Gs" = (
+/obj/item/storage/box/handcuffs,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
+"GB" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 6
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "GF" = (
 /obj/structure/table/reinforced,
 /obj/item/device/camera,
@@ -3725,13 +4042,17 @@
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
 "GU" = (
-/obj/machinery/pipedispenser,
-/obj/item/device/radio/intercom/specops{
-	pixel_y = 22
-	},
+/obj/machinery/fabricator/hacked,
+/obj/effect/floor_decal/industrial/outline/orange,
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
+"Hb" = (
+/obj/effect/floor_decal/industrial/hatch/red,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Hf" = (
@@ -3762,6 +4083,15 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
+"HB" = (
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "HC" = (
 /obj/item/device/radio/intercom/specops{
 	pixel_y = 22
@@ -3776,6 +4106,16 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
+"HI" = (
+/obj/effect/floor_decal/corner/black/border,
+/obj/effect/floor_decal/corner/black/border{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "Ic" = (
 /obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/corner/black/border{
@@ -3861,9 +4201,9 @@
 "IW" = (
 /obj/machinery/chemical_dispenser/ert,
 /obj/item/reagent_containers/glass/beaker/large,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "IX" = (
@@ -3935,6 +4275,16 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"Jq" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
 "Js" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/floor_decal/corner/yellow/border{
@@ -3944,9 +4294,9 @@
 /area/map_template/rescue_base/start)
 "Jx" = (
 /obj/machinery/chem_master,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "JI" = (
@@ -3985,6 +4335,7 @@
 	},
 /obj/item/taperoll/police,
 /obj/item/taperoll/police,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -4129,9 +4480,11 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Le" = (
@@ -4140,10 +4493,20 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
-"Lp" = (
+"Lo" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
+"Lp" = (
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Lu" = (
@@ -4186,6 +4549,17 @@
 /area/map_template/rescue_base/base)
 "LC" = (
 /obj/structure/closet/secure_closet/cos,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/unsimulated/floor{
+	color = "#543c30";
+	icon = 'icons/turf/flooring/wood.dmi';
+	icon_state = "wood"
+	},
+/area/map_template/rescue_base/base)
+"LE" = (
+/obj/effect/floor_decal/corner/black/border{
+	dir = 10
+	},
 /turf/unsimulated/floor{
 	color = "#543c30";
 	icon = 'icons/turf/flooring/wood.dmi';
@@ -4239,9 +4613,11 @@
 /obj/item/clothing/glasses/meson,
 /obj/item/clothing/glasses/welding/superior,
 /obj/item/clothing/glasses/welding/superior,
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
 /turf/unsimulated/floor{
-	dir = 1;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Mg" = (
@@ -4305,6 +4681,19 @@
 	icon_state = "freezerfloor"
 	},
 /area/map_template/rescue_base/base)
+"MY" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/armor/pcarrier/medium,
+/obj/item/clothing/suit/armor/pcarrier/medium,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/head/helmet,
+/obj/effect/floor_decal/industrial/outline/grey{
+	pixel_x = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "Na" = (
 /obj/structure/closet/secure_closet/CO{
 	storage_capacity = 60
@@ -4317,8 +4706,8 @@
 /obj/item/clothing/accessory/solgov/department/command/fleet,
 /obj/item/clothing/accessory/solgov/fleet_patch/fifth,
 /obj/item/clothing/accessory/solgov/specialty/officer,
-/obj/item/clothing/accessory/solgov/ec_scarf/observatory,
 /obj/item/clothing/accessory/solgov/rank/fleet/officer/o5,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	color = "#543c30";
 	icon = 'icons/turf/flooring/wood.dmi';
@@ -4349,9 +4738,8 @@
 	pixel_y = -3
 	},
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "Nx" = (
@@ -4442,6 +4830,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/map_template/rescue_base/start)
+"On" = (
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	dir = 8;
+	icon_state = "vault"
+	},
+/area/map_template/rescue_base/base)
 "Os" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Storage"
@@ -4492,6 +4887,13 @@
 	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
+"PC" = (
+/obj/effect/floor_decal/industrial/loading,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
+	},
+/area/map_template/rescue_base/base)
 "PU" = (
 /obj/effect/paint/hull,
 /obj/machinery/door/blast/regular{
@@ -4510,9 +4912,6 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/combat,
 /obj/item/storage/firstaid/combat,
 /obj/item/storage/firstaid/combat,
@@ -4640,6 +5039,7 @@
 	id_tag = "heavyrescue";
 	name = "Restricted Equipment"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -4732,6 +5132,7 @@
 	req_access = list(109);
 	secured_wires = 1
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -4739,6 +5140,11 @@
 /area/map_template/rescue_base/base)
 "Sp" = (
 /obj/machinery/hologram/holopad/longrange,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/spline/fancy/black/corner,
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 8
+	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -4813,6 +5219,13 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/map_template/rescue_base/start)
+"SZ" = (
+/obj/effect/floor_decal/corner/black/border,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
+	},
+/area/map_template/rescue_base/base)
 "Tc" = (
 /obj/effect/wingrille_spawn/reinforced/crescent,
 /turf/space,
@@ -4887,6 +5300,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	color = "#543c30";
 	icon = 'icons/turf/flooring/wood.dmi';
@@ -4979,6 +5393,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/map_template/rescue_base/start)
+"VA" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "VD" = (
 /obj/structure/table/rack,
 /obj/item/ammo_magazine/mil_rifle,
@@ -5007,6 +5430,14 @@
 "VV" = (
 /turf/simulated/floor/tiled/white,
 /area/map_template/rescue_base/start)
+"VX" = (
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/map_template/rescue_base/base)
 "Wc" = (
 /obj/structure/table/rack,
 /obj/item/cell/guncell/overcharged/huge,
@@ -5014,6 +5445,7 @@
 /obj/item/cell/guncell/overcharged/huge,
 /obj/item/cell/guncell/overcharged/huge,
 /obj/item/cell/guncell/overcharged/huge,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "dark"
@@ -5078,42 +5510,12 @@
 	},
 /area/map_template/rescue_base/base)
 "Wu" = (
-/obj/structure/table/rack,
-/obj/item/stack/material/glass{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50
-	},
-/obj/item/stack/material/glass{
-	amount = 50
-	},
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/stack/material/steel{
-	amount = 50;
-	pixel_x = 2;
-	pixel_y = 2
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
 	},
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "reinforced"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "WC" = (
@@ -5155,16 +5557,15 @@
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	dir = 8;
-	icon_state = "vault"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Xb" = (
-/obj/structure/undies_wardrobe,
+/obj/effect/floor_decal/industrial/loading,
 /turf/unsimulated/floor{
-	icon = 'icons/turf/flooring/tiles.dmi';
-	icon_state = "monotiledark"
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "Xg" = (
@@ -5216,13 +5617,12 @@
 	},
 /area/map_template/rescue_base/base)
 "Ye" = (
-/obj/item/clothing/shoes/orange,
-/obj/item/clothing/under/color/orange,
-/obj/structure/closet{
-	name = "Prisoner's Locker"
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
 	},
 /turf/unsimulated/floor{
-	icon_state = "dark"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "reinforced"
 	},
 /area/map_template/rescue_base/base)
 "Yi" = (
@@ -5236,10 +5636,11 @@
 	pixel_x = 4;
 	pixel_y = 32
 	},
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/suit/armor/pcarrier/medium,
-/obj/item/clothing/head/helmet,
-/obj/item/clothing/head/helmet,
+/obj/item/clothing/suit/armor/ert,
+/obj/item/clothing/suit/armor/ert,
+/obj/item/clothing/head/helmet/solgov,
+/obj/item/clothing/head/helmet/solgov,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
@@ -5250,14 +5651,15 @@
 /obj/item/gun/magnetic/railgun/automatic/mmi{
 	pixel_y = -3
 	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 "YB" = (
-/obj/machinery/fabricator/hacked,
+/obj/effect/floor_decal/industrial/outline/orange,
+/obj/structure/closet/emcloset,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "reinforced"
@@ -5273,6 +5675,13 @@
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
+	},
+/area/map_template/rescue_base/base)
+"YK" = (
+/obj/effect/floor_decal/spline/fancy/black,
+/turf/unsimulated/floor{
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "dark"
 	},
 /area/map_template/rescue_base/base)
 "YN" = (
@@ -5312,9 +5721,7 @@
 /obj/structure/sign/solgov{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
+/obj/effect/floor_decal/corner/red/bordercee,
 /turf/unsimulated/floor{
 	icon = 'icons/turf/flooring/tiles.dmi';
 	icon_state = "monotiledark"
@@ -5366,10 +5773,10 @@
 /obj/machinery/computer/modular/preset/full/ert{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/unsimulated/floor{
-	color = "#543c30";
-	icon = 'icons/turf/flooring/wood.dmi';
-	icon_state = "wood"
+	icon = 'icons/turf/flooring/tiles.dmi';
+	icon_state = "monotiledark"
 	},
 /area/map_template/rescue_base/base)
 
@@ -7158,9 +7565,9 @@ hl
 hl
 hl
 hl
-ad
-ad
-ad
+hl
+hl
+hl
 ad
 wN
 ad
@@ -7248,12 +7655,12 @@ hl
 hl
 hl
 hl
+hl
+hl
 ad
 ad
-eQ
-eQ
 ad
-ec
+ad
 ec
 ec
 ec
@@ -7271,7 +7678,7 @@ Mt
 Mt
 Mt
 Mt
-hl
+Mt
 hl
 hl
 hl
@@ -7340,12 +7747,12 @@ hl
 hl
 ad
 ad
-ec
 ad
-ec
-ec
-ec
-ec
+ad
+ad
+eQ
+eQ
+ad
 ec
 ec
 ec
@@ -7363,31 +7770,31 @@ ad
 ad
 ad
 ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7427,14 +7834,14 @@ ad
 ad
 ad
 ad
-ad
-ad
+hl
+hl
 eW
 eW
-ec
-ec
+eW
+eW
 ad
-ec
+eQ
 ec
 ec
 ec
@@ -7455,31 +7862,31 @@ lx
 VD
 ad
 ya
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-hi
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7518,8 +7925,9 @@ ad
 hb
 EV
 ad
-rv
-jk
+ad
+ad
+ad
 ad
 ad
 ad
@@ -7529,7 +7937,6 @@ ad
 eQ
 eQ
 ad
-ec
 ec
 cG
 cG
@@ -7547,31 +7954,31 @@ en
 en
 ad
 ya
-ec
-oS
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-oS
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-oS
-ec
-hi
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7602,7 +8009,7 @@ hl
 hl
 hl
 hl
-ec
+hl
 ec
 ad
 fG
@@ -7610,13 +8017,13 @@ gC
 ND
 Na
 ad
-sO
-bM
+rv
+jk
 ad
 aD
 aW
-aW
 nX
+ad
 ad
 ad
 ad
@@ -7634,36 +8041,36 @@ ad
 ad
 rz
 Wc
-en
-en
-en
+bE
+bH
+bE
 ad
 ya
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-hi
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7692,7 +8099,7 @@ hl
 hl
 hl
 hl
-ec
+hl
 ec
 ec
 ec
@@ -7702,18 +8109,18 @@ gC
 ag
 FI
 ad
-bM
+sO
 Em
 ad
 aE
 aW
-aW
 Gl
 ad
+ad
 bS
 bS
 ad
-ZS
+On
 en
 en
 yg
@@ -7731,31 +8138,31 @@ Rp
 ad
 ad
 ya
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-hi
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7782,8 +8189,8 @@ hl
 hl
 hl
 hl
-ec
-ec
+hl
+hl
 ec
 ec
 ec
@@ -7805,7 +8212,7 @@ ad
 bM
 CU
 ad
-ZS
+On
 en
 en
 En
@@ -7819,35 +8226,35 @@ RW
 dI
 CR
 KP
-en
+Ay
 CT
 ad
-ad
-jY
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-gQ
-lY
-ec
-ec
-ec
-ec
-hi
+ya
+Mt
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7873,20 +8280,20 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 ad
 ad
-ad
-ad
-ad
-ad
-fM
-ag
-ag
-ag
+CP
+Lo
+hR
+LE
 Nq
-ag
+fq
 YA
 ad
 aG
@@ -7907,39 +8314,39 @@ cV
 cV
 iU
 ad
-WO
-en
-en
-en
-en
+iD
+bE
+bE
+bE
+HI
 nH
 ad
-ya
-eL
-ec
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-kC
-eU
-eU
-KD
-sn
-rA
-gQ
-lY
-ec
-ec
-hi
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+hl
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -7964,21 +8371,21 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 cp
 ec
-ec
-ec
-ec
-ec
 ad
 fQ
+Cf
 ag
-ag
-ag
+aP
 nQ
-ag
+ar
 ap
 ad
 nR
@@ -7999,39 +8406,39 @@ ad
 uQ
 RV
 yb
-en
-en
-en
-en
-en
+nk
+dB
+dB
+dB
+aV
 Cx
 ad
 ya
-eL
-eU
-eU
-Rk
-eR
-eU
-ge
-fz
-vI
-fu
-IX
-eU
-Kl
-SJ
-Uc
-El
-eU
-eU
-eU
-gL
-gL
-gX
 ec
 ec
-hi
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ad
+ad
+ad
+ad
+hl
+hl
 hl
 hl
 hl
@@ -8055,20 +8462,20 @@ hl
 hl
 hl
 hl
-aC
-bE
-bG
+hl
+hl
+hl
+hl
+ad
+ad
+ya
 cp
-ec
-ec
-ec
-ec
 ec
 ad
 fU
+aH
 ag
-ag
-Rh
+Eh
 Bo
 ah
 ZY
@@ -8091,39 +8498,39 @@ zD
 kc
 eq
 yb
-en
-en
-en
-en
-en
+xT
+bo
+bo
+bo
+GB
 op
 ad
 ya
-eL
-PU
-vq
-VV
-VV
-lD
-VV
-Al
-VV
-VV
-fA
-eU
-KS
-fn
-fn
-mU
-pI
-iX
-iv
-gK
-Es
-gX
+ec
+oS
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+oS
+ec
+ec
+ec
+ec
+ec
+ec
+oS
+ec
+ec
 ec
 ec
 hi
+hl
+hl
 hl
 hl
 hl
@@ -8148,19 +8555,19 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 cp
 ec
-ec
-ec
-ec
-ec
 ad
 fW
-ag
-ag
-ag
+in
+Jq
+al
 vz
 ij
 oC
@@ -8191,31 +8598,31 @@ wh
 eu
 ad
 ya
-eL
-PU
-tX
-VV
-VV
-mT
-VV
-Al
-VV
-VV
-IY
-eU
-KS
-fn
-fn
-mU
-bQ
-uE
-oO
-gK
-Es
-gX
 ec
+da
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+gQ
+lY
 ec
 hi
+hi
+hl
 hl
 hl
 hl
@@ -8241,10 +8648,10 @@ hl
 hl
 hl
 hl
-ad
-ad
-ad
-ad
+hl
+hl
+hl
+hl
 ad
 ad
 eG
@@ -8283,31 +8690,31 @@ ad
 ad
 ad
 ad
+qs
 eL
-PU
-xL
-oq
-wU
-eU
-wF
-ZC
-VV
-Ra
-Wl
-eU
-Le
-SU
-zC
-jj
-eU
-jG
-GH
-gK
-Es
-gX
 ec
-ec
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+kC
+eU
+eU
+KD
+sn
+rA
+gQ
+lY
 hi
+hl
 hl
 hl
 hl
@@ -8332,11 +8739,11 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
 ad
 ad
-en
-en
-en
 ad
 el
 eO
@@ -8372,34 +8779,34 @@ dN
 dQ
 dZ
 ig
-ad
+cU
 AA
 ya
+ec
 eL
 eU
 eU
+Rk
+eR
 eU
+ge
+fz
+vI
+fu
+IX
 eU
-eU
-eU
-eU
-DF
-eU
-Jj
-eU
-eS
-Yi
-eU
-eU
+Kl
+SJ
+Uc
+El
 eU
 eU
 eU
 gL
 gL
 gX
-ec
-ec
 hi
+hl
 hl
 hl
 hl
@@ -8422,13 +8829,13 @@ hl
 hl
 hl
 hl
+hl
+hl
 aj
 aF
 ad
-en
-en
-en
-en
+ad
+ad
 ad
 ey
 eX
@@ -8458,40 +8865,40 @@ ar
 cU
 dk
 eq
-ec
-ec
-ec
-ec
-ec
+bG
+co
+co
+co
+dG
 eo
-ad
+cU
 AA
 ya
+ec
 eL
-fI
-fN
-gt
-lg
-pE
-Yi
-Bu
-Fo
-Ie
-Lz
-Yi
-fn
-Vs
+PU
+vq
+VV
+VV
+lD
+VV
+Al
+VV
+VV
+fA
 eU
-BO
-oB
-fd
-go
+KS
+fn
+fn
+mU
+pI
+iX
+iv
 gK
 Es
 gX
-ec
-ec
 hi
+hl
 hl
 hl
 hl
@@ -8516,8 +8923,8 @@ hl
 hl
 hl
 hl
-ad
-ad
+hl
+hl
 ad
 ad
 ad
@@ -8538,52 +8945,52 @@ cK
 cK
 cK
 cK
-Ro
-ar
+cK
+VX
 eq
 cU
 iO
 ar
 tk
 AG
-ar
+Xb
 cW
 dk
 eq
-ec
-ec
-ec
-ec
-ec
+EF
+GU
+we
+dZ
+SZ
 ep
-ad
+cU
 AA
 ya
+ec
 eL
-fI
-fV
-gM
+PU
+tX
+VV
+VV
+mT
+VV
+Al
+VV
+VV
+IY
+eU
+KS
 fn
-vC
-xz
-Cl
 fn
-fn
-Dx
-Yi
-fn
-fn
-Gj
-sL
-sL
-sL
-go
+mU
+bQ
+uE
+oO
 gK
 Es
 gX
-ec
-ec
 hi
+hl
 hl
 hl
 hl
@@ -8608,11 +9015,11 @@ hl
 hl
 hl
 hl
-ad
-bH
+hl
+hl
+cU
 cq
 cZ
-ad
 ad
 ad
 fl
@@ -8630,8 +9037,8 @@ ad
 OL
 ad
 ad
-dk
-ar
+ad
+tT
 eq
 cU
 ww
@@ -8642,15 +9049,384 @@ ao
 cY
 dk
 eq
-ec
-ec
-ec
-ec
-ec
-Wu
+jY
+Ye
+CD
+ig
+SZ
+YB
 ad
 ib
 ya
+ec
+eL
+PU
+xL
+oq
+wU
+eU
+wF
+ZC
+VV
+Ra
+Wl
+eU
+Le
+SU
+zC
+jj
+eU
+jG
+GH
+gK
+Es
+gX
+hi
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+"}
+(37,1,1) = {"
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+cU
+cU
+bI
+cr
+en
+eA
+fq
+fq
+ad
+oE
+Dn
+pk
+Wu
+Wu
+Wu
+ad
+bt
+ao
+ao
+ad
+SR
+cU
+tT
+eq
+ad
+Yk
+ao
+li
+WX
+ao
+cY
+dk
+eq
+ad
+Bb
+EF
+eo
+SZ
+YB
+ad
+Eb
+ya
+ec
+eL
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+DF
+eU
+Jj
+eU
+eS
+Yi
+eU
+eU
+eU
+eU
+eU
+gL
+gL
+gX
+hi
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+"}
+(38,1,1) = {"
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+cU
+en
+cu
+db
+dH
+ad
+ad
+ad
+ad
+gE
+en
+YK
+uB
+uB
+uB
+ad
+yD
+bj
+ao
+ad
+zP
+cU
+tT
+eq
+ad
+ad
+cU
+cU
+cU
+ad
+ad
+YI
+eq
+ad
+ad
+jY
+Ye
+aC
+ad
+ad
+ki
+br
+ec
+eL
+fI
+fN
+gt
+lg
+pE
+Yi
+Bu
+Fo
+Ie
+Lz
+Yi
+fn
+Vs
+eU
+BO
+oB
+fd
+go
+gK
+Es
+gX
+hi
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+"}
+(39,1,1) = {"
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+cU
+bL
+cy
+dn
+dn
+eB
+ad
+ad
+gc
+fl
+nL
+YK
+uB
+uB
+mY
+ad
+bt
+ao
+ao
+ad
+ad
+ad
+dk
+YS
+ed
+ed
+ed
+ed
+ed
+ed
+ed
+kc
+YS
+ed
+ed
+ed
+ed
+ed
+mw
+ad
+ad
+ad
+qs
+eL
+fI
+fV
+gM
+fn
+vC
+xz
+Cl
+fn
+fn
+Dx
+Yi
+fn
+fn
+Gj
+sL
+sL
+sL
+go
+gK
+Es
+gX
+hi
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+"}
+(40,1,1) = {"
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+hl
+cU
+bT
+bi
+dx
+en
+eC
+ad
+ad
+gg
+fq
+Bt
+Sp
+ur
+ur
+uv
+ad
+yD
+bj
+ao
+Hh
+ad
+Zd
+yA
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+eq
+pM
+TW
+eK
+ec
 eL
 fI
 fY
@@ -8673,8 +9449,6 @@ yY
 gK
 Es
 gX
-ec
-ec
 hi
 hl
 hl
@@ -8684,8 +9458,13 @@ hl
 hl
 hl
 hl
+hl
 "}
-(37,1,1) = {"
+(41,1,1) = {"
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -8698,51 +9477,48 @@ hl
 hl
 hl
 cU
-cU
-cU
+cg
+cF
+db
+db
+eD
 ad
-bI
-cr
-en
-en
-en
-eA
-fq
-fq
 ad
-en
-en
-en
-en
-en
-en
+gl
+fv
+Sy
+YK
+uB
+uB
+uB
 ad
 bt
 ao
 ao
-bt
 ad
-dk
-ar
-eq
 ad
-Yk
-ao
-li
-WX
-ao
-cY
-dk
-eq
 ad
-Bb
+YI
+BB
+cK
+cK
+cK
+cK
+cK
+cK
+cK
+Ro
+BB
+cK
+cK
+cK
+cK
+cK
+Mg
+pM
+TW
+eK
 ec
-ec
-ec
-YB
-ad
-Eb
-ya
 eL
 fI
 gb
@@ -8765,8 +9541,6 @@ Jd
 gK
 Es
 gX
-ec
-ec
 hi
 hl
 hl
@@ -8776,8 +9550,13 @@ hl
 hl
 hl
 hl
+hl
 "}
-(38,1,1) = {"
+(42,1,1) = {"
+hl
+hl
+hl
+hl
 hl
 hl
 hl
@@ -8791,31 +9570,36 @@ hl
 hl
 cU
 en
-aV
-en
-en
-cu
-db
-db
-dH
+cH
+dn
+ee
 ad
 ad
 ad
 ad
-gE
+gR
 en
-en
+YK
 uB
 uB
 uB
 ad
-yD
+sI
 bj
-bj
-yD
+ao
+ad
+SR
+cU
+tT
+eq
+ad
+ad
+cU
+cU
+cU
+ad
 ad
 dk
-ar
 eq
 ad
 ad
@@ -8824,17 +9608,9 @@ cU
 cU
 ad
 ad
-YI
-eq
 ad
 ad
-ec
-ec
-ec
-ad
-ad
-ki
-Eb
+qs
 eL
 eU
 eU
@@ -8857,377 +9633,8 @@ eU
 gL
 gL
 gX
-ec
-ec
 hi
 hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-"}
-(39,1,1) = {"
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-cU
-al
-be
-en
-bL
-cy
-dn
-dn
-dn
-eB
-ad
-ad
-gc
-fl
-nL
-en
-uB
-uB
-mY
-ad
-bt
-ao
-ao
-bt
-ad
-dk
-ar
-YS
-ed
-ed
-ed
-ed
-ed
-ed
-ed
-kc
-YS
-ed
-ed
-ed
-ed
-ed
-mw
-ad
-ad
-ad
-qs
-eU
-ZI
-WN
-lT
-Vt
-eU
-Sx
-Pc
-We
-GG
-eU
-QD
-jN
-wO
-Th
-eU
-Gn
-Sw
-gK
-Es
-gX
-ec
-ec
-hi
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-"}
-(40,1,1) = {"
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-cU
-al
-bi
-bF
-bT
-bi
-dx
-en
-en
-eC
-ad
-ad
-gg
-fq
-Bt
-Sp
-en
-en
-uv
-ad
-yD
-bj
-bj
-yD
-ad
-Zd
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-ar
-eq
-pM
-TW
-eK
-eL
-lM
-QH
-CE
-CE
-uR
-GO
-EI
-fn
-fn
-Kg
-eU
-RC
-fn
-fn
-sm
-Kj
-NX
-Ct
-gK
-Es
-gX
-ec
-ec
-hi
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-"}
-(41,1,1) = {"
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-cU
-al
-bo
-en
-cg
-cF
-db
-db
-db
-eD
-ad
-ad
-gl
-fv
-Sy
-en
-uB
-uB
-uB
-ad
-bt
-ao
-ao
-bt
-ad
-YI
-ar
-BB
-cK
-cK
-cK
-cK
-cK
-cK
-cK
-Ro
-BB
-cK
-cK
-cK
-cK
-cK
-Mg
-pM
-TW
-eK
-eL
-Uy
-gk
-kI
-kI
-Ji
-Ky
-IM
-fn
-fn
-xy
-eU
-RQ
-fn
-fn
-WC
-eU
-xJ
-qE
-gK
-Es
-gX
-ec
-ec
-hi
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-"}
-(42,1,1) = {"
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-cU
-en
-br
-en
-en
-cH
-dn
-dn
-ee
-ad
-ad
-ad
-ad
-gR
-en
-en
-uB
-uB
-uB
-ad
-sI
-bj
-bj
-yD
-ad
-dk
-ar
-eq
-ad
-ad
-cU
-cU
-cU
-ad
-ad
-dk
-eq
-ad
-ad
-cU
-cU
-cU
-ad
-ad
-ad
-ad
-qs
-eU
-eU
-yE
-th
-Ru
-eU
-qF
-Ic
-Ic
-NJ
-eU
-Su
-hy
-Js
-Hx
-eU
-eU
-eU
-gL
-gL
-gX
-ec
-ec
-hi
 hl
 hl
 hl
@@ -9249,39 +9656,39 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 cU
 cU
-cU
-ad
 ck
 cN
-en
-dB
 en
 eA
 fq
 fq
 ad
 gS
-en
-en
-en
-en
-en
+HB
+kH
+bF
+bF
+bF
 ad
-Hh
-ao
-ao
 Az
+ao
+ao
 ad
-dk
-ar
+zP
+cU
+tT
 eq
 ad
 DI
 ao
-ao
-ao
+qw
+qw
 ao
 dc
 dk
@@ -9292,34 +9699,34 @@ ao
 ao
 ao
 ao
-DI
+MY
 ad
 ya
+ec
 eL
-ec
 eU
+ZI
+WN
+lT
+Vt
 eU
+Sx
+Pc
+We
+GG
 eU
+QD
+jN
+wO
+Th
 eU
-eU
-KC
-KC
-KC
-eU
-eU
-eU
-eU
-eU
-eU
-eU
-KD
-sn
-CS
-zl
-Nh
-ec
-ec
+Gn
+Sw
+gK
+Es
+gX
 hi
+hl
 hl
 hl
 hl
@@ -9344,11 +9751,11 @@ hl
 hl
 hl
 hl
-ad
-co
+hl
+hl
+cU
 cS
 dA
-ad
 ad
 ad
 fv
@@ -9366,8 +9773,8 @@ ad
 OL
 ad
 ad
-dk
-ar
+ad
+tT
 eq
 cU
 si
@@ -9384,34 +9791,34 @@ ao
 ao
 ao
 ao
-si
+zc
 ad
 ya
-sQ
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-zl
-Nh
 ec
-ec
-ec
-ec
+eL
+lM
+QH
+CE
+CE
+uR
+GO
+EI
+fn
+fn
+Kg
+eU
+RC
+fn
+fn
+sm
+Kj
+NX
+Ct
+gK
+Es
+gX
 hi
+hl
 hl
 hl
 hl
@@ -9436,8 +9843,8 @@ hl
 hl
 hl
 hl
-ad
-ad
+hl
+hl
 ad
 ad
 ad
@@ -9458,20 +9865,20 @@ ed
 ed
 ed
 ed
-kc
-ar
+ed
+zf
 eq
 cU
 pb
 ar
 LR
 ar
-ar
+Xb
 QZ
 dk
 eq
 JK
-ar
+FQ
 ar
 NV
 UN
@@ -9480,30 +9887,30 @@ zJ
 ad
 ya
 ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
+eL
+Uy
+gk
+kI
+kI
+Ji
+Ky
+IM
+fn
+fn
+xy
+eU
+RQ
+fn
+fn
+WC
+eU
+xJ
+qE
+gK
+Es
+gX
 hi
+hl
 hl
 hl
 hl
@@ -9526,13 +9933,13 @@ hl
 hl
 hl
 hl
+hl
+hl
 az
 aF
 ad
-ag
-ag
-ag
-ag
+ad
+ad
 ad
 eE
 eX
@@ -9558,7 +9965,7 @@ jR
 ar
 yu
 ar
-qw
+VA
 Tc
 dk
 eq
@@ -9572,30 +9979,30 @@ Ma
 ad
 ya
 ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
+eL
+eU
+eU
+yE
+th
+Ru
+eU
+qF
+Ic
+Ic
+NJ
+eU
+Su
+hy
+Js
+Hx
+eU
+eU
+eU
+gL
+gL
+gX
 hi
+hl
 hl
 hl
 hl
@@ -9620,11 +10027,11 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
 ad
 ad
-ag
-ag
-ag
 ad
 eF
 fc
@@ -9664,30 +10071,30 @@ KT
 ad
 ya
 ec
-oS
+eL
 ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-oS
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-oS
-ec
+eU
+eU
+eU
+eU
+eU
+KC
+KC
+KC
+eU
+eU
+eU
+eU
+eU
+eU
+eU
+KD
+sn
+CS
+zl
+Nh
 hi
+hl
 hl
 hl
 hl
@@ -9713,10 +10120,10 @@ hl
 hl
 hl
 hl
-ad
-ad
-ad
-ad
+hl
+hl
+hl
+hl
 ad
 ad
 eG
@@ -9749,37 +10156,37 @@ eq
 cU
 Hf
 ar
-Ht
-Wq
+Cs
+xf
 ar
 xf
 ad
 ya
 ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
-ec
+sQ
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+zl
+Nh
 ec
 hi
+hi
+hl
 hl
 hl
 hl
@@ -9804,17 +10211,17 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 cp
 ec
-ec
-ec
-ec
-ec
 ad
 gm
-ag
+be
 ag
 ag
 OQ
@@ -9841,37 +10248,37 @@ eq
 ad
 rl
 ar
-Ht
-Wq
+ar
+ar
 ar
 Jg
 ad
-FQ
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
-ad
+ya
+ec
+oS
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+oS
+ec
+ec
+ec
+ec
+ec
+ec
+oS
+ec
+ec
+ec
+ec
+hi
+hl
+hl
 hl
 hl
 hl
@@ -9895,18 +10302,18 @@ hl
 hl
 hl
 hl
-aC
-bE
-bG
+hl
+hl
+hl
+hl
+ad
+ad
+ya
 cp
-ec
-ec
-ec
-ec
 ec
 ad
 fM
-ag
+be
 ag
 Rh
 gu
@@ -9931,37 +10338,37 @@ ad
 qN
 eq
 ad
-GU
-ar
-ar
-ar
-ar
-Cs
+sg
+IO
+kT
+kT
+KH
+rx
 ad
 ya
-ya
-ya
-ya
-ya
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
+ec
 ad
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
+ad
+ad
+ad
 hl
 hl
 hl
@@ -9988,17 +10395,17 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 cp
 ec
-ec
-ec
-ec
-ec
 ad
-gu
-ag
+mx
+be
 ag
 ag
 gu
@@ -10018,39 +10425,39 @@ wj
 ao
 ao
 ao
-ao
+PC
 yl
 dk
 eq
 ad
-in
-ar
-ar
-ar
-ar
-tT
 ad
-ya
-ya
-ya
-ya
-ya
 ad
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
-hl
+cU
+cU
+cU
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
+ad
 hl
 hl
 hl
@@ -10081,16 +10488,16 @@ hl
 hl
 hl
 hl
+hl
+hl
+hl
+hl
 ad
 ad
 ad
 ad
-ad
-ad
-ad
-ad
-gu
-ag
+mx
+be
 ag
 ag
 ag
@@ -10110,25 +10517,25 @@ yQ
 ao
 ao
 ao
-ao
+PC
 yl
 dk
-eq
-ad
-IO
+YS
+RV
+cU
 Lp
-kT
-kT
-KH
-sg
+ar
+ar
+ar
+DQ
 ad
-ya
-ya
-ya
-ya
-ya
 ad
-hl
+Tx
+Ei
+DU
+QU
+ad
+Mt
 hl
 hl
 hl
@@ -10174,8 +10581,8 @@ hl
 hl
 hl
 hl
-ec
-ec
+hl
+hl
 ec
 ec
 ec
@@ -10205,22 +10612,22 @@ vN
 ad
 ad
 dk
+fq
 eq
-ad
-ad
-ad
 cU
-cU
-cU
+Gs
+YN
+ar
+ar
+DQ
 ad
+vd
+en
+en
+en
+Ft
 ad
-ad
-ad
-ad
-ad
-ad
-ad
-hl
+Mt
 hl
 hl
 hl
@@ -10268,7 +10675,7 @@ hl
 hl
 hl
 hl
-ec
+hl
 ec
 ec
 ec
@@ -10278,11 +10685,11 @@ ar
 ar
 ar
 ar
-ar
+QR
 ad
-iD
-Fp
-NW
+ad
+rW
+LJ
 JI
 Fp
 ad
@@ -10297,22 +10704,22 @@ KL
 ad
 uQ
 kc
+fq
 eq
-cU
-yA
-YN
-ar
-ar
-ar
-ar
-Ye
 ad
-Tx
-Ei
-DU
-QU
+Xg
+Wj
+GF
+ar
+DQ
 ad
-hl
+ad
+en
+lf
+en
+DR
+ad
+Mt
 hl
 hl
 hl
@@ -10362,7 +10769,7 @@ hl
 hl
 hl
 hl
-ec
+hl
 ec
 ad
 gB
@@ -10370,10 +10777,10 @@ ha
 ar
 ar
 ar
-QR
+EP
 ad
-rW
-fq
+ad
+kp
 LJ
 wE
 nh
@@ -10389,22 +10796,22 @@ yZ
 ad
 dk
 fq
+fq
 eq
-ad
-Xg
-Wj
-GF
+tS
 ar
 ar
 ar
-Ye
+ar
+ar
+ar
+xa
+en
+en
+en
+NT
 ad
-en
-en
-en
-Ft
-ad
-hl
+Mt
 hl
 hl
 hl
@@ -10462,10 +10869,10 @@ ad
 rC
 Et
 oW
-kH
 ad
-Xb
-fq
+ad
+ad
+ad
 Gd
 yh
 Fp
@@ -10481,22 +10888,22 @@ oR
 ad
 xM
 cK
+cK
 Mg
-tS
-ar
-TQ
-ar
-ar
-ar
-TQ
-ar
-xa
-en
-zf
-en
-DR
 ad
-hl
+TQ
+sj
+sj
+sj
+TQ
+Hb
+ad
+FA
+Ga
+Zf
+XP
+ad
+Mt
 hl
 hl
 hl
@@ -10555,8 +10962,8 @@ ad
 ad
 ad
 ad
-ad
-ad
+hl
+hl
 ad
 ad
 ad
@@ -10583,12 +10990,12 @@ cU
 ru
 cU
 ad
-en
-en
-en
-NT
 ad
-hl
+ad
+ad
+ad
+ad
+Mt
 hl
 hl
 hl
@@ -10654,9 +11061,9 @@ ad
 ad
 ad
 ad
+ad
 cG
-ec
-ec
+cG
 ad
 QP
 ao
@@ -10675,12 +11082,12 @@ iJ
 ar
 RD
 ad
-FA
-Ga
-Zf
-XP
-ad
-hl
+eW
+eW
+eW
+Mt
+Mt
+Mt
 hl
 hl
 hl
@@ -10744,11 +11151,11 @@ hl
 hl
 hl
 hl
+hl
+hl
 ad
 ad
 ad
-cG
-cG
 ad
 ad
 RP
@@ -10770,8 +11177,8 @@ ad
 ad
 ad
 ad
-ad
-ad
+hl
+hl
 hl
 hl
 hl
@@ -10838,9 +11245,9 @@ hl
 hl
 hl
 hl
-ad
-ad
-ad
+hl
+hl
+hl
 ad
 wN
 ad

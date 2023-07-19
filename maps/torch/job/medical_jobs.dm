@@ -5,12 +5,13 @@
 	minimal_player_age = 2
 	minimum_character_age = list(SPECIES_HUMAN = 29)
 	ideal_character_age = 45
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "Главный медицинский офицер"
 	selection_color = "#013d3b"
 	economic_power = 10
 	alt_titles = list(
+		"Psionic Physician",
 		"Surgeon")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
 	allowed_branches = list(
@@ -45,9 +46,15 @@
 		access_crematorium, access_chemistry, access_surgery,
 		access_medical_equip, access_solgov_crew, access_senmed, access_radio_med
 	)
+	give_psionic_implant_on_join = TRUE
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
+
+/datum/job/senior_doctor/equip(var/mob/living/carbon/human/H)
+	if(H.mind?.role_alt_title == "Psionic Physician")
+		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
+	return ..()
 
 /datum/job/senior_doctor/get_description_blurb()
 	return "Вы - Врач. Ваша обязанность - проводить операции и обучать врачей-ординаторов.\
@@ -272,7 +279,6 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/counselor
 	alt_titles = list(
 		"Psychiatrist",
-		"Psionic Counselor" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist,
 		"Psionic Mentalist" = /decl/hierarchy/outfit/job/torch/crew/medical/counselor/mentalist
 	)
 
@@ -309,9 +315,7 @@
 	give_psionic_implant_on_join = TRUE
 
 /datum/job/psychiatrist/equip(var/mob/living/carbon/human/H)
-	if(H.mind?.role_alt_title == "Psionic Counselor")
-		psi_faculties = list("[PSI_REDACTION]" = PSI_RANK_OPERANT)
-	if(H.mind?.role_alt_title == "Mentalist")
+	if(H.mind?.role_alt_title == "Psionic Mentalist")
 		psi_faculties = list("[PSI_COERCION]" = PSI_RANK_OPERANT)
 	return ..()
 

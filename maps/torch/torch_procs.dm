@@ -71,6 +71,13 @@
 	set category = "Admin"
 	set name = "Awake Synth"
 
+	// Admin status checks
+	if (!istype(src,/datum/admins))
+		src = usr.client.holder
+	if (!istype(src,/datum/admins))
+		to_chat(usr, "ОШИБКА: Вы даже... НЕ АДМИНИСТРАТОР!")
+		return
+
 	var/datum/job/synthetic/synth = SSjobs.get_by_path(/datum/job/synthetic)
 	var/success
 	if(synth.total_positions == 0)

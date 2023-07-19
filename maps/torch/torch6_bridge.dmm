@@ -81,6 +81,7 @@
 "am" = (
 /obj/random/closet,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/prx_toy,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/bridge/forestarboard)
 "an" = (
@@ -2355,7 +2356,7 @@
 /area/bridge/meeting_room)
 "eq" = (
 /obj/machinery/door/airlock/sol{
-	name = "XO's Quarters";
+	name = "TO's Quarters";
 	secured_wires = 1
 	},
 /obj/machinery/door/firedoor,
@@ -2409,6 +2410,7 @@
 	id_tag = "hop_office_desk";
 	name = "XO Queue Privacy Shutters"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/xo)
 "eu" = (
@@ -3276,6 +3278,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/effect/floor_decal/shelter{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway/port)
 "fV" = (
@@ -3888,6 +3893,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "hH" = (
@@ -6426,6 +6432,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/xo)
 "oJ" = (
@@ -7346,7 +7355,6 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/blue/three_quarters,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -7355,6 +7363,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/bridge/hallway/port)
 "ra" = (
@@ -9660,6 +9669,7 @@
 "xb" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/solgov,
+/obj/random/prx_toy,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/bridge/foreport)
@@ -10281,8 +10291,8 @@
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai_foyer)
 "za" = (
-/obj/structure/closet/secure_closet/XO,
 /obj/random/drinkbottle,
+/obj/structure/closet/secure_closet/TO,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "zb" = (
@@ -10429,7 +10439,6 @@
 /obj/item/storage/box/lights/mixed,
 /obj/random/coin,
 /obj/random/firstaid,
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/sign/warning/nosmoking_1{
 	pixel_x = 2;
 	pixel_y = 24
@@ -10476,6 +10485,7 @@
 	pixel_y = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/security/bridgecheck)
 "zN" = (
@@ -10558,6 +10568,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "Ab" = (
@@ -10814,7 +10825,6 @@
 	name = "Port Bridge Blast Doors";
 	opacity = 0
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/multi_tile/glass/command{
 	autoset_access = 0;
 	dir = 8;
@@ -10822,6 +10832,7 @@
 	name = "Bridge Access";
 	req_access = list(list("ACCESS_BRIDGE","ACCESS_TORCH_CREW"))
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/bridge/hallway/port)
 "AN" = (
@@ -12279,6 +12290,7 @@
 	initial_id_tag = "torch_primary_pd";
 	name = "Point Defense Controller"
 	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/storage)
 "GY" = (
@@ -12326,7 +12338,6 @@
 /obj/item/pinpointer,
 /obj/item/storage/toolbox/mechanical,
 /obj/item/device/multitool,
-/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/bridge/storage)
 "Hg" = (
@@ -12355,6 +12366,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/spline/fancy/black,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/xo)
 "Hi" = (
@@ -12364,7 +12376,7 @@
 "Ho" = (
 /obj/machinery/door/airlock/sol{
 	id_tag = "hopdoor";
-	name = "Executive Officer";
+	name = "Tactical Officer";
 	secured_wires = 1
 	},
 /obj/machinery/door/firedoor,
@@ -12445,7 +12457,6 @@
 	name = "Starboard Bridge Blast Doors";
 	opacity = 0
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/multi_tile/glass/command{
 	autoset_access = 0;
 	dir = 8;
@@ -12456,6 +12467,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/bridge/hallway/starboard)
 "Ht" = (
@@ -14231,6 +14243,7 @@
 	},
 /obj/effect/floor_decal/corner/red/mono,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "Og" = (
@@ -15645,6 +15658,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/bridge/fore)
 "TA" = (
@@ -15856,7 +15870,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/rd)
 "Uk" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/blast/regular/open{
 	density = 0;
@@ -15871,6 +15884,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/bridge/hallway/starboard)
 "Uo" = (
@@ -16071,6 +16085,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/shelter{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/bridge/fore)
 "Vn" = (
@@ -17195,6 +17212,7 @@
 	},
 /obj/random/plushie,
 /mob/living/simple_animal/passive/corgi/Ian,
+/obj/effect/floor_decal/spline/fancy/black/corner,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/xo)
 "ZV" = (

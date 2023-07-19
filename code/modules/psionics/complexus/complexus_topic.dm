@@ -1,11 +1,11 @@
-/datum/psi_complexus/CanUseTopic(var/mob/user, var/datum/topic_state/state = GLOB.default_state)
+/datum/psi_complexus/CanUseTopic(mob/user, datum/topic_state/state = GLOB.default_state)
 	return (user.client && check_rights(R_ADMIN, FALSE, user.client))
 
-/datum/psi_complexus/Topic(var/href, var/list/href_list)
+/datum/psi_complexus/Topic(href, list/href_list)
 	. = ..()
 	if(!. && check_rights(R_ADMIN))
 		if(href_list && href_list["remove_psionics"])
-			if(!QDELETED(src) && !QDELETED(owner?.psi) && owner.psi == src)
+			if(!QDELETED(src) && owner && !QDELETED(owner.psi) && owner.psi == src)
 				log_and_message_admins("removed all psionics from [key_name(owner)].")
 				to_chat(owner, SPAN_NOTICE("<b>Your psionic powers vanish abruptly, leaving you cold and empty.</b>"))
 				QDEL_NULL(owner.psi)
@@ -16,5 +16,5 @@
 			. = TRUE
 		if(.)
 			var/datum/admins/admin = GLOB.admins[usr.key]
-			if(istype(admin)) 
+			if(istype(admin))
 				admin.show_player_panel(owner)

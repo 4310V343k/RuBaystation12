@@ -124,7 +124,7 @@
 	return
 */
 
-/obj/structure/changeling_cocoon/damage_health(var/amount)
+/obj/structure/changeling_cocoon/damage_health(amount)
 	health -= amount
 	if(health < max_health / 4 && victim)
 		visible_message(SPAN_WARNING("\icon[src] [src] разрывается и странная слизь вытекает из него!"))

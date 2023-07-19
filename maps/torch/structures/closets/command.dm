@@ -74,12 +74,12 @@
 		/obj/item/clothing/head/helmet/solgov/command,
 	)
 
-/obj/structure/closet/secure_closet/XO
-	name = "executive officer's locker"
+/obj/structure/closet/secure_closet/TO
+	name = "tactical officer's locker"
 	req_access = list(access_hop)
 	closet_appearance = /decl/closet_appearance/secure_closet/torch/command/xo
 
-/obj/structure/closet/secure_closet/XO/WillContain()
+/obj/structure/closet/secure_closet/TO/WillContain()
 	return list(
 		/obj/item/clothing/glasses/sunglasses,
 		/obj/item/device/radio/headset/heads/torchexec,

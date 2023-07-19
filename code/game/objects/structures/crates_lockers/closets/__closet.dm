@@ -280,7 +280,17 @@
 								 "<span class='notice'>You empty \the [LB] into \the [src].</span>", \
 								 "<span class='notice'>You hear rustling of clothes.</span>")
 			return
-
+//PRX-PORT-START
+	else if(istype(W, /obj/item/device/cratescanner))
+		var/obj/item/device/cratescanner/Cscanner = W
+		if(locked)
+			to_chat(user, SPAN_WARNING("[W] refuses to scan [src]. Unlock it first!"))
+			return
+		if(welded)
+			to_chat(user, SPAN_WARNING("[W] detects that [src] is welded shut, and refuses to scan."))
+			return
+		Cscanner.print_contents(name, contents, src.loc)
+//PRX-PORT-END
 		if(user.unEquip(W, loc))
 			W.pixel_x = 0
 			W.pixel_y = 0
@@ -558,3 +568,32 @@
 
 /obj/structure/closet/CanUseTopicPhysical(mob/user)
 	return CanUseTopic(user, GLOB.physical_no_access_state)
+
+/*
+==========================
+	Contents Scanner - PRX-PORT
+==========================
+*/
+/obj/item/device/cratescanner
+	name = "crate contents scanner"
+	desc = "A  handheld device used to scan and print a manifest of a container's contents. Does not work on locked crates, for privacy reasons."
+	icon_state = "cratescanner"
+	icon = 'icons/obj/destination_tagger.dmi'
+	matter = list(DEFAULT_WALL_MATERIAL = 250, MATERIAL_GLASS = 140)
+	w_class = ITEM_SIZE_SMALL
+	item_state = "electronic"
+	slot_flags = SLOT_BELT
+
+/obj/item/device/cratescanner/proc/print_contents(targetname, targetcontents, targetloc)
+	var/output = list()
+	var/list/outputstring
+	for(var/atom/item in targetcontents)
+		if(item.name in output)
+			output[item.name] = output[item.name] + 1
+		else
+			output[item.name] = 1
+	for(var/entry in output)
+		outputstring += "- [entry]: [output[entry]]x<br>"
+	var/obj/item/paper/printout = new /obj/item/paper(targetloc)
+	printout.info = "contents of [targetname]<br>"
+	printout.info += "[outputstring]"

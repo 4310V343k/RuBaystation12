@@ -139,7 +139,6 @@
 	detail_color = COLOR_COMMAND_BLUE
 
 /obj/item/card/id/torch/crew/jua
-	job_access_type = /datum/job/jua
 	detail_color = COLOR_COMMAND_BLUE
 
 /obj/item/card/id/torch/crew/pathfinder

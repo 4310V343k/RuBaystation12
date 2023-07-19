@@ -6,10 +6,9 @@
 		"Вы чувствуете инородное что-то прямо в твоём сознание!",
 		"Что-то пожирает ваш разум изнутри!",
 		"Вы можете почувствовать, как переписывается ваш мозг!",
-		"SomВаш разум медленно угасает и поглощается иномирной сущностью!",
+		"Ваш разум медленно угасает и поглощается иномирной сущностью!",
 		"<b>АЛЬФА СИГНАЛ БЕТА СИГНАЛ ДЕЛЬТА СИГНАЛ ЭПСИЛОН СИГНАЛ</b>"
 		)
-
 
 /datum/event/minispasm/announce()
 	priority_announcement.Announce( \
@@ -19,7 +18,7 @@
 		и ручные коротковолновые рации на время трансляции сигнала.", \
 		"Cuchulain Automated Array DEL-145" \
 		)
-	sound_to(world, sound(alarm_sound))
+	sound_to(world, sound(alarm_sound, volume = 30))
 
 /datum/event/minispasm/start()
 	var/list/victims = list()
@@ -33,7 +32,7 @@
 		var/obj/item/device/radio/source = victims[victim]
 		do_spasm(victim, source)
 
-/datum/event/minispasm/proc/do_spasm(var/mob/living/victim, var/obj/item/device/radio/source)
+/datum/event/minispasm/proc/do_spasm(mob/living/victim, obj/item/device/radio/source)
 	set waitfor = 0
 
 	if(iscarbon(victim) && !victim.isSynthetic())
@@ -67,4 +66,4 @@
 	priority_announcement.Announce( \
 		"ПРИОРИТЕТНОЕ ОПОВЕЩЕНИЕ: ТРАНСЛЯЦИЯ ПСИОНИЧЕСКОГО СИГНАЛА БЫЛА ПРЕКРАЩЕНА. Персоналу разрешено возобновить использование незащищенного радиопередающего оборудования. Фонд Кучулейн желает вам хорошего дня.", \
 		"Cuchulain Automated Array DEL-145",
-		new_sound = 'sound/misc/foundation_restore.ogg' )
+		new_sound = 'sound/misc/foundation_restore.ogg', volume = 30)

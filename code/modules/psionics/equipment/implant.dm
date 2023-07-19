@@ -73,7 +73,7 @@
 
 		// If we're disrupting psionic attempts at the moment, we might overload.
 		if(disrupts_psionics())
-			var/overload_amount = Floor(stress/10)
+			var/overload_amount = stress
 			if(overload_amount > 0)
 				overload += overload_amount
 				if(overload >= 100)

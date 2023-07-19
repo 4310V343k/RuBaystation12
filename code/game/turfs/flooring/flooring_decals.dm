@@ -388,7 +388,7 @@ var/global/list/floor_decals = list()
 
 /obj/effect/floor_decal/corner/pink
 	name = "pink corner"
-	color = COLOR_PALE_RED_GRAY
+	color = COLOR_PALE_RED
 
 /obj/effect/floor_decal/corner/pink/diagonal
 	icon_state = "corner_white_diagonal"
@@ -1346,3 +1346,174 @@ var/global/list/floor_decals = list()
 
 /obj/effect/floor_decal/stoneborder/corner
 	icon_state = "stoneborder_c"
+
+//PRX-PORT
+/obj/effect/floor_decal/board_number/one
+	icon_state = "board_1"
+
+/obj/effect/floor_decal/board_number/two
+	icon_state = "board_2"
+
+/obj/effect/floor_decal/board_number/three
+	icon_state = "board_3"
+
+/obj/effect/floor_decal/board_number/four
+	icon_state = "board_4"
+
+/obj/effect/floor_decal/board_number/five
+	icon_state = "board_5"
+
+/obj/effect/floor_decal/board_number/six
+	icon_state = "board_6"
+
+/obj/effect/floor_decal/board_number/seven
+	icon_state = "board_7"
+
+/obj/effect/floor_decal/board_number/eight
+	icon_state = "board_8"
+
+/obj/effect/floor_decal/board_letter/a
+	icon_state = "board_a"
+
+/obj/effect/floor_decal/board_letter/b
+	icon_state = "board_b"
+
+/obj/effect/floor_decal/board_letter/c
+	icon_state = "board_c"
+
+/obj/effect/floor_decal/board_letter/d
+	icon_state = "board_d"
+
+/obj/effect/floor_decal/board_letter/e
+	icon_state = "board_e"
+
+/obj/effect/floor_decal/board_letter/f
+	icon_state = "board_f"
+
+/obj/effect/floor_decal/board_letter/g
+	icon_state = "board_g"
+
+/obj/effect/floor_decal/board_letter/h
+	icon_state = "board_h"
+
+/obj/effect/floor_decal/caution
+	icon_state = "caution"
+
+/obj/effect/floor_decal/caution/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/sign_caution
+	icon_state = "sign_caution"
+
+/obj/effect/floor_decal/sign_caution/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/arrows
+	icon_state = "arrows"
+
+/obj/effect/floor_decal/arrows/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/bot_right
+	icon_state = "bot_right"
+
+/obj/effect/floor_decal/bot_left
+	icon_state = "bot_left"
+
+/obj/effect/floor_decal/trimline
+	icon_state = "trimline"
+
+/obj/effect/floor_decal/trimline_mid
+	icon_state = "trimline_mid"
+
+/obj/effect/floor_decal/trimline_corner
+	icon_state = "trimline_corner"
+
+/obj/effect/floor_decal/trimline_end
+	icon_state = "trimline_end"
+
+/obj/effect/floor_decal/trimline_box
+	icon_state = "trimline_box"
+
+/obj/effect/floor_decal/trimline_fill
+	icon_state = "trimline_fill"
+
+/obj/effect/floor_decal/trimline_mid_fill
+	icon_state = "trimline_mid_fill"
+
+/obj/effect/floor_decal/trimline_corner_fill
+	icon_state = "trimline_corner_fill"
+
+/obj/effect/floor_decal/trimline_end_fill
+	icon_state = "trimline_end_fill"
+
+/obj/effect/floor_decal/trimline_box_fill
+	icon_state = "trimline_box_fill"
+
+/obj/effect/floor_decal/trimline_arrow_cw
+	icon_state = "trimline_arrow_cw"
+
+/obj/effect/floor_decal/trimline_arrow_cw/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/trimline_arrow_ccw
+	icon_state = "trimline_arrow_ccw"
+
+/obj/effect/floor_decal/trimline_arrow_ccw/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/trimline_arrow_cw_fill
+	icon_state = "trimline_arrow_cw_fill"
+
+/obj/effect/floor_decal/trimline_arrow_cw_fill/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/trimline_arrow_ccw_fill
+	icon_state = "trimline_arrow_ccw_fill"
+
+/obj/effect/floor_decal/trimline_arrow_ccw_fill/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/trimline_warn
+	icon_state = "trimline_warn"
+
+/obj/effect/floor_decal/trimline_warn/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/trimline_warn_fill
+	icon_state = "trimline_warn_fill"
+
+/obj/effect/floor_decal/keep_clear
+	name = "keep clear"
+	icon_state = "keep_clear"
+
+/obj/effect/floor_decal/keep_clear/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/keep_clear/blue
+	color = COLOR_BLUE_GRAY
+
+/obj/effect/floor_decal/stop
+	icon_state = "stop"
+
+/obj/effect/floor_decal/stop/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/standhere
+	icon_state = "standhere"
+
+/obj/effect/floor_decal/standhere/hazard
+	color = "#d2d53d"
+
+/obj/effect/floor_decal/armory
+	icon_state = "armory"
+	color = COLOR_NT_RED
+
+/obj/effect/floor_decal/firstaid
+	icon_state = "firstaid"
+	color = "#333333"
+
+/obj/effect/floor_decal/shelter
+	icon_state = "shelter"
+	color = "#333333"
+//PRX-PORT-END

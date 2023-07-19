@@ -780,6 +780,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/center)
 "cI" = (
@@ -1703,6 +1704,7 @@
 	id_tag = "qm_warehouse2";
 	name = "Warehouse Shutters"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/quartermaster/storage/upper)
 "fB" = (
@@ -2364,6 +2366,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/fore)
 "hw" = (
@@ -2459,12 +2462,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/storage/auxillary/starboard)
 "hS" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "starboardaux_warehouse";
 	name = "Warehouse Shutters"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_grid,
 /area/storage/auxillary/starboard)
 "hT" = (
@@ -2594,6 +2597,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/center)
 "ij" = (
@@ -4047,6 +4051,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/fore)
 "nv" = (
@@ -4511,10 +4516,10 @@
 	id_tag = "teleport4";
 	name = "Fourth Deck Teleporter Access Shutters"
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/teleporter/fourthdeck)
 "pM" = (
@@ -6486,6 +6491,7 @@
 	},
 /obj/effect/floor_decal/corner/red/mono,
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/fore)
 "vB" = (
@@ -6503,6 +6509,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/corner/red/mono,
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/fore)
 "vC" = (
@@ -6659,6 +6666,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/center)
 "wm" = (
@@ -7882,6 +7890,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/center)
 "Aq" = (
@@ -8422,6 +8431,7 @@
 "CN" = (
 /obj/structure/closet/crate,
 /obj/random/junk,
+/obj/random/prx_toy,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/auxillary/port)
 "CO" = (
@@ -8463,12 +8473,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/storage/auxillary/port)
 "CS" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/shutters{
 	dir = 4;
 	id_tag = "portaux_warehouse";
 	name = "Warehouse Shutters"
 	},
+/obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/steel_grid,
 /area/storage/auxillary/port)
 "CT" = (
@@ -15079,6 +15089,7 @@
 "WQ" = (
 /obj/machinery/door/firedoor,
 /obj/effect/floor_decal/corner/brown,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/center)
 "WR" = (

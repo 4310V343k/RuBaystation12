@@ -1,5 +1,5 @@
 /obj/item/rig/vox
-	name = "alien rig control module"
+	name = "alien rig HCM"
 	desc = "A strange rig. Parts of it writhe and squirm as if alive. The visor looks more like a thick membrane."
 	suit_type = "alien rig"
 	icon_state = "vox_rig"

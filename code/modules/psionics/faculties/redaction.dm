@@ -22,8 +22,8 @@
 
 /decl/psionic_power/redaction/skinsight
 	name =            "Skinsight"
-	cost =            3
-	cooldown =        30
+	cost =            4
+	cooldown =        25
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_OPERANT
 	suppress_parent_proc = TRUE
@@ -40,8 +40,8 @@
 
 /decl/psionic_power/redaction/mend
 	name =            "Mend"
-	cost =            7
-	cooldown =        50
+	cost =            8
+	cooldown =        35
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	suppress_parent_proc = TRUE
@@ -129,7 +129,7 @@
 /decl/psionic_power/redaction/cleanse
 	name =            "Cleanse"
 	cost =            9
-	cooldown =        60
+	cooldown =        50
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_GRANDMASTER
 	suppress_parent_proc = TRUE
@@ -161,8 +161,8 @@
 
 /decl/psionic_power/revive
 	name =            "Revive"
-	cost =            25
-	cooldown =        80
+	cost =            50
+	cooldown =        120
 	use_grab =        TRUE
 	min_rank =        PSI_RANK_PARAMOUNT
 	faculty =         PSI_REDACTION

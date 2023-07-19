@@ -89,13 +89,13 @@
 			pew.current = target
 			pew.starting = get_turf(user)
 			pew.shot_from = user
-			pew.launch(target, user.zone_sel.selecting, (target.x-user.x), (target.y-user.y))
+			pew.launch(target, user.zone_sel.selecting, user)
 			return TRUE
 
 /decl/psionic_power/energistics/spark
 	name =            "Spark"
 	cost =            1
-	cooldown =        1
+	cooldown =        2
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	use_description = "Target a non-living target in melee range on harm intent to cause some sparks to appear. This can light fires."

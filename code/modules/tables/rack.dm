@@ -36,3 +36,4 @@
 
 /obj/structure/table/rack/dark
 	color = COLOR_GRAY40
+	material = MATERIAL_STEEL

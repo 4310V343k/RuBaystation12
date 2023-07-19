@@ -10,6 +10,12 @@
 	item_cost = 55
 	path = /obj/item/device/personal_shield
 
+/datum/uplink_item/item/tools/inducer
+	name = "Inducer"
+	desc = "Use this on powered equipment to put power back into it, be it a laser gun or some APC on the road."
+	item_cost = 20
+	path = /obj/item/inducer
+
 /datum/uplink_item/item/tools/toolbox
 	name = "Fully Loaded Toolbox"
 	desc = "A hefty toolbox filled with all the equipment you need to get past any construction or electrical issues. \

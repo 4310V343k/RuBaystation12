@@ -48,6 +48,7 @@ GLOBAL_DATUM_INIT(revs, /datum/antagonist/revolutionary, new)
 
 /datum/antagonist/revolutionary/equip(var/mob/living/carbon/human/revolutionary_mob)
 	spawn_uplink(revolutionary_mob)
+	sound_to(revolutionary_mob, 'proxima/sound/antag/revolutionary_tide.ogg')
 	. = ..()
 	if(!.)
 		return

@@ -161,6 +161,7 @@
 		/obj/item/device/camera,
 		/obj/item/toy/therapy_blue,
 		//proxima code start,
+		/obj/item/storage/briefcase/foundation/jerraman,
 		/obj/item/storage/briefcase/psinull,
 		//proxima code end,
 		/obj/item/storage/belt/general

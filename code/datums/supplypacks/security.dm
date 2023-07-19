@@ -146,11 +146,10 @@
 /decl/hierarchy/supply_pack/security/egun
 	name = "Weapons - Energy sidearms"
 	contains = list(/obj/item/gun/energy/gun/secure = 3)
-	cost = 30
+	cost = 36
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "energy sidearms crate"
 	access = access_armory
-	security_level = SUPPLY_SECURITY_ELEVATED
 
 /decl/hierarchy/supply_pack/security/egun/shady
 	name = "Weapons - Energy sidearms (For disposal)"

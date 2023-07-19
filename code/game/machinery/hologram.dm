@@ -58,8 +58,6 @@ var/global/const/HOLOPAD_MODE = RANGE_BASED
 
 	var/allow_ai = TRUE
 
-	var/list/linked_pdas
-
 /obj/machinery/hologram/holopad/New()
 	..()
 	desc = "It's a floor-mounted device for projecting holographic images. Its ID is '[loc.loc]'"
@@ -162,16 +160,9 @@ var/global/const/HOLOPAD_MODE = RANGE_BASED
 	targetpad.incoming_connection = 1
 	playsound(targetpad.loc, 'sound/machines/chime.ogg', 25, 5)
 	targetpad.icon_state = "[targetpad.base_icon]1"
-	targetpad.audible_message("<b>\The [src]</b> announces, \"Incoming communications request from [targetpad.sourcepad.loc.loc].\"")
-	// Notify any linked PDAs
-	if (LAZYLEN(targetpad.linked_pdas))
-		for (var/obj/item/modular_computer/pda/pda as anything in targetpad.linked_pdas)
-			if (!AreConnectedZLevels(get_z(targetpad), get_z(pda)))
-				continue
-			pda.receive_notification("Call at [targetpad.loc.loc] holopad.")
-	to_chat(user, SPAN_NOTICE("Trying to establish a connection to the holopad in [targetpad.loc.loc]... Please await confirmation from recipient."))
+	targetpad.audible_message("<b>\The [src]</b> пиликает, \"Обнаружен входящий запрос на установление соединения от \"[targetpad.sourcepad.loc.loc]\". Пожалуйста, коснитесь голопада для ответа на входящий вызов.\"")
+	to_chat(user, "<span class='notice'>Попытка установить соединение с голопадом в \"[targetpad.loc.loc]\"... Пожалуйста, дождитесь подтверждения от получателя.</span>")
 	targetpad.addrecentcall(get_area(src))
-
 
 /obj/machinery/hologram/holopad/proc/take_call(mob/living/carbon/user)
 	incoming_connection = 0
@@ -233,33 +224,6 @@ var/global/const/HOLOPAD_MODE = RANGE_BASED
 	else
 		to_chat(caller_id, "<span class='danger'>ERROR:</span> Unable to project hologram.")
 	return
-
-/obj/machinery/hologram/holopad/use_tool(obj/item/O, mob/user)
-	if (istype(O, /obj/item/modular_computer/pda))
-		if (LAZYISIN(linked_pdas, O))
-			unlink_pda(O)
-			to_chat(user, SPAN_NOTICE("You remove \the [O] from \the [src]'s notifications list."))
-			return TRUE
-		link_pda(O)
-		to_chat(user, SPAN_NOTICE("You add \the [O] to \the [src]'s notifications list. It will now be pinged whenever a call is received."))
-		return TRUE
-
-	..()
-
-/**
- * Proc to link/unlink PDAs
- */
-
-/obj/machinery/hologram/holopad/proc/link_pda(obj/item/modular_computer/pda/pda)
-	if (!istype(pda))
-		return
-	LAZYADD(linked_pdas, pda)
-	GLOB.destroyed_event.register(pda, src, .proc/unlink_pda)
-
-
-/obj/machinery/hologram/holopad/proc/unlink_pda(obj/item/modular_computer/pda/pda)
-	LAZYREMOVE(linked_pdas, pda)
-	GLOB.destroyed_event.unregister(pda, src, .proc/unlink_pda)
 
 /*This is the proc for special two-way communication between AI and holopad/people talking near holopad.
 For the other part of the code, check silicon say.dm. Particularly robot talk.*/
@@ -458,12 +422,6 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 /obj/machinery/hologram/holopad/Destroy()
 	for (var/mob/living/master in masters)
 		clear_holo(master)
-
-	if (LAZYLEN(linked_pdas))
-		for (var/obj/item/modular_computer/pda/pda as anything in linked_pdas)
-			unlink_pda(pda)
-		linked_pdas = null
-
 	return ..()
 
 /*

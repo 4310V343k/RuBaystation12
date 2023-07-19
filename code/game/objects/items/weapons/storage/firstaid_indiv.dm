@@ -1,4 +1,4 @@
-//Personal firstaid kit, from infinity
+//Personal firstaid kit | INF-PORT
 
 /obj/item/storage/firstaid/individual
 	name = "master kit"
@@ -48,7 +48,7 @@
 	name = "expeditionary individual medical kit"
 	desc = "A small box decorated in warning colors that contains a limited supply of medical reagents."
 	icon_state = "survivalexp"
-	storage_slots  = 9
+	storage_slots  = 10
 	startswith = list(
 		/obj/item/reagent_containers/hypospray/autoinjector/burn,
 		/obj/item/reagent_containers/hypospray/autoinjector/brute,
@@ -56,6 +56,7 @@
 		/obj/item/reagent_containers/hypospray/autoinjector/inaprovaline,
 		/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/dexalin,
 		/obj/item/reagent_containers/hypospray/autoinjector/pain = 2,
+		/obj/item/reagent_containers/hypospray/autoinjector/antirad,
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/ointment
 		)

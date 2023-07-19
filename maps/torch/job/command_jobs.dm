@@ -38,11 +38,11 @@
 	..()
 
 /datum/job/hop
-	title = "Executive Officer"
+	title = "Tactical Officer"
 	supervisors = "Командующему офицеру"
 	department = "Командный"
 	department_flag = COM
-	minimal_player_age = 14
+	minimal_player_age = 7
 	economic_power = 14
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 45
@@ -52,16 +52,17 @@
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/XO/fleet
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o5,
+		/datum/mil_rank/ec/o3,
+		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/fleet/o5
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
-	                    SKILL_COMPUTER    = SKILL_BASIC,
+	                    SKILL_COMPUTER    = SKILL_EXPERT,
 	                    SKILL_PILOT       = SKILL_BASIC)
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
-	                    SKILL_SCIENCE     = SKILL_MAX)
+	                    SKILL_SCIENCE     = SKILL_MAX,
+						SKILL_COMPUTER    = SKILL_MAX)
 	skill_points = 30
 
 	access = list(
@@ -86,7 +87,7 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hop/get_description_blurb()
-	return "Вы - Исполнительный офицер (ИО или ХО). Вы опытный старший офицер и второй человек на судне после Капитана. Вы несёте ответственность за стабильную работу судна под началом Командующего офицера. \
+	return "Вы - Офицер Наблюдения за ИИ (ОН). Вы опытный старший офицер и второй человек на судне после Капитана. Вы несёте ответственность за стабильную работу судна под началом Командующего офицера. \
 	В отсутствие КО, ожидается, что Вы займёте его место. \
 	Ваша основная задача - управлять главами отделов и всеми теми, кто не входит в них. \
 	Вы также ответственны за контрактников и пассажиров на борту судна. Старший советник по работе в личным составом и Мостовые офицеры являются инструментами в вашем распоряжении."
@@ -103,7 +104,6 @@
 		/datum/mil_branch/expeditionary_corps
 	)
 	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/ec/o5
 	)
 
@@ -145,7 +145,7 @@
 	title = "Chief Medical Officer"
 	supervisors = "Командующему и Исполнительному офицеру"
 	economic_power = 14
-	minimal_player_age = 14
+	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 35)
 	ideal_character_age = 48
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cmo
@@ -191,12 +191,12 @@
 	Действуйте в качестве второго хирурга или резервного химика в отсутствие того или другого. Ожидается, что Вы очень хорошо знаете медицину, а также основные регуляции."
 
 /datum/job/chief_engineer
-	title = "Chief Engineer"
+	title = "Chief Technical Officer"
 	supervisors = "Командующему и Исполнительному офицеру"
 	economic_power = 12
 	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 40
-	minimal_player_age = 14
+	minimal_player_age = 7
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -250,10 +250,10 @@
 	Вы - опытный инженер с большим багажом теоритических знаний. Вам также следует знать регуляции судна на приемлемом уровне."
 
 /datum/job/hos
-	title = "Chief of Security"
+	title = "Chief Security Officer"
 	supervisors = "Командующему и Исполнительному офицеру"
 	economic_power = 10
-	minimal_player_age = 14
+	minimal_player_age = 7
 	minimum_character_age = list(SPECIES_HUMAN = 25)
 	ideal_character_age = 35
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/cos
@@ -301,7 +301,7 @@
 	От Вас ожидается знание Военно-Юридического кодекса ЦПСС, Законов ЦПСС, кодов угроз и основных регуляций на самом высоком уровне."
 
 /datum/job/qm
-	title = "Supply Corps Officer"
+	title = "Chief Logistics Officer"
 	selection_color = "#964B00"
 	total_positions = 1
 	spawn_positions = 1
@@ -312,7 +312,7 @@
 	economic_power = 12
 	minimum_character_age = list(SPECIES_HUMAN = 24)
 	ideal_character_age = 40
-	minimal_player_age = 14
+	minimal_player_age = 7
 	hud_icon = "hudsupplyofficer"
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer
 	allowed_branches = list(
@@ -356,53 +356,6 @@
 	С другой стороны, вы отвечаете за целостность и учет всех складов на борту ГЭК 'Факел' и за тем, чем и как питаются, \
 	что пьют борту. Другими словми, офицер снабжения является главным по тому, что прибывает на склад судна извне и \
 	куда это вдальнейшем перераспределяется внутри судна. Также он отвечает за чистоту палуб."
-
-/datum/job/jua
-	title = "Judge Advocate"
-	department = "Поддержка командования"
-	department_flag = SPT
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Командующему и Исполнительному офицеру"
-	selection_color = "#2f2f7f"
-	economic_power = 10
-	minimum_character_age = list(SPECIES_HUMAN = 24)
-	ideal_character_age = 40
-	minimal_player_age = 14
-	hud_icon = "hudjudgeadvocate"
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/jua
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/jua/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/jua/army
-		)
-	allowed_ranks = list(
-		/datum/mil_rank/ec/o3,
-		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3,
-		)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_EXPERT,
-	                    SKILL_FINANCE     = SKILL_BASIC)
-	skill_points = 23
-	minimum_character_age = list(SPECIES_HUMAN = 22)
-
-	access = list(
-		access_representative, access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
-		access_bridge, access_janitor, access_kitchen, access_cargo, access_mailsorting, access_RC_announce, access_keycard_auth,
-		access_solgov_crew, access_aquila, access_aquila_helm, access_guppy, access_guppy_helm, access_external_airlocks,
-		access_eva, access_hangar, access_cent_creed, access_explorer, access_expedition_shuttle, access_expedition_shuttle_helm, access_teleporter,
-		access_torch_fax, access_torch_helm, access_radio_comm, access_radio_eng, access_radio_exp, access_radio_serv, access_radio_sci, access_radio_sup
-	)
-
-	alt_titles = list("Military Lawyer")
-	software_on_spawn = list(/datum/computer_file/program/reports)
-
-/datum/job/representative/get_description_blurb()
-	return "Вы - Военный прокурор. Консультруйте экипаж по вопросам закона. \
-	Рассматривайте апелляции гражданских и военнослужащих. \
-	Проводите суды. Отчитывайтесь о своих результатах Командующему офицеру"
 
 /datum/job/sea
 	title = "Senior Enlisted Advisor"

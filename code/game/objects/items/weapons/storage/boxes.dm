@@ -90,6 +90,18 @@
 					/obj/item/reagent_containers/food/snacks/proteinbar = 1,
 					/obj/item/device/oxycandle = 1)
 
+/obj/item/storage/box/survival/Initialize()
+	if(has_station_trait(/datum/station_trait/premium_crewbox))
+		startswith = list(/obj/item/clothing/mask/breath/scba = 1,
+						/obj/item/tank/oxygen_emergency = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/pain,
+						/obj/item/stack/medical/advanced/bruise_pack = 1,
+						/obj/item/device/flashlight/flare/glowstick = 1,
+						/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+						/obj/item/device/oxycandle = 1)
+	. = ..()
+
 /obj/item/storage/box/vox
 	name = "vox survival kit"
 	desc = "A box decorated in warning colors that contains a limited supply of survival tools. The panel and black stripe indicate this one contains nitrogen."
@@ -113,6 +125,19 @@
 					/obj/item/device/flashlight/flare/glowstick = 1,
 					/obj/item/reagent_containers/food/snacks/proteinbar = 1,
 					/obj/item/device/oxycandle = 1)
+
+/obj/item/storage/box/engineer/Initialize()
+	if(has_station_trait(/datum/station_trait/premium_crewbox))
+		startswith = list(/obj/item/clothing/mask/breath/scba = 1,
+						/obj/item/tank/oxygen_emergency_extended = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/pouch_auto/inaprovaline = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/antirad = 1,
+						/obj/item/reagent_containers/hypospray/autoinjector/pain = 1,
+						/obj/item/stack/medical/advanced/bruise_pack = 1,
+						/obj/item/device/flashlight/flare/glowstick = 1,
+						/obj/item/reagent_containers/food/snacks/proteinbar = 1,
+						/obj/item/device/oxycandle = 1)
+	. = ..()
 
 /obj/item/storage/box/gloves
 	name = "box of sterile gloves"

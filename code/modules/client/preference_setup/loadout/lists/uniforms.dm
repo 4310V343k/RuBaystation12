@@ -146,11 +146,24 @@
 	path = /obj/item/clothing/under/kimono
 	flags = GEAR_HAS_COLOR_SELECTION
 
+/datum/gear/uniform/pmc
+	display_name = "PMC uniform selection"
+	path = /obj/item/clothing/under
+
+/datum/gear/uniform/pmc/New()
+	..()
+	var/pmc = list()
+	pmc["SAARE utility uniform"]= /obj/item/clothing/under/saare
+	pmc["SAARE combat uniform"]= /obj/item/clothing/under/saare/combat
+	pmc["PCRC utility uniform"]	= /obj/item/clothing/under/pcrc
+	pmc["PCRC formal uniform"]	= /obj/item/clothing/under/pcrcsuit
+	gear_tweaks += new/datum/gear_tweak/path(pmc)
+
 /datum/gear/uniform/corporate
 	display_name = "corporate uniform selection"
 	path = /obj/item/clothing/under
 	allowed_branches = list(/datum/mil_branch/civilian)
-	
+
 /datum/gear/uniform/corporate/New()
 	..()
 	var/corps = list()
@@ -158,11 +171,8 @@
 	corps += /obj/item/clothing/under/rank/scientist/heph
 	corps += /obj/item/clothing/under/rank/scientist/zeng
 	corps += /obj/item/clothing/under/mbill
-	corps += /obj/item/clothing/under/saare
 	corps += /obj/item/clothing/under/aether
 	corps += /obj/item/clothing/under/hephaestus
-	corps += /obj/item/clothing/under/pcrc
-	corps += /obj/item/clothing/under/pcrcsuit
 	corps += /obj/item/clothing/under/wardt
 	corps += /obj/item/clothing/under/grayson
 	corps += /obj/item/clothing/under/focal

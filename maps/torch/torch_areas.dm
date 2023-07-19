@@ -678,7 +678,7 @@
 
 /area/crew_quarters/heads/office/xo
 	icon_state = "heads_hop"
-	name = "\improper Command - XO's Office"
+	name = "\improper Command - TO's Office"
 	req_access = list(access_hop)
 	lighting_tone = AREA_LIGHTING_WARM
 

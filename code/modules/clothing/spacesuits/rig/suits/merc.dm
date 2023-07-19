@@ -90,7 +90,7 @@
 		)
 
 /obj/item/rig/merc/heavy
-	name = "crimson EOD hardsuit control module"
+	name = "crimson EOD HCM"
 	desc = "A blood-red hardsuit with heavy armoured plates. Judging by the abnormally thick plates, this one is for working with explosives."
 	icon_state = "merc_rig_heavy"
 	armor = list(

@@ -8,7 +8,7 @@
 	faculty = PSI_COERCION
 	abstract_type = /decl/psionic_power/coercion
 
-/decl/psionic_power/coercion/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/coercion/invoke(mob/living/user, mob/living/target)
 	if (!istype(target))
 		to_chat(user, SPAN_WARNING("You cannot mentally attack \the [target]."))
 		return FALSE
@@ -20,13 +20,13 @@
 /decl/psionic_power/coercion/blindstrike
 	name =           "Blindstrike"
 	cost =           8
-	cooldown =       120
+	cooldown =       60
 	use_ranged =     TRUE
 	use_melee =      TRUE
 	min_rank =       PSI_RANK_GRANDMASTER
 	use_description = "Target the eyes or mouth on disarm intent and click anywhere to use a radial attack that blinds, deafens and disorients everyone near you."
 
-/decl/psionic_power/coercion/blindstrike/invoke(var/mob/living/user, var/mob/living/target)
+/decl/psionic_power/coercion/blindstrike/invoke(mob/living/user, mob/living/target)
 	if(user.zone_sel.selecting != BP_MOUTH && user.zone_sel.selecting != BP_EYES)
 		return FALSE
 	. = ..()
@@ -54,7 +54,7 @@
 /decl/psionic_power/coercion/mindread
 	name =            "Read Mind"
 	cost =            6
-	cooldown =        80
+	cooldown =        20
 	use_melee =       TRUE
 	min_rank =        PSI_RANK_OPERANT
 	suppress_parent_proc = TRUE
@@ -91,7 +91,7 @@
 /decl/psionic_power/coercion/agony
 	name =          "Agony"
 	cost =          8
-	cooldown =      50
+	cooldown =      30
 	use_melee =     TRUE
 	min_rank =      PSI_RANK_MASTER
 	use_description = "Target the chest or groin on disarm intent to use a melee attack equivalent to a strike from a stun baton."
@@ -111,7 +111,7 @@
 /decl/psionic_power/coercion/spasm
 	name =           "Spasm"
 	cost =           15
-	cooldown =       100
+	cooldown =       50
 	use_melee =      TRUE
 	use_ranged =     TRUE
 	min_rank =       PSI_RANK_MASTER
@@ -140,7 +140,7 @@
 /decl/psionic_power/coercion/mindslave
 	name =          "Mindslave"
 	cost =          28
-	cooldown =      200
+	cooldown =      300
 	use_grab =      TRUE
 	min_rank =      PSI_RANK_PARAMOUNT
 	suppress_parent_proc = TRUE
@@ -199,7 +199,7 @@
 /decl/psionic_power/coercion/focus
 	name =          "Focus"
 	cost =          10
-	cooldown =      80
+	cooldown =      40
 	use_grab =     TRUE
 	min_rank =      PSI_RANK_OPERANT
 	suppress_parent_proc = TRUE

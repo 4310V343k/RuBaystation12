@@ -180,7 +180,10 @@
 	allowed_tools = list(
 		/obj/item/weldingtool = 100,
 		/obj/item/gun/energy/plasmacutter = 50,
-		/obj/item/psychic_power/psiblade/master = 100
+		/obj/item/psychic_power/psiblade = 75,
+		/obj/item/psychic_power/psiblade/master = 100,
+		/obj/item/psychic_power/psiblade/master/grand = 100,
+		/obj/item/psychic_power/psiblade/master/grand/paramount = 100
 	)
 
 	min_duration = 50

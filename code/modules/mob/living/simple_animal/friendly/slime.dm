@@ -39,7 +39,6 @@
 	..()
 	overlays += "aslime-:33"
 
-
 /mob/living/simple_animal/slime/adult/death()
 	var/mob/living/simple_animal/slime/S1 = new /mob/living/simple_animal/slime (src.loc)
 	S1.icon_state = "[src.colour] baby slime"
@@ -55,3 +54,10 @@
 
 /datum/say_list/slime
 	emote_see = list("jiggles", "bounces in place")
+
+/mob/living/simple_animal/slime/evil
+	name = "evil pet slime"
+	desc = "A lovable and evil, domesticated slime."
+	icon_state = "evil baby slime"
+	icon_living = "evil baby slime"
+	icon_dead = "blue baby slime dead-nocore"

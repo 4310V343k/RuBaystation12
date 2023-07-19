@@ -205,3 +205,11 @@
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
 	build_path = /obj/item/ammo_casing/shotgun/emp
 	sort_string = "TBAAG"
+
+/datum/design/item/weapon/advanced_armor_plate
+	id = "adv_armor_plate"
+	desc = "Advanced plate for modular body armor."
+	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 5, TECH_COMBAT = 2)
+	materials = list(MATERIAL_STEEL = 16000, MATERIAL_PLASTIC = 14000)
+	build_path = /obj/item/clothing/accessory/armor_plate/advanced
+	sort_string = "TBAAH"

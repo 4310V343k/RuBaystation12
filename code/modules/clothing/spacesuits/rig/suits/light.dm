@@ -1,6 +1,6 @@
 // Light rigs are not space-capable, but don't suffer excessive slowdown or sight issues when depowered.
 /obj/item/rig/light
-	name = "light suit control module"
+	name = "light HCM"
 	desc = "A lighter, less armoured rig suit."
 	icon_state = "ninja_rig"
 	suit_type = "light suit"
@@ -98,7 +98,7 @@
 
 
 /obj/item/rig/light/ninja
-	name = "ominous suit control module"
+	name = "ominous HCM"
 	desc = "A unique, vaccum-proof suit of nano-enhanced armor designed specifically for assassins."
 	suit_type = "ominous"
 	icon_state = "ninja_rig"

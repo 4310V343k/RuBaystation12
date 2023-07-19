@@ -181,6 +181,6 @@
 			if (isnull(data_target) || !CanDefaultInteract(user))
 				return TRUE
 			if (set_target(targets[data_target]))
-				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] гудит, \"Цель обновлена.\""))
+				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] пиликает, \"Цель обновлена.\""))
 			else
-				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] пиликает, \"Неисправность при попытки установки соединения с целью.\""))
+				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] пиликает, \"Неисправность при попытке установления стабильного соединения с целью.\""))

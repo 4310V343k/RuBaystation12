@@ -38,7 +38,7 @@
 	)
 
 /obj/item/rig/industrial
-	name = "industrial suit control module"
+	name = "industrial HCM"
 	suit_type = "industrial hardsuit"
 	desc = "An industrial hardsuit used by construction crews and mining corporations."
 	icon_state = "engineering_rig"
@@ -168,7 +168,7 @@
 	)
 
 /obj/item/rig/ce
-	name = "advanced engineering hardsuit control module"
+	name = "advanced engineering HCM"
 	suit_type = "engineering hardsuit"
 	desc = "An advanced hardsuit that protects against hazardous, low pressure environments. Shines with a high polish. Appears compatible with the physiology of most species."
 	icon_state = "ce_rig"
@@ -289,7 +289,7 @@
 	)
 
 /obj/item/rig/medical
-	name = "rescue suit control module"
+	name = "rescue HCM"
 	suit_type = "rescue hardsuit"
 	desc = "A durable suit designed for medical rescue in high risk areas."
 	icon_state = "medical_rig"
@@ -396,7 +396,7 @@
 	)
 
 /obj/item/rig/zero
-	name = "null suit control module"
+	name = "null HCM"
 	suit_type = "null hardsuit"
 	desc = "A very lightweight suit designed to allow use inside mechs and starfighters. It feels like you're wearing nothing at all."
 	icon_state = "null_rig"

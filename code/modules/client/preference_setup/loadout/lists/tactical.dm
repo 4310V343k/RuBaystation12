@@ -16,7 +16,7 @@
 	display_name = "light armor plate"
 	cost = 4
 	path = /obj/item/clothing/accessory/armor_plate
-	allowed_roles = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/expmar, /datum/job/research_guard, /datum/job/jua, /datum/job/sea, /datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/bridgeofficer, /datum/job/qm, /datum/job/pathfinder)
+	allowed_roles = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/expmar, /datum/job/research_guard, /datum/job/sea, /datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/bridgeofficer, /datum/job/qm, /datum/job/pathfinder)
 
 /datum/gear/tactical/holster
 	display_name = "holster selection"
@@ -24,8 +24,10 @@
 	cost = 3
 
 /datum/gear/tactical/sheath
-	display_name = "machete sheath"
+	display_name = "machete sheath selection"
+	description = "A leg strapped machete sheath."
 	path = /obj/item/clothing/accessory/storage/holster/machete
+	flags = GEAR_HAS_TYPE_SELECTION
 
 /datum/gear/tactical/knife_sheath
 	display_name = "knife sheath selection"

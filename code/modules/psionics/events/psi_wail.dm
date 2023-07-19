@@ -5,7 +5,7 @@
 		"Пугающий сверхъестественный крик вторгается в саму вашу душу и разрывает её изнутри, пытаясь свести вас с ума."
 		)
 
-/datum/event/psi/wail/apply_psi_effect(var/datum/psi_complexus/psi)
+/datum/event/psi/wail/apply_psi_effect(datum/psi_complexus/psi)
 	var/annoyed
 	if(prob(1))
 		psi.stunned(1)

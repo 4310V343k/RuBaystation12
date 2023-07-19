@@ -44,6 +44,13 @@
 
 	return TRUE
 
+/mob/living/carbon/human/proc/play_special_footstep_sound(turf/T, volume = 30, range = 1)
+	if(LAZYLEN(species.special_footstep_sounds))
+		var/picked_sound = pick(species.special_footstep_sounds)
+		playsound(T, picked_sound, volume, 1, range)
+
+	return TRUE
+
 /mob/living/carbon/human/proc/handle_footsteps()
 	if(!has_footsteps())
 		return
@@ -72,3 +79,4 @@
 				volume -= 60
 				range -= 0.333
 			playsound(T, footsound, volume, 1, range)
+			play_special_footstep_sound(T, volume, range)

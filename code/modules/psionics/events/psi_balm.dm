@@ -6,7 +6,7 @@
 		"В вашем разуме начинают мелькать давно забытые тёплые воспоминания о прошедшем и будущем, как будто вы проживаете их вновь и проживёте ещё раз после."
 		)
 
-/datum/event/psi/balm/apply_psi_effect(var/datum/psi_complexus/psi)
+/datum/event/psi/balm/apply_psi_effect(datum/psi_complexus/psi)
 	var/soothed
 	if(psi.stun > 1)
 		psi.stun--

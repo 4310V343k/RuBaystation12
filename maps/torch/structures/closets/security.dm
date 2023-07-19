@@ -44,9 +44,10 @@
 		/obj/item/grenade/chem_grenade/teargas,
 		/obj/item/clothing/glasses/hud/security/prot,
 		/obj/item/taperoll/police,
-		//rubay code,
+		//PRX-START
 		/obj/item/storage/firstaid/individual/military,
-		//rubay code end,
+		/obj/item/cell/guncell/pistol/small = 2,
+		//PRX-END
 		/obj/item/device/hailer,
 		/obj/item/clothing/accessory/storage/black_vest,
 		/obj/item/device/megaphone,
