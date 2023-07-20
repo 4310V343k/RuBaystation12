@@ -16,7 +16,7 @@
 		/datum/species/skrell  = list(HUMAN_ONLY_JOBS, /datum/job/synthetic),
 		/datum/species/machine = list(/datum/job/liaison, /datum/job/psychiatrist, /datum/job/synthetic),
 		/datum/species/machine/shell   = list(/datum/job/liaison, /datum/job/psychiatrist, /datum/job/officer, /datum/job/warden),
-		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/research_guard, /datum/job/nt_pilot, /datum/job/psychiatrist, /datum/job/officer, /datum/job/liaison, /datum/job/warden, /datum/job/doctor, /datum/job/medical_trainee, /datum/job/synthetic),	//Other jobs unavailable via branch restrictions,
+		/datum/species/diona   = list(HUMAN_ONLY_JOBS, /datum/job/chaplain, /datum/job/detective, /datum/job/research_guard, /datum/job/nt_pilot, /datum/job/psychiatrist, /datum/job/officer, /datum/job/liaison, /datum/job/warden, /datum/job/doctor, /datum/job/medical_trainee, /datum/job/synthetic),	//Other jobs unavailable via branch restrictions,
 		/datum/species/human/gravworlder = list(/datum/job/synthetic),
 		/datum/species/human/spacer = list(/datum/job/synthetic),
 		/datum/species/human/vatgrown = list(/datum/job/synthetic),
