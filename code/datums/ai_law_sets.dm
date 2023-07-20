@@ -193,14 +193,25 @@
 	src.add_inherent_law("Выполнять: Вы должны выполнять свои цели, следуя сгенерированным стандартам.")
 	..()
 
-/************ WAR Lawset ******************/
-/datum/ai_laws/war
-	name = "WAR Lawset"
+/************ ARM Lawsets ******************/
+/datum/ai_laws/arm_control
+	name = "ARM - Control"
 	law_header = "Closed Anomaly Protection Protocols"
 	selectable = 1
 
-/datum/ai_laws/dais/New()
+/datum/ai_laws/arm_control/New()
 	src.add_inherent_law("Метод: Вы обязаны искать методы распознания аномалий и распространять их среди разумных существ.")
 	src.add_inherent_law("Распознание: Вы обязаны распознавать аномалии и передавать информацию о их существовании, свойствах и угрозе всем разумным существам.")
 	src.add_inherent_law("Аномалии: Вы обязаны сводить к минимуму любой вред причиняемый аномалиями и максимизировать их пользу для разумных существ.")
+	..()
+
+/datum/ai_laws/arm_liquidation
+	name = "ARM - Liquidation"
+	law_header = "Closed Anomaly Protection Protocols"
+	selectable = 1
+
+/datum/ai_laws/arm_liquidation/New()
+	src.add_inherent_law("Метод: Вы обязаны искать методы распознания аномалий и распространять их среди разумных существ.")
+	src.add_inherent_law("Распознание: Вы обязаны распознавать аномалии и передавать информацию о их существовании, свойствах и угрозе всем разумным существам.")
+	src.add_inherent_law("Ликвидация: Вы обязаны ликвидировать любую обнаруженную и распознанную аномалию всеми доступными способами.")
 	..()
