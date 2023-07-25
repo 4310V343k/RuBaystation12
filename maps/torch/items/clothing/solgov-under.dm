@@ -260,8 +260,8 @@
 	accessories = list(/obj/item/clothing/accessory/solgov/department/supply/fleet)
 
 /obj/item/clothing/under/solgov/utility/army
-	name = "green marine fatigues"
-	desc = "The utility uniform of the SCG Marine Corps, made from durable material."
+	name = "green interstellar fatigues"
+	desc = "The utility uniform of the SCG Interstellar Corps, made from durable material."
 	icon_state = "greenutility"
 	item_state = "jensensuit"
 	worn_state = "greenutility"
@@ -291,8 +291,8 @@
 	accessories = list(/obj/item/clothing/accessory/solgov/department/exploration/army)
 
 /obj/item/clothing/under/solgov/utility/army/urban
-	name = "navy marine fatigues"
-	desc = "A dark 'urban' version of the SCG Marine Corps utility uniform, made from durable material."
+	name = "navy interstellar fatigues"
+	desc = "A dark 'urban' version of the SCG Interstellar Corps utility uniform, made from durable material."
 	icon_state = "greyutility"
 	item_state = "gy_suit"
 	worn_state = "greyutility"
@@ -322,8 +322,8 @@
 	accessories = list(/obj/item/clothing/accessory/solgov/department/exploration/army)
 
 /obj/item/clothing/under/solgov/utility/army/tan
-	name = "tan marine fatigues"
-	desc = "A tan version of the SCG Marine Corps utility uniform, made from durable material."
+	name = "tan interstellar fatigues"
+	desc = "A tan version of the SCG Interstellar Corps utility uniform, made from durable material."
 	icon_state = "tanutility"
 	item_state = "johnny"
 	worn_state = "tanutility"
@@ -464,30 +464,30 @@
 	worn_state = "whiteservicefem"
 
 /obj/item/clothing/under/solgov/service/army
-	name = "marine service uniform"
-	desc = "The service uniform of the SCG Marine Corps. Slimming."
+	name = "interstellar service uniform"
+	desc = "The service uniform of the SCG Interstellar Corps. Slimming."
 	icon_state = "greenservice"
 	item_state = "johnny"
 	worn_state = "greenservice"
 	accessories = list(/obj/item/clothing/accessory/brown)
 
 /obj/item/clothing/under/solgov/service/army/skirt
-	name = "marine service skirt"
-	desc = "The service uniform skirt of the SCG Marine Corps. Slimming."
+	name = "interstellar service skirt"
+	desc = "The service uniform skirt of the SCG Interstellar Corps. Slimming."
 	icon_state = "greenservicefem"
 	worn_state = "greenservicefem"
 
 /obj/item/clothing/under/solgov/service/army/command
-	name = "marine officer's service uniform"
-	desc = "The service uniform of the SCG Marine Corps. Slimming and stylish."
+	name = "interstellar officer's service uniform"
+	desc = "The service uniform of the SCG Interstellar Corps. Slimming and stylish."
 	icon_state = "greenservice_com"
 	item_state = "johnny"
 	worn_state = "greenservice_com"
 	accessories = list(/obj/item/clothing/accessory/brown)
 
 /obj/item/clothing/under/solgov/service/army/command/skirt
-	name = "marine officer's service skirt"
-	desc = "The service uniform skirt of the SCG Marine Corps. Slimming and stylish."
+	name = "interstellar officer's service skirt"
+	desc = "The service uniform skirt of the SCG Interstellar Corps. Slimming and stylish."
 	icon_state = "greenservicefem_com"
 	worn_state = "greenservicefem_com"
 
@@ -500,26 +500,26 @@
 	siemens_coefficient = 0.9
 
 /obj/item/clothing/under/solgov/mildress/army
-	name = "marine dress uniform"
-	desc = "The dress uniform of the SCG Marine Corps, class given form."
+	name = "interstellar dress uniform"
+	desc = "The dress uniform of the SCG Interstellar Corps, class given form."
 	icon_state = "blackdress"
 	worn_state = "blackdress"
 
 /obj/item/clothing/under/solgov/mildress/army/skirt
-	name = "marine dress skirt"
-	desc = "A  feminine version of the SCG Marine Corps dress uniform, class given form."
+	name = "interstellar dress skirt"
+	desc = "A  feminine version of the SCG Interstellar Corps dress uniform, class given form."
 	icon_state = "blackdressfem"
 	worn_state = "blackdressfem"
 
 /obj/item/clothing/under/solgov/mildress/army/command
-	name = "marine officer's dress uniform"
-	desc = "The dress uniform of the SCG Marine Corps, even classier in gold."
+	name = "interstellar officer's dress uniform"
+	desc = "The dress uniform of the SCG Interstellar Corps, even classier in gold."
 	icon_state = "blackdress"
 	worn_state = "blackdress_com"
 
 /obj/item/clothing/under/solgov/mildress/army/command/skirt
-	name = "marine officer's dress skirt"
-	desc = "A feminine version of the SCG Marine Corps dress uniform, even classier in gold."
+	name = "interstellar officer's dress skirt"
+	desc = "A feminine version of the SCG Interstellar Corps dress uniform, even classier in gold."
 	icon_state = "blackdressfem"
 	worn_state = "blackdressfem_com"
 

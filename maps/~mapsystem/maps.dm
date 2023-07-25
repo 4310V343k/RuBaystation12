@@ -165,7 +165,7 @@ var/global/const/MAP_HAS_RANK = 2		//Rank system, also togglable
 			FACTION_DAIS,
 			FACTION_EXPEDITIONARY,
 			FACTION_FLEET,
-			FACTION_ARMY,
+			FACTION_IIC,
 			FACTION_PCRC,
 			FACTION_SAARE,
 			FACTION_WARD_TAKAHASHI, //start add by PRX

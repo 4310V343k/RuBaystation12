@@ -392,14 +392,14 @@
 	item_path = /obj/item/toy/plush/angela
 
 /obj/item/toy/plush/fumo
-	icon = 'proxima/icons/obj/fumo.dmi'
+	icon = 'proxima/icons/obj/toys.dmi'
 	name = "Plushie black witch"
 	desc = "The black witch from the popular Yangui cartoon, well, one is pretty cute."
 	icon_state = "fumoplushie_marisa"
 	gender = FEMALE
 
 /obj/item/toy/plush/fumo/cirno
-	icon = 'proxima/icons/obj/fumo.dmi'
+	icon = 'proxima/icons/obj/toys.dmi'
 	name = "Plushie winter fairy"
 	desc = "Silly winter fairy from the popular Yangui cartoon . You have to squeeze her cheeks."
 	icon_state = "fumoplushie_cirno"

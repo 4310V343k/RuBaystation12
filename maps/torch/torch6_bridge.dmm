@@ -15388,8 +15388,7 @@
 /turf/simulated/floor/plating,
 /area/aquila/cockpit)
 "SB" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/device/tape/random,
+/obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/device/tape/random,
 /obj/item/device/tape/random,
 /obj/item/device/taperecorder,

@@ -3309,7 +3309,7 @@
 #include "proxima\code\modules\clothing\feet\feet.dm"
 #include "proxima\code\modules\clothing\masks\masks.dm"
 #include "proxima\code\modules\clothing\masks\smokable.dm"
-#include "proxima\code\modules\clothing\spacesuits\rig\suits\marine.dm"
+#include "proxima\code\modules\clothing\spacesuits\rig\suits\interstellar.dm"
 #include "proxima\code\modules\clothing\suit\suit.dm"
 #include "proxima\code\modules\clothing\suits\armor.dm"
 #include "proxima\code\modules\clothing\suits\suits.dm"

@@ -5,8 +5,8 @@
 /decl/poster/proxima1
 
 	icon_state="proxi1"
-	name = "Marine corps agitation poster"
-	desc = "on this poster you see a pumped up and beautiful girl. the bottom of the poster says 'The Marine Corps is waiting for you'"
+	name = "Interstellar Corps agitation poster"
+	desc = "on this poster you see a pumped up and beautiful girl. the bottom of the poster says 'The Interstellar Corps is waiting for you'"
 
 /decl/poster/proxima2
 	icon_state="proxi2"
