@@ -750,23 +750,23 @@
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/synthetic)\
 
 /*
- *  Contractors-PRX
+ *  EXO-PRX
  *  =========
  */
 
 /datum/mil_rank/civ/three
-	name = "Corporative Contractor Class 3"
-	name_short = "CCC3"
+	name = "EXO Contractor Class 3"
+	name_short = "ECC3"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/three)
 
 /datum/mil_rank/civ/second
-	name = "Corporative Contractor Class 2"
-	name_short = "CCC2"
+	name = "EXO Contractor Class 2"
+	name_short = "ECC2"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/second)
 
 /datum/mil_rank/civ/first
-	name = "Corporative Contractor Class 1"
-	name_short = "CCC1"
+	name = "EXO Contractor Class 1"
+	name_short = "ECC1"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/first)
 
 /*

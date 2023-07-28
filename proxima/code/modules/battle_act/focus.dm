@@ -13,17 +13,17 @@
 
 	src.reset_view(src)
 	if(machine)
-		to_chat(src,"<span class = 'notice'>You can't do that!</span>")
+		to_chat(src,"<span class = 'notice'>Ты не можешь сделать этого!</span>")
 		return
 
 	switch(src.dir)
 		if(NORTH)
-			src.client.pixel_y = ONETILE * 10
+			src.client.pixel_y = ONETILE * 5
 		if(SOUTH)
-			src.client.pixel_y = ONETILE * -10
+			src.client.pixel_y = ONETILE * -5
 		if(EAST)
-			src.client.pixel_x = ONETILE * 10
+			src.client.pixel_x = ONETILE * 5
 		if(WEST)
-			src.client.pixel_x = ONETILE * -10
+			src.client.pixel_x = ONETILE * -5
 
 #undef ONETILE
