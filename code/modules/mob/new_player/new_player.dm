@@ -34,29 +34,29 @@
 	if (config.wiki_url || config.rules_url || config.lore_url)
 		var/player_age = client?.player_age
 		if (isnum(player_age) && player_age < 7)
-			output += "<b>Welcome! Please check out these links:</b><br>"
+			output += "<b>Добро пожаловать! Пожалуйста, проверьте следующие ссылки:</b><br>"
 		if (config.wiki_url)
-			output += "<a href='byond://?src=\ref[src];show_wiki=1'>Wiki</a>"
+			output += "<a href='byond://?src=\ref[src];show_wiki=1'>Вики</a>"
 		if (config.rules_url)
-			output += "<a href='byond://?src=\ref[src];show_rules=1'>Rules</a>"
+			output += "<a href='byond://?src=\ref[src];show_rules=1'>Правила</a>"
 	output += "<hr>"
 	if (GAME_STATE > RUNLEVEL_LOBBY)
-		output += "<a href='byond://?src=\ref[src];manifest=1'>Manifest</a>"
-	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Options</a>"
+		output += "<a href='byond://?src=\ref[src];manifest=1'>Манифест</a>"
+	output += "<a href='byond://?src=\ref[src];show_preferences=1'>Настройки</a>"
 	output += "<hr>"
-	output += "<b>Playing As</b><br>"
+	output += "<b>Персонаж</b><br>"
 	output += "<a href='byond://?src=\ref[client.prefs];load=1;details=1'>[client.prefs.real_name || "(Random)"]</a><br>"
 	output += client.prefs.job_high ? "[client.prefs.job_high]" : null
 	output += "<hr>"
-	output += "<a href='byond://?src=\ref[src];observe=1'>Join As Observer</a>"
+	output += "<a href='byond://?src=\ref[src];observe=1'>Наблюдатель</a>"
 	if (GAME_STATE > RUNLEVEL_LOBBY)
-		output += "<a href='byond://?src=\ref[src];late_join=1'>Join As Selected</a>"
+		output += "<a href='byond://?src=\ref[src];late_join=1'>Присоединиться</a>"
 	else
-		output += "<a [ready?"class='linkOn'":""] href='byond://?src=\ref[src];ready=[!ready]'>Round Start Join</a>"
+		output += "<a [ready?"class='linkOn'":""] href='byond://?src=\ref[src];ready=[!ready]'>Присоединиться с начала</a>"
 	output += "<hr>"
 	output += "<i>[GLOB.using_map.get_map_info()||"No information available for the current map."]</i>"
 	output += "</div>"
-	panel = new (src, "Welcome","Welcome to [GLOB.using_map.full_name]", 520, 340, src)
+	panel = new (src, "Welcome","Добро пожаловать на [GLOB.using_map.full_name]!", 520, 340, src)
 	panel.set_window_options("can_close=0")
 	panel.set_content(output.Join())
 	panel.open()
