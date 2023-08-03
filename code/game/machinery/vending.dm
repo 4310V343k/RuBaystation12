@@ -858,6 +858,16 @@
 					/obj/item/storage/fancy/cigarettes/cigarello = 2,
 					/obj/item/storage/fancy/cigarettes/cigarello/mint = 2,
 					/obj/item/storage/fancy/cigarettes/cigarello/variety = 2,
+					/obj/item/storage/fancy/cigarettes/elpedros = 2,
+					/obj/item/storage/fancy/cigarettes/nirvana = 2,
+					/obj/item/storage/fancy/cigarettes/mars = 2,
+					/obj/item/storage/fancy/cigarettes/pear = 2,
+					/obj/item/storage/fancy/cigarettes/chinese = 2,
+					/obj/item/storage/chewables/rollable/perception = 2,
+					/obj/item/storage/chewables/rollable/medical = 2,
+					/obj/item/storage/chewables/rollable/female = 2,
+					/obj/item/storage/chewables/rollable/honey = 2,
+					/obj/item/storage/chewables/rollable/coffee = 2,
 					/obj/item/storage/box/matches = 10,
 					/obj/item/flame/lighter/random = 4,
 					/obj/item/storage/chewables/tobacco = 2,
@@ -1360,6 +1370,8 @@
 					/obj/item/reagent_containers/food/snacks/salo = 7,
 					/obj/item/reagent_containers/food/snacks/driedfish = 7,
 					/obj/item/reagent_containers/food/snacks/pistachios = 7,
+					/obj/item/reagent_containers/food/snacks/canned/varenka = 1,
+					/obj/item/reagent_containers/food/snacks/canned/sgushenka = 3
 					)
 
 	contraband = list(/obj/item/reagent_containers/food/snacks/canned/caviar/true = 1)

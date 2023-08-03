@@ -251,6 +251,22 @@
 
 	gun_type = /obj/item/gun/energy/gun/mounted
 
+//PRX-START
+/obj/item/rig_module/mounted/plasma
+
+	name = "mounted plasma gun"
+	desc = "A shoulder-mounted plasma projector."
+	icon_state = "plasma"
+
+	suit_overlay_active = "mounted-plasma"
+
+	interface_name = "mounted plasma gun"
+	interface_desc = "A shoulder-mounted suit-powered plasma gun."
+	origin_tech = list(TECH_POWER = 7, TECH_COMBAT = 7, TECH_ENGINEERING = 6)
+
+	gun_type = /obj/item/gun/energy/k342/pistol/mounted
+//PRX-END
+
 /obj/item/rig_module/mounted/taser
 
 	name = "mounted electrolaser"

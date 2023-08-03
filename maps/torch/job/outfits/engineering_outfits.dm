@@ -33,7 +33,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/engineering/engineer/army
-	name = OUTFIT_JOB_NAME("Engineer - Marine")
+	name = OUTFIT_JOB_NAME("Engineer - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
 

@@ -75,7 +75,7 @@ NOTE: It checks usr by default. Supply the "user" argument if you wish to check 
 		return FALSE
 	if (!C.holder)
 		if (show_msg)
-			to_chat(C, SPAN_WARNING("You are not a staff member."))
+			to_chat(C, SPAN_WARNING("Вы не сотрудник администрации."))
 		return FALSE
 	if (rights_required)
 		if (rights_required & C.holder.rights)

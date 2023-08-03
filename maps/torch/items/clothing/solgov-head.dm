@@ -100,23 +100,23 @@
 	icon_state = "greydresscap_senior"
 
 /obj/item/clothing/head/solgov/service/army
-	name = "marine wheel cover"
-	desc = "A green service uniform cover with an SCG Marine crest."
+	name = "interstellar wheel cover"
+	desc = "A green service uniform cover with an SCG Interstellar Corps crest."
 	icon_state = "greenwheelcap"
 
 /obj/item/clothing/head/solgov/service/army/command
-	name = "marine officer's wheel cover"
-	desc = "A green service uniform cover with an SCG Marine crest and gold stripe."
+	name = "interstellar officer's wheel cover"
+	desc = "A green service uniform cover with an SCG Interstellar Corps crest and gold stripe."
 	icon_state = "greenwheelcap_com"
 
 /obj/item/clothing/head/solgov/service/army/garrison
-	name = "marine garrison cap"
-	desc = "A green garrison cap belonging to the SCG Marine."
+	name = "interstellar garrison cap"
+	desc = "A green garrison cap belonging to the SCG Interstellar Corps."
 	icon_state = "greengarrisoncap"
 
 /obj/item/clothing/head/solgov/service/army/garrison/command
-	name = "marine officer's garrison cap"
-	desc = "A green garrison cap belonging to the SCG Marine. This one has a gold pin."
+	name = "interstellar officer's garrison cap"
+	desc = "A green garrison cap belonging to the SCG Interstellar Corps. This one has a gold pin."
 	icon_state = "greengarrisoncap_com"
 
 /obj/item/clothing/head/solgov/service/army/campaign
@@ -151,13 +151,13 @@
 	icon_state = "whitepeakcap_com"
 
 /obj/item/clothing/head/solgov/dress/army
-	name = "marine dress wheel cover"
-	desc = "A white dress uniform cover with an SCG Marine crest."
+	name = "interstellar dress wheel cover"
+	desc = "A white dress uniform cover with an SCG Interstellar Corps crest."
 	icon_state = "whitewheelcap"
 
 /obj/item/clothing/head/solgov/dress/army/command
-	name = "marine officer's dress wheel cover"
-	desc = "A white dress uniform cover with an SCG Marine crest and gold stripe."
+	name = "interstellar officer's dress wheel cover"
+	desc = "A white dress uniform cover with an SCG Interstellar Corps crest and gold stripe."
 	icon_state = "whitewheelcap_com"
 
 //Berets
@@ -223,50 +223,50 @@
 	icon_state = "beret_greensilver"
 
 /obj/item/clothing/head/beret/solgov/army
-	name = "marine beret"
-	desc = "A green beret belonging to the SCG Marine. For personnel that are more inclined towards style than safety."
+	name = "interstellar beret"
+	desc = "A green beret belonging to the SCG Interstellar Corps. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_infantry"
 	icon = 'maps/torch/icons/obj/obj_head_solgov.dmi'
 	item_icons = list(slot_head_str = 'maps/torch/icons/mob/onmob_head_solgov.dmi')
 
 /obj/item/clothing/head/beret/solgov/army/orbital
-	name = "orbital assault marine beret"
-	desc = "A blue beret denoting orbital assault marine training. For helljumpers that are more inclined towards style than safety."
+	name = "orbital assault interstellar beret"
+	desc = "A blue beret denoting orbital assault interstellar training. For helljumpers that are more inclined towards style than safety."
 	icon_state = "beret_army_airborne"
 
 /obj/item/clothing/head/beret/solgov/army/elite
-	name = "elite marine beret"
-	desc = "A blue beret with Space Shark denoting special training of Space Carps, an elite secret team consisting of members both Marine Corps and Fleet. They have been declassified after the end of War on Gaia, denouncing their war crimes and failures. For operatives that are more inclined towards style than safety."
+	name = "elite interstellar beret"
+	desc = "A blue beret with Space Shark denoting special training of Space Carps, an elite secret team consisting of members both Interstellar Corps and Fleet. They have been declassified after the end of War on Gaia, denouncing their war crimes and failures. For operatives that are more inclined towards style than safety."
 	icon_state = "beret_blue"
 
 /obj/item/clothing/head/beret/solgov/army/airborne
-	name = "airborne marine beret"
-	desc = "An SCG Marine beret carrying insignia of the Airborne Division. For personnel that are more inclined towards style than safety."
+	name = "airborne interstellar beret"
+	desc = "An SCG Interstellar Corps beret carrying insignia of the Airborne Division. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_airborne"
 
 /obj/item/clothing/head/beret/solgov/army/infantry
-	name = "marine beret"
-	desc = "An SCG Marine beret carrying insignia of the Marine Corps. For personnel that are more inclined towards style than safety."
+	name = "interstellar beret"
+	desc = "An SCG Interstellar Corps beret carrying insignia of the IIC. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_infantry"
 
 /obj/item/clothing/head/beret/solgov/army/logistical_supply
-	name = "logistical supply marine beret"
-	desc = "An SCG Marine beret carrying insignia of the Logistical Marine Support Division. For personnel that are more inclined towards style than safety."
+	name = "logistical supply interstellar beret"
+	desc = "An SCG Interstellar Corps beret carrying insignia of the Logistical Interstellar Support Division. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_logistical supply"
 
 /obj/item/clothing/head/beret/solgov/army/engisapper
-	name = "engineering-sapper marine beret"
-	desc = "An SCG Marine beret carrying insignia of the Engineering-Sapper Marine Division. For personnel that are more inclined towards style than safety."
+	name = "engineering-sapper interstellar beret"
+	desc = "An SCG Interstellar Corps beret carrying insignia of the Engineering-Sapper Interstellar Division. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_engisapper"
 
 /obj/item/clothing/head/beret/solgov/army/command
-	name = "command marine beret"
-	desc = "An SCG Marine beret with a golden crest. For personnel that are more inclined towards style than safety."
+	name = "command interstellar beret"
+	desc = "An SCG Interstellar Corps beret with a golden crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_command"
 
 /obj/item/clothing/head/beret/solgov/army/medical
-	name = "medical army beret"
-	desc = "An SCG Marine beret with a red crest. For personnel that are more inclined towards style than safety."
+	name = "medical interstellar beret"
+	desc = "An SCG Interstellar Corps beret with a red crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_army_medical"
 
 /obj/item/clothing/head/beret/solgov/expedition
@@ -415,13 +415,13 @@
 
 /obj/item/clothing/head/ushanka/solgov/army
 	name = "army fur hat"
-	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
+	desc = "An SCG Interstellar Corps synthfur-lined hat for operating in cold environments."
 	icon_state = "barushankadown"
 	icon_state_up = "barushankaup"
 
 /obj/item/clothing/head/ushanka/solgov/army/green
 	name = "green army fur hat"
-	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
+	desc = "An SCG Interstellar Corps synthfur-lined hat for operating in cold environments."
 	icon_state = "arushankadown"
 	icon_state_up = "mcushankaup"
 

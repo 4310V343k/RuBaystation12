@@ -221,6 +221,14 @@
 		return TRUE
 	return ..()
 
+/obj/item/gun/energy/k342/pistol/mounted
+	name = "mounted plasma gun"
+	self_recharge = 1
+	use_external_power = 1
+	has_safety = FALSE
+	req_access = null
+	authorized_modes = null
+
 /obj/item/gun/energy/k342/sniper
 	name = "plasma sniper rifle"
 	desc = "K480 Skat is the latest heavy plasma weapon created by NanoTrasen for SolGov snipers, capable to fire several types of charges: stunning, incendiary, and lethal bolts. Advanced magnetic constriction technology improves accuracy and firepower."

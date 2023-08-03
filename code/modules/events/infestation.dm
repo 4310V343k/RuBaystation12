@@ -70,7 +70,7 @@
 				S.amount_grown = -1
 
 /datum/event/infestation/announce()
-	command_announcement.Announce("Биосканеры показывают, что [vermstring1] размножались в отсеке [location]. Дальнейшее заражение вероятно, если его не остановить.", "[location_name()] Biologic Sensor Network", zlevels = affecting_z)
+	command_announcement.Announce("Биосканеры показывают, что [vermstring1] размножались в отсеке [location]. Дальнейшее заражение вероятно, если его не остановить.", "Сеть Биологических Датчиков [location_name()]", zlevels = affecting_z)
 
 /datum/event/infestation/proc/set_location_get_infestation_turfs()
 	location = pick_area(list(/proc/is_not_space_area, /proc/is_station_area))
