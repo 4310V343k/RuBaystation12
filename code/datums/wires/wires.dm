@@ -236,6 +236,31 @@ var/global/list/wireColours = list("red", "blue", "green", "darkred", "orange", 
 /datum/wires/proc/examine(index, mob/user)
 	. = "You aren't sure what this wire does."
 
+	// Космонавтику нужно потратить немного времени, чтобы узнать назначение провода
+	// Разумеется, чем он опытнее в этом, тем быстрее он их изучает
+
+	var/list/visible_messages = list(
+		"[user] touches the wires, trying to find out something...",
+		"[user] examines the wires...",
+		"[user] goes through the wires"
+	)
+	user.visible_message(
+		SPAN_NOTICE(pick(visible_messages)),
+		SPAN_NOTICE("You're trying to figure out what the wire is responsible for...")
+	)
+
+	var/time_for_check
+	switch (user.get_skill_value(SKILL_ELECTRICAL))
+		if (SKILL_PROF)
+			time_for_check = 0.5 SECOND
+		if (SKILL_EXPERT)
+			time_for_check = 1.5 SECOND
+		else
+			time_for_check = 3 SECONDS
+
+	if (!do_after(user, time_for_check))
+		return
+
 	var/datum/wire_description/wd = get_description(index)
 	if(!wd)
 		return

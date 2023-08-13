@@ -4,3 +4,10 @@
     "item_path": "/obj/item/clothing/suit/armor/hos/jensen/lodagn",
     "req_access": ["ACCESS_SECURITY"]
 }
+
+{
+    "ckey": "Lodagn",
+    "character_name": "Qixzao Volxuqm",
+    "item_path": "/obj/item/clothing/suit/armor/hos/jensen/lodagn",
+    "req_titles" : [ "Research Guard" ]
+}
