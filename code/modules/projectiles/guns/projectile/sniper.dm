@@ -9,7 +9,7 @@
 	slot_flags = SLOT_BACK
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
 	caliber = CALIBER_ANTIMATERIAL
-	screen_shake = 2 //extra kickback
+	screen_shake = 1 //extra kickback
 	handle_casings = HOLD_CASINGS
 	load_method = SINGLE_CASING
 	max_shells = 1
@@ -113,8 +113,9 @@
 	allowed_magazines = /obj/item/ammo_magazine/iclipr
 	auto_eject = TRUE
 	auto_eject_sound = 'sound/weapons/guns/interaction/garand_magout.ogg'
-	one_hand_penalty = 9
-	accuracy_power = 10
+	one_hand_penalty = 8
+	scoped_accuracy = 8
+	accuracy_power = 8
 	accuracy = 1
 	bulk = GUN_BULK_RIFLE + 1
 	wielded_item_state = "garand-wielded"

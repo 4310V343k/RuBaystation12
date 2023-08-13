@@ -179,16 +179,6 @@ Class Procs:
 		LAZYREMOVE(A.machinery_list, src)
 	. = ..()
 
-/// Part of the machinery subsystem's process stack. Processes everything defined by `processing_flags`.
-/obj/machinery/proc/ProcessAll(wait)
-	if(processing_flags & MACHINERY_PROCESS_COMPONENTS)
-		for(var/obj/item/stock_parts/part as anything in processing_parts)
-			if(part.machine_process(src) == PROCESS_KILL)
-				part.stop_processing()
-
-	if((processing_flags & MACHINERY_PROCESS_SELF) && Process(wait) == PROCESS_KILL)
-		STOP_PROCESSING_MACHINE(src, MACHINERY_PROCESS_SELF)
-
 /obj/machinery/Process()
 	return PROCESS_KILL // Only process if you need to.
 
