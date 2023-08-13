@@ -4553,7 +4553,7 @@
 /obj/structure/sign/ecplaque{
 	pixel_y = -30
 	},
-/obj/machinery/suit_storage_unit/explorer/marine,
+/obj/machinery/suit_storage_unit/explorer/infantry,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kw" = (
@@ -11526,7 +11526,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/explorer/marine,
+/obj/structure/closet/secure_closet/explorer/infantry,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "Cm" = (
