@@ -19,7 +19,7 @@
 		и ручные коротковолновые рации на время трансляции сигнала.", \
 		"Cuchulain Automated Array DEL-145" \
 		)
-	sound_to(world, sound(alarm_sound), volume = 25)
+	sound_to(world, sound(alarm_sound))
 
 /datum/event/minispasm/start()
 	var/list/victims = list()
@@ -67,4 +67,4 @@
 	priority_announcement.Announce( \
 		"ПРИОРИТЕТНОЕ ОПОВЕЩЕНИЕ: ТРАНСЛЯЦИЯ ПСИОНИЧЕСКОГО СИГНАЛА БЫЛА ПРЕКРАЩЕНА. Персоналу разрешено возобновить использование незащищенного радиопередающего оборудования. Фонд Кучулейн желает вам хорошего дня.", \
 		"Cuchulain Automated Array DEL-145",
-		new_sound = 'sound/misc/foundation_restore.ogg', volume = 25 )
+		new_sound = 'sound/misc/foundation_restore.ogg', volume = 30 )
