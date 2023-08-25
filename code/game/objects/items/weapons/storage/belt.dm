@@ -226,13 +226,16 @@
 		/obj/item/device/megaphone,
 		/obj/item/melee,
 		/obj/item/taperoll,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/device/holowarrant,
 		/obj/item/magnetic_ammo,
 		/obj/item/device/binoculars,
 		/obj/item/clothing/gloves,
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
-		/obj/item/cell/guncell
 		)
 
 /obj/item/storage/belt/holster/security/full/Initialize()
@@ -269,10 +272,10 @@
 		/obj/item/device/megaphone,
 		/obj/item/melee,
 		/obj/item/taperoll,
-		//rubay code,
+		//PRX-START,
 		/obj/item/storage/firstaid/individual/military,
 		/obj/item/cell/guncell,
-		//rubay code end,
+		//PRX-END,
 		/obj/item/device/holowarrant,
 		/obj/item/magnetic_ammo,
 		/obj/item/device/binoculars,
@@ -304,6 +307,10 @@
 		/obj/item/device/radio,
 		/obj/item/device/tape,
 		/obj/item/pen,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/stamp,
 		/obj/item/stack/package_wrap,
 		/obj/item/device/binoculars,
@@ -323,8 +330,6 @@
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
 		/obj/item/device/tape,
-		/obj/item/cell/guncell,
-		/obj/item/device/remote_device
 		)
 
 /obj/item/storage/belt/general/commedfull/Initialize()
@@ -383,6 +388,10 @@
 		/obj/item/device/tape,
 		/obj/item/pen,
 		/obj/item/stamp,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/stack/package_wrap,
 		/obj/item/device/binoculars,
 		/obj/item/marshalling_wand,
@@ -400,7 +409,6 @@
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
 		/obj/item/device/tape,
-		/obj/item/cell/guncell
 		)
 
 /obj/item/storage/belt/holster/forensic
@@ -423,6 +431,10 @@
 		/obj/item/clothing/gloves/forensic,
 		/obj/item/folder,
 		/obj/item/paper,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/forensics/sample_kit,
 		/obj/item/device/camera,
 		/obj/item/device/taperecorder,
@@ -431,7 +443,6 @@
 		/obj/item/device/scanner,
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
-		/obj/item/cell/guncell
 		)
 
 /obj/item/storage/belt/forensic
@@ -453,6 +464,10 @@
 		/obj/item/clothing/gloves/forensic,
 		/obj/item/folder,
 		/obj/item/paper,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/forensics/sample_kit,
 		/obj/item/device/camera,
 		/obj/item/device/taperecorder,
@@ -461,7 +476,6 @@
 		/obj/item/device/scanner,
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
-		/obj/item/cell/guncell,
 		)
 
 /obj/item/storage/belt/holster/machete
@@ -492,11 +506,14 @@
 		/obj/item/device/scanner/gas,
 		/obj/item/clothing/gloves,
 		/obj/item/tape_roll,
+		//PRX-START,
+		/obj/item/cell/guncell,
+		/obj/item/device/remote_device,
+		//PRX-END,
 		/obj/item/clothing/head/beret,
 		/obj/item/material/knife/folding,
 		/obj/item/storage/firstaid/light,
-		/obj/item/device/flash,
-		/obj/item/cell/guncell
+		/obj/item/device/flash
 		)
 	can_holster = list(/obj/item/material/hatchet/machete)
 	sound_in = 'sound/effects/holster/sheathin.ogg'
@@ -540,7 +557,6 @@
 	item_state = "swatbelt"
 	storage_slots = 10
 
-
 /obj/item/storage/belt/waistpack
 	name = "waist pack"
 	desc = "A small bag designed to be worn on the waist. May make your butt look big."
@@ -560,7 +576,6 @@
 	max_w_class = ITEM_SIZE_NORMAL
 	max_storage_space = ITEM_SIZE_NORMAL * 4
 
-
 /obj/item/storage/belt/fire_belt
 	name = "firefighting equipment belt"
 	desc = "A belt specially designed for firefighting."
@@ -574,7 +589,6 @@
 		/obj/item/extinguisher/mini,
 		/obj/item/inflatable/door
 		)
-
 
 /obj/item/storage/belt/fire_belt/full
 	startswith = list(

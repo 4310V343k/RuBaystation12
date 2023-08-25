@@ -183,4 +183,4 @@
 			if (set_target(targets[data_target]))
 				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] гудит, \"Цель обновлена.\""))
 			else
-				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] пиликает, \"Неисправность при попытки установки соединения с целью.\""))
+				audible_message(SPAN_COLOR(COLOR_PURPLE, "\The [src] пиликает, \"Внимание. Обнаружена неисправность при установление соединения с целью.\""))
