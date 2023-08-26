@@ -63,6 +63,7 @@ Civilian
 	)
 	min_goals = 2
 	max_goals = 7
+	intro_music = list('proxima/sound/intro/assistant1.ogg')
 
 /datum/job/assistant/get_description_blurb()
 	return "Вы - пассажир. Вы находитесь на Государственном Экспедиционном Корабле \"Факел\", который принадлежит Экспедиционному корпусу - научному агенству ЦПСС. \
