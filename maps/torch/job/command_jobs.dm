@@ -135,6 +135,8 @@
 							 /datum/computer_file/program/aidiag,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
+	
+	intro_music = list('proxima/sound/intro/rd1.ogg')
 
 /datum/job/rd/get_description_blurb()
 	return "Вы - Главный научный офицер (ГНО). Вы ответственны за работу научно-исследовательского отдела. \
@@ -184,6 +186,8 @@
 							 /datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
+	
+	intro_music = list('proxima/sound/intro/cmo1.ogg')
 
 /datum/job/cmo/get_description_blurb()
 	return "Вы - Главный медицинский офицер (СМО или ГМО). Вы отвечаете за работу медицинского отдела. Вы гарантируете, что все работники отдела хорошо обученны, подготовленны и что они выполняют свои обязанности. \
@@ -294,6 +298,8 @@
 							 /datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
+	
+	intro_music = list('proxima/sound/intro/hos1.ogg')
 
 /datum/job/hos/get_description_blurb()
 	return "Вы - Глава службы безопасности (ГСБ). Вы отвечаете за охрану судна, равно как и за каптенармусов, смотрителя и криминалистов. \
@@ -398,6 +404,8 @@
 
 	alt_titles = list("Military Lawyer")
 	software_on_spawn = list(/datum/computer_file/program/reports)
+	
+	intro_music = list('proxima/sound/intro/lawyer1.ogg')
 
 /datum/job/representative/get_description_blurb()
 	return "Вы - Военный прокурор. Консультруйте экипаж по вопросам закона. \
@@ -494,6 +502,8 @@
 	skill_points = 20
 
 	alt_titles = list("Adjutant","Helmsman","Coordination Officer","Command Secretary") //PRX
+	
+	intro_music = list('proxima/sound/intro/officer1.ogg')
 
 	access = list(
 		access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
