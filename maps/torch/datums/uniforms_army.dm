@@ -1,5 +1,5 @@
 /decl/hierarchy/mil_uniform/army/com //Can only be officers
-	name = "Marine command"
+	name = "Interstellar command"
 	departments = COM
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/command
@@ -24,7 +24,7 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/eng
-	name = "Marine engineering"
+	name = "Interstellar engineering"
 	departments = ENG
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -39,13 +39,13 @@
 
 
 /decl/hierarchy/mil_uniform/army/eng/sword
-	name = "Marine NCO sword engineering"
+	name = "Interstellar NCO sword engineering"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/eng/officer
-	name = "Marine engineering CO"
+	name = "Interstellar engineering CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -69,11 +69,11 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/eng/officer/com //Can only be officers
-	name = "Marine engineering command"
+	name = "Interstellar engineering command"
 	departments = ENG|COM
 
 /decl/hierarchy/mil_uniform/army/sec
-	name = "Marine security"
+	name = "Interstellar security"
 	departments = SEC
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/security
@@ -86,13 +86,13 @@
 						/obj/item/clothing/gloves/thick)
 
 /decl/hierarchy/mil_uniform/army/sec/sword
-	name = "Marine NCO sword security"
+	name = "Interstellar NCO sword security"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/sec/officer
-	name = "Marine security CO"
+	name = "Interstellar security CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -116,11 +116,11 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/sec/officer/com //Can only be officers
-	name = "Marine security command"
+	name = "Interstellar security command"
 	departments = SEC|COM
 
 /decl/hierarchy/mil_uniform/army/med
-	name = "Marine medical"
+	name = "Interstellar medical"
 	departments = MED
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/medical
@@ -134,13 +134,13 @@
 						/obj/item/clothing/gloves/thick)
 
 /decl/hierarchy/mil_uniform/army/med/sword
-	name = "Marine NCO sword medical"
+	name = "Interstellar NCO sword medical"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/med/officer
-	name = "Marine medical CO"
+	name = "Interstellar medical CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -164,11 +164,11 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/med/officer/com //Can only be officers
-	name = "Marine medical command"
+	name = "Interstellar medical command"
 	departments = MED|COM
 
 /decl/hierarchy/mil_uniform/army/sup
-	name = "Marine supply"
+	name = "Interstellar supply"
 	departments = SUP
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/supply
@@ -182,13 +182,13 @@
 						/obj/item/clothing/gloves/thick)
 
 /decl/hierarchy/mil_uniform/army/sup/sword
-	name = "Marine NCO sword supply"
+	name = "Interstellar NCO sword supply"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/sup/officer
-	name = "Marine supply CO"
+	name = "Interstellar supply CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -213,7 +213,7 @@
 
 
 /decl/hierarchy/mil_uniform/army/sup/officer/com
-	name = "Marine Supply command"
+	name = "Interstellar Supply command"
 	departments = SUP|COM
 	min_rank = 11
 
@@ -238,7 +238,7 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/srv
-	name = "Marine service"
+	name = "Interstellar service"
 	departments = SRV
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/service
@@ -252,13 +252,13 @@
 						/obj/item/clothing/gloves/thick)
 
 /decl/hierarchy/mil_uniform/army/srv/sword
-	name = "Marine NCO sword service"
+	name = "Interstellar NCO sword service"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/srv/officer
-	name = "Marine service CO"
+	name = "Interstellar service CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -281,7 +281,7 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/exp
-	name = "Marine exploration"
+	name = "Interstellar exploration"
 	departments = EXP
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/exploration
@@ -296,13 +296,13 @@
 
 
 /decl/hierarchy/mil_uniform/army/exp/sword
-	name = "Marine NCO sword exploration"
+	name = "Interstellar NCO sword exploration"
 	min_rank = 4
 
 	dress_extra = list(/obj/item/material/sword/replica/officersword/army)
 
 /decl/hierarchy/mil_uniform/army/exp/officer
-	name = "Marine exploration CO"
+	name = "Interstellar exploration CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,
@@ -324,7 +324,7 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/spt
-	name = "Marine command support"
+	name = "Interstellar command support"
 	departments = SPT
 
 	utility_under = /obj/item/clothing/under/solgov/utility/army/urban/command
@@ -342,7 +342,7 @@
 	dress_extra = list(/obj/item/material/sword/replica/officersword/armyofficer)
 
 /decl/hierarchy/mil_uniform/army/spt/officer
-	name = "Marine command support CO"
+	name = "Interstellar command support CO"
 	min_rank = 11
 
 	utility_extra = list(/obj/item/clothing/head/ushanka/solgov/army/green,

@@ -133,134 +133,134 @@
 	item_state = "blueservice_flag"
 
 /obj/item/clothing/suit/storage/solgov/utility/army
-	name = "green marine jacket"
-	desc = "An SCG Marine green utility jacket. Green and undecorated."
+	name = "green interstellar jacket"
+	desc = "An SCG Interstellar Corps green utility jacket. Green and undecorated."
 	icon_state = "greenservice"
 	item_state = "greenservice"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy
-	name = "navy marine jacket"
-	desc = "An SCG Marine navy utility jacket. Blue and undecorated."
+	name = "navy interstellar jacket"
+	desc = "An SCG Interstellar Corps navy utility jacket. Blue and undecorated."
 	icon_state = "navyservice"
 	item_state = "navyservice"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/medical
-	desc = "An SCG Marine green utility jacket. This one has blue markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has blue markings."
 	icon_state = "greenservice_med"
 	item_state = "greenservice_med"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/medical
-	desc = "An SCG Marine navy utility jacket. This one has blue markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has blue markings."
 	icon_state = "navyservice_med"
 	item_state = "navyservice_med"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/medical/command
-	desc = "An SCG Marine green utility jacket. This one has blue and gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has blue and gold markings."
 	icon_state = "greenservice_medcom"
 	item_state = "greenservice_medcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/medical/command
-	desc = "An SCG Marine navy utility jacket. This one has blue and gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has blue and gold markings."
 	icon_state = "navyservice_medcom"
 	item_state = "navyservice_medcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/engineering
-	desc = "An SCG Marine green utility jacket. This one has orange markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has orange markings."
 	icon_state = "greenservice_eng"
 	item_state = "greenservice_eng"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/engineering
-	desc = "An SCG Marine navy utility jacket. This one has orange markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has orange markings."
 	icon_state = "navyservice_eng"
 	item_state = "navyservice_eng"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/engineering/command
-	desc = "An SCG Marine green utility jacket. This one has orange and gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has orange and gold markings."
 	icon_state = "greenservice_engcom"
 	item_state = "greenservice_engcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/engineering/command
-	desc = "An SCG Marine navy utility jacket. This one has orange and gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has orange and gold markings."
 	icon_state = "navyservice_engcom"
 	item_state = "navyservice_engcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/supply
-	desc = "An SCG Marine green utility jacket. This one has brown markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has brown markings."
 	icon_state = "greenservice_sup"
 	item_state = "greenservice_sup"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/supply
-	desc = "An SCG Marine navy utility jacket. This one has brown markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has brown markings."
 	icon_state = "navyservice_sup"
 	item_state = "naveservice_sup"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/security
-	desc = "An SCG Marine green utility jacket. This one has red markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has red markings."
 	icon_state = "greenservice_sec"
 	item_state = "greenservice_sec"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/security
-	desc = "An SCG Marine navy utility jacket. This one has red markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has red markings."
 	icon_state = "navyservice_sec"
 	item_state = "navyservice_sec"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/security/command
-	desc = "An SCG Marine green utility jacket. This one has red and gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has red and gold markings."
 	icon_state = "greenservice_seccom"
 	item_state = "greenservice_seccom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/security/command
-	desc = "An SCG Marine navy utility jacket. This one has red and gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has red and gold markings."
 	icon_state = "navyservice_seccom"
 	item_state = "navyservice_seccom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/service
-	desc = "An SCG Marine green utility jacket. This one has green markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has green markings."
 	icon_state = "greenservice_srv"
 	item_state = "greenservice_srv"
 
 /obj/item/clothing/suit/storage/solgov/utility/navy/service
-	desc = "An SCG Marine navy utility jacket. This one has green markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has green markings."
 	icon_state = "navyservice_srv"
 	item_state = "navyservice_srv"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/service/command
-	desc = "An SCG Marine green utility jacket. This one has green and gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has green and gold markings."
 	icon_state = "greenservice_srvcom"
 	item_state = "greenservice_srvcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/service/command
-	desc = "An SCG Marine navy utility jacket. This one has green and gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has green and gold markings."
 	icon_state = "navyservice_srvcom"
 	item_state = "navyservice_srvcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/exploration
-	desc = "An SCG Marine green utility jacket. This one has purple markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has purple markings."
 	icon_state = "greenservice_exp"
 	item_state = "greenservice_exp"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/exploration
-	desc = "An SCG Marine navy utility jacket. This one has purple markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has purple markings."
 	icon_state = "navyservice_exp"
 	item_state = "navyservice_exp"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/exploration/command
-	desc = "An SCG Marine green utility jacket. This one has purple and gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has purple and gold markings."
 	icon_state = "greenservice_expcom"
 	item_state = "greenservice_expcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/exploration/command
-	desc = "An SCG Marine navy utility jacket. This one has purple and gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has purple and gold markings."
 	icon_state = "navyservice_expcom"
 	item_state = "navyservice_expcom"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/command
-	desc = "An SCG Marine Corps green utility jacket. This one has gold markings."
+	desc = "An SCG Interstellar Corps green utility jacket. This one has gold markings."
 	icon_state = "greenservice_com"
 	item_state = "greenservice_com"
 
 /obj/item/clothing/suit/storage/solgov/utility/army/navy/command
-	desc = "An SCG Marine Corps navy utility jacket. This one has gold markings."
+	desc = "An SCG Interstellar Corps navy utility jacket. This one has gold markings."
 	icon_state = "navyservice_com"
 	item_state = "navyservice_com"
 
@@ -741,10 +741,10 @@
 	allowed = list(/obj/item/device/flashlight,/obj/item/tank,/obj/item/device/suit_cooling_unit,/obj/item/stack/flag,/obj/item/device/scanner/health,/obj/item/device/gps,/obj/item/pinpointer/radio,/obj/item/material/hatchet/machete,/obj/item/shovel)
 
 /obj/item/clothing/suit/space/void/security/alt/expo
-	name = "marine voidsuit"
-	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG Army seal on its chest plate."
+	name = "infantry voidsuit"
+	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG IIC seal on its chest plate."
 
 /obj/item/clothing/head/helmet/space/void/security/alt/expo
-	name = "marine voidsuit helmet"
-	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG Army seal on its chest plate."
+	name = "infantry voidsuit helmet"
+	desc = "A light, radiation resistant voidsuit commonly used among SCG uniformed services. This one has an SCG IIC seal on its chest plate."
 	camera = /obj/machinery/camera/network/exploration

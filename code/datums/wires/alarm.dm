@@ -3,10 +3,10 @@
 	wire_count = 5
 	descriptions = list(
 		new /datum/wire_description(AALARM_WIRE_IDSCAN, "This wire is connected to the ID scanning panel.", SKILL_EXPERT),
-		new /datum/wire_description(AALARM_WIRE_POWER, "This wire seems to be carrying a heavy current."),
-		new /datum/wire_description(AALARM_WIRE_SYPHON, "This wire runs to atmospherics logic circuits of some sort."),
-		new /datum/wire_description(AALARM_WIRE_AI_CONTROL, "This wire connects to automated control systems."),
-		new /datum/wire_description(AALARM_WIRE_AALARM, "This wire gives power to the actual alarm mechanism.")
+		new /datum/wire_description(AALARM_WIRE_POWER, "This wire seems to be carrying a heavy current.", SKILL_EXPERT),
+		new /datum/wire_description(AALARM_WIRE_SYPHON, "This wire runs to atmospherics logic circuits of some sort.", SKILL_PROF),
+		new /datum/wire_description(AALARM_WIRE_AI_CONTROL, "This wire connects to automated control systems.", SKILL_PROF),
+		new /datum/wire_description(AALARM_WIRE_AALARM, "This wire gives power to the actual alarm mechanism.", SKILL_PROF)
 	)
 
 var/global/const/AALARM_WIRE_IDSCAN = 1

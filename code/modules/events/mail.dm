@@ -86,7 +86,7 @@
 
 	// Add the crate to the supply shuttle if possible
 	if(!SSsupply.addAtom(gift_crate))
-		log_debug("Failed to add mail crate to the supply shuttle!")
+		log_debug("Провалилась попытка добавить контейнер с почтой на шаттл доставки!")
 		qdel(gift_crate)
 		return FALSE
 

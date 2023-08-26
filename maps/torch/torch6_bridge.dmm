@@ -1150,6 +1150,7 @@
 	pixel_x = 8;
 	pixel_y = -3
 	},
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "cq" = (
@@ -2323,6 +2324,7 @@
 /obj/item/device/flashlight/lamp{
 	pixel_y = 3
 	},
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/office/cos)
 "en" = (
@@ -5012,6 +5014,7 @@
 	name = "plastic table frame"
 	},
 /obj/item/toy/desk/newtoncradle,
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/office/ce)
 "kJ" = (
@@ -5615,6 +5618,7 @@
 	pixel_x = 9;
 	pixel_y = -24
 	},
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/heads/office/sea)
 "mA" = (
@@ -5745,6 +5749,7 @@
 /area/hallway/primary/bridge/aft)
 "mT" = (
 /obj/structure/table/woodentable/walnut,
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/cobed)
 "mU" = (
@@ -9567,6 +9572,7 @@
 /obj/effect/floor_decal/corner/brown/mono,
 /obj/structure/closet/secure_closet/deckofficer,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/quartermaster/deckchief)
 "wP" = (
@@ -10252,6 +10258,7 @@
 /obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/sticky_pad/random,
 /obj/item/book/manual/nt_regs,
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/carpet/green,
 /area/crew_quarters/heads/office/cl)
 "yV" = (
@@ -11751,6 +11758,7 @@
 	dir = 4;
 	pixel_x = 21
 	},
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/office/cmo)
 "EV" = (
@@ -13023,6 +13031,7 @@
 /obj/effect/floor_decal/corner/research/half{
 	dir = 1
 	},
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/heads/office/rd)
 "IW" = (
@@ -15379,8 +15388,7 @@
 /turf/simulated/floor/plating,
 /area/aquila/cockpit)
 "SB" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/device/tape/random,
+/obj/structure/table/woodentable_reinforced/walnut,
 /obj/item/device/tape/random,
 /obj/item/device/tape/random,
 /obj/item/device/taperecorder,
@@ -15803,6 +15811,7 @@
 	pixel_y = -4
 	},
 /obj/item/hand_labeler,
+/obj/item/device/holopad/wrist,
 /turf/simulated/floor/wood/walnut,
 /area/crew_quarters/heads/office/sgr)
 "Ug" = (
