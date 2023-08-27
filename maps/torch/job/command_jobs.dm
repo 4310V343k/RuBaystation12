@@ -26,6 +26,8 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
 
+	intro_music = list('proxima/sound/intro/captain1.ogg')
+
 /datum/job/captain/get_description_blurb()
 	return "Вы - Командующий офицер (КО). Вы - первый человек на борту судна. \
 	Вы опытный профессиональный офицер, контролирующий всё судно и в конечном счете несущий ответственность за все, что происходит на борту. \
