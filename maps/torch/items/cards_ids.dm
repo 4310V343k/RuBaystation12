@@ -154,11 +154,6 @@
 	job_access_type = /datum/job/nt_pilot
 	detail_color = COLOR_PURPLE
 
-//EC Medic
-/obj/item/card/id/torch/crew/expmed
-	job_access_type = /datum/job/expmed
-	detail_color = COLOR_PURPLE
-
 //EC Engineer
 /obj/item/card/id/torch/crew/expeng
 	job_access_type = /datum/job/expeng

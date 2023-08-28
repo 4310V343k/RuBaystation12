@@ -40,19 +40,6 @@
 	name = OUTFIT_JOB_NAME("Shuttle Pilot - Fleet")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/exploration
 
-/decl/hierarchy/outfit/job/torch/crew/exploration/expmed
-	name = OUTFIT_JOB_NAME("Expedition Medic - Expeditionary Corps")
-	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/exploration
-	shoes = /obj/item/clothing/shoes/dutyboots
-	id_types = list(/obj/item/card/id/torch/crew/expmed)
-	pda_type = /obj/item/modular_computer/pda/explorer
-	l_ear = /obj/item/device/radio/headset/expmed
-
-/decl/hierarchy/outfit/job/torch/crew/exploration/expmed/army
-	name = OUTFIT_JOB_NAME("Expedition Medic - Interstellar")
-	uniform = /obj/item/clothing/under/solgov/utility/army/urban/medical
-	shoes = /obj/item/clothing/shoes/dutyboots
-
 /decl/hierarchy/outfit/job/torch/crew/exploration/expeng
 	name = OUTFIT_JOB_NAME("Expedition Engineer - Expeditionary Corps")
 	uniform = /obj/item/clothing/under/solgov/utility/expeditionary/exploration

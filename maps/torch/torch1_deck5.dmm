@@ -3323,8 +3323,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/closet/secure_closet/explorer/medic,
-/obj/item/material/hatchet/machete,
+/obj/structure/closet/secure_closet/explorer/infantry,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "hP" = (
@@ -4084,6 +4083,7 @@
 "jD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/suit_storage_unit/explorer/engineer,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "jE" = (
@@ -4513,8 +4513,6 @@
 "kr" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/storage/box/greenglowsticks,
-/obj/item/storage/box/greenglowsticks,
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/mask/gas/half,
@@ -4525,8 +4523,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/storage/box/ammo/flashshells,
-/obj/item/gun/projectile/flare,
 /obj/item/clothing/mask/gas/half,
 /obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/tiled/monotile,
@@ -4683,6 +4679,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8;
+	icon_state = "warningcorner"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kI" = (
@@ -4739,18 +4739,29 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kP" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
-/obj/machinery/suit_storage_unit/explorer/medic,
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/exploration)
-"kQ" = (
-/obj/structure/table/rack,
 /obj/machinery/door/window/northright{
 	autoset_access = 0;
 	name = "heavy suit storage";
-	req_access = list("ACCESS_TORCH_PATHFINDER")
+	req_access = list("ACCESS_TORCH_PATHFINDER");
+	dir = 4
 	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/rack,
+/obj/item/rig/exploration/equipped,
+/obj/item/clothing/mask/gas/half,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/exploration)
+"kQ" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -4758,10 +4769,16 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/rig/exploration/equipped,
-/obj/item/clothing/mask/gas/half,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
+/obj/structure/table/rack,
+/obj/machinery/door/window/northright{
+	autoset_access = 0;
+	name = "infantry HCM storage";
+	req_access = list("ACCESS_TORCH_EXPLORATION_INFANTRY")
+	},
+/obj/item/rig/interstellar,
+/obj/item/clothing/mask/gas/half,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kR" = (
@@ -11526,7 +11543,11 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/secure_closet/explorer/infantry,
+/obj/structure/table/rack,
+/obj/item/storage/box/greenglowsticks,
+/obj/item/storage/box/greenglowsticks,
+/obj/item/storage/box/ammo/flashshells,
+/obj/item/gun/projectile/flare,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "Cm" = (
@@ -11551,6 +11572,21 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/shuttle/petrov/maint)
+"Co" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/exploration)
 "Cq" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -31966,7 +32002,7 @@ kC
 kE
 kC
 kG
-kC
+Co
 kJ
 mn
 nr

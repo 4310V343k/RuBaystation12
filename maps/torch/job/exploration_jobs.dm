@@ -130,54 +130,6 @@
 	Вы должны искать все, что представляет экономический или научный интерес для ЦПСС - месторождения полезных ископаемых, инопланетную флору/фауну, артефакты. \
 	Вы также, вероятно, столкнетесь с опасной средой, агрессивной дикой природой или неисправными системами защиты, поэтому действуйте осторожно."
 
-/datum/job/expmed
-	title = "Exploration Medic"
-	department = "Экспедиционный"
-	department_flag = EXP
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Командующему и Исполнительному Офицеру, и Первопроходцу"
-	selection_color = "#68099e"
-	minimum_character_age = list(SPECIES_HUMAN = 20)
-	ideal_character_age = 25
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/exploration/expmed
-	allowed_branches = list(
-		/datum/mil_branch/expeditionary_corps,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/exploration/expmed/army
-		)
-
-	allowed_ranks = list(
-		/datum/mil_rank/ec/e3,
-		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5
-	)
-	min_skill = list(   SKILL_EVA = SKILL_BASIC,
-						SKILL_MEDICAL = SKILL_ADEPT
-					)
-	max_skill = list(   SKILL_MEDICAL	  = SKILL_EXPERT,
-						SKILL_ANATOMY	  = SKILL_ADEPT,
-						SKILL_PILOT       = SKILL_MAX,
-	                    SKILL_SCIENCE     = SKILL_MAX,
-	                    SKILL_COMBAT      = SKILL_EXPERT,
-	                    SKILL_WEAPONS     = SKILL_EXPERT)
-	skill_points = 22
-
-	access = list(
-		access_explorer, access_maint_tunnels, access_eva, access_emergency_storage,
-		access_guppy_helm, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar,
-		access_petrov, access_petrov_maint, access_research, access_radio_exp, access_radio_med,
-		access_medical
-	)
-
-	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
-							/datum/computer_file/program/deck_management)
-
-/datum/job/expmed/get_description_blurb()
-	return "Вы - Исследователь-медик. Ваша задача - участвовать в экспедициях в удалённые места. Первопроходец - лидер Вашей команды. \
-	Ваша цель - лечение и спасение остальных участников экспедиции. Учтите, что вы не профессиональный хирург, поэтому не пытайтесь проводить операции на шаттле, у Вас нет квалификации для этого."
-
 /datum/job/expeng
 	title = "Exploration Engineer"
 	department = "Экспедиционный"

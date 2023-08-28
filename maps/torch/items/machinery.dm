@@ -89,16 +89,6 @@
 	req_access = list(access_exploration_infantry)
 	islocked = 1
 
-/obj/machinery/suit_storage_unit/explorer/medic
-	name = "Exploration Medic Voidsuit Storage Unit"
-	suit = /obj/item/clothing/suit/space/void/medical/alt/sol/expo
-	helmet = /obj/item/clothing/head/helmet/space/void/medical/alt/sol/expo
-	boots = /obj/item/clothing/shoes/magboots
-	tank = /obj/item/tank/oxygen
-	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_explorer)
-	islocked = 1
-
 /obj/machinery/suit_storage_unit/explorer/engineer
 	name = "Exploration Engineer Voidsuit Storage Unit"
 	suit = /obj/item/clothing/suit/space/void/atmos/alt/sol/expo

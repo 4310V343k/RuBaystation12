@@ -1,6 +1,6 @@
 var/global/const/NETWORK_AQUILA      = "Aquila"
 var/global/const/NETWORK_BRIDGE      = "Bridge"
-var/global/const/NETWORK_CHARON     = "Charon"
+var/global/const/NETWORK_CHARON      = "Charon"
 var/global/const/NETWORK_EXPEDITION  = "Expedition"
 var/global/const/NETWORK_FIRST_DECK  = "First Deck"
 var/global/const/NETWORK_FOURTH_DECK = "Fourth Deck"
@@ -11,7 +11,7 @@ var/global/const/NETWORK_HANGAR      = "Hangar"
 var/global/const/NETWORK_EXPLO       = "Exploration"
 var/global/const/NETWORK_THIRD_DECK  = "Third Deck"
 var/global/const/NETWORK_FIFTH_DECK  = "Fifth Deck"
-var/global/const/NETWORK_PETROV  = "Petrov"
+var/global/const/NETWORK_PETROV      = "Petrov"
 
 /datum/map/torch/get_network_access(var/network)
 	switch(network)
