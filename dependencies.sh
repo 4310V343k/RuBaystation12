@@ -6,7 +6,7 @@
 # byond version
 # Extracted from the Dockerfile. Change by editing Dockerfile's FROM command.
 export BYOND_MAJOR=514
-export BYOND_MINOR=1557
+export BYOND_MINOR=1589
 
 #rust_g git tag
 export RUST_G_VERSION=1.2.0
