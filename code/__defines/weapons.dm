@@ -1,5 +1,3 @@
-/* //commented until repair or deletion //Drakon //PRX
-
 //Quick defines for fire modes
 #define FULL_AUTO_300		list(mode_name = "full auto",  mode_desc = "300 rounds per minute",   mode_type = /datum/firemode/automatic , fire_delay = 8, one_hand_penalty=2)
 #define FULL_AUTO_400		list(mode_name = "full auto",  mode_desc = "400 rounds per minute",   mode_type = /datum/firemode/automatic , fire_delay = 4, one_hand_penalty=3)
@@ -17,6 +15,3 @@
 
 #define MAX_ACCURACY_OFFSET  45 //It's both how big gun recoil can build up, and how hard you can miss
 #define RECOIL_REDUCTION_TIME 1 SECOND
-
-*/
-#define MAX_ACCURACY_OFFSET  45 //It's both how big gun recoil can build up, and how hard you can miss //for temporaly working

@@ -117,19 +117,11 @@
 	slot_flags = SLOT_BACK
 	w_class = ITEM_SIZE_NO_CONTAINER
 
-	firemodes = list(
-		list(mode_name="semiauto",    burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=5,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="long bursts",  burst=6, fire_delay=null, move_delay=10,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1,-1,-2), dispersion=list(0.6, 0.6, 1.0, 1.0, 1.2)),
-		)
-
-	/* //commented until repair //Drakon //PRX
 	init_firemodes = list(
 			SEMI_AUTO_NODELAY,
 			BURST_3_ROUND,
 			FULL_AUTO_400
 		)
-	*/ //commented until repair //Drakon //PRX
 
 /obj/item/gun/magnetic/railgun/automatic/examine(mob/user, distance)
 	. = ..()
@@ -160,18 +152,10 @@
 	loaded = /obj/item/magnetic_ammo
 	wielded_item_state = "z8carbine-wielded"
 
-	firemodes = list(
-		list(mode_name="semiauto",    burst=1, fire_delay=0,    move_delay=null, one_hand_penalty=1, burst_accuracy=null, dispersion=null),
-		list(mode_name="short bursts", burst=3, fire_delay=null, move_delay=5,    one_hand_penalty=2, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		)
-
-
-	/* //commented until repair //Drakon //PRX
 	init_firemodes = list(
 			SEMI_AUTO_NODELAY,
 			BURST_3_ROUND
 		)
-	*/ //commented until repair //Drakon //PRX
 
 /obj/item/gun/magnetic/railgun/flechette/out_of_ammo()
 	visible_message("<span class='warning'>\The [src] beeps to indicate the magazine is empty.</span>")
