@@ -44,7 +44,7 @@
 	icon_state = "sgushenka"
 	desc = "A can of condensed milk originating from the ICCG."
 	trash = /obj/item/trash/sgushenka
-	filling_color = "#F4cba8"
+	filling_color = "#f4cba8"
 	volume = 40
 	center_of_mass = "x=15;y=9"
 	eat_sound = 'sound/items/drink.ogg'
