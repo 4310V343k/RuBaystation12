@@ -129,7 +129,7 @@
 			BURST_3_ROUND,
 			FULL_AUTO_400
 		)
-    */ //commented until repair //Drakon //PRX
+	*/ //commented until repair //Drakon //PRX
 
 /obj/item/gun/magnetic/railgun/automatic/examine(mob/user, distance)
 	. = ..()
@@ -171,7 +171,7 @@
 			SEMI_AUTO_NODELAY,
 			BURST_3_ROUND
 		)
-    */ //commented until repair //Drakon //PRX
+	*/ //commented until repair //Drakon //PRX
 
 /obj/item/gun/magnetic/railgun/flechette/out_of_ammo()
 	visible_message("<span class='warning'>\The [src] beeps to indicate the magazine is empty.</span>")

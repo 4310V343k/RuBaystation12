@@ -215,7 +215,7 @@
 			BURST_3_ROUND,
 			FULL_AUTO_400
 		)
-    */ //commented until repair //Drakon //PRX
+	*/ //commented until repair //Drakon //PRX
 
 
 /obj/item/gun/projectile/automatic/assault_rifle/on_update_icon()

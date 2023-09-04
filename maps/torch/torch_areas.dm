@@ -881,7 +881,7 @@
 	name = "\improper Supply Upper Warehouse"
 
 /area/quartermaster/deckchief
-	name = "\improper Old Deck Chief's Office" //PRX //was: Deck Chief's Office
+	name = "\improper Deck Chief's Office"
 	icon_state = "quart"
 	req_access = list(access_qm)
 
@@ -1333,9 +1333,11 @@
 	ambience = list()
 	sound_env = MEDIUM_SOFTFLOOR
 
+/* //PRX
 /area/bridge/disciplinary_board_room
 	name = "\improper Disciplinary Board Room"
 	sound_env = SMALL_ENCLOSED
+*/
 
 /* //PRX
 /area/bridge/disciplinary_board_room/deliberation
