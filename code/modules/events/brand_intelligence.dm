@@ -8,7 +8,7 @@
 
 
 /datum/event/brand_intelligence/announce()
-	command_announcement.Announce("На объекте [location_name()] был обнаружен неисправный искусственный интеллект в системах управления устройств раздачи. Предполагается, что источником является \"[initial(originMachine.name)]\". Возможно заражение других машин.", "[location_name()] Machine Monitoring", zlevels = affecting_z)
+	command_announcement.Announce("На объекте [location_name()] был обнаружен неисправный искусственный интеллект в системах управления устройств раздачи. Предполагается, что источником является \"[initial(originMachine.name)]\". Возможно заражение других машин.", "Контроль Сети Автоматизации [location_name()]", zlevels = affecting_z)
 
 
 /datum/event/brand_intelligence/start()
@@ -71,7 +71,7 @@
 			continue
 		infectedMachine.shut_up = 1
 		infectedMachine.shoot_inventory = 0
-	command_announcement.Announce("Следы активности неисправного искусственного интеллекта не найдены или были полностью нейтрализованы.", "[station_name()] Firewall Subroutines")
+	command_announcement.Announce("Следы активности неисправного искусственного интеллекта не найдены или были полностью нейтрализованы.", "Контроль Сети Автоматизации [station_name()]")
 	originMachine = null
 	infectedVendingMachines.Cut()
 	vendingMachines.Cut()

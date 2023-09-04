@@ -10,7 +10,7 @@
 	endWhen		= 150
 
 /datum/event/brain_expansion/announce()
-	command_announcement.Announce("Аномальные показатели эффективности обнаружены в нейронных сетях деструктивного анализа. Это может повлиять на результаты анализа.", "[station_name()] Neural Network Monitor", zlevels = affecting_z)
+	command_announcement.Announce("Аномальные показатели эффективности обнаружены в нейронных сетях деструктивного анализа. Ожидайте возвращения прежних параметров в ближайшее время", "Контроль Нейронной Сети [station_name()]", zlevels = affecting_z)
 
 /datum/event/brain_expansion/end()
-	command_announcement.Announce("Нейронная сеть деструктивного анализа вернулась в нормальное состояние.", "[station_name()] Neural Network Monitor", zlevels = affecting_z)
+	command_announcement.Announce("Нейронная сеть деструктивного анализа вернулась в регламентное состояние.", "Контроль Нейронной Сети [station_name()]", zlevels = affecting_z)

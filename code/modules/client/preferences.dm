@@ -135,11 +135,11 @@
 	else if(load_failed)
 		dat += "Loading your savefile failed. Please adminhelp for assistance."
 	else
-		dat += "Slot - "
-		dat += "<a href='?src=\ref[src];load=1'>Load slot</a> - "
-		dat += "<a href='?src=\ref[src];save=1'>Save slot</a> - "
-		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
-		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a>"
+		dat += "Персонажи - "
+		dat += "<a href='?src=\ref[src];load=1'>▼ Загрузить</a> - "
+		dat += "<a href='?src=\ref[src];save=1'>▲ Сохранить</a> - "
+		dat += "<a href='?src=\ref[src];resetslot=1'>↔ Перезаписать</a> - "
+		dat += "<a href='?src=\ref[src];reload=1'>■ Перезагрузить</a>"
 
 	dat += "<br>"
 	dat += player_setup.header()
@@ -150,7 +150,7 @@
 /datum/preferences/proc/open_setup_window(mob/user)
 	if (!SScharacter_setup.initialized)
 		return
-	popup = new (user, "preferences_browser", "Character Setup", 1200, 800, src)
+	popup = new (user, "preferences_browser", "Мой персонаж", 1200, 800, src)
 	var/content = {"
 	<script type='text/javascript'>
 		function update_content(data){

@@ -40,21 +40,6 @@
 /mob/proc/is_species(datum/species/S)
 	return FALSE
 
-/proc/islesserform(A) //PRX
-	if(istype(A, /mob/living/carbon/human))
-		switch(A:get_species())
-			if ("Monkey")
-				return 1
-			if ("Farwa")
-				return 1
-			if ("Neaera")
-				return 1
-			if ("Stok")
-				return 1
-			if ("V'krexi")
-				return 1
-	return 0 //PRX
-
 
 /mob/living/carbon/is_species(datum/species/S)
 	if (!S) return FALSE
@@ -101,17 +86,17 @@
 
 //The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
-	BP_HEAD = 60,
+	BP_HEAD = 35,
 	BP_CHEST = 10,
-	BP_GROIN = 20,
-	BP_L_LEG = 50,
-	BP_R_LEG = 50,
-	BP_L_ARM = 20,
-	BP_R_ARM = 20,
-	BP_L_HAND = 50,
-	BP_R_HAND = 50,
-	BP_L_FOOT = 70,
-	BP_R_FOOT = 70,
+	BP_GROIN = 15,
+	BP_L_LEG = 20,
+	BP_R_LEG = 20,
+	BP_L_ARM = 25,
+	BP_R_ARM = 25,
+	BP_L_HAND = 30,
+	BP_R_HAND = 30,
+	BP_L_FOOT = 30,
+	BP_R_FOOT = 30,
 )
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).

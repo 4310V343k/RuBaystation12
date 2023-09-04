@@ -123,14 +123,13 @@ var/global/const/access_pilot = "ACCESS_TORCH_PILOT" //95
 	desc = "Pilot"
 	region = ACCESS_REGION_GENERAL
 
-//proxima code
-/var/const/access_exploration_guard = "ACCESS_TORCH_EXPLORATION_GUARD"
-/datum/access/access_exploration_guard
-	id = access_exploration_guard
-	desc = "Exploration Guard"
+//PRX-START
+/var/const/access_exploration_infantry = "ACCESS_TORCH_EXPLORATION_INFANTRY"
+/datum/access/access_exploration_infantry
+	id = access_exploration_infantry
+	desc = "Exploration Infantry"
 	region = ACCESS_REGION_GENERAL
-//proxima code end
-
+//PRX-END
 
 /var/const/access_commissary = "ACCESS_TORCH_SHOP" //96
 /datum/access/commissary

@@ -283,3 +283,8 @@
 	cointype["coin, phoron"] = /obj/item/material/coin/phoron
 	cointype["coin, platinum"] = /obj/item/material/coin/platinum
 	gear_tweaks += new/datum/gear_tweak/path(cointype)
+
+/datum/gear/telepda
+	display_name = "tele-pda"
+	path = /obj/item/device/holopad
+	cost = 3

@@ -4,8 +4,8 @@
 	icon_state = "wristwatch_ec"
 
 /obj/item/clothing/accessory/wristwatches/mc
-	name = "marine wrist watch"
-	desc = "A time keeping device with logo MCSCG. Its leather strap is quite fashionable."
+	name = "interstellar wrist watch"
+	desc = "A time keeping device with logo IICSCG. Its leather strap is quite fashionable."
 	icon_state = "wristwatch_mc"
 
 /obj/item/clothing/accessory/wristwatches/fleet

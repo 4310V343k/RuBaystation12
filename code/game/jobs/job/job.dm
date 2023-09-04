@@ -54,6 +54,8 @@
 	var/use_species_whitelist // If set, restricts the job to players with the given species whitelist. This does NOT restrict characters joining as the job to the species itself.
 
 	var/required_language
+	
+	var/intro_music = list() //prox
 
 /datum/job/New()
 
