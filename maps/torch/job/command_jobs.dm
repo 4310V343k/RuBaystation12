@@ -302,7 +302,7 @@
 
 /datum/job/qm
 	title = "Supply Corps Officer"
-	selection_color = "#964B00"
+	selection_color = "#974e05"
 	total_positions = 1
 	spawn_positions = 1
 	head_position = 1

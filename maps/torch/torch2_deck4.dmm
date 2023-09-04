@@ -89,7 +89,7 @@
 	name = "DO Office Shutters"
 	},
 /turf/simulated/floor/tiled,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "av" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced/airless,
@@ -2055,6 +2055,9 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/fourthdeck/aft)
+"gP" = (
+/turf/simulated/wall/prepainted,
+/area/quartermaster/deckchief)
 "gU" = (
 /obj/structure/catwalk,
 /obj/machinery/rotating_alarm/security_alarm{
@@ -2623,7 +2626,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "ix" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -4674,7 +4677,7 @@
 	},
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "qg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6945,7 +6948,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "xo" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -7790,7 +7793,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Ae" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -8128,6 +8131,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fourthdeck/aft)
+"Bw" = (
+/turf/simulated/wall/r_wall/prepainted,
+/area/quartermaster/deckchief)
 "By" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/blast/regular/escape_pod,
@@ -10745,7 +10751,7 @@
 	name = "Warehouse"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "La" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10756,7 +10762,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Lb" = (
 /obj/random/obstruction,
 /turf/simulated/floor/plating,
@@ -10914,7 +10920,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "LA" = (
 /turf/simulated/wall/r_wall/hull,
 /area/hallway/primary/fourthdeck/aft)
@@ -12125,7 +12131,7 @@
 	},
 /obj/effect/wallframe_spawn/no_grille,
 /turf/simulated/floor/plating,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Pc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12218,7 +12224,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Pk" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12461,7 +12467,7 @@
 "PT" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "PU" = (
 /obj/random/junk,
 /obj/structure/disposalpipe/segment{
@@ -12636,7 +12642,7 @@
 /area/crew_quarters/lounge)
 "Qu" = (
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Qy" = (
 /obj/structure/railing/mapped,
 /obj/random/trash,
@@ -12683,7 +12689,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "QG" = (
 /obj/structure/table/standard,
 /obj/structure/cable/green{
@@ -13057,7 +13063,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/quartermaster/storage/upper)
+/area/maintenance/fourthdeck/port)
 "RI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13254,7 +13260,7 @@
 	},
 /obj/structure/closet/crate/secure/gear,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Si" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13386,7 +13392,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Sz" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4;
@@ -13551,7 +13557,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "SL" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/techfloor{
@@ -13613,7 +13619,7 @@
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "do_office";
-	name = "Warehause Shutter Control";
+	name = "DO Shutter Control";
 	pixel_x = 6;
 	pixel_y = 24
 	},
@@ -13624,7 +13630,7 @@
 	},
 /obj/structure/closet/crate/secure/phoron,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "SU" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -13975,7 +13981,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "TP" = (
 /obj/random/trash,
 /turf/simulated/floor/tiled/techfloor,
@@ -14513,7 +14519,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "Vo" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -15116,7 +15122,7 @@
 	name = "Warehouse"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "WX" = (
 /obj/effect/floor_decal/corner/green/mono,
 /turf/simulated/floor/tiled/dark/monotile,
@@ -15457,7 +15463,7 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "XP" = (
 /obj/effect/floor_decal/corner/brown/mono,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -15470,7 +15476,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "XQ" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -16323,7 +16329,7 @@
 	sort_type = "Deck Chief"
 	},
 /turf/simulated/floor/tiled/dark/monotile,
-/area/quartermaster/storage/upper)
+/area/quartermaster/deckchief)
 "ZR" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -37922,7 +37928,7 @@ Np
 Xr
 HL
 Bf
-Yf
+GW
 BH
 Vt
 rs
@@ -38124,7 +38130,7 @@ Pg
 tA
 pc
 pc
-Yf
+GW
 Ie
 Ni
 JL
@@ -38326,7 +38332,7 @@ Uh
 yj
 yu
 ce
-Yf
+GW
 eQ
 Ni
 WA
@@ -38528,7 +38534,7 @@ Zm
 QK
 Sx
 Sx
-Yf
+GW
 zx
 Ni
 xL
@@ -38721,7 +38727,7 @@ io
 TO
 SK
 XP
-Yf
+gP
 Wd
 PB
 Qe
@@ -38918,7 +38924,7 @@ Xn
 bx
 MI
 Vi
-Yf
+gP
 qf
 PT
 Pj
@@ -38932,7 +38938,7 @@ Nl
 ZB
 Vo
 ju
-Yf
+GW
 zx
 Ni
 tg
@@ -39125,6 +39131,7 @@ Vm
 Qu
 La
 QD
+Bw
 Ds
 Ds
 Ds
@@ -39133,8 +39140,7 @@ Ds
 Ds
 Ds
 Ds
-Ds
-Ds
+Ss
 Ss
 Ss
 tg
@@ -39327,7 +39333,7 @@ xn
 Qu
 Ad
 Lx
-Ds
+Bw
 DU
 DU
 DU
@@ -39524,12 +39530,12 @@ Xn
 TH
 MI
 ql
-Yf
+gP
 ST
 Sh
 Sy
 XN
-Ds
+Bw
 DV
 EO
 Fv
@@ -39726,12 +39732,12 @@ Xn
 Rr
 UM
 sR
-Yf
-Yf
-Yf
-Yf
-Yf
-Ds
+gP
+gP
+gP
+gP
+gP
+Bw
 DV
 EO
 Fw
