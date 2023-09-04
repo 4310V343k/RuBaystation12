@@ -81,6 +81,7 @@
 #include "code\__defines\temperature.dm"
 #include "code\__defines\topic.dm"
 #include "code\__defines\turfs.dm"
+#include "code\__defines\weapons.dm"
 #include "code\__defines\webhooks.dm"
 #include "code\__defines\xenoarcheaology.dm"
 #include "code\__defines\ZAS.dm"
