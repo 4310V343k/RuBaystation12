@@ -98,20 +98,20 @@ GLOBAL_VAR(href_logfile)
 
 	var/list/name_titles = list(
 		"UMBRA Protocol",
-		"Into Unknown",
-		"Awaiting for Orders",
-		"Wonder Fleet",
-		"Shining of Stars",
-		"Last Hope",
-		"True Motives",
-		"Code Green",
-		"Murmur of Missing",
-		"Haunting Horror",
-		"Quarter Measurement",
-		"Pioneers of Future",
+		"Immortals",
+		"Archives of Sleeping People",
+		"Unknown Signal",
+		"Heart of Darkness",
+		"Anomaly Recognition Method",
+		"Sleeping Guide",
+		"Code White",
+		"Unknown Language",
+		"The Dead Man",
+		"Darkness",
+		"Bloody Tears",
 		"Anomalous Materials",
 		"Questionable Ethics",
-		"Power Struggle"
+		"Anomalous Objects"
 	)
 
 	name = "[server_name] — '[pick(name_titles)]'"
