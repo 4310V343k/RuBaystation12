@@ -3227,6 +3227,7 @@
 #include "customs\code\foler.dm"
 #include "customs\code\hacso.dm"
 #include "customs\code\helldiver.dm"
+#include "customs\code\kardagan.dm"
 #include "customs\code\krabinator.dm"
 #include "customs\code\lodagn.dm"
 #include "customs\code\mafiosy.dm"
