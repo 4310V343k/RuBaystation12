@@ -1,7 +1,7 @@
 
 /*
- * Backpack
- */
+	* Backpack
+	*/
 
 /obj/item/storage/backpack
 	name = "backpack"
@@ -65,8 +65,8 @@
 	return FALSE
 
 /*
- * Backpack Types
- */
+	* Backpack Types
+	*/
 
 /obj/item/storage/backpack/holding
 	name = "bag of holding"
@@ -251,8 +251,8 @@
 	)
 
 /*
- * Duffle Types
- */
+	* Duffle Types
+	*/
 
 /obj/item/storage/backpack/dufflebag
 	name = "dufflebag"
@@ -332,8 +332,8 @@
 		/obj/item/extinguisher
 	)
 /*
- * Satchel Types
- */
+	* Satchel Types
+	*/
 
 /obj/item/storage/backpack/satchel
 	name = "satchel"
@@ -525,8 +525,8 @@
 	icon_state = "ert_medical"
 
 /*
- * Messenger Bags
- */
+	* Messenger Bags
+	*/
 
 /obj/item/storage/backpack/messenger
 	name = "messenger bag"

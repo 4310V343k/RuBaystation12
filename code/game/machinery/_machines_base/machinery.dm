@@ -1,43 +1,43 @@
 /*
 Overview:
-   Used to create objects that need a per step proc call.  Default definition of 'New()'
-   stores a reference to src machine in global 'machines list'.  Default definition
-   of 'Destroy' removes reference to src machine in global 'machines list'.
+	Used to create objects that need a per step proc call.  Default definition of 'New()'
+	stores a reference to src machine in global 'machines list'.  Default definition
+	of 'Destroy' removes reference to src machine in global 'machines list'.
 
 Class Variables:
-   use_power (num)
+	use_power (num)
 	  current state of auto power use.
 	  Possible Values:
 		 0 -- no auto power use
 		 1 -- machine is using power at its idle power level
 		 2 -- machine is using power at its active power level
 
-   active_power_usage (num)
+	active_power_usage (num)
 	  Value for the amount of power to use when in active power mode
 
-   idle_power_usage (num)
+	idle_power_usage (num)
 	  Value for the amount of power to use when in idle power mode
 
-   power_channel (num)
+	power_channel (num)
 	  What channel to draw from when drawing power for power mode
 	  Possible Values:
 		 EQUIP:1 -- Equipment Channel
 		 LIGHT:2 -- Lighting Channel
 		 ENVIRON:3 -- Environment Channel
 
-   component_parts (list)
+	component_parts (list)
 	  A list of component parts of machine used by frame based machines.
 
-   panel_open (num)
+	panel_open (num)
 	  Whether the panel is open
 
-   uid (num)
+	uid (num)
 	  Unique id of machine across all machines.
 
-   gl_uid (global num)
+	gl_uid (global num)
 	  Next uid value in sequence
 
-   stat (bitflag)
+	stat (bitflag)
 	  Machine status bit flags.
 	  Possible bit flags:
 		 BROKEN:1 -- Machine is broken
@@ -46,30 +46,30 @@ Class Variables:
 		 EMPED:16 -- temporary broken by EMP pulse
 
 Class Procs:
-   New()					 'game/machinery/machine.dm'
+	New()					 'game/machinery/machine.dm'
 
-   Destroy()					 'game/machinery/machine.dm'
+	Destroy()					 'game/machinery/machine.dm'
 
-   powered(chan = EQUIP)		 'modules/power/power_usage.dm'
+	powered(chan = EQUIP)		 'modules/power/power_usage.dm'
 	  Checks to see if area that contains the object has power available for power
 	  channel given in 'chan'.
 
-   use_power_oneoff(amount, chan=power_channel)   'modules/power/power_usage.dm'
+	use_power_oneoff(amount, chan=power_channel)   'modules/power/power_usage.dm'
 	  Deducts 'amount' from the power channel 'chan' of the area that contains the object.
 	  This is not a continuous draw, but rather will be cleared after one APC update.
 
-   power_change()			   'modules/power/power_usage.dm'
+	power_change()			   'modules/power/power_usage.dm'
 	  Called by the area that contains the object when ever that area under goes a
 	  power state change (area runs out of power, or area channel is turned off).
 
-   RefreshParts()			   'game/machinery/machine.dm'
+	RefreshParts()			   'game/machinery/machine.dm'
 	  Called to refresh the variables in the machine that are contributed to by parts
 	  contained in the component_parts list. (example: glass and material amounts for
 	  the autolathe)
 
 	  Default definition does nothing.
 
-   Process()				  'game/machinery/machine.dm'
+	Process()				  'game/machinery/machine.dm'
 	  Called by the 'master_controller' once per game tick for each machine that is listed in the 'machines' list.
 
 
@@ -371,18 +371,18 @@ Class Procs:
 		return interface_interact(user)
 
 /**
- * If you want to have interface interactions handled for you conveniently, use this.
- * Return `TRUE` for handled.
- * If you perform direct interactions in here, you are responsible for ensuring that full interactivity checks have been made (i.e `CanInteract()`).
- * The checks leading in to here only guarantee that the user should be able to view a UI.
- */
+	* If you want to have interface interactions handled for you conveniently, use this.
+	* Return `TRUE` for handled.
+	* If you perform direct interactions in here, you are responsible for ensuring that full interactivity checks have been made (i.e `CanInteract()`).
+	* The checks leading in to here only guarantee that the user should be able to view a UI.
+	*/
 /obj/machinery/proc/interface_interact(user)
 	return FALSE
 
 /**
- * If you want a physical interaction which happens after all relevant checks but preempts the UI interactions, do it here.
- * Return `TRUE` for handled.
- */
+	* If you want a physical interaction which happens after all relevant checks but preempts the UI interactions, do it here.
+	* Return `TRUE` for handled.
+	*/
 /obj/machinery/proc/physical_attack_hand(user)
 	return FALSE
 

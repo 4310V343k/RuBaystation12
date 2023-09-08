@@ -79,4 +79,3 @@
 		update_icons()
 	else
 		. = ..()
-

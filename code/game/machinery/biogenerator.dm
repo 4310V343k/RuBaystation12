@@ -119,10 +119,10 @@
 	update_icon()
 
 /**
- *  Display the NanoUI window for the vending machine.
- *
- *  See NanoUI documentation for details.
- */
+	*  Display the NanoUI window for the vending machine.
+	*
+	*  See NanoUI documentation for details.
+	*/
 /obj/machinery/biogenerator/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	user.set_machine(src)
 	var/list/data = list()

@@ -6,4 +6,4 @@
 	req_components = list(
 							/obj/item/stock_parts/capacitor = 2,
 							/obj/item/stock_parts/scanning_module = 1,
-							/obj/item/stock_parts/manipulator = 2) 
+							/obj/item/stock_parts/manipulator = 2)

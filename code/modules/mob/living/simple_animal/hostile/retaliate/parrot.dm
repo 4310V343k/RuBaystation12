@@ -1,16 +1,16 @@
 /* Parrots!
- * Contains
- * 		Defines
- *		Inventory (headset stuff)
- *		Attack responses
- *		AI
- *		Procs / Verbs (usable by players)
- *		Poly
- */
+	* Contains
+	* 		Defines
+	*		Inventory (headset stuff)
+	*		Attack responses
+	*		AI
+	*		Procs / Verbs (usable by players)
+	*		Poly
+	*/
 
 /*
- * Defines
- */
+	* Defines
+	*/
 
 //Only a maximum of one action and one intent should be active at any given time.
 //Actions
@@ -134,8 +134,8 @@
 	icon_dead = "[icon_set]_dead"
 
 /*
- * Inventory
- */
+	* Inventory
+	*/
 /mob/living/simple_animal/hostile/retaliate/parrot/show_inv(mob/user as mob)
 	user.set_machine(src)
 	if(user.stat) return
@@ -225,8 +225,8 @@
 
 
 /*
- * Attack responces
- */
+	* Attack responces
+	*/
 //Humans, monkeys, aliens
 /mob/living/simple_animal/hostile/retaliate/parrot/attack_hand(mob/living/carbon/M as mob)
 	..()
@@ -284,8 +284,8 @@
 
 
 /*
- * AI - Not really intelligent, but I'm calling it AI anyway.
- */
+	* AI - Not really intelligent, but I'm calling it AI anyway.
+	*/
 /mob/living/simple_animal/hostile/retaliate/parrot/Life()
 	. = ..()
 	if(!.)
@@ -519,8 +519,8 @@
 		return
 
 /*
- * Procs
- */
+	* Procs
+	*/
 
 /mob/living/simple_animal/hostile/retaliate/parrot/movement_delay()
 	if(client && stat == CONSCIOUS && parrot_state != "parrot_fly")
@@ -576,8 +576,8 @@
 	relax_chance -= impatience
 
 /*
- * Verbs - These are actually procs, but can be used as verbs by player-controlled parrots.
- */
+	* Verbs - These are actually procs, but can be used as verbs by player-controlled parrots.
+	*/
 /mob/living/simple_animal/hostile/retaliate/parrot/proc/steal_from_ground()
 	set name = "Steal from ground"
 	set category = "Parrot"
@@ -693,8 +693,8 @@
 	return
 
 /*
- * Sub-types
- */
+	* Sub-types
+	*/
 /mob/living/simple_animal/hostile/retaliate/parrot/Poly
 	name = "Poly"
 	desc = "Poly the Parrot. An expert on quantum cracker theory."

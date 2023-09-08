@@ -1,17 +1,17 @@
 /*
- * Contains
- * /obj/item/rig_module/device/flash
- * /obj/item/rig_module/device/flash/advanced
- * /obj/item/rig_module/grenade_launcher (cleaner, smoke, mfoam)
- * /obj/item/rig_module/mounted
- * /obj/item/rig_module/mounted/lcannon
- * /obj/item/rig_module/mounted/egun
- * /obj/item/rig_module/mounted/taser
- * /obj/item/rig_module/mounted/plasmacutter
- * /obj/item/rig_module/mounted/energy_blade
- * /obj/item/rig_module/fabricator
- * /obj/item/rig_module/fabricator/wf_sign
- */
+	* Contains
+	* /obj/item/rig_module/device/flash
+	* /obj/item/rig_module/device/flash/advanced
+	* /obj/item/rig_module/grenade_launcher (cleaner, smoke, mfoam)
+	* /obj/item/rig_module/mounted
+	* /obj/item/rig_module/mounted/lcannon
+	* /obj/item/rig_module/mounted/egun
+	* /obj/item/rig_module/mounted/taser
+	* /obj/item/rig_module/mounted/plasmacutter
+	* /obj/item/rig_module/mounted/energy_blade
+	* /obj/item/rig_module/fabricator
+	* /obj/item/rig_module/fabricator/wf_sign
+	*/
 
 /obj/item/rig_module/device/flash
 	name = "mounted flash"

@@ -1,4 +1,4 @@
-GLOBAL_LIST_INIT(local_networks, new)		
+GLOBAL_LIST_INIT(local_networks, new)
 
 /datum/local_network
 	var/id_tag
@@ -23,11 +23,11 @@ GLOBAL_LIST_INIT(local_networks, new)
 
 /datum/local_network/proc/add_device(var/obj/machinery/device)
 	var/list/entities = get_devices(device.type)
-	
+
 	if(!entities)
 		entities = list()
 		network_entities[device.type] = entities
-	
+
 	entities[device] = TRUE
 
 	return entities[device]
@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(local_networks, new)
 
 
 //Multilevel network
-GLOBAL_LIST_INIT(multilevel_local_networks, new)	
+GLOBAL_LIST_INIT(multilevel_local_networks, new)
 
 /datum/local_network/multilevel/New(var/_id)
 	id_tag = _id

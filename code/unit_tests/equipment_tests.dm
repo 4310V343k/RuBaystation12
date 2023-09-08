@@ -105,4 +105,3 @@
 
 #undef SUCCESS
 #undef FAILURE
-

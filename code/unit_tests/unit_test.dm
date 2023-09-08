@@ -1,28 +1,28 @@
 /*   Unit Tests originally designed by Ccomp5950
- *
- *   Tests are created to prevent changes that would create bugs or change expected behaviour.
- *   For the most part I think any test can be created that doesn't require a client in a mob or require a game mode other then extended
- *
- *   The easiest way to make effective tests is to create a "template" if you intend to run the same test over and over and make your actual
- *   tests be a "child object" of those templates.  Be sure and name your templates with the word "template" somewhere in var/name.
- *
- *   The goal is to have all sorts of tests that run and to run them as quickly as possible.
- *
- *   Tests that require time to run we instead just check back on their results later instead of waiting around in a sleep(1) for each test.
- *   This allows us to finish unit testing quicker since we can start other tests while we're waiting on that one to finish.
- *
- *   An example of that is listed in mob_tests.dm with the human_breath test.  We spawn the mob in space and set the async flag to 1 so that we run the check later.
- *   After 10 life ticks for that mob we check it's oxyloss but while that is going on we've already ran other tests.
- *
- *   If your test requires a significant amount of time...cheat on the timers.  Either speed up the process/life runs or do as we did in the timers for the shuttle
- *   transfers in zas_tests.dm   we move a shuttle but instead of waiting 3 minutes we set the travel time to a very low number.
- *
- *   At the same time, Unit tests are intended to reflect standard usage so avoid changing to much about how stuff is processed.
- *
- *
- *   WRITE UNIT TEST TEMPLATES AS GENERIC AS POSSIBLE (makes for easy reusability)
- *
- */
+	*
+	*   Tests are created to prevent changes that would create bugs or change expected behaviour.
+	*   For the most part I think any test can be created that doesn't require a client in a mob or require a game mode other then extended
+	*
+	*   The easiest way to make effective tests is to create a "template" if you intend to run the same test over and over and make your actual
+	*   tests be a "child object" of those templates.  Be sure and name your templates with the word "template" somewhere in var/name.
+	*
+	*   The goal is to have all sorts of tests that run and to run them as quickly as possible.
+	*
+	*   Tests that require time to run we instead just check back on their results later instead of waiting around in a sleep(1) for each test.
+	*   This allows us to finish unit testing quicker since we can start other tests while we're waiting on that one to finish.
+	*
+	*   An example of that is listed in mob_tests.dm with the human_breath test.  We spawn the mob in space and set the async flag to 1 so that we run the check later.
+	*   After 10 life ticks for that mob we check it's oxyloss but while that is going on we've already ran other tests.
+	*
+	*   If your test requires a significant amount of time...cheat on the timers.  Either speed up the process/life runs or do as we did in the timers for the shuttle
+	*   transfers in zas_tests.dm   we move a shuttle but instead of waiting 3 minutes we set the travel time to a very low number.
+	*
+	*   At the same time, Unit tests are intended to reflect standard usage so avoid changing to much about how stuff is processed.
+	*
+	*
+	*   WRITE UNIT TEST TEMPLATES AS GENERIC AS POSSIBLE (makes for easy reusability)
+	*
+	*/
 
 var/global/all_unit_tests_passed = 1
 var/global/failed_unit_tests = 0
@@ -115,7 +115,7 @@ var/global/ascii_reset = "[ascii_esc]\[0m"
 	if(config.generate_map != 1)
 		log_unit_test("Overiding Configuration option for Asteroid Generation to ENABLED")
 		config.generate_map = 1	// The default map requires it, the example config doesn't have this enabled.
- */
+	*/
 
 /proc/get_test_datums()
 	. = list()

@@ -278,8 +278,8 @@
 		to_chat(user, "\The [launcher] is empty.")
 
 /obj/item/gun/projectile/automatic/bullpup_rifle/toggle_safety(mob/user)
-    . = ..()
-    launcher.toggle_safety(user)
+	. = ..()
+	launcher.toggle_safety(user)
 
 /obj/item/gun/projectile/automatic/bullpup_rifle/light
 	name = "prototype bullpup assault rifle"

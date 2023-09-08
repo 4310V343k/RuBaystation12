@@ -54,7 +54,7 @@
 	var/use_species_whitelist // If set, restricts the job to players with the given species whitelist. This does NOT restrict characters joining as the job to the species itself.
 
 	var/required_language
-	
+
 	var/intro_music = list() //prox
 
 /datum/job/New()
@@ -282,12 +282,12 @@
 					LAZYADD(.[branch.name], initial(rank.name))
 
 /**
- *  Check if members of the given branch are allowed in the job
- *
- *  This proc should only be used after the global branch list has been initialized.
- *
- *  branch_name - String key for the branch to check
- */
+	*  Check if members of the given branch are allowed in the job
+	*
+	*  This proc should only be used after the global branch list has been initialized.
+	*
+	*  branch_name - String key for the branch to check
+	*/
 /datum/job/proc/is_branch_allowed(var/branch_name)
 	if(!allowed_branches || !GLOB.using_map || !(GLOB.using_map.flags & MAP_HAS_BRANCH))
 		return 1
@@ -306,13 +306,13 @@
 		return 0
 
 /**
- *  Check if people with given rank are allowed in this job
- *
- *  This proc should only be used after the global branch list has been initialized.
- *
- *  branch_name - String key for the branch to which the rank belongs
- *  rank_name - String key for the rank itself
- */
+	*  Check if people with given rank are allowed in this job
+	*
+	*  This proc should only be used after the global branch list has been initialized.
+	*
+	*  branch_name - String key for the branch to which the rank belongs
+	*  rank_name - String key for the rank itself
+	*/
 /datum/job/proc/is_rank_allowed(var/branch_name, var/rank_name)
 	if(!allowed_ranks || !GLOB.using_map || !(GLOB.using_map.flags & MAP_HAS_RANK))
 		return 1
@@ -420,12 +420,12 @@
 		return locate("start*[title]") // use old stype
 
 /**
- *  Return appropriate /datum/spawnpoint for given client
- *
- *  Spawnpoint will be the one set in preferences for the client, unless the
- *  preference is not set, or the preference is not appropriate for the rank, in
- *  which case a fallback will be selected.
- */
+	*  Return appropriate /datum/spawnpoint for given client
+	*
+	*  Spawnpoint will be the one set in preferences for the client, unless the
+	*  preference is not set, or the preference is not appropriate for the rank, in
+	*  which case a fallback will be selected.
+	*/
 /datum/job/proc/get_spawnpoint(var/client/C)
 
 	if(!C)

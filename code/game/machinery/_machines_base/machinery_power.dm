@@ -9,9 +9,9 @@ This is /obj/machinery level code to properly manage power usage from the area.
 		if(A) A.power_use_change(old_power, new_power, power_channel)}
 
 /**
- * Returns `TRUE` if the area has power on given channel (or doesn't require power), defaults to `power_channel`.
- * May also optionally specify an area, otherwise defaults to `loc.loc`.
- */
+	* Returns `TRUE` if the area has power on given channel (or doesn't require power), defaults to `power_channel`.
+	* May also optionally specify an area, otherwise defaults to `loc.loc`.
+	*/
 /obj/machinery/proc/powered(chan = POWER_CHAN, area/check_area = null)
 
 	if(!loc)
@@ -60,9 +60,9 @@ This is /obj/machinery level code to properly manage power usage from the area.
 			return 0
 
 /**
- *  This will have this machine have its area eat this much power next tick, and not afterwards. Do not use for continued power draw.
- * `chan` can be one of the possible values for `power_channel`, or `POWER_CHAN` to use the machine's current configured power channel.
- */
+	*  This will have this machine have its area eat this much power next tick, and not afterwards. Do not use for continued power draw.
+	* `chan` can be one of the possible values for `power_channel`, or `POWER_CHAN` to use the machine's current configured power channel.
+	*/
 /obj/machinery/proc/use_power_oneoff(amount, chan = POWER_CHAN)
 	if(chan == POWER_CHAN)
 		chan = power_channel

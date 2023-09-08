@@ -1,13 +1,13 @@
 /*
- * Holds procs to help with list operations
- * Contains groups:
- *			Misc
- *			Sorting
- */
+	* Holds procs to help with list operations
+	* Contains groups:
+	*			Misc
+	*			Sorting
+	*/
 
 /*
- * Misc
- */
+	* Misc
+	*/
 
 //Returns a list in plain english as a string
 /proc/english_list(var/list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "," )
@@ -18,30 +18,30 @@
 		else  return "[jointext(input, comma_text, 1, -1)][final_comma_text][and_text][input[input.len]]"
 
 /**
- * Converts a list to an HTML formatted list, i.e.:
- *
- * ```dm
- * list(
- *     "Value1",
- *     "Value2"
- * )
- * ```
- *
- * Becomes:
- *
- * ```html
- * <ul>
- *     <li>Value1</li>
- *     <li>Value2</li>
- * </ul>
- * ```
- *
- * **Parameters**:
- * - `input` - The list to convert to an HTML formatted list. Values must be convertable to string. List keys from associative lists are not used.
- * - `numbered_list` (Boolean, default `FALSE`) - If set, the list will use `<ol>` instead of `<ul>` tags, generating a numbered list instead of bullets.
- *
- * Returns string, or null if `input` is empty.
- */
+	* Converts a list to an HTML formatted list, i.e.:
+	*
+	* ```dm
+	* list(
+	*     "Value1",
+	*     "Value2"
+	* )
+	* ```
+	*
+	* Becomes:
+	*
+	* ```html
+	* <ul>
+	*     <li>Value1</li>
+	*     <li>Value2</li>
+	* </ul>
+	* ```
+	*
+	* **Parameters**:
+	* - `input` - The list to convert to an HTML formatted list. Values must be convertable to string. List keys from associative lists are not used.
+	* - `numbered_list` (Boolean, default `FALSE`) - If set, the list will use `<ol>` instead of `<ul>` tags, generating a numbered list instead of bullets.
+	*
+	* Returns string, or null if `input` is empty.
+	*/
 /proc/html_list(list/input, numbered_list = FALSE)
 	if (!length(input))
 		return
@@ -52,32 +52,32 @@
 	. += "</[html_tag]>"
 
 /**
- * Converts an associative list to an HTML formatted definition list, i.e.:
- *
- * ```dm
- * list(
- *     "Key1" = "Value1",
- *     "Key2" = "Value2"
- * )
- * ```
- *
- * Becomes:
- *
- * ```html
- * <dl>
- *     <dt>Key1</dt>
- *     <dd>Value1</dd>
- *     <dt>Key2</dt>
- *     <dd>Value2</dd>
- *     ...
- * </dl>
- * ```
- *
- * **Parameters**:
- * - `input` - The list to convert to an HTML formatted list. Both the key and value must be convertable to string.
- *
- * Returns string, or null if `input` is empty.
- */
+	* Converts an associative list to an HTML formatted definition list, i.e.:
+	*
+	* ```dm
+	* list(
+	*     "Key1" = "Value1",
+	*     "Key2" = "Value2"
+	* )
+	* ```
+	*
+	* Becomes:
+	*
+	* ```html
+	* <dl>
+	*     <dt>Key1</dt>
+	*     <dd>Value1</dd>
+	*     <dt>Key2</dt>
+	*     <dd>Value2</dd>
+	*     ...
+	* </dl>
+	* ```
+	*
+	* **Parameters**:
+	* - `input` - The list to convert to an HTML formatted list. Both the key and value must be convertable to string.
+	*
+	* Returns string, or null if `input` is empty.
+	*/
 /proc/html_list_dl(list/input)
 	if (!length(input))
 		return
@@ -115,10 +115,10 @@
 	return
 
 /*
- * Returns list containing all the entries from first list that are not present in second.
- * If skiprep = 1, repeated elements are treated as one.
- * If either of arguments is not a list, returns null
- */
+	* Returns list containing all the entries from first list that are not present in second.
+	* If skiprep = 1, repeated elements are treated as one.
+	* If either of arguments is not a list, returns null
+	*/
 /proc/difflist(var/list/first, var/list/second, var/skiprep=0)
 	if(!islist(first) || !islist(second))
 		return
@@ -155,10 +155,10 @@ Checks if a list has the same entries and values as an element of big.
 			return 1
 	return 0
 /*
- * Returns list containing entries that are in either list but not both.
- * If skipref = 1, repeated elements are treated as one.
- * If either of arguments is not a list, returns null
- */
+	* Returns list containing entries that are in either list but not both.
+	* If skipref = 1, repeated elements are treated as one.
+	* If either of arguments is not a list, returns null
+	*/
 /proc/uniquemergelist(var/list/first, var/list/second, var/skiprep=0)
 	if(!islist(first) || !islist(second))
 		return
@@ -257,8 +257,8 @@ Checks if a list has the same entries and values as an element of big.
 	return L[1]
 
 /*
- * Sorting
- */
+	* Sorting
+	*/
 
 //Reverses the order of items in the list
 /proc/reverselist(list/L)
@@ -764,9 +764,9 @@ Checks if a list has the same entries and values as an element of big.
 			return A
 
 /**
- * Returns a new list with only atoms that are in typecache L
- *
- */
+	* Returns a new list with only atoms that are in typecache L
+	*
+	*/
 /proc/typecache_filter_list(list/atoms, list/typecache)
 	. = list()
 	for(var/thing in atoms)
@@ -775,8 +775,8 @@ Checks if a list has the same entries and values as an element of big.
 			. += A
 
 /**
- * Like typesof() or subtypesof(), but returns a typecache instead of a list
- */
+	* Like typesof() or subtypesof(), but returns a typecache instead of a list
+	*/
 /proc/typecacheof(path, ignore_root_path, only_root_path = FALSE)
 	if(ispath(path))
 		var/list/types = list()

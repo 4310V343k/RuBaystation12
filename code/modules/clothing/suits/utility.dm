@@ -1,13 +1,13 @@
 /*
- * Contains:
- *		Fire protection
- *		Bomb protection
- *		Radiation protection
- */
+	* Contains:
+	*		Fire protection
+	*		Bomb protection
+	*		Radiation protection
+	*/
 
 /*
- * Fire protection
- */
+	* Fire protection
+	*/
 
 /obj/item/clothing/suit/fire
 	name = "firesuit"
@@ -63,8 +63,8 @@
 
 
 /*
- * Bomb protection
- */
+	* Bomb protection
+	*/
 /obj/item/clothing/head/bomb_hood
 	name = "bomb hood"
 	desc = "Use in case of bomb."
@@ -116,8 +116,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 
 /*
- * Radiation protection
- */
+	* Radiation protection
+	*/
 /obj/item/clothing/head/radiation
 	name = "radiation hood"
 	icon_state = "rad_hood"

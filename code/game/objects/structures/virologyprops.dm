@@ -80,7 +80,7 @@
 	desc = "A cryotube, it is not on."
 	icon = 'icons/obj/cryogenics.dmi'
 	icon_state = "cell-off"
-	anchored = TRUE  
+	anchored = TRUE
 
 /obj/structure/virology/cryogenics_occupied
 	name = "Occupied Cryotube"

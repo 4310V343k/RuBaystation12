@@ -10,7 +10,7 @@
 	additional_spawn_components = list(
 		/obj/item/stock_parts/power/battery/buildable/stock,
 		/obj/item/cell/standard = 1
-	)	
+	)
 
 /obj/item/stock_parts/circuitboard/miningdrillbrace
 	name = T_BOARD("mining drill brace")

@@ -365,4 +365,3 @@
 	assembly.forceMove(loc)
 	assembly.post_load()
 	return assembly
-

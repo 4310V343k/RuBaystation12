@@ -1,7 +1,7 @@
 /**
- * Multitool -- A multitool is used for hacking electronic devices.
- *
- */
+	* Multitool -- A multitool is used for hacking electronic devices.
+	*
+	*/
 
 /obj/item/device/multitool
 	name = "multitool"

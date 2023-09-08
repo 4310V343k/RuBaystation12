@@ -17,8 +17,8 @@
 		. = voxform.check_held_user(user, src)
 
 /*
- * Vox Darkmatter Cannon
- */
+	* Vox Darkmatter Cannon
+	*/
 /obj/item/gun/energy/darkmatter
 	name = "flux cannon"
 	desc = "A vicious beam weapon that crushes targets with dark-matter gravity pulses. Parts of it twitch and writhe, as if alive."
@@ -42,8 +42,8 @@
 	set_extension(src, /datum/extension/voxform)
 
 /*
- * Vox Sonic Cannon
- */
+	* Vox Sonic Cannon
+	*/
 /obj/item/gun/energy/sonic
 	name = "soundcannon"
 	desc = "A vicious sonic weapon of alien manufacture. Parts of it quiver gelatinously, as though the insectile-looking thing is alive."

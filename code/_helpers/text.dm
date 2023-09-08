@@ -1,17 +1,17 @@
 /*
- * Holds procs designed to help with filtering text
- * Contains groups:
- *			SQL sanitization
- *			Text sanitization
- *			Text searches
- *			Text modification
- *			Misc
- */
+	* Holds procs designed to help with filtering text
+	* Contains groups:
+	*			SQL sanitization
+	*			Text sanitization
+	*			Text searches
+	*			Text modification
+	*			Misc
+	*/
 
 
 /*
- * SQL sanitization
- */
+	* SQL sanitization
+	*/
 
 // Run all strings to be used in an SQL query through this proc first to properly escape out injection attempts.
 /proc/sanitizeSQL(var/t as text)
@@ -19,8 +19,8 @@
 	return copytext_char(sqltext, 2, length(sqltext));//Quote() adds quotes around input, we already do that
 
 /*
- * Text sanitization
- */
+	* Text sanitization
+	*/
 
 //Used for preprocessing entered text
 //Added in an additional check to alert players if input is too long
@@ -173,8 +173,8 @@
 	return html_encode(replace_characters(t,repl_chars))
 
 /*
- * Text searches
- */
+	* Text searches
+	*/
 
 //Checks the beginning of a string for a specified sub-string
 //Returns the position of the substring or 0 if it was not found
@@ -206,8 +206,8 @@
 		return findtextEx(text, suffix, start, null)
 
 /*
- * Text modification
- */
+	* Text modification
+	*/
 
 /proc/replace_characters(var/t,var/list/repl_chars)
 	for(var/char in repl_chars)
@@ -389,9 +389,9 @@
 #define gender2text(gender) capitalize(gender)
 
 /**
- * Strip out the special beyond characters for \proper and \improper
- * from text that will be sent to the browser.
- */
+	* Strip out the special beyond characters for \proper and \improper
+	* from text that will be sent to the browser.
+	*/
 #define strip_improper(input_text) replacetext_char(replacetext_char(input_text, "\proper", ""), "\improper", "")
 
 /proc/pencode2html(t)

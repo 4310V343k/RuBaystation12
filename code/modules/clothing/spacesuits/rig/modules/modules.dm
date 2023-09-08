@@ -1,6 +1,6 @@
 /*
- * Rigsuit upgrades/abilities.
- */
+	* Rigsuit upgrades/abilities.
+	*/
 
 /datum/rig_charge
 	var/short_name = "undef"

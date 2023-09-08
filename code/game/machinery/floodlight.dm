@@ -12,7 +12,7 @@
 	active_power_usage = 200
 	power_channel = LIGHT
 	use_power = POWER_USE_OFF
-	
+
 	machine_name = "emergency floodlight"
 	machine_desc = "A portable, battery-powered LED flood lamp used to illuminate large areas."
 

@@ -110,7 +110,7 @@
 		return
 	. = ..()
 
- // Used for turning rice into sushi.
+	// Used for turning rice into sushi.
 /obj/item/reagent_containers/food/snacks/boiledrice/attackby(var/obj/item/I, var/mob/user)
 	if((locate(/obj/structure/table) in loc))
 		if(istype(I, /obj/item/reagent_containers/food/snacks/sashimi))
