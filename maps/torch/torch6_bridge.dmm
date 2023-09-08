@@ -1150,7 +1150,6 @@
 	pixel_x = 8;
 	pixel_y = -3
 	},
-/obj/item/device/holopad/wrist,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "cq" = (

@@ -665,7 +665,7 @@
 		M.Weaken(30)
 		M.eye_blurry = max(M.eye_blurry, 10)
 	else
-		M.sleeping = max(M.sleeping, 30)
+		M.sleeping = max(M.sleeping, 20)
 
 	if(M.chem_doses[type] > 1 * threshold)
 		M.adjustToxLoss(removed)
