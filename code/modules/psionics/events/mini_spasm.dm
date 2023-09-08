@@ -67,4 +67,4 @@
 	priority_announcement.Announce( \
 		"ПРИОРИТЕТНОЕ ОПОВЕЩЕНИЕ: ТРАНСЛЯЦИЯ ПСИОНИЧЕСКОГО СИГНАЛА БЫЛА ПРЕКРАЩЕНА. Персоналу разрешено возобновить использование незащищенного радиопередающего оборудования. Фонд Кучулейн желает вам хорошего дня.", \
 		"Cuchulain Automated Array DEL-145",
-		new_sound = 'sound/misc/foundation_restore.ogg', volume = 30 )
+		new_sound = 'sound/misc/foundation_restore.ogg')

@@ -179,7 +179,6 @@
 				i = "g_0+"
 		if(i)
 			overlays += image(icon, i)
-			overlays += image(icon, splittext(firemodes[sel_mode]["mode_name"], " ")[1])
 	else
 		icon_state = "[initial(item_state)]_off"
 
