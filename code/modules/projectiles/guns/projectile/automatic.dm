@@ -294,7 +294,7 @@
 	wielded_item_state = "z9carbine-wielded"
 	firemodes = list( //Two round bursts. More accurate than the Z8 due to less maximum dispersion. More delay between shots, however, so slower.
 		list(mode_name="semiauto",	mode_desc = "Fire as fast as you can pull the trigger",use_launcher=0, burst=1, fire_delay=0, move_delay=null),
-		BURST_3_ROUND,
+		list(mode_name="3-round bursts", burst=3, fire_delay=null,      one_hand_penalty=4, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
 		list(mode_name="full auto",      burst=1,    fire_delay=2,    burst_delay=1.5,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(0.6, 1.2, 1.4, 1.6, 1.8), autofire_enabled=1),
 		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    one_hand_penalty=10, burst_accuracy=null, dispersion=null)
 		)

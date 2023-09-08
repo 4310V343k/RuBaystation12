@@ -106,7 +106,7 @@
 	/// What skill governs safe handling of this gun. Basic skill level and higher will also show the safety overlay to the player.
 	var/gun_skill = SKILL_WEAPONS
 	/// What skill level is needed in the gun's skill to completely negate the chance of an accident.
-	var/safety_skill = SKILL_EXPERIENCED
+	var/safety_skill = SKILL_EXPERT
 
 	var/autofire_enabled = FALSE
 	var/atom/autofiring_at

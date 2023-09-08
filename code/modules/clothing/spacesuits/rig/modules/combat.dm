@@ -210,13 +210,15 @@
 	var/gun_type
 	var/obj/item/gun/gun
 
-/obj/item/rig_module/mounted/New()
-	..()
-	gun = new gun_type(src)
+/obj/item/rig_module/mounted/Initialize()
+	. = ..()
+	if(ispath(gun))
+		gun = new gun(src)
+		gun.canremove = 0
 
 /obj/item/rig_module/mounted/engage(atom/target)
 
-	if(!..())
+	if(!..() || !gun)
 		return 0
 
 	if(!target)

@@ -245,7 +245,7 @@
 	sharp = FALSE
 	//INF distance_falloff = 5
 	damage_flags = 0
-	damage_type = STUN
+	damage_type = DAMAGE_STUN
 	life_span = 3
 	penetration_modifier = 0
 	var/potency_min = 4
@@ -371,6 +371,6 @@
 	..()
 	if (!istype(target, /mob/living/simple_animal))
 		return
-	if (istype(target, /mob/living/simple_animal/hostile/human))
+	if (istype(target, /mob/living/simple_animal/hostile))
 		return
 	target.damage_health(35, DAMAGE_BURN)
