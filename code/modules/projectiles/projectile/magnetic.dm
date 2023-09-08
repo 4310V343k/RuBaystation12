@@ -2,7 +2,7 @@
 /obj/item/projectile/bullet/magnetic
 	name = "rod"
 	icon_state = "rod"
-	damage = 55
+	damage = 65
 	penetrating = 5
 	armor_penetration = 85
 	penetration_modifier = 1.1

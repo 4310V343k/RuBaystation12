@@ -175,19 +175,19 @@
 			sleep(duration/5)
 			if(!user || user.stat == DEAD)
 				return
-			command_announcement.Announce("Внимание, [GLOB.using_map.station_name]. Мы обнаружили ненормальное поведение в вашей сети. Похоже, кто-то пытается взломать ваши электронные системы. Мы сообщим вам, когда у нас будет больше информации.", "EXO Network Monitoring")
+			command_announcement.Announce("Внимание, [GLOB.using_map.station_name]. Мы обнаружили ненормальное поведение в вашей сети. Похоже, кто-то пытается взломать ваши электронные системы. Мы сообщим вам, когда у нас будет больше информации.", "Контроль Сети Автоматизации ЭКСО")
 			sleep(duration/5)
 			if(!user || user.stat == DEAD)
 				return
-			command_announcement.Announce("Мы начали выслеживать злоумышленника. Кто бы это ни делал, похоже, он на борту. Мы рекомендуем проверить все терминалы управления сетью. Мы будем держать вас в курсе событий.", "EXO Network Monitoring")
+			command_announcement.Announce("Мы начали выслеживать злоумышленника. Кто бы это ни делал, похоже, он на борту. Мы рекомендуем проверить все терминалы управления сетью. Мы будем держать вас в курсе событий.", "Контроль Сети Автоматизации ЭКСО")
 			sleep(duration/5)
 			if(!user || user.stat == DEAD)
 				return
-			command_announcement.Announce("Это в высшей степени ненормально и несколько тревожно. Злоумышленник слишком быстро, он ускользает от наших служащих. Подобная скорость может быть обусловлена наличием прямого и полного доступа к управлению системой изнутри.", "EXO Network Monitoring")
+			command_announcement.Announce("Это в высшей степени ненормально и несколько тревожно. Злоумышленник слишком быстро, он ускользает от наших служащих. Подобная скорость может быть обусловлена наличием прямого и полного доступа к управлению системой изнутри.", "Контроль Сети Автоматизации ЭКСО")
 			sleep(duration/5)
 			if(!user || user.stat == DEAD)
 				return
-			command_announcement.Announce("Мы добрались до нарушителя#, кажется, &t(e ваша система искусственного интеллекта, это &#*# ck@ ng $ само$ уничтоже$t механи&sq*eq, остановите меня# bef*@!)$#&&@@ <СОЕДИНЕНИЕ ПОТЕРЯНО>", "EXO Network Monitoring")
+			command_announcement.Announce("Мы добрались до нарушителя#, кажется, &t(e ваша система искусственного интеллекта, это &#*# ck@ ng $ само$ уничтоже$t механи&sq*eq, остановите меня# bef*@!)$#&&@@ <СОЕДИНЕНИЕ ПОТЕРЯНО>", "Контроль Сети Автоматизации ЭКСО")
 
 	to_chat(user, "## BEGINNING SYSTEM OVERRIDE.")
 	to_chat(user, "## ESTIMATED DURATION: [round((duration+300)/600)] MINUTES")
@@ -214,7 +214,7 @@
 	to_chat(user, "## PRIMARY FIREWALL BYPASSED. YOU NOW HAVE FULL SYSTEM CONTROL.")
 
 	if(user.hack_can_fail)
-		command_announcement.Announce("Наши системные администраторы только что сообщили, что мы были заблокированы от вашей управляющей сети. Тот, кто это сделал, теперь имеет полный доступ к системам [GLOB.using_map.station_name].", "EXO Network Administration Center")
+		command_announcement.Announce("Наши системные администраторы только что сообщили, что мы были заблокированы от вашей управляющей сети. Тот, кто это сделал, теперь имеет полный доступ к системам [GLOB.using_map.station_name].", "Контроль Сети Автоматизации")
 	user.hack_can_fail = 0
 	user.system_override = 2
 	user.verbs += new/datum/game_mode/malfunction/verb/ai_destroy_station()

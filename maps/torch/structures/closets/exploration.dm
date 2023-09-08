@@ -162,9 +162,10 @@
 		/obj/item/device/binoculars,
 		/obj/item/material/knife/folding/swiss/explorer,
 		/obj/item/clothing/accessory/buddy_tag,
-		//rubay code,
+		//PRX-START,
 		/obj/item/storage/firstaid/individual/military,
-		//rubay code end,
+		/obj/item/storage/box/scgec_badges,
+		//PRX-END,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))

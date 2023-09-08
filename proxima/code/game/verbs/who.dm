@@ -98,7 +98,7 @@
 		msg += "[line]\n"
 
 	if(check_rights(R_INVESTIGATE, 0))
-		msg += "<b><font color='green'>Живые: [living]</font> | Мёртвые: [dead] | <font color='gray'>Наблюдают: [observers]</font> | <font color='#006400'>Лобби: [lobby]</font> | <font color='#8100aa'>Живых антагонисты: [living_antags]</font> | <font color='#9b0000'>Мёртвые антагонисты: [dead_antags]</font></b>\n"
+		msg += "<b><font color='green'>Живые: [living]</font> | Мёртвые: [dead] | <font color='gray'>Наблюдают: [observers]</font> | <font color='#006400'>Лобби: [lobby]</font> | <font color='#8100aa'>Живые антагонисты: [living_antags]</font> | <font color='#9b0000'>Мёртвые антагонисты: [dead_antags]</font></b>\n"
 
 	msg += "<b>Всего товарищей: [length(Lines)]</b>"
 	if(get_preference_value(/datum/client_preference/window_who) == GLOB.PREF_YES)

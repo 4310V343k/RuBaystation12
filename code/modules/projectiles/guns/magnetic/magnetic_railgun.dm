@@ -16,8 +16,8 @@
 	cell = /obj/item/cell/hyper
 	capacitor = /obj/item/stock_parts/capacitor/adv
 	gun_unreliable = 0
-	var/slowdown_held = 3
-	var/slowdown_worn = 2
+	var/slowdown_held = 1
+	var/slowdown_worn = 0.5
 	has_safety = TRUE //inf
 
 	bulk = GUN_BULK_SNIPER_RIFLE
@@ -70,6 +70,7 @@
 	icon = 'icons/obj/guns/railgun_adv.dmi'
 	icon_state = "railgun-tcc"
 	removable_components = TRUE // Railgunners are expected to be able to completely disassemble and reassemble their weapons in the field. But we don't have that mechanic, so the cell and capacitor will do.
+	fire_delay = 25
 
 	cell = /obj/item/cell/hyper // Standard power
 	capacitor = /obj/item/stock_parts/capacitor/adv // 6-8 shots
@@ -80,7 +81,7 @@
 	projectile_type = /obj/item/projectile/bullet/magnetic
 	load_sheet_max = 6 // Fewer shots per "magazine", but more abundant than matter cartridges.
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 3, TECH_MAGNET = 5)
-	slowdown_worn = 3 // Little slower when worn
+	slowdown_worn = 0.5 // Little slower when worn
 
 /obj/item/gun/magnetic/railgun/tcc/show_ammo(var/mob/user)
 	var/obj/item/stack/material/rods/ammo = loaded

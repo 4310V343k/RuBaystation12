@@ -682,11 +682,10 @@ obj/item/gun/Destroy()
 			else screen_shake = screen_shake - (screen_shake_limit/2)
 
 //make sure accuracy and screen_shake are reset regardless of how the item is unzoomed.
-/obj/item/gun/zoom()
+/obj/item/gun/unzoom()
 	..()
-	if(!zoom)
-		accuracy = initial(accuracy)
-		screen_shake = initial(screen_shake)
+	accuracy = initial(accuracy)
+	screen_shake = initial(screen_shake)
 
 /obj/item/gun/examine(mob/user)
 	. = ..()
