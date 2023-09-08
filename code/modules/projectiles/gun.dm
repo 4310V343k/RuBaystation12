@@ -103,6 +103,11 @@
 	var/has_safety = TRUE
 	var/safety_icon 	   //overlay to apply to gun based on safety state, if any
 
+	/// What skill governs safe handling of this gun. Basic skill level and higher will also show the safety overlay to the player.
+	var/gun_skill = SKILL_WEAPONS
+	/// What skill level is needed in the gun's skill to completely negate the chance of an accident.
+	var/safety_skill = SKILL_EXPERIENCED
+
 	var/autofire_enabled = FALSE
 	var/atom/autofiring_at
 	var/mob/autofiring_by
@@ -612,7 +617,7 @@ obj/item/gun/Destroy()
 			break
 		play_fire_sound(M, in_chamber)
 
-		if (in_chamber.damage_type != PAIN)
+		if (in_chamber.damage_type != DAMAGE_PAIN)
 			in_chamber.on_hit(M, 0, brain.parent_organ)
 			if (istype(in_chamber, /obj/item/projectile/ion))
 				in_chamber.on_impact(M)
@@ -632,7 +637,7 @@ obj/item/gun/Destroy()
 				else
 					brain.damage = brain.damage + (in_chamber.damage*dmgmultiplier)
 		else
-			user.apply_effect(110,PAIN,0)
+			user.apply_effect(110,DAMAGE_PAIN,0)
 			user.adjustBrainLoss(in_chamber.damage*30) //usually damage is 2-3
 			user.flash_eyes()
 			user.eye_blurry += 10

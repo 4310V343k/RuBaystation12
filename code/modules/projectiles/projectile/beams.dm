@@ -6,9 +6,9 @@
 	impact_sounds = list(BULLET_IMPACT_MEAT = SOUNDS_LASER_MEAT, BULLET_IMPACT_METAL = SOUNDS_LASER_METAL)
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GLASS | PASS_FLAG_GRILLE
 	damage = 30 //INF, WAS 40
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 	sharp = TRUE
-	damage_flags = DAM_LASER
+	damage_flags = DAMAGE_FLAG_LASER
 	eyeblur = 4
 	hitscan = TRUE
 	invisibility = 101	//beam projectiles are invisible as they are rendered by the effect engine
@@ -124,7 +124,7 @@
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GLASS | PASS_FLAG_GRILLE
 	damage = 0
 	no_attack_log = TRUE
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 
 	muzzle_type = /obj/effect/projectile/laser/blue/muzzle
 	tracer_type = /obj/effect/projectile/laser/blue/tracer
@@ -143,7 +143,7 @@
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GLASS | PASS_FLAG_GRILLE
 	damage = 0
 	no_attack_log = TRUE
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 
 /obj/item/projectile/beam/lastertag/red/on_hit(var/atom/target, var/blocked = 0)
 	if(istype(target, /mob/living/carbon/human))
@@ -157,7 +157,7 @@
 	icon_state = "omnilaser"
 	pass_flags = PASS_FLAG_TABLE | PASS_FLAG_GLASS | PASS_FLAG_GRILLE
 	damage = 0
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 
 	muzzle_type = /obj/effect/projectile/laser/omni/muzzle
 	tracer_type = /obj/effect/projectile/laser/omni/tracer
@@ -191,7 +191,7 @@
 	damage_flags = 0
 	sharp = FALSE
 	damage = 1//flavor burn! still not a laser, dmg will be reduce by energy resistance not laser resistances
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 	eyeblur = 1//Some feedback that you've been hit
 	agony = 40
 
@@ -208,7 +208,7 @@
 	name = "shock beam"
 	agony = 0
 	damage = 15
-	damage_type = ELECTROCUTE
+	damage_type = DAMAGE_SHOCK
 	fire_sound='sound/weapons/pulse.ogg'
 
 /obj/item/projectile/beam/stun/shock/heavy
@@ -221,7 +221,7 @@
 	fire_sound = 'sound/weapons/plasma_cutter.ogg'
 	damage = 15
 	edge = TRUE
-	damage_type = BURN
+	damage_type = DAMAGE_BURN
 	life_span = 5
 	pass_flags = PASS_FLAG_TABLE
 	//INF distance_falloff = 4
@@ -289,7 +289,7 @@
 	icon_state = "darkb"
 	damage = 40
 	armor_penetration = 35
-	damage_type = BRUTE
+	damage_type = DAMAGE_BRUTE
 	muzzle_type = /obj/effect/projectile/darkmatter/muzzle
 	tracer_type = /obj/effect/projectile/darkmatter/tracer
 	impact_type = /obj/effect/projectile/darkmatter/impact
@@ -300,7 +300,7 @@
 	damage_flags = 0
 	sharp = FALSE
 	agony = 40
-	damage_type = STUN
+	damage_type = DAMAGE_STUN
 	muzzle_type = /obj/effect/projectile/stun/darkmatter/muzzle
 	tracer_type = /obj/effect/projectile/stun/darkmatter/tracer
 	impact_type = /obj/effect/projectile/stun/darkmatter/impact
@@ -309,7 +309,7 @@
 	name = "point defense salvo"
 	icon_state = "laser"
 	damage = 15
-	damage_type = ELECTROCUTE //You should be safe inside a voidsuit
+	damage_type = DAMAGE_SHOCK //You should be safe inside a voidsuit
 	sharp = FALSE //"Wide" spectrum beam
 	muzzle_type = /obj/effect/projectile/pointdefense/muzzle
 	tracer_type = /obj/effect/projectile/pointdefense/tracer
@@ -338,3 +338,39 @@
 		L.adjust_fire_stacks(rand(2,4))
 		if(L.fire_stacks >= 3)
 			L.IgniteMob()
+
+/obj/item/projectile/beam/blue
+	damage = 30
+
+	muzzle_type = /obj/effect/projectile/laser/blue/muzzle
+	tracer_type = /obj/effect/projectile/laser/blue/tracer
+	impact_type = /obj/effect/projectile/laser/blue/impact
+
+/obj/item/projectile/beam/xenofauna
+	damage = 0
+	agony = 5
+
+	muzzle_type = /obj/effect/projectile/xenofauna/muzzle
+	tracer_type = /obj/effect/projectile/xenofauna/tracer
+	impact_type = /obj/effect/projectile/xenofauna/impact
+
+/obj/effect/projectile/xenofauna
+	light_color = COLOR_RED_LIGHT
+
+/obj/effect/projectile/xenofauna/tracer
+	icon_state = "redstun"
+
+/obj/effect/projectile/xenofauna/muzzle
+	icon_state = "muzzle_redstun"
+
+/obj/effect/projectile/xenofauna/impact
+	icon_state = "impact_redstun"
+
+
+/obj/item/projectile/beam/xenofauna/on_hit(atom/target, blocked)
+	..()
+	if (!istype(target, /mob/living/simple_animal))
+		return
+	if (istype(target, /mob/living/simple_animal/hostile/human))
+		return
+	target.damage_health(35, DAMAGE_BURN)

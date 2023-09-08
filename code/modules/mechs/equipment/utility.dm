@@ -720,7 +720,7 @@
 	name = "rotatory plasma cutter"
 	desc = "A state of the art rotating, variable intensity, sequential-cascade plasma cutter. Resist the urge to aim this at your coworkers."
 	max_shots = 15
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="single shot",	can_autofire=0, burst=1, fire_delay=6),
 		list(mode_name="full auto",		can_autofire=1, burst=1, fire_delay=1),
 		)

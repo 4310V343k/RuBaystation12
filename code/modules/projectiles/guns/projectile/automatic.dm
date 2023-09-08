@@ -161,8 +161,8 @@
 /obj/item/gun/projectile/automatic/sec_smg
 	name = "WT-550 submachine gun"
 	desc = "The WT-550 Saber is a cheap self-defense weapon, mass-produced by Ward-Takahashi for paramilitary and private use."
-	icon = 'icons/obj/guns/sec_smg.dmi'
-	icon_state = "smg"
+	icon = 'icons/obj/guns/wt550.dmi'
+	icon_state = "wt550"
 	item_state = "wt550"
 	safety_icon = "safety"
 	caliber = CALIBER_PISTOL_SMALL
@@ -170,6 +170,7 @@
 	slot_flags = SLOT_BELT
 	ammo_type = /obj/item/ammo_casing/pistol/small
 	load_method = MAGAZINE
+	wielded_item_state = "wt550-wielded"
 	magazine_type = /obj/item/ammo_magazine/smg_top/rubber
 	allowed_magazines = /obj/item/ammo_magazine/smg_top
 
@@ -279,6 +280,24 @@
 /obj/item/gun/projectile/automatic/bullpup_rifle/toggle_safety(mob/user)
     . = ..()
     launcher.toggle_safety(user)
+
+/obj/item/gun/projectile/automatic/bullpup_rifle/light
+	name = "prototype bullpup assault rifle"
+	desc = "The standard-issue rifle of the SCGDF. The Z9 Pitbull is the modern answer to violence's question. It has been given a blued finish with a Sol yellow stripe on its stock for easy identification of its owner."
+	icon = 'icons/obj/guns/bullpup_rifle_light.dmi'
+	item_state = "z9carbine"
+	caliber = CALIBER_RIFLE
+	ammo_type = /obj/item/ammo_casing/rifle
+	magazine_type = /obj/item/ammo_magazine/rifle
+	allowed_magazines = /obj/item/ammo_magazine/rifle
+	one_hand_penalty = 6 //Slightly lighter than the Z8. Still don't try it.
+	wielded_item_state = "z9carbine-wielded"
+	firemodes = list( //Two round bursts. More accurate than the Z8 due to less maximum dispersion. More delay between shots, however, so slower.
+		list(mode_name="semiauto",	mode_desc = "Fire as fast as you can pull the trigger",use_launcher=0, burst=1, fire_delay=0, move_delay=null),
+		BURST_3_ROUND,
+		list(mode_name="full auto",      burst=1,    fire_delay=2,    burst_delay=1.5,     one_hand_penalty=7,  burst_accuracy=list(0,-1,-1), dispersion=list(0.6, 1.2, 1.4, 1.6, 1.8), autofire_enabled=1),
+		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    one_hand_penalty=10, burst_accuracy=null, dispersion=null)
+		)
 
 /obj/item/gun/projectile/automatic/l6_saw
 	name = "L6 machine gun"

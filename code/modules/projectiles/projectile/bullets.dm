@@ -3,8 +3,8 @@
 	icon_state = "bullet"
 	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
 	damage = 50
-	damage_type = BRUTE
-	damage_flags = DAM_BULLET | DAM_SHARP
+	damage_type = DAMAGE_BRUTE
+	damage_flags = DAMAGE_FLAG_BULLET | DAMAGE_FLAG_SHARP
 	nodamage = FALSE
 	embed = TRUE
 	sharp = TRUE //INF, WAS NOTHING (0)
@@ -268,7 +268,7 @@
 	name = "cap"
 	invisibility = 101
 	fire_sound = null
-	damage_type = PAIN
+	damage_type = DAMAGE_PAIN
 	damage_flags = 0
 	damage = 0
 	nodamage = TRUE

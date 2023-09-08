@@ -31,7 +31,7 @@
 	var/distance_falloff = 9  //multiplier, higher value means accuracy drops faster with distance //INF, WAS 2
 
 	var/damage = 10
-	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE, ELECTROCUTE are the only things that should be in here, Try not to use PAIN as it doesn't go through stun_effect_act
+	var/damage_type = DAMAGE_BRUTE //BRUTE, BURN, TOX, OXY, CLONE, ELECTROCUTE are the only things that should be in here, Try not to use PAIN as it doesn't go through stun_effect_act
 	var/nodamage = FALSE //Determines if the projectile will skip any damage inflictions
 	var/damage_flags = DAM_BULLET
 	var/projectile_type = /obj/item/projectile
@@ -98,7 +98,7 @@
 //called when the projectile stops flying because it collided with something
 /obj/item/projectile/proc/on_impact(var/atom/A)
 	impact_effect(effect_transform)		// generate impact effect
-	if(damage && damage_type == BURN)
+	if(damage && damage_type == DAMAGE_BURN)
 		var/turf/T = get_turf(A)
 		if(T)
 			T.hotspot_expose(700, 5)
@@ -106,12 +106,12 @@
 //Checks if the projectile is eligible for embedding. Not that it necessarily will.
 /obj/item/projectile/can_embed()
 	//embed must be enabled and damage type must be brute
-	if(!embed || damage_type != BRUTE)
+	if(!embed || damage_type != DAMAGE_BRUTE)
 		return 0
 	return 1
 
 /obj/item/projectile/proc/get_structure_damage()
-	if(damage_type == BRUTE || damage_type == BURN)
+	if(damage_type == DAMAGE_BRUTE || damage_type == DAMAGE_BURN)
 		return damage
 	return 0
 
@@ -254,8 +254,8 @@
 		to_chat(target_mob, "<span class='danger'>You've been hit in the [parse_zone(def_zone)] by \the [src]!</span>")
 	else
 		target_mob.visible_message("<span class='danger'>\The [target_mob] is hit by \the [src] in the [parse_zone(def_zone)]!</span>")//X has fired Y is now given by the guns so you cant tell who shot you if you could not see the shooter
-		if(damage_type == BRUTE)
-			playsound(target_mob.loc, pick('infinity/sound/effects/bullethit1.ogg', 'infinity/sound/effects/bullethit2.ogg', 'infinity/sound/effects/bullethit3.ogg', 'infinity/sound/effects/bullethit4.ogg'), 100, 1)
+		if(damage_type == DAMAGE_BRUTE)
+			playsound(target_mob.loc, pick('proxima/sound/effects/bullethit1.ogg', 'proxima/sound/effects/bullethit2.ogg', 'proxima/sound/effects/bullethit3.ogg', 'proxima/sound/effects/bullethit4.ogg'), 100, 1)
 	//admin logs
 	if(!no_attack_log)
 		if(istype(firer, /mob))
@@ -463,7 +463,7 @@
 		return //cannot shoot yourself
 	if(istype(A, /obj/item/projectile))
 		return
-	if(istype(A, /mob/living) || istype(A, /obj/vehicle))
+	if(istype(A, /mob/living))
 		result = 2 //We hit someone, return 1!
 		hit_thing = A
 		return
@@ -524,7 +524,7 @@
 
 /obj/item/projectile/after_wounding(obj/item/organ/external/organ, datum/wound/wound)
 	//Check if we even broke skin in first place
-	if(!wound || !(wound.damage_type == CUT || wound.damage_type == PIERCE))
+	if(!wound || !(wound.damage_type == INJURY_TYPE_CUT || wound.damage_type == INJURY_TYPE_PIERCE))
 		return
 	//Check if we can do nasty stuff inside
 	if(!can_embed() || (organ.species.species_flags & SPECIES_FLAG_NO_EMBED))

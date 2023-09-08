@@ -10,7 +10,6 @@
 	desc = "A slender and none-too-sophisticated device capable of applying paint on floors, walls, exosuits and certain airlocks."
 	var/decal = "Quarter-turf"
 	var/paint_color
-	var/datum/click_handler/paint_sprayer/ch
 
 	var/list/decals = list(
 		"Quarter-turf" =      list("path" = /obj/effect/floor_decal/corner, "precise" = 1, "colored" = 1),
@@ -76,28 +75,27 @@
 	var/random_preset = pick(preset_colors)
 	change_color(preset_colors[random_preset])
 
-
 /obj/item/device/paint_sprayer/Destroy()
 	if (ismob(loc))
 		remove_click_handler(loc)
 	. = ..()
 
 /obj/item/device/paint_sprayer/on_update_icon()
-	overlays.Cut()
-	overlays += overlay_image(icon, "paint_sprayer_color", paint_color)
+	ClearOverlays()
+	AddOverlays(overlay_image(icon, "paint_sprayer_color", paint_color))
 	update_held_icon()
 
 /obj/item/device/paint_sprayer/get_mob_overlay(mob/user_mob, slot, bodypart)
 	var/image/ret = ..()
 	var/image/overlay = overlay_image(ret.icon, "paint_sprayer_color", paint_color)
-	ret.overlays += overlay
+	ret.AddOverlays(overlay)
 	return ret
 
 /obj/item/device/paint_sprayer/on_active_hand(mob/user)
 	. = ..()
-	if(!istype(user?.client.CH, /datum/click_handler/paint_sprayer))
-		var/ch = new /datum/click_handler/paint_sprayer(user.client, src)
-		user.client.CH = ch
+	if (user.PushClickHandler(/datum/click_handler/default/paint_sprayer))
+		var/datum/click_handler/default/paint_sprayer/CH = user.click_handlers[1]
+		CH.paint_sprayer = src
 		if (isrobot(user))
 			GLOB.module_deselected_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 			GLOB.module_deactivated_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
@@ -107,8 +105,7 @@
 			GLOB.mob_unequipped_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 
 /obj/item/device/paint_sprayer/proc/remove_click_handler(mob/user)
-	if (istype(user?.client.CH, /datum/click_handler/paint_sprayer))
-		QDEL_NULL(user.client.CH)
+	if (user.RemoveClickHandler(/datum/click_handler/default/paint_sprayer))
 		GLOB.hands_swapped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 		GLOB.mob_equipped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 		GLOB.mob_unequipped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
@@ -158,8 +155,8 @@
 		return FALSE
 	if (istype(A, /turf/simulated/floor))
 		var/turf/simulated/floor/F = A
-		if (F.decals && F.decals.len > 0)
-			F.decals.len--
+		if (F.decals && length(F.decals) > 0)
+			LIST_DEC(F.decals)
 			F.update_icon()
 			. = TRUE
 	else if (istype(A, /obj/machinery/door/airlock))
@@ -178,13 +175,13 @@
 	return .
 
 /obj/item/device/paint_sprayer/proc/pick_color_from_floor(turf/simulated/floor/F, mob/user)
-	if (!F.decals || !F.decals.len)
+	if (!F.decals || !length(F.decals))
 		return FALSE
 	var/list/available_colors = list()
 	for (var/image/I in F.decals)
 		available_colors |= isnull(I.color) ? COLOR_WHITE : I.color
 	var/picked_color = available_colors[1]
-	if (available_colors.len > 1)
+	if (length(available_colors) > 1)
 		picked_color = input(user, "Which color do you wish to pick from?") as null|anything in available_colors
 		if (user.incapacitated() || !user.Adjacent(F))
 			return FALSE
@@ -213,7 +210,7 @@
 		to_chat(user, SPAN_WARNING("\The [src] flashes an error light. You might need to reconfigure it."))
 		return FALSE
 
-	if((F.decals && F.decals.len > 5) && !ispath(painting_decal, /obj/effect/floor_decal/reset))
+	if((F.decals && length(F.decals) > 5) && !ispath(painting_decal, /obj/effect/floor_decal/reset))
 		to_chat(user, SPAN_WARNING("\The [F] has been painted too much; you need to clear it off."))
 		return FALSE
 
@@ -277,11 +274,11 @@
 /obj/item/device/paint_sprayer/proc/select_airlock_region(obj/machinery/door/airlock/D, mob/user, input_text)
 	var/choice
 	var/list/choices = list()
-	if (D.paintable & AIRLOCK_PAINTABLE)
+	if (D.paintable & AIRLOCK_PAINTABLE_MAIN)
 		choices |= AIRLOCK_REGION_PAINT
-	if (D.paintable & AIRLOCK_STRIPABLE)
+	if (D.paintable & AIRLOCK_PAINTABLE_STRIPE)
 		choices |= AIRLOCK_REGION_STRIPE
-	if (D.paintable & AIRLOCK_WINDOW_PAINTABLE)
+	if (D.paintable & AIRLOCK_PAINTABLE_WINDOW)
 		choices |= AIRLOCK_REGION_WINDOW
 	choice = input(user, input_text) as null|anything in sortList(choices)
 	if (user.incapacitated() || !D || !user.Adjacent(D))
@@ -309,14 +306,14 @@
 /obj/item/device/paint_sprayer/AltClick()
 	if (!isturf(loc))
 		choose_preset_color()
-	else
-		. = ..()
+		return TRUE
+	return ..()
 
 /obj/item/device/paint_sprayer/CtrlClick()
 	if (!isturf(loc))
 		choose_color()
-	else
-		. = ..()
+		return TRUE
+	return ..()
 
 /obj/item/device/paint_sprayer/verb/choose_color()
 	set name = "Choose color"
@@ -359,25 +356,19 @@
 		decal = new_decal
 		to_chat(usr, SPAN_NOTICE("You set \the [src] decal to '[decal]'."))
 
-/datum/click_handler/paint_sprayer
+/datum/click_handler/default/paint_sprayer
 	var/obj/item/device/paint_sprayer/paint_sprayer
-	one_use_flag = 0
 
-/datum/click_handler/paint_sprayer/New(client/_owner, var/obj/item/device/paint_sprayer/ps)
-	. = ..()
-	paint_sprayer = ps
-
-/datum/click_handler/paint_sprayer/Click(atom/target, location, control, params)
+/datum/click_handler/default/paint_sprayer/OnClick(atom/A, params)
 	var/list/modifiers = params2list(params)
-	if (target != paint_sprayer)
-		if(!istype(owner.mob.buckled) || owner.mob.buckled.buckle_movable)
-			owner.mob.face_atom(target)
-		if(modifiers["ctrl"] && paint_sprayer.pick_color(target, owner.mob))
+	if (A != paint_sprayer)
+		if(!istype(user.buckled) || user.buckled.buckle_movable)
+			user.face_atom(A)
+		if(modifiers["ctrl"] && paint_sprayer.pick_color(A, user))
 			return
-		if(modifiers["shift"] && paint_sprayer.remove_paint(target, owner.mob))
+		if(modifiers["shift"] && paint_sprayer.remove_paint(A, user))
 			return
-	owner.mob.ClickOn(target, params)
-
+	user.ClickOn(A, params)
 
 #undef AIRLOCK_REGION_PAINT
 #undef AIRLOCK_REGION_STRIPE

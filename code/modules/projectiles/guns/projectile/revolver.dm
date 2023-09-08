@@ -15,7 +15,6 @@
 	mag_remove_sound = 'sound/weapons/guns/interaction/rev_magout.ogg'
 	accuracy = 2
 	one_hand_penalty = 3
-	recoil_buildup = 8
 	bulk = 3
 
 /obj/item/gun/projectile/revolver/AltClick()
