@@ -141,7 +141,7 @@ var/global/serials = list()
 		serials += serial //list of serials
 //[/INF]
 
-obj/item/gun/Destroy()
+/obj/item/gun/Destroy()
 	// autofire timer is automatically cleaned up
 	autofiring_at = null
 	autofiring_by = null
