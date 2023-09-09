@@ -1,6 +1,6 @@
 /*
- * Torch Security
- */
+	* Torch Security
+	*/
 
 /decl/closet_appearance/secure_closet/torch/security
 	extra_decals = list(

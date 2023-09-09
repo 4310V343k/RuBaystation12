@@ -156,9 +156,9 @@
 	)
 
 /*
- *  Branches
- *  ========
- */
+	*  Branches
+	*  ========
+	*/
 
 /datum/mil_branch/expeditionary_corps
 	name = "Expeditionary Corps"
@@ -382,9 +382,9 @@
 	add_accesses = list(access_o_mess)
 
 /*
- *  Fleet
- *  =====
- */
+	*  Fleet
+	*  =====
+	*/
 
 /datum/mil_rank/fleet/e1
 	name = "Crewman Recruit"
@@ -532,9 +532,9 @@
 
 
 /*
- *  EC
- *  =====
- */
+	*  EC
+	*  =====
+	*/
 /datum/mil_rank/ec/e1
 	name = "Apprentice Explorer"
 	name_short = "AXPL"
@@ -596,9 +596,9 @@
 	sort_order = 20
 
 /*
- *  Army
- *  ====
- */
+	*  Army
+	*  ====
+	*/
 /datum/mil_rank/army/e1
 	name = "Private"
 	name_short = "PVT"
@@ -732,9 +732,9 @@
 	sort_order = 18
 
 /*
- *  Civilians
- *  =========
- */
+	*  Civilians
+	*  =========
+	*/
 
 /datum/mil_rank/civ/civ
 	name = "Civilian"
@@ -750,9 +750,9 @@
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/synthetic)\
 
 /*
- *  EXO-PRX
- *  =========
- */
+	*  EXO-PRX
+	*  =========
+	*/
 
 /datum/mil_rank/civ/three
 	name = "EXO Contractor Class 3"
@@ -770,9 +770,9 @@
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/first)
 
 /*
- *  SolGov Employees
- *  ====== =========
- */
+	*  SolGov Employees
+	*  ====== =========
+	*/
 
 /datum/mil_rank/sol/gov
 	name = "SolGov Representative"

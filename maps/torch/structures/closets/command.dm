@@ -1,6 +1,6 @@
 /*
- * Torch Command
- */
+	* Torch Command
+	*/
 /decl/closet_appearance/secure_closet/torch/command
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_CLOSET_GOLD

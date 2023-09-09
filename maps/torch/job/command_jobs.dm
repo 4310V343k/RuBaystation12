@@ -137,7 +137,7 @@
 							 /datum/computer_file/program/aidiag,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	
+
 	intro_music = list('proxima/sound/intro/rd1.ogg')
 
 /datum/job/rd/get_description_blurb()
@@ -188,7 +188,7 @@
 							 /datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	
+
 	intro_music = list('proxima/sound/intro/cmo1.ogg')
 
 /datum/job/cmo/get_description_blurb()
@@ -300,7 +300,7 @@
 							 /datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/reports)
-	
+
 	intro_music = list('proxima/sound/intro/hos1.ogg')
 
 /datum/job/hos/get_description_blurb()
@@ -406,7 +406,7 @@
 
 	alt_titles = list("Military Lawyer")
 	software_on_spawn = list(/datum/computer_file/program/reports)
-	
+
 	intro_music = list('proxima/sound/intro/lawyer1.ogg')
 
 /datum/job/representative/get_description_blurb()
@@ -504,7 +504,7 @@
 	skill_points = 20
 
 	alt_titles = list("Adjutant","Helmsman","Coordination Officer","Command Secretary") //PRX
-	
+
 	intro_music = list('proxima/sound/intro/officer1.ogg')
 
 	access = list(

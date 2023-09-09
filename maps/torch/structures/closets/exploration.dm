@@ -1,6 +1,6 @@
 /*
- * Torch Exploration
- */
+	* Torch Exploration
+	*/
 
 /decl/closet_appearance/secure_closet/torch/exploration
 	extra_decals = list(

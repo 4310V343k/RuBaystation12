@@ -86,7 +86,7 @@
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
-	
+
 	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
 
 /datum/job/nt_pilot/get_description_blurb()

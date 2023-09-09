@@ -82,10 +82,10 @@
 		usr.put_in_active_hand(src)
 
 /obj/item/storage/fancy/supply_box/examine(mob/user, distance)
-    . = ..()
-    if((distance < 4) && (welded))
-        to_chat(usr, SPAN_NOTICE("You notice that this box is welded."))
-        return
+	. = ..()
+	if((distance < 4) && (welded))
+		to_chat(usr, SPAN_NOTICE("You notice that this box is welded."))
+		return
 
 /obj/item/storage/fancy/supply_box/on_update_icon()
 	. = ..()
@@ -97,7 +97,7 @@
 	overlay = null
 
 /* OTHER TYPES OF
-   SUPPLY BOXES    */
+	SUPPLY BOXES    */
 
 /obj/item/storage/fancy/supply_box/cell
 	icon_state = "cell_box"
