@@ -11,7 +11,7 @@ on:
       - remastered_new_dev_proxima_2022_gold_edition
 env:
   BYOND_MAJOR: "514"
-  BYOND_MINOR: "1578"
+  BYOND_MINOR: "1589"
   SPACEMAN_DMM_VERSION: suite-1.7.2
 
 jobs:
