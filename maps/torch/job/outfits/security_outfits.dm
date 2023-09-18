@@ -20,7 +20,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/security/brig_chief/army
-	name = OUTFIT_JOB_NAME("Brig Chief - Marine")
+	name = OUTFIT_JOB_NAME("Brig Chief - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -62,7 +62,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/security/maa/army
-	name = OUTFIT_JOB_NAME("Master at Arms - Marine")
+	name = OUTFIT_JOB_NAME("Master at Arms - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 

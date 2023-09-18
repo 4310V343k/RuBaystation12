@@ -1,13 +1,13 @@
 /*
- * Contains
- * /obj/item/rig_module/vision
- * /obj/item/rig_module/vision/multi
- * /obj/item/rig_module/vision/meson
- * /obj/item/rig_module/vision/thermal
- * /obj/item/rig_module/vision/nvg
- * /obj/item/rig_module/vision/medhud
- * /obj/item/rig_module/vision/sechud
- */
+	* Contains
+	* /obj/item/rig_module/vision
+	* /obj/item/rig_module/vision/multi
+	* /obj/item/rig_module/vision/meson
+	* /obj/item/rig_module/vision/thermal
+	* /obj/item/rig_module/vision/nvg
+	* /obj/item/rig_module/vision/medhud
+	* /obj/item/rig_module/vision/sechud
+	*/
 
 /datum/rig_vision
 	var/mode

@@ -118,7 +118,7 @@
 		var/mob/living/carbon/M = AM
 		if(!MOVING_DELIBERATELY(M))
 			flash()
-	
+
 	if(isanimal(AM))
 		flash()
 

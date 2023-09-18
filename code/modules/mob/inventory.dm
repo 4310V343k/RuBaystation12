@@ -169,10 +169,10 @@
 	return unEquip(r_hand, Target)
 
 /**
- * Drops the item in our active hand. TODO: rename this to drop_active_hand or something
- * Make sure you are ABSOLUTELY CERTAIN you need to drop this and ignore unequip checks (For example, grabs can be "dropped" but only willingly)
- * Else use unequip_item
- */
+	* Drops the item in our active hand. TODO: rename this to drop_active_hand or something
+	* Make sure you are ABSOLUTELY CERTAIN you need to drop this and ignore unequip checks (For example, grabs can be "dropped" but only willingly)
+	* Else use unequip_item
+	*/
 /mob/proc/drop_item(atom/Target)
 	if(hand)	return drop_l_hand(Target, TRUE)
 	else		return drop_r_hand(Target, TRUE)

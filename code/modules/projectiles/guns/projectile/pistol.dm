@@ -5,7 +5,6 @@
 	magazine_type = /obj/item/ammo_magazine/pistol
 	allowed_magazines = /obj/item/ammo_magazine/pistol
 	screen_shake = 1
-	recoil_buildup = 2.4
 	var/empty_icon = TRUE  //If it should change icon when empty
 	var/ammo_indicator = FALSE
 
@@ -211,7 +210,7 @@
 	load_method = SINGLE_CASING|SPEEDLOADER
 	max_shells = 10
 
-	init_firemodes = list(
+	firemodes = list(
 		list(
 			mode_name="semi auto",
 			burst=1,

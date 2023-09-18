@@ -12,4 +12,4 @@
 	desc = "A terrible and at the same time beautiful combat mech to destroy all living things in your way. Comes with special plasma rifle, machinegun and shielding drone. Also, it is almoust EMP-proof!"
 	item_cost = DEFAULT_TELECRYSTAL_AMOUNT * 4
 	antag_roles = list(MODE_MERCENARY)
-  path = /mob/living/exosuit/premade/combat/merc */
+	path = /mob/living/exosuit/premade/combat/merc */

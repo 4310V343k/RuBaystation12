@@ -14,7 +14,7 @@
 		return
 
 	var/data[0]
-	data["state"] = display_state	
+	data["state"] = display_state
 	data["global_state"] = linked.engines_state
 	data["global_limit"] = round(linked.thrust_limit*100)
 	var/total_thrust = 0
@@ -80,7 +80,7 @@
 			var/limit = clamp(newlim/100, 0, 1)
 			if(istype(E))
 				E.set_thrust_limit(limit)
-			return TOPIC_REFRESH			
+			return TOPIC_REFRESH
 		if(href_list["limit"])
 			var/datum/ship_engine/E = locate(href_list["engine"])
 			var/limit = clamp(E.get_thrust_limit() + text2num(href_list["limit"]), 0, 1)

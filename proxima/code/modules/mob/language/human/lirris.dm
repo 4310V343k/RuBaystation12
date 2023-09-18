@@ -16,7 +16,7 @@
 		LANGUAGE_SPACER = 15,
 		LANGUAGE_GUTTER = 5
 		)
-		
+
 	syllables = list(
 		"talkia", "an", "sningen", "ingen", "at", "ed", "er", "ha", "he", "hi", "is", "le", "me", "on", "se", "ti",
 		"sant", "wa", "hver", "ent", "sjone", "hdyksi", "hat", "hin", "ch", "be", "visnin", "die", "sch", "aus",

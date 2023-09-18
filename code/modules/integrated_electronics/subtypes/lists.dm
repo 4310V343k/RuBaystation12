@@ -185,7 +185,7 @@
 		if(e in output_list)
 			continue
 		output_list.Add(e)
-		
+
 	set_pin_data(IC_OUTPUT, 1, output_list)
 	push_data()
 	activate_pin(2)

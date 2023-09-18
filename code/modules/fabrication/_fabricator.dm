@@ -14,7 +14,7 @@
 	wires =           /datum/wires/fabricator
 	base_type =       /obj/machinery/fabricator
 	construct_state = /decl/machine_construction/default/panel_closed
-	
+
 	machine_name = "autolathe"
 	machine_desc = "Autolathes can produce a very wide array of useful objects from raw materials."
 

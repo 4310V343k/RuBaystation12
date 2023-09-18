@@ -111,12 +111,14 @@
 	plushes["lizard plush"] = /obj/item/toy/plushie/lizard
 	plushes["spider plush"] = /obj/item/toy/plushie/spider
 	plushes["farwa plush"] = /obj/item/toy/plushie/farwa
-	plushes["plush blue skrell"] = /obj/item/toy/figure/plush/skrell
-	plushes["plush orange skrell"] = /obj/item/toy/figure/plush/skrell/orange
-	plushes["plush red skrell"] = /obj/item/toy/figure/plush/skrell/red
-	plushes["plush red fox"] = /obj/item/toy/figure/plush/fox
-	plushes["plush black fox"] = /obj/item/toy/figure/plush/fox/blackfox
-	plushes["plush orange fox"] = /obj/item/toy/figure/plush/fox/orange
+	plushes["plush blue skrell"] = /obj/item/toy/plushie/skrell
+	plushes["plush orange skrell"] = /obj/item/toy/plushie/skrell/orange
+	plushes["plush red skrell"] = /obj/item/toy/plushie/skrell/red
+	plushes["plush red fox"] = /obj/item/toy/plushie/fox
+	plushes["plush black fox"] = /obj/item/toy/plushie/fox/blackfox
+	plushes["plush orange fox"] = /obj/item/toy/plushie/fox/orange
+	plushes["plush winter fairy"] = /obj/item/toy/plushie/fumo/cirno
+	plushes["plush black witch"] = /obj/item/toy/plushie/fumo
 	gear_tweaks += new /datum/gear_tweak/path(plushes)
 
 /datum/gear/workvisa
@@ -281,3 +283,8 @@
 	cointype["coin, phoron"] = /obj/item/material/coin/phoron
 	cointype["coin, platinum"] = /obj/item/material/coin/platinum
 	gear_tweaks += new/datum/gear_tweak/path(cointype)
+
+/datum/gear/telepda
+	display_name = "tele-pda"
+	path = /obj/item/device/holopad
+	cost = 3

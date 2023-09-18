@@ -16,7 +16,7 @@
 	display_name = "light armor plate"
 	cost = 4
 	path = /obj/item/clothing/accessory/armor_plate
-	allowed_roles = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/expmar, /datum/job/research_guard, /datum/job/jua, /datum/job/sea, /datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/bridgeofficer, /datum/job/qm, /datum/job/pathfinder)
+	allowed_roles = list(/datum/job/officer, /datum/job/warden, /datum/job/detective, /datum/job/expinf, /datum/job/research_guard, /datum/job/jua, /datum/job/sea, /datum/job/captain, /datum/job/hop, /datum/job/rd, /datum/job/cmo, /datum/job/chief_engineer, /datum/job/hos, /datum/job/bridgeofficer, /datum/job/qm, /datum/job/pathfinder)
 
 /datum/gear/tactical/holster
 	display_name = "holster selection"

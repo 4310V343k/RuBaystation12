@@ -234,7 +234,7 @@
 		degradation += rand(20,60) + user.skill_fail_chance(SKILL_BOTANY, 100, SKILL_ADEPT)
 		var/expertise = max(0, user.get_skill_value(SKILL_BOTANY) - SKILL_ADEPT)
 		degradation = max(0, degradation - 10*expertise)
-	
+
 		if(degradation >= 100)
 			failed_task = 1
 			genetics = null

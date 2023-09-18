@@ -42,7 +42,7 @@
 
 /obj/item/ammo_casing/pistol/magnum/rubber
 	desc = "A high-power pistol rubber bullet casing."
-	projectile_type = /obj/item/projectile/bullet/pistol/strong/rubber
+	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/ammo_casing/pistol/throwback
 	desc = "An antique pistol bullet casing. Somewhere between 9 and 11 mm in caliber."
@@ -144,7 +144,7 @@
 
 /obj/item/ammo_casing/rifle/practice
 	desc = "A rifle practice bullet casing."
-	projectile_type = /obj/item/projectile/bullet/rifle/practice
+	projectile_type = /obj/item/projectile/bullet/rifle/military/practice
 	icon_state = "riflecasing_p"
 
 /obj/item/ammo_casing/shell

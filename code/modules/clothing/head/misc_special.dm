@@ -1,16 +1,16 @@
 /*
- * Contents:
- *		Welding mask
- *		Cakehat
- *		Ushanka
- *		Pumpkin head
- *		Kitty ears
- *
- */
+	* Contents:
+	*		Welding mask
+	*		Cakehat
+	*		Ushanka
+	*		Pumpkin head
+	*		Kitty ears
+	*
+	*/
 
 /*
- * Welding mask
- */
+	* Welding mask
+	*/
 /obj/item/clothing/head/welding
 	name = "welding helmet"
 	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
@@ -110,8 +110,8 @@
 		)
 
 /*
- * Cakehat
- */
+	* Cakehat
+	*/
 /obj/item/clothing/head/cakehat
 	name = "cake-hat"
 	desc = "It's tasty looking!"
@@ -152,8 +152,8 @@
 
 
 /*
- * Ushanka
- */
+	* Ushanka
+	*/
 /obj/item/clothing/head/ushanka
 	name = "ushanka"
 	desc = "Perfect for winter in Siberia, da?"
@@ -178,8 +178,8 @@
 	icon_state_up = "tccushankaup"
 
 /*
- * Pumpkin head
- */
+	* Pumpkin head
+	*/
 /obj/item/clothing/head/pumpkinhead
 	name = "carved pumpkin"
 	desc = "A jack o' lantern! Believed to ward off evil spirits."
@@ -192,8 +192,8 @@
 	w_class = ITEM_SIZE_NORMAL
 
 /*
- * Kitty ears
- */
+	* Kitty ears
+	*/
 /obj/item/clothing/head/kitty
 	name = "kitty ears"
 	desc = "A pair of kitty ears. Meow!"

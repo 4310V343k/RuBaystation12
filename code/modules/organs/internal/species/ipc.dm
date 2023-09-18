@@ -112,7 +112,7 @@
 			if (sneaky)
 				brainmob.real_name = sneaky
 				brainmob.SetName(brainmob.real_name)
-				UpdateNames() 
+				UpdateNames()
 		else
 			to_chat(brainmob, SPAN_NOTICE("You're safe! Your brain didn't manage to replace you. This time."))
 	else
@@ -330,4 +330,3 @@
 
 
 	brainmob.open_subsystem(/datum/nano_module/law_manager, usr)
-	

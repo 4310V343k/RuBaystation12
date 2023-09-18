@@ -26,4 +26,3 @@
 /material/cult/reinf
 	name = MATERIAL_REINFORCED_CULT
 	display_name = "runic inscriptions"
-	

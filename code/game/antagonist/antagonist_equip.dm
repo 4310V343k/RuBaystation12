@@ -2,7 +2,7 @@
 
 	if(!istype(player))
 		return 0
-	
+
 	if (required_language)
 		player.add_language(required_language)
 		player.set_default_language(all_languages[required_language])
@@ -34,7 +34,7 @@
 			rig.seal_delay = initial(rig.seal_delay)
 			if(rig.air_supply)
 				player.set_internals(rig.air_supply)
-		return rig 
+		return rig
 
 //Some modes allow swapping to a vox from their initial mobs. Equip them here.
 /datum/antagonist/proc/equip_vox(mob/living/carbon/human/vox, mob/living/carbon/human/old)

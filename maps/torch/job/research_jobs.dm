@@ -11,7 +11,8 @@
 	minimum_character_age = list(SPECIES_HUMAN = 30)
 	ideal_character_age = 50
 	alt_titles = list(
-		"Research Supervisor")
+		"Research Supervisor",
+		"Research Overseer")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/research/senior_scientist
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps
@@ -41,6 +42,7 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
+	intro_music = list('proxima/sound/intro/research3.ogg')
 
 /datum/job/senior_scientist/get_description_blurb()
 	return "Вы - Старший научный сотрудник. Ваша задача - обеспечивать учёных работой и заниматся исследованием различных областей науки. \
@@ -95,6 +97,7 @@
 	)
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
+	intro_music = list('proxima/sound/intro/research1.ogg', 'proxima/sound/intro/research2.ogg')
 
 /datum/job/scientist/get_description_blurb()
 	return "Вы - Научный сотрудник. Ваша задача - проводить анализ различных вещей и проверять свои гипотизы на практике. \
@@ -156,6 +159,8 @@
 	spawn_positions = 1
 	supervisors = "Главному научному офицеру"
 	selection_color = "#473d63"
+	alt_titles = list(
+		"Protection Agent")
 	economic_power = 5
 	minimal_player_age = 0
 	minimum_character_age = list(SPECIES_HUMAN = 26)

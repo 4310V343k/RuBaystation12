@@ -74,7 +74,7 @@
 #define STATUS_INTERACTIVE 2 // GREEN Visability
 
 /*
- *	Atmospherics Machinery.
+	*	Atmospherics Machinery.
 */
 #define MAX_SIPHON_FLOWRATE   2500 // L/s. This can be used to balance how fast a room is siphoned. Anything higher than CELL_VOLUME has no effect.
 #define MAX_SCRUBBER_FLOWRATE 200  // L/s. Max flow rate when scrubbing from a turf.

@@ -1,14 +1,14 @@
 /** # Beam Datum and Effect
- * **IF YOU ARE LAZY AND DO NOT WANT TO READ, GO TO THE BOTTOM OF THE FILE AND USE THAT PROC!**
- *
- * This is the beam datum! It's a really neat effect for the game in drawing a line from one atom to another.
- * It has two parts:
- * The datum itself which manages redrawing the beam to constantly keep it pointing from the origin to the target.
- * The effect which is what the beams are made out of. They're placed in a line from the origin to target, rotated towards the target and snipped off at the end.
- * These effects are kept in a list and constantly created and destroyed (hence the proc names draw and reset, reset destroying all effects and draw creating more.)
- *
- * You can add more special effects to the beam itself by changing what the drawn beam effects do. For example you can make a vine that pricks people by making the beam_type
- * include a crossed proc that damages the crosser. Examples check tg's venus_human_trap.dm
+	* **IF YOU ARE LAZY AND DO NOT WANT TO READ, GO TO THE BOTTOM OF THE FILE AND USE THAT PROC!**
+	*
+	* This is the beam datum! It's a really neat effect for the game in drawing a line from one atom to another.
+	* It has two parts:
+	* The datum itself which manages redrawing the beam to constantly keep it pointing from the origin to the target.
+	* The effect which is what the beams are made out of. They're placed in a line from the origin to target, rotated towards the target and snipped off at the end.
+	* These effects are kept in a list and constantly created and destroyed (hence the proc names draw and reset, reset destroying all effects and draw creating more.)
+	*
+	* You can add more special effects to the beam itself by changing what the drawn beam effects do. For example you can make a vine that pricks people by making the beam_type
+	* include a crossed proc that damages the crosser. Examples check tg's venus_human_trap.dm
 */
 /datum/beam
 	///where the beam goes from
@@ -39,8 +39,8 @@
 		QDEL_IN(src, time)
 
 /**
- * Proc called by the atom Beam() proc. Sets up signals, and draws the beam for the first time.
- */
+	* Proc called by the atom Beam() proc. Sets up signals, and draws the beam for the first time.
+	*/
 /datum/beam/proc/Start()
 	visuals = new beam_type()
 	visuals.icon = icon
@@ -53,13 +53,13 @@
 	GLOB.destroyed_event.register(target, src, .proc/redrawing)
 
 /**
- * Triggered by events set up when the beam is set up. If it's still sane to create a beam, it removes the old beam, creates a new one. Otherwise it kills the beam.
- *
- * Arguments:
- * - mover: either the origin of the beam or the target of the beam that moved.
- * - oldloc: from where mover moved.
- * - direction: in what direction mover moved from.
- */
+	* Triggered by events set up when the beam is set up. If it's still sane to create a beam, it removes the old beam, creates a new one. Otherwise it kills the beam.
+	*
+	* Arguments:
+	* - mover: either the origin of the beam or the target of the beam that moved.
+	* - oldloc: from where mover moved.
+	* - direction: in what direction mover moved from.
+	*/
 /datum/beam/proc/redrawing(atom/movable/mover, atom/oldloc, new_loc)
 	if(!QDELETED(origin) && !QDELETED(target) && get_dist(origin,target)<max_distance && origin.z == target.z)
 		QDEL_NULL_LIST(elements)
@@ -79,8 +79,8 @@
 	return ..()
 
 /**
- * Creates the beam effects and places them in a line from the origin to the target. Sets their rotation to make the beams face the target, too.
- */
+	* Creates the beam effects and places them in a line from the origin to the target. Sets their rotation to make the beams face the target, too.
+	*/
 /datum/beam/proc/Draw()
 	LAZYINITLIST(elements)
 	var/Angle = round(Get_Angle(origin,target))
@@ -150,17 +150,17 @@
 	return
 
 /**
- * This is what you use to start a beam. Example: origin.Beam(target, args). **Store the return of this proc if you don't set maxdist or time, you need it to delete the beam.**
- *
- * Unless you're making a custom beam effect (see the beam_type argument), you won't actually have to mess with any other procs. Make sure you store the return of this Proc, you'll need it
- * to kill the beam.
- * **Arguments:**
- * - BeamTarget: Where you're beaming from. Where do you get origin? You didn't read the docs, fuck you.
- * - icon_state: What the beam's icon_state is. The datum effect isn't the ebeam object, it doesn't hold any icon and isn't type dependent.
- * - icon: What the beam's icon file is. Don't change this, man. All beam icons should be in beam.dmi anyways.
- * - maxdistance: how far the beam will go before stopping itself. Used mainly for two things: preventing lag if the beam may go in that direction and setting a range to abilities that use beams.
- * - beam_type: The type of your custom beam. This is for adding other wacky stuff for your beam only. Most likely, you won't (and shouldn't) change it.
- */
+	* This is what you use to start a beam. Example: origin.Beam(target, args). **Store the return of this proc if you don't set maxdist or time, you need it to delete the beam.**
+	*
+	* Unless you're making a custom beam effect (see the beam_type argument), you won't actually have to mess with any other procs. Make sure you store the return of this Proc, you'll need it
+	* to kill the beam.
+	* **Arguments:**
+	* - BeamTarget: Where you're beaming from. Where do you get origin? You didn't read the docs, fuck you.
+	* - icon_state: What the beam's icon_state is. The datum effect isn't the ebeam object, it doesn't hold any icon and isn't type dependent.
+	* - icon: What the beam's icon file is. Don't change this, man. All beam icons should be in beam.dmi anyways.
+	* - maxdistance: how far the beam will go before stopping itself. Used mainly for two things: preventing lag if the beam may go in that direction and setting a range to abilities that use beams.
+	* - beam_type: The type of your custom beam. This is for adding other wacky stuff for your beam only. Most likely, you won't (and shouldn't) change it.
+	*/
 /atom/proc/Beam(atom/BeamTarget,icon_state="b_beam",icon='icons/effects/beam.dmi',time=INFINITY,maxdistance=INFINITY,beam_type=/obj/effect/ebeam)
 	var/datum/beam/newbeam = new(src,BeamTarget,icon,icon_state,time,maxdistance,beam_type)
 	INVOKE_ASYNC(newbeam, /datum/beam/.proc/Start)

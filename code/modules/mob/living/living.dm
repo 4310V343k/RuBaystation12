@@ -7,11 +7,6 @@
 
 	selected_image = image(icon('icons/misc/buildmode.dmi'), loc = src, icon_state = "ai_sel")
 
-/mob/living/examine(mob/user, distance, infix, suffix)
-	. = ..()
-	if (admin_paralyzed)
-		to_chat(user, SPAN_DEBUG("OOC: They have been paralyzed by staff. Please avoid interacting with them unless cleared to do so by staff."))
-
 //mob verbs are faster than object verbs. See mob/verb/examine.
 /mob/living/verb/pulled(atom/movable/AM as mob|obj in oview(1))
 	set name = "Pull"
@@ -37,9 +32,9 @@
 /*one proc, four uses
 swapping: if it's 1, the mobs are trying to switch, if 0, non-passive is pushing passive
 default behaviour is:
- - non-passive mob passes the passive version
- - passive mob checks to see if its mob_bump_flag is in the non-passive's mob_bump_flags
- - if si, the proc returns
+	- non-passive mob passes the passive version
+	- passive mob checks to see if its mob_bump_flag is in the non-passive's mob_bump_flags
+	- if si, the proc returns
 */
 /mob/living/proc/can_move_mob(var/mob/living/swapped, swapping = 0, passive = 0)
 	if(!swapped)

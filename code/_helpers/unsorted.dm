@@ -1,6 +1,6 @@
 /*
- * A large number of misc global procs.
- */
+	* A large number of misc global procs.
+	*/
 
 /proc/subtypesof(datum/thing)
 	if (ispath(thing))
@@ -513,6 +513,10 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
 
+//Makes sure MIDDLE is between LOW and HIGH. If not, it adjusts it. Returns the adjusted value. Lower bound takes priority.
+/proc/between(var/low, var/middle, var/high)
+	return max(min(middle, high), low)
+
 
 //returns random gauss number
 /proc/GaussRand(var/sigma)
@@ -730,20 +734,20 @@ GLOBAL_LIST_INIT(duplicate_forbidden_vars, list(
 	var/z_pos = null
 
 /**
- * Attempts to move the contents, including turfs, of one area to another area.
- * Positioning is based on the lower left corner of both areas.
- * Tiles that do not fit into the new area will not be copied.
- * Source atoms are not modified or deleted.
- * Turfs are created using `ChangeTurf()`.
- * `dir`, `icon`, and `icon_state` are copied. All other vars use the default value for the copied atom.
- * Primarily used for holodecks.
- *
- * **Parameters**:
- * - `A` `/area`. The area to copy src's contents to.
- * - `platingRequired` Boolean, default `FALSE`. If set, contents will only be copied to destination tiles that are not the same type as `get_base_area_by_turf()` before calling `ChangeTurf()`.
- *
- * Returns List (`/atom`). A list containing all atoms that were created at the target area during the process.
- */
+	* Attempts to move the contents, including turfs, of one area to another area.
+	* Positioning is based on the lower left corner of both areas.
+	* Tiles that do not fit into the new area will not be copied.
+	* Source atoms are not modified or deleted.
+	* Turfs are created using `ChangeTurf()`.
+	* `dir`, `icon`, and `icon_state` are copied. All other vars use the default value for the copied atom.
+	* Primarily used for holodecks.
+	*
+	* **Parameters**:
+	* - `A` `/area`. The area to copy src's contents to.
+	* - `platingRequired` Boolean, default `FALSE`. If set, contents will only be copied to destination tiles that are not the same type as `get_base_area_by_turf()` before calling `ChangeTurf()`.
+	*
+	* Returns List (`/atom`). A list containing all atoms that were created at the target area during the process.
+	*/
 /area/proc/copy_contents_to(var/area/A , var/platingRequired = 0 )
 	if(!A || !src) return 0
 

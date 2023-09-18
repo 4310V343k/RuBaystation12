@@ -4,12 +4,12 @@ GLOBAL_DATUM_INIT(ert, /datum/antagonist/ert, new)
 	id = MODE_ERT
 	role_text = "Emergency Responder"
 	role_text_plural = "Emergency Responders"
-	antag_text = "You are an <b>anti</b>-antagonist! Within the rules, try to save the ship and its crew from the ongoing crisis. \
-				 Try to make sure the other players have <i>fun</i>, and if you are confused or at a loss, always adminhelp. \
-				 You should also contact the staff before taking any extreme actions. \
-				 <b>Remember that all rules outside of those with explicit exceptions apply to the ERT!</b>"
-	welcome_text = "You shouldn't see this"
-	leader_welcome_text = "You shouldn't see this"
+	antag_text = "Вы - это <b>анти</b>-антагонист! В рамках правил, попытайтесь спасти объект и его население от продолжающегося кризиса. \
+				 Старайтесь сделать так, чтобы другим игрокам было весело, и если вы смущены или растеряны, всегда можете попросить помощи администрации. \
+				 Перед тем, как предпринимать какие-либо важные действия в игре, мы настоятельно рекомендуем посоветоваться с вашей командой. \
+				 <b>Помните, что все правила, за исключением тех, что содержат явные исключения, применимы к вам!</b>"
+	welcome_text = "Ты не должен этого видеть"
+	leader_welcome_text = "Ты не должен этого видеть"
 	landmark_id = "Response Team"
 	id_type = /obj/item/card/id/centcom/ERT
 

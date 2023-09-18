@@ -1,7 +1,7 @@
 
 /**
- *  A vending machine
- */
+	*  A vending machine
+	*/
 /obj/machinery/vending
 	name = "\improper Vendomat"
 	desc = "A generic vending machine."
@@ -90,12 +90,12 @@
 	build_inventory(populate_parts)
 
 /**
- *  Build src.produdct_records from the products lists
- *
- *  src.products, src.contraband, src.premium, and src.prices allow specifying
- *  products that the vending machine is to carry without manually populating
- *  src.product_records.
- */
+	*  Build src.produdct_records from the products lists
+	*
+	*  src.products, src.contraband, src.premium, and src.prices allow specifying
+	*  products that the vending machine is to carry without manually populating
+	*  src.product_records.
+	*/
 /obj/machinery/vending/proc/build_inventory(populate_parts = FALSE)
 	var/list/all_products = list(
 		list(src.products, CAT_NORMAL),
@@ -214,8 +214,8 @@
 			return 1
 
 /**
- *  Receive payment with cashmoney.
- */
+	*  Receive payment with cashmoney.
+	*/
 /obj/machinery/vending/proc/pay_with_cash(var/obj/item/spacecash/bundle/cashmoney)
 	if(currently_vending.price > cashmoney.worth)
 		// This is not a status display message, since it's something the character
@@ -236,11 +236,11 @@
 	return 1
 
 /**
- * Scan a chargecard and deduct payment from it.
- *
- * Takes payment for whatever is the currently_vending item. Returns 1 if
- * successful, 0 if failed.
- */
+	* Scan a chargecard and deduct payment from it.
+	*
+	* Takes payment for whatever is the currently_vending item. Returns 1 if
+	* successful, 0 if failed.
+	*/
 /obj/machinery/vending/proc/pay_with_ewallet(var/obj/item/spacecash/ewallet/wallet)
 	visible_message("<span class='info'>\The [usr] swipes \the [wallet] through \the [src].</span>")
 	if(currently_vending.price > wallet.worth)
@@ -253,11 +253,11 @@
 		return 1
 
 /**
- * Scan a card and attempt to transfer payment from associated account.
- *
- * Takes payment for whatever is the currently_vending item. Returns 1 if
- * successful, 0 if failed
- */
+	* Scan a card and attempt to transfer payment from associated account.
+	*
+	* Takes payment for whatever is the currently_vending item. Returns 1 if
+	* successful, 0 if failed
+	*/
 /obj/machinery/vending/proc/pay_with_card(var/obj/item/card/id/I, var/obj/item/ID_container)
 	if(I==ID_container || ID_container == null)
 		visible_message("<span class='info'>\The [usr] swipes \the [I] through \the [src].</span>")
@@ -296,10 +296,10 @@
 		return 1
 
 /**
- *  Add money for current purchase to the vendor account.
- *
- *  Called after the money has already been taken from the customer.
- */
+	*  Add money for current purchase to the vendor account.
+	*
+	*  Called after the money has already been taken from the customer.
+	*/
 /obj/machinery/vending/proc/credit_purchase(var/target as text)
 	vendor_account.deposit(currently_vending.price, "Purchase of [currently_vending.item_name]", target)
 
@@ -313,10 +313,10 @@
 	return TRUE
 
 /**
- *  Display the NanoUI window for the vending machine.
- *
- *  See NanoUI documentation for details.
- */
+	*  Display the NanoUI window for the vending machine.
+	*
+	*  See NanoUI documentation for details.
+	*/
 /obj/machinery/vending/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	user.set_machine(src)
 
@@ -471,11 +471,11 @@
 		SSnano.update_uis(src)
 
 /**
- * Add item to the machine
- *
- * Checks if item is vendable in this machine should be performed before
- * calling. W is the item being inserted, R is the associated vending_product entry.
- */
+	* Add item to the machine
+	*
+	* Checks if item is vendable in this machine should be performed before
+	* calling. W is the item being inserted, R is the associated vending_product entry.
+	*/
 /obj/machinery/vending/proc/stock(obj/item/W, var/datum/stored_items/vending_products/R, var/mob/user)
 	if(!user.unEquip(W))
 		return
@@ -561,8 +561,8 @@
 	return 1
 
 /*
- * Vending machine types
- */
+	* Vending machine types
+	*/
 
 /*
 
@@ -858,6 +858,16 @@
 					/obj/item/storage/fancy/cigarettes/cigarello = 2,
 					/obj/item/storage/fancy/cigarettes/cigarello/mint = 2,
 					/obj/item/storage/fancy/cigarettes/cigarello/variety = 2,
+					/obj/item/storage/fancy/cigarettes/elpedros = 2,
+					/obj/item/storage/fancy/cigarettes/nirvana = 2,
+					/obj/item/storage/fancy/cigarettes/mars = 2,
+					/obj/item/storage/fancy/cigarettes/pear = 2,
+					/obj/item/storage/fancy/cigarettes/chinese = 2,
+					/obj/item/storage/chewables/rollable/perception = 2,
+					/obj/item/storage/chewables/rollable/medical = 2,
+					/obj/item/storage/chewables/rollable/female = 2,
+					/obj/item/storage/chewables/rollable/honey = 2,
+					/obj/item/storage/chewables/rollable/coffee = 2,
 					/obj/item/storage/box/matches = 10,
 					/obj/item/flame/lighter/random = 4,
 					/obj/item/storage/chewables/tobacco = 2,
@@ -1031,7 +1041,7 @@
 	vend_delay = 26
 	base_type = /obj/machinery/vending/hydronutrients
 	products = list(/obj/item/reagent_containers/glass/bottle/eznutrient = 6,/obj/item/reagent_containers/glass/bottle/left4zed = 4,/obj/item/reagent_containers/glass/bottle/robustharvest = 3,/obj/item/plantspray/pests = 20,
-					/obj/item/reagent_containers/syringe = 5,/obj/item/storage/plants = 5)
+					/obj/item/reagent_containers/syringe = 5,/obj/item/storage/plants = 5,/obj/item/device/scanner/plant = 2)
 	premium = list(/obj/item/reagent_containers/glass/bottle/ammonia = 10,/obj/item/reagent_containers/glass/bottle/diethylamine = 5)
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 
@@ -1070,11 +1080,11 @@
 	icon_deny = "seeds_generic-deny"
 
 /**
- *  Populate hydroseeds product_records
- *
- *  This needs to be customized to fetch the actual names of the seeds, otherwise
- *  the machine would simply list "packet of seeds" times 20
- */
+	*  Populate hydroseeds product_records
+	*
+	*  This needs to be customized to fetch the actual names of the seeds, otherwise
+	*  the machine would simply list "packet of seeds" times 20
+	*/
 /obj/machinery/vending/hydroseeds/build_inventory()
 	var/list/all_products = list(
 		list(src.products, CAT_NORMAL),
@@ -1280,11 +1290,26 @@
 	products = list(/obj/item/mirror = 8,
 					/obj/item/haircomb = 8,
 					/obj/item/clothing/glasses/monocle = 5,
+					/obj/item/clothing/glasses/eyepatch/hud = 2,
 					/obj/item/clothing/glasses/sunglasses = 5,
 					/obj/item/lipstick = 3,
 					/obj/item/lipstick/black = 3,
 					/obj/item/lipstick/purple = 3,
 					/obj/item/lipstick/jade = 3,
+					/obj/item/lipstick/amberred = 3,
+					/obj/item/lipstick/cherry = 3,
+					/obj/item/lipstick/orange = 3,
+					/obj/item/lipstick/gold = 3,
+					/obj/item/lipstick/purple = 3,
+					/obj/item/lipstick/deepred = 3,
+					/obj/item/lipstick/pink = 3,
+					/obj/item/lipstick/rosepink = 3,
+					/obj/item/lipstick/nude = 3,
+					/obj/item/lipstick/wine = 3,
+					/obj/item/lipstick/peach = 3,
+					/obj/item/lipstick/forestgreen = 3,
+					/obj/item/lipstick/skyblue = 3,
+					/obj/item/lipstick/teal = 3,
 					/obj/item/storage/wallet/poly = 2)
 	contraband = list(/obj/item/clothing/glasses/eyepatch = 2, /obj/item/clothing/accessory/horrible = 2)
 	premium = list(/obj/item/clothing/mask/smokable/pipe = 3)
@@ -1292,10 +1317,25 @@
 					/obj/item/haircomb = 40,
 					/obj/item/clothing/glasses/monocle = 700,
 					/obj/item/clothing/glasses/sunglasses = 500,
+					/obj/item/clothing/glasses/eyepatch/hud = 1000,
 					/obj/item/lipstick = 100,
 					/obj/item/lipstick/black = 100,
 					/obj/item/lipstick/purple = 100,
 					/obj/item/lipstick/jade = 100,
+					/obj/item/lipstick/amberred = 100,
+					/obj/item/lipstick/cherry = 100,
+					/obj/item/lipstick/orange = 100,
+					/obj/item/lipstick/gold = 100,
+					/obj/item/lipstick/purple = 100,
+					/obj/item/lipstick/deepred = 100,
+					/obj/item/lipstick/pink = 100,
+					/obj/item/lipstick/rosepink = 100,
+					/obj/item/lipstick/nude = 100,
+					/obj/item/lipstick/wine = 100,
+					/obj/item/lipstick/peach = 100,
+					/obj/item/lipstick/forestgreen = 100,
+					/obj/item/lipstick/skyblue = 100,
+					/obj/item/lipstick/teal = 100,
 					/obj/item/storage/wallet/poly = 600
 					)
 // eliza's attempt at a new vending machine
@@ -1360,6 +1400,8 @@
 					/obj/item/reagent_containers/food/snacks/salo = 7,
 					/obj/item/reagent_containers/food/snacks/driedfish = 7,
 					/obj/item/reagent_containers/food/snacks/pistachios = 7,
+					/obj/item/reagent_containers/food/snacks/canned/varenka = 1,
+					/obj/item/reagent_containers/food/snacks/canned/sgushenka = 3
 					)
 
 	contraband = list(/obj/item/reagent_containers/food/snacks/canned/caviar/true = 1)

@@ -31,8 +31,8 @@
 					admin_inject_log(user, M, src, contained_reagents, trans)
 
 /*
- * Sleepy Pens
- */
+	* Sleepy Pens
+	*/
 /obj/item/pen/reagent/sleepy
 	desc = "It's a black ink pen with a sharp point and a carefully engraved \"Waffle Co.\"."
 	origin_tech = list(TECH_MATERIAL = 2, TECH_ESOTERIC = 5)

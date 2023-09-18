@@ -90,4 +90,3 @@
 	else
 		pass("All cultural values are valid.")
 	return 1
-

@@ -65,7 +65,7 @@
 	// check if the signature is valid
 	if(!check_data_signature(signature, result))
 		return FALSE
-	
+
 	if(length(result) > 1)
 		result = json_decode(result)
 	else

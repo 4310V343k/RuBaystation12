@@ -7,6 +7,7 @@
 #define ASSIGNMENT_MEDICAL "Medical"
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_SECURITY "Security"
+#define ASSIGNMENT_PSYCHIATRIST "Psychiatrist"
 
 var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major", EVENT_LEVEL_EXO = "Exoplanet")
 
@@ -207,3 +208,4 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
+#undef ASSIGNMENT_PSYCHIATRIST

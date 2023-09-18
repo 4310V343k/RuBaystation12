@@ -1,13 +1,13 @@
 /* Filing cabinets!
- * Contains:
- *		Filing Cabinets
- *		Security Record Cabinets
- *		Medical Record Cabinets
- */
+	* Contains:
+	*		Filing Cabinets
+	*		Security Record Cabinets
+	*		Medical Record Cabinets
+	*/
 
 /*
- * Filing Cabinets
- */
+	* Filing Cabinets
+	*/
 /obj/structure/filingcabinet
 	name = "filing cabinet"
 	desc = "A large cabinet with drawers."

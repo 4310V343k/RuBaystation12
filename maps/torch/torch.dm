@@ -37,6 +37,7 @@
 	#include "datums/reports/medical.dm"
 	#include "datums/reports/science.dm"
 	#include "datums/reports/security.dm"
+	#include "datums/reports/service.dm"
 	#include "datums/reports/solgov.dm"
 	#include "datums/reports/deck.dm"
 	#include "datums/shackle_law_sets.dm"
@@ -169,9 +170,6 @@
 	#include "../away/miningstation/miningstation.dm"
 	#include "../away/mininghome/mininghome.dm"
 	#include "../away/scavver/scavver_gantry.dm"
-
-	#include "../event/iccgn_ship/icgnv_hound.dm"
-	#include "../event/sfv_arbiter/sfv_arbiter.dm"
 
 
 	#define using_map_DATUM /datum/map/torch

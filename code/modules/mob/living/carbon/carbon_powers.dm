@@ -63,10 +63,10 @@
 		return
 
 /**
- *  Attempt to devour victim
- *
- *  Returns TRUE on success, FALSE on failure
- */
+	*  Attempt to devour victim
+	*
+	*  Returns TRUE on success, FALSE on failure
+	*/
 /mob/living/carbon/proc/devour(atom/movable/victim)
 	var/can_eat = can_devour(victim)
 	if(!can_eat)

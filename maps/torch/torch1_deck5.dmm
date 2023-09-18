@@ -4506,7 +4506,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kp" = (
-/obj/structure/closet/secure_closet/explorer/marine,
+/obj/structure/closet/secure_closet/explorer/infantry,
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
@@ -4573,7 +4573,7 @@
 /obj/structure/sign/ecplaque{
 	pixel_y = -30
 	},
-/obj/machinery/suit_storage_unit/explorer/marine,
+/obj/machinery/suit_storage_unit/explorer/infantry,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "kw" = (
@@ -11534,7 +11534,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/petrov/analysis)
 "Cj" = (
-/obj/structure/closet/secure_closet/explorer/marine,
+/obj/structure/closet/secure_closet/explorer/infantry,
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
@@ -12058,7 +12058,7 @@
 /area/shuttle/petrov/custodial)
 "DR" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/suit_storage_unit/explorer/marine,
+/obj/machinery/suit_storage_unit/explorer/infantry,
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/exploration)
 "DT" = (

@@ -15,8 +15,8 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	handle_casings = HOLD_CASINGS
 	one_hand_penalty = 8
-	recoil_buildup = 12
 	bulk = 6
+	accuracy = 1
 	var/recentpump = 0 // to prevent spammage
 	wielded_item_state = "shotgun-wielded"
 	load_sound = 'sound/weapons/guns/interaction/shotgun_instert.ogg'
@@ -24,6 +24,13 @@
 /obj/item/gun/projectile/shotgun/on_update_icon()
 	..()
 	if(length(loaded))
+		icon_state = initial(icon_state)
+	else
+		icon_state = "[initial(icon_state)]-empty"
+
+/obj/item/gun/projectile/shotgun/pump/on_update_icon()
+	..()
+	if(chambered)
 		icon_state = initial(icon_state)
 	else
 		icon_state = "[initial(icon_state)]-empty"
@@ -64,6 +71,7 @@
 	max_shells = 7 //match the ammo box capacity, also it can hold a round in the chamber anyways, for a total of 8.
 	ammo_type = /obj/item/ammo_casing/shotgun
 	one_hand_penalty = 8
+	accuracy = 2
 
 /obj/item/gun/projectile/shotgun/pump/combat/on_update_icon()
 	..()
@@ -92,11 +100,12 @@
 	caliber = CALIBER_SHOTGUN
 	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 1)
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
-	one_hand_penalty = 2
+	one_hand_penalty = 8
+	accuracy = 1
 	wielded_item_state = "gun_wielded"
 
 	burst_delay = 0
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="fire one barrel at a time", burst=1),
 		list(mode_name="fire both barrels at once", burst=2),
 		)
@@ -146,6 +155,7 @@
 	force = 5
 	one_hand_penalty = 4
 	bulk = 2
+	accuracy = 0
 
 /obj/item/gun/projectile/shotgun/doublebarrel/sawn/empty
 	starts_loaded = FALSE

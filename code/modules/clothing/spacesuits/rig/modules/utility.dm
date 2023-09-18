@@ -1,19 +1,19 @@
 /* Contains:
- * /obj/item/rig_module/device
- * /obj/item/rig_module/device/healthscanner
- * /obj/item/rig_module/device/defib
- * /obj/item/rig_module/device/drill
- * /obj/item/rig_module/device/orescanner
- * /obj/item/rig_module/device/rcd
- * /obj/item/rig_module/device/anomaly_scanner
- * /obj/item/rig_module/maneuvering_jets
- * /obj/item/rig_module/chem_dispenser
- * /obj/item/rig_module/chem_dispenser/injector
- * /obj/item/rig_module/voice
- * /obj/item/rig_module/device/paperdispenser
- * /obj/item/rig_module/device/pen
- * /obj/item/rig_module/device/stamp
- */
+	* /obj/item/rig_module/device
+	* /obj/item/rig_module/device/healthscanner
+	* /obj/item/rig_module/device/defib
+	* /obj/item/rig_module/device/drill
+	* /obj/item/rig_module/device/orescanner
+	* /obj/item/rig_module/device/rcd
+	* /obj/item/rig_module/device/anomaly_scanner
+	* /obj/item/rig_module/maneuvering_jets
+	* /obj/item/rig_module/chem_dispenser
+	* /obj/item/rig_module/chem_dispenser/injector
+	* /obj/item/rig_module/voice
+	* /obj/item/rig_module/device/paperdispenser
+	* /obj/item/rig_module/device/pen
+	* /obj/item/rig_module/device/stamp
+	*/
 
 /obj/item/rig_module/device
 	name = "mounted device"

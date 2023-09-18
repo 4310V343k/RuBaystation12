@@ -124,7 +124,7 @@ var/global/list/adminhelp_ignored_words = list("unknown","the","a","an","of","mo
 				admin_number_afk++
 			if(X.get_preference_value(/datum/client_preference/staff/play_adminhelp_ping) == GLOB.PREF_HEAR)
 				sound_to(X, 'sound/effects/adminhelp.ogg')
-
+			window_flash(X)
 			T = emoji_parse(msg, X)
 
 			to_chat(X, T)

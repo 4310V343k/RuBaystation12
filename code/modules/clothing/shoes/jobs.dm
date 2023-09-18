@@ -17,10 +17,10 @@
 	item_state = "jackboots"
 	force = 3
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		bullet = ARMOR_BALLISTIC_MINOR, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_MINOR, 
+		melee = ARMOR_MELEE_RESISTANT,
+		bullet = ARMOR_BALLISTIC_MINOR,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_MINOR,
 		bomb = ARMOR_BOMB_PADDED
 		)
 	siemens_coefficient = 0.7
@@ -46,9 +46,9 @@
 	icon_state = "workboots"
 	item_state = "workboots"
 	armor = list(
-		melee = ARMOR_MELEE_RESISTANT, 
-		laser = ARMOR_LASER_MINOR, 
-		energy = ARMOR_ENERGY_SMALL, 
+		melee = ARMOR_MELEE_RESISTANT,
+		laser = ARMOR_LASER_MINOR,
+		energy = ARMOR_ENERGY_SMALL,
 		bomb = ARMOR_BOMB_PADDED
 		)
 	siemens_coefficient = 0.7

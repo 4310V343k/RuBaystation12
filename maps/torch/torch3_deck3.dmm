@@ -1000,7 +1000,7 @@
 /obj/machinery/door/airlock/command{
 	autoset_access = 0;
 	name = "Officer's Mess";
-	req_access = list("ACCESS_TORCH_O_MESS", "ACCESS_TORCH_CREW")
+	req_access = list("ACCESS_TORCH_O_MESS","ACCESS_TORCH_CREW")
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/mess)

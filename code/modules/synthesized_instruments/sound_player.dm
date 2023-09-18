@@ -81,6 +81,3 @@
 		return D.shouldStopPlaying(user)
 
 	return 1 //Well if you got this far you did something very wrong
-
-
-

@@ -1,12 +1,12 @@
 /* First aid storage
- * Contains:
- *		First Aid Kits
- * 		Pill Bottles
- */
+	* Contains:
+	*		First Aid Kits
+	* 		Pill Bottles
+	*/
 
 /*
- * First Aid Kits
- */
+	* First Aid Kits
+	*/
 /obj/item/storage/firstaid
 	abstract_type = /obj/item/storage/firstaid
 	name = "base first-aid kit"

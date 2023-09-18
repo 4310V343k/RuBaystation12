@@ -3,11 +3,11 @@
 	holder_type = /mob/living/silicon/robot
 	wire_count = 5
 	descriptions = list(
-		new /datum/wire_description(BORG_WIRE_LAWCHECK, "This wire runs to the unit's law module."),
+		new /datum/wire_description(BORG_WIRE_LAWCHECK, "This wire runs to the unit's law module.", SKILL_PROF),
 		new /datum/wire_description(BORG_WIRE_MAIN_POWER, "This wire seems to be carrying a heavy current.", SKILL_EXPERT),
-		new /datum/wire_description(BORG_WIRE_LOCKED_DOWN, "This wire connects to the unit's safety override."),
-		new /datum/wire_description(BORG_WIRE_AI_CONTROL, "This wire connects to automated control systems."),
-		new /datum/wire_description(BORG_WIRE_CAMERA,  "This wire runs to the unit's vision modules.")
+		new /datum/wire_description(BORG_WIRE_LOCKED_DOWN, "This wire connects to the unit's safety override.", SKILL_PROF),
+		new /datum/wire_description(BORG_WIRE_AI_CONTROL, "This wire connects to automated control systems.", SKILL_PROF),
+		new /datum/wire_description(BORG_WIRE_CAMERA,  "This wire runs to the unit's vision modules.", SKILL_PROF)
 	)
 
 var/global/const/BORG_WIRE_LAWCHECK = 1

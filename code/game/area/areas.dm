@@ -69,14 +69,14 @@
 	return cameras
 
 /**
- * Defines the area's atmosphere alert level.
- *
- * **Parameters**:
- * - `danger_level` Integer. The new alert danger level to set.
- * - `alarm_source` Atom. The source that's triggering the alert change.
- *
- * Returns boolean. `TRUE` if the atmosphere alarm level was changed, `FALSE` otherwise.
- */
+	* Defines the area's atmosphere alert level.
+	*
+	* **Parameters**:
+	* - `danger_level` Integer. The new alert danger level to set.
+	* - `alarm_source` Atom. The source that's triggering the alert change.
+	*
+	* Returns boolean. `TRUE` if the atmosphere alarm level was changed, `FALSE` otherwise.
+	*/
 /area/proc/atmosalert(danger_level, var/alarm_source)
 	if (danger_level == 0)
 		GLOB.atmosphere_alarm.clearAlarm(src, alarm_source)
@@ -295,11 +295,11 @@
 
 
 /**
- * Sets the area's `has_gravity` state.
- *
- * **Parameters**:
- * - `gravitystate` Boolean, default `FALSE`. The new state to set `has_gravity` to.
- */
+	* Sets the area's `has_gravity` state.
+	*
+	* **Parameters**:
+	* - `gravitystate` Boolean, default `FALSE`. The new state to set `has_gravity` to.
+	*/
 /area/proc/gravitychange(var/gravitystate = 0)
 	has_gravity = gravitystate
 
