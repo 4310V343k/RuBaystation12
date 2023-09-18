@@ -110,6 +110,8 @@
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
 
+	intro_music = list('proxima/sound/intro/detective1.ogg')
+
 /datum/job/detective/equip(var/mob/living/carbon/human/H)
 	if(H.mind?.role_alt_title == "Psionic Sleuth")
 		psi_faculties = list("[PSI_PSYCHOKINESIS]" = PSI_RANK_MASTER)
@@ -168,6 +170,8 @@
 
 	software_on_spawn = list(/datum/computer_file/program/digitalwarrant,
 							 /datum/computer_file/program/camera_monitor)
+
+	intro_music = list('proxima/sound/intro/sec1.ogg')
 
 /datum/job/officer/get_description_blurb()
 	return "Вы - Каптенармус. Ваша задача - поддерживать порядок на судне и защищать его от различных угроз. Вы подчиняетесь Главе службы безопасности и Смотрителю. \
