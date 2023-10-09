@@ -5,8 +5,8 @@
 //trees
 /obj/structure/flora/tree
 	name = "tree"
-	anchored = 1
-	density = 1
+	anchored = TRUE
+	density = TRUE
 	pixel_x = -16
 	layer = ABOVE_HUMAN_LAYER
 	var/cut_level = PLANT_CUT
@@ -198,7 +198,7 @@
 /obj/structure/flora/grass
 	name = "grass"
 	icon = 'proxima/icons/obj/flora/snowflora.dmi'
-	anchored = 1
+	anchored = TRUE
 	layer = BELOW_DOOR_LAYER
 
 /obj/structure/flora/grass/brown
@@ -229,7 +229,7 @@
 	name = "bush"
 	icon = 'proxima/icons/obj/flora/snowflora.dmi'
 	icon_state = "snowbush1"
-	anchored = 1
+	anchored = TRUE
 
 /obj/structure/flora/bush/New()
 	..()
@@ -269,7 +269,7 @@
 	name = "bush"
 	icon = 'proxima/icons/obj/flora/ausflora.dmi'
 	icon_state = "firstbush_1"
-	anchored = 1
+	anchored = TRUE
 	layer = BELOW_DOOR_LAYER
 	var/cut_level = PLANT_CUT
 	var/cut_hits = 3
@@ -447,7 +447,7 @@
 	name = "shrub"
 	icon = 'proxima/icons/obj/flora/goonbushes.dmi'
 	icon_state = ""
-	anchored = 1
+	anchored = TRUE
 	layer = ABOVE_HUMAN_LAYER
 
 /obj/structure/flora/goonbushes/shrub
@@ -484,8 +484,8 @@
 	icon = 'proxima/icons/obj/flora/junglevines.dmi'
 	icon_state = "light0"
 	desc = "A mass of twisted vines."
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = TRUE
 	layer = ABOVE_HUMAN_LAYER
 	var/cut_level = PLANT_NO_CUT
 	var/cut_hits = 3
@@ -522,7 +522,7 @@
 /obj/structure/flora/junglevines/heavy
 	icon_state = "heavy0"
 	desc = "A thick, coiled mass of twisted vines."
-	opacity = 1
+	opacity = TRUE
 	cut_level = PLANT_CUT
 	cut_hits = 10
 	var/rand_state = TRUE
@@ -545,7 +545,7 @@
 	name = "plant"
 	icon = 'proxima/icons/obj/flora/jungleplants.dmi'
 	icon_state = "junglebush1"
-	anchored = 1
+	anchored = TRUE
 	layer = ABOVE_HUMAN_LAYER
 	var/light_overlay = FALSE
 	var/l_max_bright = 1
