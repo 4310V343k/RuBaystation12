@@ -3264,6 +3264,7 @@
 #include "proxima\code\game\objects\items\toys.dm"
 #include "proxima\code\game\objects\structures\barrier.dm"
 #include "proxima\code\game\objects\structures\holoplants.dm"
+#include "proxima\code\game\objects\effects\particles\snow.dm"
 #include "proxima\code\game\verbs\who.dm"
 #include "proxima\code\modules\filmgrain.dm"
 #include "proxima\code\modules\poraz_corgi.dm"
