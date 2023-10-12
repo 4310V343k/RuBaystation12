@@ -1,4 +1,4 @@
-particles/snow //byond ref code, lol
+/particles/snow //byond ref code, lol
     width = 500
     height = 500
     count = 2500
@@ -13,19 +13,12 @@ particles/snow //byond ref code, lol
     friction = 0.3
     drift = generator("sphere", 0, 2)
 
-obj/screenfilter/snow
+/obj/screenfilter/snow
 	mouse_opacity = 0
 	screen_loc = "CENTER"
 	particles = new/particles/snow
 
-obj/screenfilter/snow/Del()
+/obj/screenfilter/snow/Del()
 	for(alpha, alpha!=0, alpha-=30)
 		sleep(5)
 	..()
-
-mob/proc/CreateSnow()
-	client?.screen += new/obj/screenfilter/snow
-
-mob/proc/DeleteFilter(type)
-	for(type in src.client?.screen)
-		qdel(type)
