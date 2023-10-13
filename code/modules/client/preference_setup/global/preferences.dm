@@ -10,6 +10,8 @@ GLOBAL_VAR_CONST(PREF_SHOW, "Show")
 GLOBAL_VAR_CONST(PREF_HIDE, "Hide")
 GLOBAL_VAR_CONST(PREF_FANCY, "Fancy")
 GLOBAL_VAR_CONST(PREF_PLAIN, "Plain")
+GLOBAL_VAR_CONST(PREF_WHITE, "White")
+GLOBAL_VAR_CONST(PREF_DARK, "Dark")
 GLOBAL_VAR_CONST(PREF_PRIMARY, "Primary")
 GLOBAL_VAR_CONST(PREF_ALL, "All")
 GLOBAL_VAR_CONST(PREF_OFF, "Off")
@@ -226,6 +228,36 @@ var/global/list/_client_preferences_by_type
 	description = "Fake NanoUI Browser Style"
 	key = "BROWSER_STYLED"
 	options = list(GLOB.PREF_FANCY, GLOB.PREF_PLAIN)
+
+/datum/client_preference/tgui_style
+	description = "TGUI Style"
+	key = "TGUI_FANCY"
+	options = list(GLOB.PREF_FANCY, GLOB.PREF_PLAIN)
+
+/datum/client_preference/tgui_monitor
+	description = "TGUI Monitor"
+	key = "TGUI_MONITOR"
+	options = list(GLOB.PREF_PRIMARY, GLOB.PREF_ALL)
+
+/datum/client_preference/tgui_theme
+	description = "TGUI Theme"
+	key = "TGUI_THEME"
+	options = list(GLOB.PREF_WHITE, GLOB.PREF_DARK)
+
+/datum/client_preference/tgui_input
+	description = "TGUI Input"
+	key = "TGUI_INPUT"
+	options = list(GLOB.PREF_YES, GLOB.PREF_NO)
+
+/datum/client_preference/tgui_input_large
+	description = "TGUI Input Large Buttons"
+	key = "TGUI_INPUT_BUTTONS"
+	options = list(GLOB.PREF_YES, GLOB.PREF_NO)
+
+/datum/client_preference/tgui_input_swapped
+	description = "TGUI Input Swapped Buttons"
+	key = "TGUI_INPUT_SWAPPED"
+	options = list(GLOB.PREF_YES, GLOB.PREF_NO)
 
 /datum/client_preference/autohiss
 	description = "Autohiss"
