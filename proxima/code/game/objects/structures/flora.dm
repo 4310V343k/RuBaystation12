@@ -35,7 +35,7 @@
 	..()
 	icon_state = "pine_c"
 
-/obj/structure/flora/tree/pine/xmas/update_icon()
+/obj/structure/flora/tree/pine/xmas/on_update_icon()
 	overlays.Cut()
 	if(light_overlay)
 		var/image/LO = overlay_image(icon, "[initial(icon_state)]-overlay")
@@ -146,7 +146,7 @@
 	var/l_falloff_curve = 1
 	var/l_color = COLOR_BLUE_LIGHT
 
-/obj/structure/flora/tree/green/pink/update_icon()
+/obj/structure/flora/tree/green/pink/on_update_icon()
 	overlays.Cut()
 	if(light_overlay)
 		var/image/LO = overlay_image(icon, "[initial(icon_state)]-overlay")
@@ -566,7 +566,7 @@
 			qdel(src)
 		return
 
-/obj/structure/flora/jungleplants/update_icon()
+/obj/structure/flora/jungleplants/on_update_icon()
 	overlays.Cut()
 	if(light_overlay)
 		var/image/LO = overlay_image(icon, "[icon_state]-overlay")
