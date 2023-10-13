@@ -9,14 +9,13 @@
 	slot_flags = SLOT_BACK
 	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
 	caliber = CALIBER_ANTIMATERIAL
-	screen_shake = 2 //extra kickback
+	screen_shake = 1 //extra kickback
 	handle_casings = HOLD_CASINGS
 	load_method = SINGLE_CASING
 	max_shells = 1
 	ammo_type = /obj/item/ammo_casing/shell
 	one_hand_penalty = 6
 	accuracy = -2
-	recoil_buildup = 75
 	bulk = 8
 	scoped_accuracy = 8 //increased accuracy over the LWAP because only one shot
 	scope_zoom = 2
@@ -93,7 +92,6 @@
 	max_shells = 5
 	accuracy = 4
 	scope_zoom = 0
-	recoil_buildup = 4
 	scoped_accuracy = 0
 	wielded_item_state = "boltaction-wielded"
 
@@ -113,15 +111,16 @@
 	allowed_magazines = /obj/item/ammo_magazine/iclipr
 	auto_eject = TRUE
 	auto_eject_sound = 'sound/weapons/guns/interaction/garand_magout.ogg'
-	one_hand_penalty = 9
-	accuracy_power = 10
+	one_hand_penalty = 8
+	scoped_accuracy = 8
+	accuracy_power = 8
 	accuracy = 1
 	bulk = GUN_BULK_RIFLE + 1
 	wielded_item_state = "garand-wielded"
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/garand_magout.ogg'
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=6,    move_delay=null, one_hand_penalty=8)
 		)
 
@@ -149,11 +148,10 @@
 	load_method = SINGLE_CASING|SPEEDLOADER
 	max_shells = 10
 	accuracy = 1
-	recoil_buildup = 5
 	scope_zoom = 0
 	scoped_accuracy = 0
 	wielded_item_state = "semistrip-wielded"
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=8)
 		)

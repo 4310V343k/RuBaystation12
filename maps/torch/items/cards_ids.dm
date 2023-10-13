@@ -165,9 +165,9 @@
 	job_access_type = /datum/job/expeng
 	detail_color = COLOR_PURPLE
 
-//EC Marine
-/obj/item/card/id/torch/crew/expmar
-	job_access_type = /datum/job/expmar
+//EC Infantry
+/obj/item/card/id/torch/crew/expinf
+	job_access_type = /datum/job/expinf
 	detail_color = COLOR_PURPLE
 
 // EC Science

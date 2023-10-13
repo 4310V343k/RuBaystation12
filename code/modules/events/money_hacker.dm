@@ -21,9 +21,8 @@ var/global/account_hack_attempted = 0
 		var/message = "Зафиксирована атака на финансовую систему с помощью метода полного перебора, выполняемая с момента [stationtime2text()]. Целью атаки является: Финансовый счет #[affected_account.account_number], \
 		без вмешательства эта атака будет успешной примерно через 10 минут. Необходимое вмешательство: временная приостановка работы затронутых учетных записей до тех пор, пока атака не прекратится. \
 		Уведомления будут отправляться по мере появления обновлений."
-		var/my_department = "[location_name()] Firewall Subroutines"
+		var/my_department = "Системы Внутренней Безопасности ЭКСО [location_name()]"
 		MS.send_rc_message("XO's Desk", my_department, message, "", "", 2)
-
 
 /datum/event/money_hacker/tick()
 	if(world.time >= end_time)
@@ -55,5 +54,5 @@ var/global/account_hack_attempted = 0
 
 	var/obj/machinery/message_server/MS = get_message_server()
 	if(MS)
-		var/my_department = "[location_name()] Firewall Subroutines"
+		var/my_department = "Системы Внутренней Безопасности ЭКСО [location_name()]"
 		MS.send_rc_message("XO's Desk", my_department, message, "", "", 2)

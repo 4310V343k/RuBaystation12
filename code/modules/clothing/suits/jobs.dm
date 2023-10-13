@@ -1,6 +1,6 @@
 /*
- * Job related
- */
+	* Job related
+	*/
 
 //Botanist
 /obj/item/clothing/suit/apron
@@ -266,6 +266,53 @@
 	name = "medical jacket"
 	desc = "A white jacket often worn in emergency medical and reanimation services across human space."
 	icon_state = "medical_jacket"
+
+/obj/item/clothing/suit/storage/security_chest_rig
+	name = "chest-rig"
+	desc = "A grey chest-rig with black pouches. For when you wish you had more hands."
+	icon_state = "chest-rig"
+	blood_overlay_type = "armor"
+	allowed = list(
+		/obj/item/device/flashlight,
+		/obj/item/tank/oxygen_emergency,
+		/obj/item/tank/oxygen_emergency_extended,
+		/obj/item/tank/nitrogen_emergency,
+		/obj/item/clothing/mask/gas,
+		/obj/item/device/radio,
+		/obj/item/taperoll,
+		/obj/item/clothing/head/hardhat,
+		/obj/item/handcuffs,
+		/obj/item/melee/baton,
+		/obj/item/grenade,
+		/obj/item/gun
+	)
+
+	body_parts_covered = UPPER_TORSO
+
+/obj/item/clothing/suit/storage/engineering_chest_rig
+	name = "hazard chest-rig"
+	desc = "A grey chest-rig with black pouches and orange markings worn by engineers. It has an 'Engineer' tag on its chest."
+	icon_state = "engi-chest-rig"
+	blood_overlay_type = "armor"
+	allowed = list (
+		/obj/item/device/flashlight,
+		/obj/item/tank/oxygen_emergency,
+		/obj/item/tank/oxygen_emergency_extended,
+		/obj/item/tank/nitrogen_emergency,
+		/obj/item/clothing/mask/gas,
+		/obj/item/device/radio,
+		/obj/item/taperoll,
+		/obj/item/clothing/head/hardhat,
+		/obj/item/device/scanner/gas,
+		/obj/item/device/multitool,
+		/obj/item/device/t_scanner,
+		/obj/item/crowbar,
+		/obj/item/screwdriver,
+		/obj/item/weldingtool,
+		/obj/item/wirecutters,
+		/obj/item/wrench,
+		/obj/item/gun
+	)
 
 /obj/item/clothing/suit/storage/medical_chest_rig
 	name = "\improper MT chest-rig"

@@ -135,8 +135,8 @@
 	return base_block_chance
 
 /*
- * Energy Shield
- */
+	* Energy Shield
+	*/
 
 /obj/item/shield/energy
 	name = "energy combat shield"

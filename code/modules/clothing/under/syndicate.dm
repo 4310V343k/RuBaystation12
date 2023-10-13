@@ -7,8 +7,8 @@
 	has_sensor = 0
 	gender_icons = 1
 	armor = list(
-		melee = ARMOR_MELEE_SMALL, 
-		bullet = ARMOR_BALLISTIC_MINOR, 
+		melee = ARMOR_MELEE_SMALL,
+		bullet = ARMOR_BALLISTIC_MINOR,
 		laser = ARMOR_LASER_MINOR
 		)
 	siemens_coefficient = 0.9
@@ -31,5 +31,3 @@
 	armor = null
 	siemens_coefficient = 1
 	has_sensor = SUIT_HAS_SENSORS
-
-

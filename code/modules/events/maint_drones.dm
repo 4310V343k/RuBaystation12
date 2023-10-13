@@ -25,7 +25,7 @@
 			naming = "Было обнаружено восстание"
 		if(EVENT_LEVEL_MAJOR)
 			naming = "Была обнаружена революция"
-	command_announcement.Announce("[naming] дронов технического обслуживания. При входе в туннели технического обслуживания рекомендуется соблюдать меры предосторожности.", "Drone Behaviour Control", zlevels = affecting_z)
+	command_announcement.Announce("[naming] дронов технического обслуживания. При входе в туннели технического обслуживания рекомендуется соблюдать меры предосторожности.", "Контроль Системы Беспилотной Техники", zlevels = affecting_z)
 
 /datum/event/rogue_maint_drones/proc/get_infestation_turfs()
 	var/area/location = pick_area(list(/proc/is_not_space_area, /proc/is_station_area, /proc/is_maint_area))

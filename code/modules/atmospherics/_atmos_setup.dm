@@ -90,7 +90,7 @@ var/global/list/pipe_colors = list(
 	//if(!underlays_intact || !underlays_down || !underlays_exposed || !pipe_underlays_exposed || !pipe_underlays_intact)
 	if(!underlays)
 		gen_underlay_icons()
-	
+
 	// In case of a non-default color, generate the missing icon and add it to the cache.
 	if(pipe_color_check(color))
 		return

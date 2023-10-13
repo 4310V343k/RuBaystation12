@@ -1,16 +1,16 @@
 #define BORDER_CHAR -1
 /*basic dungeon algorithm. Based off of http://www.roguebasin.com/index.php?title=Dungeon-Building_Algorithm (specifically the C++ version).
- *The jist of how the dungeon algorithm works is as follows:
- *Corridors and rooms are both considered features of a dungeon.
- *The dungeon continues to spawn rooms and corridors attached to previously created rooms and corridors (by detecting the walls/floors) until the amount of features is equal to a predefined number.
- *This number is calculated at the beginning of the dungeon. I went with limit_x*limit_y/100. It seems to work well.
- *It is supposed to create a 'winding' aspect to the dungeons. It works.... relatively well?
+	*The jist of how the dungeon algorithm works is as follows:
+	*Corridors and rooms are both considered features of a dungeon.
+	*The dungeon continues to spawn rooms and corridors attached to previously created rooms and corridors (by detecting the walls/floors) until the amount of features is equal to a predefined number.
+	*This number is calculated at the beginning of the dungeon. I went with limit_x*limit_y/100. It seems to work well.
+	*It is supposed to create a 'winding' aspect to the dungeons. It works.... relatively well?
 
- *THINGS TO KNOW
- *ARTIFACT_TURF_CHAR is used for room walls, used primarily for code used for corridors.
- *ARTIFACT_TURF is used to mark gaps in walls for rooms - this is checked so that we don't have three corridors in a row. This isn't done for corridors so that we can have branching paths.
- *Rooms will generate a room_theme, a datum that points to a few different types to generate the room with.
- *room_themes will also generate stuff inside. This is a random_room datum.
+	*THINGS TO KNOW
+	*ARTIFACT_TURF_CHAR is used for room walls, used primarily for code used for corridors.
+	*ARTIFACT_TURF is used to mark gaps in walls for rooms - this is checked so that we don't have three corridors in a row. This isn't done for corridors so that we can have branching paths.
+	*Rooms will generate a room_theme, a datum that points to a few different types to generate the room with.
+	*room_themes will also generate stuff inside. This is a random_room datum.
 
 * TODO:
 * Make monster spawning from a datum so I can have general 'group spawns'.

@@ -1,12 +1,12 @@
 /* Teleportation devices.
- * Contains:
- *		Locator
- *		Hand-tele
- */
+	* Contains:
+	*		Locator
+	*		Hand-tele
+	*/
 
 /*
- * Locator
- */
+	* Locator
+	*/
 /obj/item/locator
 	name = "locator"
 	desc = "Used to track those with locater implants."

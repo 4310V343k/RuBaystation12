@@ -1600,8 +1600,6 @@
 	pixel_x = -1
 	},
 /obj/item/rig/merc/heavy/empty,
-/obj/item/rig/merc/heavy/empty,
-/obj/item/cell/super,
 /obj/item/cell/super,
 /obj/effect/floor_decal/corner/blue/mono,
 /turf/simulated/floor/tiled/dark/monotile,

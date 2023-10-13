@@ -33,7 +33,7 @@ GLOBAL_LIST_INIT(carp_count,list())// a list of Z levels (string), associated wi
 	else
 		announcement = "Большая миграция неизвестных биологических сигнатур была обнаружена в непосредственной близости от [location_name()]. Рекомендуется соблюдать осторожность."
 
-	command_announcement.Announce(announcement, "[station_name()] Sensor Array", zlevels = affecting_z)
+	command_announcement.Announce(announcement, "Сеть Биологических Датчиков [station_name()]", zlevels = affecting_z)
 
 /datum/event/carp_migration/tick()
 	count_carps()

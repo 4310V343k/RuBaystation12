@@ -3,8 +3,8 @@
 	worth_multiplier = 1.1
 
 /*
- * Utensils
- */
+	* Utensils
+	*/
 /obj/item/material/kitchen/utensil
 	w_class = ITEM_SIZE_TINY
 	thrown_force_multiplier = 1
@@ -121,9 +121,9 @@
 		/obj/item/material/kitchen/utensil/spoon/silver = 4
 	)
 
- /*
- * Rolling Pins
- */
+	/*
+	* Rolling Pins
+	*/
 
 /obj/item/material/kitchen/rollingpin
 	name = "rolling pin"

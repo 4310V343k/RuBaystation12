@@ -39,6 +39,7 @@
 			/obj/item/reagent_containers/glass/bottle/robustharvest = 120),
 		"Leather" = list(
 			/obj/item/storage/wallet/leather = 100,
+			/obj/item/stack/material/leather = 100,
 			/obj/item/clothing/gloves/thick/botany = 250,
 			/obj/item/storage/belt/utility = 300,
 			/obj/item/storage/backpack/satchel = 400,
@@ -118,10 +119,10 @@
 	update_icon()
 
 /**
- *  Display the NanoUI window for the vending machine.
- *
- *  See NanoUI documentation for details.
- */
+	*  Display the NanoUI window for the vending machine.
+	*
+	*  See NanoUI documentation for details.
+	*/
 /obj/machinery/biogenerator/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
 	user.set_machine(src)
 	var/list/data = list()

@@ -19,7 +19,7 @@
 
 /datum/event/prison_break/announce()
 	if(areas && areas.len > 0)
-		command_announcement.Announce("[pick("Gr3yT1d3 вирус","Malignant троян","Davinci вирус","Black Light вирус","Nimba вирус","Selachii троян","Bastion троян",)] обнаружен в  подпрограмме [location_name()] [(eventDept == "Security")? "imprisonment":"containment"]. Немедленно защитите все скомпрометированные области.", "[location_name()] Anti-Virus Alert", zlevels = affecting_z)
+		command_announcement.Announce("[pick("Gr3yT1d3 вирус","Malignant троян","Davinci вирус","Black Light вирус","Nimba вирус","Selachii троян","Bastion троян",)] обнаружен в  подпрограмме [location_name()] [(eventDept == "Security")? "imprisonment":"containment"]. Немедленно защитите все скомпрометированные области.", "Системы Внутренней Безопасности ЭКСО [location_name()]", zlevels = affecting_z)
 
 
 /datum/event/prison_break/start()
@@ -28,7 +28,7 @@
 			areas += A
 
 	if(areas && areas.len > 0)
-		var/my_department = "[location_name()] Firewall Subroutines"
+		var/my_department = "Системы Внутренней Безопасности ЭКСО [location_name()]"
 		var/rc_message = "An unknown malicious program has been detected in the [english_list(areaName)] lighting and airlock control systems at [stationtime2text()]. Systems will be fully compromised within approximately three minutes. Direct intervention is required immediately.<br>"
 		var/obj/machinery/message_server/MS = get_message_server()
 		if(MS)

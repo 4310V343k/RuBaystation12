@@ -1,12 +1,12 @@
 /*
 
 In short:
- * Random area alarms
- * All areas jammed
- * Random gateways spawning hellmonsters (and turn people into cluwnes if ran into)
- * Broken APCs/Fire Alarms
- * Scary music
- * Random tiles changing to culty tiles.
+	* Random area alarms
+	* All areas jammed
+	* Random gateways spawning hellmonsters (and turn people into cluwnes if ran into)
+	* Broken APCs/Fire Alarms
+	* Scary music
+	* Random tiles changing to culty tiles.
 
 */
 /datum/universal_state/hell

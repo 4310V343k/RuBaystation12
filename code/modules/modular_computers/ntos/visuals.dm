@@ -25,7 +25,7 @@
 			screen_icon_file = A.icon
 	if(active_program && active_program.program_key_state)
 		return image(screen_icon_file, active_program.program_key_state)
-	
+
 /datum/extension/interactive/ntos/proc/visible_error(message)
 	var/atom/A = holder
 	if(istype(A))

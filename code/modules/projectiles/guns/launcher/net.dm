@@ -34,7 +34,7 @@
 
 /obj/item/gun/launcher/net/proc/finish_loading(var/obj/item/net_shell/S, var/mob/user)
 	chambered = S
-	if(user) 
+	if(user)
 		user.visible_message("\The [user] inserts \a [S] into \the [src].", SPAN_NOTICE("You insert \a [S] into \the [src]."))
 
 /obj/item/gun/launcher/net/proc/load(obj/item/net_shell/S, mob/user)

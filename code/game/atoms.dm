@@ -163,14 +163,14 @@
 	return
 
 /*
- *	atom/proc/search_contents_for(path,list/filter_path=null)
- * Recursevly searches all atom contens (including contents contents and so on).
- *
- * ARGS: path - search atom contents for atoms of this type
- *	   list/filter_path - if set, contents of atoms not of types in this list are excluded from search.
- *
- * RETURNS: list of found atoms
- */
+	*	atom/proc/search_contents_for(path,list/filter_path=null)
+	* Recursevly searches all atom contens (including contents contents and so on).
+	*
+	* ARGS: path - search atom contents for atoms of this type
+	*	   list/filter_path - if set, contents of atoms not of types in this list are excluded from search.
+	*
+	* RETURNS: list of found atoms
+	*/
 
 /atom/proc/search_contents_for(path,list/filter_path=null)
 	var/list/found = list()
@@ -188,8 +188,8 @@
 	return found
 
 /**
- * Recursively searches containers for a given path, and returns the first match.
- */
+	* Recursively searches containers for a given path, and returns the first match.
+	*/
 /atom/proc/get_container(container_type)
 	var/atom/A = src
 	while (!istype(A, /area))
@@ -198,23 +198,23 @@
 		A = A.loc
 
 /**
- * Called when a user examines the atom. This proc and its overrides handle displaying the text that appears in chat
- * during examines.
- *
- * Any overrides must either call parent, or return `TRUE`. There is no need to check the return value of `..()`, this
- * is only used by the calling `examinate()` proc to validate the call chain.
- *
- * For `infix` and `suffix`, generally, these are inserted at the beginning of the examine text, as:
- * `That's \a [name][infix]. [suffix]`.
- *
- * **Parameters**:
- * - `user` - The mob performing the examine.
- * - `distance` - The distance in tiles from `user` to `src`.
- * - `infix` String - String that is appended immediately after the atom's name.
- * - `suffix` String - Additional string appended after the atom's name and infix.
- *
- * Returns boolean.
- */
+	* Called when a user examines the atom. This proc and its overrides handle displaying the text that appears in chat
+	* during examines.
+	*
+	* Any overrides must either call parent, or return `TRUE`. There is no need to check the return value of `..()`, this
+	* is only used by the calling `examinate()` proc to validate the call chain.
+	*
+	* For `infix` and `suffix`, generally, these are inserted at the beginning of the examine text, as:
+	* `That's \a [name][infix]. [suffix]`.
+	*
+	* **Parameters**:
+	* - `user` - The mob performing the examine.
+	* - `distance` - The distance in tiles from `user` to `src`.
+	* - `infix` String - String that is appended immediately after the atom's name.
+	* - `suffix` String - Additional string appended after the atom's name and infix.
+	*
+	* Returns boolean.
+	*/
 /atom/proc/examine(mob/user, distance, infix = "", suffix = "")
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src][infix]."

@@ -20,7 +20,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/medical/senior/army
-	name = OUTFIT_JOB_NAME("Physician - Marine")
+	name = OUTFIT_JOB_NAME("Physician - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -40,7 +40,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/medical/junior/army
-	name = OUTFIT_JOB_NAME("Medical Resident - Marine")
+	name = OUTFIT_JOB_NAME("Medical Resident - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -62,7 +62,7 @@
 	l_ear = /obj/item/device/radio/headset/headset_corpsman
 
 /decl/hierarchy/outfit/job/torch/crew/medical/doctor/army
-	name = OUTFIT_JOB_NAME("Medical Technician - Marine")
+	name = OUTFIT_JOB_NAME("Medical Technician - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 	l_ear = /obj/item/device/radio/headset/headset_corpsman

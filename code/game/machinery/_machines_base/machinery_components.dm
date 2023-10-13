@@ -15,9 +15,9 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 
 // Code concerning machinery interaction with components/stock parts.
 /**
- * Creates all components listed in `uncreated_component_parts`.
- * `full_populate` also creates a circuitboard and all needed components.
- */
+	* Creates all components listed in `uncreated_component_parts`.
+	* `full_populate` also creates a circuitboard and all needed components.
+	*/
 /obj/machinery/proc/populate_parts(full_populate = FALSE)
 	if(full_populate)
 		var/path_to_check = base_type || type
@@ -104,9 +104,9 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 			return force_init_component(path)
 
 /**
- * Forces initialization of a component in the `uncreated_component_parts` list.
- * Returns the result of `install_component()`, or `null` if the path does not exist in the list.
- */
+	* Forces initialization of a component in the `uncreated_component_parts` list.
+	* Returns the result of `install_component()`, or `null` if the path does not exist in the list.
+	*/
 /obj/machinery/proc/force_init_component(path)
 	if(!uncreated_component_parts[path])
 		return
@@ -148,10 +148,10 @@ GLOBAL_LIST_INIT(machine_path_to_circuit_type, cache_circuits_by_build_path())
 		RefreshParts()
 
 /**
- * Uninstalls the provided component, if it exists in `component_parts`.
- * `refresh_parts` will call `RefreshParts()` after uninstallation.
- * Returns the uninstalled part.
- */
+	* Uninstalls the provided component, if it exists in `component_parts`.
+	* `refresh_parts` will call `RefreshParts()` after uninstallation.
+	* Returns the uninstalled part.
+	*/
 /obj/machinery/proc/uninstall_component(obj/item/stock_parts/part, refresh_parts = TRUE)
 	if(ispath(part))
 		part = get_component_of_type(part)

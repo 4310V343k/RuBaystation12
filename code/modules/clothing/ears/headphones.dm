@@ -37,4 +37,3 @@
 		icon_state = "headphones_off"
 		item_state = "headphones_off"
 	update_clothing_icon()
-	

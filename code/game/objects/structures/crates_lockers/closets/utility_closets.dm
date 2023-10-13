@@ -1,19 +1,19 @@
 /* Utility Closets
- * Contains:
- *		Emergency Closet
- *		Fire Closet
- *		Tool Closet
- *		Radiation Closet
- *		Bombsuit Closet
- *		Hydrant
- *		First Aid
- *		Excavation Closet Away Site
- *		Shipping Supplies Closet
- */
+	* Contains:
+	*		Emergency Closet
+	*		Fire Closet
+	*		Tool Closet
+	*		Radiation Closet
+	*		Bombsuit Closet
+	*		Hydrant
+	*		First Aid
+	*		Excavation Closet Away Site
+	*		Shipping Supplies Closet
+	*/
 
 /*
- * Emergency Closet
- */
+	* Emergency Closet
+	*/
 /obj/structure/closet/emcloset
 	name = "emergency closet"
 	desc = "It's a storage unit for emergency breathmasks and o2 tanks."
@@ -31,8 +31,8 @@
 	)
 
 /*
- * Fire Closet
- */
+	* Fire Closet
+	*/
 /obj/structure/closet/firecloset
 	name = "fire-safety closet"
 	desc = "It's a storage unit for fire-fighting supplies."
@@ -60,8 +60,8 @@
 		/obj/item/clothing/head/hardhat/firefighter/Chief)
 
 /*
- * Tool Closet
- */
+	* Tool Closet
+	*/
 /obj/structure/closet/toolcloset
 	name = "tool closet"
 	desc = "It's a storage unit for tools."
@@ -102,8 +102,8 @@
 
 
 /*
- * Radiation Closet
- */
+	* Radiation Closet
+	*/
 /obj/structure/closet/radiation
 	name = "radiation suit closet"
 	desc = "It's a storage unit for rad-protective suits."
@@ -119,8 +119,8 @@
 		/obj/item/device/geiger = 2)
 
 /*
- * Bombsuit closet
- */
+	* Bombsuit closet
+	*/
 /obj/structure/closet/bombcloset
 	name = "\improper EOD closet"
 	desc = "It's a storage unit for explosion-protective suits."
@@ -147,8 +147,8 @@
 		/obj/item/clothing/head/bomb_hood/security)
 
 /*
- * Hydrant
- */
+	* Hydrant
+	*/
 /obj/structure/closet/hydrant //wall mounted fire closet
 	name = "fire-safety closet"
 	desc = "It's a storage unit for fire-fighting supplies."
@@ -168,8 +168,8 @@
 		)
 
 /*
- * Gun cabinet
- */
+	* Gun cabinet
+	*/
 
 /obj/structure/closet/guncell //wall mounted fire closet
 	name = "guncell closet"
@@ -196,8 +196,8 @@
 		)
 
 /*
- * First Aid
- */
+	* First Aid
+	*/
 /obj/structure/closet/medical_wall //wall mounted medical closet
 	name = "first-aid closet"
 	desc = "It's a wall-mounted storage unit for first aid supplies."

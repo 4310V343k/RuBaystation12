@@ -39,4 +39,3 @@ Build Mode: Radiation - Visualizer for radiation sources & affected turfs.
 		M.icon_state = "bm_rads_str_[rads]"
 	else
 		M.icon_state = ""
-

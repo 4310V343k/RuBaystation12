@@ -379,8 +379,8 @@ var/global/const/enterloopsanity = 100
 			LAZYADD(., AM)
 
 /**
- * Returns false if stepping into a tile would cause harm (e.g. open space while unable to fly, water tile while a slime, lava, etc).
- */
+	* Returns false if stepping into a tile would cause harm (e.g. open space while unable to fly, water tile while a slime, lava, etc).
+	*/
 /turf/proc/is_safe_to_enter(mob/living/L)
 	if(LAZYLEN(dangerous_objects))
 		for(var/obj/O in dangerous_objects)
@@ -389,17 +389,17 @@ var/global/const/enterloopsanity = 100
 	return TRUE
 
 /**
- * Tells the turf that it currently contains something that automated movement should consider if planning to enter the tile.
- * This uses lazy list macros to reduce memory footprint since for 99% of turfs the list would've been empty anyway.
- */
+	* Tells the turf that it currently contains something that automated movement should consider if planning to enter the tile.
+	* This uses lazy list macros to reduce memory footprint since for 99% of turfs the list would've been empty anyway.
+	*/
 /turf/proc/register_dangerous_object(obj/O)
 	if(!istype(O))
 		return FALSE
 	LAZYADD(dangerous_objects, O)
 
 /**
- * Similar to `register_dangerous_object()`, for when the dangerous object stops being dangerous/gets deleted/moved/etc.
- */
+	* Similar to `register_dangerous_object()`, for when the dangerous object stops being dangerous/gets deleted/moved/etc.
+	*/
 /turf/proc/unregister_dangerous_object(obj/O)
 	if(!istype(O))
 		return FALSE

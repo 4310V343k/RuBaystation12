@@ -413,7 +413,7 @@ badges
 
 /obj/item/clothing/accessory/badge/solgov/tags/three
 	name = "contractor three class badge"
-	desc = "Plastic badge with gold inscription 'THREE CLASS'. Owned by a corporate contractor. Shows the level of a low specialist."
+	desc = "Plastic badge with gold inscription 'THIRD CLASS'. Owned by a corporate contractor. Shows the level of a low specialist."
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	icon_state = "cont_c3"
 	badge_string = "Qualification System"
@@ -521,7 +521,7 @@ department tags
 	icon_state = "dept_exped"
 	on_rolled = list("down" = "none", "rolled" = "dept_exped_sleeves")
 	slot = ACCESSORY_SLOT_DEPT
-	accessory_flags = EMPTY_BITFIELD | ACCESSORY_REMOVABLE
+	accessory_flags = EMPTY_BITFIELD
 
 /obj/item/clothing/accessory/solgov/department/command
 	name = "command insignia"
@@ -973,7 +973,7 @@ ranks - fleet
 	overlay_state = "device_silver"
 
 /**************
-ranks - marines
+ranks - Interstellar Infantry Corps
 **************/
 /obj/item/clothing/accessory/solgov/rank/army
 	name = "army ranks"
@@ -1055,8 +1055,8 @@ ranks - marines
 	overlay_state = "device_silver"
 
 /obj/item/clothing/accessory/solgov/rank/army/officer/o3
-	name = "ranks (O-3 marine captain)"
-	desc = "Collar pin denoting the rank of Marine Captain."
+	name = "ranks (O-3 captain major)"
+	desc = "Collar pin denoting the rank of Captain Major."
 	icon_state = "o3_device"
 	overlay_state = "device_silver"
 
@@ -1078,22 +1078,10 @@ ranks - marines
 	overlay_state = "device_silver"
 
 /obj/item/clothing/accessory/solgov/rank/army/flag
-	name = "ranks (O-7 brigadier general)"
-	desc = "Collar pin denoting the rank of Brigadier General."
+	name = "ranks (O-7 colonel general)"
+	desc = "Collar pin denoting the rank of Colonel General."
 	icon_state = "armyrank_command"
 
-/obj/item/clothing/accessory/solgov/rank/army/flag/o8
-	name = "ranks (O-8 major general)"
-	desc = "Collar pin denoting the rank of Major General."
-
-/obj/item/clothing/accessory/solgov/rank/army/flag/o9
-	name = "ranks (O-9 lieutenant general)"
-	desc = "Collar pin denoting the rank of Lieutenant general."
-
-/obj/item/clothing/accessory/solgov/rank/army/flag/o10
-	name = "ranks (O-10 general)"
-	desc = "Collar pin denoting the rank of General."
-
-/obj/item/clothing/accessory/solgov/rank/army/flag/o10_alt
-	name = "ranks (O-10 general of the corps)"
-	desc = "Collar pin denoting the rank of General of the Corps."
+/obj/item/clothing/accessory/solgov/rank/army/flag/o8_alt
+	name = "ranks (O-8 commandant of the interstellar infantry corps)"
+	desc = "Collar pin denoting the rank of Commandant of the Interstellar Infantry Corps."

@@ -151,13 +151,13 @@
 		to_chat(user, SPAN_NOTICE("It has minor damage."))
 
 /**
- * Sets up the artifacts destructibility by doing the following:
- * Gives a randomized health/maxhealth value.
- * Removes damage types based on triggers. Ex. Artifact can't be damaged by hitting/shooting if an effect has the 'force' trigger.
- *    Note: If there are two effects and one has the 'force' trigger, and the other 'energy', the artifact will be invulnerable.
- *    This is to prevent damaging the artifact while trying to turn on its effects.
- * Adds scan data used by the anomaly analyzer that details how to damage the artifact.
- */
+	* Sets up the artifacts destructibility by doing the following:
+	* Gives a randomized health/maxhealth value.
+	* Removes damage types based on triggers. Ex. Artifact can't be damaged by hitting/shooting if an effect has the 'force' trigger.
+	*    Note: If there are two effects and one has the 'force' trigger, and the other 'energy', the artifact will be invulnerable.
+	*    This is to prevent damaging the artifact while trying to turn on its effects.
+	* Adds scan data used by the anomaly analyzer that details how to damage the artifact.
+	*/
 /obj/machinery/artifact/proc/setup_destructibility()
 	can_damage = TRUE
 	health = rand(100, 200)
@@ -179,10 +179,10 @@
 	set_damage_description(damage_type)
 
 /**
- * Adds additional scan data for the anomaly analyzer, detailing how the artifact can be damaged.
- *
- * @param damage_type int Type of damage that the artifact can receive, FALSE or null means it is indestructible.
- */
+	* Adds additional scan data for the anomaly analyzer, detailing how the artifact can be damaged.
+	*
+	* @param damage_type int Type of damage that the artifact can receive, FALSE or null means it is indestructible.
+	*/
 /obj/machinery/artifact/proc/set_damage_description(damage_type)
 
 	if (!damage_type)
@@ -200,15 +200,15 @@
 			damage_desc += "concentrated high-energy bursts."
 
 /**
- * Handles damage the artifact receives.
- * Sends a visual message when the aritfacts health value falls below certain points.
- * Once the artifact has 0 or less health:
- *   Calls the effect(s) 'destroyed_effect()' proc.
- *   Sets the artifacts icon state to its 'destroyed' state.
- * If the artifact has > 0 health, calls the effect(s) 'holder_damaged()' proc. This may or may not be removed.
- *
- * @param damage int The damage dealt.
- */
+	* Handles damage the artifact receives.
+	* Sends a visual message when the aritfacts health value falls below certain points.
+	* Once the artifact has 0 or less health:
+	*   Calls the effect(s) 'destroyed_effect()' proc.
+	*   Sets the artifacts icon state to its 'destroyed' state.
+	* If the artifact has > 0 health, calls the effect(s) 'holder_damaged()' proc. This may or may not be removed.
+	*
+	* @param damage int The damage dealt.
+	*/
 /obj/machinery/artifact/proc/handle_damage(damage)
 	if (destroyed)
 		return
@@ -233,12 +233,12 @@
 	if (!health)
 		handle_destruction()
 /**
- * Handles the 'destruction' of the artifact.
- * Icon state is updated to the corresponding 'destroyed' state.
- * Client mobs are 'flashed' for added effect.
- * Effects are deleted so they can't be triggered again.
- * 'destroyed' is set to TRUE to prevent re-triggering the destroyed event.
- */
+	* Handles the 'destruction' of the artifact.
+	* Icon state is updated to the corresponding 'destroyed' state.
+	* Client mobs are 'flashed' for added effect.
+	* Effects are deleted so they can't be triggered again.
+	* 'destroyed' is set to TRUE to prevent re-triggering the destroyed event.
+	*/
 /obj/machinery/artifact/proc/handle_destruction()
 	visible_message(SPAN_DANGER("\The [src] breaks apart and explodes in a wave of energy!"), SPAN_DANGER("You hear something break apart and feel a wave of energy hit you!"))
 	playsound(get_turf(src), 'sound/effects/Glassbr3.ogg', 75, TRUE)

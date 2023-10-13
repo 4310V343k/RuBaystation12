@@ -53,7 +53,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/command/cmo/army
-	name = OUTFIT_JOB_NAME("Chief Medical Officer - Marine")
+	name = OUTFIT_JOB_NAME("Chief Medical Officer - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/medical
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -77,7 +77,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/command/chief_engineer/army
-	name = OUTFIT_JOB_NAME("Chief Engineer - Marine")
+	name = OUTFIT_JOB_NAME("Chief Engineer - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/engineering
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -99,7 +99,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/command/cos/army
-	name = OUTFIT_JOB_NAME("Chief of Security - Marine")
+	name = OUTFIT_JOB_NAME("Chief of Security - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/security
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -117,7 +117,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/army
-	name = OUTFIT_JOB_NAME("Supply Corps Officer - Marine")
+	name = OUTFIT_JOB_NAME("Supply Corps Officer - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/supply
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -150,7 +150,7 @@
 	pda_type = /obj/item/modular_computer/pda/heads
 
 /decl/hierarchy/outfit/job/torch/crew/command/sea/army
-	name = OUTFIT_JOB_NAME("Senior Enlisted Advisor - Marine")
+	name = OUTFIT_JOB_NAME("Senior Enlisted Advisor - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/command
 	shoes = /obj/item/clothing/shoes/dutyboots
 	l_ear = /obj/item/device/radio/headset/sea
@@ -184,6 +184,6 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/command/jua/army
-	name = OUTFIT_JOB_NAME("Judge Advocate - Marine")
+	name = OUTFIT_JOB_NAME("Judge Advocate - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/fleet/command
 	shoes = /obj/item/clothing/shoes/dutyboots

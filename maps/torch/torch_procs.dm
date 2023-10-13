@@ -64,7 +64,7 @@
 	card.military_rank = act_card.military_rank
 
 	card.loc = activator.loc
-	priority_announcement.Announce("Обнаружен запрос на выдачу карты экстренного доступа ко всем внутренним системам ГЭК 'Факел'.", "Attention!")
+	priority_announcement.Announce("Обнаружен запрос на выдачу карты экстренного доступа ко всем внутренним системам ГЭК 'Факел'.", "Система Внутренней Безопасности ЭКСО")
 	aa_given = 1
 
 /client/verb/awake_synth()

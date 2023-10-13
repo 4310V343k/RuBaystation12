@@ -22,7 +22,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/service/janitor/army
-	name = OUTFIT_JOB_NAME("Sanitation Technician - Marine")
+	name = OUTFIT_JOB_NAME("Sanitation Technician - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/service
 	shoes = /obj/item/clothing/shoes/dutyboots
 
@@ -46,7 +46,7 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/service/cook/army
-	name = OUTFIT_JOB_NAME("Cook - Marine")
+	name = OUTFIT_JOB_NAME("Cook - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/service
 	shoes = /obj/item/clothing/shoes/dutyboots
 /decl/hierarchy/outfit/job/torch/crew/service/crewman
@@ -80,6 +80,6 @@
 	shoes = /obj/item/clothing/shoes/dutyboots
 
 /decl/hierarchy/outfit/job/torch/crew/service/chaplain/army
-	name = OUTFIT_JOB_NAME("Chaplain - Marine")
+	name = OUTFIT_JOB_NAME("Chaplain - Interstellar")
 	uniform = /obj/item/clothing/under/solgov/utility/army/urban/service
 	shoes = /obj/item/clothing/shoes/dutyboots

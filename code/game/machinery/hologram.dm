@@ -1,9 +1,9 @@
 /* Holograms!
- * Contains:
- *		Holopad
- *		Hologram
- *		Other stuff
- */
+	* Contains:
+	*		Holopad
+	*		Hologram
+	*		Other stuff
+	*/
 
 /*
 Revised. Original based on space ninja hologram code. Which is also mine. /N
@@ -21,8 +21,8 @@ Possible to do for anyone motivated enough:
 
 
 /*
- * Holopad
- */
+	* Holopad
+	*/
 
 #define HOLOPAD_PASSIVE_POWER_USAGE 1
 #define HOLOGRAM_POWER_USAGE 2
@@ -399,8 +399,8 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 
 /*
- * Hologram
- */
+	* Hologram
+	*/
 
 /obj/machinery/hologram
 	anchored = TRUE
@@ -448,8 +448,8 @@ Holographic project of everything else.
 */
 
 /*
- * Other Stuff: Is this even used?
- */
+	* Other Stuff: Is this even used?
+	*/
 /obj/machinery/hologram/projector
 	name = "hologram projector"
 	desc = "It makes a hologram appear...with magnets or something..."

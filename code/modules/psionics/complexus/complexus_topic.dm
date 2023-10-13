@@ -16,5 +16,5 @@
 			. = TRUE
 		if(.)
 			var/datum/admins/admin = GLOB.admins[usr.key]
-			if(istype(admin)) 
+			if(istype(admin))
 				admin.show_player_panel(owner)

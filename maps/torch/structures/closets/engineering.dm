@@ -1,6 +1,6 @@
 /*
- * Torch Engineering
- */
+	* Torch Engineering
+	*/
 
 /decl/closet_appearance/secure_closet/torch/engineering
 	extra_decals = list(
@@ -58,9 +58,10 @@
 		/obj/item/clothing/suit/armor/pcarrier/medium/command,
 		/obj/item/clothing/head/helmet/solgov/command,
 		/obj/item/material/clipboard,
-		//proxima code start,
+		//PRX-START,
 		/obj/item/device/remote_device/chief_engineer,
-		//proxima code end,
+		/obj/item/clothing/suit/storage/engineering_chest_rig,
+		//PRX-END,
 		/obj/item/device/holowarrant,
 		/obj/item/storage/box/armband/engine,
 		/obj/item/storage/box/secret_project_disks,
@@ -80,6 +81,9 @@
 		/obj/item/device/radio/headset/headset_eng,
 		/obj/item/device/radio/headset/headset_eng/alt,
 		/obj/item/clothing/suit/storage/hazardvest,
+		//PRX-START,
+		/obj/item/clothing/suit/storage/engineering_chest_rig,
+		//PRX-END,
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/glasses/meson,
 		/obj/item/taperoll/engineering,
@@ -100,6 +104,9 @@
 		/obj/item/device/radio/headset/headset_eng,
 		/obj/item/device/radio/headset/headset_eng/alt,
 		/obj/item/clothing/suit/storage/hazardvest,
+		//PRX-START,
+		/obj/item/clothing/suit/storage/engineering_chest_rig,
+		//PRX-END,
 		/obj/item/clothing/mask/gas,
 		/obj/item/storage/belt/utility/full,
 		/obj/item/clothing/glasses/meson,

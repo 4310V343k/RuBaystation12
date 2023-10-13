@@ -608,7 +608,7 @@ var/list/admin_verbs_xeno = list(
 		deadmin_holder.reassociate()
 		log_admin("[src] re-admined themself.")
 		message_admins("[src] re-admined themself.", 1)
-		to_chat(src, "<span class='interface'>You now have the keys to control the planet, or at least [GLOB.using_map.full_name].</span>")
+		to_chat(src, "<span class='interface'>Теперь у вас есть ключи для управления этой вселенной или, по крайней мере, [GLOB.using_map.full_name].</span>")
 		verbs -= /client/proc/readmin_self
 
 /client/proc/deadmin_self()
@@ -620,7 +620,7 @@ var/list/admin_verbs_xeno = list(
 			log_admin("[src] deadmined themself.")
 			message_admins("[src] deadmined themself.", 1)
 			deadmin()
-			to_chat(src, "<span class='interface'>You are now a normal player.</span>")
+			to_chat(src, "<span class='interface'>Теперь вы обычный игрок.</span>")
 			verbs |= /client/proc/readmin_self
 
 /client/proc/toggle_log_hrefs()

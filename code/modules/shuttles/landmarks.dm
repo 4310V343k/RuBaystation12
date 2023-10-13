@@ -145,13 +145,13 @@
 
 
 /**
- * Handles activation of the flare.
- *
- * Parameters
- * `user` - The user activating the flare. Optional. Applies additional unequip processing and checks before activating the flare.
- *
- * Returns boolean - FALSE if the flare was not activated, TRUE if it was.
- */
+	* Handles activation of the flare.
+	*
+	* Parameters
+	* `user` - The user activating the flare. Optional. Applies additional unequip processing and checks before activating the flare.
+	*
+	* Returns boolean - FALSE if the flare was not activated, TRUE if it was.
+	*/
 /obj/item/device/spaceflare/proc/activate(mob/user)
 	if (active)
 		log_debug(append_admin_tools("\A [src] attempted to activate but was already active.", user, get_turf(src)))
@@ -191,10 +191,10 @@
 
 
 /**
- * Handles deactivation of the flare.
- *
- * Returns boolean - FALSE if the flare was not deactivated, TRUE if it was.
- */
+	* Handles deactivation of the flare.
+	*
+	* Returns boolean - FALSE if the flare was not deactivated, TRUE if it was.
+	*/
 /obj/item/device/spaceflare/proc/deactivate(silent = FALSE, keep_landmark = FALSE)
 	if (!active)
 		return FALSE

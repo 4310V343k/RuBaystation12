@@ -79,14 +79,14 @@
 	islocked = 1
 
 //EC Specs suits
-/obj/machinery/suit_storage_unit/explorer/marine
-	name = "Marine Storage Unit"
+/obj/machinery/suit_storage_unit/explorer/infantry
+	name = "Infantry Storage Unit"
 	suit = /obj/item/clothing/suit/space/void/security/alt/expo
 	helmet = /obj/item/clothing/head/helmet/space/void/security/alt/expo
 	boots = /obj/item/clothing/shoes/magboots
 	tank = /obj/item/tank/oxygen
 	mask = /obj/item/clothing/mask/breath
-	req_access = list(access_exploration_guard)
+	req_access = list(access_exploration_infantry)
 	islocked = 1
 
 /obj/machinery/suit_storage_unit/explorer/medic

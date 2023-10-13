@@ -1,13 +1,13 @@
 /*
- * The 'fancy' path is for objects like candle boxes that show how many items are in the storage item on the sprite itself
- * .. Sorry for the shitty path name, I couldnt think of a better one.
- *
- *
- * Contains:
- *		Egg Box
- *		Crayon Box
- *		Cigarette Box
- */
+	* The 'fancy' path is for objects like candle boxes that show how many items are in the storage item on the sprite itself
+	* .. Sorry for the shitty path name, I couldnt think of a better one.
+	*
+	*
+	* Contains:
+	*		Egg Box
+	*		Crayon Box
+	*		Cigarette Box
+	*/
 
 /obj/item/storage/fancy
 	item_state = "syringe_kit" //placeholder, many of these don't have inhands
@@ -22,20 +22,20 @@
 		src.icon_state = "[initial(icon_state)][key_count]"
 
 /obj/item/storage/fancy/examine(mob/user, distance)
-    . = ..()
-    if((distance > 1) || (!opened)) //BoS, was "if(distance > 1)"
-        return
+	. = ..()
+	if((distance > 1) || (!opened)) //BoS, was "if(distance > 1)"
+		return
 
-    var/key_name = initial(key_type.name)
-    if(!contents.len)
-        to_chat(user, "There are no [key_name]s left in the box.")
-    else
-        var/key_count = count_by_type(contents, key_type)
-        to_chat(user, "There [key_count == 1? "is" : "are"] [key_count] [key_name]\s in the box.")
+	var/key_name = initial(key_type.name)
+	if(!contents.len)
+		to_chat(user, "There are no [key_name]s left in the box.")
+	else
+		var/key_count = count_by_type(contents, key_type)
+		to_chat(user, "There [key_count == 1? "is" : "are"] [key_count] [key_name]\s in the box.")
 
 /*
- * Egg Box
- */
+	* Egg Box
+	*/
 
 /obj/item/storage/fancy/egg_box
 	icon = 'icons/obj/food.dmi'
@@ -57,8 +57,8 @@
 	startswith = null
 
 /*
- * Cracker Packet
- */
+	* Cracker Packet
+	*/
 
 /obj/item/storage/fancy/crackers
 	name = "\improper Getmore Crackers"
@@ -72,8 +72,8 @@
 	startswith = list(/obj/item/reagent_containers/food/snacks/cracker = 6)
 
 /*
- * Crayon Box
- */
+	* Crayon Box
+	*/
 
 /obj/item/storage/fancy/crayons
 	name = "box of crayons"
@@ -101,8 +101,8 @@
 		overlays += image('icons/obj/crayons.dmi',crayon.colourName)
 
 /*
- * Pencil Case
- */
+	* Pencil Case
+	*/
 
 /obj/item/storage/fancy/pencilcase
 	name = "pencil case"
@@ -311,8 +311,8 @@
 	..()
 
 /*
- * Vial Box
- */
+	* Vial Box
+	*/
 
 /obj/item/storage/fancy/vials
 	icon = 'icons/obj/vialbox.dmi'
@@ -330,8 +330,8 @@
 	src.icon_state = "[initial(icon_state)][Floor(key_count/2)]"
 
 /*
- * Not actually a "fancy" storage...
- */
+	* Not actually a "fancy" storage...
+	*/
 /obj/item/storage/lockbox/vials
 	name = "secure vial storage box"
 	desc = "A locked box for keeping things away from children."

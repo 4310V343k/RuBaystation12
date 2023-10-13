@@ -156,9 +156,9 @@
 	)
 
 /*
- *  Branches
- *  ========
- */
+	*  Branches
+	*  ========
+	*/
 
 /datum/mil_branch/expeditionary_corps
 	name = "Expeditionary Corps"
@@ -246,9 +246,9 @@
 						SKILL_EVA     = SKILL_BASIC)
 
 /datum/mil_branch/army
-	name = "Marine Corps"
-	name_short = "SCGM"
-	email_domain = "torch.marine.mil"
+	name = "Interstellar Corps"
+	name_short = "SCGIIC"
+	email_domain = "torch.interstellar.mil"
 
 	rank_types = list(
 		/datum/mil_rank/army/e1,
@@ -273,10 +273,7 @@
 		/datum/mil_rank/army/o5,
 		/datum/mil_rank/army/o6,
 		/datum/mil_rank/army/o7,
-		/datum/mil_rank/army/o8,
-		/datum/mil_rank/army/o9,
-		/datum/mil_rank/army/o10,
-		/datum/mil_rank/army/o10_alt
+		/datum/mil_rank/army/o8
 	)
 
 	spawn_rank_types = list(
@@ -385,9 +382,9 @@
 	add_accesses = list(access_o_mess)
 
 /*
- *  Fleet
- *  =====
- */
+	*  Fleet
+	*  =====
+	*/
 
 /datum/mil_rank/fleet/e1
 	name = "Crewman Recruit"
@@ -535,9 +532,9 @@
 
 
 /*
- *  EC
- *  =====
- */
+	*  EC
+	*  =====
+	*/
 /datum/mil_rank/ec/e1
 	name = "Apprentice Explorer"
 	name_short = "AXPL"
@@ -599,9 +596,9 @@
 	sort_order = 20
 
 /*
- *  Army
- *  ====
- */
+	*  Army
+	*  ====
+	*/
 /datum/mil_rank/army/e1
 	name = "Private"
 	name_short = "PVT"
@@ -699,7 +696,7 @@
 	sort_order = 12
 
 /datum/mil_rank/army/o3
-	name = "Marine Captain"
+	name = "Captain Major"
 	name_short = "MCPT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o3)
 	sort_order = 13
@@ -723,39 +720,21 @@
 	sort_order = 16
 
 /datum/mil_rank/army/o7
-	name = "Brigadier General"
-	name_short = "BGen"
+	name = "Colonel General"
+	name_short = "CGen"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag)
 	sort_order = 17
 
 /datum/mil_rank/army/o8
-	name = "Major General"
-	name_short = "MajGen"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o8)
+	name = "Commandant of the Interstellar Infantry Corps"
+	name_short = "СIIC"
+	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o8_alt)
 	sort_order = 18
 
-/datum/mil_rank/army/o9
-	name = "Lieutenant General"
-	name_short = "LTG"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o9)
-	sort_order = 19
-
-/datum/mil_rank/army/o10
-	name = "General"
-	name_short = "GEN"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o10)
-	sort_order = 20
-
-/datum/mil_rank/army/o10_alt
-	name = "General of the Marine Corps"
-	name_short = "GenMarCor"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o10_alt)
-	sort_order = 20
-
 /*
- *  Civilians
- *  =========
- */
+	*  Civilians
+	*  =========
+	*/
 
 /datum/mil_rank/civ/civ
 	name = "Civilian"
@@ -768,32 +747,32 @@
 /datum/mil_rank/civ/exo_synth
 	name = "EXO Synthetic"
 	name_short = "Synth"
-	accessory = list(/obj/item/clothing/accessory/badge/solgov/synthetic)\
+	accessory = list(/obj/item/clothing/accessory/badge/solgov/synthetic)
 
 /*
- *  Contractors-PRX
- *  =========
- */
+	*  EXO-PRX
+	*  =========
+	*/
 
 /datum/mil_rank/civ/three
-	name = "Corporative Contractor Class 3"
-	name_short = "CCC3"
+	name = "EXO Contractor Class 3"
+	name_short = "ECC3"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/three)
 
 /datum/mil_rank/civ/second
-	name = "Corporative Contractor Class 2"
-	name_short = "CCC2"
+	name = "EXO Contractor Class 2"
+	name_short = "ECC2"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/second)
 
 /datum/mil_rank/civ/first
-	name = "Corporative Contractor Class 1"
-	name_short = "CCC1"
+	name = "EXO Contractor Class 1"
+	name_short = "ECC1"
 	accessory = list(/obj/item/clothing/accessory/badge/solgov/tags/first)
 
 /*
- *  SolGov Employees
- *  ====== =========
- */
+	*  SolGov Employees
+	*  ====== =========
+	*/
 
 /datum/mil_rank/sol/gov
 	name = "SolGov Representative"

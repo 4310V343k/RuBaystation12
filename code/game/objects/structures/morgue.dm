@@ -1,14 +1,14 @@
 /* Morgue stuff
- * Contains:
- *		Morgue
- *		Morgue trays
- *		Creamatorium
- *		Creamatorium trays
- */
+	* Contains:
+	*		Morgue
+	*		Morgue trays
+	*		Creamatorium
+	*		Creamatorium trays
+	*/
 
 /*
- * Morgue
- */
+	* Morgue
+	*/
 
 /obj/structure/morgue
 	name = "morgue"
@@ -126,8 +126,8 @@
 
 
 /*
- * Morgue tray
- */
+	* Morgue tray
+	*/
 /obj/structure/m_tray
 	name = "morgue tray"
 	desc = "Apply corpse before closing."
@@ -174,8 +174,8 @@
 
 
 /*
- * Crematorium
- */
+	* Crematorium
+	*/
 
 /obj/structure/crematorium
 	name = "crematorium"
@@ -375,8 +375,8 @@
 	return
 
 /*
- * Crematorium tray
- */
+	* Crematorium tray
+	*/
 /obj/structure/c_tray
 	name = "crematorium tray"
 	desc = "Apply body before burning."

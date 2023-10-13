@@ -436,8 +436,8 @@
 	return
 
 /**
- *  Return FALSE if victim can't be devoured, DEVOUR_FAST if they can be devoured quickly, DEVOUR_SLOW for slow devour
- */
+	*  Return FALSE if victim can't be devoured, DEVOUR_FAST if they can be devoured quickly, DEVOUR_SLOW for slow devour
+	*/
 /mob/living/carbon/proc/can_devour(atom/movable/victim)
 	return FALSE
 

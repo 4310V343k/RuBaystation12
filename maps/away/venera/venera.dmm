@@ -302,7 +302,6 @@
 /area/venera/bridge/co_office)
 "aR" = (
 /obj/structure/closet/secure_closet{
-	health = 20000;
 	name = "Commanding Officer's locker";
 	req_access = list("ACCESS_CAPTAIN")
 	},

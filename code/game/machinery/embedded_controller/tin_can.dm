@@ -55,7 +55,7 @@
 			state = STATE_EVACUATE
 			toggleDoor(memory["exterior_status"], tag_exterior_door, door_safety, "close")
 			signalPump(tag_pump_out_internal, 1, 0, 0) // Interior pump, target is a vaccum
-			signalPump(tag_pump_out_external, 1, 1, 10000) // Exterior pump, target is infinite 
+			signalPump(tag_pump_out_external, 1, 1, 10000) // Exterior pump, target is infinite
 			signalPump(tag_pump_out_scrubber, 1) // Get the pump to assist us in scrubbing the air out
 		if("fill_atmos")
 			if(state == STATE_FILL)

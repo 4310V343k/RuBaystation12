@@ -33,19 +33,18 @@
 	if(selected_system)
 		return selected_system.MouseDragInteraction(src_object, over_object, src_location, over_location, src_control, over_control, params, user)
 
-/datum/click_handler/mech/Click(atom/target, location, control, params)
-	var/mob/living/exosuit/E = owner.mob.loc
+/datum/click_handler/default/mech/OnClick(atom/A, params)
+	var/mob/living/exosuit/E = user.loc
 	if(!istype(E))
 		//If this happens something broke tbh
-		QDEL_NULL(src)
+		user.RemoveClickHandler(src)
 		return
-	if(E.hatch_closed && !isHUDobj(target))
-		return E.ClickOn(target, params, owner.mob)
-	else return TRUE
+	if(E.hatch_closed)
+		return E.ClickOn(A, params, user)
+	else return ..()
 
-
-/datum/click_handler/mech/OnDblClick(var/atom/A, var/params)
-	return TRUE
+/datum/click_handler/default/mech/OnDblClick(var/atom/A, var/params)
+	OnClick(A, params)
 
 /mob/living/exosuit/allow_click_through(atom/A, params, mob/user)
 	if(LAZYISIN(pilots, user) && !hatch_closed)
@@ -251,17 +250,39 @@
 		return FALSE
 	if(!silent)
 		to_chat(user, SPAN_NOTICE("You climb into \the [src]."))
-		playsound(src, 'sound/machines/windowdoor.ogg', 50, 1)
+		playsound(src, 'sound/machines/airlock_heavy.ogg', 60, 1)
+	add_pilot(user)
+	return TRUE
+
+/// Adds a mob to the pilots list and destroyed event handlers.
+/mob/living/exosuit/proc/add_pilot(mob/user)
+	if (LAZYISIN(pilots, user))
+		return
 	user.forceMove(src)
-	LAZYDISTINCTADD(pilots, user)
-	sync_access()
-	if(user.client) user.client.screen |= hud_elements
+	user.PushClickHandler(/datum/click_handler/default/mech)
+	if (user.client)
+		user.client.screen |= hud_elements
+	LAZYADD(pilots, user)
 	LAZYDISTINCTADD(user.additional_vision_handlers, src)
+	GLOB.destroyed_event.register(user, src, .proc/remove_pilot)
+	sync_access()
 	update_pilots()
-	if(user && user.client)
-		user.client.CH = new /datum/click_handler/mech(user.client)
-	// user.PushClickHandler(/datum/click_handler/mech)
-	return 1
+
+/// Removes a mob from the pilots list and destroyed event handlers. Called by the destroyed event.
+/mob/living/exosuit/proc/remove_pilot(mob/user)
+	if (!LAZYISIN(pilots, user))
+		return
+	user.RemoveClickHandler(/datum/click_handler/default/mech)
+	if (!QDELETED(user))
+		user.dropInto(loc)
+	if (user.client)
+		user.client.screen -= hud_elements
+		user.client.eye = user
+	LAZYREMOVE(user.additional_vision_handlers, src)
+	LAZYREMOVE(pilots, user)
+	GLOB.destroyed_event.unregister(user, src, .proc/remove_pilot)
+	sync_access()
+	update_pilots()
 
 /mob/living/exosuit/proc/sync_access()
 	access_card.access = saved_access.Copy()

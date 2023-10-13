@@ -10,7 +10,6 @@
 	desc = "A slender and none-too-sophisticated device capable of applying paint on floors, walls, exosuits and certain airlocks."
 	var/decal = "Quarter-turf"
 	var/paint_color
-	var/datum/click_handler/paint_sprayer/ch
 
 	var/list/decals = list(
 		"Quarter-turf" =      list("path" = /obj/effect/floor_decal/corner, "precise" = 1, "colored" = 1),
@@ -95,9 +94,9 @@
 
 /obj/item/device/paint_sprayer/on_active_hand(mob/user)
 	. = ..()
-	if(!istype(user?.client.CH, /datum/click_handler/paint_sprayer))
-		var/ch = new /datum/click_handler/paint_sprayer(user.client, src)
-		user.client.CH = ch
+	if (user.PushClickHandler(/datum/click_handler/default/paint_sprayer))
+		var/datum/click_handler/default/paint_sprayer/CH = user.click_handlers[1]
+		CH.paint_sprayer = src
 		if (isrobot(user))
 			GLOB.module_deselected_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 			GLOB.module_deactivated_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
@@ -107,8 +106,7 @@
 			GLOB.mob_unequipped_event.register(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 
 /obj/item/device/paint_sprayer/proc/remove_click_handler(mob/user)
-	if (istype(user?.client.CH, /datum/click_handler/paint_sprayer))
-		QDEL_NULL(user.client.CH)
+	if (user.RemoveClickHandler(/datum/click_handler/default/paint_sprayer))
 		GLOB.hands_swapped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 		GLOB.mob_equipped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
 		GLOB.mob_unequipped_event.unregister(user, src, /obj/item/device/paint_sprayer/proc/remove_click_handler)
@@ -359,24 +357,19 @@
 		decal = new_decal
 		to_chat(usr, SPAN_NOTICE("You set \the [src] decal to '[decal]'."))
 
-/datum/click_handler/paint_sprayer
+/datum/click_handler/default/paint_sprayer
 	var/obj/item/device/paint_sprayer/paint_sprayer
-	one_use_flag = 0
 
-/datum/click_handler/paint_sprayer/New(client/_owner, var/obj/item/device/paint_sprayer/ps)
-	. = ..()
-	paint_sprayer = ps
-
-/datum/click_handler/paint_sprayer/Click(atom/target, location, control, params)
+/datum/click_handler/default/paint_sprayer/OnClick(atom/A, params)
 	var/list/modifiers = params2list(params)
-	if (target != paint_sprayer)
-		if(!istype(owner.mob.buckled) || owner.mob.buckled.buckle_movable)
-			owner.mob.face_atom(target)
-		if(modifiers["ctrl"] && paint_sprayer.pick_color(target, owner.mob))
+	if (A != paint_sprayer)
+		if(!istype(user.buckled) || user.buckled.buckle_movable)
+			user.face_atom(A)
+		if(modifiers["ctrl"] && paint_sprayer.pick_color(A, user))
 			return
-		if(modifiers["shift"] && paint_sprayer.remove_paint(target, owner.mob))
+		if(modifiers["shift"] && paint_sprayer.remove_paint(A, user))
 			return
-	owner.mob.ClickOn(target, params)
+	user.ClickOn(A, params)
 
 
 #undef AIRLOCK_REGION_PAINT

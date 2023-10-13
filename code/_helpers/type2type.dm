@@ -1,12 +1,12 @@
 /*
- * Holds procs designed to change one type of value, into another.
- * Contains:
- *			text2list & list2text
- *			file2list
- *			angle2dir
- *			angle2text
- *			worldtime2text
- */
+	* Holds procs designed to change one type of value, into another.
+	* Contains:
+	*			text2list & list2text
+	*			file2list
+	*			angle2dir
+	*			angle2text
+	*			worldtime2text
+	*/
 
 /proc/text2numlist(text, delimiter="\n")
 	var/list/num_list = list()

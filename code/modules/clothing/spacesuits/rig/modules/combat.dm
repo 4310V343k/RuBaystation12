@@ -1,17 +1,17 @@
 /*
- * Contains
- * /obj/item/rig_module/device/flash
- * /obj/item/rig_module/device/flash/advanced
- * /obj/item/rig_module/grenade_launcher (cleaner, smoke, mfoam)
- * /obj/item/rig_module/mounted
- * /obj/item/rig_module/mounted/lcannon
- * /obj/item/rig_module/mounted/egun
- * /obj/item/rig_module/mounted/taser
- * /obj/item/rig_module/mounted/plasmacutter
- * /obj/item/rig_module/mounted/energy_blade
- * /obj/item/rig_module/fabricator
- * /obj/item/rig_module/fabricator/wf_sign
- */
+	* Contains
+	* /obj/item/rig_module/device/flash
+	* /obj/item/rig_module/device/flash/advanced
+	* /obj/item/rig_module/grenade_launcher (cleaner, smoke, mfoam)
+	* /obj/item/rig_module/mounted
+	* /obj/item/rig_module/mounted/lcannon
+	* /obj/item/rig_module/mounted/egun
+	* /obj/item/rig_module/mounted/taser
+	* /obj/item/rig_module/mounted/plasmacutter
+	* /obj/item/rig_module/mounted/energy_blade
+	* /obj/item/rig_module/fabricator
+	* /obj/item/rig_module/fabricator/wf_sign
+	*/
 
 /obj/item/rig_module/device/flash
 	name = "mounted flash"
@@ -210,13 +210,15 @@
 	var/gun_type
 	var/obj/item/gun/gun
 
-/obj/item/rig_module/mounted/New()
-	..()
-	gun = new gun_type(src)
+/obj/item/rig_module/mounted/Initialize()
+	. = ..()
+	if(ispath(gun))
+		gun = new gun(src)
+		gun.canremove = 0
 
 /obj/item/rig_module/mounted/engage(atom/target)
 
-	if(!..())
+	if(!..() || !gun)
 		return 0
 
 	if(!target)
@@ -250,6 +252,22 @@
 	origin_tech = list(TECH_POWER = 6, TECH_COMBAT = 6, TECH_ENGINEERING = 6)
 
 	gun_type = /obj/item/gun/energy/gun/mounted
+
+//PRX-START
+/obj/item/rig_module/mounted/plasma
+
+	name = "mounted plasma gun"
+	desc = "A shoulder-mounted plasma projector."
+	icon_state = "plasma"
+
+	suit_overlay_active = "mounted-plasma"
+
+	interface_name = "mounted plasma gun"
+	interface_desc = "A shoulder-mounted suit-powered plasma gun."
+	origin_tech = list(TECH_POWER = 7, TECH_COMBAT = 7, TECH_ENGINEERING = 6)
+
+	gun_type = /obj/item/gun/energy/k342/pistol/mounted
+//PRX-END
 
 /obj/item/rig_module/mounted/taser
 

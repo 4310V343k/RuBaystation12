@@ -42,6 +42,7 @@
 	                    SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
+	intro_music = list('proxima/sound/intro/research3.ogg')
 
 /datum/job/senior_scientist/get_description_blurb()
 	return "Вы - Старший научный сотрудник. Ваша задача - обеспечивать учёных работой и заниматся исследованием различных областей науки. \
@@ -96,6 +97,7 @@
 	)
 	skill_points = 20
 	possible_goals = list(/datum/goal/achievement/notslimefodder)
+	intro_music = list('proxima/sound/intro/research1.ogg', 'proxima/sound/intro/research2.ogg')
 
 /datum/job/scientist/get_description_blurb()
 	return "Вы - Научный сотрудник. Ваша задача - проводить анализ различных вещей и проверять свои гипотизы на практике. \

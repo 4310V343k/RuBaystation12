@@ -63,8 +63,8 @@
 	sync_breath_types()
 
 /**
- *  Set these lungs' breath types based on the lungs' species
- */
+	*  Set these lungs' breath types based on the lungs' species
+	*/
 /obj/item/organ/internal/lungs/proc/sync_breath_types()
 	min_breath_pressure = species.breath_pressure
 	breath_type = species.breath_type ? species.breath_type : GAS_OXYGEN

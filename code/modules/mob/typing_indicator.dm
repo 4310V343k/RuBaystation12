@@ -43,7 +43,7 @@ I IS TYPIN'!'
 
 /mob/Logout()
 	remove_typing_indicator()
-	. = ..()	
+	. = ..()
 
 /mob/verb/say_wrapper()
 	set name = ".Say"

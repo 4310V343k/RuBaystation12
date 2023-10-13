@@ -58,9 +58,9 @@
 	return 0
 
 /**
- * Similar to Adjacent, but checks if the path FROM src in an orthogonal direction THROUGH intermediate TO destination
- * is free without considering src turf
- */
+	* Similar to Adjacent, but checks if the path FROM src in an orthogonal direction THROUGH intermediate TO destination
+	* is free without considering src turf
+	*/
 /turf/proc/Adjacent_free_dir(atom/destination, path_dir = 0)
 	var/turf/dest_T = get_turf(destination)
 	if(dest_T == src)

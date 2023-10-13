@@ -11,7 +11,7 @@
 	battery_chamber_size = BATTERY_PISTOL
 	battery_type = /obj/item/cell/guncell/pistol/small
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun),
 		list(mode_name="shock", projectile_type=/obj/item/projectile/beam/stun/shock),
 		)
@@ -34,7 +34,7 @@
 	battery_chamber_size = BATTERY_RIFLE
 	battery_type = /obj/item/cell/guncell/medium
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="stun", projectile_type=/obj/item/projectile/beam/stun/heavy),
 		list(mode_name="shock", projectile_type=/obj/item/projectile/beam/stun/shock/heavy),
 		)

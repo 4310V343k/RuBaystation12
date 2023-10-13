@@ -170,6 +170,7 @@ SUBSYSTEM_DEF(ticker)
 			var/datum/job/job = SSjobs.get_by_title(H.mind.assigned_role)
 			if(job && job.create_record)
 				CreateModularRecord(H)
+		sound_to(H, pick(H.mind.assigned_job.intro_music))
 
 	callHook("roundstart")
 

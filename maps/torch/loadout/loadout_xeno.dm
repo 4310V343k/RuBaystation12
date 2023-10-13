@@ -36,8 +36,7 @@
 	whitelisted = list(
 		SPECIES_SKRELL,
 		SPECIES_UNATHI,
-		SPECIES_YEOSA,
-		SPECIES_IPC
+		SPECIES_YEOSA
 	)
 	sort_category = "Xenowear"
 	flags = GEAR_HAS_NO_CUSTOMIZATION

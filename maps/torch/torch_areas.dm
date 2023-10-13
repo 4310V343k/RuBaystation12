@@ -192,6 +192,12 @@
 /area/maintenance/substation/seconddeck
 	name = "Second Deck Substation"
 
+/area/crew_quarters/seconddeck_shower
+	name = "Second Deck Shower"
+	icon_state = "crew_quarters"
+	area_flags = AREA_FLAG_RAD_SHIELDED
+	lighting_tone = AREA_LIGHTING_WARM
+
 //First Deck (Z-4)
 /area/maintenance/firstdeck
 	name = "First Deck Maintenance"
@@ -1327,13 +1333,17 @@
 	ambience = list()
 	sound_env = MEDIUM_SOFTFLOOR
 
+/* //PRX
 /area/bridge/disciplinary_board_room
 	name = "\improper Disciplinary Board Room"
 	sound_env = SMALL_ENCLOSED
+*/
 
+/* //PRX
 /area/bridge/disciplinary_board_room/deliberation
 	name = "\improper Deliberation Room"
 	sound_env = SMALL_ENCLOSED
+*/
 
 /area/crew_quarters/heads
 	icon_state = "head_quarters"

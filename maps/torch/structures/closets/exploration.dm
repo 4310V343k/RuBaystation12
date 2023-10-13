@@ -1,6 +1,6 @@
 /*
- * Torch Exploration
- */
+	* Torch Exploration
+	*/
 
 /decl/closet_appearance/secure_closet/torch/exploration
 	extra_decals = list(
@@ -23,7 +23,7 @@
 		"exped" = COLOR_CLOSET_GOLD
 	)
 
-//proxima code
+//PRX-START
 /decl/closet_appearance/secure_closet/torch/exploration/medic
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_WHITE,
@@ -36,7 +36,7 @@
 		"exped" = COLOR_PURPLE
 	)
 
-/decl/closet_appearance/secure_closet/torch/exploration/guard
+/decl/closet_appearance/secure_closet/torch/exploration/infantry
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_NT_RED,
 		"security" = COLOR_NT_RED
@@ -110,12 +110,12 @@
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))
 	)
 
-/obj/structure/closet/secure_closet/explorer/marine
-	name = "expedition guard's locker"
-	req_access = list(access_exploration_guard)
-	closet_appearance = /decl/closet_appearance/secure_closet/torch/exploration/guard
+/obj/structure/closet/secure_closet/explorer/infantry
+	name = "expedition infantry's locker"
+	req_access = list(access_exploration_infantry)
+	closet_appearance = /decl/closet_appearance/secure_closet/torch/exploration/infantry
 
-/obj/structure/closet/secure_closet/explorer/marine/WillContain()
+/obj/structure/closet/secure_closet/explorer/infantry/WillContain()
 	return list(
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/gloves/thick,
@@ -126,13 +126,14 @@
 		/obj/item/storage/firstaid/individual/military,
 		/obj/item/storage/belt/holster/security,
 		/obj/item/storage/belt/security,
-		/obj/item/clothing/suit/armor/pcarrier/light,
+		/obj/item/clothing/suit/armor/pcarrier/medium,
+		/obj/item/clothing/head/helmet,
 		/obj/item/clothing/accessory/storage/webbing_large,
-		/obj/item/rig/marine,
+		/obj/item/rig/interstellar,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/security, /obj/item/storage/backpack/satchel/sec)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag/sec, /obj/item/storage/backpack/messenger/sec)),
 	)
-//proxima code end
+//PRX-END
 
 /obj/structure/closet/secure_closet/pathfinder
 	name = "pathfinder's locker"
@@ -161,9 +162,10 @@
 		/obj/item/device/binoculars,
 		/obj/item/material/knife/folding/swiss/explorer,
 		/obj/item/clothing/accessory/buddy_tag,
-		//rubay code,
+		//PRX-START,
 		/obj/item/storage/firstaid/individual/military,
-		//rubay code end,
+		/obj/item/storage/box/scgec_badges,
+		//PRX-END,
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack, /obj/item/storage/backpack/satchel/grey)),
 		new /datum/atom_creator/weighted(list(/obj/item/storage/backpack/dufflebag, /obj/item/storage/backpack/messenger)),
 		new /datum/atom_creator/weighted(list(/obj/item/device/flashlight, /obj/item/device/flashlight/flare, /obj/item/device/flashlight/flare/glowstick/random))

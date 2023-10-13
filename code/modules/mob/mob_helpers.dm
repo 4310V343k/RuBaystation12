@@ -40,7 +40,8 @@
 /mob/proc/is_species(datum/species/S)
 	return FALSE
 
-/proc/islesserform(A) //PRX
+
+/proc/islesserform(A)
 	if(istype(A, /mob/living/carbon/human))
 		switch(A:get_species())
 			if ("Monkey")
@@ -53,8 +54,7 @@
 				return 1
 			if ("V'krexi")
 				return 1
-	return 0 //PRX
-
+	return 0
 
 /mob/living/carbon/is_species(datum/species/S)
 	if (!S) return FALSE
@@ -64,8 +64,8 @@
 
 
 /**
- * Checks if the target has a grab from the user
- */
+	* Checks if the target has a grab from the user
+	*/
 /mob/proc/has_danger_grab(mob/user)
 	if (user == src || istype(user, /mob/living/silicon/robot) || istype(user, /mob/living/bot))
 		return TRUE
@@ -101,33 +101,33 @@
 
 //The base miss chance for the different defence zones
 var/list/global/base_miss_chance = list(
-	BP_HEAD = 60,
+	BP_HEAD = 35,
 	BP_CHEST = 10,
 	BP_GROIN = 20,
-	BP_L_LEG = 50,
-	BP_R_LEG = 50,
-	BP_L_ARM = 20,
-	BP_R_ARM = 20,
-	BP_L_HAND = 50,
-	BP_R_HAND = 50,
-	BP_L_FOOT = 70,
-	BP_R_FOOT = 70,
+	BP_L_LEG = 30,
+	BP_R_LEG = 30,
+	BP_L_ARM = 30,
+	BP_R_ARM = 30,
+	BP_L_HAND = 80, //INF was 50
+	BP_R_HAND = 80, //INF was 50
+	BP_L_FOOT = 80, //INF was 50
+	BP_R_FOOT = 80, //INF was 50
 )
 
 //Used to weight organs when an organ is hit randomly (i.e. not a directed, aimed attack).
 //Also used to weight the protection value that armour provides for covering that body part when calculating protection from full-body effects.
-var/global/list/organ_rel_size = list(
-	BP_HEAD = 25,
-	BP_CHEST = 70,
-	BP_GROIN = 30,
+var/list/global/organ_rel_size = list(
+	BP_HEAD = 20,
+	BP_CHEST = 60,
+	BP_GROIN = 40,
 	BP_L_LEG = 25,
 	BP_R_LEG = 25,
 	BP_L_ARM = 25,
 	BP_R_ARM = 25,
 	BP_L_HAND = 10,
 	BP_R_HAND = 10,
-	BP_L_FOOT = 10,
-	BP_R_FOOT = 10,
+	BP_L_FOOT = 5,
+	BP_R_FOOT = 5,
 )
 
 /proc/check_zone(zone)
@@ -185,16 +185,21 @@ var/global/list/organ_rel_size = list(
 				return zone
 
 	var/miss_chance = 10
+	var/scatter_chance
 	if (zone in base_miss_chance)
 		miss_chance = base_miss_chance[zone]
-	miss_chance = max(miss_chance + miss_chance_mod, 0)
+	miss_chance = max(min(miss_chance + miss_chance_mod, 94),0)
+	scatter_chance = min(95, miss_chance + 35)
 	if(prob(miss_chance))
-		return null
-	else
-		if (prob(miss_chance))
-			return (ran_zone())
-		else
-			return zone
+		if(ranged_attack)
+			if(prob(100 - scatter_chance))
+				return (ran_zone())
+			else
+				return null
+//		else if(prob(70))
+//			return null
+//		return (ran_zone())
+	return zone
 
 //Replaces some of the characters with *, used in whispers. pr = probability of no star.
 //Will try to preserve HTML formatting. re_encode controls whether the returned text is HTML encoded outside tags.
@@ -237,29 +242,32 @@ var/global/list/organ_rel_size = list(
 
 /proc/slur(phrase)
 	phrase = html_decode(phrase)
-	var/new_phrase = ""
-	var/list/replacements_consonants = list(
-		"s" = "ch", "c" = "k",
-		"г" = "х", "к" = "х", "з" = "с", "ц" = "с", "ч" = "щ", "щ" = "шш", "п" = "б"
-		)
-	var/list/replacements_vowels = list(
-		"o" = "u",
-		"ы" = "'", "а" = "'", "е" = "э", "ё" = "'", "и" = "'", "о" = "'", "у" = "'", "ю" = "'"
-		)
-	for(var/i = 1, i <= length_char(phrase), i++)
-		var/letter = copytext_char(phrase, i, i + 1)
-		if(lowertext(letter) in replacements_consonants)
-			if(prob(40))
-				letter = replacements_consonants[lowertext(letter)]
-		else if(lowertext(letter) in replacements_vowels)
-			if(prob(12))
-				letter = replacements_vowels[lowertext(letter)]
-		new_phrase += pick(
-			65; letter,
-			20; lowertext(letter),
-			15; uppertext(letter),
-			)
-	return html_encode(new_phrase)
+	var/leng=length_char(phrase)	// INF Localization
+	var/counter=length_char(phrase)	// INF Localization
+	var/newphrase=""
+	var/newletter=""
+	while(counter>=1)
+		newletter=copytext_char(phrase,(leng-counter)+1,(leng-counter)+2)
+		if(rand(1,3)==3)
+			if(lowertext(newletter)=="o")	newletter="u"
+			if(lowertext(newletter)=="s")	newletter="ch"
+			if(lowertext(newletter)=="a")	newletter="ah"
+			if(lowertext(newletter)=="c")	newletter="k"
+
+			if(lowertext(newletter)=="о")	newletter="у"
+			if(lowertext(newletter)=="с")	newletter="з"
+			if(lowertext(newletter)=="а")	newletter="ах"
+			if(lowertext(newletter)=="с")	newletter="к"
+			if(lowertext(newletter)=="ч")	newletter="з"
+		switch(rand(1,15))
+			if(1,3,5,8)	newletter="[lowertext(newletter)]"
+			if(2,4,6,15)	newletter="[uppertext(newletter)]"
+			if(7)	newletter+="'"
+			//if(9,10)	newletter="<b>[newletter]</b>"
+			//if(11,12)	newletter="<big>[newletter]</big>"
+			//if(13)	newletter="<small>[newletter]</small>"
+		newphrase+="[newletter]";counter-=1
+	return newphrase
 
 /proc/stutter(n)
 	var/te = html_decode(n)
@@ -269,7 +277,12 @@ var/global/list/organ_rel_size = list(
 	p = 1//1 is the start of any word
 	while(p <= n)//while P, which starts at 1 is less or equal to N which is the length.
 		var/n_letter = copytext_char(te, p, p + 1)//copies text from a certain distance. In this case, only one letter at a time.
-		if (prob(80) && (ckey(n_letter) in list("b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z")))
+//[INF]
+		var/list/letters_list = list(
+			"b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","y","z",
+			"б","с","д","ф","г","ч","ж","к","л","т","н","р","т","в","х","у","з")
+//[/INF]
+		if (prob(80) && (ckey(n_letter) in letters_list))
 			if (prob(10))
 				n_letter = text("[n_letter]-[n_letter]-[n_letter]-[n_letter]")//replaces the current letter with this instead.
 			else
@@ -303,46 +316,61 @@ var/global/list/organ_rel_size = list(
 	return returntext
 
 
-/proc/shake_camera(mob/M, duration, strength=1, var/taper = 0.25)
-	if(!M || !M.client || M.shakecamera || M.stat || isEye(M) || isAI(M))
-		return
-	M.shakecamera = 1
-	spawn(1)
-		if(!M.client)
-			return
-
-		var/atom/oldeye=M.client.eye
-		var/aiEyeFlag = 0
-		if(istype(oldeye, /mob/observer/eye/aiEye))
-			aiEyeFlag = 1
-
-		var/x
-		for(x=0; x<duration, x++)
-			if(aiEyeFlag)
-				M.client.eye = locate(dd_range(1,oldeye.loc.x+rand(-strength,strength),world.maxx),dd_range(1,oldeye.loc.y+rand(-strength,strength),world.maxy),oldeye.loc.z)
+/proc/ninjaspeak(n)
+/*
+The difference with stutter is that this proc can stutter more than 1 letter
+The issue here is that anything that does not have a space is treated as one word (in many instances). For instance, "LOOKING," is a word, including the comma.
+It's fairly easy to fix if dealing with single letters but not so much with compounds of letters./N
+*/
+	var/te = html_decode(n)
+	var/t = ""
+	n = length_char(n)
+	var/p = 1
+	while(p <= n)
+		var/n_letter
+		var/n_mod = rand(1,4)
+		if(p+n_mod>n+1)
+			n_letter = copytext_char(te, p, n+1)
+		else
+			n_letter = copytext_char(te, p, p+n_mod)
+		if (prob(50))
+			if (prob(30))
+				n_letter = text("[n_letter]-[n_letter]-[n_letter]")
 			else
-				M.client.eye = locate(dd_range(1,M.loc.x+rand(-strength,strength),world.maxx),dd_range(1,M.loc.y+rand(-strength,strength),world.maxy),M.loc.z)
-			sleep(1)
-			if(!M.client)
-				return
-		//Taper code added by nanako.
-		//Will make the strength falloff after the duration.
-		//This helps to reduce jarring effects of major screenshaking suddenly returning to stability
-		//Recommended taper values are 0.05-0.1
+				n_letter = text("[n_letter]-[n_letter]")
+		else
+			n_letter = text("[n_letter]")
+		t = text("[t][n_letter]")
+		p=p+n_mod
+	return sanitize(t)
 
-		if (taper > 0)
-			while (strength > 0)
-				strength -= taper
-				if(aiEyeFlag)
-					M.client.eye = locate(dd_range(1,oldeye.loc.x+rand(-strength,strength),world.maxx),dd_range(1,oldeye.loc.y+rand(-strength,strength),world.maxy),oldeye.loc.z)
-				else
-					M.client.eye = locate(dd_range(1,M.loc.x+rand(-strength,strength),world.maxx),dd_range(1,M.loc.y+rand(-strength,strength),world.maxy),M.loc.z)
-				sleep(1)
-				if(!M.client)
-					return
+#define TICKS_PER_RECOIL_ANIM 2
+#define PIXELS_PER_STRENGTH_VAL 16
 
-		M.client.eye=oldeye
-		M.shakecamera = 0
+/proc/shake_camera(mob/M, duration, strength=1)
+	set waitfor = 0
+	if(!M || !M.client || M.stat || isEye(M) || isAI(M) || duration <= 0)
+		return
+	M.shakecamera = TRUE
+	strength = abs(strength)*PIXELS_PER_STRENGTH_VAL
+	var/steps = min(1, Floor(duration/TICKS_PER_RECOIL_ANIM))-1
+	animate(M.client, pixel_x = rand(-(strength), strength), pixel_y = rand(-(strength), strength), time = TICKS_PER_RECOIL_ANIM)
+	sleep(TICKS_PER_RECOIL_ANIM)
+	if(steps)
+		for(var/i = 1 to steps)
+			animate(M.client, pixel_x = rand(-(strength), strength), pixel_y = rand(-(strength), strength), time = TICKS_PER_RECOIL_ANIM)
+			sleep(TICKS_PER_RECOIL_ANIM)
+	M?.shakecamera = FALSE
+	animate(M.client, pixel_x = 0, pixel_y = 0, time = TICKS_PER_RECOIL_ANIM)
+
+#undef TICKS_PER_RECOIL_ANIM
+#undef PIXELS_PER_STRENGTH_VAL
+
+/proc/findname(msg)
+	for(var/mob/M in SSmobs.mob_list)
+		if (M.real_name == text("[msg]"))
+			return 1
+	return 0
 
 
 /mob/proc/abiotic(var/full_body = FALSE)
@@ -447,6 +475,7 @@ var/global/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			C = M.original.client
 
 	if(C)
+		if(C.get_preference_value(/datum/client_preference/anon_say) == GLOB.PREF_YES) return
 		var/name
 		if(C.mob)
 			var/mob/M = C.mob
@@ -618,7 +647,7 @@ var/global/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 	return !client && !teleop
 
 /mob/proc/jittery_damage()
-	return //Only for living/carbon/human
+	return //Only for living/carbon/human/
 
 /mob/living/carbon/human/jittery_damage()
 	var/obj/item/organ/internal/heart/L = internal_organs_by_name[BP_HEART]

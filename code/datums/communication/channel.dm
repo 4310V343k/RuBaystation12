@@ -104,8 +104,8 @@
 
 
 /*
- * Procs for the handling of system broadcasts
- */
+	* Procs for the handling of system broadcasts
+	*/
 /decl/communication_channel/proc/broadcast(message, force = FALSE)
 	if (!can_broadcast(message, force))
 		return FALSE

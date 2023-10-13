@@ -1,14 +1,14 @@
 /* Library Items
- *
- * Contains:
- *		Bookcase
- *		Book
- */
+	*
+	* Contains:
+	*		Bookcase
+	*		Book
+	*/
 
 
 /*
- * Bookcase
- */
+	* Bookcase
+	*/
 
 /obj/structure/bookcase
 	name = "bookcase"
@@ -132,8 +132,8 @@
 
 
 /*
- * Book
- */
+	* Book
+	*/
 /obj/item/book
 	name = "book"
 	icon = 'icons/obj/library.dmi'
@@ -229,8 +229,8 @@
 		user.setClickCooldown(DEFAULT_QUICK_COOLDOWN) //to prevent spam
 
 /*
- * Manual Base Object
- */
+	* Manual Base Object
+	*/
 /obj/item/book/manual
 	icon = 'icons/obj/library.dmi'
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified

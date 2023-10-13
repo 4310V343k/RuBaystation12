@@ -1,6 +1,6 @@
 /*
- * Torch Supply
- */
+	* Torch Supply
+	*/
 /decl/closet_appearance/secure_closet/torch/cargo
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_BEASTY_BROWN,
@@ -67,10 +67,11 @@
 		/obj/item/folder/yellow,
 		/obj/item/stack/package_wrap/twenty_five,
 		/obj/item/device/flash,
-		//proxima code start,
+		//PRX-START,
 		/obj/item/device/remote_device/quartermaster,
 		/obj/item/storage/box/encryptionkey/supply,
-		//proxima code end,
+		/obj/item/gun/energy/confuseray,
+		//PRX-END,
 		/obj/item/device/megaphone,
 		/obj/item/device/holowarrant,
 		/obj/item/clothing/suit/armor/pcarrier/light/sol,

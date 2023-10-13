@@ -261,8 +261,8 @@
 
 
 /**
- *  Get a list of contents of this organ and all the child organs
- */
+	*  Get a list of contents of this organ and all the child organs
+	*/
 /obj/item/organ/external/proc/get_contents_recursive()
 	var/list/all_items = list()
 
