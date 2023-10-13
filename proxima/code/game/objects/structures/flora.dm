@@ -970,7 +970,7 @@
 	icon = 'proxima/icons/obj/flora/misc.dmi'
 	icon_state = "log"
 	layer = BELOW_DOOR_LAYER
-	anchored = 1
+	anchored = TRUE
 
 /obj/effect/firefly
 	name = "firefly"
