@@ -295,7 +295,7 @@
 /obj/structure/flora/ausbushes/glowshroom/New()
 	..()
 	icon_state = "glowshroom_[rand(1, 4)]"
-	set_light(1, 0.6, 1, "#99FF66")
+	set_light(1, 0.6, 1, "#99ff66")
 
 /obj/structure/flora/ausbushes/reedbush
 	icon_state = "reedbush_1"
