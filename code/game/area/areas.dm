@@ -258,7 +258,7 @@
 	//[PRX BEGIN]
 	for(var/obj/screenfilter/F in L.client?.screen)
 		if(F!=newarea.screen_filter)
-			F.Del()
+			F.Fade()
 	if(!(newarea.screen_filter in L.client?.screen))
 		L.client?.screen += new newarea.screen_filter
 	//[PRX END]
