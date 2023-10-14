@@ -18,7 +18,10 @@
 	screen_loc = "CENTER"
 	particles = new/particles/snow
 
-/obj/screenfilter/snow/Del()
+/obj/screenfilter/snow/Fade()
 	for(alpha, alpha!=0, alpha-=30)
 		sleep(5)
 	..()
+
+obj/screenfilter/proc/Fade() //overwrite to create cool fading effects :call_me:
+	Del()
