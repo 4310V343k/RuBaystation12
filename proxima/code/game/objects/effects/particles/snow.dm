@@ -21,5 +21,6 @@
 		sleep(5)
 	..()
 
+
 /obj/screenfilter/proc/Fade() //overwrite to create cool fading effects :call_me:
 	qdel(src)
