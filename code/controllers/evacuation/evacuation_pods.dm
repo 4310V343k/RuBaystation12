@@ -46,7 +46,7 @@
 		for (var/mob/living/carbon/human/person in world)
 			if(person.z in GLOB.using_map.station_levels) //checking if it's a crew member
 				var/decl/security_state/security_state = decls_repository.get_decl(GLOB.using_map.security_state)
-				if(!istype(get_area(person), /area/shuttle/escape_pod) && istype(security_state.current_security_level, /decl/security_level/default/sierradept/code_delta))
+				if(!istype(get_area(person), /area/shuttle/escape_pod) && istype(security_state.current_security_level, /decl/security_level/default/torchdept/code_delta))
 					sound_to(person, 'proxima/sound/music/chamber.ogg')
 		//[PRX END]
 		for (var/datum/shuttle/autodock/ferry/escape_pod/pod in escape_pods) // Launch the pods!
