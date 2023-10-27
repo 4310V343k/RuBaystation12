@@ -29301,9 +29301,9 @@
 /obj/item/gun/energy/gun/secure,
 /obj/item/gun/energy/gun/secure,
 /obj/item/gun/energy/gun/secure,
-/obj/item/gun/energy/k342/pistol/explo,
-/obj/item/gun/energy/k342/pistol/explo,
-/obj/item/gun/energy/gun/secure,
+/obj/item/gun/projectile/pistol/goodman,
+/obj/item/gun/projectile/pistol/goodman,
+/obj/item/gun/projectile/pistol/goodman,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "vkW" = (
