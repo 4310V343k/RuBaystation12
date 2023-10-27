@@ -658,7 +658,7 @@ macro "hotkeymode"
 		name = "C"
 		command = "Face-Direction"
 	elem
-		name = "SPACE"
+		name = "V"
 		command = "Focus-View"
 
 macro "borgmacro"

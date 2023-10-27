@@ -1,5 +1,5 @@
 /datum/sprite_accessory/marking/human
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SHELL)
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SHELL, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_TRITONIAN, SPECIES_SPACER)
 	icon = 'icons/mob/human_races/species/human/bodymods.dmi'
 
 
