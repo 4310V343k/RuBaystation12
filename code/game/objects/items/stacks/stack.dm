@@ -1,13 +1,13 @@
 /* Stack type objects!
- * Contains:
- * 		Stacks
- * 		Recipe datum
- * 		Recipe list datum
- */
+	* Contains:
+	* 		Stacks
+	* 		Recipe datum
+	* 		Recipe list datum
+	*/
 
 /*
- * Stacks
- */
+	* Stacks
+	*/
 
 /obj/item/stack
 	gender = PLURAL
@@ -342,8 +342,8 @@
 		return ..()
 
 /*
- * Recipe datum
- */
+	* Recipe datum
+	*/
 /datum/stack_recipe
 	var/title = "ERROR"
 	var/result_type
@@ -395,8 +395,8 @@
 	return TRUE
 
 /*
- * Recipe list datum
- */
+	* Recipe list datum
+	*/
 /datum/stack_recipe_list
 	var/title = "ERROR"
 	var/list/recipes = null

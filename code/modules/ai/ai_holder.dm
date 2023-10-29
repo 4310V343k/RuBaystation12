@@ -144,10 +144,10 @@ if (!(datum.process_flags & AI_FASTPROCESSING)) { \
 	addtimer(CALLBACK(src, .proc/set_busy, FALSE), time)
 
 /**
- * Makes this ai holder not get processed.
- * Called automatically when the host mob is killed.
- * Potential future optimization would be to sleep AIs which mobs that are far away from in-round players.
- */
+	* Makes this ai holder not get processed.
+	* Called automatically when the host mob is killed.
+	* Potential future optimization would be to sleep AIs which mobs that are far away from in-round players.
+	*/
 /datum/ai_holder/proc/go_sleep()
 	if (stance == STANCE_SLEEP)
 		return
@@ -155,9 +155,9 @@ if (!(datum.process_flags & AI_FASTPROCESSING)) { \
 	set_stance(STANCE_SLEEP)
 
 /**
- * Reverses the `go_sleep()` proc.
- * Revived mobs will wake their AI if they have one.
- */
+	* Reverses the `go_sleep()` proc.
+	* Revived mobs will wake their AI if they have one.
+	*/
 /datum/ai_holder/proc/go_wake()
 	if (stance != STANCE_SLEEP)
 		return
@@ -368,10 +368,10 @@ if (!(datum.process_flags & AI_FASTPROCESSING)) { \
 	return ai_holder.busy
 
 /**
- * Helper proc to check for the AI's stance.
- * Returns null if there's no AI holder, or the mob has a player and autopilot is not on.
- * Otherwise returns the stance.
- */
+	* Helper proc to check for the AI's stance.
+	* Returns null if there's no AI holder, or the mob has a player and autopilot is not on.
+	* Otherwise returns the stance.
+	*/
 /mob/living/proc/get_AI_stance()
 	if (!ai_holder)
 		return null

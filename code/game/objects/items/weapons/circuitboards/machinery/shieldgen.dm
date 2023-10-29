@@ -37,7 +37,7 @@
 		/obj/item/mech_equipment/mounted_system/taser/laser = 1,
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stock_parts/capacitor = 2,
-		
+
 	)
 	additional_spawn_components = list(
 		/obj/item/stock_parts/power/terminal/buildable = 1,

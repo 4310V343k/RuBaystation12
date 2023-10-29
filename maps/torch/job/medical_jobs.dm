@@ -255,6 +255,8 @@
 	 	access_virology, access_morgue, access_crematorium, access_radio_med
 	)
 
+	intro_music = list('proxima/sound/intro/chemist1.ogg')
+
 /datum/job/chemist/get_description_blurb()
 	return "Вы - Фармацевт. Вы изготавливаете медицину и другие полезные субстанции. Вы не доктор или медик. Вам не следует лечить пациентов, вы должны предоставлять медицину для их лечения. \
 	Вы подчиняетесь Врачам и Парамедикам (в случае, если Вы контрактник, то ещё и Корпоративному связному)."

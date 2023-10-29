@@ -41,8 +41,8 @@
 
 
 /**
- * Flags the effect as `known` and runs relevant update procs. Intended for admin event usage.
- */
+	* Flags the effect as `known` and runs relevant update procs. Intended for admin event usage.
+	*/
 /obj/effect/overmap/proc/make_known(notify = FALSE)
 	if (!known)
 		known = TRUE
@@ -50,7 +50,7 @@
 
 
 /**
- * Runs any relevant code needed for updating anything connected to known overmap effects, such as helms.
- */
+	* Runs any relevant code needed for updating anything connected to known overmap effects, such as helms.
+	*/
 /obj/effect/overmap/proc/update_known_connections(notify = FALSE)
 	return

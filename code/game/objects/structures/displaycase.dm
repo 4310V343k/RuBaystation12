@@ -5,8 +5,10 @@
 	desc = "A display case for prized possessions. It taunts you to kick it."
 	density = TRUE
 	anchored = TRUE
+	var/locked = 1
 	unacidable = TRUE
 	alpha = 150
+	req_access = list()
 	health_max = 14
 
 /obj/structure/displaycase/Initialize()
@@ -21,6 +23,7 @@
 	. = ..()
 	if(contents.len)
 		to_chat(user, "Inside you see [english_list(contents)].")
+		to_chat(user, "It looks [locked ? "locked. You can open it with your ID card" : "unlocked"].")
 
 /obj/structure/displaycase/ex_act(severity)
 	if (severity < EX_ACT_LIGHT)
@@ -64,8 +67,35 @@
 	for(var/atom/movable/AM in contents)
 		underlays += AM.appearance
 
-/obj/structure/displaycase/attack_hand(mob/user as mob)
+/obj/structure/displaycase/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/card/id))
+		if(allowed(usr))
+			locked = !locked
+			to_chat(user, "[src]'s lock was [locked ? "enabled" : "disabled"].")
+		else
+			to_chat(user, "[src]'s card reader denied you.")
+		return
+	if(isitem(W))
+		if(!locked)
+			user.drop_item()
+			W.pixel_x = 0
+			W.pixel_y = -7
+			W.forceMove(get_turf(src))
+			Initialize()
+			return
+	if(user.a_intent == I_HURT)
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+		damage_health(W.force)
+	..()
+
+/obj/structure/displaycase/attack_hand(mob/user as mob, obj/item/W as obj)
 	add_fingerprint(user)
+	if(!locked)
+		for(var/atom/movable/AM in src)
+			to_chat(user, "You picking up [AM] from the [src].")
+			AM.dropInto(loc)
+			update_icon()
+		return
 	if(!health_dead)
 		to_chat(usr, text("<span class='warning'>You kick the display case.</span>"))
 		visible_message("<span class='warning'>[usr] kicks the display case.</span>")

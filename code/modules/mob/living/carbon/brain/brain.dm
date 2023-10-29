@@ -54,4 +54,3 @@
 
 /mob/living/carbon/brain/check_has_mouth()
 	return 0
-

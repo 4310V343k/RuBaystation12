@@ -2,5 +2,13 @@
 	"ckey": "Taushai",
 	"character_name": "Mo'xnorrxi Tama'Lumiik",
 	"item_path": "/obj/item/rig/taushai",
-	"req_titles": [ "Senior Engineer", "Engineer", "Exploration Engineer", "Engine Technician", "Damage Control Technician", "Electrician", "Atmospheric Technician" ]
+	"req_titles": [
+		"Senior Engineer",
+		"Engineer",
+		"Exploration Engineer",
+		"Engine Technician",
+		"Damage Control Technician",
+		"Electrician",
+		"Atmospheric Technician"
+	]
 }

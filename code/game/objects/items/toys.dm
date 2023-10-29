@@ -1,25 +1,25 @@
 /* Toys!
- * Contains:
- *		Balloons
- *		Fake telebeacon
- *		Fake singularity
- *		Toy gun
- *		Toy crossbow
- *		Toy swords
- *		Toy bosun's whistle
- *      Toy mechs
- *		Snap pops
- *		Water flower
- *      Therapy dolls
- *      Inflatable duck
- *		Action figures
- *		Plushies
- *		Toy cult sword
- *		Marshalling wand
- *		Ring bell
- *
- *	desk toys
- */
+	* Contains:
+	*		Balloons
+	*		Fake telebeacon
+	*		Fake singularity
+	*		Toy gun
+	*		Toy crossbow
+	*		Toy swords
+	*		Toy bosun's whistle
+	*      Toy mechs
+	*		Snap pops
+	*		Water flower
+	*      Therapy dolls
+	*      Inflatable duck
+	*		Action figures
+	*		Plushies
+	*		Toy cult sword
+	*		Marshalling wand
+	*		Ring bell
+	*
+	*	desk toys
+	*/
 
 
 
@@ -31,8 +31,8 @@
 	force = 0
 
 /*
- * Balloons
- */
+	* Balloons
+	*/
 /obj/item/toy/water_balloon
 	name = "water balloon"
 	desc = "A translucent balloon. There's nothing in it."
@@ -116,8 +116,8 @@
 	item_state = "ntballoon"
 
 /*
- * Fake telebeacon
- */
+	* Fake telebeacon
+	*/
 /obj/item/toy/blink
 	name = "electronic blink toy game"
 	desc = "Blink.  Blink.  Blink. Ages 8 and up."
@@ -126,8 +126,8 @@
 	item_state = "signaler"
 
 /*
- * Fake singularity
- */
+	* Fake singularity
+	*/
 /obj/item/toy/spinningtoy
 	name = "gravitational singularity"
 	desc = "\"Singulo\" brand spinning toy."
@@ -135,8 +135,8 @@
 	icon_state = "singularity_s1"
 
 /*
- * Toy crossbow
- */
+	* Toy crossbow
+	*/
 
 /obj/item/toy/crossbow
 	name = "foam dart crossbow"
@@ -256,8 +256,8 @@
 
 
 /*
- * Toy swords
- */
+	* Toy swords
+	*/
 /obj/item/toy/sword
 	name = "toy sword"
 	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
@@ -302,8 +302,8 @@
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
 
 /*
- * Snap pops
- */
+	* Snap pops
+	*/
 /obj/item/toy/snappop
 	name = "snap pop"
 	desc = "Wow!"
@@ -336,8 +336,8 @@
 			qdel(src)
 
 /*
- * Bosun's whistle
- */
+	* Bosun's whistle
+	*/
 
 /obj/item/toy/bosunwhistle
 	name = "bosun's whistle"
@@ -355,8 +355,8 @@
 		cooldown = world.time
 
 /*
- * Mech prizes
- */
+	* Mech prizes
+	*/
 /obj/item/toy/prize
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ripleytoy"
@@ -434,8 +434,8 @@
 	icon_state = "phazonprize"
 
 /*
- * Action figures
- */
+	* Action figures
+	*/
 
 /obj/item/toy/figure
 	name = "Completely Glitched action figure"
@@ -678,8 +678,8 @@
 
 
 /*
- * Plushies
- */
+	* Plushies
+	*/
 
 /obj/structure/plushie
 	abstract_type = /obj/structure/plushie

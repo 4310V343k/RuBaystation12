@@ -1,6 +1,6 @@
 /*
- * Torch Excavation
- */
+	* Torch Excavation
+	*/
 
 /obj/structure/closet/toolcloset/excavation
 	name = "excavation equipment closet"

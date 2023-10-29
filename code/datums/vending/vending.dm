@@ -3,8 +3,8 @@
 #define CAT_COIN   4
 
 /**
- *  Datum used to hold information about a product in a vending machine
- */
+	*  Datum used to hold information about a product in a vending machine
+	*/
 
 /datum/stored_items/vending_products
 	item_name = "generic" // Display name for the product

@@ -8,9 +8,9 @@
 #define PAPER_META_BAD(message) "<p style='color:red'><i>[message]</i></p>"
 
 /*
- * Paper
- * also scraps of paper
- */
+	* Paper
+	* also scraps of paper
+	*/
 
 /obj/item/paper
 	name = "sheet of paper"
@@ -557,8 +557,8 @@
 	name = "supply manifest"
 	var/is_copy = 1
 /*
- * Premade paper
- */
+	* Premade paper
+	*/
 /obj/item/paper/spacer
 	language = LANGUAGE_SPACER
 

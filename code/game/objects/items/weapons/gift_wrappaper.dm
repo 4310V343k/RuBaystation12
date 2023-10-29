@@ -1,12 +1,12 @@
 /* Gifts and wrapping paper
- * Contains:
- *		Gifts
- *		Wrapping Paper
- */
+	* Contains:
+	*		Gifts
+	*		Wrapping Paper
+	*/
 
 /*
- * Gifts
- */
+	* Gifts
+	*/
 /obj/item/a_gift
 	name = "gift"
 	desc = "PRESENTS!!!! eek!"
@@ -104,8 +104,8 @@
 	qdel(src)
 
 /*
- * Wrapping Paper and Gifts
- */
+	* Wrapping Paper and Gifts
+	*/
 
 /obj/item/gift
 	name = "gift"

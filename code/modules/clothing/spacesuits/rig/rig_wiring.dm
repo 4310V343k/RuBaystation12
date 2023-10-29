@@ -17,11 +17,11 @@
 	)
 
 /*
- * Rig security can be snipped to disable ID access checks on rig.
- * Rig AI override can be pulsed to toggle whether or not the AI can take control of the suit.
- * System control can be pulsed to toggle some malfunctions.
- * Interface lock can be pulsed to toggle whether or not the interface can be accessed.
- */
+	* Rig security can be snipped to disable ID access checks on rig.
+	* Rig AI override can be pulsed to toggle whether or not the AI can take control of the suit.
+	* System control can be pulsed to toggle some malfunctions.
+	* Interface lock can be pulsed to toggle whether or not the interface can be accessed.
+	*/
 
 /datum/wires/rig/UpdateCut(var/index, var/mended)
 

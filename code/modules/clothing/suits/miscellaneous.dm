@@ -1,13 +1,13 @@
 /*
- * Contains:
- *		Lasertag
- *		Costume
- *		Misc
- */
+	* Contains:
+	*		Lasertag
+	*		Costume
+	*		Misc
+	*/
 
 /*
- * Lasertag
- */
+	* Lasertag
+	*/
 /obj/item/clothing/suit/bluetag
 	name = "blue laser tag armour"
 	desc = "Blue Pride, Galaxy Wide."
@@ -29,8 +29,8 @@
 	siemens_coefficient = 3.0
 
 /*
- * Costume
- */
+	* Costume
+	*/
 /obj/item/clothing/suit/pirate
 	name = "pirate coat"
 	desc = "Yarr."
@@ -178,8 +178,8 @@
 	set_extension(src, /datum/extension/appearance/cardborg)
 
 /*
- * Misc
- */
+	* Misc
+	*/
 
 /obj/item/clothing/suit/straight_jacket
 	name = "straitjacket"
@@ -460,8 +460,8 @@
 	icon_state = "cargoponcho"
 
 /*
- * Track Jackets
- */
+	* Track Jackets
+	*/
 /obj/item/clothing/suit/storage/toggle/track
 	name = "track jacket"
 	desc = "A track jacket, for the athletic."

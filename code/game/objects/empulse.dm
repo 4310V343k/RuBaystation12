@@ -5,17 +5,17 @@
 // #define EMPDEBUG 10
 
 /**
- * Generates an EMP pulse on the turf of the provided origin point, for the given range as a radius value. Calls
- *   `emp_act()` on every atom within range.
- *
- * Parameters:
- * - `origin` - The atom to originate the EMP from. Will be converted to `get_turf()` if not already a turf.
- * - `heavy_range` - The radius in tiles to use `EMP_ACT_HEAVY` in the `emp_act()` call.
- * - `light_range` - The radius in tiles to use `EMP_ACT_LIGHT` in the `emp_act()` call. NOTE: This is the _total_ range of the EMP, not added to `heavy_range`. This should be equal to or greater than `heavy_range` to avoid weirdness.
- * - `log` - If `TRUE`, generates an admin log detailing the EMP's size and origin area.
- *
- * Returns `FALSE` if the emp failed to generate, `TRUE` otherwise.
- **/
+	* Generates an EMP pulse on the turf of the provided origin point, for the given range as a radius value. Calls
+	*   `emp_act()` on every atom within range.
+	*
+	* Parameters:
+	* - `origin` - The atom to originate the EMP from. Will be converted to `get_turf()` if not already a turf.
+	* - `heavy_range` - The radius in tiles to use `EMP_ACT_HEAVY` in the `emp_act()` call.
+	* - `light_range` - The radius in tiles to use `EMP_ACT_LIGHT` in the `emp_act()` call. NOTE: This is the _total_ range of the EMP, not added to `heavy_range`. This should be equal to or greater than `heavy_range` to avoid weirdness.
+	* - `log` - If `TRUE`, generates an admin log detailing the EMP's size and origin area.
+	*
+	* Returns `FALSE` if the emp failed to generate, `TRUE` otherwise.
+	**/
 /proc/empulse(atom/origin, heavy_range, light_range, log = FALSE)
 	if (!origin)
 		return FALSE

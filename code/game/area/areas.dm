@@ -13,6 +13,9 @@
 	/// A lazy list of vent pumps currently in the area
 	var/list/obj/machinery/atmospherics/unary/vent_pump/vent_pumps
 
+	///Filters you can apply to the players screen when they enter a new area, for example see proxima/game/objects/effects/particles/snow.dm ; prx
+	var/screen_filter
+
 /area/New()
 	icon_state = ""
 	uid = ++global_uid
@@ -252,6 +255,13 @@
 
 	play_ambience(L)
 	L.lastarea = newarea
+	//[PRX BEGIN]
+	for(var/obj/screenfilter/F in L.client?.screen)
+		if(F!=newarea.screen_filter)
+			F.Fade()
+	if(!(newarea.screen_filter in L.client?.screen))
+		L.client?.screen += new newarea.screen_filter
+	//[PRX END]
 
 
 /// Handles playing ambient sounds to a given mob, including ship hum.

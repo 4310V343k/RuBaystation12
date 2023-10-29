@@ -1150,7 +1150,6 @@
 	pixel_x = 8;
 	pixel_y = -3
 	},
-/obj/item/device/holopad/wrist,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/office/xo)
 "cq" = (
@@ -12252,7 +12251,11 @@
 /turf/simulated/floor/reinforced,
 /area/turret_protected/ai_outer_chamber)
 "GU" = (
-/obj/structure/displaycase,
+/obj/structure/displaycase{
+	desc = "A fortified display case for prized possessions. It taunts you to kick it.";
+	name = "heavy display case";
+	req_access = list("ACCESS_CAPTAIN")
+	},
 /obj/item/gun/projectile/revolver/captain{
 	pixel_y = -3
 	},

@@ -1,19 +1,19 @@
 /* Clown Items
- * Contains:
- * 		Banana Peels
- *		Bike Horns
- */
+	* Contains:
+	* 		Banana Peels
+	*		Bike Horns
+	*/
 
 /*
- * Banana Peals
- */
+	* Banana Peals
+	*/
 /obj/item/bananapeel/Crossed(AM as mob|obj)
 	if (istype(AM, /mob/living))
 		var/mob/living/M = AM
 		M.slip("the [src.name]",4)
 /*
- * Bike Horns
- */
+	* Bike Horns
+	*/
 /obj/item/bikehorn
 	name = "bike horn"
 	desc = "A horn off of a bicycle."

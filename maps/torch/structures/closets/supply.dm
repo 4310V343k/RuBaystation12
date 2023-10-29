@@ -1,6 +1,6 @@
 /*
- * Torch Supply
- */
+	* Torch Supply
+	*/
 /decl/closet_appearance/secure_closet/torch/cargo
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_BEASTY_BROWN,

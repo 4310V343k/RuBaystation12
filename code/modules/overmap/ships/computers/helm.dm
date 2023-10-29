@@ -256,11 +256,11 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 
 /**
- * Updates `current_operator` to the new user, or `null` and ejects the old operator from the overmap view - Only one person on a helm at a time!
- * Will call `display_operator_change_message()` if `silent` is `FALSE`.
- * `autopilot` will prevent ejection from the overmap (You want to monitor your autopilot right?) and by passed on to `display_operator_change_message()`.
- * Skips ghosts and observers to prevent accidental external influencing of flight.
- */
+	* Updates `current_operator` to the new user, or `null` and ejects the old operator from the overmap view - Only one person on a helm at a time!
+	* Will call `display_operator_change_message()` if `silent` is `FALSE`.
+	* `autopilot` will prevent ejection from the overmap (You want to monitor your autopilot right?) and by passed on to `display_operator_change_message()`.
+	* Skips ghosts and observers to prevent accidental external influencing of flight.
+	*/
 /obj/machinery/computer/ship/helm/proc/set_operator(mob/user, silent, autopilot)
 	if (isobserver(user) || user == current_operator)
 		return
@@ -276,9 +276,9 @@ LEGACY_RECORD_STRUCTURE(all_waypoints, waypoint)
 
 
 /**
- * Displays visible messages indicating a change in operator.
- * `autopilot` will affect the displayed message.
- */
+	* Displays visible messages indicating a change in operator.
+	* `autopilot` will affect the displayed message.
+	*/
 /obj/machinery/computer/ship/helm/proc/display_operator_change_message(mob/old_operator, mob/new_operator, autopilot)
 	if (!old_operator)
 		new_operator.visible_message(

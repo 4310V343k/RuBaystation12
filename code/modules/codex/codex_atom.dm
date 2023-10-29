@@ -1,17 +1,17 @@
 /**
- * The codex entry name to use for this atom. By default, itself. Used for items that should direct to a codex entry
- * other than itself, such as Fleet lore.
- *
- * Returns instance of `/atom` or string.
- */
+	* The codex entry name to use for this atom. By default, itself. Used for items that should direct to a codex entry
+	* other than itself, such as Fleet lore.
+	*
+	* Returns instance of `/atom` or string.
+	*/
 /atom/proc/get_codex_value()
 	return src
 
 /**
- * Retrieves the atom's codex entry, generating a new one if not already cached.
- *
- * Returns instance of `/datum/codex_entry` or `FALSE` if there's no codex data to generate.
- */
+	* Retrieves the atom's codex entry, generating a new one if not already cached.
+	*
+	* Returns instance of `/datum/codex_entry` or `FALSE` if there's no codex data to generate.
+	*/
 /atom/proc/get_specific_codex_entry()
 	if(SScodex.entries_by_path[type])
 		return SScodex.entries_by_path[type]
@@ -32,10 +32,10 @@
 	return entry
 
 /**
- * Handler for displaying information in the Mechanics section of the atom's codex entry.
- *
- * Returns string.
- */
+	* Handler for displaying information in the Mechanics section of the atom's codex entry.
+	*
+	* Returns string.
+	*/
 /atom/proc/get_mechanics_info()
 	return
 
@@ -58,45 +58,45 @@
 /atom/var/const/CODEX_INTERACTION_EMP = "EMP"
 
 /**
- * Handler for displaying information on tool interations in the Mechanics section of the atom's codex entry.
- *
- * Returns associative list of strings. Best practice is to append information to existing entries with `+=`, if present (This is null safe), i.e.:
- * ```dm
- * . = ..()
- * .["Screwdriver"] += "<p>Toggles the maintenance panel open and closed.</p>"
- * ```
- */
+	* Handler for displaying information on tool interations in the Mechanics section of the atom's codex entry.
+	*
+	* Returns associative list of strings. Best practice is to append information to existing entries with `+=`, if present (This is null safe), i.e.:
+	* ```dm
+	* . = ..()
+	* .["Screwdriver"] += "<p>Toggles the maintenance panel open and closed.</p>"
+	* ```
+	*/
 /atom/proc/get_interactions_info()
 	RETURN_TYPE(/list)
 	return list()
 
 /**
- * Handler for displaying information in the Antagonist section of the atom's codex entry.
- *
- * Returns string.
- */
+	* Handler for displaying information in the Antagonist section of the atom's codex entry.
+	*
+	* Returns string.
+	*/
 /atom/proc/get_antag_info()
 	return
 
 
 /**
- * Handler for displaying information on tool interations in the Antagonist section of the atom's codex entry.
- *
- * Returns associative list of strings. Best practice is to append information to existing entries with `+=`, if present (This is null safe), i.e.:
- * ```dm
- * . = ..()
- * .["Screwdriver"] += "<p>Toggles the maintenance panel open and closed.</p>"
- * ```
- */
+	* Handler for displaying information on tool interations in the Antagonist section of the atom's codex entry.
+	*
+	* Returns associative list of strings. Best practice is to append information to existing entries with `+=`, if present (This is null safe), i.e.:
+	* ```dm
+	* . = ..()
+	* .["Screwdriver"] += "<p>Toggles the maintenance panel open and closed.</p>"
+	* ```
+	*/
 /atom/proc/get_antag_interactions_info()
 	RETURN_TYPE(/list)
 	return list()
 
 /**
- * Handler for displaying information in the Lore section of the atom's codex entry.
- *
- * Returns string.
- */
+	* Handler for displaying information in the Lore section of the atom's codex entry.
+	*
+	* Returns string.
+	*/
 /atom/proc/get_lore_info()
 	return
 

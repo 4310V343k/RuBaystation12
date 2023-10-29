@@ -1,6 +1,6 @@
 /*
- * Science
- */
+	* Science
+	*/
 /obj/item/clothing/under/rank/research_director
 	desc = "It's a jumpsuit worn by those with the know-how to achieve the position of \"Chief Science Officer\". Its fabric provides minor protection from biological contaminants."
 	name = "chief science officer's jumpsuit"
@@ -44,8 +44,8 @@
 		bio = ARMOR_BIO_MINOR
 		)
 /*
- * Medical
- */
+	* Medical
+	*/
 /obj/item/clothing/under/rank/chief_medical_officer
 	desc = "It's a jumpsuit worn by those with the experience to be \"Chief Medical Officer\". It provides minor biological protection."
 	name = "chief medical officer's jumpsuit"
@@ -192,8 +192,8 @@
 
 
 /*
- * Medsci, unused (i think) stuff
- */
+	* Medsci, unused (i think) stuff
+	*/
 /obj/item/clothing/under/rank/geneticist_new
 	desc = "It's made of a special fiber which provides minor protection against biohazards."
 	name = "geneticist's jumpsuit"

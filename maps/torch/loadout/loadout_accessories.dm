@@ -354,7 +354,7 @@
 	allowed_branches = CIVILIAN_BRANCHES
 
 /*********************
- tactical accessories
+	tactical accessories
 *********************/
 /datum/gear/tactical/ubac
 	display_name = "black UBAC shirt"

@@ -50,4 +50,3 @@
 	flags_inv = HIDEEYES
 	body_parts_covered = FACE|EYES
 	gas_transfer_coefficient = 0.01
-

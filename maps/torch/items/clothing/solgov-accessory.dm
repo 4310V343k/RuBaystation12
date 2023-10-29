@@ -413,7 +413,7 @@ badges
 
 /obj/item/clothing/accessory/badge/solgov/tags/three
 	name = "contractor three class badge"
-	desc = "Plastic badge with gold inscription 'THREE CLASS'. Owned by a corporate contractor. Shows the level of a low specialist."
+	desc = "Plastic badge with gold inscription 'THIRD CLASS'. Owned by a corporate contractor. Shows the level of a low specialist."
 	icon = 'maps/torch/icons/obj/obj_accessories_solgov.dmi'
 	icon_state = "cont_c3"
 	badge_string = "Qualification System"
@@ -521,7 +521,7 @@ department tags
 	icon_state = "dept_exped"
 	on_rolled = list("down" = "none", "rolled" = "dept_exped_sleeves")
 	slot = ACCESSORY_SLOT_DEPT
-	accessory_flags = EMPTY_BITFIELD | ACCESSORY_REMOVABLE
+	accessory_flags = EMPTY_BITFIELD
 
 /obj/item/clothing/accessory/solgov/department/command
 	name = "command insignia"

@@ -43,5 +43,3 @@
 				owner.adjustToxLoss(0.5)
 			if(status & ORGAN_DEAD)
 				owner.adjustToxLoss(1)
-
-

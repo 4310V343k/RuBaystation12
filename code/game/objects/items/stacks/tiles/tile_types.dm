@@ -1,11 +1,11 @@
 /* Diffrent misc types of tiles
- * Contains:
- *		Prototype
- *		Grass
- *		Wood
- *		Linoleum
- *		Carpet
- */
+	* Contains:
+	*		Prototype
+	*		Grass
+	*		Wood
+	*		Linoleum
+	*		Carpet
+	*/
 
 /obj/item/stack/tile
 	name = "tile"
@@ -24,8 +24,8 @@
 	obj_flags = 0
 
 /*
- * Grass
- */
+	* Grass
+	*/
 /obj/item/stack/tile/grass
 	name = "grass tile"
 	singular_name = "grass floor tile"
@@ -34,8 +34,8 @@
 	origin_tech = list(TECH_BIO = 1)
 
 /*
- * Wood
- */
+	* Wood
+	*/
 /obj/item/stack/tile/wood
 	name = "wood floor tile"
 	singular_name = "wood floor tile"
@@ -219,8 +219,8 @@
 	icon_state = "tile_stone"
 
 /*
- * Carpets
- */
+	* Carpets
+	*/
 /obj/item/stack/tile/carpet
 	name = "brown carpet"
 	singular_name = "brown carpet"
