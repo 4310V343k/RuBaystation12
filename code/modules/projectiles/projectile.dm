@@ -206,27 +206,30 @@
 //	var/distance_mod
 	var/miss_modifier
 
-
-	//roll to-hit
-	var/miss_modifier = max(distance_falloff*(distance*2) - hitchance_mod + special_miss_modifier, -30)
+//roll to-hit
+	if(distance >= 2)
+		miss_modifier = max(distance_falloff * (distance+1)  - hitchance_mod + special_miss_modifier, -30)
+	else
+		miss_modifier = max(0 - hitchance_mod + special_miss_modifier, -30)
+//[/INF]
 	//makes moving targets harder to hit, and stationary easier to hit
-	var/movement_mod = min(5, (world.time - target_mob.l_move_time) - 20)
+	var/movment_mod = min(5, (world.time - target_mob.l_move_time) - 20)
 	//Calc close distance bonus
-
-
-	if (distance < 5)
-		distance_mod = 30 / (distance * 2)
-	if (distance <= 2)
-		if (movment_mod >= 0)
-			distance_mod = 30 / distance
-	miss_modifier -= distance_mod
-
+//[INF]
+/*
+//	if (distance < 5)
+//		distance_mod = 30 / (distance * 2)
+//	if (distance <= 2)
+//		if (movment_mod >= 0)
+//			distance_mod = 30 / distance
+//	miss_modifier -= distance_mod
+*/
+//[/INF]
 	//running in a straight line isnt as helpful tho
 	if(movment_mod < 0)
 		if(target_mob.last_move == get_dir(firer, target_mob))
 			movment_mod *= 0.25
 		else if(target_mob.last_move == get_dir(target_mob,firer))
-
 			movment_mod *= 0.5
 	miss_modifier -= movment_mod
 
