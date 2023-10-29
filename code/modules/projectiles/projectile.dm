@@ -211,16 +211,15 @@
 	var/miss_modifier = max(distance_falloff*(distance*2) - hitchance_mod + special_miss_modifier, -30)
 	//makes moving targets harder to hit, and stationary easier to hit
 	var/movement_mod = min(5, (world.time - target_mob.l_move_time) - 20)
+	//Calc close distance bonus
 
-	if (damage_falloff)
-		var/damage_mod = 1
-		for (var/list/entry as anything in damage_falloff_list)
-			if (entry[1] > distance)
-				break
-			damage_mod = entry[2]
-		damage = damage * damage_mod
-		armor_penetration = armor_penetration * damage_mod
-		agony = agony * damage_mod
+
+	if (distance < 5)
+		distance_mod = 30 / (distance * 2)
+	if (distance <= 2)
+		if (movment_mod >= 0)
+			distance_mod = 30 / distance
+	miss_modifier -= distance_mod
 
 	//running in a straight line isnt as helpful tho
 	if(movement_mod < 0)
