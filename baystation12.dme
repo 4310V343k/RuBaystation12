@@ -3264,7 +3264,7 @@
 #include "proxima\code\game\machinery\factory\blueprint.dm"
 #include "proxima\code\game\machinery\factory\factory.dm"
 #include "proxima\code\game\machinery\factory\blueprints\generic.dm"
-#include "proxima\code\game\objects\effects\spawners\gibspawner.dm"
+#include "code\game\objects\effects\spawners\gibspawner.dm"
 #include "proxima\code\game\objects\items\circuits_remote.dm"
 #include "proxima\code\game\objects\items\containers.dm"
 #include "proxima\code\game\objects\items\posters.dm"
