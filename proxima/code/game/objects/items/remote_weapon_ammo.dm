@@ -54,7 +54,7 @@
 /obj/item/remote_weapon_ammo/explosive/illimination/FireSelf(turf/target)
 	..()
 	var/lifetime = rand(8 MINUTES, 16 MINUTES)
-	var/light_colour = pick("#FFFFFF")
+	var/light_colour = pick("#FFFFFF", "#fc0f29")
 
 	playsound(src, 'sound/effects/snap.ogg', 80, 1)
 	audible_message("<span class='warning'>\The [src] detonates with a sharp crack!</span>")
