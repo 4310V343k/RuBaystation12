@@ -244,7 +244,7 @@
 	desc = "Can hold a handgun in."
 	icon_state = "pistol_holster"
 	item_state = "pistol_holster"
-
+	slot_flags = SLOT_BELT | SLOT_DENYPOCKET
 	storage_slots = 1
 	w_class = ITEM_SIZE_NORMAL
 	max_w_class = ITEM_SIZE_NORMAL
@@ -276,7 +276,7 @@
 	desc = "Can hold two handguns in. Quick on the draw!"
 	icon_state = "double_holster"
 	item_state = "double_holster"
-
+	slot_flags = SLOT_BELT | SLOT_DENYPOCKET
 	matter = list(MATERIAL_BIOMATTER = 24) // Two holsters in one!
 	slot_flags = SLOT_BELT|SLOT_DENYPOCKET
 	max_w_class = ITEM_SIZE_HUGE
@@ -310,7 +310,6 @@
 	desc = "Can hold a baton, or indeed most shafts."
 	icon_state = "baton_holster"
 	item_state = "baton_holster"
-
 	storage_slots = 1
 	max_w_class = ITEM_SIZE_NORMAL
 
