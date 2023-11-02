@@ -232,7 +232,7 @@
 	desc = "Can hold seven cylindrical and small items, including but not limiting to flares, glowsticks, syringes and even hatton tubes or rockets. Tho the branding on this wants you to only really use it with vial."
 
 
-/obj/item/storage/pouch/tubular/update_icon()
+/obj/item/storage/pouch/tubular/on_update_icon()
 	..()
 	overlays.Cut()
 	if(contents.len)
@@ -265,7 +265,7 @@
 
 	sliding_behavior = TRUE
 
-/obj/item/storage/pouch/pistol_holster/update_icon()
+/obj/item/storage/pouch/pistol_holster/on_update_icon()
 	..()
 	overlays.Cut()
 	if(contents.len)
@@ -282,7 +282,7 @@
 	max_w_class = ITEM_SIZE_HUGE
 	storage_slots = 2
 
-/obj/item/storage/pouch/pistol_holster/cowboy/update_icon()
+/obj/item/storage/pouch/pistol_holster/cowboy/on_update_icon()
 	..()
 	overlays.Cut()
 	if(contents.len)
@@ -298,7 +298,7 @@
 		/obj/item/material/knife/combat
 		)
 
-/obj/item/storage/pouch/kniferig/update_icon()
+/obj/item/storage/pouch/kniferig/on_update_icon()
 	..()
 	overlays.Cut()
 	if(contents.len)
@@ -332,7 +332,7 @@
 	update_icon()
 	. = ..()
 
-/obj/item/storage/pouch/baton_holster/update_icon()
+/obj/item/storage/pouch/baton_holster/on_update_icon()
 	..()
 	overlays.Cut()
 	if(contents.len)
