@@ -218,7 +218,8 @@
 					/obj/item/device/scanner/health,
 					/obj/item/device/flashlight/pen,
 					/obj/item/reagent_containers/syringe,
-					/obj/item/clothing/accessory/storage/white_vest)
+					/obj/item/clothing/accessory/storage/white_vest,
+					/obj/item/storage/pouch/tubular/vial)
 	cost = 22
 	containertype = /obj/structure/closet/crate/secure
 	containername = "paramedic equipment crate"

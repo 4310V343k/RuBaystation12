@@ -180,7 +180,7 @@ mob
 			// Update the label to show it
 			winset(src,"imageLabel","image='\ref[I]'");
 
-		Add_Overlay()
+		overlays += ()
 			set name = "4. Add Overlay"
 			overlays += image(icon='old_or_unused.dmi',icon_state="yellow",pixel_x = rand(-64,32), pixel_y = rand(-64,32))
 
@@ -190,7 +190,7 @@ mob
 				// The third parameter forces it to generate a new one, even if it's already cached
 				getFlatIcon(src,0,2)
 				if(prob(5))
-					Add_Overlay()
+					overlays += ()
 			Browse_Icon()
 
 		Cache_Test()
