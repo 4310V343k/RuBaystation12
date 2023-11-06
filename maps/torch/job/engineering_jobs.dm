@@ -48,8 +48,6 @@
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
 
-	intro_music = list('proxima/sound/intro/engineer1.ogg')
-
 /datum/job/senior_engineer/get_description_blurb()
 	return "Вы - Старший инженер (СИ). Вы опытный старший унтер-офицер. Вам подчиняется остальной отдел, за исключением Главного инженера. \
 	Вы должны быть экспертом практически в каждом инженерном деле, а также быть знакомым с лидерскими качествами и владеть ими. \
@@ -119,8 +117,6 @@
 							 /datum/computer_file/program/rcon_console,
 							 /datum/computer_file/program/camera_monitor,
 							 /datum/computer_file/program/shields_monitor)
-
-	intro_music = list('proxima/sound/intro/engineer1.ogg')
 
 /datum/job/engineer/get_description_blurb()
 	return "Вы - инженер. Вы работаете под одним из множества названий и можете быть высокоспециализированны в определённой области инженернии. \

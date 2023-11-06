@@ -55,8 +55,6 @@
 
 	var/required_language
 
-	var/intro_music = list() //prox
-
 /datum/job/New()
 
 	if(prob(100-availablity_chance))	//Close positions, blah blah.
