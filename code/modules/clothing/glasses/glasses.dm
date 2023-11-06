@@ -12,7 +12,7 @@
 	deactivation_sound = null
 	var/obj/screen/overlay = null
 	var/obj/item/clothing/glasses/hud/hud = null	// Hud glasses, if any
-	var/electric = FALSE //if the glasses should be disrupted by EMP
+	electric = FALSE //if the glasses should be disrupted by EMP
 
 
 /obj/item/clothing/glasses/Initialize()
