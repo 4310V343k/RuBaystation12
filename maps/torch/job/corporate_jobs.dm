@@ -94,8 +94,6 @@
 							 /datum/computer_file/program/atmos_control,
 							 /datum/computer_file/program/rcon_console)
 
-	intro_music = list('proxima/sound/intro/synth1.ogg')
-
 /datum/job/synthetic/post_equip_rank(var/mob/person, var/alt_title)
 	var/mob/living/carbon/H = person
 	var/obj/item/organ/internal/posibrain/posi = H.internal_organs_by_name[BP_POSIBRAIN]
