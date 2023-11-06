@@ -22,14 +22,6 @@
 /obj/item/clothing/accessory/glassesmod/proc/process_hud(mob/M)
 	return
 
-
-/*obj/item/clothing/accessory/glassesmod/update_icon()
-	if (!toggleable)
-		icon_state += "_off"
-	update_clothing_icon()*/
-
-
-
 /obj/item/clothing/accessory/glassesmod/thermal
 	name = "thermal sights"
 	desc = "An older set of thermal vision goggles, modified to attach to a helmet."
