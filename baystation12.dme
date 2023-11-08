@@ -3251,7 +3251,7 @@
 #include "proxima\code\game\items\devices\holopad_hand.dm"
 #include "proxima\code\game\items\devices\remote_device.dm"
 #include "proxima\code\game\items\weapons\gun\energy\k342.dm"
-#include "proxima\code\game\items\weapons\gun\projectiles\bosnia.dm"
+#include "proxima\code\game\items\weapons\gun\projectiles\prx_gun.dm"
 #include "proxima\code\game\items\weapons\melee\swords.dm"
 #include "proxima\code\game\items\weapons\projectile\infinity-ammuntion.dm"
 #include "proxima\code\game\items\weapons\projectile\infinity-guns.dm"
