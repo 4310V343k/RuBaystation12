@@ -8,7 +8,6 @@
 	icon = 'proxima/code/modules/turrets/turrets_unsc.dmi'
 	icon_state = "bipod"
 	layer = ABOVE_HUMAN_LAYER
-	anchored = 1
 	density = 0
 	buckle_movable = 1
 
