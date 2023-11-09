@@ -241,7 +241,7 @@
 	if(!removed_from_turret)
 		qdel(src)
 
-/obj/item/gun/projectile/turret/update_icon()
+/obj/item/gun/projectile/turret/on_update_icon()
 	if(ammo_magazine)
 		icon_state = initial(icon_state)
 	else
