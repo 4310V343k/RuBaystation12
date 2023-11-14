@@ -83,5 +83,4 @@
 	path = /obj/item/clothing/accessory/solgov/skillbadge/weapon
 	allowed_skills = list(
 		SKILL_WEAPONS = SKILL_EXPERT
-		SKILL_HAULING = SKILL_ADEPT
 	)
