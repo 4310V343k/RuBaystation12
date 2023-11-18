@@ -23,6 +23,7 @@
 "aae" = (
 /obj/structure/closet/firecloset,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralstarboard)
 "aaf" = (
@@ -874,13 +875,14 @@
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/firstdeck/centralstarboard)
 "abQ" = (
-/obj/effect/floor_decal/corner/beige/mono,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/chemistry)
 "abR" = (
@@ -915,10 +917,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/structure/table/standard,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "abU" = (
@@ -2053,6 +2055,7 @@
 	},
 /obj/effect/decal/cleanable/cobweb2,
 /obj/structure/railing/mapped,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "adS" = (
@@ -2165,10 +2168,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/head/aux)
 "aef" = (
-/obj/structure/table/rack,
-/obj/random/maintenance/solgov,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "aeg" = (
 /turf/simulated/floor/plating,
@@ -2549,6 +2550,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/foyer)
 "aeD" = (
@@ -2927,7 +2932,7 @@
 	dir = 9
 	},
 /obj/structure/bed/roller,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "afe" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -3040,6 +3045,7 @@
 	autoset_access = 0;
 	req_access = list(list("ACCESS_MEDICAL","ACCESS_MORGUE","ACCESS_FORENSICS"))
 	},
+/obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/foyer)
 "afp" = (
@@ -3191,7 +3197,7 @@
 /obj/item/modular_computer/telescreen/preset/medical{
 	pixel_y = -32
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "afC" = (
 /obj/effect/floor_decal/techfloor{
@@ -3443,6 +3449,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "afZ" = (
@@ -3544,9 +3551,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/staging)
 "agj" = (
-/obj/effect/floor_decal/corner/paleblue/mono,
 /obj/structure/bed/roller,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/effect/floor_decal/spline/plain/blue{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/staging)
 "agl" = (
@@ -3815,9 +3823,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/forestarboard)
 "agK" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
 /obj/machinery/button/alternate/door{
 	id_tag = "inf_stage";
 	name = "Infirmary Staging Exit";
@@ -4928,11 +4933,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/forestarboard)
 "ajd" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -23
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 8;
+	icon_state = "railing0-1"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "aje" = (
 /obj/structure/cable/green{
@@ -6555,6 +6561,10 @@
 /area/maintenance/firstdeck/aftstarboard)
 "asl" = (
 /obj/structure/grille,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
 "ast" = (
@@ -6754,6 +6764,11 @@
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
@@ -7529,6 +7544,9 @@
 	dir = 5;
 	icon_state = "corner_white"
 	},
+/obj/machinery/atm{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "axh" = (
@@ -8113,18 +8131,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/green{
-	dir = 10
-	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "azq" = (
 /obj/machinery/light,
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -32
+/obj/machinery/button/blast_door{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Door Control";
+	pixel_y = -26;
+	req_access = newlist();
+	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/corner/green{
-	dir = 10
+	dir = 8;
+	icon_state = "corner_white"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
@@ -8245,8 +8267,13 @@
 /turf/simulated/wall/prepainted,
 /area/crew_quarters/sleep/cryo/aux)
 "aAt" = (
-/obj/effect/wallframe_spawn/no_grille,
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor,
+/obj/effect/floor_decal/keep_clear/hazard,
+/obj/machinery/door/blast/shutters{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Shutters"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/sleep/cryo/aux)
 "aAu" = (
 /obj/machinery/door/firedoor,
@@ -8258,8 +8285,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/glass/civilian{
-	name = "Auxiliary Cryogenic Storage"
+/obj/effect/floor_decal/keep_clear/hazard,
+/obj/machinery/door/blast/shutters{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Shutters"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/sleep/cryo/aux)
@@ -8519,9 +8548,6 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/atm{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
@@ -8538,6 +8564,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBB" = (
@@ -8550,6 +8581,16 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/button/blast_door{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Door Control";
+	pixel_y = 24;
+	req_access = newlist()
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4;
+	icon_state = "warningcorner"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBC" = (
@@ -8563,6 +8604,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
@@ -8580,6 +8624,14 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBE" = (
@@ -8593,6 +8645,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBF" = (
@@ -8606,6 +8666,21 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/button/blast_door{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Door Control";
+	pixel_y = 24;
+	req_access = newlist()
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1;
+	icon_state = "warningcorner"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBG" = (
@@ -8622,6 +8697,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBH" = (
@@ -14281,6 +14361,11 @@
 "bmO" = (
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
+"bni" = (
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralstarboard)
 "bnG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -15059,6 +15144,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod15/station)
+"bZJ" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/center)
 "cab" = (
 /obj/machinery/cryopod{
 	dir = 1
@@ -15088,11 +15180,31 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/exam_room)
+"cbl" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass/civilian{
+	name = "Cryogenic Storage"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/crew_quarters/sleep/cryo/aux)
 "ccb" = (
 /obj/effect/shuttle_landmark/escape_pod/start/pod15,
 /obj/effect/wallframe_spawn/reinforced/titanium,
 /turf/simulated/floor/plating,
 /area/shuttle/escape_pod15/station)
+"cct" = (
+/obj/structure/grille,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	d2 = 8;
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/aftstarboard)
 "cdb" = (
 /obj/effect/shuttle_landmark/escape_pod/start/pod16,
 /obj/effect/wallframe_spawn/reinforced/titanium,
@@ -16342,6 +16454,7 @@
 	pixel_x = 24
 	},
 /obj/machinery/atmospherics/unary/cryo_cell,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "dPA" = (
@@ -16753,6 +16866,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/foyer/storeroom)
+"epZ" = (
+/obj/machinery/light,
+/obj/machinery/button/blast_door{
+	id_tag = "cryogenic_storage";
+	name = "Cryogenic Storage Door Control";
+	pixel_y = -27;
+	req_access = newlist();
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/center)
 "eqb" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -16784,10 +16912,10 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/sign/or2,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/floor_decal/sign/or2,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "etI" = (
@@ -16886,14 +17014,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "eAb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -17140,9 +17268,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "eUb" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
+/obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/wall/prepainted,
+/area/security/evidence)
 "eUO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -17198,6 +17326,13 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/teleporter/firstdeck)
+"faH" = (
+/obj/structure/bed/roller,
+/obj/effect/floor_decal/spline/plain/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/monotile,
+/area/medical/staging)
 "fbQ" = (
 /obj/machinery/door/airlock/glass/civilian{
 	autoset_access = 0;
@@ -17217,6 +17352,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/aftstarboard)
+"fiY" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/sleep/cryo/aux)
 "fkb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17265,11 +17408,18 @@
 /turf/simulated/floor/carpet,
 /area/medical/counselor/therapy)
 "fnu" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 8
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
 	},
-/turf/simulated/floor/tiled,
-/area/hallway/primary/firstdeck/center)
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/machinery/newscaster{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/cryo/aux)
 "fnR" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -17396,10 +17546,6 @@
 "fEb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
-	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -17746,15 +17892,23 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/rnd/rnd_sec)
 "ggA" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
 	},
-/obj/effect/floor_decal/corner/green/half,
-/obj/machinery/newscaster{
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/monotile,
-/area/hallway/primary/firstdeck/center)
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "ghb" = (
 /obj/structure/iv_drip,
 /obj/effect/floor_decal/floordetail/edgedrain{
@@ -17782,10 +17936,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/green/half,
-/obj/item/device/radio/intercom{
-	dir = 1;
-	pixel_y = -28
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/center)
 "gib" = (
@@ -17840,7 +17990,7 @@
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "gnt" = (
 /obj/structure/bed/chair/padded,
@@ -18633,12 +18783,15 @@
 /turf/simulated/wall/prepainted,
 /area/rnd/development)
 "hwx" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
 	},
-/obj/structure/iv_drip,
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/random/maintenance/solgov,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/firstdeck/centralstarboard)
 "hwU" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/window/reinforced{
@@ -18772,6 +18925,14 @@
 "hBr" = (
 /turf/simulated/wall/r_wall/hull,
 /area/maintenance/firstdeck/forestarboard)
+"hBX" = (
+/obj/effect/wallframe_spawn/reinforced,
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/wall/prepainted,
+/area/crew_quarters/sleep/cryo/aux)
 "hCb" = (
 /obj/item/device/radio/intercom{
 	pixel_y = 23
@@ -19068,11 +19229,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "hVb" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
 	icon_state = "warning"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
 /area/rnd/entry)
@@ -19263,6 +19424,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/questioning)
+"ilZ" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/center)
 "imb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8;
@@ -19436,6 +19606,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
+"ixp" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/firstdeck/centralstarboard)
 "ixB" = (
 /obj/structure/closet/emcloset,
 /obj/random/drinkbottle,
@@ -21474,7 +21648,6 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "kTb" = (
-/obj/effect/floor_decal/corner/pink/mono,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
@@ -21489,7 +21662,10 @@
 /obj/machinery/body_scanconsole{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/corner/pink{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
 /area/medical/staging)
 "kTl" = (
 /obj/structure/table/rack,
@@ -22143,6 +22319,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
+"lGj" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/random/maintenance/solgov,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/firstdeck/centralstarboard)
 "lGw" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -22639,9 +22821,7 @@
 /obj/machinery/light/spot{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "mvL" = (
@@ -22765,6 +22945,23 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
+"mza" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "mzb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -22996,7 +23193,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/nuke_storage)
 "mMX" = (
-/obj/effect/floor_decal/corner/green,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "mNb" = (
@@ -23113,6 +23310,20 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/firstdeck)
+"mZO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "nbb" = (
 /obj/structure/cable/green{
 	d2 = 2;
@@ -24917,6 +25128,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/misc_lab)
+"piW" = (
+/obj/effect/wallframe_spawn/reinforced/no_grille,
+/turf/simulated/wall/prepainted,
+/area/maintenance/firstdeck/centralstarboard)
 "pjb" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -25381,6 +25596,14 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/reinforced,
 /area/thruster/d1port)
+"pIX" = (
+/obj/structure/railing/mapped,
+/obj/structure/railing/mapped{
+	dir = 4;
+	icon_state = "railing0-1"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/centralstarboard)
 "pJb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -28196,6 +28419,7 @@
 "sLb" = (
 /obj/machinery/atmospherics/unary/cryo_cell,
 /obj/effect/floor_decal/corner/paleblue/mono,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "sMf" = (
@@ -28498,6 +28722,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"sZz" = (
+/obj/structure/iv_drip,
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "tab" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -29324,7 +29553,7 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "uoC" = (
 /obj/structure/disposalpipe/segment,
@@ -29351,6 +29580,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/aftstarboard)
@@ -29761,7 +29995,11 @@
 /obj/effect/floor_decal/spline/plain/blue{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/white,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white/monotile,
 /area/medical/sleeper)
 "vpA" = (
 /obj/machinery/status_display,
@@ -30183,6 +30421,18 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/equipstorage)
+"wmk" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/machinery/newscaster{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/cryo/aux)
 "wmK" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable/green{
@@ -30372,6 +30622,26 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/command/armoury/access)
+"wRT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/cobweb2,
+/turf/simulated/floor/plating,
+/area/maintenance/firstdeck/forestarboard)
 "wSf" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 4
@@ -40748,7 +41018,7 @@ adK
 aiP
 ajP
 vMw
-aiu
+eUb
 aiu
 lVb
 aiu
@@ -43973,7 +44243,7 @@ aaa
 aaa
 hBr
 hBr
-aeO
+wRT
 afL
 agJ
 adS
@@ -45406,7 +45676,7 @@ aqn
 awa
 rKo
 ayb
-ure
+ilZ
 aAm
 ltt
 aAm
@@ -46810,10 +47080,10 @@ akh
 ali
 ali
 ans
-acD
+piW
 cap
 aeh
-acD
+piW
 xTc
 atH
 auN
@@ -47426,8 +47696,8 @@ auP
 kUb
 cZS
 mvl
-azm
-aAK
+ure
+cbl
 aBz
 aCQ
 aCQ
@@ -47628,8 +47898,8 @@ amp
 mrX
 lfb
 ayi
-ggA
-aAK
+ghI
+fiY
 aBA
 aCR
 aCR
@@ -47830,8 +48100,8 @@ lcq
 uSl
 axi
 ayg
-ure
-aAt
+azq
+aAK
 aBB
 aCS
 aCS
@@ -48045,7 +48315,7 @@ aJO
 aJO
 aJO
 aJO
-aJO
+wmk
 aAK
 aPO
 jjh
@@ -48436,7 +48706,7 @@ kVb
 acE
 ycz
 ayg
-fnu
+mMX
 aAt
 aBE
 aCV
@@ -48449,7 +48719,7 @@ aJQ
 aKW
 aKW
 aKW
-aKW
+fnu
 aAK
 aPQ
 jjh
@@ -48638,8 +48908,8 @@ kWb
 ldb
 ycz
 lib
-ure
-aAt
+epZ
+aAK
 aBF
 aCR
 aCR
@@ -48821,9 +49091,9 @@ abP
 abP
 abP
 aae
-rhO
-rhO
-rhO
+hwx
+lGj
+ixp
 ahX
 acD
 alq
@@ -48841,7 +49111,7 @@ acE
 axh
 ayi
 ghI
-aAK
+hBX
 aBG
 aCS
 aCS
@@ -49042,8 +49312,8 @@ kdb
 oJb
 abf
 ayg
-azq
-aAK
+ure
+cbl
 aBH
 aCW
 aCW
@@ -49244,7 +49514,7 @@ oJb
 oJb
 koX
 ayg
-ure
+bZJ
 aAs
 aBI
 aCX
@@ -49426,7 +49696,7 @@ aaa
 abP
 abP
 abP
-rhO
+bni
 cjb
 rhO
 vzy
@@ -50032,7 +50302,7 @@ aaa
 abP
 abP
 abP
-rhO
+pIX
 ahX
 rhO
 vzy
@@ -50442,13 +50712,13 @@ rhO
 vzy
 vzy
 pbd
-dZb
-eTb
+dWb
+jcu
 vnC
 umT
 glb
 bGZ
-ezb
+sZz
 gyV
 oCf
 pjV
@@ -50644,7 +50914,7 @@ axl
 poS
 poS
 aei
-dWb
+dZb
 etb
 eRb
 anM
@@ -50658,7 +50928,7 @@ agc
 agZ
 ycz
 heb
-ure
+ilZ
 auN
 rxK
 rma
@@ -50846,8 +51116,8 @@ cMb
 deb
 poS
 dMb
-dWb
-jcu
+dZb
+mZO
 ezb
 ezb
 adu
@@ -51052,11 +51322,11 @@ dZb
 eTb
 eHb
 avO
-eTb
+mza
 dZb
 afd
 gyV
-agj
+faH
 agj
 agK
 leb
@@ -51255,7 +51525,7 @@ exb
 ixf
 anL
 adH
-hwx
+dZb
 afB
 lHO
 rPz
@@ -51858,9 +52128,9 @@ poS
 dNb
 ebb
 eAb
-eUb
+ezb
 mvE
-adL
+ggA
 dZb
 dMe
 lHO
@@ -57722,7 +57992,7 @@ mpy
 mpy
 acL
 asl
-asl
+cct
 acL
 snG
 lkp
