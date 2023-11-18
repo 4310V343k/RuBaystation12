@@ -8560,9 +8560,6 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/light/spot{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
 	d1 = 1;
@@ -8590,6 +8587,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4;
 	icon_state = "warningcorner"
+	},
+/obj/machinery/light/spot{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
@@ -8681,6 +8681,9 @@
 	dir = 1;
 	icon_state = "warningcorner"
 	},
+/obj/machinery/light/spot{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aBG" = (
@@ -8692,9 +8695,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/machinery/light/spot{
-	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
@@ -8726,6 +8726,9 @@
 	},
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aBJ" = (
@@ -8876,10 +8879,6 @@
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
-	dir = 4;
-	pixel_x = -21
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aCQ" = (
@@ -8946,9 +8945,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/cryo/aux)
 "aCX" = (
-/obj/machinery/newscaster{
-	pixel_x = 32
-	},
 /obj/machinery/computer/arcade,
 /obj/machinery/light/spot{
 	dir = 4
@@ -9086,9 +9082,9 @@
 "aDX" = (
 /obj/structure/table/standard,
 /obj/item/device/paicard,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -24
+/obj/item/device/radio/intercom{
+	dir = 4;
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo/aux)
@@ -10362,6 +10358,10 @@
 "aJN" = (
 /obj/structure/table/standard,
 /obj/random/coin,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -24
+	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aJO" = (
@@ -17407,19 +17407,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/medical/counselor/therapy)
-"fnu" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4;
-	icon_state = "warning"
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/sleep/cryo/aux)
 "fnR" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hos,
@@ -30421,18 +30408,6 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/medical/equipstorage)
-"wmk" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/obj/machinery/newscaster{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/sleep/cryo/aux)
 "wmK" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable/green{
@@ -48315,7 +48290,7 @@ aJO
 aJO
 aJO
 aJO
-wmk
+aJO
 aAK
 aPO
 jjh
@@ -48719,7 +48694,7 @@ aJQ
 aKW
 aKW
 aKW
-fnu
+aKW
 aAK
 aPQ
 jjh
