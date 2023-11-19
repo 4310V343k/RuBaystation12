@@ -19,6 +19,16 @@
 		)
 	activation_sound = 'sound/items/goggles_charge.ogg'
 
+/obj/item/clothing/accessory/glassesmod/on_update_icon()
+	icon_state = initial(icon_state)
+	if (active == 0)
+		icon_state += "_off"
+	if (active == 1)
+		icon_state -= "_off"
+	update_clothing_icon()
+
+
+
 /obj/item/clothing/accessory/glassesmod/proc/process_hud(mob/M)
 	return
 
@@ -43,7 +53,6 @@
 	slot = ACCESSORY_SLOT_VISOR
 	see_invisible = SEE_INVISIBLE_NOLIGHTING
 	toggleable = TRUE
-	off_state = "nvgoff"
 	electric = TRUE
 	nvg = TRUE
 	darkness_view = 4
