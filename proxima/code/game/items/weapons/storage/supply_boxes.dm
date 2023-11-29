@@ -5,7 +5,7 @@
 	desc = "A box for a certain type of item."
 	storage_slots = 5
 	max_w_class = ITEM_SIZE_NORMAL
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_LARGE
 	matter = list(MATERIAL_STEEL = 2000)
 	origin_tech = list(TECH_MATERIAL = 2)
 
@@ -82,10 +82,10 @@
 		usr.put_in_active_hand(src)
 
 /obj/item/storage/fancy/supply_box/examine(mob/user, distance)
-    . = ..()
-    if((distance < 4) && (welded))
-        to_chat(usr, SPAN_NOTICE("You notice that this box is welded."))
-        return
+	. = ..()
+	if((distance < 4) && (welded))
+		to_chat(usr, SPAN_NOTICE("You notice that this box is welded."))
+		return
 
 /obj/item/storage/fancy/supply_box/on_update_icon()
 	. = ..()
@@ -97,7 +97,7 @@
 	overlay = null
 
 /* OTHER TYPES OF
-   SUPPLY BOXES    */
+	SUPPLY BOXES    */
 
 /obj/item/storage/fancy/supply_box/cell
 	icon_state = "cell_box"
@@ -151,12 +151,12 @@
 
 /obj/item/storage/fancy/supply_box/lightgrenade
 	icon_state = "lightgrenade_box"
-	name = "light grenade box (6x)"
+	name = "light grenade box (5x)"
 
 	key_type = /obj/item/grenade/light
 	can_hold = list(/obj/item/grenade/light)
 
-	startswith = list(/obj/item/grenade/light = 6)
+	startswith = list(/obj/item/grenade/light = 5)
 
 /obj/item/storage/fancy/supply_box/bumaga
 	icon_state = "bumaga_box"

@@ -9,7 +9,7 @@
 	integrity = 50
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
-	hardness = MATERIAL_RIGID + 10	
+	hardness = MATERIAL_RIGID + 10
 	melting_point = T0C + 100
 	weight = 14
 	brute_armor = 1

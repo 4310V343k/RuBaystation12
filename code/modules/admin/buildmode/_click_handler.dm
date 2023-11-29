@@ -1,4 +1,5 @@
 /datum/click_handler/build_mode
+	flags = CLICK_HANDLER_REMOVE_ON_MOB_LOGOUT | CLICK_HANDLER_REMOVE_IF_NOT_TOP
 	var/dir
 
 	var/list/build_modes
@@ -7,7 +8,7 @@
 
 	var/datum/build_mode/current_build_mode
 
-/datum/click_handler/build_mode/New(owner_)
+/datum/click_handler/build_mode/New(mob/user)
 	..()
 
 	build_modes = list()
@@ -23,7 +24,7 @@
 		build_buttons += build_button
 	StartTimer()
 	current_build_mode.Selected()
-	to_chat(owner.mob, "Build Mode Enabled")
+	to_chat(user, "Build Mode Enabled")
 
 /datum/click_handler/build_mode/Destroy()
 	current_build_mode.Unselected()
@@ -31,11 +32,11 @@
 	QDEL_NULL(current_build_mode)
 	QDEL_NULL_LIST(build_modes)
 	QDEL_NULL_LIST(build_buttons)
-	to_chat(owner.mob, "Build Mode Disabled")
+	to_chat(user, "Build Mode Disabled")
 	. = ..()
 
 /datum/click_handler/build_mode/proc/StartTimer()
-	timer_handle = addtimer(CALLBACK(src, .proc/TimerEvent), 1 SECOND, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
+	timer_handle = addtimer(CALLBACK (src, .proc/TimerEvent), 1 SECOND, TIMER_UNIQUE | TIMER_STOPPABLE | TIMER_LOOP)
 
 /datum/click_handler/build_mode/proc/StopTimer()
 	deltimer(timer_handle)
@@ -47,22 +48,22 @@
 			current_build_mode.overlay.TimerEvent()
 
 /datum/click_handler/build_mode/Enter()
-	owner.show_popup_menus = FALSE
+	user.client.show_popup_menus = FALSE
 	for(var/build_button in build_buttons)
-		owner.screen += build_button
+		user.client.screen += build_button
 
 /datum/click_handler/build_mode/Exit()
-	owner.show_popup_menus = TRUE
+	user.my_client.show_popup_menus = TRUE
 	for(var/build_button in build_buttons)
-		owner.screen -= build_button
+		user.my_client.screen -= build_button
 
-// /datum/click_handler/build_mode/OnDblClick(var/atom/A, var/params)
-// 	Click(A, params) // We treat double-clicks as normal clicks
+/datum/click_handler/build_mode/OnDblClick(atom/A, params)
+	OnClick(A, params) // We treat double-clicks as normal clicks
 
-/datum/click_handler/build_mode/Click(atom/target, location, control, params)
+/datum/click_handler/build_mode/OnClick(atom/A, params)
 	params = params2list(params)
-	if(target in build_buttons)
-		var/obj/effect/bmode/build_button = target
+	if(A in build_buttons)
+		var/obj/effect/bmode/build_button = A
 		build_button.OnClick(params)
 	else
-		current_build_mode.OnClick(target, params)
+		current_build_mode.OnClick(A, params)

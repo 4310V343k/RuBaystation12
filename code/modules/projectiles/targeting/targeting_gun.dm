@@ -17,6 +17,5 @@
 	user.face_atom(A)
 	if(ismob(A) && user.aiming)
 		user.aiming.aim_at(A, src)
-		aim_tag = 1
 		return 1
 	return 0

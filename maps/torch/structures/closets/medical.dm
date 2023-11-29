@@ -1,6 +1,6 @@
 /*
- * Torch Medical
- */
+	* Torch Medical
+	*/
 /decl/closet_appearance/secure_closet/torch/medical
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_BABY_BLUE,

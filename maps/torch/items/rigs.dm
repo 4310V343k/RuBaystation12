@@ -3,8 +3,8 @@
 /////////////////////
 
 /*
- * BASE TYPE
- */
+	* BASE TYPE
+	*/
 /obj/item/rig/command
 	name = "command HCM"
 	suit_type = "command hardsuit"
@@ -62,8 +62,8 @@
 		)
 
 /*
- * EXECUTIVE OFFICER
- */
+	* EXECUTIVE OFFICER
+	*/
 /obj/item/rig/command/xo
 	name = "officer's command HCM"
 	suit_type = "advanced command hardsuit"
@@ -103,8 +103,8 @@
 	)
 
 /*
- * COMMANDING OFFICER
- */
+	* COMMANDING OFFICER
+	*/
 /obj/item/rig/command/co
 	name = "commanding officer's command HCM"
 	suit_type = "advanced command hardsuit"
@@ -145,8 +145,8 @@
 	)
 
 /*
- * CHIEF MEDICAL OFFICER
- */
+	* CHIEF MEDICAL OFFICER
+	*/
 /obj/item/rig/command/medical
 	name = "medical command HCM"
 	suit_type = "medical command hardsuit"
@@ -396,8 +396,8 @@
 		/obj/item/rig_module/mounted/taser,
 		/obj/item/rig_module/cooling_unit)
 /*
- Overrides for standard mapset rig items
- */
+	Overrides for standard mapset rig items
+	*/
 
 /obj/item/clothing/head/helmet/space/rig/industrial
 	camera = /obj/machinery/camera/network/supply

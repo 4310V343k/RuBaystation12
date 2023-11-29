@@ -171,9 +171,6 @@
 	#include "../away/mininghome/mininghome.dm"
 	#include "../away/scavver/scavver_gantry.dm"
 
-	#include "../event/iccgn_ship/icgnv_hound.dm"
-	#include "../event/sfv_arbiter/sfv_arbiter.dm"
-
 
 	#define using_map_DATUM /datum/map/torch
 

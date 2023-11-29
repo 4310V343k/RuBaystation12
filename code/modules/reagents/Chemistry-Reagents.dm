@@ -62,6 +62,11 @@
 
 	var/should_admin_log = FALSE
 
+		/// Assoc list with key type of addiction this reagent feeds, and value amount of addiction points added per unit of reagent metabolzied (which means * REM every life())
+	var/list/addiction_types = null
+
+
+
 	//Fire, hellfire
 	var/accelerant_quality = 0
 	var/fire_colour = null //In case this reagent would burn a cool different colour

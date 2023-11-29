@@ -213,7 +213,7 @@
 	sort_string = "HABAB"
 
 
-/datum/design/circuit/protolathe
+/datum/design/circuit/mechfab
 	name = "exosuit fabricator"
 	id = "mechfab"
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 6)
@@ -847,3 +847,24 @@
 	req_tech = list(TECH_ENGINEERING = 1)
 	build_path = /obj/item/stock_parts/circuitboard/shipmap
 	sort_string = "SAAAT"
+
+/datum/design/circuit/minirart
+	name = "stationary rocket launcher"
+	id = "minirwbs"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 7, TECH_POWER = 6)
+	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable
+	sort_string = "YAAAG"
+
+/datum/design/circuit/minirartbs
+	name = "stationary bluespace rocket launcher"
+	id = "minirwbs"
+	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 7, TECH_POWER = 6, TECH_BLUESPACE = 6)
+	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable/bs
+	sort_string = "YAAAH"
+
+/datum/design/circuit/minirartbs
+	name = "automated production factory"
+	id = "factory"
+	req_tech = list(TECH_ENGINEERING = 3, TECH_POWER = 2, TECH_DATA = 2, TECH_MATERIAL = 5)
+	build_path = /obj/item/stock_parts/circuitboard/factory
+	sort_string = "YAAAJ"

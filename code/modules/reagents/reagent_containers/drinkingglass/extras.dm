@@ -61,7 +61,7 @@
 	glass_desc = "There is a stick in the glass."
 	icon_state = "stick"
 	color = COLOR_BLACK
-	
+
 /obj/item/glass_extra/stick/Initialize()
 	. = ..()
 	if(prob(50))

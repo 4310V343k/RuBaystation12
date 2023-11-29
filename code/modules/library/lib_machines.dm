@@ -1,13 +1,13 @@
 /* Library Machines
- *
- * Contains:
- *		Library Scanner
- *		Book Binder
- */
+	*
+	* Contains:
+	*		Library Scanner
+	*		Book Binder
+	*/
 
 /*
- * Library Scanner
- */
+	* Library Scanner
+	*/
 /obj/machinery/libraryscanner
 	name = "scanner"
 	icon = 'icons/obj/library.dmi'
@@ -59,8 +59,8 @@
 	src.updateUsrDialog()
 
 /*
- * Book binder
- */
+	* Book binder
+	*/
 /obj/machinery/bookbinder
 	name = "Book Binder"
 	icon = 'icons/obj/library.dmi'

@@ -1,9 +1,9 @@
 /* Two-handed Weapons
- * Contains:
- * 		Twohanded
- *		Fireaxe
- *		Double-Bladed Energy Swords
- */
+	* Contains:
+	* 		Twohanded
+	*		Fireaxe
+	*		Double-Bladed Energy Swords
+	*/
 
 /*##################################################################
 ##################### TWO HANDED WEAPONS BE HERE~ -Agouri :3 ########
@@ -14,8 +14,8 @@
 //It also tidies stuff up elsewhere.
 
 /*
- * Twohanded
- */
+	* Twohanded
+	*/
 /obj/item/material/twohanded
 	w_class = ITEM_SIZE_HUGE
 	slot_flags = SLOT_BACK
@@ -65,8 +65,8 @@
 	item_state_slots[slot_back_str] = base_icon
 
 /*
- * Fireaxe
- */
+	* Fireaxe
+	*/
 /obj/item/material/twohanded/fireaxe  // DEM AXES MAN, marker -Agouri
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "fireaxe0"

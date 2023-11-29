@@ -1,6 +1,6 @@
 /*
- * Torch Engineering
- */
+	* Torch Engineering
+	*/
 
 /decl/closet_appearance/secure_closet/torch/engineering
 	extra_decals = list(

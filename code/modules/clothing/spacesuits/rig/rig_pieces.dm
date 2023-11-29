@@ -1,6 +1,6 @@
 /*
- * Defines the helmets, gloves and shoes for rigs.
- */
+	* Defines the helmets, gloves and shoes for rigs.
+	*/
 
 /obj/item/clothing/head/helmet/space/rig
 	name = "helmet"

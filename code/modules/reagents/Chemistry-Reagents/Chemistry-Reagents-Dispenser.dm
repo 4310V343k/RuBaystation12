@@ -123,6 +123,7 @@
 	value = DISPENSER_REAGENT_VALUE
 	accelerant_quality = 5
 
+
 /datum/reagent/ethanol/touch_mob(var/mob/living/L, var/amount)
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 15)

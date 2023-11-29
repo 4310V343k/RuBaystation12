@@ -1,6 +1,6 @@
 /*
- * Torch Service
- */
+	* Torch Service
+	*/
 /decl/closet_appearance/secure_closet/torch/hydroponics
 	extra_decals = list(
 		"stripe_vertical_right_partial" = COLOR_GREEN_GRAY,

@@ -1,6 +1,6 @@
 /*
- * Torch Command
- */
+	* Torch Command
+	*/
 /decl/closet_appearance/secure_closet/torch/command
 	extra_decals = list(
 		"stripe_vertical_mid_full" = COLOR_CLOSET_GOLD
@@ -93,11 +93,12 @@
 		/obj/item/storage/box/radiokeys,
 		/obj/item/storage/box/large/ids,
 		/obj/item/storage/box/PDAs,
-		//proxima code start,
+		//PRX-START,
 		/obj/item/device/remote_device/civillian,
 		/obj/item/storage/secure/briefcase/medals,
 		/obj/item/storage/box/encryptionkey/service,
-		//proxima code end,
+		/obj/item/device/holopad/wrist,
+		//PRX-END,
 		/obj/item/material/clipboard,
 		/obj/item/device/holowarrant,
 		/obj/item/folder/blue,

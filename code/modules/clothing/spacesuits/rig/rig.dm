@@ -3,8 +3,8 @@
 #define SEAL_DELAY 30
 
 /*
- * Defines the behavior of hardsuits/rigs/power armour.
- */
+	* Defines the behavior of hardsuits/rigs/power armour.
+	*/
 
 /obj/item/rig
 

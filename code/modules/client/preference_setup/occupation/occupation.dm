@@ -508,10 +508,10 @@
 	return 0
 
 /**
- *  Prune a player's job preferences based on current branch, rank and species
- *
- *  This proc goes through all the preferred jobs, and removes the ones incompatible with current rank or branch.
- */
+	*  Prune a player's job preferences based on current branch, rank and species
+	*
+	*  This proc goes through all the preferred jobs, and removes the ones incompatible with current rank or branch.
+	*/
 /datum/category_item/player_setup_item/proc/prune_job_prefs()
 	var/allowed_titles = list()
 

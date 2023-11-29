@@ -78,15 +78,15 @@ GLOBAL_DATUM_INIT(maploader, /dmm_suite, new)
 	#endif
 
 /**
- * Construct the model map and control the loading process
- *
- * WORKING :
- *
- * 1) Makes an associative mapping of model_keys with model
- *		e.g aa = /turf/unsimulated/wall{icon_state = "rock"}
- * 2) Read the map line by line, parsing the result (using parse_grid)
- *
- */
+	* Construct the model map and control the loading process
+	*
+	* WORKING :
+	*
+	* 1) Makes an associative mapping of model_keys with model
+	*		e.g aa = /turf/unsimulated/wall{icon_state = "rock"}
+	* 2) Read the map line by line, parsing the result (using parse_grid)
+	*
+	*/
 // dmm_files: A list of .dmm files to load (Required).
 // z_offset: A number representing the z-level on which to start loading the map (Optional).
 // cropMap: When true, the map will be cropped to fit the existing world dimensions (Optional).
@@ -263,22 +263,22 @@ GLOBAL_DATUM_INIT(maploader, /dmm_suite, new)
 		return M
 
 /**
- * Fill a given tile with its area/turf/objects/mobs
- * Variable model is one full map line (e.g /turf/unsimulated/wall{icon_state = "rock"}, /area/mine/explored)
- *
- * WORKING :
- *
- * 1) Read the model string, member by member (delimiter is ',')
- *
- * 2) Get the path of the atom and store it into a list
- *
- * 3) a) Check if the member has variables (text within '{' and '}')
- *
- * 3) b) Construct an associative list with found variables, if any (the atom index in members is the same as its variables in members_attributes)
- *
- * 4) Instanciates the atom with its variables
- *
- */
+	* Fill a given tile with its area/turf/objects/mobs
+	* Variable model is one full map line (e.g /turf/unsimulated/wall{icon_state = "rock"}, /area/mine/explored)
+	*
+	* WORKING :
+	*
+	* 1) Read the model string, member by member (delimiter is ',')
+	*
+	* 2) Get the path of the atom and store it into a list
+	*
+	* 3) a) Check if the member has variables (text within '{' and '}')
+	*
+	* 3) b) Construct an associative list with found variables, if any (the atom index in members is the same as its variables in members_attributes)
+	*
+	* 4) Instanciates the atom with its variables
+	*
+	*/
 
 /datum/grid_load_metadata
 	var/list/atoms_to_initialise

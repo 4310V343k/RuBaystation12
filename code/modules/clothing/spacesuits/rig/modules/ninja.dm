@@ -1,10 +1,10 @@
 /*
- * Contains
- * /obj/item/rig_module/stealth_field
- * /obj/item/rig_module/teleporter
- * /obj/item/rig_module/fabricator/energy_net
- * /obj/item/rig_module/self_destruct
- */
+	* Contains
+	* /obj/item/rig_module/stealth_field
+	* /obj/item/rig_module/teleporter
+	* /obj/item/rig_module/fabricator/energy_net
+	* /obj/item/rig_module/self_destruct
+	*/
 
 /obj/item/rig_module/stealth_field
 

@@ -418,6 +418,19 @@
 	if(istype(M))
 		M.OnMouseDrag(src_object, over_object, src_location, over_location, src_control, over_control, params)
 
+
+/client/MouseUp(object, location, control, params)
+	. = ..()
+	var/mob/living/M = mob
+	if(istype(M))
+		M.OnMouseUp(object, location, control, params)
+
+/client/MouseDown(object, location, control, params)
+	. = ..()
+	var/mob/living/M = mob
+	if(istype(M) && !M.in_throw_mode)
+		M.OnMouseDown(object, location, control, params)
+
 /client/verb/toggle_fullscreen()
 	set name = "Toggle Fullscreen"
 	set category = "OOC"

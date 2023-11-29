@@ -21,4 +21,4 @@
 		var/mob/living/bot/floorbot/bot = .
 		var/obj/item/storage/toolbox/box = locate() in work
 		bot.boxtype = box.icon_state
-		bot.update_icon()		
+		bot.update_icon()

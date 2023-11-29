@@ -4,3 +4,11 @@
 	icon = 'customs/icons/obj/custom_items_obj.dmi'
 	icon_state = "coffeecup_krabdiona"
 	volume = 40
+
+
+/obj/item/clothing/under/krabinator
+	name = "maid uniform"
+	desc = "Nice uniform sis."
+	icon_state = "janimaid_alt"
+	icon = 'customs/icons/obj/custom_items_obj.dmi'
+	item_icons = list(slot_head_str = 'customs/icons/mob/custom_items_mob.dmi')

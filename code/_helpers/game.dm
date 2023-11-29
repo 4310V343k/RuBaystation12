@@ -566,3 +566,8 @@
 
 /proc/has_station_trait(var/trait)
 	return is_path_in_list(trait, SSstation.station_traits)
+
+/proc/window_flash(client_or_usr)
+	if (!client_or_usr)
+		return
+	winset(client_or_usr, "mainwindow", "flash=5")

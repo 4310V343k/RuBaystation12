@@ -142,7 +142,7 @@
 	id = "bullpup"
 	req_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 3)
 	materials = list(MATERIAL_STEEL = 10000, MATERIAL_SILVER = 5000, MATERIAL_DIAMOND = 3000)
-	build_path = /obj/item/gun/projectile/automatic/bullpup_rifle/light
+	build_path = /obj/item/gun/projectile/automatic/bullpup_rifle
 	sort_string = "TAPAC"
 
 /datum/design/item/weapon/aegun
@@ -213,3 +213,27 @@
 	materials = list(MATERIAL_STEEL = 16000, MATERIAL_PLASTIC = 14000)
 	build_path = /obj/item/clothing/accessory/armor_plate/advanced
 	sort_string = "TBAAH"
+
+/datum/design/item/weapon/ammunition/mortarhe
+	id = "mor_he"
+	desc = "A rocket used by remote bluespace rocket launchers. This one produces a potent explosion upon landing."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_URANIUM = 500)
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	build_path = /obj/item/remote_weapon_ammo/explosive
+	sort_string = "TBAAH"
+
+/datum/design/item/weapon/ammunition/mortarle
+	id = "mor_le"
+	desc = "A rocket used by remote bluespace rocket launchers. This one produces a relatively weak explosion upon landing.."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_URANIUM = 200)
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	build_path = /obj/item/remote_weapon_ammo/explosive/low
+	sort_string = "TBAAJ"
+
+/datum/design/item/weapon/ammunition/mortarill
+	id = "mor_ill"
+	desc = "A rocket used by remote bluespace rocket launchers. This thing produces a reaction with gorenje chemicals that illuminates a large area."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_PHORON =200, MATERIAL_PLASTIC = 200)
+	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 4, TECH_POWER = 3)
+	build_path = /obj/item/remote_weapon_ammo/explosive/illumination
+	sort_string = "TBAAK"

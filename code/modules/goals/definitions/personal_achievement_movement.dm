@@ -40,7 +40,7 @@
 
 /datum/goal/movement/walk/check_success()
 	return (steps >= required_steps)
-	
+
 /datum/goal/movement/walk/update_strings()
 	description = "Stave off microgravity muscle atrophy by walking at least [required_steps] step\s this shift."
 

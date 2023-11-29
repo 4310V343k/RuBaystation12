@@ -50,14 +50,14 @@
 	oneoff_environ = 0
 
 /**
- * Adds the given amount of power to the `used_*` var for the given power channel, effectively increasing continuous power usage.
- *
- * **Generally, you probably do not want to use this directly. See `power_use_change()` and `use_power_oneoff()` instead.**
- *
- * **Parameters**:
- * - `amount` Integer. The amount of power to add to the given channel. Use negative numbers to subtract instead.
- * - `chan` Integer (`EQUIP`, `LIGHT`, or `ENVIRON`). The power channel to add the power to.
- */
+	* Adds the given amount of power to the `used_*` var for the given power channel, effectively increasing continuous power usage.
+	*
+	* **Generally, you probably do not want to use this directly. See `power_use_change()` and `use_power_oneoff()` instead.**
+	*
+	* **Parameters**:
+	* - `amount` Integer. The amount of power to add to the given channel. Use negative numbers to subtract instead.
+	* - `chan` Integer (`EQUIP`, `LIGHT`, or `ENVIRON`). The power channel to add the power to.
+	*/
 /area/proc/use_power(var/amount, var/chan)
 	switch(chan)
 		if(EQUIP)
@@ -68,27 +68,27 @@
 			used_environ += amount
 
 /**
- * Updates the area's continuous power use (See the `used_*` vars) for the given channel.
- * This is used by machines to properly update the area of power use changes.
- *
- * **If calling this from a `/obj/machine`, you should probably use `REPORT_POWER_CONSUMPTION_CHANGE()` instead.**
- *
- * **Parameters**:
- * - `old_amount` Integer. The amount of power being used before the change.
- * - `new_amount` Integer. The amount of power being used after the change.
- * - `chan` Integer (`ENVIRON`, `EQUIP`, or `LIGHT`). The channel to update.
- */
+	* Updates the area's continuous power use (See the `used_*` vars) for the given channel.
+	* This is used by machines to properly update the area of power use changes.
+	*
+	* **If calling this from a `/obj/machine`, you should probably use `REPORT_POWER_CONSUMPTION_CHANGE()` instead.**
+	*
+	* **Parameters**:
+	* - `old_amount` Integer. The amount of power being used before the change.
+	* - `new_amount` Integer. The amount of power being used after the change.
+	* - `chan` Integer (`ENVIRON`, `EQUIP`, or `LIGHT`). The channel to update.
+	*/
 /area/proc/power_use_change(old_amount, new_amount, chan)
 	use_power(new_amount - old_amount, chan)
 
 /**
- * Adds the given amount of power to the `oneoff_*` var for the given power channel. This results in a single spike in power usage that is reset on the next power tick.
- * Use this for a one-time power draw from the area, typically for non-machines.
- *
- * **Parameters**:
- * - `amount` Integer. The amount of power to add to the given channel. Use negative numbers to subtract instead.
- * - `chan` Integer (`EQUIP`, `LIGHT`, or `ENVIRON`). The power channel to add the power to.
- */
+	* Adds the given amount of power to the `oneoff_*` var for the given power channel. This results in a single spike in power usage that is reset on the next power tick.
+	* Use this for a one-time power draw from the area, typically for non-machines.
+	*
+	* **Parameters**:
+	* - `amount` Integer. The amount of power to add to the given channel. Use negative numbers to subtract instead.
+	* - `chan` Integer (`EQUIP`, `LIGHT`, or `ENVIRON`). The power channel to add the power to.
+	*/
 /area/proc/use_power_oneoff(var/amount, var/chan)
 	switch(chan)
 		if(EQUIP)

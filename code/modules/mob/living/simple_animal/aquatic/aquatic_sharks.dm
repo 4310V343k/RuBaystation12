@@ -43,4 +43,4 @@
 	skin_amount = 30
 
 /obj/item/natural_weapon/bite/giantshark
-	force = 40 
+	force = 40

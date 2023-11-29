@@ -1,13 +1,13 @@
 /* Beds... get your mind out of the gutter, they're for sleeping!
- * Contains:
- * 		Beds
- *		Roller beds
- *		Mattresses
- */
+	* Contains:
+	* 		Beds
+	*		Roller beds
+	*		Mattresses
+	*/
 
 /*
- * Beds
- */
+	* Beds
+	*/
 /obj/structure/bed
 	name = "bed"
 	desc = "This is used to lie in, sleep in or strap on."
@@ -181,8 +181,8 @@
 	..(newloc,MATERIAL_ALUMINIUM,MATERIAL_CLOTH)
 
 /*
- * Roller beds
- */
+	* Roller beds
+	*/
 /obj/structure/bed/roller
 	name = "roller bed"
 	icon = 'icons/obj/rollerbed.dmi'
@@ -322,8 +322,8 @@
 	object_type = /obj/item/roller
 	interact_type = /obj/structure/bed/roller
 /*
- * Mattresses
- */
+	* Mattresses
+	*/
 /obj/structure/mattress
 	name = "mattress"
 	icon = 'icons/obj/furniture.dmi'

@@ -1,12 +1,12 @@
 /* Weapons
- * Contains:
- *		Sword
- *		Classic Baton
- */
+	* Contains:
+	*		Sword
+	*		Classic Baton
+	*/
 
 /*
- * Classic Baton
- */
+	* Classic Baton
+	*/
 /obj/item/melee/classic_baton
 	name = "police baton"
 	desc = "A wooden truncheon for beating criminal scum."

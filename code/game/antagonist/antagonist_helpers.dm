@@ -1,8 +1,8 @@
 /** Checks if the given player is able to become an antagonist or not.
- * Will return 'FALSE' if they can become an antagonist, or a string value describing why they cannot become one.
- * Use strict type comparisons for truthiness values.
- * `ignore_role` will skip restriced job, player age, and player status flag checks.
- */
+	* Will return 'FALSE' if they can become an antagonist, or a string value describing why they cannot become one.
+	* Use strict type comparisons for truthiness values.
+	* `ignore_role` will skip restriced job, player age, and player status flag checks.
+	*/
 /datum/antagonist/proc/can_become_antag_detailed(datum/mind/player, ignore_role)
 	if(player.current)
 		if(jobban_isbanned(player.current, id))

@@ -12,4 +12,3 @@
 		return capitalize(pick(GLOB.first_names_female))
 	else
 		return capitalize(pick(GLOB.first_names_male))
-

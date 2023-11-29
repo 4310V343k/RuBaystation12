@@ -30,7 +30,7 @@
 /decl/hierarchy/supply_pack/operations/flare
 	name = "Gear - Red flare"
 	contains = list(/obj/item/storage/fancy/supply_box/flare = 1)
-	cost = 6
+	cost = 9
 	containername = "red flare crate"
 
 /decl/hierarchy/supply_pack/operations/plasma_cutter

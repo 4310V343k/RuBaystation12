@@ -60,9 +60,9 @@ var/global/const/OVERMAP_SPEED_CONSTANT = (1 SECOND)
 
 
 /**
- * Updates `operator_skill` to match the current user's skill level, or to null if no user is provided.
- * Will skip observers to avoid allowing unintended external influences on flight.
- */
+	* Updates `operator_skill` to match the current user's skill level, or to null if no user is provided.
+	* Will skip observers to avoid allowing unintended external influences on flight.
+	*/
 /obj/effect/overmap/visitable/ship/proc/update_operator_skill(mob/user)
 	if (isobserver(user))
 		return

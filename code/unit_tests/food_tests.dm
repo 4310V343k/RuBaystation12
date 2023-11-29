@@ -1,10 +1,10 @@
 /**
- *  Each slice origin items should cut into the same slice.
- *
- *  Each slice type defines an item from which it originates. Each sliceable
- *  item defines what item it cuts into. This test checks if the two defnitions
- *  are consistent between the two items.
- */
+	*  Each slice origin items should cut into the same slice.
+	*
+	*  Each slice type defines an item from which it originates. Each sliceable
+	*  item defines what item it cuts into. This test checks if the two defnitions
+	*  are consistent between the two items.
+	*/
 /datum/unit_test/food_slices_and_origin_items_should_be_consistent
 	name = "FOOD: Each slice origin item should cut into the appropriate slice"
 
@@ -37,4 +37,3 @@
 		pass("All slice types defined correctly.")
 
 	return 1
-

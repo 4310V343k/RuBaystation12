@@ -260,12 +260,12 @@ var/global/list/organ_cache = list()
 	status = ORGAN_ASSISTED
 
 /**
- *  Remove an organ
- *
- *  drop_organ - if true, organ will be dropped at the loc of its former owner
- *
- *  Also, Observer Pattern Implementation: Dismembered Handling occurs here.
- */
+	*  Remove an organ
+	*
+	*  drop_organ - if true, organ will be dropped at the loc of its former owner
+	*
+	*  Also, Observer Pattern Implementation: Dismembered Handling occurs here.
+	*/
 /obj/item/organ/proc/removed(var/mob/living/user, var/drop_organ=1)
 
 	if(!istype(owner))

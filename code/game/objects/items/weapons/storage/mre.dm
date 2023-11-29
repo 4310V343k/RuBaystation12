@@ -1,6 +1,6 @@
 /*
 MRE Stuff
- */
+	*/
 
 /obj/item/storage/mre
 	name = "MRE, Menu 1"

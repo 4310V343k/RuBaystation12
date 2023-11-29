@@ -84,8 +84,8 @@
 	return ..()
 
 /*
- * Energy Axe
- */
+	* Energy Axe
+	*/
 /obj/item/melee/energy/axe
 	icon = 'icons/obj/weapons/melee_energy.dmi'
 	name = "energy axe"
@@ -114,8 +114,8 @@
 	to_chat(user, "<span class='notice'>\The [src] is de-energised. It's just a regular axe now.</span>")
 
 /*
- * Energy Sword
- */
+	* Energy Sword
+	*/
 /obj/item/melee/energy/sword
 	icon = 'icons/obj/weapons/melee_energy.dmi'
 	name = "energy sword"
@@ -190,8 +190,8 @@
 	active = TRUE
 
 /*
- *Energy Blade
- */
+	*Energy Blade
+	*/
 
 /obj/item/melee/energy/blade
 	icon = 'icons/obj/weapons/melee_energy.dmi'

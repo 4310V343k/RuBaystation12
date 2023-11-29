@@ -16,7 +16,6 @@
 	ammo_type = /obj/item/ammo_casing/shell
 	one_hand_penalty = 6
 	accuracy = -2
-	recoil_buildup = 75
 	bulk = 8
 	scoped_accuracy = 8 //increased accuracy over the LWAP because only one shot
 	scope_zoom = 2
@@ -93,7 +92,6 @@
 	max_shells = 5
 	accuracy = 4
 	scope_zoom = 0
-	recoil_buildup = 4
 	scoped_accuracy = 0
 	wielded_item_state = "boltaction-wielded"
 
@@ -155,7 +153,7 @@
 	mag_insert_sound = 'sound/weapons/guns/interaction/ltrifle_magin.ogg'
 	mag_remove_sound = 'sound/weapons/guns/interaction/garand_magout.ogg'
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=6,    move_delay=null, one_hand_penalty=8)
 		)
 
@@ -183,11 +181,10 @@
 	load_method = SINGLE_CASING|SPEEDLOADER
 	max_shells = 10
 	accuracy = 1
-	recoil_buildup = 5
 	scope_zoom = 0
 	scoped_accuracy = 0
 	wielded_item_state = "semistrip-wielded"
 
-	init_firemodes = list(
+	firemodes = list(
 		list(mode_name="semi auto",       burst=1, fire_delay=2,    move_delay=null, one_hand_penalty=8)
 		)

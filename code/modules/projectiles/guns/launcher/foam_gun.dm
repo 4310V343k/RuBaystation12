@@ -90,7 +90,7 @@
 /obj/item/foam_dart/Initialize()
 	mix_up()
 	. = ..()
-	
+
 /obj/item/foam_dart/proc/mix_up()
 	pixel_x = rand(-randpixel, randpixel)
 	pixel_y = rand(-randpixel, randpixel)

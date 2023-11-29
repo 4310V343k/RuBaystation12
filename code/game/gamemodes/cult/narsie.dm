@@ -339,8 +339,8 @@ var/global/list/narsie_list = list()
 	icon_state ="narsie"
 
 /**
- * Wizard narsie.
- */
+	* Wizard narsie.
+	*/
 /obj/singularity/narsie/wizard
 	grav_pull = 0
 

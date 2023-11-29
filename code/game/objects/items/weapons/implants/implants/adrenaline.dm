@@ -20,7 +20,7 @@
 /obj/item/implant/adrenalin/trigger(emote, mob/source)
 	if (emote == "pale")
 		activate()
-		
+
 /obj/item/implant/adrenalin/activate()//this implant is unused but I'm changing it for the sake of consistency
 	if (uses < 1 || malfunction || !imp_in)	return 0
 	uses--
