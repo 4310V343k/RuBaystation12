@@ -1,7 +1,7 @@
 /decl/closet_appearance/secure_closet/torch/sol
-	color = COLOR_BABY_BLUE
+	color = COLOR_WALL_GUNMETAL
 	extra_decals = list(
-		"stripe_vertical_mid_full" =  COLOR_OFF_WHITE
+		"stripe_vertical_mid_full" =  COLOR_NT_RED
 	)
 
 /decl/closet_appearance/secure_closet/torch/sol/rep

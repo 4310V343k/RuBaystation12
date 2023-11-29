@@ -958,6 +958,12 @@ var/global/list/floor_decals = list()
 	icon_state = "delivery"
 	alpha = 229
 
+/obj/effect/floor_decal/cryopod/hatch
+	name = "cryopod marking"
+	icon_state = "delivery"
+	color = "#296599"
+	alpha = 229
+
 /obj/effect/floor_decal/industrial/hatch/yellow
 	color = "#cfcf55"
 

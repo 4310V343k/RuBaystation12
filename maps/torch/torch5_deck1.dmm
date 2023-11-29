@@ -8132,6 +8132,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/caution/hazard{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "azq" = (
@@ -8534,10 +8537,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/vending/coffee{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aBz" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8549,7 +8551,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8566,7 +8568,7 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8588,10 +8590,7 @@
 	dir = 4;
 	icon_state = "warningcorner"
 	},
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBC" = (
 /obj/structure/cable/green{
@@ -8608,7 +8607,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/caution/hazard,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -8632,7 +8632,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/caution/hazard,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBE" = (
 /obj/structure/disposalpipe/segment{
@@ -8653,7 +8654,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/caution/hazard,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBF" = (
 /obj/structure/disposalpipe/segment{
@@ -8681,10 +8683,7 @@
 	dir = 1;
 	icon_state = "warningcorner"
 	},
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBG" = (
 /obj/structure/disposalpipe/segment{
@@ -8702,7 +8701,7 @@
 	d2 = 8;
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -8718,18 +8717,21 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aBI" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 /obj/structure/closet/emcloset,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/newscaster{
 	pixel_x = 32
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aBJ" = (
 /obj/structure/cable/green{
@@ -8874,12 +8876,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aCP" = (
-/obj/structure/table/standard,
-/obj/random/medical,
 /obj/machinery/light/spot{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aCQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8895,16 +8896,18 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aCR" = (
 /obj/machinery/cryopod,
+/obj/effect/floor_decal/cryopod/hatch,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aCS" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
+/obj/effect/floor_decal/cryopod/hatch,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aCT" = (
@@ -8915,11 +8918,20 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aCU" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aCV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8930,7 +8942,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aCW" = (
 /obj/structure/disposalpipe/segment,
@@ -8942,14 +8954,17 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aCX" = (
-/obj/machinery/computer/arcade,
 /obj/machinery/light/spot{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/machinery/vending/snix,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aCZ" = (
 /turf/simulated/floor/plating,
@@ -9080,16 +9095,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/foreport)
 "aDX" = (
-/obj/structure/table/standard,
 /obj/item/device/paicard,
 /obj/item/device/radio/intercom{
 	dir = 4;
 	pixel_x = -21
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/structure/table/steel,
+/obj/random/medical,
+/obj/effect/floor_decal/spline/fancy/black,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aDY" = (
-/turf/simulated/floor/tiled/white,
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aDZ" = (
 /obj/item/device/radio/intercom/entertainment{
@@ -9099,7 +9118,7 @@
 /obj/machinery/vending/fitness{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aEa" = (
 /obj/structure/railing/mapped{
@@ -9333,12 +9352,12 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -32
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/random/maintenance/clean,
 /obj/structure/closet/secure_closet/crew/research,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aFh" = (
 /obj/structure/disposalpipe/segment,
@@ -9354,7 +9373,11 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black/corner,
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aFi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -9363,7 +9386,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/spline/fancy/black,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aFj" = (
 /obj/machinery/door/firedoor,
@@ -9376,7 +9403,7 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Auxiliary Cryogenic Storage Maintenance"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aFl" = (
 /obj/structure/table/rack,
@@ -9555,12 +9582,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aGr" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/crew,
 /obj/random/maintenance/solgov/clean,
 /obj/random/maintenance/solgov/clean,
 /obj/random/maintenance/solgov/clean,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aGs" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -9576,7 +9603,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aGt" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -9587,12 +9614,15 @@
 	name = "JoinLateCryo"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aGu" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/personal,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aGw" = (
 /obj/machinery/atmospherics/valve/shutoff/supply,
@@ -9703,7 +9733,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/foreport)
 "aHc" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/crew,
 /obj/random/maintenance/solgov/clean,
 /obj/random/maintenance/solgov/clean,
@@ -9712,7 +9741,8 @@
 	c_tag = "Auxiliary Cryogenic Storage - Port";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aHd" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -9724,22 +9754,22 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aHe" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aHf" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/secure_closet/personal,
 /obj/machinery/camera/network/first_deck{
 	c_tag = "Auxiliary Cryogenic Storage - Starboard";
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aHh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10000,7 +10030,10 @@
 	dir = 8
 	},
 /obj/structure/undies_wardrobe,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aIt" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -10013,7 +10046,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aIu" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -10021,7 +10057,7 @@
 	dir = 1;
 	icon_state = "warning"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aIv" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -10030,7 +10066,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aIx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10038,7 +10074,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aIy" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -10049,17 +10085,20 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aIz" = (
 /obj/machinery/light/spot{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/uniform_vendor{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aIB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10356,13 +10395,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aJN" = (
-/obj/structure/table/standard,
 /obj/random/coin,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aJO" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -10371,13 +10410,13 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aJP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aJQ" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -10387,10 +10426,10 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aJS" = (
 /turf/simulated/wall/prepainted,
@@ -10525,7 +10564,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aKU" = (
-/obj/structure/table/standard,
 /obj/item/storage/toolbox/emergency,
 /obj/machinery/power/apc{
 	dir = 8;
@@ -10536,7 +10574,8 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aKV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10552,7 +10591,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aKW" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -10562,7 +10601,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aKX" = (
 /obj/structure/disposalpipe/segment,
@@ -10573,7 +10612,10 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aKY" = (
 /obj/structure/disposalpipe/segment,
@@ -10830,12 +10872,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/foreport)
 "aLU" = (
-/obj/structure/table/standard,
 /obj/structure/closet/medical_wall/filled{
 	pixel_x = -32
 	},
 /obj/machinery/recharger,
-/turf/simulated/floor/tiled/white/monotile,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/spline/fancy/black,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aLV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10846,7 +10889,10 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aLW" = (
 /obj/structure/disposalpipe/segment{
@@ -10860,11 +10906,13 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aLX" = (
 /obj/machinery/disposal,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -10873,7 +10921,8 @@
 	pixel_x = 25;
 	req_access = list(list("ACCESS_ENGINE_EQUIP","ACCESS_ATMOS"))
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aMy" = (
 /obj/structure/closet,
@@ -11131,7 +11180,7 @@
 	dir = 4;
 	icon_state = "console"
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aNc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11141,7 +11190,10 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aNd" = (
 /obj/machinery/light/spot{
@@ -11150,7 +11202,7 @@
 /obj/machinery/vending/cigarette{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aNy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11286,7 +11338,7 @@
 /obj/machinery/vending/cola{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aOb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11299,24 +11351,29 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aOc" = (
 /obj/machinery/cryopod,
 /obj/machinery/light/spot,
+/obj/effect/floor_decal/cryopod/hatch,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aOd" = (
 /obj/machinery/computer/cryopod{
 	pixel_y = -32
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/crew_quarters/sleep/cryo/aux)
 "aOe" = (
 /obj/machinery/cryopod{
 	dir = 4
 	},
 /obj/machinery/light/spot,
+/obj/effect/floor_decal/cryopod/hatch,
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aOf" = (
@@ -11329,7 +11386,10 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo/aux)
 "aOg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -11338,7 +11398,7 @@
 /obj/machinery/vending/snack{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white/monotile,
+/turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/sleep/cryo/aux)
 "aOj" = (
 /obj/structure/bookcase/manuals/xenoarchaeology,
@@ -14285,6 +14345,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/storage)
+"bio" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/sleep/cryo/aux)
 "biu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -18868,6 +18940,20 @@
 /obj/effect/floor_decal/keep_clear/hazard,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
+"hzq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/sleep/cryo/aux)
 "hzT" = (
 /obj/item/device/radio/intercom/department/medbay{
 	dir = 1;
@@ -20795,6 +20881,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"jNq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/sleep/cryo/aux)
 "jON" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -22969,6 +23074,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/security/questioning)
+"mBx" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/effect/floor_decal/spline/fancy/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/sleep/cryo/aux)
 "mCe" = (
 /obj/structure/table/glass,
 /obj/random/drinkbottle,
@@ -23181,6 +23305,9 @@
 /area/security/nuke_storage)
 "mMX" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/caution/hazard{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "mNb" = (
@@ -29580,6 +29707,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/dark,
 /area/command/conference)
+"uuF" = (
+/turf/simulated/floor/tiled/dark/monotile,
+/area/crew_quarters/sleep/cryo/aux)
 "uuS" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -30204,6 +30334,25 @@
 "vMH" = (
 /turf/simulated/wall/r_wall/prepainted,
 /area/security/locker)
+"vRG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/obj/effect/landmark{
+	name = "JoinLateCryo"
+	},
+/obj/effect/floor_decal/spline/fancy/black/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/sleep/cryo/aux)
 "vTH" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
 	id = "forensicswindow"
@@ -47472,7 +47621,7 @@ ayg
 ure
 aAs
 aBy
-aCP
+aNb
 aDX
 aFg
 aGr
@@ -47481,7 +47630,7 @@ aIs
 aJN
 aKU
 aLU
-aNb
+aCP
 aOa
 aAK
 aPO
@@ -47675,15 +47824,15 @@ ure
 cbl
 aBz
 aCQ
-aCQ
-aCQ
-aGs
-aGs
+vRG
+jNq
+mBx
+mBx
 aIt
 aGs
 aKV
 aLV
-aLV
+hzq
 aOb
 aAK
 aPL
@@ -48282,8 +48431,8 @@ aAt
 aBC
 aCT
 aCT
-aCT
-aCT
+bio
+bio
 aHd
 aIv
 aJO
@@ -48482,16 +48631,16 @@ ayj
 azp
 aAu
 aBD
-aCU
-aDY
-aDY
-aDY
+uuF
+uuF
+aHe
+aHe
 aHe
 aDY
 aJP
-aDY
-aDY
-aDY
+aJP
+aJP
+uuF
 aOd
 aAK
 aPP
@@ -48691,8 +48840,8 @@ aCV
 aCV
 aIx
 aJQ
-aKW
-aKW
+aJQ
+aCU
 aKW
 aKW
 aAK
