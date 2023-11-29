@@ -790,7 +790,7 @@
 	sort_string = "WAABC"
 
 /datum/design/circuit/aicore
-	name = "AIR core"
+	name = "AI core"
 	id = "aicore"
 	req_tech = list(TECH_DATA = 4, TECH_BIO = 3)
 	build_path = /obj/item/stock_parts/circuitboard/aicore

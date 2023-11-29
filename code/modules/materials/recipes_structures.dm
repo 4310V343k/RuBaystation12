@@ -1,7 +1,7 @@
 //Furniture is in a separate file.
 
 /datum/stack_recipe/ai_core
-	title = "AIR core"
+	title = "AI core"
 	result_type = /obj/structure/AIcore
 	req_amount = 4
 	time = 50

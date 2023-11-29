@@ -4248,7 +4248,7 @@
 /area/centcom/control)
 "azy" = (
 /obj/machinery/door/window{
-	name = "AIR Core Door"
+	name = "AI Core Door"
 	},
 /turf/unsimulated/floor{
 	icon_state = "steel"

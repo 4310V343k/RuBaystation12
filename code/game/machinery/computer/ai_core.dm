@@ -3,7 +3,7 @@ var/global/list/empty_playable_ai_cores = list()
 /obj/structure/AIcore
 	density = TRUE
 	anchored = FALSE
-	name = "\improper AIR core"
+	name = "\improper AI core"
 	icon = 'icons/mob/AI.dmi'
 	icon_state = "0"
 	var/state = 0
@@ -267,14 +267,14 @@ var/global/list/empty_playable_ai_cores = list()
 		return ..()
 
 /client/proc/empty_ai_core_toggle_latejoin()
-	set name = "Toggle AIR Core Latejoin"
+	set name = "Toggle AI Core Latejoin"
 	set category = "Admin"
 
 	var/list/cores = list()
 	for(var/obj/structure/AIcore/deactivated/D in world)
 		cores["[D] ([D.loc.loc])"] = D
 
-	var/id = input("Which core?", "Toggle AIR Core Latejoin", null) as null|anything in cores
+	var/id = input("Which core?", "Toggle AI Core Latejoin", null) as null|anything in cores
 	if(!id) return
 
 	var/obj/structure/AIcore/deactivated/D = cores[id]

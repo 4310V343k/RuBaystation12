@@ -3,7 +3,7 @@
 
 /datum/hud/ai/FinalizeInstantiation() //~KareTa //And _Elar_
 	adding = list()
-	adding += new /obj/screen/ai_button{screen_loc = ui_ai_core;				name = "AIR Core";				icon_state = "ai_core";			ai_verb = /mob/living/silicon/ai/proc/core}()
+	adding += new /obj/screen/ai_button{screen_loc = ui_ai_core;				name = "AI Core";				icon_state = "ai_core";			ai_verb = /mob/living/silicon/ai/proc/core}()
 	adding += new /obj/screen/ai_button{screen_loc = ui_ai_announcement;		name = "AI Announcement";		icon_state = "announcement";	ai_verb = /mob/living/silicon/ai/proc/ai_announcement}()
 	adding += new /obj/screen/ai_button{screen_loc = ui_ai_cam_track;			name = "Track With Camera";		icon_state = "track";			ai_verb = /mob/living/silicon/ai/proc/ai_camera_track;		input_procs = list(/mob/living/silicon/ai/proc/trackable_mobs = (AI_BUTTON_PROC_BELONGS_TO_CALLER|AI_BUTTON_INPUT_REQUIRES_SELECTION))}()
 	adding += new /obj/screen/ai_button{screen_loc = ui_ai_cam_light;			name = "Toggle Camera Lights";	icon_state = "camera_light";	ai_verb = /mob/living/silicon/ai/proc/toggle_camera_light}()

@@ -839,7 +839,7 @@
 
 /datum/design/item/mechfab/rig/ai_container
 	category = "Hardsuits"
-	name = "AIR Core Container"
+	name = "AI Core Container"
 	build_path = /obj/item/rig_module/ai_container
 	materials = list(MATERIAL_STEEL = 1000, MATERIAL_GLASS = 1000, MATERIAL_PLASTIC = 1000, MATERIAL_GOLD = 500)
 	req_tech = list(TECH_DATA = 6, TECH_MATERIAL = 5, TECH_ENGINEERING = 6)
