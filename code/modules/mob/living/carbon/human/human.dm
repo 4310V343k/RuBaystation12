@@ -1874,7 +1874,7 @@ GLOBAL_LIST_INIT(dream_tokens, list(
 	"an operating table", "the rain", "a skrell", "an unathi",
 	"a beaker of strange liquid", "the supermatter", "a creature built completely of stolen flesh", "a GAS",
 	"an IPC", "a Dionaea", "a being made of light", "the commanding officer",
-	"the executive officer", "the chief of security", "the corporate liason",
+	"the executive officer", "the chief of security", "the corporate liason", "the representative",
 	"the senior advisor", "the bridge officer", "the senior engineer", "the physician",
 	"the corpsman", "the counselor", "the medical contractor", "the security contractor",
 	"a stowaway", "an old friend", "the prospector", "the pilot",
