@@ -29298,12 +29298,13 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/gun/energy/gun/secure,
-/obj/item/gun/energy/gun/secure,
-/obj/item/gun/energy/gun/secure,
-/obj/item/gun/projectile/pistol/goodman,
-/obj/item/gun/projectile/pistol/goodman,
-/obj/item/gun/projectile/pistol/goodman,
+/obj/item/storage/briefcase/guncase/tar6{
+	pixel_y = 5
+	},
+/obj/item/storage/briefcase/guncase/tar6,
+/obj/item/storage/briefcase/guncase/tar6{
+	pixel_y = -5
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "vkW" = (

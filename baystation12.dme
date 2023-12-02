@@ -3262,6 +3262,7 @@
 #include "proxima\code\game\objects\items\containers.dm"
 #include "proxima\code\game\objects\items\posters.dm"
 #include "proxima\code\game\objects\items\toys.dm"
+#include "proxima\code\game\objects\items\weapons\storage\case.dm"
 #include "proxima\code\game\objects\structures\barrier.dm"
 #include "proxima\code\game\objects\structures\holoplants.dm"
 #include "proxima\code\game\verbs\who.dm"
