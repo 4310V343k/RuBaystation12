@@ -862,7 +862,7 @@
 	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable/bs
 	sort_string = "YAAAH"
 
-/datum/design/circuit/minirartbs
+/datum/design/circuit/factory
 	name = "automated production factory"
 	id = "factory"
 	req_tech = list(TECH_ENGINEERING = 3, TECH_POWER = 2, TECH_DATA = 2, TECH_MATERIAL = 5)
