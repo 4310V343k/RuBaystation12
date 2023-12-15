@@ -50,7 +50,25 @@
 			/obj/item/clothing/suit/leathercoat = 500,
 			/obj/item/clothing/suit/storage/toggle/brown_jacket = 500,
 			/obj/item/clothing/suit/storage/toggle/bomber = 500,
-			/obj/item/clothing/suit/storage/hooded/wintercoat = 500))
+			/obj/item/clothing/suit/storage/hooded/wintercoat = 500,
+			/obj/item/storage/pouch/small_generic = 200,
+			/obj/item/storage/pouch/small_generic/purple = 250,
+			/obj/item/storage/pouch/small_generic/leather = 275,
+			/obj/item/storage/pouch/medium_generic = 400,
+			/obj/item/storage/pouch/medium_generic/leather = 475,
+			/obj/item/storage/pouch/large_generic = 600,
+			/obj/item/storage/pouch/large_generic/leather = 675,
+			/obj/item/storage/pouch/medical_supply = 350,
+			/obj/item/storage/pouch/engineering_tools = 350,
+			/obj/item/storage/pouch/engineering_supply = 350,
+			/obj/item/storage/pouch/janitor_supply = 450,
+			/obj/item/storage/pouch/ammo = 500,
+			/obj/item/storage/pouch/tubular = 400,
+			/obj/item/storage/pouch/tubular/vial = 450,
+			/obj/item/storage/pouch/pistol_holster = 250,
+			/obj/item/storage/pouch/pistol_holster/cowboy = 500,
+			/obj/item/storage/pouch/kniferig = 400,
+			/obj/item/storage/pouch/baton_holster = 300))
 
 /obj/machinery/biogenerator/New()
 	..()

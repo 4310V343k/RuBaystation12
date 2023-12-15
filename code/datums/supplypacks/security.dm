@@ -50,7 +50,8 @@
 					/obj/item/clothing/glasses/tacgoggles,
 					/obj/item/storage/belt/holster/security/tactical,
 					/obj/item/clothing/shoes/tactical,
-					/obj/item/clothing/gloves/tactical)
+					/obj/item/clothing/gloves/tactical,
+					/obj/item/storage/pouch/ammo)
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure
 	containername = "tactical armor crate"
@@ -107,7 +108,8 @@
 					/obj/item/clothing/head/helmet/riot = 4,
 					/obj/item/clothing/suit/armor/riot = 4,
 					/obj/item/storage/box/flashbangs,
-					/obj/item/storage/box/teargas)
+					/obj/item/storage/box/teargas,
+					/obj/item/storage/pouch/baton_holster)
 	cost = 55
 	containertype = /obj/structure/closet/crate/secure
 	containername = "riot gear crate"
@@ -116,7 +118,9 @@
 /decl/hierarchy/supply_pack/security/ballisticarmor
 	name = "Armor - Ballistic"
 	contains = list(/obj/item/clothing/head/helmet/ballistic = 4,
-					/obj/item/clothing/suit/armor/bulletproof = 4)
+					/obj/item/clothing/suit/armor/bulletproof = 4,
+					/obj/item/storage/pouch/pistol_holster = 4,
+					/obj/item/storage/pouch/ammo = 4)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure
 	containername = "ballistic suit crate"
@@ -137,7 +141,8 @@
 					/obj/item/reagent_containers/spray/pepper = 4,
 					/obj/item/melee/baton/loaded = 4,
 					/obj/item/gun/energy/taser = 4,
-					/obj/item/storage/box/handcuffs)
+					/obj/item/storage/box/handcuffs,
+					)
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/weapon
 	containername = "security weapons crate"

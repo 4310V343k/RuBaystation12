@@ -13,6 +13,9 @@
 	/// A lazy list of vent pumps currently in the area
 	var/list/obj/machinery/atmospherics/unary/vent_pump/vent_pumps
 
+	///Filters you can apply to the players screen when they enter a new area, for example see proxima/game/objects/effects/particles/snow.dm ; prx
+	var/screen_filter
+
 /area/New()
 	icon_state = ""
 	uid = ++global_uid
@@ -69,14 +72,14 @@
 	return cameras
 
 /**
-	* Defines the area's atmosphere alert level.
-	*
-	* **Parameters**:
-	* - `danger_level` Integer. The new alert danger level to set.
-	* - `alarm_source` Atom. The source that's triggering the alert change.
-	*
-	* Returns boolean. `TRUE` if the atmosphere alarm level was changed, `FALSE` otherwise.
-	*/
+ * Defines the area's atmosphere alert level.
+ *
+ * **Parameters**:
+ * - `danger_level` Integer. The new alert danger level to set.
+ * - `alarm_source` Atom. The source that's triggering the alert change.
+ *
+ * Returns boolean. `TRUE` if the atmosphere alarm level was changed, `FALSE` otherwise.
+ */
 /area/proc/atmosalert(danger_level, var/alarm_source)
 	if (danger_level == 0)
 		GLOB.atmosphere_alarm.clearAlarm(src, alarm_source)
@@ -252,6 +255,13 @@
 
 	play_ambience(L)
 	L.lastarea = newarea
+	//[PRX BEGIN]
+	for(var/obj/screenfilter/F in L.client?.screen)
+		if(F!=newarea.screen_filter)
+			F.Fade()
+	if(!(newarea.screen_filter in L.client?.screen))
+		L.client?.screen += new newarea.screen_filter
+	//[PRX END]
 
 
 /// Handles playing ambient sounds to a given mob, including ship hum.
@@ -295,11 +305,11 @@
 
 
 /**
-	* Sets the area's `has_gravity` state.
-	*
-	* **Parameters**:
-	* - `gravitystate` Boolean, default `FALSE`. The new state to set `has_gravity` to.
-	*/
+ * Sets the area's `has_gravity` state.
+ *
+ * **Parameters**:
+ * - `gravitystate` Boolean, default `FALSE`. The new state to set `has_gravity` to.
+ */
 /area/proc/gravitychange(var/gravitystate = 0)
 	has_gravity = gravitystate
 

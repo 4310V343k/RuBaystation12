@@ -39,8 +39,6 @@
 	software_on_spawn = list(/datum/computer_file/program/deck_management,
 							 /datum/computer_file/program/reports)
 
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
-
 /datum/job/pathfinder/get_description_blurb()
 	return "Вы - Первопроходец. Ваша обязанность - организовывать и вести экспедиции в удалённые места, выполняя Главную Миссию ЭК. \
 	Вы командуете Исследователями и Морпехами. Присматривайте за тем, чтобы Ваши мужщины и женщины не потратили всю энергию шаттла на зарядку батарей. \
@@ -87,8 +85,6 @@
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
 	                    SKILL_SCIENCE     = SKILL_MAX)
 
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
-
 /datum/job/nt_pilot/get_description_blurb()
 	return "Вы - пилот экспедиции. Ваша задача - обслуживать Харон и управлять им. Вы подчиняетесь Первопроходцу. Удостоверьтесь, что Харон имеет топливо в баках, а также энергию для полёта. \
 	Не забывайте приглядывать за остальной командой."
@@ -127,8 +123,6 @@
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management)
-
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
 
 /datum/job/explorer/get_description_blurb()
 	return "Вы - Исследователь. Ваша задача - участвовать в экспедициях в удалённые места. Первопроходец - лидер Вашей команды. \
@@ -179,8 +173,6 @@
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							/datum/computer_file/program/deck_management)
 
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
-
 /datum/job/expmed/get_description_blurb()
 	return "Вы - Исследователь-медик. Ваша задача - участвовать в экспедициях в удалённые места. Первопроходец - лидер Вашей команды. \
 	Ваша цель - лечение и спасение остальных участников экспедиции. Учтите, что вы не профессиональный хирург, поэтому не пытайтесь проводить операции на шаттле, у Вас нет квалификации для этого."
@@ -228,8 +220,6 @@
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management)
 
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
-
 /datum/job/expeng/get_description_blurb()
 	return "Вы - Исследователь-инженер. Ваша задача - участвовать в экспедициях в удалённые места. Первопроходец - лидер Вашей команды. \
 	Ваша цель - поддерживать шаттл в рабочем состоянии и проделывать проходы везде, где скажет ваш босс."
@@ -273,8 +263,6 @@
 	)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management)
-
-	intro_music = list('proxima/sound/intro/explorers1.ogg', 'proxima/sound/intro/explorers2.ogg')
 
 /datum/job/expinf/get_description_blurb()
 	return "Вы - охранник экспедиции. Ваша задача - участвовать в экспедициях в удалённые места и обеспечивать безопасность экспедиции. Первопроходец - лидер Вашей команды. \

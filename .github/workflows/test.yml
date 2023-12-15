@@ -27,9 +27,10 @@ jobs:
       - name: Install Dreamchecker
         run:  scripts/install-spaceman-dmm.sh dreamchecker
       - name: Run dreamchecker
+        id: runDreamchecker
         run: ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
       - name: Annotate Lints
-        if: failure() && steps.runDreamchecker.outcome == 'failure'
+        if: ${{ failure() && steps.runDreamchecker.outcome == 'failure' }}
         uses: yogstation13/DreamAnnotate@v1
         with:
           outputFile: output-annotations.txt

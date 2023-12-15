@@ -205,3 +205,35 @@
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3)
 	build_path = /obj/item/ammo_casing/shotgun/emp
 	sort_string = "TBAAG"
+
+/datum/design/item/weapon/ammunition/mortarhe
+	id = "mor_he"
+	desc = "A rocket used by remote bluespace rocket launchers. This one produces a potent explosion upon landing."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_URANIUM = 500)
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	build_path = /obj/item/remote_weapon_ammo/explosive
+	sort_string = "TBAAH"
+
+/datum/design/item/weapon/ammunition/mortarle
+	id = "mor_le"
+	desc = "A rocket used by remote bluespace rocket launchers. This one produces a relatively weak explosion upon landing.."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_URANIUM = 200)
+	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	build_path = /obj/item/remote_weapon_ammo/explosive/low
+	sort_string = "TBAAJ"
+
+/datum/design/item/weapon/ammunition/mortarill
+	id = "mor_ill"
+	desc = "A rocket used by remote bluespace rocket launchers. This thing produces a reaction with gorenje chemicals that illuminates a large area."
+	materials = list(MATERIAL_STEEL = 3000, MATERIAL_PHORON =200, MATERIAL_PLASTIC = 200)
+	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 4, TECH_POWER = 3)
+	build_path = /obj/item/remote_weapon_ammo/explosive/illumination
+	sort_string = "TBAAK"
+
+/datum/design/item/weapon/controller
+	id = "rem_con"
+	desc = "A handheld device used to send signals to a linked heavy artillery pieces."
+	materials = list(MATERIAL_STEEL = 300, MATERIAL_PLASTIC = 200)
+	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3, TECH_POWER = 2)
+	build_path = /obj/item/device/remote_weapon_controller
+	sort_string = "TBAAL"
