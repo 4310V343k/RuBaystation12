@@ -1257,6 +1257,7 @@
 #include "code\modules\admin\buildmode\areas.dm"
 #include "code\modules\admin\buildmode\atmosphere.dm"
 #include "code\modules\admin\buildmode\build.dm"
+#include "code\modules\admin\buildmode\callproc.dm"
 #include "code\modules\admin\buildmode\copypaste.dm"
 #include "code\modules\admin\buildmode\edit.dm"
 #include "code\modules\admin\buildmode\ladders.dm"
