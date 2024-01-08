@@ -587,7 +587,7 @@ var/list/admin_verbs_xeno = list(
 		CH.Exit()
 		QDEL_NULL(CH)
 	else
-		CH = new /datum/click_handler/build_mode(src)
+		CH = new /datum/click_handler/build_mode(mob)
 		CH.Enter()
 
 /client/proc/object_talk(var/msg as text) // -- TLE
