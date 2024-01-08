@@ -3305,6 +3305,7 @@
 #include "proxima\code\modules\mob\language\human\alain.dm"
 #include "proxima\code\modules\mob\language\human\german.dm"
 #include "proxima\code\modules\mob\language\human\lirris.dm"
+#include "proxima\code\modules\mob\observer\ghost\ghost.dm"
 #include "proxima\code\modules\nano\nanoexternal.dm"
 #include "proxima\code\modules\paperwork\paper.dm"
 #include "proxima\code\modules\projectiles\gun.dm"
