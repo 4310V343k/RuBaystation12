@@ -69,13 +69,6 @@
 
 	return TRUE
 
-/obj/item/implant/proc/removed()
-	imp_in = null
-	if(part)
-		part.implants -= src
-		part = null
-	implanted = 0
-
 //Called in surgery when incision is retracted open / ribs are opened - basically before you can take implant out
 /obj/item/implant/proc/exposed()
 	return

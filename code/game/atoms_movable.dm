@@ -241,3 +241,7 @@
 
 /atom/movable/proc/get_bullet_impact_effect_type()
 	return BULLET_IMPACT_NONE
+
+/// Handles special effects of item being removed from "implants" of a mob
+/atom/movable/proc/ImplantRemoval(mob/user)
+	return

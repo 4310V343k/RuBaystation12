@@ -7,6 +7,7 @@
 #define ASSIGNMENT_MEDICAL "Medical"
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_SECURITY "Security"
+#define ASSIGNMENT_EXPLORATION "Exploration"
 #define ASSIGNMENT_PSYCHIATRIST "Psychiatrist"
 
 var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT_LEVEL_MODERATE = "Moderate", EVENT_LEVEL_MAJOR = "Major", EVENT_LEVEL_EXO = "Exoplanet")
@@ -182,7 +183,8 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 	severity = EVENT_LEVEL_MAJOR
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",							/datum/event/nothing,				1320),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",							/datum/event/blob, 					0,	list(ASSIGNMENT_ENGINEER = 40), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",							/datum/event/blob, 					0,	list(ASSIGNMENT_ENGINEER = 20, ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 10), 1),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Abominable Infestation",			/datum/event/abominable_infestation,0,	list(ASSIGNMENT_MEDICAL = 10, ASSIGNMENT_SECURITY = 20, ASSIGNMENT_EXPLORATION = 15), 1),
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration,		0,	list(ASSIGNMENT_SECURITY =  5), 1),
 		new /datum/event_meta/no_overmap(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave,			0,	list(ASSIGNMENT_ENGINEER = 10),	1),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Space Vines",						/datum/event/spacevine, 			0,	list(ASSIGNMENT_ENGINEER = 15), 1),
@@ -208,4 +210,5 @@ var/global/list/severity_to_string = list(EVENT_LEVEL_MUNDANE = "Mundane", EVENT
 #undef ASSIGNMENT_MEDICAL
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
+#undef ASSIGNMENT_EXPLORATION
 #undef ASSIGNMENT_PSYCHIATRIST

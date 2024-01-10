@@ -68,3 +68,19 @@
 	materials = list(MATERIAL_STEEL = 1700, MATERIAL_GLASS = 1500, MATERIAL_PLASTIC = 500, MATERIAL_PHORON = 500)
 	build_path = /obj/item/pickaxe/xeno/drill/plasma
 	sort_string = "KAAAI"
+
+/datum/design/item/mining/drill_upgrade_automatic
+	desc = "Modifies mining drill to automatically dispense stored ores."
+	id = "drill_upgrade_automatic"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_PLASTEEL = 750, MATERIAL_GLASS = 500, MATERIAL_ALUMINIUM = 250)
+	build_path = /obj/item/drill_upgrade/auto_dispense
+	sort_string = "KAAAJ"
+
+/datum/design/item/mining/drill_upgrade_range
+	desc = "Modifies mining drill to increase mining range."
+	id = "drill_upgrade_range"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_POWER = 3)
+	materials = list(MATERIAL_STEEL = 1000, MATERIAL_PLASTEEL = 750, MATERIAL_GLASS = 500, MATERIAL_ALUMINIUM = 250)
+	build_path = /obj/item/drill_upgrade/range_increase
+	sort_string = "KAAAK"
