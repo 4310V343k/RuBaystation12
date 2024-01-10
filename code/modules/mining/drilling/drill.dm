@@ -1,7 +1,7 @@
 /// Maximum amount of upgrades that can be installed
 #define MAX_DRILL_UPGRADES 3
 // Upgrade flags
-#define DRILL_AUTOMATIC (1<<1)
+#define DRILL_AUTOMATIC (1<1)
 
 
 /obj/machinery/mining
