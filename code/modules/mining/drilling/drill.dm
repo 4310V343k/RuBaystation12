@@ -126,7 +126,7 @@
 					system_error("INSUFFICIENT STORAGE SPACE")
 					set_active(FALSE)
 					need_player_check = TRUE
-					update_icon()
+					on_update_icon()
 					return
 				// Full auto drill!
 				var/turf/unload_turf = get_step(src, dispense_dir)
@@ -165,7 +165,7 @@
 	else
 		set_active(FALSE)
 		need_player_check = TRUE
-		update_icon()
+		on_update_icon()
 
 /obj/machinery/mining/drill/examine(mob/user)
 	. = ..()
