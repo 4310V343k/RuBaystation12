@@ -229,3 +229,11 @@
 	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 4, TECH_POWER = 3)
 	build_path = /obj/item/remote_weapon_ammo/explosive/illumination
 	sort_string = "TBAAK"
+
+/datum/design/item/weapon/controller
+	id = "rem_con"
+	desc = "A handheld device used to send signals to a linked heavy artillery pieces."
+	materials = list(MATERIAL_STEEL = 300, MATERIAL_PLASTIC = 200)
+	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 3, TECH_POWER = 2)
+	build_path = /obj/item/device/remote_weapon_controller
+	sort_string = "TBAAL"
