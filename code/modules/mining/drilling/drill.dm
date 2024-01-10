@@ -395,18 +395,18 @@
 
 		if(istype(get_turf(src), /turf/space))
 			to_chat(user, "<span class='notice'>You can't anchor something to empty space. Idiot.</span>")
-		return
+			return
 
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 100, 1)
 		to_chat(user, "<span class='notice'>You [anchored ? "un" : ""]anchor the brace.</span>")
 
-	anchored = !anchored
-	if(anchored)
-		connect()
-	else
-		disconnect()
+		anchored = !anchored
+		if(anchored)
+			connect()
+		else
+			disconnect()
 
-	return
+		return
 
 /obj/machinery/mining/brace/proc/connect()
 	var/turf/T = get_step(get_turf(src), src.dir)
