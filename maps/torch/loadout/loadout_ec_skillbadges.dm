@@ -76,3 +76,4 @@
 	allowed_skills = list(
 		SKILL_SCIENCE = SKILL_ADEPT
 	)
+
