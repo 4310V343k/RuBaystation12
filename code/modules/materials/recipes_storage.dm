@@ -8,6 +8,26 @@
 	result_type = /obj/item/storage/box/large
 	req_amount = 2
 
+/datum/stack_recipe/box/larger
+	title = "cardboard box"
+	result_type = /obj/item/storage/mgsbox
+	req_amount = 5
+
+/datum/stack_recipe/box/larger/med
+	title = "cardboard box with medical symbols"
+	result_type = /obj/item/storage/mgsbox/med
+	req_amount = 5
+
+/datum/stack_recipe/box/larger/lpa
+	title = "cardboard box with strange symbols"
+	result_type = /obj/item/storage/mgsbox/lpa
+	req_amount = 5
+
+/datum/stack_recipe/box/larger/clear
+	title = "cardboard box without symbols"
+	result_type = /obj/item/storage/mgsbox/clear
+	req_amount = 5
+
 /datum/stack_recipe/box/donut
 	title = "donut box"
 	result_type = /obj/item/storage/box/donut/empty

@@ -861,6 +861,19 @@
 	req_tech = list(TECH_ENGINEERING = 6, TECH_COMBAT = 7, TECH_POWER = 6, TECH_BLUESPACE = 6)
 	build_path = /obj/item/stock_parts/circuitboard/remote_weapon/loadable/bs
 	sort_string = "YAAAH"
+  
+/datum/design/circuit/quantumpad
+	name = "quantum pad"
+	id = "quantumpad"
+	req_tech = list(TECH_BLUESPACE = 5, TECH_ENGINEERING = 5)
+	build_path = /obj/item/stock_parts/circuitboard/quantumpad
+	sort_string = "YAAAI"
+
+/datum/design/circuit/mining_quantumpad
+	name = "mining quantum pad"
+	id = "mining_quantumpad"
+	req_tech = list(TECH_BLUESPACE = 4, TECH_ENGINEERING = 4)
+	build_path = /obj/item/stock_parts/circuitboard/quantumpad/mining
 
 /datum/design/circuit/factory
 	name = "automated production factory"

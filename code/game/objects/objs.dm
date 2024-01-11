@@ -204,3 +204,6 @@
 	*/
 /obj/proc/is_safe_to_step(mob/living/L)
 	return TRUE
+
+/obj/proc/get_additional_speed_decrease()
+	return between(0, src.w_class, ITEM_SIZE_GARGANTUAN) / 5

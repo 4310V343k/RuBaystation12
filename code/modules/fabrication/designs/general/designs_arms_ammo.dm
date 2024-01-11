@@ -138,3 +138,7 @@
 /datum/fabricator_recipe/arms_ammo/hidden/rifleinternalclip
 	name = "ammunition (rifle internal clip)"
 	path = /obj/item/ammo_magazine/iclipr
+
+/datum/fabricator_recipe/arms_ammo/hidden/carabinemagazine
+	name = "ammunition (spec.ops carabine magazine)"
+	path = /obj/item/ammo_magazine/carabine_rifle

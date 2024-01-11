@@ -3185,3 +3185,34 @@
 	catalysts = list(
 		/datum/reagent/enzyme = 1
 	)
+
+
+/datum/chemical_reaction/bicaridine_alt
+	name = "Grauel Decomposition into Bicaridine"
+	result = /datum/reagent/bicaridine
+	required_reagents = list(/datum/reagent/grauel = 1, /datum/reagent/phosphorus = 1)
+	result_amount = 2
+
+/datum/chemical_reaction/abomination_larva
+	name = "Abominable Larva"
+	result = null
+	required_reagents = list(/datum/reagent/laich = 10, /datum/reagent/phosphorus = 20)
+
+/datum/chemical_reaction/abomination_larva/on_reaction(datum/reagents/holder)
+	. = ..()
+	if(prob(66))
+		new /obj/item/reagent_containers/food/snacks/monkeycube/abominationcube(get_turf(holder.my_atom))
+	else
+		new /obj/item/reagent_containers/food/snacks/monkeycube/abominationcube/friendly(get_turf(holder.my_atom))
+
+
+/datum/chemical_reaction/gottheit
+	name = "Gottheit"
+	result = /datum/reagent/gottheit
+	result_amount = 2
+	required_reagents = list(
+		/datum/reagent/grauel = 1,
+		/datum/reagent/rezadone = 1,
+		/datum/reagent/tramadol/oxycodone = 1,
+		/datum/reagent/peridaxon = 1,
+		)

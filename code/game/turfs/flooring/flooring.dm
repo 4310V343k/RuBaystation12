@@ -402,3 +402,8 @@
 	wall_smooth = SMOOTH_NONE
 	space_smooth = SMOOTH_NONE
 	height = -FLUID_OVER_MOB_HEAD * 2
+
+/decl/flooring/flesh/infested
+	name = "pulsating flesh"
+	desc = "Disgusting flooring made out of flesh, bone, eyes, and various other human bits and pieces."
+	color = "#94404e"
