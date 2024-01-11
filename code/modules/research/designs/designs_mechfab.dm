@@ -424,6 +424,18 @@
 	req_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 4)
 	build_path = /obj/item/mech_equipment/mounted_system/taser/laser
 
+/datum/design/item/exosuit/weapon/minigun
+	name = "mounted gatling gun"
+	id = "mech_minigun"
+	req_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_DATA = 5, TECH_ENGINEERING = 4)
+	build_path = /obj/item/mech_equipment/mounted_system/taser/minigun
+
+/datum/design/item/exosuit/weapon/rocket_launcher
+	name = "mounted rocket"
+	id = "mech_rocket"
+	req_tech = list(TECH_COMBAT = 6, TECH_MAGNET = 4, TECH_PHORON = 4)
+	build_path = /obj/item/mech_equipment/mounted_system/taser/rocket_launcher
+
 /datum/design/item/exosuit/weapon/machete
 	name = "Mechete"
 	id = "mech_machete"
