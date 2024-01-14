@@ -583,12 +583,10 @@ var/list/admin_verbs_xeno = list(
 	if(!check_rights(R_ADMIN))
 		return
 
-	if(istype(CH, /datum/click_handler/build_mode))
-		CH.Exit()
-		QDEL_NULL(CH)
+	if(istype(mob.GetClickHandler(), /datum/click_handler/build_mode))
+		mob.RemoveClickHandler(/datum/click_handler/build_mode)
 	else
-		CH = new /datum/click_handler/build_mode(src)
-		CH.Enter()
+		mob.PushClickHandler(/datum/click_handler/build_mode)
 
 /client/proc/object_talk(var/msg as text) // -- TLE
 	set category = "Special Verbs"
