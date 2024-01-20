@@ -5,7 +5,6 @@
 	icon_state = "compressor"
 	idle_power_usage = 10
 	active_power_usage = 50 KILOWATTS
-	density = 1
 	anchored = TRUE
 	construct_state = /decl/machine_construction/default/panel_closed
 
