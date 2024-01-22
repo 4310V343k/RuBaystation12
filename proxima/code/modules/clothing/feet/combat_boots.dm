@@ -1,6 +1,6 @@
 /obj/item/clothing/shoes/combat
 	name = "riot armored boots"
-	desc = "boots for kick some punks ass."
+	desc = "these are special boots that are reinforced with anti-impact elements to protect the feet."
 	icon_state = "leg_guards_riot"
 	item_state = "leg_guards_riot"
 	icon = 'proxima/icons/obj/clothing/obj_feet.dmi'
@@ -15,7 +15,7 @@
 
 /obj/item/clothing/shoes/combat/ballistic
 	name = "bullet armored boots"
-	desc = "boots for kick some punks ass."
+	desc = "these are special boots that are reinforced with anti-bullet elements to protect the feet."
 	icon_state = "leg_guards_bullet"
 	item_state = "leg_guards_bullet"
 	armor = list(
@@ -28,7 +28,7 @@
 
 /obj/item/clothing/shoes/combat/laser
 	name = "laser armored boots"
-	desc = "boots for kick some punks ass."
+	desc = "These are specially reinforced boots with mirror elements to protect against lasers or energy weapons."
 	icon_state = "leg_guards_laser"
 	item_state = "leg_guards_laser"
 	armor = list(
@@ -40,7 +40,7 @@
 
 /obj/item/clothing/shoes/combat/heavy
 	name = "heavy armored boots"
-	desc = "boots for kick some punks ass."
+	desc = "Boots with super-heavy reinforcement are designed to absorb a huge number of different attacks."
 	icon_state = "leg_guards_combat"
 	item_state = "leg_guards_combat"
 	armor = list(
