@@ -5,6 +5,7 @@
 	icon_state = "compressor"
 	idle_power_usage = 10
 	active_power_usage = 50 KILOWATTS
+	anchored = TRUE
 	construct_state = /decl/machine_construction/default/panel_closed
 
 	var/obj/item/factory_blueprint/stored_blueprint = null
@@ -140,7 +141,13 @@
 
 	return TRUE
 
-//obj/machinery/factory/bumped()
+/obj/machinery/factory/Bumped(obj/item/I)
+	.=..()
+
+	if(get_dir(src,I) == input_dir)
+		InsertMaterial(I)
+
+	return TRUE
 
 
 
@@ -232,7 +239,6 @@
 
 	return TRUE
 
-
 /obj/item/stock_parts/circuitboard/factory
 	name = T_BOARD("factory")
 	build_path = /obj/machinery/factory
@@ -243,3 +249,5 @@
 							/obj/item/stock_parts/scanning_module = 1,
 							/obj/item/stock_parts/micro_laser = 1,
 						  )
+
+//УЕБАНЫ НИКОГДА НЕ ТРОГАЙТЕ МОЙ КОД ЗАВОДОВ, ИНАЧЕ Я ВАС ПОВЕШУ НА КРЮК ЗА ЯЙЦА

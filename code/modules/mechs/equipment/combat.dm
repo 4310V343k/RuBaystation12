@@ -606,3 +606,75 @@
 
 			if(owner)
 				owner.update_icon()
+
+//PRX MECH BALLISTIC
+
+/obj/item/gun/energy/mech_minigun/mounted
+	name = "mech machingegun"
+	desc = "You shouldn't see this!"
+	icon = 'proxima/icons/obj/guns/guns.dmi'
+	icon_state = "minigun"
+	force = 10
+	projectile_type = /obj/item/projectile/bullet/rifle/military
+	max_shots = 100
+	multi_aim = 1
+	fire_delay=0
+	autofire_enabled=1
+	burst = 5
+	accuracy = 3
+	bulk = GUN_BULK_RIFLE
+	w_class = ITEM_SIZE_HUGE
+	one_hand_penalty= 0
+
+	self_recharge = TRUE
+	recharge_time = 3
+	use_external_power = TRUE
+	has_safety = FALSE
+
+/obj/item/mech_equipment/mounted_system/taser/minigun
+	name = "mounted gatling gun"
+	desc = "An exosuit-mounted gatling gun.You will need 12 thousand tallers to shoot 4 seconds from this cannon."
+	icon_state = "mech_ballistic2"
+	holding_type = /obj/item/gun/energy/mech_minigun/mounted
+	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
+	restricted_software = list(MECH_SOFTWARE_WEAPONS)
+
+/obj/item/gun/energy/rocket_launcher/mounted
+	name = "rocket launcher"
+	desc = "You shouldn't see this!"
+	icon = 'proxima/icons/obj/guns/guns.dmi'
+	icon_state = "syndie_mgl"
+	force = 10
+	projectile_type = /obj/item/projectile/rocket_le
+	max_shots = 6
+	multi_aim = 1
+	fire_delay=0
+	autofire_enabled=1
+	burst = 1
+	accuracy = -1
+	bulk = GUN_BULK_RIFLE
+	w_class = ITEM_SIZE_HUGE
+	one_hand_penalty= 0
+
+	self_recharge = TRUE
+	recharge_time = 6
+	use_external_power = TRUE
+	has_safety = FALSE
+
+/obj/item/mech_equipment/mounted_system/taser/rocket_launcher
+	name = "mounted rocket launcher"
+	desc = "An exosuit-mounted rocket laucher.Do you see why I have one eye? BECAUSE IF I WERE A BAD DEMOMAN, I WOULDN'T SHOW YOU THAT EYE."
+	icon_state = "mech_resin"
+	holding_type = /obj/item/gun/energy/rocket_launcher/mounted
+	restricted_hardpoints = list(HARDPOINT_LEFT_HAND, HARDPOINT_RIGHT_HAND)
+	restricted_software = list(MECH_SOFTWARE_WEAPONS)
+
+
+/obj/item/projectile/rocket_le
+	name = "minirocket"
+	fire_sound = 'sound/effects/Explosion1.ogg'
+
+/obj/item/projectile/rocket_le/on_hit(var/atom/target, var/blocked = 0)
+	if(isturf(target))
+		explosion(target, 3, 5, 8, 1)
+	..()

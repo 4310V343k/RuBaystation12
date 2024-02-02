@@ -102,7 +102,7 @@
 	desc = "A classic brought back. The Hephaestus' Landmaster class tracks are impervious to most damage and can maintain top speed regardless of load. Watch out for corners."
 	icon_state = "tracks"
 	max_damage = 150
-	move_delay = 2 //It´s fast
+	move_delay = 1 //It´s fast
 	turn_delay = 7
 	power_use = 150
 
@@ -120,6 +120,7 @@
 	name = "combat legs"
 	exosuit_desc_string = "sleek hydraulic legs"
 	icon_state = "combat_legs"
-	move_delay = 3
-	turn_delay = 3
+	move_delay = 4
+	turn_delay = 4
+	max_damage = 130
 	power_use = 20

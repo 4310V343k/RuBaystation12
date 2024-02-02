@@ -11818,6 +11818,14 @@
 /obj/item/clothing/suit/armor/riot,
 /obj/item/clothing/suit/armor/riot,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "aQq" = (
@@ -18795,6 +18803,8 @@
 /obj/item/clothing/accessory/glassesmod/nvg,
 /obj/item/clothing/glasses/ballistic/security,
 /obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "hUb" = (
@@ -21068,6 +21078,8 @@
 	dir = 4
 	},
 /obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "kOb" = (
@@ -25604,6 +25616,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "qzb" = (
@@ -26281,6 +26301,8 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_y = 24
 	},
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "rlb" = (
@@ -27491,6 +27513,8 @@
 	dir = 8
 	},
 /obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "stb" = (
@@ -27518,6 +27542,8 @@
 	dir = 8
 	},
 /obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "sub" = (
@@ -29275,6 +29301,8 @@
 	dir = 4
 	},
 /obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "uXe" = (
@@ -30375,6 +30403,14 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "xSd" = (
