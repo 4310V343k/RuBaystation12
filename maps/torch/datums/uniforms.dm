@@ -58,7 +58,7 @@
 /decl/hierarchy/mil_uniform/army
 	name = "Master army outfit"
 	hierarchy_type = /decl/hierarchy/mil_uniform/army
-	branches = list(/datum/mil_branch/army)
+	branches = list(/datum/mil_branch/iic)
 
 	pt_under = /obj/item/clothing/under/solgov/pt/army
 	pt_shoes = /obj/item/clothing/shoes/brown

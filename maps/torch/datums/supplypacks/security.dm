@@ -157,7 +157,7 @@
 	access = access_emergency_armory
 	security_level = SUPPLY_SECURITY_HIGH
 
-//rubay code
+//PRX-START
 /decl/hierarchy/supply_pack/security/gren_launch
 	name = "Weapons - Fragmentation shell"
 	contains = list(/obj/item/grenade/frag/shell = 6)
@@ -166,7 +166,7 @@
 	containername = "fragmentation shell crate"
 	access = access_emergency_armory
 	security_level = SUPPLY_SECURITY_HIGH
-//rubay code end
+//PRX-END
 
 /decl/hierarchy/supply_pack/security/pistolammo
 	name = "Ammunition - pistol magazines"

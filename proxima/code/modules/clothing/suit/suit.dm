@@ -58,7 +58,7 @@
 /obj/item/clothing/suit/storage/toggle/gorka_jacket
 	name = "gorka jacket"
 	desc = "Stylish jacket for gorka uniform."
-	icon = 'proxima/icons/obj/clothing/icon_suit.dmi'
+	icon = 'proxima/icons/obj/clothing/obj_suit.dmi'
 	item_icons = list(slot_wear_suit_str = 'proxima/icons/mob/onmob/mob_suit.dmi')
 	icon_state = "gorka_jacket_crew_light"
 	blood_overlay_type = "coat"

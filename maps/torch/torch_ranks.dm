@@ -11,7 +11,7 @@
 		/datum/mil_branch/fleet,
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/solgov,
-		/datum/mil_branch/army,
+		/datum/mil_branch/iic,
 		/datum/mil_branch/alien,
 		/datum/mil_branch/skrell_fleet,
 		/datum/mil_branch/iccgn
@@ -20,7 +20,7 @@
 	spawn_branch_types = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet,
-		/datum/mil_branch/army,
+		/datum/mil_branch/iic,
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/solgov,
 		/datum/mil_branch/alien,
@@ -34,7 +34,7 @@
 		/datum/species/vox     = list(
 			/datum/mil_branch/expeditionary_corps,
 			/datum/mil_branch/fleet,
-			/datum/mil_branch/army,
+			/datum/mil_branch/iic,
 			/datum/mil_branch/civilian,
 			/datum/mil_branch/solgov,
 			/datum/mil_branch/skrell_fleet
@@ -80,18 +80,17 @@
 				/datum/mil_rank/fleet/o2,
 				/datum/mil_rank/fleet/o3
 			),
-			/datum/mil_branch/army = list(
-				/datum/mil_rank/army/e1,
-				/datum/mil_rank/army/e2,
-				/datum/mil_rank/army/e3,
-				///datum/mil_rank/army/e4,
-				/datum/mil_rank/army/e4_alt,
-				/datum/mil_rank/army/e5,
-				/datum/mil_rank/army/e6,
-				/datum/mil_rank/army/e7,
-				/datum/mil_rank/army/o1,
-				/datum/mil_rank/army/o2,
-				/datum/mil_rank/army/o3
+			/datum/mil_branch/iic = list(
+				/datum/mil_rank/iic/e1,
+				/datum/mil_rank/iic/e2,
+				/datum/mil_rank/iic/e3,
+				/datum/mil_rank/iic/e4_alt,
+				/datum/mil_rank/iic/e5,
+				/datum/mil_rank/iic/e6,
+				/datum/mil_rank/iic/e7,
+				/datum/mil_rank/iic/o1,
+				/datum/mil_rank/iic/o2,
+				/datum/mil_rank/iic/o3
 			)
 		),
 		/datum/species/machine/shell = list(
@@ -114,18 +113,17 @@
 				/datum/mil_rank/fleet/o2,
 				/datum/mil_rank/fleet/o3
 			),
-			/datum/mil_branch/army = list(
-				/datum/mil_rank/army/e1,
-				/datum/mil_rank/army/e2,
-				/datum/mil_rank/army/e3,
-				///datum/mil_rank/army/e4,
-				/datum/mil_rank/army/e4_alt,
-				/datum/mil_rank/army/e5,
-				/datum/mil_rank/army/e6,
-				/datum/mil_rank/army/e7,
-				/datum/mil_rank/army/o1,
-				/datum/mil_rank/army/o2,
-				/datum/mil_rank/army/o3
+			/datum/mil_branch/iic = list(
+				/datum/mil_rank/iic/e1,
+				/datum/mil_rank/iic/e2,
+				/datum/mil_rank/iic/e3,
+				/datum/mil_rank/iic/e4_alt,
+				/datum/mil_rank/iic/e5,
+				/datum/mil_rank/iic/e6,
+				/datum/mil_rank/iic/e7,
+				/datum/mil_rank/iic/o1,
+				/datum/mil_rank/iic/o2,
+				/datum/mil_rank/iic/o3
 			)
 		),
 		/datum/species/skrell = list(
@@ -245,56 +243,52 @@
 						SKILL_WEAPONS = SKILL_BASIC,
 						SKILL_EVA     = SKILL_BASIC)
 
-/datum/mil_branch/army
+/datum/mil_branch/iic
 	name = "Interstellar Corps"
 	name_short = "SCGIIC"
 	email_domain = "torch.interstellar.mil"
 
 	rank_types = list(
-		/datum/mil_rank/army/e1,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
-		///datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5,
-		/datum/mil_rank/army/e6,
-		/datum/mil_rank/army/e7,
-		/datum/mil_rank/army/e7_meme,
-		/datum/mil_rank/army/e8,
-		/datum/mil_rank/army/e8_alt,
-		/datum/mil_rank/army/e9,
-		/datum/mil_rank/army/e9_alt1,
-		/datum/mil_rank/army/e9_alt2,
-		/datum/mil_rank/army/e9_meme,
-		/datum/mil_rank/army/o1,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o4,
-		/datum/mil_rank/army/o5,
-		/datum/mil_rank/army/o6,
-		/datum/mil_rank/army/o7,
-		/datum/mil_rank/army/o8
+		/datum/mil_rank/iic/e1,
+		/datum/mil_rank/iic/e2,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt,
+		/datum/mil_rank/iic/e5,
+		/datum/mil_rank/iic/e6,
+		/datum/mil_rank/iic/e7,
+		/datum/mil_rank/iic/e8,
+		/datum/mil_rank/iic/e8_alt,
+		/datum/mil_rank/iic/e9,
+		/datum/mil_rank/iic/e9_alt1,
+		/datum/mil_rank/iic/e9_alt2,
+		/datum/mil_rank/iic/o1,
+		/datum/mil_rank/iic/o2,
+		/datum/mil_rank/iic/o3,
+		/datum/mil_rank/iic/o4,
+		/datum/mil_rank/iic/o5,
+		/datum/mil_rank/iic/o6,
+		/datum/mil_rank/iic/o7,
+		/datum/mil_rank/iic/o8
 	)
 
 	spawn_rank_types = list(
-		/datum/mil_rank/army/e1,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
-		///datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5,
-		/datum/mil_rank/army/e6,
-		/datum/mil_rank/army/e7,
-		/datum/mil_rank/army/e8,
-		/datum/mil_rank/army/e8_alt,
-		/datum/mil_rank/army/e9,
-		/datum/mil_rank/army/e9_alt1,
-		/datum/mil_rank/army/e9_alt2,
-		/datum/mil_rank/army/o1,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o4,
-		/datum/mil_rank/army/o5
+		/datum/mil_rank/iic/e1,
+		/datum/mil_rank/iic/e2,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt,
+		/datum/mil_rank/iic/e5,
+		/datum/mil_rank/iic/e6,
+		/datum/mil_rank/iic/e7,
+		/datum/mil_rank/iic/e8,
+		/datum/mil_rank/iic/e8_alt,
+		/datum/mil_rank/iic/e9,
+		/datum/mil_rank/iic/e9_alt1,
+		/datum/mil_rank/iic/e9_alt2,
+		/datum/mil_rank/iic/o1,
+		/datum/mil_rank/iic/o2,
+		/datum/mil_rank/iic/o3,
+		/datum/mil_rank/iic/o4,
+		/datum/mil_rank/iic/o5
 	)
 
 	assistant_job = /datum/job/crew
@@ -599,133 +593,121 @@
 	*  Army
 	*  ====
 	*/
-/datum/mil_rank/army/e1
+/datum/mil_rank/iic/e1
 	name = "Private"
 	name_short = "PVT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted)
 	sort_order = 1
 
-/datum/mil_rank/army/e2
+/datum/mil_rank/iic/e2
 	name = "Private First Class"
 	name_short = "PFC"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e2)
 	sort_order = 2
 
-/datum/mil_rank/army/e3
+/datum/mil_rank/iic/e3
 	name = "Lance Corporal"
 	name_short = "LCPL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e3)
 	sort_order = 3
 
-/datum/mil_rank/army/e4_alt
+/datum/mil_rank/iic/e4_alt
 	name = "Corporal"
 	name_short = "CPL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e4_alt)
 	sort_order = 4
 
-/datum/mil_rank/army/e5
+/datum/mil_rank/iic/e5
 	name = "Sergeant"
 	name_short = "SGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e5)
 	sort_order = 5
 
-/datum/mil_rank/army/e6
+/datum/mil_rank/iic/e6
 	name = "Staff Sergeant"
 	name_short = "SSGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e6)
 	sort_order = 6
 
-/datum/mil_rank/army/e7
+/datum/mil_rank/iic/e7
 	name = "Gunnery Sergeant"
 	name_short = "GYSGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e7)
 	sort_order = 7
 
-/datum/mil_rank/army/e7_meme
-	name = "Gaming Sergeant"
-	name_short = "GmSGT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e7_meme)
-	sort_order = 7
-
-/datum/mil_rank/army/e8
+/datum/mil_rank/iic/e8
 	name = "Master Sergeant"
 	name_short = "MSGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e8)
 	sort_order = 8
 
-/datum/mil_rank/army/e8_alt
+/datum/mil_rank/iic/e8_alt
 	name = "First Sergeant"
 	name_short = "1SGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e8_alt)
 	sort_order = 8
 
-/datum/mil_rank/army/e9
+/datum/mil_rank/iic/e9
 	name = "Sergeant Major"
 	name_short = "SGTMaj"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e9)
 	sort_order = 9
 
-/datum/mil_rank/army/e9_alt1
+/datum/mil_rank/iic/e9_alt1
 	name = "Master Gunnery Sergeant"
 	name_short = "MGySGT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_alt1)
 	sort_order = 9
 
-/datum/mil_rank/army/e9_meme
-	name = "Master Gaming Sergeant"
-	name_short = "MGmSGT"
-	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_meme)
-	sort_order = 9
-
-/datum/mil_rank/army/e9_alt2
+/datum/mil_rank/iic/e9_alt2
 	name = "Sergeant Major of the Corps"
 	name_short = "SgtMajMarCor"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/enlisted/e9_alt2)
 	sort_order = 9
 
-/datum/mil_rank/army/o1
+/datum/mil_rank/iic/o1
 	name = "Second Lieutenant"
 	name_short = "2LT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer)
 	sort_order = 11
 
-/datum/mil_rank/army/o2
+/datum/mil_rank/iic/o2
 	name = "First Lieutenant"
 	name_short = "1LT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o2)
 	sort_order = 12
 
-/datum/mil_rank/army/o3
+/datum/mil_rank/iic/o3
 	name = "Captain Major"
 	name_short = "MCPT"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o3)
 	sort_order = 13
 
-/datum/mil_rank/army/o4
+/datum/mil_rank/iic/o4
 	name = "Major"
 	name_short = "MAJ"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o4)
 	sort_order = 14
 
-/datum/mil_rank/army/o5
+/datum/mil_rank/iic/o5
 	name = "Lieutenant Colonel"
 	name_short = "LTC"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o5)
 	sort_order = 15
 
-/datum/mil_rank/army/o6
+/datum/mil_rank/iic/o6
 	name = "Colonel"
 	name_short = "COL"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/officer/o6)
 	sort_order = 16
 
-/datum/mil_rank/army/o7
+/datum/mil_rank/iic/o7
 	name = "Colonel General"
 	name_short = "CGen"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag)
 	sort_order = 17
 
-/datum/mil_rank/army/o8
+/datum/mil_rank/iic/o8
 	name = "Commandant of the Interstellar Infantry Corps"
 	name_short = "СIIC"
 	accessory = list(/obj/item/clothing/accessory/solgov/rank/army/flag/o8_alt)

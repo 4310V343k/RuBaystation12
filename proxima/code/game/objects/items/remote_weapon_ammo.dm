@@ -1,7 +1,7 @@
 /obj/item/remote_weapon_ammo
 	name = "bluespace rocket"
 	desc = "A rocket used by remote bluespace rocket launchers."
-	icon = 'proxima/icons/obj/shell.dmi'
+	icon = 'proxima/icons/obj/mortar.dmi'
 	icon_state = "mortar_ammo_he"
 	w_class = ITEM_SIZE_NORMAL
 	/// Sound played when fired

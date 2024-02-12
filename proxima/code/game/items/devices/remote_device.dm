@@ -6,7 +6,7 @@
 	name = "door remote"
 	desc = "Remotely controls airlocks."
 	icon = 'proxima/icons/obj/remote_device.dmi'
-	icon_state = "gangtool-white"
+	icon_state = "remote-device-white"
 	item_state = "electronic"
 	w_class = ITEM_SIZE_TINY
 	var/mode = REMOTE_OPEN
@@ -99,43 +99,43 @@
 /obj/item/device/remote_device/omni
 	name = "omni door remote"
 	desc = "This remote control device can access any door on the facility."
-	icon_state = "gangtool-yellow"
+	icon_state = "remote-device-yellow"
 	safety = FALSE
 	region_access = ACCESS_REGION_ALL
 
 /obj/item/device/remote_device/captain
 	name = "command door remote"
-	icon_state = "gangtool-yellow"
+	icon_state = "remote-device-yellow"
 	region_access = ACCESS_REGION_COMMAND
 
 /obj/item/device/remote_device/chief_engineer
 	name = "engineering door remote"
-	icon_state = "gangtool-orange"
+	icon_state = "remote-device-orange"
 	region_access = ACCESS_REGION_ENGINEERING
 
 /obj/item/device/remote_device/research_director
 	name = "research door remote"
-	icon_state = "gangtool-purple"
+	icon_state = "remote-device-purple"
 	region_access = ACCESS_REGION_RESEARCH
 
 /obj/item/device/remote_device/head_of_security
 	name = "security door remote"
-	icon_state = "gangtool-red"
+	icon_state = "remote-device-red"
 	region_access = ACCESS_REGION_SECURITY
 
 /obj/item/device/remote_device/quartermaster
 	name = "supply door remote"
-	icon_state = "gangtool-green"
+	icon_state = "remote-device-green"
 	region_access = ACCESS_REGION_SUPPLY
 
 /obj/item/device/remote_device/chief_medical_officer
 	name = "medical door remote"
-	icon_state = "gangtool-blue"
+	icon_state = "remote-device-blue"
 	region_access = ACCESS_REGION_MEDBAY
 
 /obj/item/device/remote_device/civillian
 	name = "civillian door remote"
-	icon_state = "gangtool-white"
+	icon_state = "remote-device-white"
 	region_access = ACCESS_REGION_SERVICE
 
 #undef REMOTE_OPEN

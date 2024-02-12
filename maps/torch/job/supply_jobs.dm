@@ -13,7 +13,7 @@
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/tech/fleet,
 		/datum/mil_branch/civilian = /decl/hierarchy/outfit/job/torch/crew/supply/contractor,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/supply/tech/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/supply/tech/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e2,
@@ -22,10 +22,10 @@
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5,
+		/datum/mil_rank/iic/e2,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt,
+		/datum/mil_rank/iic/e5,
 		/datum/mil_rank/civ/three,
 		/datum/mil_rank/civ/second,
 		/datum/mil_rank/civ/first,
