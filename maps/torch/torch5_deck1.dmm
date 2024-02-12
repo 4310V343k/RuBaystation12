@@ -9112,7 +9112,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/aftport)
 "aEG" = (
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/dutyboots,
 /obj/item/clothing/accessory/glassesmod/nvg,
@@ -11821,6 +11820,14 @@
 /obj/item/clothing/suit/armor/riot,
 /obj/item/clothing/suit/armor/riot,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "aQq" = (
@@ -18812,6 +18819,21 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/rnd_sec)
+"hQl" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "hUb" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -21060,6 +21082,24 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/centralstarboard)
+"kML" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "kOb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -25608,6 +25648,14 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/shoes/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
+/obj/item/clothing/gloves/combat/laser,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "qzb" = (
@@ -25850,9 +25898,6 @@
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "qLb" = (
@@ -26267,6 +26312,24 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/xenobiology/xenoflora)
+"rkZ" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/item/clothing/mask/gas/half,
+/obj/machinery/recharger/wallcharger{
+	pixel_y = 24
+	},
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "rlb" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 1;
@@ -27465,6 +27528,30 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/aft)
+"ssN" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "stb" = (
 /obj/effect/floor_decal/corner/research/mono,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -27476,6 +27563,24 @@
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/xenobiology/xenoflora)
+"stv" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "sub" = (
 /obj/structure/closet/secure_closet/hydroponics_torch,
 /obj/effect/floor_decal/corner/research/mono,
@@ -29215,6 +29320,30 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
+"uWS" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/armband/bluegold,
+/obj/item/clothing/accessory/storage/holster/thigh,
+/obj/item/clothing/suit/armor/pcarrier/medium/sol,
+/obj/item/clothing/head/helmet,
+/obj/item/clothing/accessory/glassesmod/nvg,
+/obj/item/clothing/glasses/ballistic/security,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/mask/gas/half,
+/obj/item/clothing/accessory/leg_guards,
+/obj/item/clothing/accessory/arm_guards,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "uXe" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/firstdeck/aftstarboard)
@@ -30318,6 +30447,14 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/shoes/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
+/obj/item/clothing/gloves/combat/ballistic,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "xSd" = (
@@ -58010,10 +58147,10 @@ dUZ
 aaa
 acd
 acd
-acd
-acd
 dVw
 dVw
+ssN
+stv
 htK
 hFu
 vjY
@@ -58212,11 +58349,11 @@ bhb
 aaa
 aaa
 aaa
-acd
-acd
 dVw
 dVw
 wSf
+svH
+svH
 svH
 svH
 swz
@@ -58414,10 +58551,10 @@ abN
 aaa
 aaa
 aaa
-acd
-acd
 dVw
 dVw
+rkZ
+hQl
 hLf
 aEG
 tPW
@@ -58616,11 +58753,11 @@ aiI
 ajJ
 aaa
 aaa
-acd
-acd
 dVw
 dVw
 ryt
+svH
+svH
 svH
 svH
 njm
@@ -58818,10 +58955,10 @@ abN
 aaa
 aaa
 acd
-acd
-acd
 dVw
 dVw
+rkZ
+hQl
 hLf
 aEG
 tPW
@@ -59020,11 +59157,11 @@ abN
 aaa
 aaa
 acd
-acd
-acd
 dVw
 dVw
 sET
+svH
+svH
 svH
 svH
 nWP
@@ -59222,10 +59359,10 @@ aaa
 aaa
 aaa
 acd
-acd
-acd
 dVw
 dVw
+uWS
+kML
 qKQ
 iAS
 bCX
@@ -59424,8 +59561,8 @@ aaa
 aaa
 aaa
 acd
-acd
-acd
+dVw
+dVw
 dVw
 dVw
 dVw
@@ -59628,7 +59765,7 @@ aaa
 aaa
 acd
 acd
-acd
+dVw
 dVw
 dVw
 dVw

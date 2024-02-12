@@ -57,3 +57,5 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define TANK_FLAG_FORCED     FLAG(1)
 #define TANK_FLAG_LEAKING    FLAG(2)
 #define TANK_FLAG_WIRED      FLAG(3)
+
+
