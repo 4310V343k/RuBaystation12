@@ -3,7 +3,7 @@
 	desc = "The Hephaestus Industries TAR-6 - a mass produced kinetic sidearm in widespread service with the SCGDF."
 	caliber = CALIBER_PISTOL
 	magazine_type = /obj/item/ammo_magazine/pistol
-	icon = 'proxima/icons/obj/guns/re_sol_pistol.dmi'
+	icon = 'proxima/icons/obj/guns/tar6.dmi'
 	icon_state = "tar6"
 	item_state = "tar6"
 	has_safety = TRUE

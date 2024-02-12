@@ -1,8 +1,8 @@
 /obj/item/clothing/under/gorka
 	name = "gorka uniform"
 	desc = "Stylish and tacticool uniform. You feel yourself like spetsnaz."
-	icon = 'proxima/icons/obj/clothing/icon_uni.dmi'
-	item_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/mob_uni.dmi')
+	icon = 'proxima/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/onmob_suit.dmi')
 	icon_state = "gorka_crew_light"
 	worn_state = "gorka_crew_light"
 
@@ -15,8 +15,8 @@
 /obj/item/clothing/under/gorka/med
 	name = "gorka medical uniform"
 	desc = "Stylish and tacticool uniform. This one for medical personal."
-	icon_state = "gorka_ih_med_b"
-	worn_state = "gorka_ih_med_b"
+	icon_state = "gorka_med_b"
+	worn_state = "gorka_med_b"
 
 /obj/item/clothing/under/gorka/service
 	name = "gorka service uniform"
@@ -57,8 +57,8 @@
 /obj/item/clothing/under/bdu
 	name = "bdu uniform"
 	desc = "Stylish and so tacticool form. You feel yourself like soldier."
-	icon = 'proxima/icons/obj/clothing/icon_uni.dmi'
-	item_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/mob_uni.dmi')
+	icon = 'proxima/icons/obj/clothing/obj_under.dmi'
+	item_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/onmob_suit.dmi')
 	icon_state = "bdustandard"
 	worn_state = "bdustandard"
 

@@ -3,7 +3,7 @@
 	desc = "The NT41 Enforcer is a self-defense weapon made on bullpup system. Produced by NanoTrasen for it's Security Force. Looks cool and stylish, but sometimes too uncomfortably to run with it. Uses 6mmR rounds."
 	icon_state = "nt41"
 	item_state = "nt41"
-	icon = 'proxima/icons/obj/guns/guns.dmi'
+	icon = 'proxima/icons/obj/guns/nt41.dmi'
 	wielded_item_state = "nt41-wielded"
 	item_icons = list(
 		slot_r_hand_str = 'proxima/icons/mob/onmob/righthand.dmi',
@@ -37,7 +37,7 @@
 /obj/item/gun/projectile/automatic/amrcarabine
 	name = "corporate carabine"
 	desc = "The sielent and deadly and manufactured by Aussec Armory, bullpup carabine LDC-542 is a common weapon for a long-medium ranged combat units in Private Military Companies. Uses 12mmR rounds."
-	icon = 'proxima/icons/obj/guns/guns.dmi'
+	icon = 'proxima/icons/obj/guns/ldc542.dmi'
 	icon_state = "amrcarabine"
 	item_state = "z8carbine"
 	force = 10
@@ -68,7 +68,7 @@
 /obj/item/gun/projectile/automatic/pdw
 	name = "corporate personal defense weapons"
 	desc = "The BP-15 'Moloh' is a  personal defense weapon, produced by Aussec Armory for use by police spec ops or solders. Uses 6mmR rounds."
-	icon = 'proxima/icons/obj/guns/guns.dmi'
+	icon = 'proxima/icons/obj/guns/bp15.dmi'
 	icon_state = "pdw"
 	item_state = "c20r"
 	item_icons = list(

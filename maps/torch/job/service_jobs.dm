@@ -20,7 +20,7 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/chaplain/ec,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/chaplain/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/service/chaplain/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/service/chaplain/army
 		)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/three ,
@@ -29,8 +29,8 @@
 		/datum/mil_rank/civ/civ,
 		/datum/mil_rank/fleet/o1,
 		/datum/mil_rank/fleet/o2,
-		/datum/mil_rank/army/o1,
-		/datum/mil_rank/army/o2,
+		/datum/mil_rank/iic/o1,
+		/datum/mil_rank/iic/o2,
 		/datum/mil_rank/ec/o1)
 	min_skill = list(SKILL_BUREAUCRACY = SKILL_BASIC)
 
@@ -41,8 +41,8 @@
 	)
 
 /datum/job/chaplain/get_description_blurb()
-	return "Вы - свещенник. Ваша работа - проповедовать религию на судне и организовывать похороны.\
-	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Божье на судно."
+	return "Вы - свещенник. Ваша работа - проповедовать религию на корабле и организовывать похороны.\
+	Проводите церемонии, проповеди и всё связанное с религией. Несите слово Божье."
 
 /datum/job/chaplain/equip(var/mob/living/carbon/human/H)
 	if(H.mind?.role_alt_title == "Psionic Confessor")
@@ -66,7 +66,7 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/janitor/ec,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/janitor/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/service/janitor/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/service/janitor/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/three,
@@ -76,9 +76,9 @@
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4_alt
+		/datum/mil_rank/iic/e2,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt
 	)
 	min_skill = list(   SKILL_HAULING = SKILL_BASIC)
 
@@ -111,7 +111,7 @@
 		/datum/mil_branch/civilian,
 		/datum/mil_branch/expeditionary_corps = /decl/hierarchy/outfit/job/torch/crew/service/cook/ec,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/service/cook/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/service/cook/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/service/cook/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/civ/three,
@@ -123,10 +123,10 @@
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
-		/datum/mil_rank/army/e2,
-		/datum/mil_rank/army/e3,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5
+		/datum/mil_rank/iic/e2,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt,
+		/datum/mil_rank/iic/e5
 	)
 	min_skill = list(
 		SKILL_BOTANY = SKILL_BASIC,

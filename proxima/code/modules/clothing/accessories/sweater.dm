@@ -1,8 +1,8 @@
 /obj/item/clothing/accessory/ec_sweater
 	name = "expeditionary fleece jacket"
 	desc = "A stylish fleece jacket for Expeditionary Corps. This one has silver markings"
-	icon = 'proxima/icons/obj/clothing/obj_sweater.dmi'
-	accessory_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/sweater.dmi', slot_wear_suit_str = 'proxima/icons/mob/onmob/sweater.dmi')
+	icon = 'proxima/icons/obj/clothing/obj_suit.dmi'
+	accessory_icons = list(slot_w_uniform_str = 'proxima/icons/mob/onmob/onmob_suit.dmi', slot_wear_suit_str = 'proxima/icons/mob/onmob/onmob_suit.dmi')
 	icon_state = "sweater_ec"
 
 /obj/item/clothing/accessory/ec_sweater/officer

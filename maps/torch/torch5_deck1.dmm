@@ -4309,10 +4309,7 @@
 /area/medical/counselor/therapy)
 "ahL" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/fabricator/hacked{
-	desc = "A typical autolathe. This one is hacked.";
-	name = "autolathe"
-	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury)
 "ahM" = (
@@ -5161,9 +5158,6 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -5668,6 +5662,9 @@
 /area/security/detectives_office)
 "alZ" = (
 /obj/structure/bed/chair/wood,
+/obj/machinery/firealarm{
+	pixel_y = 24
+	},
 /turf/simulated/floor/wood/yew,
 /area/command/conference)
 "amb" = (
@@ -9118,9 +9115,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/glassesmod/nvg,
 /obj/item/clothing/accessory/armband/bluegold,
 /obj/item/clothing/accessory/storage/holster/thigh,
-/obj/item/clothing/glasses/tacgoggles,
 /obj/item/clothing/suit/armor/pcarrier/medium/sol,
 /obj/item/clothing/head/helmet,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -10105,8 +10102,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury)
 "aJm" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/fabricator/hacked{
+	desc = "A typical autolathe. This one is hacked.";
+	name = "autolathe"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury)
 "aJn" = (
@@ -14554,7 +14554,6 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "bCX" = (
-/obj/structure/table/steel,
 /obj/item/storage/box/cdeathalarm_kit,
 /obj/item/melee/telebaton,
 /obj/item/melee/telebaton,
@@ -14565,6 +14564,7 @@
 /obj/item/device/flash,
 /obj/item/device/flash,
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/crate/war,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "bDb" = (
@@ -18357,11 +18357,14 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/gun/energy/stunrevolver/rifle,
-/obj/item/gun/energy/taser/carbine,
-/obj/item/gun/energy/taser/carbine,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/item/storage/briefcase/guncase/barrakuda{
+	pixel_y = -3
+	},
+/obj/item/storage/briefcase/guncase/barrakuda{
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
@@ -18637,10 +18640,18 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/gun/energy/laser/secure,
-/obj/item/gun/energy/laser/secure,
-/obj/item/gun/energy/laser/secure,
-/obj/item/gun/energy/laser/secure,
+/obj/item/gun/energy/laser/secure{
+	pixel_y = 7
+	},
+/obj/item/gun/energy/laser/secure{
+	pixel_y = 3
+	},
+/obj/item/gun/energy/laser/secure{
+	pixel_y = -1
+	},
+/obj/item/gun/energy/laser/secure{
+	pixel_y = -5
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "hGb" = (
@@ -18714,9 +18725,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/dutyboots,
+/obj/item/clothing/accessory/glassesmod/nvg,
 /obj/item/clothing/accessory/armband/bluegold,
 /obj/item/clothing/accessory/storage/holster/thigh,
-/obj/item/clothing/glasses/tacgoggles,
 /obj/item/clothing/suit/armor/pcarrier/medium/sol,
 /obj/item/clothing/head/helmet,
 /obj/machinery/recharger/wallcharger{
@@ -19129,10 +19140,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/development)
 "isR" = (
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -22
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -19289,20 +19296,26 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/thruster/d1starboard)
 "iAS" = (
-/obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/cell/guncell/medium,
-/obj/item/cell/guncell/medium,
-/obj/item/cell/guncell/medium,
-/obj/item/cell/guncell/medium,
-/obj/item/cell/guncell/medium,
-/obj/item/cell/guncell/medium,
-/obj/item/gun/energy/k342,
-/obj/item/gun/energy/k342,
+/obj/structure/table/steel,
+/obj/item/storage/box/handcuffs{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/storage/box/smokes{
+	pixel_y = 7
+	},
+/obj/item/storage/box/flashbangs{
+	pixel_y = 3
+	},
+/obj/item/storage/box/teargas{
+	pixel_x = 3;
+	pixel_y = 7
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "iAZ" = (
@@ -19324,21 +19337,15 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/firstdeck/fore)
 "iBb" = (
-/obj/structure/table/steel,
-/obj/machinery/cell_charger,
-/obj/random/powercell,
-/obj/random/powercell,
-/obj/random/powercell,
-/obj/item/screwdriver{
-	pixel_y = 15
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -21
+	pixel_x = -22
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/armoury)
 "iBT" = (
@@ -20616,21 +20623,15 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/center)
 "keO" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/firealarm{
+/obj/machinery/light{
 	dir = 8;
-	pixel_x = -24
+	icon_state = "tube1"
 	},
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/turf/simulated/floor/wood/yew,
-/area/command/conference)
+/turf/simulated/floor/tiled,
+/area/hallway/primary/firstdeck/fore)
 "kfb" = (
 /obj/structure/table/steel,
 /obj/item/paper_bin,
@@ -20866,6 +20867,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
+/obj/item/gun/energy/laser/secure,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "kvb" = (
@@ -22735,6 +22737,13 @@
 	},
 /turf/simulated/floor/blackgrid,
 /area/security/nuke_storage)
+"mVo" = (
+/obj/machinery/alarm{
+	alarm_id = "xenobio4_alarm";
+	pixel_y = 24
+	},
+/turf/simulated/floor/wood/yew,
+/area/command/conference)
 "mVW" = (
 /obj/effect/wallframe_spawn/reinforced/polarized{
 	id = "forensicswindow"
@@ -23123,11 +23132,18 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "nvX" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/machinery/alarm{
+/obj/item/device/radio/intercom{
 	dir = 4;
-	pixel_x = -22
+	pixel_x = -21
 	},
+/obj/structure/table/steel,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/random/powercell,
+/obj/item/screwdriver{
+	pixel_y = 15
+	},
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/armoury)
 "nxK" = (
@@ -25831,13 +25847,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/storage/box/teargas{
-	pixel_x = 3;
-	pixel_y = 2
-	},
-/obj/item/storage/box/flashbangs,
-/obj/item/storage/box/smokes,
-/obj/item/storage/box/handcuffs,
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
 /obj/item/shield/riot/metal,
@@ -26664,8 +26673,18 @@
 	dir = 4
 	},
 /obj/structure/table/rack,
-/obj/item/gun/energy/stunrevolver/rifle,
-/obj/item/gun/energy/stunrevolver/rifle,
+/obj/item/gun/energy/stunrevolver/rifle{
+	pixel_y = 10
+	},
+/obj/item/gun/energy/stunrevolver/rifle{
+	pixel_y = 6
+	},
+/obj/item/gun/energy/taser/carbine{
+	pixel_y = 1
+	},
+/obj/item/gun/energy/taser/carbine{
+	pixel_y = -2
+	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/security/armoury)
 "rFb" = (
@@ -28673,6 +28692,10 @@
 /obj/item/device/tape,
 /turf/simulated/floor/tiled/white/monotile,
 /area/rnd/office)
+"tPW" = (
+/obj/effect/floor_decal/industrial/hatch/gray,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/command/armoury/tactical)
 "tRX" = (
 /obj/structure/railing/mapped{
 	dir = 8;
@@ -29250,6 +29273,7 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/armoury)
 "uZY" = (
@@ -29299,11 +29323,14 @@
 	dir = 8
 	},
 /obj/item/storage/briefcase/guncase/tar6{
-	pixel_y = 5
+	pixel_y = 6
+	},
+/obj/item/storage/briefcase/guncase/tar6{
+	pixel_y = 3
 	},
 /obj/item/storage/briefcase/guncase/tar6,
 /obj/item/storage/briefcase/guncase/tar6{
-	pixel_y = -5
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
@@ -41217,7 +41244,7 @@ hUM
 bmB
 ajU
 akV
-atE
+keO
 aOJ
 qwk
 atE
@@ -41619,9 +41646,9 @@ njj
 njj
 njj
 njj
-njj
-njj
-njj
+imK
+imK
+imK
 njj
 njj
 njj
@@ -41823,7 +41850,7 @@ dBF
 gVR
 ajW
 isR
-keO
+isR
 kqb
 fYv
 pBL
@@ -42021,7 +42048,7 @@ jkm
 aeL
 agF
 njj
-whd
+mVo
 whd
 whd
 tgT
@@ -58393,7 +58420,7 @@ dVw
 dVw
 hLf
 aEG
-aEG
+tPW
 dJv
 aBc
 bMB
@@ -58797,7 +58824,7 @@ dVw
 dVw
 hLf
 aEG
-aEG
+tPW
 jQY
 aBc
 xqk

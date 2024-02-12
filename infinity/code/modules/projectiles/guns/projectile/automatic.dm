@@ -6,7 +6,7 @@
 	desc = "The NT41 Enforcer is a self-defense weapon made on bullpup system. Produced by NanoTrasen for it's Security Force. Looks cool and stylish, but sometimes too uncomfortably to run with it. Uses 5.7x28mm rounds."
 	icon_state = "nt41"
 	item_state = "nt41"
-	icon = 'infinity/icons/obj/guns.dmi'
+	icon = 'proxima/icons/obj/guns/nt41.dmi'
 	wielded_item_state = "nt41-wielded"
 	item_icons = list(
 		slot_r_hand_str = 'infinity/icons/mob/onmob/righthand.dmi',
@@ -39,8 +39,8 @@
 /obj/item/gun/projectile/automatic/amrcarabine
 	name = "LDC-542 carabine"
 	desc = "The sielent and deadly and manufactured by Aussec Armory, bullpup carabine LDC-542 is a common weapon for a long-medium ranged combat units in Private Military Companies. Uses 12.7x55mm rounds."
-	icon = 'infinity/icons/obj/guns.dmi'
-	icon_state = "amrcarabine"
+	icon = 'proxima/icons/obj/guns/ldc542.dmi'
+	icon_state = "ldc542"
 	item_state = "z8carbine"
 	force = 10
 	caliber = CALIBER_ANTIMATERIAL_SMALL
@@ -63,14 +63,14 @@
 
 /obj/item/gun/projectile/automatic/amrcarabine/on_update_icon()
 	..()
-	icon_state = (ammo_magazine)? "amrcarabine" : "amrcarabine-e"
+	icon_state = (ammo_magazine)? "ldc542" : "ldc542-e"
 
 
 /obj/item/gun/projectile/automatic/bp15
 	name = "BP-15 PDW"
 	desc = "The BP-15 'Moloh' is a  personal defense weapon, produced by Aussec Armory for use by police spec ops or solders. Uses 5.7x28 mm rounds."
 	icon = 'infinity/icons/event/guns.dmi'
-	icon_state = "pdw"
+	icon_state = "BP15"
 	item_state = "c20r"
 	item_icons = list(
 		slot_r_hand_str = 'icons/mob/onmob/items/righthand_guns.dmi',
@@ -96,65 +96,8 @@
 	one_hand_penalty = 3
 
 /obj/item/gun/projectile/automatic/bp15/on_update_icon()
-	icon_state = (ammo_magazine)? "pdw" : "pdw-empty"
+	icon_state = (ammo_magazine)? "BP15" : "BP15-e"
 	..()
-
-/obj/item/gun/projectile/automatic/invider
-	name = "Invider submachine gun"
-	desc = "The Invider is a Hi-tech and rapid firing SMG. Uses 4.6x30mm universal rounds."
-	icon = 'infinity/icons/event/guns.dmi'
-	icon_state = "pdw"
-	item_state = "c20r"
-	var/projetcile_type = 0
-	force = 10
-	caliber = CALIBER_PISTOL_FAST
-	origin_tech = list(TECH_COMBAT = 5, TECH_MATERIAL = 2, TECH_ESOTERIC = 8)
-	slot_flags = SLOT_BELT|SLOT_BACK
-	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/uni46x30mm
-	allowed_magazines = /obj/item/ammo_magazine/uni46x30mm
-	auto_eject = 1
-	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
-
-	firemodes = list(
-		list(mode_name="semiauto",       burst=1, fire_delay=0,      one_hand_penalty=0, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null,      one_hand_penalty=0, burst_accuracy=list(0,-1,-1),       dispersion=list(0.0, 0.6, 1.0)),
-		)
-
-	bulk = GUN_BULK_CARABINE
-	w_class = ITEM_SIZE_LARGE
-	one_hand_penalty = 3
-
-
-/obj/item/gun/projectile/automatic/invider/modify_projectile(obj/item/projectile/p, var/list/params = list())
-	if (params["Charged"] == 1 && loaded.len)
-		p = new /obj/item/projectile/bullet/smg/uni46x30mm_charged
-	return p
-
-/obj/item/gun/projectile/automatic/invider/CtrlAltClick(mob/user)
-	if(user.incapacitated())
-		to_chat(user, "<span class='warning'>You can't do that right now!</span>")
-		return
-
-	else
-		if(src == user.get_active_hand())
-			projetcile_type = !projetcile_type
-			playsound(user, 'infinity/sound/weapons/selector.ogg', 50, 1)
-			to_chat(user, "<span class='notice'>You toggle the bullet penetration mode [projetcile_type ? "on":"off"].</span>")
-
-/obj/item/gun/projectile/automatic/invider/Fire(atom/target, mob/living/user, clickparams, pointblank=0, reflex=0, var/list/params = list())
-	if (projetcile_type == 1)
-		..(target, user, clickparams, pointblank, reflex, list("Charged" = 1))
-	else
-		..(target, user, clickparams, pointblank, reflex, list("Charged" = 0))
-
-/obj/item/gun/projectile/automatic/invider/on_update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "pdw"
-	else
-		icon_state = "pdw-empty"
-	return
 
 /obj/item/gun/projectile/automatic/nt41/armory
 	starts_loaded = 0

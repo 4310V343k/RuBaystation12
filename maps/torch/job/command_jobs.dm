@@ -30,11 +30,11 @@
 	return "Вы - Командующий офицер (КО). Вы - первый человек на борту судна. \
 	Вы опытный профессиональный офицер, контролирующий всё судно и в конечном счете несущий ответственность за все, что происходит на борту. \
 	Ваша работа - убедится, что ГЭК \"Факел\" выполняет свою миссию по исследованию космоса. \
-	Делегируете ваши полномочия Исполнительному офицеру, главам департаментов и вашему Старшему советнику по работе с личным составом для эффективного управления судном, прислушивайтесь к их опыту и доверяйте им."
+	Делегируете Ваши полномочия Исполнительному офицеру, главам департаментов и Вашему Старшему советнику по работе с личным составом для эффективного управления судном, прислушивайтесь к их опыту и доверяйте им."
 
 /datum/job/captain/post_equip_rank(var/mob/person, var/alt_title)
-	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume=20)
-	captain_announcement.Announce("All hands, [alt_title || title] [person.real_name] on deck!", new_sound = announce_sound)
+	var/sound/announce_sound = (GAME_STATE <= RUNLEVEL_SETUP)? null : sound('sound/misc/boatswain.ogg', volume=22)
+	captain_announcement.Announce("Всей команде, [alt_title || title] [person.real_name] на палубе!", new_sound = announce_sound)
 	..()
 
 /datum/job/hop
@@ -86,10 +86,10 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hop/get_description_blurb()
-	return "Вы - Исполнительный офицер (ИО или ХО). Вы опытный старший офицер и второй человек на судне после Капитана. Вы несёте ответственность за стабильную работу судна под началом Командующего офицера. \
+	return "Вы - Исполнительный Офицер (ИО). Вы опытный офицер и второй человек на корабле после Командующего Офицера. Вы несёте ответственность за стабильную работу корабля под началом Командующего офицера. \
 	В отсутствие КО, ожидается, что Вы займёте его место. \
 	Ваша основная задача - управлять главами отделов и всеми теми, кто не входит в них. \
-	Вы также ответственны за контрактников и пассажиров на борту судна. Старший советник по работе в личным составом и Мостовые офицеры являются инструментами в вашем распоряжении."
+	Вы также ответственны за контрактников и пассажиров на борту. Старший советник по работе в личным составом и Мостовые Офицеры являются инструментами в Вашем распоряжении."
 
 /datum/job/rd
 	title = "Chief Science Officer"
@@ -105,7 +105,7 @@
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/ec/o5
-	)
+	) //PRX
 
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_COMPUTER    = SKILL_BASIC,
@@ -137,9 +137,10 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/rd/get_description_blurb()
-	return "Вы - Главный научный офицер (ГНО). Вы ответственны за работу научно-исследовательского отдела. \
-	Вы занимаетесь научными аспектами миссии и отвечаете за корпоративные интересы Организации Экспедиционного корпуса. \
-	Убедитесь, что учёные выполняют свою работу, работайте сами и отправляйте группы на исследовательские экспедиции для нахождения артефактов, полезных для миссии. Консультируйте КО по научным вопросам."
+	return "Вы - Главный Научный Офицер (ГНО). Вы ответственны за работу научно-исследовательского отдела. \
+	Вы занимаетесь научными аспектами миссии и отвечаете за корпоративные интересы Организации Экспедиционного Корпуса. \
+	Убедитесь, что научный персонал выполняет свою работу, работайте сами и отправляйте группы на исследовательские \
+	экспедиции для нахождения артефактов, полезных для миссии. Консультируйте КО по научным вопросам."
 
 /datum/job/cmo
 	title = "Chief Medical Officer"
@@ -152,14 +153,14 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/cmo/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/cmo/army
-	)
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/command/cmo/army
+	) //PRX
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4,
-		/datum/mil_rank/army/o3
-	)
+		/datum/mil_rank/iic/o3
+	) //PRX
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_MEDICAL     = SKILL_EXPERT,
 	                    SKILL_ANATOMY     = SKILL_EXPERT,
@@ -186,9 +187,9 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/cmo/get_description_blurb()
-	return "Вы - Главный медицинский офицер (СМО или ГМО). Вы отвечаете за работу медицинского отдела. Вы гарантируете, что все работники отдела хорошо обученны, подготовленны и что они выполняют свои обязанности. \
-	Убедитесь, что ваши врачи укомплектовали ваш лазарет, а ваши санитары/парамедики готовы к реагированию. \
-	Действуйте в качестве второго хирурга или резервного химика в отсутствие того или другого. Ожидается, что Вы очень хорошо знаете медицину, а также основные регуляции."
+	return "Вы - Главный Медицинский Офицер (ГМО). Вы отвечаете за работу медицинского отдела. Вы гарантируете, что все сотрудники отдела хорошо обученны, подготовленны и что они выполняют свои обязанности. \
+	Убедитесь, что Ваши врачи укомплектовали Ваш лазарет, а Ваши санитары/парамедики готовы отреагировать на вызов. \
+	Действуйте в качестве второго хирурга или резервного химика в отсутствие того или другого. Ожидается, что Вы очень хорошо знаете медицину, химию и основные регуляции."
 
 /datum/job/chief_engineer
 	title = "Chief Engineer"
@@ -207,7 +208,7 @@
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
 		/datum/mil_rank/fleet/o4
-	)
+	) //PRX
 	min_skill = list(   SKILL_BUREAUCRACY  = SKILL_BASIC,
 	                    SKILL_COMPUTER     = SKILL_ADEPT,
 	                    SKILL_EVA          = SKILL_ADEPT,
@@ -243,11 +244,11 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/chief_engineer/get_description_blurb()
-	return "Вы - Главный инженер (ГИ). Вы ответственны за работу инженерного отдела. \
-	Вы несёте ответственность за Старшего инженера, который является вашей правой рукой и (должен) быть компитентным и опытным инженером. \
-	Делегируйте задачи ему и слушайте его. Управляйте инженерами, убедитесь, что на судно поступает энергия и, что все пробоины и поломки устранены. \
-	Консультируйте КО по инженерным вопросам. Вы также ответственны за обслуживания и контроль всех синтетиков судна. \
-	Вы - опытный инженер с большим багажом теоритических знаний. Вам также следует знать регуляции судна на приемлемом уровне."
+	return "Вы - Главный Инженер (ГИ). Вы ответственны за работу инженерного отдела. \
+	Вы несёте ответственность за старшего инженера, который является Вашей правой рукой и (должен) быть компитентным и опытным инженером. \
+	Делегируйте задачи ему и слушайте его. Управляйте инженерами, убедитесь, что на корабле поступает энергия и, что все пробоины и поломки устранены. \
+	Консультируйте КО по инженерным вопросам. Вы также ответственны за обслуживания и контроль всех синтетиков корабля. \
+	Вы - опытный инженер с большим багажом теоритических и практически знаний. Вам также следует знать регуляции корабля на приемлемом уровне."
 
 /datum/job/hos
 	title = "Chief of Security"
@@ -260,16 +261,16 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/cos/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/cos/army
-	)
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/command/cos/army
+	) //PRX
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3,
-		/datum/mil_rank/army/o4
-	)
+		/datum/mil_rank/iic/o2,
+		/datum/mil_rank/iic/o3,
+		/datum/mil_rank/iic/o4
+	) //PRX
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
 	                    SKILL_COMBAT      = SKILL_BASIC,
@@ -296,11 +297,11 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/hos/get_description_blurb()
-	return "Вы - Глава службы безопасности (ГСБ). Вы отвечаете за охрану судна, равно как и за каптенармусов, смотрителя и криминалистов. \
-	Вы поддерживаете порядок на судне, а также отвечаете за внешнюю и внутренную безопасность. Вы - закон. Вы подчиняетесь КО и ИО. \
+	return "Вы - Глава Службы Безопасности. Вы отвечаете за охрану корабле, равно как и за каптенармусов, смотрителя и криминалистов. \
+	Вы поддерживаете порядок на корабле, а также отвечаете за внешнюю и внутренную безопасность. Вы - закон. Вы подчиняетесь КО и ИО. \
 	От Вас ожидается знание Военно-Юридического кодекса ЦПСС, Законов ЦПСС, кодов угроз и основных регуляций на самом высоком уровне."
 
-/datum/job/qm
+/datum/job/qm //PRX - ALL
 	title = "Supply Corps Officer"
 	selection_color = "#974e05"
 	total_positions = 1
@@ -318,14 +319,14 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/supply/deckofficer/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3
+		/datum/mil_rank/iic/o2,
+		/datum/mil_rank/iic/o3
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_FINANCE     = SKILL_BASIC,
@@ -350,14 +351,14 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/qm/get_description_blurb()
-	return "Вы - Офицер снабжения. Вы отвечаете за работу отделов снабжения и поставок. \
-	С одной стороны, вы следите за правильным оформлением бланков заказов и за тем, чтобы карготехник \
-	своевременно принимал и отправлял заказы, шахтёры копали руду, а челноки находились в готовом к вылету состоянию. \
-	С другой стороны, вы отвечаете за целостность и учет всех складов на борту ГЭК 'Факел' и за тем, чем и как питаются, \
-	что пьют борту. Другими словми, офицер снабжения является главным по тому, что прибывает на склад судна извне и \
-	куда это вдальнейшем перераспределяется внутри судна. Также он отвечает за чистоту палуб."
+	return "Вы - Офицер Обеспечения (ОБ). Вы отвечаете за работу отделов снабжения и поставок. \
+	С одной стороны, Вы следите за правильным оформлением бланков заказов и за тем, чтобы палубные техники \
+	своевременно принимали и отправляли заказы, старатели добывали руду, а челноки находились в готовом к вылету состоянии. \
+	С другой стороны, Вы отвечаете за целостность и учет всех складов на борту ГЭК 'Факел' и за тем, чем и как питаются, \
+	что пьют борту. Иными словами, ОБ является главным по тому, что прибывает на склад корабля извне и \
+	куда это вдальнейшем перераспределяется."
 
-/datum/job/jua
+/datum/job/jua //PRX - ALL
 	title = "Judge Advocate"
 	department = "Поддержка командования"
 	department_flag = SPT
@@ -374,14 +375,14 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/command/jua/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/jua/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/command/jua/army
 		)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/o3,
 		/datum/mil_rank/fleet/o2,
 		/datum/mil_rank/fleet/o3,
-		/datum/mil_rank/army/o2,
-		/datum/mil_rank/army/o3,
+		/datum/mil_rank/iic/o2,
+		/datum/mil_rank/iic/o3,
 		)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_EXPERT,
 	                    SKILL_FINANCE     = SKILL_BASIC)
@@ -400,9 +401,9 @@
 	software_on_spawn = list(/datum/computer_file/program/reports)
 
 /datum/job/representative/get_description_blurb()
-	return "Вы - Военный прокурор. Консультруйте экипаж по вопросам закона. \
+	return "Вы - Военный Прокурор. Консультруйте персонал по вопросам закона, регуляций и процедур. \
 	Рассматривайте апелляции гражданских и военнослужащих. \
-	Проводите суды. Отчитывайтесь о своих результатах Командующему офицеру"
+	Проводите суды. Отчитывайтесь о своих результатах Командующему и Исполнительному офицеру"
 
 /datum/job/sea
 	title = "Senior Enlisted Advisor"
@@ -420,17 +421,17 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/fleet
 	allowed_branches = list(
 		/datum/mil_branch/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/command/sea/army
-	)
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/command/sea/army
+	) //PRX
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e8,
 		/datum/mil_rank/fleet/e9_alt1,
 		/datum/mil_rank/fleet/e9,
-		/datum/mil_rank/army/e8,
-		/datum/mil_rank/army/e8_alt,
-		/datum/mil_rank/army/e9,
-		/datum/mil_rank/army/e9_alt1
-	)
+		/datum/mil_rank/iic/e8,
+		/datum/mil_rank/iic/e8_alt,
+		/datum/mil_rank/iic/e9,
+		/datum/mil_rank/iic/e9_alt1
+	) //PRX
 	min_skill = list(   SKILL_EVA        = SKILL_BASIC,
 	                    SKILL_COMBAT     = SKILL_BASIC,
 	                    SKILL_WEAPONS    = SKILL_BASIC)
@@ -456,7 +457,7 @@
 							 /datum/computer_file/program/reports)
 
 /datum/job/sea/get_description_blurb()
-	return "Вы - Старший советник по работе с личным составом (СЕА). Вы самый старший представитель рядового состава на судне. \
+	return "Вы - Старший рядовой советник (СРС). Вы самый старший представитель рядового состава на корабле. \
 	Вы консультируете старший офицерский состав по вопросам, связанными с рядовым составом, даёте оценки и советы остальным офицерам. \
 	Вы отвечате за поддержание дисциплины и хорошего поведения среди рядовых, как и уведомляете офицеров о любых проблемах и \"консультируете\" их по ошибкам которые сделал рядовой состав. \
 	Вы также выполняете различные поручения от имени КО и ИО. \
@@ -514,6 +515,6 @@
 							 /datum/computer_file/program/deck_management)
 
 /datum/job/bridgeofficer/get_description_blurb()
-	return "Вы - Мостовой офицер (МО). Вы очень молодой офицер и не даёте приказов сами. Вы подчинятесь всему командованию. \
+	return "Вы - Мостовой Офицер (МО). Вы очень молодой офицер и не даёте приказов сами. Вы подчинятесь всему командованию. \
 	Вы разбераетесь с делами на мостике и отчитываетесь напрямую КО и ИО. Вы берете управление над Факелом и Аквиллой при необходимости. \
 	Следите за программами, установленных на консолях мостика, и докладывайте актуальную информацию командованию."

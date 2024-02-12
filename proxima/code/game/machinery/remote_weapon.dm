@@ -1,7 +1,7 @@
 /obj/machinery/remote_weapon
 	name = "testing remote weapon"
 	desc = "A heavy artillery piece. Must be connected to with a remote controller to be usable."
-	icon = 'proxima/icons/obj/arti.dmi'
+	icon = 'proxima/icons/obj/mortar.dmi'
 	icon_state = "artnormal"
 
 	density = TRUE

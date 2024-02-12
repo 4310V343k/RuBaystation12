@@ -1,5 +1,5 @@
 /obj/item/toy/figure/poraz
-	icon = 'proxima/icons/obj/toys.dmi'
+	icon = 'proxima/icons/obj/prx_toy.dmi'
 	name = "Mr. Poraz figure"
 	desc = "A relatively small statuette of a certain unati in a poncho and a cheerful hat. \"Mr. Poraz\" is engraved on the rim of the hat."
 	icon_state = "poraz"

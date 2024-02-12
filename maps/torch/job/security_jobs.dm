@@ -12,13 +12,13 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/brig_chief/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/security/brig_chief/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/security/brig_chief/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e7,
-		/datum/mil_rank/army/e6,
-		/datum/mil_rank/army/e7,
-		/datum/mil_rank/army/e8,
+		/datum/mil_rank/iic/e6,
+		/datum/mil_rank/iic/e7,
+		/datum/mil_rank/iic/e8,
 		/datum/mil_rank/fleet/e6,
 		/datum/mil_rank/fleet/e7,
 		/datum/mil_rank/fleet/e8
@@ -138,15 +138,14 @@
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/security/maa/fleet,
-		/datum/mil_branch/army = /decl/hierarchy/outfit/job/torch/crew/security/maa/army
+		/datum/mil_branch/iic = /decl/hierarchy/outfit/job/torch/crew/security/maa/army
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/ec/e3,
 		/datum/mil_rank/ec/e5,
-		/datum/mil_rank/army/e3,
-		//datum/mil_rank/army/e4,
-		/datum/mil_rank/army/e4_alt,
-		/datum/mil_rank/army/e5,
+		/datum/mil_rank/iic/e3,
+		/datum/mil_rank/iic/e4_alt,
+		/datum/mil_rank/iic/e5,
 		/datum/mil_rank/fleet/e3,
 		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5
@@ -172,24 +171,5 @@
 							 /datum/computer_file/program/camera_monitor)
 
 /datum/job/officer/get_description_blurb()
-	return "Вы - Каптенармус. Ваша задача - поддерживать порядок на судне и защищать его от различных угроз. Вы подчиняетесь Главе службы безопасности и Смотрителю. \
+	return "Вы - Каптенармус. Ваша задача - поддерживать порядок на корабле и защищать его от различных угроз. Вы подчиняетесь Главе службы безопасности и Смотрителю. \
 	Проводите задержания, опрашивайте свидетелей. От вас ожидается хорошее знание закона ЦПСС и основных регуляций судна."
-
-/* До лучших времен
-/datum/job/officer/sfp
-	title = "Police Enforcer"
-	total_positions = 2
-	spawn_positions = 2
-	hud_icon = "hudmasteratarms"
-	alt_titles = list(
-		"Police Officer",
-		"Police Operative"
-	)
-	allowed_branches = list(
-		/datum/mil_branch/solgov = /decl/hierarchy/outfit/job/torch/crew/security/maa/agent
-	)
-	allowed_ranks = list(
-		/datum/mil_rank/sol/junior_agent,
-		/datum/mil_rank/sol/agent
-	)
-*/

@@ -22,7 +22,7 @@
 	display_name = "interstellar beret selection"
 	description = "A beret denoting service in one of the branches within the SCG Interstellar Corps."
 	path = /obj/item/clothing/head/beret/solgov/army
-	allowed_branches = list(/datum/mil_branch/army)
+	allowed_branches = list(/datum/mil_branch/iic)
 
 /datum/gear/head/armyberet/New()
 	..()

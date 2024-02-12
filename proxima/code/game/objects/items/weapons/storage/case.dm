@@ -16,15 +16,15 @@
 	make_exact_fit()
 
 /obj/item/storage/briefcase/guncase
-	name = "\improper SCG gun case"
+	name = "\improper SCG pistol case"
 	desc = "A handsome black case designed with blue stripes for carry gun Sol Central Government personnel."
 	w_class = ITEM_SIZE_LARGE
 	icon = 'proxima/icons/obj/storage.dmi'
-	icon_state = "guncase"
-	item_state = "guncase"
+	icon_state = "guncase_pistol"
+	item_state = "guncase_pistol"
 
 /obj/item/storage/briefcase/guncase/tar6
-	name = "\improper TAR-6 gun case"
+	name = "\improper TAR-6 pistol case"
 	desc = "A handsome black case designed with blue stripes for carry TAR6 pistol of Sol Central Government personnel."
 
 /obj/item/storage/briefcase/guncase/tar6/New()
@@ -34,4 +34,18 @@
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
 	new /obj/item/ammo_magazine/pistol(src)
+	make_exact_fit()
+
+/obj/item/storage/briefcase/guncase/barrakuda
+	name = "\improper K342 rifle case"
+	desc = "A handsome black case designed with red stripes for carry K342 Barrakuda of Sol Central Government personnel."
+	icon_state = "guncase_rifle"
+	item_state = "guncase_rifle"
+
+/obj/item/storage/briefcase/guncase/barrakuda/New()
+	..()
+	new /obj/item/gun/energy/k342/sol/empty(src)
+	new /obj/item/cell/guncell/medium(src)
+	new /obj/item/cell/guncell/medium(src)
+	new /obj/item/cell/guncell/medium(src)
 	make_exact_fit()

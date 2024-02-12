@@ -140,6 +140,14 @@
 		list(mode_name="heavy plasma charge", projectile_type=/obj/item/projectile/plasma/heavy, charge_cost=50, fire_delay=8, projectile_color=COLOR_RED)
 	)
 
+/obj/item/gun/energy/k342/sol
+	desc = "K342 Barrakuda is the latest plasma weapon created by NanoTrasen for Sol Central Government. It can fire several types of charges: stunning, incendiary and lethal."
+	icon_state = "barrakuda_sol_off"
+	item_state = "barrakuda_sol"
+	wielded_item_state = "barrakuda_sol-wielded"
+
+/obj/item/gun/energy/k342/sol/empty
+
 /obj/item/gun/energy/k342/explo
 	desc = "K342E Kasatka is the latest plasma weapon created by NanoTrasen. This modification has been designed for Sol Central Government Expeditionary Corps and can fire several types of charges: stunning, lethal and net-mode."
 	icon_state = "kasatka_off"

@@ -376,7 +376,7 @@
 /datum/gear/tactical/ubac/misc
 	display_name = "miscellaneous UBAC shirt selection"
 	path = /obj/item/clothing/accessory/ubac
-	allowed_branches = list(/datum/mil_branch/army, /datum/mil_branch/civilian)
+	allowed_branches = list(/datum/mil_branch/iic, /datum/mil_branch/civilian)
 
 /datum/gear/tactical/ubac/misc/New()
 	..()
@@ -403,7 +403,7 @@
 /datum/gear/tactical/armor_pouches/misc
 	display_name = "miscellaneous armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches
-	allowed_branches = list(/datum/mil_branch/army, /datum/mil_branch/civilian)
+	allowed_branches = list(/datum/mil_branch/iic, /datum/mil_branch/civilian)
 
 /datum/gear/tactical/armor_pouches/misc/New()
 	..()
@@ -430,7 +430,7 @@
 /datum/gear/tactical/large_pouches/misc
 	display_name = "miscellaneous large armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches/large
-	allowed_branches = list(/datum/mil_branch/army, /datum/mil_branch/civilian)
+	allowed_branches = list(/datum/mil_branch/iic, /datum/mil_branch/civilian)
 
 /datum/gear/tactical/large_pouches/misc/New()
 	..()
