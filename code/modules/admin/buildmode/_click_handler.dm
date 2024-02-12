@@ -51,11 +51,13 @@
 	user.client.show_popup_menus = FALSE
 	for(var/build_button in build_buttons)
 		user.client.screen += build_button
+	user.click_handlers.Insert(1, src)
 
 /datum/click_handler/build_mode/Exit()
 	user.my_client.show_popup_menus = TRUE
 	for(var/build_button in build_buttons)
 		user.my_client.screen -= build_button
+	user.click_handlers.Remove(src)
 
 /datum/click_handler/build_mode/OnDblClick(atom/A, params)
 	OnClick(A, params) // We treat double-clicks as normal clicks

@@ -7,6 +7,7 @@
 #define CALIBER_PISTOL_FAST 	"6mmR"
 
 #define CALIBER_RIFLE				"5mmR"
+#define CALIBER_CARABINE			"6.5mmR"
 #define CALIBER_RIFLE_MILITARY  	"7mmR"
 #define CALIBER_ANTIMATERIAL    	"15mmR"
 #define CALIBER_ANTIMATERIAL_SMALL	"12mmR" //Порт с инфинити. Калибр КорпоАМР винтовки

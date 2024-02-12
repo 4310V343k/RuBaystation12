@@ -210,7 +210,7 @@
 	if(pulling)
 		if(istype(pulling, /obj))
 			var/obj/O = pulling
-			. += clamp(O.w_class, 0, ITEM_SIZE_GARGANTUAN) / 5
+			. += O.get_additional_speed_decrease()
 		else if(istype(pulling, /mob))
 			var/mob/M = pulling
 			. += max(0, M.mob_size) / MOB_MEDIUM
@@ -887,7 +887,7 @@
 	implant.update_icon()
 	if(istype(implant,/obj/item/implant))
 		var/obj/item/implant/imp = implant
-		imp.removed()
+		imp.ImplantRemoval()
 	if (istype(implant, /obj/item/holder/voxslug))
 		var/obj/item/holder/voxslug/holder = implant
 		var/mob/living/simple_animal/hostile/voxslug/V = holder.contents[1]

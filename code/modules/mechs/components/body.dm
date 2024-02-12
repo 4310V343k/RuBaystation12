@@ -336,6 +336,8 @@
 	pilot_coverage = 100
 	exosuit_desc_string = "an armoured chassis"
 	icon_state = "combat_body"
+	max_damage = 120
+	mech_health = 250
 	power_use = 40
 
 /obj/item/mech_component/chassis/combat/prebuild()

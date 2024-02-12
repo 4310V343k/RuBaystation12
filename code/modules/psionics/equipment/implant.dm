@@ -30,7 +30,8 @@
 	var/use_psi_mode = get_psi_mode()
 	return (!malfunction && (use_psi_mode == PSI_IMPLANT_SHOCK || use_psi_mode == PSI_IMPLANT_WARN)) ? src : FALSE
 
-/obj/item/implant/psi_control/removed()
+/obj/item/implant/psi_control/ImplantRemoval(mob/user)
+	. = ..()
 	var/mob/living/M = imp_in
 	if(disrupts_psionics() && istype(M) && M.psi)
 		to_chat(M, SPAN_NOTICE("Вы чувствуете, как исчезают холодные оковы, сковывающие ваши псионические способности."))

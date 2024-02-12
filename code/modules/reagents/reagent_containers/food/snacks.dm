@@ -3907,3 +3907,14 @@
 	name = "taco"
 	desc = "Interestingly, the shell has gone soft and the contents have gone stale."
 	icon_state = "ancient_taco"
+
+
+/obj/item/reagent_containers/food/snacks/monkeycube/abominationcube
+	name = "larva cube"
+	desc = "Requires blood to expand."
+	monkey_type = /mob/living/simple_animal/hostile/infestation/larva
+	color = COLOR_MAROON
+	filling_color = COLOR_MAROON
+
+/obj/item/reagent_containers/food/snacks/monkeycube/abominationcube/friendly
+	monkey_type = /mob/living/simple_animal/hostile/infestation/larva/friendly

@@ -19,6 +19,7 @@
 #define GRAB_NORMAL			"normal"
 #define GRAB_NAB			"nab"
 #define GRAB_NAB_SPECIAL	"special nab"
+#define GRAB_ABOMINATION	"terrifying grab"
 
 // Grab levels.
 #define NORM_PASSIVE    "normal passive"
@@ -30,6 +31,10 @@
 #define NAB_PASSIVE		"nab passive"
 #define NAB_AGGRESSIVE	"nab aggressive"
 #define NAB_KILL		"nab kill"
+
+#define GRAB_ABOMINATION_PASSIVE 	"terrifying grab passive"
+#define GRAB_ABOMINATION_AGGRESSIVE "terrifying grab aggressive"
+#define GRAB_ABOMINATION_KILL 		"terrifying grab kill"
 
 #define BORGMESON FLAG(0)
 #define BORGTHERM FLAG(1)
@@ -222,6 +227,7 @@
 #define BP_ANCHOR   "anchoring ligament"
 #define BP_PHORON   "phoron filter"
 #define BP_ACETONE  "acetone reactor"
+#define BP_LARVA    "larvae storage"
 
 // Vox bits.
 #define BP_HINDTONGUE "hindtongue"
@@ -378,10 +384,11 @@
 #define SPECIES_MONKEY      "Monkey"
 #define SPECIES_NABBER         "giant armoured serpentid"
 #define SPECIES_FBP				"Full Body Prosthesis" //just for xeno-panel //proxima
+#define SPECIES_ABOMINATION "Abomination"
 
 #define UNRESTRICTED_SPECIES list(SPECIES_HUMAN, SPECIES_DIONA, SPECIES_IPC, SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_SKRELL, SPECIES_TRITONIAN, SPECIES_SPACER, SPECIES_VATGROWN, SPECIES_GRAVWORLDER, SPECIES_MULE, SPECIES_SHELL)
-#define RESTRICTED_SPECIES   list(SPECIES_VOX, SPECIES_ALIEN, SPECIES_GOLEM)
-#define HUMAN_SPECIES        list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_GRAVWORLDER, SPECIES_MULE)
+#define RESTRICTED_SPECIES   list(SPECIES_VOX, SPECIES_ALIEN, SPECIES_GOLEM, SPECIES_ABOMINATION)
+#define HUMAN_SPECIES        list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_GRAVWORLDER, SPECIES_MULE, SPECIES_ABOMINATION)
 #define SOUNDED_SPECIES list(SPECIES_HUMAN, SPECIES_VATGROWN, SPECIES_SPACER, SPECIES_TRITONIAN, SPECIES_GRAVWORLDER, SPECIES_MULE, SPECIES_UNATHI, SPECIES_YEOSA, SPECIES_SKRELL, SPECIES_SHELL)
 
 #define SURGERY_CLOSED 0
@@ -486,3 +493,6 @@
 #define DO_INCAPACITATED     (-3)
 
 #define FAKE_INVIS_ALPHA_THRESHOLD 127 // If something's alpha var is at or below this number, certain things will pretend it is invisible.
+
+
+#define SLEEP_CHECK_DEATH(X) sleep(X); if(QDELETED(src) || stat == DEAD) return;

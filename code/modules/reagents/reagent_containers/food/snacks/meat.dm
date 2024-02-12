@@ -46,3 +46,17 @@
 /obj/item/reagent_containers/food/snacks/meat/chicken/game
 	name = "game bird piece"
 	desc = "Fresh game meat, harvested from some wild bird."
+
+
+/obj/item/reagent_containers/food/snacks/abominationmeat
+	name = "meat"
+	desc = "A slab of red-ish meat. Smells terribly."
+	icon_state = "rottenmeat"
+	filling_color = COLOR_MAROON
+	center_of_mass = "x=16;y=10"
+	bitesize = 5
+
+/obj/item/reagent_containers/food/snacks/abominationmeat/New()
+	..()
+	reagents.add_reagent(/datum/reagent/nutriment/protein, 4)
+	reagents.add_reagent(/datum/reagent/grauel, 6)
