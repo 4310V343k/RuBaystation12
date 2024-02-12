@@ -44,8 +44,25 @@
 
 /obj/item/storage/briefcase/guncase/barrakuda/New()
 	..()
-	new /obj/item/gun/energy/k342/sol/empty(src)
+	new /obj/item/gun/energy/k342/sol(src)
 	new /obj/item/cell/guncell/medium(src)
 	new /obj/item/cell/guncell/medium(src)
 	new /obj/item/cell/guncell/medium(src)
 	make_exact_fit()
+
+/obj/item/storage/briefcase/guncase/remmington
+	name = "\improper W-T Remmington shotgun case"
+	desc = "A handsome black case designed with dark red stripes for carry W-T Remmington of Sol Central Government personnel."
+	icon_state = "guncase_shotgun"
+	item_state = "guncase_shotgun"
+
+/obj/item/storage/briefcase/guncase/remmington/New()
+	..()
+	new /obj/item/gun/projectile/shotgun/pump/empty(src)
+	new /obj/item/ammo_magazine/shotholder/beanbag(src)
+	new /obj/item/ammo_magazine/shotholder/shell(src)
+	new /obj/item/ammo_magazine/shotholder/shell(src)
+	make_exact_fit()
+
+/obj/item/gun/projectile/shotgun/pump/empty
+	starts_loaded = FALSE
