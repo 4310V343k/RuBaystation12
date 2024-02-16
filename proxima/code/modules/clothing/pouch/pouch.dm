@@ -1,7 +1,7 @@
 /obj/item/storage/pouch
 	name = "pouch"
 	desc = "Can hold various things."
-	icon = 'proxima/icons/obj/clothing/icon.dmi'
+	icon = 'proxima/icons/obj/pouch.dmi'
 	icon_state = "pouch"
 	item_state = "pouch"
 	cant_hold = list(/obj/item/storage/pouch) //Pouches in pouches was a misstake
@@ -236,7 +236,7 @@
 	..()
 	overlays.Cut()
 	if(contents.len)
-		overlays += (image('proxima/icons/obj/clothing/icon.dmi', "flare_[contents.len]"))
+		overlays += (image('proxima/icons/obj/pouch.dmi', "flare_[contents.len]"))
 
 
 /obj/item/storage/pouch/pistol_holster
@@ -269,7 +269,7 @@
 	..()
 	overlays.Cut()
 	if(contents.len)
-		overlays += (image('proxima/icons/obj/clothing/icon.dmi', "pistol_layer"))
+		overlays += (image('proxima/icons/obj/pouch.dmi', "pistol_layer"))
 
 /obj/item/storage/pouch/pistol_holster/cowboy
 	name = "belt holster"
@@ -286,7 +286,7 @@
 	..()
 	overlays.Cut()
 	if(contents.len)
-		overlays += (image('proxima/icons/obj/clothing/icon.dmi', "gun_[contents.len]"))
+		overlays += (image('proxima/icons/obj/pouch.dmi', "gun_[contents.len]"))
 
 /obj/item/storage/pouch/kniferig
 	name = "throwing knife rig"
@@ -302,7 +302,7 @@
 	..()
 	overlays.Cut()
 	if(contents.len)
-		overlays += (image('proxima/icons/obj/clothing/icon.dmi', "knife_[contents.len]"))
+		overlays += (image('proxima/icons/obj/pouch.dmi', "knife_[contents.len]"))
 
 
 /obj/item/storage/pouch/baton_holster
@@ -336,4 +336,4 @@
 	..()
 	overlays.Cut()
 	if(contents.len)
-		overlays += (image('proxima/icons/obj/clothing/icon.dmi', "baton_layer"))
+		overlays += (image('proxima/icons/obj/pouch.dmi', "baton_layer"))

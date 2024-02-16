@@ -26558,15 +26558,16 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/misc_lab)
 "ryt" = (
+/obj/item/device/radio/intercom{
+	pixel_y = 23
+	},
 /obj/effect/floor_decal/techfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
-	pixel_y = 23
-	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/command/armoury/tactical)
 "rzb" = (
@@ -58657,10 +58658,10 @@ ajJ
 aaa
 aaa
 acd
-acd
 dVw
 dVw
 ryt
+svH
 svH
 svH
 njm
@@ -58677,7 +58678,7 @@ aQq
 aQq
 eRU
 eRU
-acd
+eRU
 acd
 aaa
 aaa
