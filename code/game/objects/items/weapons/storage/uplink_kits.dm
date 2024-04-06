@@ -183,8 +183,4 @@
 	startswith = list(
 		/obj/item/clothing/suit/armor/pcarrier/merc,
 		/obj/item/clothing/head/helmet/merc,
-		//PRX-START
-		/obj/item/clothing/gloves/combat/heavy,
-		/obj/item/clothing/shoes/combat/heavy
-		//PRX-END
 	)
